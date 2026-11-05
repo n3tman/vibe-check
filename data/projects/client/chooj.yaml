@@ -16,8 +16,7 @@ sources:
   other:
   - GitHub topic matrix-client (archived GitHub copy)
 maturity: unmaintained
-platforms:
-- other
+platforms: []
 apps:
 - os: other
   tech: webview

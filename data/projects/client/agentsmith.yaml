@@ -18,7 +18,7 @@ maturity: unmaintained
 platforms:
 - server
 apps:
-- os: server
+- os: other
   tech: other
   status: discontinued
   source: https://github.com/nilsding/AgentSmith/blob/ec28aa68d8fd1b76351de921313e441a32c03eb9/README.md
