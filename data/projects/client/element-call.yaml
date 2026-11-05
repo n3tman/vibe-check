@@ -1,0 +1,117 @@
+slug: element-call
+name: Element Call
+category: client
+kind: web (video calls)
+homepage: https://call.element.io
+summary: Element's MatrixRTC video-conferencing app (LiveKit backend), usable standalone in the browser
+  and embedded as a widget in Element Web and Element X.
+repos:
+- url: https://github.com/element-hq/element-call
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - 'sources/community-space.tsv / #webrtc:matrix.org (README badge)'
+maturity: stable
+platforms:
+- web
+apps:
+- os: web
+  tech: other
+  status: stable
+  stores:
+  - name: web
+    url: https://call.element.io
+  source: https://github.com/element-hq/element-call/blob/1e17a6411cb625b369b9d88fc300ce46329ae46d/README.md
+  note: Also shipped embedded inside Element Web and Element X; no separate mobile app.
+  min_os: null
+licence: AGPL-3.0-only OR LicenseRef-Element-Commercial
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk (pinned commit) + livekit-client
+    how: code
+    source: https://github.com/element-hq/element-call/blob/1e17a6411cb625b369b9d88fc300ce46329ae46d/package.json
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/element-hq/element-call/blob/1e17a6411cb625b369b9d88fc300ce46329ae46d/README.md
+    note: Encrypted MatrixRTC media.
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/element-hq/element-call/blob/1e17a6411cb625b369b9d88fc300ce46329ae46d/README.md
+    note: MatrixRTC (MSC4143) with LiveKit (MSC4195).
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-call/blob/1e17a6411cb625b369b9d88fc300ce46329ae46d/localazy.json
+    note: Localazy; 26 locale folders.
+  telemetry:
+    value: opt-in
+    how: code
+    source: https://github.com/element-hq/element-call/blob/1e17a6411cb625b369b9d88fc300ce46329ae46d/src/analytics/PosthogAnalytics.ts
+    note: PostHog only when the user activates analytics; Sentry (@sentry/react) for errors when
+      configured.
+  default_homeserver: not-found
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://github.com/element-hq/element-call/blob/1e17a6411cb625b369b9d88fc300ce46329ae46d/README.md
+    note: pnpm/Vite app with several build targets (standalone, embedded, SDK); AGPL-3.0 or commercial,
+      CLA.
+ai:
+  policy:
+    value: restricted
+    quote: >-
+      Contributions are judged on their content, not on how they were produced. AI-assisted contributions
+      are accepted; unreviewed AI output is not. [...] If your PR was made with the help of AI, you
+      must convey that this is the case using the PR template.
+    source: https://github.com/element-hq/element-meta/blob/ea731f1fc96190b2214538c76d95ee34e00400cd/CONTRIBUTING.md
+  dev_usage:
+    value: occasional
+    evidence:
+    - >-
+      46 of about 1,280 non-bot commits in the last 365 days (about 3.6 %) carry a Claude co-author
+      trailer.
+    - AGENTS.md at the repo root.
+    - >-
+      AI review workflow .github/workflows/claude.yaml (anthropics/claude-code-action, run when a
+      PR gets the Claude-Review label).
+  in_product:
+    value: none-found
+    note: >-
+      Background blur uses on-device MediaPipe selfie segmentation (machine learning, not generative
+      AI).
+    source: https://github.com/element-hq/element-call/blob/1e17a6411cb625b369b9d88fc300ce46329ae46d/src/mediapipe/imageSegmenter/README.md
+notes: >-
+  Not on the matrix.org clients list (it is a calling app). Its own CONTRIBUTING.md: "Take responsibility
+  for AI-generated code." Element's organisation-wide AI policy (element-meta PR 3393) applies.
+checked: '2026-11-05'

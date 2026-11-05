@@ -1,0 +1,89 @@
+slug: cactus-comments
+name: Cactus Comments
+category: client
+kind: web (comments widget)
+homepage: https://cactus.chat
+summary: An embeddable Elm web client that turns Matrix rooms into federated comment sections, with
+  a companion appservice.
+repos:
+- url: https://gitlab.com/cactus-comments/cactus-client
+  forge: gitlab
+  role: main
+- url: https://gitlab.com/cactus-comments/cactus-appservice
+  forge: gitlab
+  role: server
+sources:
+  matrix_org_listing: null
+  other:
+  - 'sources/community-space.tsv: room "Cactus Comments" (Not-chat Clients)'
+maturity: unmaintained
+platforms:
+- web
+apps:
+- os: web
+  tech: other
+  status: discontinued
+  source: https://gitlab.com/cactus-comments/cactus-client/-/blob/401f4ca35d15a7c8d2cb4b4d944113fa4fe6dafc/README.md
+  min_os: null
+  stores: []
+licence: LGPL-3.0
+fork_of: null
+distribution: []
+funding:
+- https://opencollective.com/cactus-comments
+features:
+  sdk:
+    value: own (Elm)
+    how: code
+    source: https://gitlab.com/cactus-comments/cactus-client/-/blob/401f4ca35d15a7c8d2cb4b4d944113fa4fe6dafc/elm.json
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://gitlab.com/cactus-comments/cactus-client/-/blob/401f4ca35d15a7c8d2cb4b4d944113fa4fe6dafc/README.md
+    note: Public comment rooms.
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No commits in the last 365 days (last 2023-07-14); no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  Our reading: dormant (last client commit 2023-07-14). A not-chat client; the appservice half could
+  interest lane 5.
+checked: '2026-11-05'
