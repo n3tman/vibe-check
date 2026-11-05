@@ -706,7 +706,7 @@
   spec_version: null
   labels: ['kind:feature', proposal]
   url: https://github.com/matrix-org/matrix-spec-proposals/pull/2448
-  servers: [conduit, conduwuit, palpo, tuwunel]
+  servers: [conduit, conduwuit, grapevine, palpo, tuwunel]
 - msc: 2451
   title: Remove `query_auth` federation endpoint.
   status: merged
@@ -2019,7 +2019,7 @@
   spec_version: v1.11
   labels: ['kind:core', merged, proposal]
   url: https://github.com/matrix-org/matrix-spec-proposals/pull/3916
-  servers: [conduit, conduwuit, dendrite, harmony, matrix-media-repo, palpo, synapse, tuwunel, zendrite]
+  servers: [conduit, conduwuit, dendrite, grapevine, harmony, matrix-media-repo, palpo, synapse, tuwunel, zendrite]
 - msc: 3925
   title: m.replace aggregation with full event
   status: merged
@@ -2291,7 +2291,7 @@
   spec_version: null
   labels: ['kind:maintenance', proposal]
   url: https://github.com/matrix-org/matrix-spec-proposals/pull/4029
-  servers: [conduit, tuwunel]
+  servers: [conduit, grapevine, tuwunel]
 - msc: 4032
   title: Asset Collections
   status: open

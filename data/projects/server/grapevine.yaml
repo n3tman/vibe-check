@@ -3,37 +3,57 @@ name: Grapevine
 category: server
 kind: homeserver
 homepage: https://grapevine.computer.surgery
-summary: A Rust Matrix homeserver forked from Conduit.
+summary: A Rust Matrix homeserver forked from Conduit 0.7.0, aiming at reliability and maintainability.
 repos:
 - {url: 'https://gitlab.computer.surgery/matrix/grapevine', forge: gitlab, role: main}
 sources:
   matrix_org_listing: null
   other:
   - lane prompt
-maturity: beta
+  - 'https://grapevine.computer.surgery/#can-i-use-it'
+maturity: alpha
 platforms:
 - server
-licence: null
+licence: Apache-2.0
 fork_of: conduit
 distribution: []
 funding: []
 features:
   language: Rust
-  msc: []
+  database: {value: 'yes', how: code, source: 'https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/src/config.rs#L325', note: 'RocksDB, SQLite (build features)'}
+  federation: {value: 'yes', how: code, source: 'https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/Cargo.toml#L162', note: ruma federation-api}
+  spec_versions: {value: 'yes', how: code, source: 'https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/src/api/client_server/unversioned.rs#L24',
+    versions: [r0.5.0, r0.6.0, v1.1, v1.2, v1.3, v1.4, v1.5]}
+  appservices: {value: 'yes', how: code, source: 'https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/src/service/appservice.rs'}
+  admin_api: {value: 'yes', how: code, source: 'https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/src/service/admin.rs', note: admin room commands (inherited from Conduit)}
+  oidc_delegation: {value: not-found, note: no reference to MSC3861/2964/2965/2967 found in the code}
+  native_sliding_sync: {value: not-found, note: no reference to MSC4186 found in the code}
+  workers_scaling: {value: not-found}
+  media_auth: {value: 'yes', how: code, source: 'https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/src/api/client_server/unversioned.rs#L34',
+    note: 'MSC3916: advertised as org.matrix.msc3916.stable in unstable_features'}
+  msc:
+  - {msc: 2448, state: unstable, source: 'https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/Cargo.toml#L165', note: ruma feature unstable-msc2448 (BlurHash) enabled; wiring not checked}
+  - {msc: 3916, state: stable, source: 'https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/src/api/client_server/unversioned.rs#L34', note: 'advertised in unstable_features, on by default'}
+  - {msc: 4029, state: partial, source: 'https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/src/api/ruma_wrapper/axum.rs#L290', note: only currently valid verify_keys are used for X-Matrix request validation, as the MSC proposes}
 ai:
-  policy:
-    value: none-found
-    quote: null
-    source: null
+  policy: {value: none-found, quote: null, source: null}
   dev_usage:
     value: none-found
     evidence: []
-    note: 'not checked: no clone'
-  in_product:
-    value: none-found
-    note: null
-    source: null
-notes: Named in the lane prompt. The forge host reset every connection from this session on 2026-11-05
-  (git clone and HTTPS both failed), so nothing was read; maturity and licence are unchecked. Lane 7 or
-  the collector should retry.
-checked: '2026-11-05'
+    note: >-
+      Read from a zip of the main branch the user saved by hand (commit f82328dc, files dated
+      2026-03-04), so only the file tree was checked: no agent files. The zip carries no git
+      history, so attributed commits were not counted; the collector should recount once the
+      forge is reachable.
+    checked_at: f82328dcf20e4f4a03e7fce11cb66bb8660e1c80
+  in_product: {value: none-found, note: null, source: null}
+notes: >-
+  The project's own docs say it is "not ready for general use yet": there are no releases
+  (https://gitlab.computer.surgery/matrix/grapevine/-/issues/18), little user-facing
+  documentation (issue 21), and undocumented breaking changes to the config format
+  (https://gitlab.computer.surgery/matrix/grapevine/-/blob/f82328dcf20e4f4a03e7fce11cb66bb8660e1c80/book/introduction.md#L24). Maturity "alpha" is our reading of that. MSC2285 (private read
+  receipts) is marked "TODO: Implement" in the code and is not listed. Non-goals include
+  first-party Docker images and macOS / Windows support (book/introduction.md#L65).
+  gitlab.computer.surgery reset every connection from the research session, so the code was read
+  from a zip a person saved by hand, not from a clone.
+checked: 2026-11-05
