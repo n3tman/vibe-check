@@ -1,0 +1,45 @@
+slug: synadm
+name: synadm
+category: tool
+kind: admin-cli
+homepage: https://synadm.readthedocs.io
+summary: A command-line admin tool for Synapse that wraps its Admin API (users, rooms, media, registration
+  tokens, …).
+repos:
+- url: https://codeberg.org/synadm/synadm
+  forge: forgejo
+  role: main
+- url: https://github.com/JOJ0/synadm
+  forge: github
+  role: other
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search for Synapse admin tools (the GitHub repo is archived and points to Codeberg), 2026-11-05
+  - GitHub search, repositories sorted by stars, 2026-11-05
+maturity: stable
+platforms: [server]
+licence: GPL-3.0-only
+fork_of: null
+distribution: [pypi]
+funding: []
+features:
+  purpose: {value: homeserver admin CLI (Synapse admin API), how: claimed, source: 'https://codeberg.org/synadm/synadm/src/commit/fd8dae877a63e538e9175b938c29a9c4bb69e642/README.md'}
+  framework: {value: 'own (Python, click)', how: claimed, source: 'https://codeberg.org/synadm/synadm/src/commit/fd8dae877a63e538e9175b938c29a9c4bb69e642/README.md'}
+  e2ee: {value: 'no', how: claimed, source: 'https://codeberg.org/synadm/synadm/src/commit/fd8dae877a63e538e9175b938c29a9c4bb69e642/README.md',
+    note: 'not applicable: an admin API client'}
+  hosting: {value: self-host, how: claimed, source: 'https://codeberg.org/synadm/synadm/src/commit/fd8dae877a63e538e9175b938c29a9c4bb69e642/README.md',
+    note: 'pip, run by an admin'}
+  config: {value: 'https://codeberg.org/synadm/synadm/commit//.config/synadm.yaml via an interactive configurator',
+    how: claimed, source: 'https://codeberg.org/synadm/synadm/src/commit/fd8dae877a63e538e9175b938c29a9c4bb69e642/README.md'}
+  ai_backend: {value: none-found, how: claimed, source: 'https://codeberg.org/synadm/synadm/src/commit/fd8dae877a63e538e9175b938c29a9c4bb69e642/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 7 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at fd8dae877a63
+  in_product: {value: none-found, note: null, source: null}
+notes: Moved from GitHub (JOJ0/synadm, now archived) to Codeberg. LICENSE is the GNU GPL v3 (-only vs
+  -or-later not checked). CONTRIBUTING.md has no statement on AI.
+checked: 2026-11-05
