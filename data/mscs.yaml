@@ -28,20 +28,22 @@
   url: https://github.com/matrix-org/matrix-spec-proposals/issues/1234
   servers: [dendrite, harmony, zendrite]
 - msc: 1236
-  title: null
-  status: not-found
-  status_detail: null
+  title: Matrix Widget API v2
+  status: open
+  status_detail: status from Tuwunel's MSC inventory (https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L737);
+    the proposals repo issue was not readable from the research session
   spec_version: null
   labels: []
-  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1236
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1236
   servers: [tuwunel]
 - msc: 1301
-  title: null
-  status: not-found
-  status_detail: null
+  title: Proposal for improving authorization for the matrix profile API
+  status: closed
+  status_detail: status from Tuwunel's MSC inventory (https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L1182);
+    the proposals repo issue was not readable from the research session
   spec_version: null
   labels: []
-  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1301
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1301
   servers: [synapse]
 - msc: 1425
   title: Room Versioning
@@ -212,12 +214,13 @@
   url: https://github.com/matrix-org/matrix-spec-proposals/pull/1804
   servers: [tuwunel]
 - msc: 1812
-  title: null
-  status: not-found
-  status_detail: null
+  title: Federation make membership room version
+  status: merged
+  status_detail: proposal file https://github.com/matrix-org/matrix-spec-proposals/blob/a6d4f687330b515f91bbc67e671779c42ae80438/proposals/1812-federation-make-membership.md
+    (its heading says "MSC 1813"); pre-v1.1, so no spec_version
   spec_version: null
   labels: []
-  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1812
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1812
   servers: [tuwunel]
 - msc: 1819
   title: MSC:1819 Remove Presence Lists
