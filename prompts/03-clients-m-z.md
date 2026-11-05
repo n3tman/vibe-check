@@ -24,19 +24,3 @@ Client specifics:
   fork adds.
 - matrix.crafty.moe is described as using AI: find out exactly how (in the product, in
   development, or both) with sources.
-
-Also from https://www.linuxlinks.com/best-free-open-source-matrix-clients/ (checked against
-the matrix.org list on 2026-11-05): in your range it lists Mages ("Matrix"), Mirage, Moment,
-NeoChat, nheko, Quadrix, Quaternion, Sable, SchildiChat, Spectral, Syphon and Tammy. Make sure
-each has a file. Three are not on the matrix.org list, so cover them on purpose:
-- Moment: https://gitlab.com/mx-moment/moment. Said to be a fork of Mirage: check that in
-  the repo, then set `fork_of: mirage` and note what it adds.
-- Mirage: https://github.com/mirukana/mirage. Likely dormant or abandoned; the collector
-  decides, but still fill the file.
-- Spectral: https://gitlab.com/spectral-im/spectral (homepage https://spectral.im; last
-  activity on GitLab 2022-08-28). NeoChat started as a fork of Spectral: set
-  `fork_of: spectral` in NeoChat's file with a source.
-The others, for reference: Mages https://github.com/mlm-games/Mages (alpha), Tammy
-https://gitlab.com/connect2x/tammy, Quadrix https://github.com/alariej/quadrix and Syphon
-https://github.com/syphon-org/syphon (both marked obsolete on matrix.org).
-

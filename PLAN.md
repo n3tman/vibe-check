@@ -15,6 +15,7 @@ switch. Six sessions run in parallel on their own branches, then one integrates 
 | 6 | `prompts/06-bridges.md` | `data/projects/bridge/`, `notes/06.md` | nothing |
 | 7 | `prompts/07-integrate-publish.md` | everything | lanes 1 to 6 merged into `main` |
 | 8 (spare) | `prompts/08-sdks.md` | `data/projects/sdk/`, `notes/08.md` | nothing; run only if budget remains |
+| 9 | `prompts/09-clients-linuxlinks.md` | `data/projects/client/` for `mirage`, `moment`, `spectral` only, `notes/09.md` | nothing; added after lanes 2 and 3 started |
 
 Lanes 1 to 6 write disjoint files, so their branches merge into `main` without conflicts.
 A lane that finds a project of another lane's category adds it to its notes under "For
@@ -51,8 +52,8 @@ lane N", never writes the file itself.
 - Third-party roundup (clients): https://www.linuxlinks.com/best-free-open-source-matrix-clients/
   (LinuxLinks, 22 clients, published 2026-08-10, no repo links). Checked against the
   matrix.org list on 2026-11-05 (website repo at `041599b`): 18 of the 22 are on it. The four
-  that are not, with their repos, are named in lanes 2 and 3's prompts: Moment, Mirage,
-  Spectral, and "Chats" (the current name of Chatty, same repo).
+  that are not (Moment, Mirage, Spectral, and "Chats", the current name of Chatty) are lane
+  9's, added after lanes 2 and 3 had started.
 - Forges: GitHub, GitLab.com, Codeberg and other Forgejo / Gitea hosts, SourceHut, and
   self-hosted GitLab or Forgejo instances. Use each forge's API for what git can't give
   (stars, issues, archived flag, languages); use `git log` on a blobless clone for activity,
