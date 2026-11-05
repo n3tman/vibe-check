@@ -1,0 +1,48 @@
+slug: matrix-hookshot
+name: matrix-hookshot
+category: bot
+kind: integration
+homepage: https://matrix-org.github.io/matrix-hookshot/
+summary: A bot and appservice that connects rooms to GitHub, GitLab, Jira, generic webhooks, RSS/Atom
+  feeds and other services, the successor of Go-NEB.
+repos:
+- url: https://github.com/matrix-org/matrix-hookshot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker, helm]
+funding: []
+features:
+  purpose: {value: 'integrations and notifications (GitHub, GitLab, Jira, generic webhooks, feeds, Figma,
+      OpenProject)', how: claimed, source: 'https://github.com/matrix-org/matrix-hookshot/blob/7977e5c148cc5f4e21988d410a795f855022535a/README.md'}
+  framework: {value: matrix-bot-sdk and matrix-appservice-bridge, how: code, source: 'https://github.com/matrix-org/matrix-hookshot/blob/7977e5c148cc5f4e21988d410a795f855022535a/package.json',
+    note: Element's fork @vector-im/matrix-bot-sdk; Rust parts via napi}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/matrix-org/matrix-hookshot/blob/7977e5c148cc5f4e21988d410a795f855022535a/README.md',
+    note: '"End-to-Bridge encryption allows bots to be used in encrypted Matrix rooms"'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/matrix-org/matrix-hookshot/blob/7977e5c148cc5f4e21988d410a795f855022535a/README.md',
+    note: runs as an appservice next to a homeserver; Docker image and Helm chart}
+  config: {value: 'config file, bot commands and room widgets', how: claimed, source: 'https://github.com/matrix-org/matrix-hookshot/blob/7977e5c148cc5f4e21988d410a795f855022535a/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/matrix-org/matrix-hookshot/blob/7977e5c148cc5f4e21988d410a795f855022535a/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: occasional
+    evidence:
+    - 2 of 70 non-bot commits in the last 365 days carry an AI attribution (2.9%), counted at 7977e5c148cc
+    - 'tools named in attributions: claude'
+    - 'example: 5982a4ff174a (Co-Authored-By: Claude)'
+    - 'example: 817ffd937a3a (Co-authored-by: Claude)'
+    - 'both attributed commits are dependency PRs merged from the account "szhu25''s Automation Bot" with
+      Claude co-author trailers (#1401, #1438)'
+  in_product: {value: none-found, note: null, source: null}
+notes: Listed on matrix.org under integrations (its own description calls it a bridge to project management
+  services); filed here as a bot because it is not on the bridges list. An open feature request proposes
+  an LLM intent layer (https://github.com/matrix-org/matrix-hookshot/issues/1107, 2025-11-26); nothing
+  shipped.
+checked: 2026-11-05

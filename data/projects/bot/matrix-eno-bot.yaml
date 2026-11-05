@@ -1,0 +1,40 @@
+slug: matrix-eno-bot
+name: matrix-eno-bot
+category: bot
+kind: assistant
+homepage: https://github.com/8go/matrix-eno-bot
+summary: A personal-assistant and server-admin bot whose commands are mapped to scripts in a YAML command
+  dictionary.
+repos:
+- url: https://github.com/8go/matrix-eno-bot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: unmaintained
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: personal assistant and admin tool (runs configured scripts), how: claimed, source: 'https://github.com/8go/matrix-eno-bot/blob/e18c5cc2bbced2229f661a3b9a8bc022e2a7d808/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/8go/matrix-eno-bot/blob/e18c5cc2bbced2229f661a3b9a8bc022e2a7d808/requirements.txt',
+    note: based on nio-template; python-olm}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/8go/matrix-eno-bot/blob/e18c5cc2bbced2229f661a3b9a8bc022e2a7d808/README.md',
+    note: '"bot can handle encrypted rooms by default"'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/8go/matrix-eno-bot/blob/e18c5cc2bbced2229f661a3b9a8bc022e2a7d808/README.md',
+    note: systemd service or Docker}
+  config: {value: config.yaml plus commands.yaml command dictionary, how: claimed, source: 'https://github.com/8go/matrix-eno-bot/blob/e18c5cc2bbced2229f661a3b9a8bc022e2a7d808/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/8go/matrix-eno-bot/blob/e18c5cc2bbced2229f661a3b9a8bc022e2a7d808/requirements.txt'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2024-09-03), counted at e18c5cc2bbce
+  in_product: {value: none-found, note: null, source: null}
+notes: Last commit 2024-09-03, not archived. matrix.org lists the licence as WTFPL; the GitHub API and
+  the LICENSE file at this commit is the Apache License 2.0, which we use here.
+checked: 2026-11-05

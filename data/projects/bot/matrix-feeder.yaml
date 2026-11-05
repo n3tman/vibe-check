@@ -1,0 +1,36 @@
+slug: matrix-feeder
+name: matrix-feeder
+category: bot
+kind: media-relay
+homepage: https://github.com/dragonchaser/matrix-feeder
+summary: A bot that watches configured rooms for media and reposts it to another room.
+repos:
+- url: https://github.com/dragonchaser/matrix-feeder
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: archived
+platforms: [server]
+licence: MIT
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: media relay between rooms, how: claimed, source: 'https://github.com/dragonchaser/matrix-feeder/blob/0b5b803aa1d6f8308b79868ecbfb4fbcc6692480/README.md'}
+  framework: {value: matrix-bot-sdk, how: code, source: 'https://github.com/dragonchaser/matrix-feeder/blob/0b5b803aa1d6f8308b79868ecbfb4fbcc6692480/package.json'}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/dragonchaser/matrix-feeder/blob/0b5b803aa1d6f8308b79868ecbfb4fbcc6692480/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/dragonchaser/matrix-feeder/blob/0b5b803aa1d6f8308b79868ecbfb4fbcc6692480/README.md',
+    note: Node.js or Docker}
+  config: {value: config file (JSON), how: claimed, source: 'https://github.com/dragonchaser/matrix-feeder/blob/0b5b803aa1d6f8308b79868ecbfb4fbcc6692480/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/dragonchaser/matrix-feeder/blob/0b5b803aa1d6f8308b79868ecbfb4fbcc6692480/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2022-02-10), counted at 0b5b803aa1d6
+  in_product: {value: none-found, note: null, source: null}
+notes: Archived on GitHub (search API, 2026-11-05); last commit 2022-02-10.
+checked: 2026-11-05

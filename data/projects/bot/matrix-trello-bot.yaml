@@ -1,0 +1,37 @@
+slug: matrix-trello-bot
+name: matrix-trello-bot
+category: bot
+kind: integration
+homepage: https://github.com/turt2live/matrix-trello-bot
+summary: A bot that links Trello boards to rooms for notifications and card commands.
+repos:
+- url: https://github.com/turt2live/matrix-trello-bot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: archived
+platforms: [server]
+licence: GPL-3.0-only
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: integration (Trello), how: claimed, source: 'https://github.com/turt2live/matrix-trello-bot/blob/6a43cde31fda124873b26b0af173968871549545/README.md'}
+  framework: {value: matrix-bot-sdk, how: code, source: 'https://github.com/turt2live/matrix-trello-bot/blob/6a43cde31fda124873b26b0af173968871549545/package.json'}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/turt2live/matrix-trello-bot/blob/6a43cde31fda124873b26b0af173968871549545/README.md'}
+  hosting: {value: both, how: claimed, source: 'https://github.com/turt2live/matrix-trello-bot/blob/6a43cde31fda124873b26b0af173968871549545/README.md',
+    note: 'https://github.com/turt2live/matrix-trello-bot/blob/6a43cde31fda124873b26b0af173968871549545/trello:t2bot.io
+      hosted instance, or self-host with Docker'}
+  config: {value: config file and !trello commands, how: claimed, source: 'https://github.com/turt2live/matrix-trello-bot/blob/6a43cde31fda124873b26b0af173968871549545/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/turt2live/matrix-trello-bot/blob/6a43cde31fda124873b26b0af173968871549545/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2022-04-08), counted at 6a43cde31fda
+  in_product: {value: none-found, note: null, source: null}
+notes: Archived on GitHub; last commit 2022-04-08. Whether the t2bot.io instance still runs was not checked.
+checked: 2026-11-05

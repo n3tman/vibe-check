@@ -1,0 +1,39 @@
+slug: matrix-email-bot
+name: matrix-email-bot
+category: bot
+kind: notifications
+homepage: https://github.com/t2bot/matrix-email-bot
+summary: A bot that posts a message to a room when an email arrives at a configured address, aimed at
+  newsletters and announcements.
+repos:
+- url: https://github.com/t2bot/matrix-email-bot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: unmaintained
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: notifications (email to room), how: claimed, source: 'https://github.com/t2bot/matrix-email-bot/blob/68e21579ca35db18752dd98b95ea3d696b1eb985/README.md'}
+  framework: {value: matrix-bot-sdk, how: code, source: 'https://github.com/t2bot/matrix-email-bot/blob/68e21579ca35db18752dd98b95ea3d696b1eb985/package.json'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/t2bot/matrix-email-bot/blob/68e21579ca35db18752dd98b95ea3d696b1eb985/README.md',
+    note: '"The bot also supports encryption now"'}
+  hosting: {value: both, how: claimed, source: 'https://github.com/t2bot/matrix-email-bot/blob/68e21579ca35db18752dd98b95ea3d696b1eb985/README.md',
+    note: 'a t2bot.io hosted instance, or self-host (Docker image t2bot/matrix-email-bot)'}
+  config: {value: config file, how: claimed, source: 'https://github.com/t2bot/matrix-email-bot/blob/68e21579ca35db18752dd98b95ea3d696b1eb985/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/t2bot/matrix-email-bot/blob/68e21579ca35db18752dd98b95ea3d696b1eb985/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2022-01-23), counted at 68e21579ca35
+  in_product: {value: none-found, note: null, source: null}
+notes: Last commit 2022-01-23; the repo is not archived on GitHub, but its room in the matrix.org community
+  space is marked ARCHIVED. Maturity is our reading.
+checked: 2026-11-05
