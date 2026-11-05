@@ -1,0 +1,39 @@
+slug: grapevine
+name: Grapevine
+category: server
+kind: homeserver
+homepage: https://grapevine.computer.surgery
+summary: A Rust Matrix homeserver forked from Conduit.
+repos:
+- {url: 'https://gitlab.computer.surgery/matrix/grapevine', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - lane prompt
+maturity: beta
+platforms:
+- server
+licence: null
+fork_of: conduit
+distribution: []
+funding: []
+features:
+  language: Rust
+  msc: []
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    note: 'not checked: no clone'
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Named in the lane prompt. The forge host reset every connection from this session on 2026-11-05
+  (git clone and HTTPS both failed), so nothing was read; maturity and licence are unchecked. Lane 7 or
+  the collector should retry.
+checked: '2026-11-05'

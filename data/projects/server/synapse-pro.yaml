@@ -1,0 +1,37 @@
+slug: synapse-pro
+name: Synapse Pro
+category: server
+kind: homeserver (commercial)
+homepage: https://element.io/server-suite/synapse-pro
+summary: Element's commercial edition of Synapse, aimed at performance, scalability and compliance.
+repos: []
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: stable
+platforms:
+- server
+licence: LicenseRef-Element-Commercial
+fork_of: synapse
+distribution: []
+funding: []
+features:
+  language: Python, Rust
+  msc: []
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    note: 'not checked: no clone'
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Closed source; listed on matrix.org with licence "Element Commercial License". Features and MSCs
+  not checked (no public code).
+checked: '2026-11-05'
