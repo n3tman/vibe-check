@@ -22,8 +22,8 @@ funding: []
 features:
   purpose: {value: 'moderation (policy lists, bans)', how: claimed, source: 'https://github.com/maunium/meowlnir/blob/666f797570173665654c5972f5bd7f0d0bc5d423/README.md'}
   framework: {value: mautrix-go, how: code, source: 'https://github.com/maunium/meowlnir/blob/666f797570173665654c5972f5bd7f0d0bc5d423/go.mod'}
-  e2ee: {value: 'yes', how: claimed, source: 'https://docs.mau.fi/meowlnir/config.html', note: bots can
-      be set up with encryption per the setup docs; not checked in code}
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/maunium/meowlnir/blob/666f797570173665654c5972f5bd7f0d0bc5d423/bot/init.go',
+    note: each bot sets up a mautrix-go OlmMachine}
   hosting: {value: self-host, how: claimed, source: 'https://github.com/maunium/meowlnir/blob/666f797570173665654c5972f5bd7f0d0bc5d423/README.md',
     note: runs as an appservice; Docker}
   config: {value: config file and per-bot management commands, how: claimed, source: 'https://docs.mau.fi/meowlnir/bot-config.html'}
@@ -38,6 +38,5 @@ ai:
   in_product: {value: none-found, note: null, source: null}
 notes: The policy comes from the mautrix contributing guidelines, which say they apply to "all mautrix
   bridges, as well as other associated projects like the mautrix libraries, whatsmeow, meowlnir, and gomuks";
-  the repo's CONTRIBUTING.md and PR template link to it (checked 2026-11-05). The e2ee value rests on
-  the docs and needs a code check.
+  the repo's CONTRIBUTING.md and PR template link to it (checked 2026-11-05).
 checked: 2026-11-05
