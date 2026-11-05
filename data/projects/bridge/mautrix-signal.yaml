@@ -1,0 +1,88 @@
+slug: mautrix-signal
+name: mautrix-signal
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/signal/index.html
+summary: Puppeting bridge between Matrix and Signal, using libsignal through a Go wrapper on mautrix-go
+  bridgev2.
+repos:
+- url: https://github.com/mautrix/signal
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/signal/
+  other: []
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: Signal
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/signal/blob/7501c40cba38fafeec636ccae6eb4eb870ea27e3/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/double-puppeting.md
+    note: 'double puppeting (automatic via an appservice registration, or manual login); relay mode: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/relay-mode.md'
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/end-to-bridge-encryption.md
+    note: optional end-to-bridge encryption of the Matrix side (Matrix rooms encrypted between users and
+      the bridge)
+  backfill:
+    value: partial
+    how: code
+    source: https://github.com/mautrix/signal/blob/7501c40cba38fafeec636ccae6eb4eb870ea27e3/pkg/connector/backfill.go
+    note: from Signal's history transfer when linking; media only if the phone still has it (docs backfill
+      page)
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/signal/blob/7501c40cba38fafeec636ccae6eb4eb870ea27e3/ROADMAP.md
+  reactions_edits:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/signal/blob/7501c40cba38fafeec636ccae6eb4eb870ea27e3/ROADMAP.md
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/signal/blob/7501c40cba38fafeec636ccae6eb4eb870ea27e3/ROADMAP.md
+    note: groups; some membership actions not bridged from Matrix
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/go/signal/authentication.md
+    note: link as a secondary device by QR code, or register as the primary device
+  network_tos_risk:
+    value: not-found
+    note: no ToS warning found in the docs
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. The
+      author is accountable for the code. [...] AI should not be used for communicating with humans.
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/contributing.md#L23-L37
+  dev_usage:
+    value: occasional
+    evidence:
+    - 2 of 245 non-bot commits in the last 365 days (0.8 %) carry an AI co-author trailer or 'Generated
+      with' line, e.g. https://github.com/mautrix/signal/commit/357eb58a446f90fa517dc0f08d7e0e732bc2b3d0,
+      https://github.com/mautrix/signal/commit/c2b2792f0b4f82f11ed85f449ab55aad7a7f98b9
+    note: attributed share is below the rubric's 1 % line; shown as occasional because commits are attributed
+      (lower bound)
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: Earlier versions used signald (Python bridge); the current bridge links libsignal directly (CHANGELOG.md).
+checked: 2026-11-05

@@ -1,0 +1,91 @@
+slug: mautrix-whatsapp
+name: mautrix-whatsapp
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/whatsapp/index.html
+summary: Puppeting bridge between Matrix and WhatsApp, built on the whatsmeow library and mautrix-go bridgev2.
+repos:
+- url: https://github.com/mautrix/whatsapp
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/whatsapp/
+  other: []
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: WhatsApp
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/whatsapp/blob/1d024590d2df575f1f2e184229ace51b0300ff70/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/double-puppeting.md
+    note: 'double puppeting (automatic via an appservice registration, or manual login); relay mode: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/relay-mode.md'
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/end-to-bridge-encryption.md
+    note: optional end-to-bridge encryption of the Matrix side (Matrix rooms encrypted between users and
+      the bridge)
+  backfill:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/whatsapp/blob/1d024590d2df575f1f2e184229ace51b0300ff70/pkg/connector/backfill.go
+    note: from WhatsApp's history sync; historical backfill only in new rooms (docs backfill page)
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/whatsapp/blob/1d024590d2df575f1f2e184229ace51b0300ff70/ROADMAP.md
+  reactions_edits:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/whatsapp/blob/1d024590d2df575f1f2e184229ace51b0300ff70/ROADMAP.md
+    note: reactions both ways; edits and polls listed too
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/whatsapp/blob/1d024590d2df575f1f2e184229ace51b0300ff70/ROADMAP.md
+    note: groups and communities
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/go/whatsapp/authentication.md
+    note: QR code or 8-letter pairing code (linked device); the phone must come online at least every
+      two weeks
+  network_tos_risk:
+    value: not-found
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/go/whatsapp/authentication.md
+    note: no ToS warning found; the docs say the bridge uses WhatsApp's web (linked-device) API
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. The
+      author is accountable for the code. [...] AI should not be used for communicating with humans.
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/contributing.md#L23-L37
+  dev_usage:
+    value: occasional
+    evidence:
+    - 2 of 273 non-bot commits in the last 365 days (0.7 %) carry an AI co-author trailer or 'Generated
+      with' line, e.g. https://github.com/mautrix/whatsapp/commit/33357ced5ae666d9b8e85a56327f28bfb97a293c,
+      https://github.com/mautrix/whatsapp/commit/abf1940af85952912487a87671c82e895d8f574a
+    note: attributed share is below the rubric's 1 % line; shown as occasional because commits are attributed
+      (lower bound)
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: Rewritten on bridgev2 (CHANGELOG.md). One of two WhatsApp bridges with a recent commit here; beenim-labs/whatsapp-bridge-nim
+  is a Nim port of it (not covered).
+checked: 2026-11-05

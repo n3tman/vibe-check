@@ -1,0 +1,80 @@
+slug: mautrix-gvoice
+name: mautrix-gvoice
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/gvoice/index.html
+summary: Puppeting bridge between Matrix and Google Voice text messages on mautrix-go bridgev2.
+repos:
+- url: https://github.com/mautrix/gvoice
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Mautrix-Google Voice Bridge)
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: Google Voice
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/gvoice/blob/bb883cde5945efa39c591f922cfe1a7556e3a66e/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/double-puppeting.md
+    note: 'double puppeting (automatic via an appservice registration, or manual login); relay mode: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/relay-mode.md'
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/end-to-bridge-encryption.md
+    note: optional end-to-bridge encryption of the Matrix side (Matrix rooms encrypted between users and
+      the bridge)
+  backfill:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/gvoice/blob/bb883cde5945efa39c591f922cfe1a7556e3a66e/pkg/connector/handlegvoice.go
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/gvoice/blob/bb883cde5945efa39c591f922cfe1a7556e3a66e/ROADMAP.md
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/go/gvoice/authentication.md
+    note: Google account cookies
+  network_tos_risk:
+    value: not-found
+    note: no ToS warning found in the docs
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. The
+      author is accountable for the code. [...] AI should not be used for communicating with humans.
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/contributing.md#L23-L37
+  dev_usage:
+    value: regular
+    evidence:
+    - 2 of 36 non-bot commits in the last 365 days (5.6 %) carry an AI co-author trailer or 'Generated
+      with' line, e.g. https://github.com/mautrix/gvoice/commit/f82c6eaf5bd0ebc798ea3333c998a33606d735f1,
+      https://github.com/mautrix/gvoice/commit/f13a075bec488095487e631d0e524c2c4c8b4c04
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: Not on matrix.org; found through the community space and org:mautrix. Successor to beeper/googlevoice
+  (archived).
+checked: 2026-11-05

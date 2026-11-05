@@ -1,0 +1,85 @@
+slug: mautrix-imessage
+name: mautrix-imessage
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/imessage/index.html
+summary: Puppeting bridge for iMessage (running on a Mac) or Android SMS, on the legacy mautrix-go bridge
+  framework.
+repos:
+- url: https://github.com/mautrix/imessage
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/imessage/
+  other: []
+maturity: beta
+platforms:
+- macos
+- android
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: iMessage, Android SMS
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/imessage/blob/300ba6d0e5566d1f841d42ee1555779a9b6fa4be/go.mod
+    note: legacy mautrix-go bridge (v1); needs mautrix-wsproxy
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/double-puppeting.md
+    note: double puppeting
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/end-to-bridge-encryption.md
+    note: optional end-to-bridge encryption of the Matrix side (Matrix rooms encrypted between users and
+      the bridge)
+  backfill:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/imessage/blob/300ba6d0e5566d1f841d42ee1555779a9b6fa4be/ROADMAP.md
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/imessage/blob/300ba6d0e5566d1f841d42ee1555779a9b6fa4be/ROADMAP.md
+  reactions_edits:
+    value: partial
+    how: claimed
+    source: https://github.com/mautrix/imessage/blob/300ba6d0e5566d1f841d42ee1555779a9b6fa4be/ROADMAP.md
+    note: tapbacks; full features need SIP disabled
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/imessage/blob/300ba6d0e5566d1f841d42ee1555779a9b6fa4be/ROADMAP.md
+  login_methods:
+    value: partial
+    how: claimed
+    source: https://github.com/mautrix/imessage/blob/300ba6d0e5566d1f841d42ee1555779a9b6fa4be/README.md
+    note: runs on the user's own Mac signed into iMessage, or an Android phone for SMS
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. The
+      author is accountable for the code. [...] AI should not be used for communicating with humans.
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/contributing.md#L23-L37
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 300ba6d0e556; no AI-attributed commits among 1 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: One commit in the last year (2026-05-14). beeper/imessage (archived 2024) was the registration-relay
+  variant.
+checked: 2026-11-05
