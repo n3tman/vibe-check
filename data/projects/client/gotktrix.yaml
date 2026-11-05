@@ -1,0 +1,93 @@
+slug: gotktrix
+name: gotktrix
+category: client
+kind: desktop
+homepage: https://github.com/diamondburned/gotktrix
+summary: A Matrix client in Go and GTK4; marked obsolete on matrix.org.
+repos:
+- url: https://github.com/diamondburned/gotktrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/gotktrix/
+  other: []
+maturity: unmaintained
+platforms:
+- linux
+apps:
+- os: linux
+  tech: gtk
+  status: discontinued
+  stores:
+  - name: github-releases
+    url: https://github.com/diamondburned/gotktrix/releases
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/gotktrix.md
+  min_os: null
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: gotrix (own Go library by the same author)
+    how: code
+    source: https://github.com/diamondburned/gotktrix/blob/a8f876a383cc34dac18edddbe22be2dd494b8d0c/go.mod
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://github.com/diamondburned/gotktrix/blob/a8f876a383cc34dac18edddbe22be2dd494b8d0c/README.md
+    note: 'README feature list: "[ ] E2EE".'
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/gotktrix.md
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/diamondburned/gotktrix/blob/a8f876a383cc34dac18edddbe22be2dd494b8d0c/README.md
+  polls: not-found
+  custom_emoji: not-found
+  stickers:
+    value: 'no'
+    how: claimed
+    source: https://github.com/diamondburned/gotktrix/blob/a8f876a383cc34dac18edddbe22be2dd494b8d0c/README.md
+    note: '"[ ] Send stickers".'
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No commits in the last 365 days, so no attributed commits; no agent files in the tree.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'matrix.org maturity: "Obsolete". Last commit 2023-04-05.'
+checked: '2026-11-05'

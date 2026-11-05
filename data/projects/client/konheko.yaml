@@ -1,0 +1,86 @@
+slug: konheko
+name: konheko
+category: client
+kind: mobile
+homepage: https://openrepos.net/content/deepbluev7/konheko
+summary: A small, unfinished Matrix client for Sailfish OS built on mtxclient, the library behind
+  Nheko.
+repos:
+- url: https://nheko.im/nheko-reborn/konheko
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - 'sources/community-space.tsv: room "konheko" (Chat Clients)'
+maturity: unmaintained
+platforms:
+- sailfish
+apps:
+- os: sailfish
+  tech: qt
+  status: discontinued
+  stores:
+  - name: openrepos
+    url: https://openrepos.net/content/deepbluev7/konheko
+  source: https://nheko.im/nheko-reborn/konheko/-/blob/065884e3b47919a0b92611630b1919155dd5c385/README.md
+  min_os: null
+licence: GPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: mtxclient
+    how: code
+    source: https://nheko.im/nheko-reborn/konheko/-/blob/065884e3b47919a0b92611630b1919155dd5c385/README.md
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://nheko.im/nheko-reborn/konheko/-/blob/065884e3b47919a0b92611630b1919155dd5c385/README.md
+    note: 'README "Missing features": "No E2EE support".'
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No commits in the last 365 days, so no attributed commits; no agent files in the tree.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  README: "still very much WIP and you probably shouldn't use it yet". Last commit 2021-07-07.
+checked: '2026-11-05'
