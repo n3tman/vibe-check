@@ -9,7 +9,18 @@ const servers = d.projects.filter((p) => p.category === 'server');
 const byServer = new Map(servers.map((s) => [s.slug, new Map((((s.features as any)?.msc ?? []) as any[]).map((x) => [x.msc, x]))]));
 const known = new Set(d.mscs.map((m) => m.msc));
 const extra = [...new Set(servers.flatMap((s) => [...byServer.get(s.slug)!.keys()]))].filter((n) => !known.has(n)).sort((a, b) => a - b);
-const rows = [...d.mscs.map((m) => ({ msc: m.msc, title: m.title, status: m.status, spec: m.spec_version, url: m.url })), ...extra.map((n) => ({ msc: n, title: null, status: null, spec: null, url: null }))];
+// What users notice first (lane 4's order), then the rest by number.
+const KEY = [4186, 3575, 3861, 4191, 4108, 3916, 4143, 4195, 4140, 3440, 3771, 3773, 4306, 4284, 2545, 1767, 3814, 4133, 4222, 4380, 4155, 4323, 2666, 1772];
+const keyRank = new Map(KEY.map((n, i) => [n, i]));
+const rows = [...d.mscs.map((m) => ({ msc: m.msc, title: m.title, status: m.status, spec: m.spec_version, url: m.url })), ...extra.map((n) => ({ msc: n, title: null, status: null, spec: null, url: null }))]
+  .sort((a, b) => (keyRank.get(a.msc) ?? 1e6) - (keyRank.get(b.msc) ?? 1e6) || a.msc - b.msc);
+const nKey = rows.filter((r) => keyRank.has(r.msc)).length;
+// Spec versions each server advertises in /_matrix/client/versions.
+const verKey = (v: string) => { const m = /^v(\d+)\.(\d+)/.exec(v); return m ? +m[1] * 1000 + +m[2] : /^r0/.test(v) ? 0 : -1; };
+const specRows = servers
+  .map((s) => { const sv = (s.features as any)?.spec_versions; const vs: string[] = (sv?.versions ?? []).filter((v: unknown) => typeof v === 'string'); return { s, vs: [...vs].sort((a, b) => verKey(a) - verKey(b)), src: sv?.source ?? null }; })
+  .filter((r) => r.vs.length > 0)
+  .sort((a, b) => verKey(b.vs[b.vs.length - 1]) - verKey(a.vs[a.vs.length - 1]) || a.s.name.localeCompare(b.s.name));
 const cols = servers.filter((s) => byServer.get(s.slug)!.size > 0);
 const ICON: Record<string, string> = { stable: 'check', unstable: 'partial', experimental: 'clock', partial: 'partial', removed: 'cross' };
 ---
@@ -19,6 +30,29 @@ const ICON: Record<string, string> = { stable: 'check', unstable: 'partial', exp
     <h1>Servers × MSCs</h1>
     <p class="lede">Which homeserver implements which Matrix Spec Change, and how: stable, behind an unstable prefix, behind a flag, partly, or removed. The MSC's own status (merged into the spec, in final comment period, open) is in the second column.</p>
   </header>
+  {specRows.length > 0 && (
+    <section aria-labelledby="spec-h">
+      <h2 id="spec-h">Spec versions advertised</h2>
+      <p class="muted small">The newest Matrix spec version each server lists in its <code>/_matrix/client/versions</code> handler, read from the code. Advertising a version is the server's own claim of support.</p>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th scope="col">Server</th><th scope="col">Newest</th><th scope="col">Oldest</th><th scope="col">Versions listed</th></tr></thead>
+          <tbody>
+            {specRows.map((r) => (
+              <tr>
+                <th scope="row" style="font-weight:500"><a href={href(`p/${r.s.slug}/`)}>{r.s.name}</a></th>
+                <td>{r.src ? <a href={r.src}>{r.vs[r.vs.length - 1]}</a> : r.vs[r.vs.length - 1]}</td>
+                <td>{r.vs[0]}</td>
+                <td>{r.vs.length}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+  <h2>MSC support</h2>
+  <p class="muted small">The first {nKey} rows are the proposals users notice most (sliding sync, next-gen auth, authenticated media, MatrixRTC, threads, policy servers, custom emoji, …); the rest follow by number.</p>
   {rows.length === 0 || cols.length === 0 ? (
     <p class="empty">No MSC data yet: the servers lane writes <code>data/mscs.yaml</code> and the server files.</p>
   ) : (
