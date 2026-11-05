@@ -129,8 +129,28 @@ paths, attributed commits and their share, bot authors, AI workflows), `telemetr
   collector's `suggested_dev_usage` (a refusal-only `AGENTS.md`, history rewritten to strip
   trailers, …). The project page shows it instead of "not reconciled yet".
 - `ai.funder_policy`: a list, one entry per funder with an AI policy for the work it pays for:
-  `funder`, `grant` (URL), `grant_start`, `policy` (URL), `policy_version`, `value` (the policy
-  enum), `quote`, `scope`, `transition`, `checked`. Never merged into `ai.policy`.
+  `funder`, `grant` (URL), `grant_start`, `grant_end` (when the grant has ended), `grant_source`
+  (the README line or funding page that states the grant), `policy` (URL), `policy_version` (the
+  version that binds this grant, from its dates and the funder's transition rules), `value` (the
+  policy enum; `none-found` for a grant that ended before the funder had a policy), `quote`,
+  `scope`, `transition`, `transparency` (whether the stance statement the funder asks for was found
+  in the README), `checked`. Never merged into `ai.policy`. Example:
+  ```yaml
+  ai:
+    funder_policy:
+      - funder: NLnet Foundation (NGI Zero Core fund)
+        grant: https://nlnet.nl/project/<Name>/
+        grant_start: 2024-04
+        grant_source: <README line or funding page that states the grant>
+        policy: https://nlnet.nl/foundation/policies/generativeAI/2.0/
+        policy_version: 2.0, in force since 2026-10-20
+        value: banned
+        quote: <the sentence>
+        scope: work delivered within the grant
+        transition: <what the FAQ says about this fund, or "not stated">
+        transparency: <found / not found, with the file>
+        checked: 2026-11-05
+  ```
 - `apps[].note`: short free text about one app (minSdk, unsigned builds).
 - `features.spec_versions` (servers) may be a map with `versions: [...]` and a source.
 - `data/mscs.yaml` entries may carry `status_detail`, `labels` and `servers`.
