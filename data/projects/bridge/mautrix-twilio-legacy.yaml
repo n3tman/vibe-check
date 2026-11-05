@@ -1,0 +1,62 @@
+slug: mautrix-twilio-legacy
+name: mautrix-twilio (Python, 2019)
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/twilio-old/index.html
+summary: Archived early Python bridge between Matrix and Twilio SMS.
+repos:
+- url: https://github.com/tulir/mautrix-twilio
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Mautrix-Twilio Bridge, DEPRECATED)
+maturity: archived
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: SMS via Twilio
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/tulir/mautrix-twilio/blob/b0c1924e208f71e3a3c6f41389368731f6009940/setup.py
+    note: mautrix-python
+  puppeting:
+    value: not-found
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD b0c1924e208f; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: Archived; the community space room is marked DEPRECATED. Replaced by the bridgev2 demo mautrix/twilio.
+checked: 2026-11-05
