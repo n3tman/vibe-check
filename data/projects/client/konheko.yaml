@@ -14,8 +14,7 @@ sources:
   other:
   - 'sources/community-space.tsv: room "konheko" (Chat Clients)'
 maturity: unmaintained
-platforms:
-- sailfish
+platforms: []
 apps:
 - os: sailfish
   tech: qt
