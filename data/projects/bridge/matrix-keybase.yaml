@@ -1,0 +1,68 @@
+slug: matrix-keybase
+name: matrix-keybase
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Discontinued Keybase bridge, stopped after Zoom acquired Keybase.
+repos:
+- url: https://github.com/Half-Shot/matrix-keybase
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Matrix Keybase Bridge)
+maturity: archived
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Keybase
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/Half-Shot/matrix-keybase/blob/edc887f3697c9009b7e6c1c4b4894e93f0da6960/package.json
+    note: own (Node.js)
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD edc887f3697c; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'Archived on GitHub; README: "This project has been discontinued."'
+checked: 2026-11-05

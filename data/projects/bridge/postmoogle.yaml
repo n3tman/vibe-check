@@ -39,7 +39,7 @@ features:
     source: https://github.com/etkecc/postmoogle/blob/b80fce145115061f4f0181d0b574b6699ef8a04e/README.md#L87
     note: works in encrypted rooms (crypto store)
   backfill:
-    value: 'no'
+    value: not-found
   media:
     value: 'yes'
     how: claimed
@@ -58,8 +58,8 @@ features:
     source: https://github.com/etkecc/postmoogle/blob/b80fce145115061f4f0181d0b574b6699ef8a04e/README.md
     note: the bridge acts as the mail server; rooms claim mailboxes with !pm commands
   network_tos_risk:
-    value: 'no'
-    note: it runs its own SMTP server, no third-party account
+    value: not-found
+    note: it runs its own SMTP server, so no third-party account is involved
 ai:
   policy:
     value: none-found

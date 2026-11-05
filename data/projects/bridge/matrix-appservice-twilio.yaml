@@ -1,0 +1,68 @@
+slug: matrix-appservice-twilio
+name: matrix-appservice-twilio
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Archived SMS bridge using Twilio.
+repos:
+- url: https://github.com/turt2live/matrix-appservice-twilio
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Matrix Twilio Bridge (SMS) (ARCHIVED))
+maturity: archived
+platforms:
+- server
+licence: GPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: SMS via Twilio
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/turt2live/matrix-appservice-twilio/blob/8136fb2492e6f577d24392193b8c027bd3ae7d1a/package.json
+    note: matrix-appservice-bridge
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 8136fb2492e6; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Archived on GitHub; community space room marked ARCHIVED.
+checked: 2026-11-05

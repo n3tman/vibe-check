@@ -1,0 +1,68 @@
+slug: mx-puppet-discord
+name: mx-puppet-discord
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Discord puppeting bridge on mx-puppet-bridge (DMs, group DMs and guilds).
+repos:
+- url: https://gitlab.com/mx-puppet/discord/mx-puppet-discord
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Mx Puppet Bridge)
+maturity: unmaintained
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Discord
+  framework:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/mx-puppet/discord/mx-puppet-discord/-/blob/fd4402268e9a8b942ca632f3337702862e06d24f/package.json
+    note: mx-puppet-bridge
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD fd4402268e9a; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Last commit 2022-05-09. The community space room suggests mautrix-discord instead.
+checked: 2026-11-05

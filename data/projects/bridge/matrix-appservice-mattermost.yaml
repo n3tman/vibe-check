@@ -1,0 +1,70 @@
+slug: matrix-appservice-mattermost
+name: matrix-appservice-mattermost
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Archived appservice bridge between Matrix and Mattermost that creates a user on each side for
+  each user.
+repos:
+- url: https://github.com/dalcde/matrix-appservice-mattermost
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/mattermost/
+  other: []
+maturity: archived
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Mattermost
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/dalcde/matrix-appservice-mattermost/blob/c131df3ea090b602fcee8c62296ba5f011fa61ed/package.json
+    note: matrix-appservice-bridge
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/dalcde/matrix-appservice-mattermost/blob/c131df3ea090b602fcee8c62296ba5f011fa61ed/README.md
+    note: a Matrix user per Mattermost user and the reverse
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD c131df3ea090; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'Archived on GitHub; last commit 2022-02-16. Other Mattermost bridge: matrix-as-mm.'
+checked: 2026-11-05

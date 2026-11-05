@@ -1,0 +1,70 @@
+slug: matrix-puppet-bridge
+name: matrix-puppet-bridge
+category: bridge
+kind: bridge framework
+homepage: null
+summary: Early library for building user-puppeting bridges (Slack, iMessage, Facebook and others were
+  built on it).
+repos:
+- url: https://github.com/matrix-hacks/matrix-puppet-bridge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Matrix Puppet Bridge)
+maturity: unmaintained
+platforms:
+- server
+licence: null
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: library for several networks
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/matrix-hacks/matrix-puppet-bridge/blob/7c2ed78e430b81a536ae4a1dc0b57f707ca6a3f0/package.json
+    note: own (Node.js library)
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 7c2ed78e430b; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Last commit 2021-02-11. The README itself points users to newer projects ("Before you begin, consider
+  the landscape").
+checked: 2026-11-05

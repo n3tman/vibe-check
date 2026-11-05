@@ -1,0 +1,68 @@
+slug: matrix-appservice-instagram-media
+name: matrix-appservice-instagram-media
+category: bridge
+kind: media feed bridge
+homepage: null
+summary: Archived bridge that posted Instagram media into Matrix rooms (no chat).
+repos:
+- url: https://github.com/turt2live/matrix-appservice-instagram-media
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Matrix Instagram Media Bridge (ARCHIVED))
+maturity: archived
+platforms:
+- server
+licence: GPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Instagram (posts)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/turt2live/matrix-appservice-instagram-media/blob/c60f4939a746b6db56e039f0b243ed7f09c25326/package.json
+    note: matrix-appservice-bridge
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD c60f4939a746; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Archived on GitHub (last commit 2017-12-12).
+checked: 2026-11-05

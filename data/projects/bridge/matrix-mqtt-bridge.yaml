@@ -1,0 +1,61 @@
+slug: matrix-mqtt-bridge
+name: matrix-mqtt-bridge
+category: bridge
+kind: IoT bridge
+homepage: null
+summary: Rust bridge between Matrix rooms and MQTT topics.
+repos:
+- url: https://github.com/DanNixon/matrix-mqtt-bridge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-bridge
+maturity: beta
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: MQTT
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/DanNixon/matrix-mqtt-bridge/blob/f862eb6f49949fef43d10efe996bd349536e4803/Cargo.toml
+    note: own (Rust)
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD f862eb6f4994; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Last commit 2026-05-30 (dependency updates; no non-bot commits in the last year by our count).
+checked: 2026-11-05

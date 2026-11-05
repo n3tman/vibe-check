@@ -51,8 +51,8 @@ features:
     source: https://codeberg.org/slidge/matridge/src/commit/1d76d7279a6ffca573ce0b45aee5f2d2f61cba3c/README.md
     note: Matrix account credentials given to the gateway
   network_tos_risk:
-    value: 'no'
-    note: Matrix-side client, no third-party ToS
+    value: not-found
+    note: it is a Matrix client on the Matrix side; no warning needed or found
 ai:
   policy:
     value: none-found
