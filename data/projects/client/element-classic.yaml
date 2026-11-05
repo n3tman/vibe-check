@@ -1,0 +1,155 @@
+slug: element-classic
+name: Element Classic (Android, iOS)
+category: client
+kind: mobile
+homepage: https://element.io
+summary: Element's previous-generation mobile apps; still supported with security updates, no new
+  features.
+repos:
+- url: https://github.com/element-hq/element-android
+  forge: github
+  role: android
+- url: https://github.com/element-hq/element-ios
+  forge: github
+  role: ios
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/element-classic/
+  other:
+  - 'sources/community-space.tsv: rooms "Element Android", "Element iOS (OLD)"'
+maturity: stable
+platforms:
+- android
+- ios
+apps:
+- os: android
+  tech: native
+  min_os: '5.0'
+  status: stable
+  stores:
+  - name: google-play
+    url: https://play.google.com/store/apps/details?id=im.vector.app
+  - name: f-droid
+    url: https://f-droid.org/packages/im.vector.app
+  source: https://github.com/element-hq/element-android/blob/08dc499968c2a7f8b6e8a25a0a834a8a783376e7/README.md
+- os: ios
+  tech: native
+  min_os: '15.1'
+  status: stable
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/app/id1083446067
+  source: https://github.com/element-hq/element-ios/blob/7ba8beb088978786a6fc0aa3c9324a33ee77c38a/Podfile
+licence: AGPL-3.0-only OR LicenseRef-Element-Commercial
+fork_of: null
+distribution:
+- google-play
+- f-droid
+- app-store
+funding: []
+features:
+  sdk:
+    value: matrix-android-sdk2 (in repo) / MatrixSDK (matrix-ios-sdk)
+    how: code
+    source: https://github.com/element-hq/element-ios/blob/7ba8beb088978786a6fc0aa3c9324a33ee77c38a/README.md
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+  cross_signing:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+  key_backup:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+  sliding_sync:
+    value: not-found
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+    note: 'matrix.org: unknown.'
+  oidc_auth:
+    value: not-found
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+    note: 'matrix.org: unknown.'
+  multi_account:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+  threads:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+  spaces:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+  voip_1to1:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+  group_calls:
+    value: partial
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+    note: Jitsi conference calls (voip_jitsi supported); MatrixRTC unknown.
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji:
+    value: partial
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-classic.md
+  telemetry:
+    value: opt-in
+    how: code
+    source: https://github.com/element-hq/element-android/blob/08dc499968c2a7f8b6e8a25a0a834a8a783376e7/vector/build.gradle
+    note: PostHog and Sentry dependencies; analytics are opt-in in Element apps (consent screen).
+  default_homeserver:
+    value: not-found
+    how: null
+    source: null
+  fork_friendliness:
+    value: 'no'
+    how: claimed
+    source: https://github.com/element-hq/element-android/blob/08dc499968c2a7f8b6e8a25a0a834a8a783376e7/README.md
+    note: 'Maintenance mode: "no new features or usability enhancements are made"; SchildiChat Android
+      (classic) was built on it.'
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - >-
+      element-ios: 3 of 108 non-bot commits in the last 365 days (about 2.8 %) carry a Claude co-author
+      trailer.
+    - 'element-android: none of 91 non-bot commits attributed.'
+    - No agent files in either tree.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  Both READMEs: "This client is still supported and receives security updates but no new features
+  or usability enhancements are made. It is recommended to use Element X". matrix.org maturity: Stable.
+checked: '2026-11-05'

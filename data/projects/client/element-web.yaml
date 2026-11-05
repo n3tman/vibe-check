@@ -1,0 +1,234 @@
+slug: element-web
+name: Element Web / Desktop
+category: client
+kind: web, desktop
+homepage: https://element.io
+summary: Element's web client and its Electron desktop app, built on matrix-js-sdk; both now live
+  in one pnpm monorepo.
+repos:
+- url: https://github.com/element-hq/element-web
+  forge: github
+  role: main
+- url: https://github.com/element-hq/element-desktop
+  forge: github
+  role: desktop
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/element/
+  other:
+  - 'sources/community-space.tsv: rooms "Element Web/Desktop (OLD)", "Element Web Development"'
+maturity: stable
+platforms:
+- web
+- windows
+- macos
+- linux
+apps:
+- os: web
+  tech: other
+  status: stable
+  stores:
+  - name: web
+    url: https://app.element.io
+  - name: docker
+    url: https://hub.docker.com/r/vectorim/element-web
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element.md
+  min_os: null
+- os: windows
+  tech: electron
+  status: stable
+  stores:
+  - name: element.io
+    url: https://element.io/download
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element.md
+  min_os: null
+- os: macos
+  tech: electron
+  status: stable
+  stores:
+  - name: element.io
+    url: https://element.io/download
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element.md
+  min_os: null
+- os: linux
+  tech: electron
+  status: stable
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/im.riot.Riot
+  - name: apt
+    url: https://packages.element.io/debian/
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element.md
+  min_os: null
+licence: AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial
+fork_of: null
+distribution:
+- flathub
+- docker
+- apt
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk (develop branch, Rust crypto)
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/package.json
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/DecryptionFailureTracker.ts
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/dialogs/devtools/Crypto.tsx
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/device-listener/DeviceListenerCurrentDevice.ts
+  sliding_sync:
+    value: partial
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/SlidingSyncManager.ts
+    note: Native MSC4186 sliding sync behind the labs flag feature_sliding_sync (default off).
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/utils/oauth/authorize.ts
+    note: 'Next-gen auth (OAuth 2.0 / MAS); docs/oauth.md. matrix.org: supported.'
+  multi_account:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element.md
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/structures/ThreadPanel.tsx
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/structures/SpaceHierarchy.tsx
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/messages/LegacyCallEvent.tsx
+    note: Legacy m.call; Jitsi widgets also supported (matrix.org).
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/models/Call.ts
+    note: Element Call embedded (@element-hq/element-call-embedded 0.28.0).
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/rooms/EventTile.tsx
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/rooms/EditMessageComposer.tsx
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/elements/ReplyChain.tsx
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/elements/PollCreateDialog.tsx
+  custom_emoji:
+    value: partial
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element.md
+    note: 'matrix.org: image_packs partial; no im.ponies code found in apps/web/src.'
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/utils/exportUtils/Exporter.ts
+    note: Via the integration manager sticker picker.
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/utils/location/parseGeoUri.ts
+    note: Static and live location (beacons).
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/utils/createVoiceMessageContent.ts
+  rich_text_editor:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/rooms/MessageComposer.tsx
+    note: Markdown composer plus the optional WYSIWYG composer.
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/settings/handlers/RoomSettingsHandler.ts
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/settings/notifications/NotificationPusherSettings.tsx
+    note: Desktop/browser notifications and pusher management.
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/structures/TimelinePanel.tsx
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/avatars/WithPresenceIndicator.tsx
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/slash-commands/upgraderoom/runUpgradeRoomCommand.ts
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/components/views/dialogs/BulkRedactDialog.tsx
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/AGENTS.md
+    note: Playwright tests locate elements by role and accessible name; aria attributes in over 300
+      source files; a community room "Element accessibility" exists.
+  translations:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/localazy.json
+    note: Localazy; 41 locale files in apps/web/src/i18n/strings.
+  telemetry:
+    value: opt-in
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/src/PosthogAnalytics.ts
+    note: PostHog analytics only after the user opts in (analyticsOptIn); Sentry (@sentry/browser,
+      @sentry/electron) for rageshake/crash reports when configured.
+  default_homeserver:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/config.sample.json
+    note: matrix.org (default_server_config), identity server vector.im, integrations scalar.vector.im.
+  fork_friendliness:
+    value: partial
+    how: code
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/AGENTS.md
+    note: Large pnpm + nx monorepo (web, desktop, shared components, modules); triple licence AGPL-3.0
+      / GPL-3.0 / commercial with a CLA for contributions. Many forks exist (SchildiChat).
+ai:
+  policy:
+    value: restricted
+    quote: >-
+      The PR description must be written by a human and mustn't be generated by AI tools. [...] Any
+      PR with a generated AI PR description will be closed. (PR template: "- [ ] I used AI tools
+      to help create this PR.")
+    source: https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/CONTRIBUTING.md
+  dev_usage:
+    value: occasional
+    evidence:
+    - AGENTS.md at the repo root (instructions for AI coding agents).
+    - >-
+      25 of about 2,100 non-bot commits in the last 365 days (about 1.2 %) carry an AI co-author
+      trailer (Claude, Copilot Autofix).
+    - The PR template has an "AI assistance" checkbox.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  matrix.org maturity: Stable. Element Desktop moved into the element-web monorepo (apps/desktop);
+  the separate element-desktop repo's last commit is 2026-03-25.
+checked: '2026-11-05'
