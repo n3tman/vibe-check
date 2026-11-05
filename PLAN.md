@@ -15,6 +15,7 @@ switch. Six sessions run in parallel on their own branches, then one integrates 
 | 6 | `prompts/06-bridges.md` | `data/projects/bridge/`, `notes/06.md` | nothing |
 | 7 | `prompts/07-integrate-publish.md` | everything | lanes 1 to 6 merged into `main` |
 | 8 (spare) | `prompts/08-sdks.md` | `data/projects/sdk/`, `notes/08.md` | nothing; run only if budget remains |
+| 10 | `prompts/10-icons.md` | `site/public/icons/`, the `icon` key of project files, `notes/10.md` | lane 7 merged |
 
 Lanes 1 to 6 write disjoint files, so their branches merge into `main` without conflicts.
 A lane that finds a project of another lane's category adds it to its notes under "For
