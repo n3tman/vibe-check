@@ -1,0 +1,40 @@
+slug: maunium-stickerpicker
+name: Maunium sticker picker
+category: tool
+kind: widget
+homepage: https://github.com/maunium/stickerpicker
+summary: A sticker picker widget for Element with pack import from Telegram; no longer maintained since
+  MSC2545 image packs are in the spec.
+repos:
+- url: https://github.com/maunium/stickerpicker
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: archived
+platforms: [server]
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: 'widget (sticker picker, Telegram pack import, GIF search proxy)', how: claimed, source: 'https://github.com/maunium/stickerpicker/blob/c4ac072dd33ae5c89144d0222103786c8d8c1ba4/README.md'}
+  framework: {value: own widget; mautrix-go for the GIF proxy, how: code, source: 'https://github.com/maunium/stickerpicker/blob/c4ac072dd33ae5c89144d0222103786c8d8c1ba4/giphyproxy/go.mod'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/maunium/stickerpicker/blob/c4ac072dd33ae5c89144d0222103786c8d8c1ba4/README.md',
+    note: 'not applicable: stickers are served as static media'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/maunium/stickerpicker/blob/c4ac072dd33ae5c89144d0222103786c8d8c1ba4/README.md',
+    note: 'static files, e.g. GitHub Pages'}
+  config: {value: pack files and import script, how: claimed, source: 'https://github.com/maunium/stickerpicker/blob/c4ac072dd33ae5c89144d0222103786c8d8c1ba4/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/maunium/stickerpicker/blob/c4ac072dd33ae5c89144d0222103786c8d8c1ba4/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 3 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at c4ac072dd33a
+  in_product: {value: none-found, note: null, source: null}
+notes: 'README: "No longer maintained … it''s better to use clients that support native Matrix sticker
+  packs." Archived on GitHub. LICENSE is the GNU AGPL v3 (-only vs -or-later not checked).'
+checked: 2026-11-05

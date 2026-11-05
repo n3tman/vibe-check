@@ -1,0 +1,38 @@
+slug: matrix-meetings
+name: Matrix Meetings (NeoDateFix)
+category: tool
+kind: widget
+homepage: https://github.com/nordeck/matrix-meetings
+summary: A calendar widget plus a bot that create meeting rooms with invitees, widgets and breakout sessions
+  in Element; now branded NeoDateFix.
+repos:
+- url: https://github.com/nordeck/matrix-meetings
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker, helm]
+funding: []
+features:
+  purpose: {value: 'widget and bot (meeting scheduling, meeting rooms, breakout sessions)', how: claimed,
+    source: 'https://github.com/nordeck/matrix-meetings/blob/03effba8c0fb770abad34f272d407eefedf488e0/README.md'}
+  framework: {value: matrix-bot-sdk (bot) and matrix-widget-api (widget), how: code, source: 'https://github.com/nordeck/matrix-meetings/blob/03effba8c0fb770abad34f272d407eefedf488e0/matrix-meetings-bot/package.json'}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/nordeck/matrix-meetings/blob/03effba8c0fb770abad34f272d407eefedf488e0/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/nordeck/matrix-meetings/blob/03effba8c0fb770abad34f272d407eefedf488e0/README.md',
+    note: widget and bot containers or Helm charts; Element 1.11.29+}
+  config: {value: environment files for bot and widget; managed from the widget UI, how: claimed, source: 'https://github.com/nordeck/matrix-meetings/blob/03effba8c0fb770abad34f272d407eefedf488e0/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/nordeck/matrix-meetings/blob/03effba8c0fb770abad34f272d407eefedf488e0/matrix-meetings-bot/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 9 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 03effba8c0fb
+  in_product: {value: none-found, note: null, source: null}
+notes: null
+checked: 2026-11-05

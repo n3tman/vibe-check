@@ -1,0 +1,38 @@
+slug: matrix-poll
+name: Matrix Poll (NeoChoice)
+category: tool
+kind: widget
+homepage: https://github.com/nordeck/matrix-poll
+summary: A widget for structured polls in rooms, including group-based voting with an admin view; now
+  branded NeoChoice.
+repos:
+- url: https://github.com/nordeck/matrix-poll
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker, helm]
+funding: []
+features:
+  purpose: {value: widget (polls with groups and an admin view), how: claimed, source: 'https://github.com/nordeck/matrix-poll/blob/306be66eb081afaf49303b99e9768e8e915646ca/README.md'}
+  framework: {value: matrix-widget-api via Nordeck's matrix-widget-toolkit, how: code, source: 'https://github.com/nordeck/matrix-poll/blob/306be66eb081afaf49303b99e9768e8e915646ca/package.json'}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/nordeck/matrix-poll/blob/306be66eb081afaf49303b99e9768e8e915646ca/README.md',
+    note: poll data is stored as room events; the README makes no encryption statement}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/nordeck/matrix-poll/blob/306be66eb081afaf49303b99e9768e8e915646ca/README.md',
+    note: '"Till now there is no officially hosted demo"; container or Helm chart; Element 1.11.8+'}
+  config: {value: deploy-time environment variables; admin widget in the room, how: claimed, source: 'https://github.com/nordeck/matrix-poll/blob/306be66eb081afaf49303b99e9768e8e915646ca/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/nordeck/matrix-poll/blob/306be66eb081afaf49303b99e9768e8e915646ca/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 4 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 306be66eb081
+  in_product: {value: none-found, note: null, source: null}
+notes: null
+checked: 2026-11-05
