@@ -65,3 +65,9 @@ ai:
     source: null
 notes: matrix.org labels it Obsolete; last commit 2023-07-05. Replaced in practice by mautrix-gmessages.
 checked: 2026-11-05
+icon:
+  file: beeper-android-sms.webp
+  source: "https://gitlab.com/beeper/android-sms/-/blob/4d5fe823e719e4e754a34d180d12996f1378f288/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+  licence: "Apache-2.0"
+  note: "Beeper's logo, shipped in the repo"
+  checked: 2026-11-05

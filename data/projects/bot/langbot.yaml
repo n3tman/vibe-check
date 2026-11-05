@@ -52,3 +52,9 @@ ai:
 notes: 18,730 stars; mostly Chinese-language community. Matrix is one of many platform adapters. Found
   by GitHub search; not on matrix.org's list.
 checked: 2026-11-05
+icon:
+  file: langbot.svg
+  source: "https://github.com/langbot-app/LangBot/blob/33e482a35744aeafc345241e03a0c1825180824b/plugins/misc/WordFSRS/assets/icon.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

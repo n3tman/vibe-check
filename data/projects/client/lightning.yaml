@@ -174,3 +174,9 @@ ai:
 notes: 'matrix.org maturity: Beta. dev_usage is set to regular from the project''s own CLAUDE.md, not
   from trailer counts, which were removed from history.'
 checked: '2026-11-05'
+icon:
+  file: lightning.webp
+  source: "https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/data/icons/hicolor/512x512/apps/lightning.png"
+  licence: "GPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

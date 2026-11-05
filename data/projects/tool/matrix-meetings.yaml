@@ -69,3 +69,9 @@ ai:
     source: null
 notes: null
 checked: 2026-11-05
+icon:
+  file: matrix-meetings.svg
+  source: "https://github.com/nordeck/matrix-meetings/blob/03effba8c0fb770abad34f272d407eefedf488e0/matrix-meetings-widget/public/logo_light.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

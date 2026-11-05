@@ -237,3 +237,9 @@ ai:
 notes: >-
   matrix.org maturity: Stable. The old #cinny:matrix.org room is archived and replaced (community-space.tsv).
 checked: '2026-11-05'
+icon:
+  file: cinny.svg
+  source: "https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/public/res/svg/cinny.svg"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

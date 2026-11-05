@@ -65,3 +65,9 @@ notes: 'Licence: the code is AFL-3.0 per matrix.org, with other files under the 
   own GenAI policy for funded work is recorded under ai.funder_policy, separately from the project''s
   own policy. No AI-attributed commits were found in the last 365 days.'
 checked: 2026-11-05
+icon:
+  file: draupnir.webp
+  source: "https://avatars.githubusercontent.com/u/144344559?v=4&s=256"
+  licence: null
+  note: "the the-draupnir-project organisation's avatar on GitHub"
+  checked: 2026-11-05

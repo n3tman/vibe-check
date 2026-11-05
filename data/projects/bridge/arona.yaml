@@ -61,3 +61,9 @@ ai:
     source: https://github.com/web-tech-tw/arona/blob/296b44c8a68de60aee554e11875c47a59c0755a6/docs/integrations/openai.md
 notes: Matrix is one of several networks. Its last-year commits include copilot-swe-agent[bot] authorship.
 checked: 2026-11-05
+icon:
+  file: arona.svg
+  source: "https://github.com/web-tech-tw/arona/blob/296b44c8a68de60aee554e11875c47a59c0755a6/docs/statics/logo.svg"
+  licence: "MIT"
+  note: null
+  checked: 2026-11-05

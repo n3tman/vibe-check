@@ -192,3 +192,9 @@ notes: The upstream_infra/ folder carries Element X's CONTRIBUTING, which says "
   AI led contributions within reasonable bounds"; that is Element's policy, not SchildiChat's own. The
   collector should count first-parent history only for this fork.
 checked: '2026-11-05'
+icon:
+  file: schildichat-next.webp
+  source: "https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/app/src/sc/res/mipmap-xxxhdpi/ic_launcher.png"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

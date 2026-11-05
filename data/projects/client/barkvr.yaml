@@ -80,3 +80,9 @@ ai:
     source: null
 notes: 'A not-chat client: Matrix is one of its networks (description: "matrix/mastodon client").'
 checked: '2026-11-05'
+icon:
+  file: barkvr.svg
+  source: "https://github.com/zodiepupper/barkvr/blob/9084ebeb6325275cbaf62899a3bf1fdcccb54d98/addons/vector/logo.svg"
+  licence: "MIT"
+  note: null
+  checked: 2026-11-05

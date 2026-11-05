@@ -35,3 +35,9 @@ ai:
 notes: Closed source; listed on matrix.org with licence "Element Commercial License". Features and MSCs
   not checked (no public code).
 checked: '2026-11-05'
+icon:
+  file: synapse-pro.webp
+  source: "https://element.io/assets-32bb636196f91ed59d7a49190e26b42c/5ef25c0d30ee3108da4c25e9/5f0e1775cd41ebe29c04cac1_webclip.png"
+  licence: null
+  note: "Element's logo (the touch icon of element.io); Synapse Pro is an Element product"
+  checked: 2026-11-05

@@ -183,3 +183,9 @@ ai:
     source: null
 notes: 'README: "The current implementation [of E2EE] is mostly stable, but it was never audited."'
 checked: '2026-11-05'
+icon:
+  file: nheko.svg
+  source: "https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/resources/nheko.svg"
+  licence: "GPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

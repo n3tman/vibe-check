@@ -354,3 +354,10 @@ notes: A user asked for a no-LLM policy in https://github.com/element-hq/synapse
   were not readable from this session. Synapse Pro (closed source, Element) is a separate listing. Spec
   versions come from rust/src/handlers/versions.rs (the /versions handler moved to Rust).
 checked: '2026-11-05'
+icon:
+  file: synapse.svg
+  source: "https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/docs/favicon.svg"
+  licence: "AGPL-3.0-or-later OR LicenseRef-Element-Commercial"
+  note: null
+  backing: light
+  checked: 2026-11-05

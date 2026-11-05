@@ -48,3 +48,9 @@ ai:
 notes: Maintained by etke.cc. The AI-attributed commits are Co-Authored-By Claude trailers. No contribution
   policy on AI found (no CONTRIBUTING file). Maturity is our reading.
 checked: 2026-11-05
+icon:
+  file: baibot.webp
+  source: "https://github.com/etkecc/baibot/blob/3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02/etc/assets/baibot.svg"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

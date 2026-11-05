@@ -236,3 +236,9 @@ notes: >-
   AI tools"; its PR template has an "I used AI tools" checkbox. Element Desktop moved into the element-web
   monorepo (apps/desktop); the separate element-desktop repo's last commit is 2026-03-25.
 checked: '2026-11-05'
+icon:
+  file: element-web.svg
+  source: "https://github.com/element-hq/element-web/blob/a3f5be54f4bf77eee950e38aedb3251bf059dc38/apps/web/res/img/element-desktop-logo.svg"
+  licence: "AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial"
+  note: null
+  checked: 2026-11-05

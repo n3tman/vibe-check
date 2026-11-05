@@ -37,3 +37,9 @@ ai:
 notes: Last commit 2022-05-07. The community-space room points to the gatho-party organisation; the website
   repo (gatho-party/gatho-website) is separate and not covered.
 checked: 2026-11-05
+icon:
+  file: gatho-bot.webp
+  source: "https://avatars.githubusercontent.com/u/98011905?v=4&s=256"
+  licence: null
+  note: "the gatho-party organisation's avatar on GitHub"
+  checked: 2026-11-05

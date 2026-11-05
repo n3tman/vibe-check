@@ -327,6 +327,9 @@ details > summary { cursor: pointer; font-weight: 600; }
 .legend li { display: inline-flex; align-items: center; gap: 0.35rem; }
 /* Project icons */
 .picon { flex: none; border-radius: 22%; object-fit: contain; background: var(--surface-2); }
+.picon-on-dark { background: #1f2329; padding: 3px; }
+:root[data-theme='dark'] .picon-on-light { background: #eceef2; padding: 3px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .picon-on-light { background: #eceef2; padding: 3px; } }
 .picon-mono { display: inline-grid; place-items: center; font-weight: 700; letter-spacing: -0.02em; color: hsl(var(--h) 45% 28%); background: hsl(var(--h) 60% 88%); }
 :root[data-theme='dark'] .picon-mono { color: hsl(var(--h) 60% 85%); background: hsl(var(--h) 30% 24%); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .picon-mono { color: hsl(var(--h) 60% 85%); background: hsl(var(--h) 30% 24%); } }

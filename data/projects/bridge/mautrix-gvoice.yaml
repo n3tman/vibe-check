@@ -78,3 +78,9 @@ ai:
 notes: Not on matrix.org; found through the community space and org:mautrix. Successor to beeper/googlevoice
   (archived).
 checked: 2026-11-05
+icon:
+  file: mautrix-gvoice.webp
+  source: "https://avatars.githubusercontent.com/u/88519669?v=4&s=256"
+  licence: null
+  note: "the mautrix bridges' shared logo: the mautrix organisation's avatar on GitHub (the repo itself ships only the bridged network's logo, or none)"
+  checked: 2026-11-05

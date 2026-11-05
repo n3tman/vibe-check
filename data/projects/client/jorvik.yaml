@@ -110,3 +110,9 @@ ai:
     source: null
 notes: Continuation of Heorot; keeps com.heorot.* event types for compatibility.
 checked: '2026-11-05'
+icon:
+  file: jorvik.webp
+  source: "https://github.com/jorvikapp/jorvik/blob/b4fc6f793464350c8def0e20dec3c64bf4a40a67/docs/jorvik-icon.png"
+  licence: "AGPL-3.0"
+  note: null
+  checked: 2026-11-05

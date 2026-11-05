@@ -90,3 +90,9 @@ ai:
 notes: 'Bridge seen from the XMPP side (the slidge family). Not on matrix.org; added because the lane
   prompt names Slidge. Other XMPP bridges: matrix-bifrost, Parsee.'
 checked: 2026-11-05
+icon:
+  file: matridge.webp
+  source: "https://codeberg.org/avatars/aa0eeeb5fe173938bdc665be92bf605efa1e8f4a905bc3327e4d5c7eddf584e5"
+  licence: null
+  note: "the Slidge project's logo (matridge is a Slidge bridge)"
+  checked: 2026-11-05

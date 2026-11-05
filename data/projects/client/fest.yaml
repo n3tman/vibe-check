@@ -81,3 +81,9 @@ ai:
     source: null
 notes: 'Our reading: unmaintained (README says so). Last commit 2020-04-01.'
 checked: '2026-11-05'
+icon:
+  file: fest.svg
+  source: "https://github.com/fest-im/fest/blob/4d6efd9e3a89d71502d112acc28362de691499fe/res/icons/hicolor/scalable/apps/fest.svg"
+  licence: "GPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

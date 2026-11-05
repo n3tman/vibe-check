@@ -38,3 +38,9 @@ ai:
 notes: 'README: "Dimension is no longer formally maintained." Archived on GitHub; last commit 2023-08-10.
   Licence from the LICENSE file (GPL v3; -only vs -or-later not checked).'
 checked: 2026-11-05
+icon:
+  file: matrix-dimension.webp
+  source: "https://github.com/turt2live/matrix-dimension/blob/2f9f848fb082af2eb717c7efe52807d99acbd51a/web/assets/img/logo/favicon/apple-touch-icon.png"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

@@ -93,3 +93,9 @@ ai:
     source: null
 notes: 'matrix.org maturity: Stable. Last commit 2026-06-08.'
 checked: '2026-11-05'
+icon:
+  file: chatrix.svg
+  source: "https://github.com/Automattic/chatrix/blob/6ce3da78f66e11eaf0d7bc1993f4c00e687549b2/frontend/iframe/assets/icon.svg"
+  licence: "GPL-2.0-only"
+  note: null
+  checked: 2026-11-05

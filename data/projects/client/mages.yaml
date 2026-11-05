@@ -219,3 +219,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: mages.webp
+  source: "https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/fastlane/metadata/android/en-US/images/icon.png"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

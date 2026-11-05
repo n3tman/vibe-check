@@ -84,3 +84,9 @@ ai:
 notes: Translations on Hosted Weblate. 12 commits in the last year, last 2025-12-24. The matrix.org ActivityPub
   page has no entries; found through the community space.
 checked: 2026-11-05
+icon:
+  file: kazarma.svg
+  source: "https://gitlab.com/kazarma/kazarma/-/blob/46dbc8d29006896b6b14057c1d0feb39bd768865/assets/static/favicon.svg"
+  licence: "AGPL-3.0"
+  note: null
+  checked: 2026-11-05

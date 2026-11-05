@@ -91,3 +91,9 @@ ai:
     source: null
 notes: 'matrix.org maturity: "Obsolete". Last commit 2023-04-05.'
 checked: '2026-11-05'
+icon:
+  file: gotktrix.webp
+  source: "https://github.com/diamondburned/gotktrix/blob/a8f876a383cc34dac18edddbe22be2dd494b8d0c/.github/logo.png"
+  licence: "AGPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

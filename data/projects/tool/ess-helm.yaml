@@ -36,3 +36,9 @@ ai:
   in_product: {value: none-found, note: null, source: null}
 notes: Found on matrix.org's distributions list. No CONTRIBUTING file at the checked commit.
 checked: 2026-11-05
+icon:
+  file: ess-helm.webp
+  source: "https://element.io/assets-32bb636196f91ed59d7a49190e26b42c/5ef25c0d30ee3108da4c25e9/5f0e1775cd41ebe29c04cac1_webclip.png"
+  licence: null
+  note: "Element's logo; the Element Server Suite is an Element product"
+  checked: 2026-11-05

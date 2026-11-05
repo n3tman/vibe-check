@@ -137,3 +137,9 @@ ai:
 notes: matrix.org links github.com/girlbossceo/conduwuit, which redirects here. The README names Tuwunel
   as its only official successor; continuwuity also continues it.
 checked: '2026-11-05'
+icon:
+  file: conduwuit.svg
+  source: "https://github.com/x86pup/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/docs/assets/conduwuit_logo.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

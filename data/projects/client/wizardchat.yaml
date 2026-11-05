@@ -202,3 +202,9 @@ ai:
 notes: 'wizardchat-web README: "This repository has moved." The sdk note is unverified (the new core''s
   Cargo.toml was not read in this pass).'
 checked: '2026-11-05'
+icon:
+  file: wizardchat.svg
+  source: "https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/apps/web/public/assets/images/logo.svg"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

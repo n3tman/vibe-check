@@ -105,3 +105,10 @@ ai:
     source: null
 notes: 'Our reading: beta, one maintainer; last commit 2026-03-29 (slowing).'
 checked: '2026-11-05'
+icon:
+  file: gosuto.svg
+  source: "https://github.com/MaikBuse/gosuto/blob/c99d18301fa54878d06f2bf9d98fafeda2fc912c/assets/logo.svg"
+  licence: "Apache-2.0 OR MIT"
+  note: null
+  backing: light
+  checked: 2026-11-05

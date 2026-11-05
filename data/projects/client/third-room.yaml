@@ -150,3 +150,9 @@ ai:
 notes: 'Community room topic: "Third Room is paused due to lack of funding". Not a chat client in the
   usual sense.'
 checked: '2026-11-05'
+icon:
+  file: third-room.svg
+  source: "https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/res/svg/logo.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

@@ -58,3 +58,9 @@ ai:
     source: https://github.com/beeper/ai-bridge/blob/d797acca2dabada715dcd9346078f7be33553b3a/README.md
 notes: 'Archived on GitHub; README: "This project is no longer supported." Found with GitHub search org:beeper.'
 checked: 2026-11-05
+icon:
+  file: beeper-ai-bridge.webp
+  source: "https://github.com/beeper/ai-bridge/blob/d797acca2dabada715dcd9346078f7be33553b3a/pkg/connector/modelassets/png/beeper-ai.png"
+  licence: null
+  note: "the Beeper AI assistant's image, shipped in the repo"
+  checked: 2026-11-05

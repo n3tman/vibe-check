@@ -118,3 +118,9 @@ ai:
 notes: 'README: "THIS GITHUB PAGE HAS BEEN ARCHIVED / NEO DEVELOPMENT CONTINUES / https://neo.pixie.town".
   The newer source location was not checked.'
 checked: '2026-11-05'
+icon:
+  file: neo.webp
+  source: "https://github.com/f0x52/neo/blob/d3265745dcee347538cea8bada23c351b73c6654/src/assets/neo_full.png"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

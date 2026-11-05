@@ -123,3 +123,9 @@ ai:
     source: null
 notes: 'One commit in the last 365 days (2026-02-16). Community room topic: "*Not actively maintained*".'
 checked: '2026-11-05'
+icon:
+  file: nio.webp
+  source: "https://github.com/niochat/nio/blob/bccc7792f92a605009a3f6069e179300e5176c04/Resources/AppIcon/Default/Icon.png"
+  licence: "MPL-2.0"
+  note: null
+  checked: 2026-11-05

@@ -146,3 +146,9 @@ ai:
 notes: matrix.org lists E2EE as unsupported; the code matches libQuotient's E2EE API names (see e2ee source)
   but this was not tested.
 checked: '2026-11-05'
+icon:
+  file: quaternion.webp
+  source: "https://github.com/quotient-im/Quaternion/blob/5297ce9208c846732b194b71a9d2363777e7167b/icons/quaternion.ico"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

@@ -219,3 +219,9 @@ notes: 'README: "Android/iOS are currently not actively tested in Tacit." (iosAp
   Apache-2.0): checked at that tag; at its main branch (2269b0bae4) 633 non-bot commits in the last 365
   days, 13 authors in 90 days, no agent files, no AI-attributed commits, no AI policy text.'
 checked: '2026-11-05'
+icon:
+  file: tacit.webp
+  source: "https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/fastlane/metadata/android/de-DE/images/icon.png"
+  licence: "AGPL-3.0-only"
+  note: "ships Tammy's logo (a fork of Tammy)"
+  checked: 2026-11-05

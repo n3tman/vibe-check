@@ -149,3 +149,10 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: singularity.webp
+  source: "https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src-tauri/icons/android/mipmap-xxxhdpi/ic_launcher.png"
+  licence: "GPL-3.0-only"
+  note: null
+  backing: light
+  checked: 2026-11-05

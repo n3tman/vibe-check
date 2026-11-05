@@ -217,3 +217,9 @@ notes: 'Category decided from the repo: it is a full Matrix client (a Cinny fork
   The agent backend, MindRoom (https://github.com/mindroom-ai/mindroom), is a bot/tool: listed in notes/03.md
   for lane 5.'
 checked: '2026-11-05'
+icon:
+  file: mindroom-chat.webp
+  source: "https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

@@ -39,3 +39,9 @@ notes: 'Added in the integration pass from lane 2''s notes; README only. Fork of
   on a Cinny fork from the commit below" (README.md#L202-L206 at bcb43f6e, Cinny 3969c950). Last commit
   on the default branch (dev) 2025-03-22.'
 checked: '2026-11-05'
+icon:
+  file: pony-house.webp
+  source: "https://github.com/Pony-House/Client/blob/bcb43f6e0a18f03e40dc058331a2b014ec367b0a/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+  licence: "AGPL-3.0"
+  note: null
+  checked: 2026-11-05

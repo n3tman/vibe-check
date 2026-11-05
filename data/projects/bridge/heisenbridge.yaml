@@ -76,3 +76,10 @@ ai:
 notes: Last commit on master 2025-10-04 (the repo was pushed to in Oct 2026 on another ref). README compares
   it with matrix-appservice-irc and matterbridge.
 checked: 2026-11-05
+icon:
+  file: heisenbridge.svg
+  source: "https://github.com/hifi/heisenbridge/blob/eb6e2f7f4cf5f915811505356af9f409c7b6faea/logo/heisenbridge.svg"
+  licence: "MIT"
+  note: null
+  backing: light
+  checked: 2026-11-05
