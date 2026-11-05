@@ -1,0 +1,120 @@
+slug: neo
+name: Neo
+category: client
+kind: web
+homepage: https://neo.pixie.town
+summary: Lightweight Matrix web client; the GitHub copy is archived and points to neo.pixie.town, where
+  development was said to continue.
+repos:
+- url: https://github.com/f0x52/neo
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: unmaintained
+platforms:
+- web
+apps:
+- os: web
+  tech: other
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://github.com/f0x52/neo/blob/d3265745dcee347538cea8bada23c351b73c6654/readme.md
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: not-found
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/f0x52/neo/blob/d3265745dcee347538cea8bada23c351b73c6654/src/js/components/messageView.js#L83
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/f0x52/neo/blob/d3265745dcee347538cea8bada23c351b73c6654/src/js/components/messageView.js#L88
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/f0x52/neo/blob/d3265745dcee347538cea8bada23c351b73c6654/src/js/lib/Events.js#L34
+    note: pattern match [m.location]
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/f0x52/neo/blob/d3265745dcee347538cea8bada23c351b73c6654/src/js/components/messageView.js#L448
+    note: pattern match [preview_url]
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2019-10-03, so no commits in the last 365 days (HEAD d3265745dc)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'README: "THIS GITHUB PAGE HAS BEEN ARCHIVED / NEO DEVELOPMENT CONTINUES / https://neo.pixie.town".
+  The newer source location was not checked.'
+checked: '2026-11-05'
