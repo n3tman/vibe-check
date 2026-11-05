@@ -1,0 +1,169 @@
+slug: tammy
+name: Tammy
+category: client
+kind: web, desktop, mobile
+homepage: https://tammy.connect2x.de
+summary: White-label messenger by connect2x on Trixnity Messenger (Kotlin Multiplatform), for web, desktop,
+  Android and iOS.
+repos:
+- url: https://gitlab.com/connect2x/tammy
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/tammy/
+  other: []
+maturity: stable
+platforms:
+- web
+- windows
+- macos
+- linux
+- android
+- ios
+apps:
+- os: android
+  tech: other
+  min_os: null
+  status: stable
+  stores:
+  - name: google-play
+    url: https://play.google.com/store/apps/details?id=de.connect2x.tammy
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+  note: Compose Multiplatform
+- os: ios
+  tech: other
+  min_os: '18.2'
+  status: stable
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/app/id6760345615
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+  note: IPHONEOS_DEPLOYMENT_TARGET 18.2 in iosApp
+- os: web
+  tech: other
+  min_os: null
+  status: stable
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+  note: app.tammy.connect2x.de (Kotlin/Wasm)
+- os: windows
+  tech: other
+  min_os: null
+  status: stable
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+- os: macos
+  tech: other
+  min_os: null
+  status: stable
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+- os: linux
+  tech: other
+  min_os: null
+  status: stable
+  stores:
+  - name: flatpak
+    url: null
+  source: https://gitlab.com/connect2x/tammy/-/blob/cd71d8e4ad6078890bda2544d98a0dadbc086287/README.md
+  note: flatpak/ folder in the repo
+licence: AGPL-3.0-only
+fork_of: null
+distribution:
+- google-play
+- app-store
+funding: []
+features:
+  sdk:
+    value: Trixnity
+    how: code
+    source: https://gitlab.com/connect2x/tammy/-/blob/cd71d8e4ad6078890bda2544d98a0dadbc086287/build.gradle.kts
+    note: Trixnity Messenger; most features live in that library, not in this repo
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/tammy/-/blob/cd71d8e4ad6078890bda2544d98a0dadbc086287/build.gradle.kts#L168
+    note: pattern match [apns]
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/tammy/-/blob/cd71d8e4ad6078890bda2544d98a0dadbc086287/src/commonMain/kotlin/de/connect2x/tammy/screenshot/MockViewModels.kt#L310
+    note: pattern match [presence]
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/tammy/-/blob/cd71d8e4ad6078890bda2544d98a0dadbc086287/settings.gradle.kts#L9
+    note: pattern match [a11y]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: claimed
+    source: https://gitlab.com/connect2x/tammy/-/blob/cd71d8e4ad6078890bda2544d98a0dadbc086287/README.md
+    note: AGPL-3.0; designed as a white-label shell around Trixnity Messenger; Gradle
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (338 non-bot commits in the last 365 days) at cd71d8e4ad
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Feature evidence from this repo is thin because the client logic lives in trixnity-messenger (https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger),
+  not checked here.
+checked: '2026-11-05'

@@ -1,0 +1,196 @@
+slug: parula
+name: Parula
+category: client
+kind: desktop, mobile
+homepage: https://parula.app
+summary: Local-first suite (mail, chat, video calls, calendar, contacts, files) in TypeScript on Electron
+  and Capacitor, with Matrix chat among its protocols.
+repos:
+- url: https://github.com/parula-app/parula
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-client
+maturity: beta
+platforms:
+- linux
+- windows
+- macos
+- android
+- ios
+apps:
+- os: linux
+  tech: electron
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/README.md
+- os: windows
+  tech: electron
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/README.md
+- os: macos
+  tech: electron
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/README.md
+- os: android
+  tech: webview
+  min_os: '6.0'
+  status: beta
+  stores: []
+  source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/README.md
+- os: ios
+  tech: webview
+  min_os: '14.0'
+  status: beta
+  stores: []
+  source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/README.md
+licence: not-found
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/package.json
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/vite.config.ts#L47
+    note: pattern match [matrix-sdk-crypto]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/frontend/Setup/Chat/MatrixVerify.svelte#L66
+    note: pattern match [CrossSigning]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Chat/Signal/Encryption/MessageBackupCipher.ts#L40
+    note: pattern match [Key(backup]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Auth/OAuth2.ts#L3
+    note: pattern match [OAuth2Server]
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Meet/Participant.ts#L22
+    note: pattern match [RTCPeerConnection]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/package.json#L53
+    note: pattern match [livekit]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Chat/Signal/Connection/MessageBackupImport.ts#L340
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Chat/Matrix/MatrixChatMessage.ts#L79
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/frontend/Mail/Thread/ThreadNode.ts#L36
+    note: pattern match [inReplyTo]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Chat/Signal/Connection/MessageBackupImport.ts#L344
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Calendar/JMAP/TJSCalendar.ts#L208
+    note: pattern match [geo:]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Chat/Signal/Proto/signalService.ts#L33
+    note: pattern match [VoiceMessage]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Chat/Signal/Proto/groups.ts#L101
+    note: pattern match [link preview]
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Mail/Encryption/PGP/PGPPrivateKey.ts#L44
+    note: pattern match [readPrivate]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/logic/Meet/Signal/signalingProto.ts#L237
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/frontend/Chat/Emoji/emojis.json#L1389
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/lib/asn1/api.ts#L2
+    note: pattern match [/report]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/svelte.config.js#L15
+    note: pattern match [a11y]
+  translations:
+    value: not-found
+  telemetry:
+    value: not-found
+    how: code
+    source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/package.json#L30
+    note: '@sentry/svelte dependency; whether it is opt-in was not checked'
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+    note: licence not identified from the LICENSE file head
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (1846 non-bot commits in the last 365 days) at 5fb283b67f
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'Not a Matrix-first client; Matrix is one item in its feature list (README line 181). Licence:
+  the LICENSE file did not start with a standard licence header; check by hand.'
+checked: '2026-11-05'
