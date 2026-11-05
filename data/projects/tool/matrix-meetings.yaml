@@ -30,9 +30,14 @@ features:
 ai:
   policy: {value: none-found, quote: null, source: null}
   dev_usage:
-    value: none-found
+    value: occasional
     evidence:
     - 0 of 9 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 03effba8c0fb
+    - '1 merged pull request(s) since 2025-11-05 whose description explicitly discloses AI help (squash
+      merges can drop this from git history): https://github.com/nordeck/matrix-meetings/pull/966 ("Tests
+      were added by an LLM and curated by me")'
+    - below the 1 % threshold for occasional; set to occasional because AI-attributed commits or AI-disclosing
+      pull requests exist (lane 7 may revise)
   in_product: {value: none-found, note: null, source: null}
 notes: null
 checked: 2026-11-05

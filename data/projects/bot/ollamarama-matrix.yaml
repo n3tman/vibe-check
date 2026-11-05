@@ -38,6 +38,11 @@ ai:
     - 'tools named in attributions: claude'
     - 'example: 173aab1426d1 (Co-Authored-By: Claude)'
     - 'example: bd5920f2a7b6 (Co-Authored-By: Claude)'
+    - '12 merged pull request(s) since 2025-11-05 whose description explicitly discloses AI help (squash
+      merges can drop this from git history): https://github.com/h1ddenpr0cess20/ollamarama-matrix/pull/83
+      (Generated with [Claude); https://github.com/h1ddenpr0cess20/ollamarama-matrix/pull/81 (Claude Code);
+      https://github.com/h1ddenpr0cess20/ollamarama-matrix/pull/78 (Generated with [Claude); https://github.com/h1ddenpr0cess20/ollamarama-matrix/pull/79
+      (Generated with [Claude)'
     - one attributed commit is authored by an account named Claude; the others are Co-Authored-By Claude
       trailers
   in_product: {value: core, note: The product is a chat front-end for models served by Ollama., source: 'https://github.com/h1ddenpr0cess20/ollamarama-matrix/blob/23310be63227810d3dd9a4e4c7112996e24f1c75/README.md'}

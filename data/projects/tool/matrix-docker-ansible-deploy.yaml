@@ -40,6 +40,10 @@ ai:
     - 'tools named in attributions: claude'
     - 'example: a0091c47055c (Co-Authored-By: Claude)'
     - 'example: c4ff5fe9b67a (Co-Authored-By: Claude)'
+    - '2 merged pull request(s) since 2025-11-05 whose description explicitly discloses AI help (squash
+      merges can drop this from git history): https://github.com/spantaleev/matrix-docker-ansible-deploy/pull/4973
+      (Copilot coding agent); https://github.com/spantaleev/matrix-docker-ansible-deploy/pull/5462 ("A
+      lot of this was AI generated")'
     - AGENTS.md ("Guidance for AI agents") added 2026-07-18; most attributed commits are Co-Authored-By
       Claude trailers from the lead maintainer
   in_product: {value: none-found, note: The playbook itself has no AI feature; it can deploy optional

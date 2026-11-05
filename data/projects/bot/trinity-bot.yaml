@@ -37,6 +37,9 @@ ai:
     evidence:
     - 1 of 22 non-bot commits in the last 365 days carry an AI attribution (4.5%), counted at c7b373b8eea1
     - 'example: 60198e0b2dc4 (generated with LLM)'
+    - '1 merged pull request(s) since 2025-11-05 whose description explicitly discloses AI help (squash
+      merges can drop this from git history): https://github.com/bnjbvr/trinity/pull/107 ("generated with
+      LLMs")'
     - the one attributed commit (60198e0b2dc4) says the redb migration tool "has been generated with LLMs",
       reviewed by the author
   in_product: {value: optional, note: An optional openai module answers prompts through OpenAI's completions
