@@ -8,6 +8,7 @@ repos:
 - url: https://github.com/SchildiChat/schildichat-android-next
   forge: github
   role: android
+  first_parent: true
 sources:
   matrix_org_listing: https://matrix.org/ecosystem/clients/schildichat-next/
   other:

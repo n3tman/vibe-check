@@ -1,0 +1,65 @@
+slug: mautrix-manager
+name: mautrix-manager
+category: tool
+kind: bridge login app
+homepage: null
+summary: An Electron app for logging into mautrix bridgev2 bridges through their provisioning API, with
+  .well-known auto-discovery.
+repos:
+- url: https://github.com/mautrix/manager
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Not-chat Clients)
+  - notes/02.md, notes/03.md
+maturity: beta
+platforms:
+- windows
+- macos
+- linux
+- web
+licence: AGPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose:
+    value: bridge login and management (bridgev2 provisioning API)
+    how: claimed
+    source: https://github.com/mautrix/manager/blob/b7fee671ad52218e3dd1bfd25555a6b6f19ed651/README.md
+  framework:
+    value: own (Electron, web)
+    how: claimed
+    source: https://github.com/mautrix/manager/blob/b7fee671ad52218e3dd1bfd25555a6b6f19ed651/README.md
+  e2ee:
+    value: not-found
+  hosting:
+    value: desktop app
+    how: claimed
+    source: https://github.com/mautrix/manager/blob/b7fee671ad52218e3dd1bfd25555a6b6f19ed651/README.md
+  config:
+    value: bridge URLs in the app, or /.well-known/matrix/mautrix
+    how: claimed
+    source: https://github.com/mautrix/manager/blob/b7fee671ad52218e3dd1bfd25555a6b6f19ed651/README.md
+  ai_backend:
+    value: none-found
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. …
+      AI should not be used for communicating with humans.
+    source: https://docs.mau.fi/bridges/general/contributing.html
+    note: CONTRIBUTING.md points to the shared mautrix guide ("See <https://docs.mau.fi/bridges/general/contributing.html>").
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 25 non-merge commits since 2025-11-05 attributed, counted at b7fee671
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Supports only bridgev2 bridges (README). Licence file is GNU AGPL v3 without an -only/-or-later
+  marker. Maturity is our reading.
+checked: '2026-11-05'

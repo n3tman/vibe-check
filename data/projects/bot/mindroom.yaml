@@ -1,0 +1,67 @@
+slug: mindroom
+name: MindRoom
+category: bot
+kind: AI agent platform
+homepage: https://mindroom.chat
+summary: A self-hostable platform that runs AI agents as Matrix users, reachable from any Matrix client
+  or through bridges.
+repos:
+- url: https://github.com/mindroom-ai/mindroom
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - notes/03.md (lane 3, from MindRoom Chat)
+maturity: beta
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution:
+- pypi
+funding: []
+features:
+  purpose:
+    value: AI agents (personal and team assistants) as Matrix users
+    how: claimed
+    source: https://github.com/mindroom-ai/mindroom/blob/42d6b5502d8e93f996e05d632b7a39ca469dd424/README.md
+  framework:
+    value: own (Python), Matrix integration in src/mindroom/
+    how: claimed
+    source: https://github.com/mindroom-ai/mindroom/blob/42d6b5502d8e93f996e05d632b7a39ca469dd424/AGENTS.md
+  e2ee:
+    value: not-found
+  hosting:
+    value: 'both: self-host or the hosted MindRoom service'
+    how: claimed
+    source: https://github.com/mindroom-ai/mindroom/blob/42d6b5502d8e93f996e05d632b7a39ca469dd424/README.md
+  config:
+    value: config file and web dashboard
+    how: claimed
+    source: https://github.com/mindroom-ai/mindroom/blob/42d6b5502d8e93f996e05d632b7a39ca469dd424/README.md
+  ai_backend:
+    value: 'any model: cloud APIs, subscription logins such as Codex, or local models'
+    how: claimed
+    source: https://github.com/mindroom-ai/mindroom/blob/42d6b5502d8e93f996e05d632b7a39ca469dd424/README.md
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - https://github.com/mindroom-ai/mindroom/blob/42d6b5502d8e93f996e05d632b7a39ca469dd424/AGENTS.md
+    - https://github.com/mindroom-ai/mindroom/blob/42d6b5502d8e93f996e05d632b7a39ca469dd424/.claude/
+    - 24 of 3,278 non-merge commits since 2025-11-05 carry an AI co-author trailer or "Generated with"
+      line (0.7 %), counted at 42d6b550
+    note: AGENTS.md and a .claude/ directory (agents, commands, prompts, skills) are working agent configuration;
+      the attributed share is a lower bound.
+  in_product:
+    value: core
+    note: The product is AI agents that live in Matrix rooms.
+    source: https://github.com/mindroom-ai/mindroom/blob/42d6b5502d8e93f996e05d632b7a39ca469dd424/README.md
+notes: The agent backend behind MindRoom Chat (client file mindroom-chat). Added in the integration pass
+  from lane 3's notes; maturity is our reading (pre-1.0, fast-moving).
+checked: '2026-11-05'

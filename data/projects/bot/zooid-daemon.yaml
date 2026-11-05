@@ -1,0 +1,66 @@
+slug: zooid-daemon
+name: Zooid (daemon and CLI)
+category: bot
+kind: AI agent platform
+homepage: https://zooid.dev
+summary: Runs ACP-compatible coding agents (Claude Code, opencode, Codex, …) in containers as Matrix users,
+  declared in a zooid.yaml workforce file.
+repos:
+- url: https://github.com/zooid-ai/zooid
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - notes/03.md (lane 3, from the Zooid client)
+maturity: beta
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution:
+- npm
+funding: []
+features:
+  purpose:
+    value: AI coding agents as Matrix users, multi-agent collaboration
+    how: claimed
+    source: https://github.com/zooid-ai/zooid/blob/dc3b677061c9682edf1f46fe7431e64841ec6810/README.md
+  framework:
+    value: own (Node.js); Matrix for transport, ACP for the agent contract
+    how: claimed
+    source: https://github.com/zooid-ai/zooid/blob/dc3b677061c9682edf1f46fe7431e64841ec6810/README.md
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/zooid-ai/zooid/blob/dc3b677061c9682edf1f46fe7431e64841ec6810/README.md
+    note: '"Matrix for transport (E2E encryption, federation)"'
+  hosting:
+    value: self-host (Docker or Podman per agent)
+    how: claimed
+    source: https://github.com/zooid-ai/zooid/blob/dc3b677061c9682edf1f46fe7431e64841ec6810/README.md
+  config:
+    value: zooid.yaml file and CLI
+    how: claimed
+    source: https://github.com/zooid-ai/zooid/blob/dc3b677061c9682edf1f46fe7431e64841ec6810/README.md
+  ai_backend:
+    value: 'any ACP agent: Claude Code, opencode, Codex, pi, GitHub Copilot CLI, Cursor'
+    how: claimed
+    source: https://github.com/zooid-ai/zooid/blob/dc3b677061c9682edf1f46fe7431e64841ec6810/README.md
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 175 of 224 non-merge commits since 2025-11-05 carry an AI co-author trailer or "Generated with"
+      line (78 %), counted at dc3b6770
+  in_product:
+    value: core
+    note: Orchestrates AI coding agents; agents are the product.
+    source: https://github.com/zooid-ai/zooid/blob/dc3b677061c9682edf1f46fe7431e64841ec6810/README.md
+notes: The daemon behind the Zooid client (client file zooid); added in the integration pass from lane
+  3's notes.
+checked: '2026-11-05'

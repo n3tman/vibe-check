@@ -12,21 +12,25 @@ sources:
   matrix_org_listing: null
   other:
   - sources/community-space.tsv (#community:matrix.org)
-maturity: beta
+maturity: alpha
 platforms:
 - linux
-- windows
-- macos
 apps:
 - os: linux
   tech: qt
   min_os: null
   status: beta
-  stores: []
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/details/xyz.mx_moment.moment
+  - name: aur
+    url: https://aur.archlinux.org/packages/moment
   source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/README.md
-licence: GPL-3.0-only
+licence: LGPL-3.0-or-later
 fork_of: mirage
-distribution: []
+distribution:
+- flathub
+- aur
 funding: []
 features:
   sdk:
@@ -41,18 +45,23 @@ features:
   cross_signing:
     value: not-found
   key_backup:
-    value: not-found
+    value: partial
+    how: claimed
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/README.md#L44
+    note: key file import and export only
   sliding_sync:
     value: not-found
   oidc_auth:
     value: not-found
   multi_account:
-    value: not-found
-  threads:
     value: 'yes'
+    how: claimed
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/README.md#L41
+  threads:
+    value: partial
     how: code
-    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/gui/Pages/Chat/Timeline/EventList.qml#L629
-    note: pattern match [m.thread]
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/backend/matrix_client.py#L2864
+    note: reads m.thread relations only to send threaded read receipts; no thread view
   spaces:
     value: not-found
   voip_1to1:
@@ -65,10 +74,10 @@ features:
     source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/backend/matrix_client.py#L891
     note: pattern match [m.reaction]
   edits:
-    value: 'yes'
+    value: partial
     how: code
-    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/backend/matrix_client.py#L2746
-    note: pattern match [m.new_content]
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/backend/nio_callbacks.py#L168
+    note: received edits are displayed (CHANGELOG 0.7.4); sending an edit not found
   replies:
     value: 'yes'
     how: code
@@ -87,9 +96,16 @@ features:
   rich_text_editor:
     value: not-found
   url_previews:
-    value: not-found
+    value: partial
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/config/settings.py#L192-L197
+    note: image previews only; external (http) media previews off by default since 0.7.6, with an IP-leak
+      warning
   push_notifications:
-    value: not-found
+    value: partial
+    how: claimed
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/README.md
+    note: desktop notifications and a push-rules editor
   private_read_receipts:
     value: not-found
   presence:
@@ -103,7 +119,10 @@ features:
     source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/gui/Utils.qml#L610
     note: pattern match [tombstone]
   moderation_tools:
-    value: not-found
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/gui/Popups/RemoveMemberPopup.qml#L24
+    note: kick, ban, power levels (README.md#L57)
   accessibility:
     value: not-found
   translations:
@@ -111,11 +130,14 @@ features:
   telemetry:
     value: none-found
   default_homeserver:
-    value: not-found
-  fork_friendliness:
-    value: 'yes'
+    value: none
     how: code
-    note: GPL-3.0; Python + QML, about 480 files
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/backend/backend.py#L570
+    note: empty server field and a server browser from servers.joinmatrix.org
+  fork_friendliness:
+    value: Python + QML, about 480 files, qmake; LGPL-3.0-or-later
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/requirements.txt
 ai:
   policy:
     value: none-found
@@ -129,5 +151,9 @@ ai:
     value: none-found
     note: null
     source: null
-notes: null
+notes: Fork of Mirage (README; Mirage's HEAD 9a4ababd is an ancestor of main). Adds reaction display,
+  proper edit display, upstream matrix-nio, emoji shortcodes, spoilers and external media previews off
+  by default (docs/MIRAGEDIFF.md, docs/CHANGELOG.md). README says "currently in alpha". Licence, maturity
+  and features corrected in the integration pass from lane 9's reading at 2667256d. Last tag v0.7.6 (2025-03-06).
+  Releases are Linux only (docs/INSTALL.md).
 checked: '2026-11-05'

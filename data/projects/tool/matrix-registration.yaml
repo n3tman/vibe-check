@@ -1,0 +1,60 @@
+slug: matrix-registration
+name: matrix-registration
+category: tool
+kind: registration tokens
+homepage: null
+summary: A small Python web app for token-based sign-up on a homeserver; predates the spec's own registration
+  tokens.
+repos:
+- url: https://github.com/zeratax/matrix-registration
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Not-chat Clients)
+  - notes/02.md, notes/03.md
+maturity: unmaintained
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution:
+- pypi
+- docker
+funding: []
+features:
+  purpose:
+    value: invite tokens for account registration
+    how: claimed
+    source: https://github.com/zeratax/matrix-registration/blob/db7aab3dbfb5dbc3254b918a88d0e38c10582d46/README.md
+  framework:
+    value: own (Python, Flask)
+    how: claimed
+    source: https://github.com/zeratax/matrix-registration/blob/db7aab3dbfb5dbc3254b918a88d0e38c10582d46/README.md
+  hosting:
+    value: self-host
+    how: claimed
+    source: https://github.com/zeratax/matrix-registration/blob/db7aab3dbfb5dbc3254b918a88d0e38c10582d46/README.md
+  config:
+    value: config file and admin API
+    how: claimed
+    source: https://github.com/zeratax/matrix-registration/blob/db7aab3dbfb5dbc3254b918a88d0e38c10582d46/README.md
+  ai_backend:
+    value: none-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - last commit 2023-01-11; no agent files
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Added in the integration pass. Registration tokens are now in the spec (MSC3231, v1.2) and in Synapse,
+  which covers most of this tool's use.
+checked: '2026-11-05'

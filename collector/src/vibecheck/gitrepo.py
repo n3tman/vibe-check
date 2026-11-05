@@ -94,8 +94,11 @@ class Commit:
 _SEP = "\x1e"
 
 
-def log(repo: Path, mailmap: bool) -> list[Commit]:
-    """Every non-merge commit on the default branch, newest first."""
+def log(repo: Path, mailmap: bool, first_parent: bool = False) -> list[Commit]:
+    """Every non-merge commit on the default branch, newest first.
+
+    first_parent: follow only the branch's own line, for forks that merge upstream, so
+    upstream's commits are not credited to the fork."""
     args = []
     if mailmap:
         args = ["-c", f"mailmap.blob={REV}:.mailmap"]
@@ -105,6 +108,7 @@ def log(repo: Path, mailmap: bool) -> list[Commit]:
         "log",
         REV,
         "--no-merges",
+        *(["--first-parent"] if first_parent else []),
         "--use-mailmap",
         f"--format=%H%x00%aN%x00%aE%x00%cN%x00%cE%x00%cI%x00%B{_SEP}",
     )

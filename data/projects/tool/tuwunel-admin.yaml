@@ -1,0 +1,58 @@
+slug: tuwunel-admin
+name: tuwunel-admin
+category: tool
+kind: admin UI
+homepage: null
+summary: A self-contained web admin UI for Tuwunel that drives the server's !admin room commands.
+repos:
+- url: https://github.com/knadh/tuwunel-admin
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Servers/Hosting)
+  - notes/04.md
+maturity: alpha
+platforms:
+- server
+- web
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose:
+    value: 'Tuwunel administration: rooms, users, media, registration tokens'
+    how: claimed
+    source: https://github.com/knadh/tuwunel-admin/blob/74fce42a8519bd696806582b8055a1919b1d834e/README.md
+  framework:
+    value: own (Rust)
+    how: claimed
+    source: https://github.com/knadh/tuwunel-admin/blob/74fce42a8519bd696806582b8055a1919b1d834e/README.md
+  hosting:
+    value: self-host
+    how: claimed
+    source: https://github.com/knadh/tuwunel-admin/blob/74fce42a8519bd696806582b8055a1919b1d834e/README.md
+  config:
+    value: web UI
+    how: claimed
+    source: https://github.com/knadh/tuwunel-admin/blob/74fce42a8519bd696806582b8055a1919b1d834e/README.md
+  ai_backend:
+    value: none-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 43 non-merge commits since 2025-11-05 attributed; no agent files, counted at 74fce42a
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The README says it is "sub-v1.0.0" and was built for personal use. Added in the integration pass
+  from lane 4's notes.
+checked: '2026-11-05'

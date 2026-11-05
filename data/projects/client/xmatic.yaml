@@ -1,0 +1,71 @@
+slug: xmatic
+name: xmatic
+category: client
+kind: mobile
+homepage: null
+summary: A native Sailfish OS client with a Silica (Qt) interface over matrix-rust-sdk.
+repos:
+- url: https://github.com/JimKnopfIoT/harbour-xmatic
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - notes/02.md (GitHub search)
+maturity: beta
+platforms: []
+apps:
+- os: sailfish
+  tech: qt
+  min_os: '5'
+  status: beta
+  stores: []
+  source: https://github.com/JimKnopfIoT/harbour-xmatic/blob/82f529c36fbdd4d3783dfbf02a033a01de140da9/README.md
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: claimed
+    source: https://github.com/JimKnopfIoT/harbour-xmatic/blob/82f529c36fbdd4d3783dfbf02a033a01de140da9/README.md
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/JimKnopfIoT/harbour-xmatic/blob/82f529c36fbdd4d3783dfbf02a033a01de140da9/README.md
+    note: from matrix-rust-sdk
+  cross_signing:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/JimKnopfIoT/harbour-xmatic/blob/82f529c36fbdd4d3783dfbf02a033a01de140da9/README.md
+  key_backup:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/JimKnopfIoT/harbour-xmatic/blob/82f529c36fbdd4d3783dfbf02a033a01de140da9/README.md
+  sliding_sync:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/JimKnopfIoT/harbour-xmatic/blob/82f529c36fbdd4d3783dfbf02a033a01de140da9/README.md
+    note: Simplified Sliding Sync (MSC4186)
+  oidc_auth:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/JimKnopfIoT/harbour-xmatic/blob/82f529c36fbdd4d3783dfbf02a033a01de140da9/README.md
+    note: OAuth 2.0 / MAS sign-in, device code, or password
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 105 non-merge commits since 2025-11-05 attributed, no agent files, counted at 82f529c3
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Added in the integration pass from lane 2's notes; only the README was read. "Sailfish OS 5 still
+  ships Qt 5.6" (README) is why it links the Rust core.
+checked: '2026-11-05'
