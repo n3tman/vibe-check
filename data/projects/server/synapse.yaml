@@ -1,0 +1,349 @@
+slug: synapse
+name: Synapse
+category: server
+kind: homeserver
+homepage: https://element-hq.github.io/synapse/
+summary: The reference Matrix homeserver, written in Python/Twisted with Rust modules, maintained by Element.
+repos:
+- {url: 'https://github.com/element-hq/synapse', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+  - sources/community-space.tsv (Servers/Hosting)
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-or-later OR LicenseRef-Element-Commercial
+fork_of: null
+distribution:
+- docker
+- debian
+- pypi
+funding: []
+features:
+  language: Python, Rust
+  database: {value: 'yes', how: claimed, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/docs/usage/configuration/config_documentation.md#L1527',
+    note: 'PostgreSQL (recommended), SQLite'}
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L139',
+    versions: [r0.0.1, r0.1.0, r0.2.0, r0.3.0, r0.4.0, r0.5.0, r0.6.0, r0.6.1, v1.1, v1.2, v1.3, v1.4,
+      v1.5, v1.6, v1.7, v1.8, v1.9, v1.10, v1.11, v1.12, v1.13, v1.14, v1.15, v1.16, v1.17]}
+  appservices: {value: 'yes', how: claimed}
+  admin_api: {value: 'yes', how: claimed, source: 'https://github.com/element-hq/synapse/tree/e3b6b231f6108981a1696ba21a660ebfec87694b/docs/admin_api'}
+  oidc_delegation: {value: 'yes', how: claimed, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/docs/usage/configuration/config_documentation.md#L701',
+    note: delegates auth to Matrix Authentication Service via the matrix_authentication_service option}
+  native_sliding_sync: {value: 'yes', how: code, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L120',
+    note: 'MSC4186: unstable'}
+  workers_scaling: {value: 'yes', how: claimed, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/docs/workers.md'}
+  media_auth: {value: 'yes', how: code, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/federation/transport/server/federation.py#L817',
+    note: 'MSC3916: stable'}
+  resource_needs: {value: 'yes', how: claimed, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/docs/setup/installation.md#L215',
+    note: '"At least 1GB of free RAM if you want to join large public rooms like #matrix:matrix.org"'}
+  msc:
+  - {msc: 1301, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/profile.py#L1029',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 1442, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/room_versions.rs#L68',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 1497, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L31',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 1659, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/room_versions.rs#L45',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 1721, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/login.py#L145',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 1756, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L307',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 1763, state: experimental, flag: experimental_features.msc1763_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L71',
+    note: behind a config option}
+  - {msc: 1767, state: experimental, flag: experimental_features.msc1767_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L166',
+    note: behind a config option}
+  - {msc: 1772, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/api.py#L97',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 1884, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/room_versions.rs#L48',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2000, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/schema/synapse-config.schema.yaml#L4918',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2078, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/identity.py#L467',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2174, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/events/builder.py#L327',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2175, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/api/constants.py#L285',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2176, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/events/utils.rs#L182',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2197, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/federation/transport/client.py#L532',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2209, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/room_versions.rs#L119',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2261, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/sync.py#L1495',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2265, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/util/threepids.py#L86',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2285, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L311',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 2326, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L306',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 2409, state: experimental, flag: experimental_features.msc2409_to_device_messages_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L84',
+    note: behind a config option}
+  - {msc: 2432, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L308',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 2654, state: experimental, flag: experimental_features.msc2654_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L112',
+    note: behind a config option}
+  - {msc: 2659, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L317',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 2666, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L309',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 2676, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/room.py#L1216',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2677, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/api/errors.py#L134',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2697, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/devices.py#L334',
+    note: unstable prefix in code}
+  - {msc: 2716, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/message.py#L626',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2753, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/sytest-blacklist#L29',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2815, state: experimental, flag: experimental_features.msc2815_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L316',
+    note: advertised in unstable_features when enabled}
+  - {msc: 2858, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/oidc.py#L80',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2918, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/registration.py#L172',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2946, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/federation/transport/client.py#L834',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2965, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/docker/configure_workers_and_start.py#L187',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2967, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/api/auth/mas.py#L59',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3026, state: experimental, flag: experimental_features.msc3026_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L310',
+    note: advertised in unstable_features when enabled}
+  - {msc: 3083, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/api/constants.py#L120',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3173, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/api.py#L99',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3202, state: experimental, flag: experimental_features.msc3202_transaction_extensions, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/appservice.py#L205',
+    note: behind a config option}
+  - {msc: 3381, state: experimental, flag: experimental_features.msc3381_polls_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L158',
+    note: behind a config option}
+  - {msc: 3389, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/events/utils.rs#L244',
+    note: unstable prefix in code}
+  - {msc: 3391, state: experimental, flag: experimental_features.msc3391_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L323',
+    note: advertised in unstable_features when enabled}
+  - {msc: 3440, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L313',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 3575, state: experimental, flag: experimental_features.msc3575_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L329',
+    note: advertised in unstable_features when enabled}
+  - {msc: 3664, state: experimental, flag: experimental_features.msc3664_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L129',
+    note: behind a config option}
+  - {msc: 3720, state: experimental, flag: experimental_features.msc3720_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L106',
+    note: behind a config option}
+  - {msc: 3757, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/room_versions.rs#L145',
+    note: unstable prefix in code}
+  - {msc: 3771, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L314',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 3773, state: experimental, flag: experimental_features.msc3773_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L315',
+    note: advertised in unstable_features when enabled}
+  - {msc: 3787, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/api/constants.py#L122',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3814, state: experimental, flag: experimental_features.msc3814_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L77',
+    note: behind a config option}
+  - {msc: 3818, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/room.py#L555',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3820, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/room_versions.rs#L122',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3823, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/api/errors.py#L104',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3827, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L312',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 3848, state: experimental, flag: experimental_features.msc3848_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L132',
+    note: behind a config option}
+  - {msc: 3852, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/devices.py#L68',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3861, state: experimental, flag: experimental_features.msc3861_config, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L181',
+    note: behind a config option}
+  - {msc: 3866, state: experimental, flag: experimental_features.MSC3866Config, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L41',
+    note: behind a config option}
+  - {msc: 3871, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/pagination.py#L616',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3874, state: experimental, flag: experimental_features.msc3874_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L320',
+    note: advertised in unstable_features when enabled}
+  - {msc: 3881, state: experimental, flag: experimental_features.msc3881_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L319',
+    note: advertised in unstable_features when enabled}
+  - {msc: 3882, state: experimental, flag: auth.login_via_existing_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L318',
+    note: advertised in unstable_features when enabled}
+  - {msc: 3884, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/sliding_sync/extensions.py#L407',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3885, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/sliding_sync/extensions.py#L331',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3890, state: experimental, flag: experimental_features.msc3890_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L147',
+    note: behind a config option}
+  - {msc: 3895, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/api/errors.py#L118',
+    note: unstable prefix in code}
+  - {msc: 3912, state: experimental, flag: experimental_features.msc3912_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L321',
+    note: advertised in unstable_features when enabled}
+  - {msc: 3916, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/federation/transport/server/federation.py#L817',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3925, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/events/serialize.rs#L368',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3930, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/push/base_rules.rs#L307',
+    note: unstable prefix in code}
+  - {msc: 3931, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/push/evaluator.rs#L42',
+    note: unstable prefix in code}
+  - {msc: 3932, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/push/base_rules.rs#L421',
+    note: unstable prefix in code}
+  - {msc: 3933, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/push/base_rules.rs#L406',
+    note: unstable prefix in code}
+  - {msc: 3959, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/sliding_sync/extensions.py#L462',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3960, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/sliding_sync/extensions.py#L695',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3961, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/sliding_sync/extensions.py#L901',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3967, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/keys.py#L539',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3970, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/transactions.py#L70',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3981, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L322',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 3983, state: experimental, flag: experimental_features.msc3983_appservice_otk_claims, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L96',
+    note: behind a config option}
+  - {msc: 3984, state: experimental, flag: experimental_features.msc3984_appservice_key_query, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L101',
+    note: behind a config option}
+  - {msc: 4028, state: experimental, flag: experimental_features.msc4028_push_encrypted_events, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L325',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4069, state: experimental, flag: experimental_features.msc4069_profile_inhibit_propagation,
+    source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L324',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4075, state: experimental, flag: experimental_features.msc4075_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L198',
+    note: behind a config option}
+  - {msc: 4076, state: experimental, flag: experimental_features.msc4076_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L273',
+    note: behind a config option}
+  - {msc: 4102, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/storage/databases/main/receipts.py#L85',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4108, state: experimental, flag: experimental_features.msc4108_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L326',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4115, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/events/constants.rs#L83',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4133, state: experimental, flag: experimental_features.msc4133_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L330',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4140, state: experimental, flag: server.msc4140_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L328',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4143, state: experimental, flag: experimental_features.msc4143_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L341',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4151, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/reporting.py#L117',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4155, state: experimental, flag: experimental_features.msc4155_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L332',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4156, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/knock.py#L74',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4163, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/federation/federation_server.py#L598',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4169, state: experimental, flag: experimental_features.msc4169_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L334',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4186, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L120',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4190, state: experimental, flag: experimental_features.msc4190_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/appservice.py#L217',
+    note: behind a config option}
+  - {msc: 4203, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/appservice/api.py#L372',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4210, state: unstable, flag: experimental_features.msc4210_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L270',
+    note: 'config option, on by default'}
+  - {msc: 4222, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/sync.py#L240',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4235, state: experimental, flag: experimental_features.msc4235_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L282',
+    note: behind a config option}
+  - {msc: 4242, state: experimental, flag: experimental_features.msc4242_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L172',
+    note: behind a config option}
+  - {msc: 4260, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/reporting.py#L159',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4262, state: experimental, flag: server.include_profile_updates_in_sync, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L335',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4263, state: experimental, flag: experimental_features.msc4263_limit_key_queries_to_users_who_share_rooms,
+    source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L285',
+    note: behind a config option}
+  - {msc: 4267, state: experimental, flag: experimental_features.msc4267_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L291',
+    note: behind a config option}
+  - {msc: 4277, state: experimental, flag: experimental_features.msc4277_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L279',
+    note: behind a config option}
+  - {msc: 4284, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/federation/transport/client.py#L175',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4289, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/room_versions.rs#L147',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4291, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/events/serialize.rs#L533',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4293, state: experimental, flag: experimental_features.msc4293_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L297',
+    note: behind a config option}
+  - {msc: 4297, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/room_versions.rs#L71',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4306, state: experimental, flag: experimental_features.msc4306_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L333',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4308, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L300',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4311, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/room_versions.rs#L167',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4312, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/auth.py#L85',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4319, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/sync.py#L492',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4326, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/api/errors.py#L159',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4354, state: experimental, flag: experimental_features.msc4354_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L336',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4370, state: experimental, flag: experimental_features.msc4370_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L210',
+    note: behind a config option}
+  - {msc: 4380, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L337',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 4388, state: experimental, flag: experimental_features.msc4388_mode, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L235',
+    note: behind a config option}
+  - {msc: 4426, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/profile.py#L69',
+    note: unstable prefix in code}
+  - {msc: 4429, state: experimental, flag: server.include_profile_updates_in_sync, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L338',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4445, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L339',
+    note: 'advertised in unstable_features, on by default'}
+  - {msc: 4446, state: experimental, flag: experimental_features.msc4446_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L343',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4450, state: experimental, flag: experimental_features.msc4450_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L317',
+    note: behind a config option}
+  - {msc: 4452, state: experimental, flag: experimental_features.msc4452_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L321',
+    note: behind a config option}
+  - {msc: 4455, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L319',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4480, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/handlers/sliding_sync/extensions.py#L1039',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4491, state: experimental, flag: experimental_features.msc4491_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L340',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4502, state: experimental, flag: experimental_features.msc4502_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L344',
+    note: advertised in unstable_features when enabled}
+  - {msc: 4508, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/types/rest/client/__init__.py#L380',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4512, state: experimental, flag: experimental_features.msc4512_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L327',
+    note: behind a config option}
+  - {msc: 4528, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/federation/federation_client.py#L1459',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4537, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/rest/client/profile.py#L183',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4548, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/types/rest/client/__init__.py#L346',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4551, state: unstable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/types/rest/client/__init__.py#L363',
+    note: 'referenced in code, no flag found; extent not checked'}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - 27 of 786 non-bot commits in the last 365 days (3.4 %) carry an AI co-author trailer or similar
+    - https://github.com/element-hq/synapse/commit/45175f2247cad19b77ec7c02a1edebf1f50f4aef
+    - https://github.com/element-hq/synapse/commit/dec679de1cae379e42ef031971dc4173fc00d71e
+    - https://github.com/element-hq/synapse/commit/6472b6a937d01e185f73b10b99b1e9bcb146c1e4
+    checked_at: e3b6b231f6108981a1696ba21a660ebfec87694b
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Synapse Pro (closed source, Element) is a separate listing. Spec versions come from rust/src/handlers/versions.rs
+  (the /versions handler moved to Rust).
+checked: '2026-11-05'

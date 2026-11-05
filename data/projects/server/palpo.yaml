@@ -1,0 +1,296 @@
+slug: palpo
+name: Palpo
+category: server
+kind: homeserver
+homepage: https://palpo.im
+summary: A Matrix homeserver in Rust built on the Salvo web framework and PostgreSQL.
+repos:
+- {url: 'https://github.com/palpo-im/palpo', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search "matrix homeserver"
+maturity: beta
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  language: Rust
+  database: {value: 'yes', how: claimed, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/README.md#L50',
+    note: PostgreSQL}
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L254',
+    versions: [r0.5.0, r0.6.0, v1.1, v1.2, v1.3, v1.4, v1.5, v1.6, v1.7, v1.8, v1.9, v1.10, v1.11, v1.12]}
+  appservices: {value: 'yes', how: claimed}
+  admin_api: {value: 'yes', how: claimed, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/CONTRIBUTING.md#L72'}
+  oidc_delegation: {value: 'yes', how: code, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/discovery/auth_metadata.rs#L48',
+    note: 'MSC3861: stable'}
+  native_sliding_sync: {value: 'yes', how: code, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L83',
+    note: 'MSC4186: unstable'}
+  workers_scaling: {value: not-found}
+  media_auth: {value: 'yes', how: code, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L277',
+    note: 'MSC3916: stable'}
+  msc:
+  - {msc: 1659, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/state/room_version.rs#L14',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 1763, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L239',
+    note: advertised in unstable_features}
+  - {msc: 1767, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L31',
+    note: unstable prefix in code}
+  - {msc: 1884, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/state/room_version.rs#L16',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2241, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/events/key/verification.rs#L6',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2246, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/media.rs#L39',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2285, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L265',
+    note: advertised in unstable_features}
+  - {msc: 2409, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/appservice/event.rs#L100',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2432, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/room/alias.rs#L18',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2444, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/federation/peek.rs#L7',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2448, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L33',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2545, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/events/image_pack.rs#L1',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2654, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L34',
+    note: unstable prefix in code}
+  - {msc: 2659, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/appservice/ping.rs#L23',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2666, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L266',
+    note: advertised in unstable_features}
+  - {msc: 2702, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/utils/content_disposition.rs#L5',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2747, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L36',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2753, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/sync_events/v3.rs#L191',
+    note: unstable prefix in code}
+  - {msc: 2828, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/identifiers-validation/src/user_id.rs#L19',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2836, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L271',
+    note: advertised in unstable_features}
+  - {msc: 2858, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client/session.rs#L1423',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2867, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L37',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2870, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L38',
+    note: unstable prefix in code}
+  - {msc: 2918, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/session.rs#L44',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2946, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L272',
+    note: advertised in unstable_features}
+  - {msc: 2965, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L39',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2967, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L40',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3026, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L273',
+    note: advertised in unstable_features}
+  - {msc: 3030, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/room.rs#L270',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3061, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L42',
+    note: unstable prefix in code}
+  - {msc: 3202, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L43',
+    note: unstable prefix in code}
+  - {msc: 3230, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L44',
+    note: unstable prefix in code}
+  - {msc: 3231, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/register.rs#L188',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3245, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L45',
+    note: unstable prefix in code}
+  - {msc: 3246, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L25',
+    note: unstable prefix in code}
+  - {msc: 3266, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L51',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3381, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L52',
+    note: unstable prefix in code}
+  - {msc: 3391, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/data/src/user/data.rs#L298',
+    note: unstable prefix in code}
+  - {msc: 3401, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L53',
+    note: unstable prefix in code}
+  - {msc: 3417, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L54',
+    note: unstable prefix in code}
+  - {msc: 3488, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L26',
+    note: unstable prefix in code}
+  - {msc: 3489, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L56',
+    note: unstable prefix in code}
+  - {msc: 3551, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L57',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3552, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L58',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3553, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L27',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3554, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L60',
+    note: unstable prefix in code}
+  - {msc: 3575, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L276',
+    note: advertised in unstable_features}
+  - {msc: 3618, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L61',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3672, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/events/beacon.rs#L16',
+    note: unstable prefix in code}
+  - {msc: 3723, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L62',
+    note: unstable prefix in code}
+  - {msc: 3787, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/state/event_auth/room_member.rs#L278',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3814, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L63',
+    note: unstable prefix in code}
+  - {msc: 3827, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L274',
+    note: advertised in unstable_features}
+  - {msc: 3843, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L64',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3856, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/room/thread.rs#L21',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3861, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/discovery/auth_metadata.rs#L48',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3882, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/session.rs#L768',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3884, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/sync_events/v5.rs#L845',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3885, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/sync_events/v5.rs#L788',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3916, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L277',
+    note: advertised in unstable_features}
+  - {msc: 3927, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L50',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3930, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L66',
+    note: unstable prefix in code}
+  - {msc: 3931, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L67',
+    note: unstable prefix in code}
+  - {msc: 3932, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L68',
+    note: unstable prefix in code}
+  - {msc: 3952, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L275',
+    note: advertised in unstable_features}
+  - {msc: 3954, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L28',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3955, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L29',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3956, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L57',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3960, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/sync_events/v5.rs#L967',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3983, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L72',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4075, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L73',
+    note: unstable prefix in code}
+  - {msc: 4095, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L74',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4108, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L75',
+    note: unstable prefix in code}
+  - {msc: 4121, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L76',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4125, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L77',
+    note: unstable prefix in code}
+  - {msc: 4133, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L279',
+    note: advertised in unstable_features}
+  - {msc: 4140, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L214',
+    note: advertised in unstable_features}
+  - {msc: 4143, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L79',
+    note: unstable prefix in code}
+  - {msc: 4155, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/error/kind_serde.rs#L480',
+    note: unstable prefix in code}
+  - {msc: 4166, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client/voip.rs#L31',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4171, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L80',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4175, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L281',
+    note: advertised in unstable_features}
+  - {msc: 4180, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L278',
+    note: advertised in unstable_features}
+  - {msc: 4186, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L83',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4190, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/appservice.rs#L108',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4191, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L81',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4195, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L82',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4203, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L84',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4230, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L85',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4259, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/sync_v5/profiles.rs#L133',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4262, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L313',
+    note: advertised in unstable_features}
+  - {msc: 4267, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/config/server.rs#L360',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4268, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L88',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4274, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L89',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4278, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L90',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4284, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/federation/knock.rs#L152',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4293, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L91',
+    note: unstable prefix in code}
+  - {msc: 4306, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L93',
+    note: unstable prefix in code}
+  - {msc: 4308, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L94',
+    note: unstable prefix in code}
+  - {msc: 4310, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L95',
+    note: unstable prefix in code}
+  - {msc: 4311, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/federation/membership.rs#L189',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4319, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L96',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4323, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L283',
+    note: advertised in unstable_features}
+  - {msc: 4334, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L97',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4354, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L284',
+    note: advertised in unstable_features}
+  - {msc: 4359, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L99',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4362, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core-macros/src/events/event_enum.rs#L52',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4363, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L100',
+    note: unstable prefix in code}
+  - {msc: 4380, state: stable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L285',
+    note: advertised in unstable_features}
+  - {msc: 4383, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L286',
+    note: advertised in unstable_features}
+  - {msc: 4388, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/discovery/rendezvous.rs#L1',
+    note: unstable prefix in code}
+  - {msc: 4406, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/error/kind.rs#L253',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4439, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/src/client/discovery/support.rs#L81',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4466, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L104',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4484, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L298',
+    note: advertised in unstable_features}
+  - {msc: 4494, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L290',
+    note: advertised in unstable_features}
+  - {msc: 4495, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L304',
+    note: advertised in unstable_features}
+  - {msc: 4532, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L306',
+    note: advertised in unstable_features}
+  - {msc: 4540, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/core/Cargo.toml#L109',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4559, state: unstable, source: 'https://github.com/palpo-im/palpo/blob/d086e4502bb7f163d0a1bc277ec237aa93a85ccb/crates/server/src/routing/client.rs#L308',
+    note: advertised in unstable_features}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 128 of 574 non-bot commits in the last 365 days (22.3 %) carry an AI co-author trailer or similar
+    - https://github.com/palpo-im/palpo/commit/7380829f65a59faa8fd5ca7f15545bbc8932c689
+    - https://github.com/palpo-im/palpo/commit/1032153ebd80c664b25135b7716fa72fcc92fe0f
+    - https://github.com/palpo-im/palpo/commit/382114a66d6b25697d5b6b5fa0ff62714b969358
+    checked_at: d086e4502bb7f163d0a1bc277ec237aa93a85ccb
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Maturity is our reading (not on matrix.org). An older copy lives at github.com/palpo-matrix-server/palpo.
+checked: '2026-11-05'

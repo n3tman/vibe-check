@@ -1,0 +1,49 @@
+slug: matrix-media-repo
+name: matrix-media-repo
+category: server
+kind: media repository
+homepage: https://docs.t2bot.io/matrix-media-repo
+summary: A highly configurable multi-domain media repository that can replace a homeserver's media handling.
+repos:
+- {url: 'https://github.com/t2bot/matrix-media-repo', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Servers/Hosting)
+maturity: stable
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  language: Go
+  database: PostgreSQL
+  msc:
+  - {msc: 2705, state: stable, source: 'https://github.com/t2bot/matrix-media-repo/blob/ed4f3181a080fbfe6c37fa7fd456c7dd9e97d8c6/api/r0/thumbnail.go#L82',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3069, state: stable, source: 'https://github.com/t2bot/matrix-media-repo/blob/ed4f3181a080fbfe6c37fa7fd456c7dd9e97d8c6/matrix/responses.go#L8',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3911, state: unstable, source: 'https://github.com/t2bot/matrix-media-repo/blob/ed4f3181a080fbfe6c37fa7fd456c7dd9e97d8c6/pipelines/_steps/download/try_download.go#L243',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3916, state: stable, source: 'https://github.com/t2bot/matrix-media-repo/blob/ed4f3181a080fbfe6c37fa7fd456c7dd9e97d8c6/api/r0/versions.go#L30',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4034, state: unstable, source: 'https://github.com/t2bot/matrix-media-repo/blob/ed4f3181a080fbfe6c37fa7fd456c7dd9e97d8c6/api/r0/public_config.go#L14',
+    note: unstable prefix in code}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: ed4f3181a080fbfe6c37fa7fd456c7dd9e97d8c6
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: No commit on the default branch since 2025-01-16 at the time of reading.
+checked: '2026-11-05'

@@ -1,0 +1,49 @@
+slug: policyserv
+name: policyserv
+category: server
+kind: policy server (MSC4284)
+homepage: null
+summary: A policy server implementation (MSC4284) that checks events for spam before they reach a room,
+  by the Matrix.org Foundation.
+repos:
+- {url: 'https://github.com/matrix-org/policyserv', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (top level)
+maturity: beta
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  language: Go
+  database: PostgreSQL
+  msc:
+  - {msc: 4284, state: stable, source: 'https://github.com/matrix-org/policyserv/blob/6adfeb9838351de962e83f1bc484709c06a8bb87/dev/demo/sanity_check.sh#L40',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4387, state: unstable, source: 'https://github.com/matrix-org/policyserv/blob/6adfeb9838351de962e83f1bc484709c06a8bb87/api/errors.go#L31',
+    note: unstable prefix in code}
+  - {msc: 4456, state: unstable, source: 'https://github.com/matrix-org/policyserv/blob/6adfeb9838351de962e83f1bc484709c06a8bb87/harms/ids_msc4456.go#L9',
+    note: unstable prefix in code}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - 1 of 298 non-bot commits in the last 365 days (0.3 %) carry an AI co-author trailer or similar
+    - https://github.com/matrix-org/policyserv/commit/de7a1c554c20492a59d4af9e55aae977f0c5edb4
+    note: attributed share is below the 1 % threshold; marked occasional because attributed commits exist
+    checked_at: 6adfeb9838351de962e83f1bc484709c06a8bb87
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Maturity is our reading.
+checked: '2026-11-05'

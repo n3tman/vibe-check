@@ -1,0 +1,63 @@
+slug: babbleserv
+name: Babbleserv
+category: server
+kind: homeserver
+homepage: null
+summary: A Matrix homeserver built on FoundationDB primitives, by Beeper.
+repos:
+- {url: 'https://github.com/beeper/babbleserv', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search
+maturity: alpha
+platforms:
+- server
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  language: Go
+  database: FoundationDB
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/routes/client/client.go#L236',
+    versions: [v1.1, v1.2, v1.3, v1.4, v1.5, v1.6, v1.7, v1.8, v1.9, v1.10, v1.11]}
+  oidc_delegation: {value: not-found, note: no reference to MSC3861/2964/2965/2967 found in the code}
+  native_sliding_sync: {value: 'yes', how: code, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/routes/client/client.go#L78',
+    note: 'MSC4186: unstable'}
+  workers_scaling: {value: not-found}
+  media_auth: {value: 'yes', how: code, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/routes/client/client.go#L236',
+    note: 'implied: the server advertises spec v1.11, where MSC3916 landed; no MSC reference in the code'}
+  msc:
+  - {msc: 3575, state: unstable, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/routes/client/client.go#L79',
+    note: unstable prefix in code}
+  - {msc: 3773, state: stable, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/types/sync.go#L312',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4133, state: stable, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/types/userprofile.go#L13',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4186, state: unstable, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/routes/client/client.go#L78',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4222, state: stable, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/databases/rooms/sync.go#L496',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4225, state: stable, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/databases/accounts/devices/devices.go#L35',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4306, state: unstable, source: 'https://github.com/beeper/babbleserv/blob/e391ad0b9332d2fa80f8450b8788f390ea7bcc50/internal/routes/client/pushrules.go#L31',
+    note: 'referenced in code, no flag found; extent not checked'}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: config-only
+    evidence:
+    - 'agent files: .claude/prompts/01-notification-counts.md, .claude/prompts/02-push-rules.md, .claude/prompts/03-key-backup.md,
+      AGENTS.md, CLAUDE.md'
+    checked_at: e391ad0b9332d2fa80f8450b8788f390ea7bcc50
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Maturity is our reading.
+checked: '2026-11-05'

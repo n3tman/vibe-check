@@ -1,0 +1,81 @@
+slug: venator
+name: Venator
+category: server
+kind: homeserver
+homepage: null
+summary: An experimental Matrix homeserver written from scratch in Go using mautrix-go.
+repos:
+- {url: 'https://codeberg.org/matrix-venator/venator', forge: forgejo, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: alpha
+platforms:
+- server
+licence: MPL-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  language: Go
+  database: {value: 'yes', how: claimed, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/docs/configuration-reference/database.md#L3',
+    note: PostgreSQL}
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/config/consts.go#L53',
+    versions: [v1.1, v1.2, v1.3, v1.4, v1.5, v1.7, v1.8, v1.9, v1.10, v1.11, v1.12, v1.13, v1.14, v1.15,
+      v1.16, v1.17, v1.18, v1.19]}
+  appservices: {value: 'yes', how: claimed}
+  admin_api: {value: 'yes', how: claimed, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/docs/administration/admin-api.md'}
+  oidc_delegation: {value: 'yes', how: code, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/config/consts.go#L53',
+    note: 'implied: the server advertises spec v1.15, where MSC3861 landed; no MSC reference in the code'}
+  native_sliding_sync: {value: not-found, note: no reference to MSC4186 found in the code}
+  workers_scaling: {value: not-found}
+  media_auth: {value: 'yes', how: code, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/config/consts.go#L53',
+    note: 'implied: the server advertises spec v1.11, where MSC3916 landed; no MSC reference in the code'}
+  msc:
+  - {msc: 3030, state: stable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/config/consts.go#L58',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3414, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/profile/profile.go#L569',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4069, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/profile/profile.go#L336',
+    note: unstable prefix in code}
+  - {msc: 4169, state: stable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/rooms/event.go#L56',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4293, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/profile/profile.go#L570',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4323, state: stable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/admin/lock.go#L29',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4342, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/account/login.go#L150',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4380, state: stable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/db/account-data.go#L236',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4383, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/versions.go#L26',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4420, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/keys/upload.go#L186',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4437, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/profile/profile.go#L85',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4449, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/rooms/members.go#L78',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4494, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/config/experiments.go#L39',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4509, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/config/experiments.go#L43',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4560, state: unstable, source: 'https://codeberg.org/matrix-venator/venator/src/commit/87027ca417db62846ff627f51d8396eaeff1847a/internal/venatord/api/client/rooms/stripped_state.go#L45',
+    note: 'referenced in code, no flag found; extent not checked'}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: 87027ca417db62846ff627f51d8396eaeff1847a
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: matrix.org links codeberg.org/timedout/venator, which redirects to codeberg.org/matrix-venator/venator.
+checked: '2026-11-05'

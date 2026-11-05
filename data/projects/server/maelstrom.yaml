@@ -1,0 +1,73 @@
+slug: maelstrom
+name: Maelstrom
+category: server
+kind: homeserver
+homepage: null
+summary: A Rust Matrix homeserver aimed at horizontal scaling, with SurrealDB on TiKV storage.
+repos:
+- {url: 'https://github.com/maelstrom-rs/maelstrom', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: alpha
+platforms:
+- server
+licence: Apache-2.0 OR MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  language: Rust
+  database: SurrealDB on TiKV
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/versions.rs#L46',
+    versions: [v1.1, v1.2, v1.3, v1.4, v1.5, v1.6, v1.7, v1.8, v1.9, v1.10, v1.11, v1.12, v1.13, v1.14,
+      v1.15, v1.16, v1.17, v1.18]}
+  oidc_delegation: {value: 'yes', how: code, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/versions.rs#L46',
+    note: 'implied: the server advertises spec v1.15, where MSC3861 landed; no MSC reference in the code'}
+  native_sliding_sync: {value: partial, how: code, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/sync.rs#L9',
+    note: 'own sliding sync on POST /_matrix/client/v3/sync, documented as MSC3575; not the MSC4186 endpoint'}
+  workers_scaling: {value: 'yes', how: claimed, note: stateless nodes behind a load balancer}
+  media_auth: {value: 'yes', how: code, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/versions.rs#L46',
+    note: 'implied: the server advertises spec v1.11, where MSC3916 landed; no MSC reference in the code'}
+  msc:
+  - {msc: 2946, state: stable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/mod.rs#L23',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3381, state: unstable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/capabilities.rs#L682',
+    note: unstable prefix in code}
+  - {msc: 3391, state: unstable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/capabilities.rs#L12',
+    note: unstable prefix in code}
+  - {msc: 3575, state: unstable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/sync.rs#L9',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3706, state: stable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/capabilities.rs#L1255',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3874, state: unstable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/events.rs#L48',
+    note: unstable prefix in code}
+  - {msc: 3890, state: unstable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/auth.rs#L285',
+    note: unstable prefix in code}
+  - {msc: 3930, state: unstable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/capabilities.rs#L681',
+    note: unstable prefix in code}
+  - {msc: 3967, state: stable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/keys.rs#L466',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4102, state: unstable, source: 'https://github.com/maelstrom-rs/maelstrom/blob/3a41e4cada2ee934f5035d3e9a9fbfb476162713/crates/maelstrom-api/src/handlers/receipts.rs#L63',
+    note: 'referenced in code, no flag found; extent not checked'}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 1 of 12 non-bot commits in the last 365 days (8.3 %) carry an AI co-author trailer or similar
+    - https://github.com/maelstrom-rs/maelstrom/commit/367065bd9ab13243143e03e97b6bdbd598edc2b7
+    note: only 12 commits in the last year, so the share is noisy
+    checked_at: 3a41e4cada2ee934f5035d3e9a9fbfb476162713
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'matrix.org labels it "Obsolete", but the repo was rewritten in April 2026 (README: "Alpha -- under
+  active development").'
+checked: '2026-11-05'

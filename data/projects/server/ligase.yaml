@@ -1,0 +1,43 @@
+slug: ligase
+name: Ligase
+category: server
+kind: homeserver
+homepage: null
+summary: A cloud-native Matrix homeserver in Go by Finogeeks.
+repos:
+- {url: 'https://github.com/finogeeks/Ligase', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: unmaintained
+platforms:
+- server
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  language: Go
+  database: PostgreSQL
+  federation: {value: not-found}
+  oidc_delegation: {value: not-found, note: no reference to MSC3861/2964/2965/2967 found in the code}
+  native_sliding_sync: {value: not-found, note: no reference to MSC4186 found in the code}
+  workers_scaling: {value: not-found}
+  media_auth: {value: not-found, note: no reference to MSC3916 found in the code}
+  msc: []
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: 9835270b055a80602ecff9037274aad8e9542fb4
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: matrix.org labels it "Obsolete"; last commit 2021-09-22.
+checked: '2026-11-05'

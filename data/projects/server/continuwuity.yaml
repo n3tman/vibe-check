@@ -1,0 +1,158 @@
+slug: continuwuity
+name: continuwuity
+category: server
+kind: homeserver
+homepage: https://continuwuity.org
+summary: A community-driven Matrix homeserver in Rust, a continuation of conduwuit (itself a fork of Conduit).
+repos:
+- {url: 'https://forgejo.ellis.link/continuwuation/continuwuity', forge: forgejo, role: main}
+- {url: 'https://github.com/continuwuity/continuwuity', forge: github, role: other}
+- {url: 'https://gitlab.com/continuwuity/continuwuity', forge: gitlab, role: other}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: stable
+platforms:
+- server
+licence: Apache-2.0
+fork_of: conduwuit
+distribution:
+- docker
+funding:
+- https://opencollective.com/continuwuity
+features:
+  language: Rust
+  database: {value: 'yes', how: claimed, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/docs/deploying/generic.mdx#L27',
+    note: RocksDB (embedded)}
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L6',
+    versions: [r0.0.1, r0.1.0, r0.2.0, r0.3.0, r0.4.0, r0.5.0, r0.6.0, r0.6.1, v1.1, v1.2, v1.3, v1.4,
+      v1.5, v1.8, v1.11, v1.12, v1.13, v1.14, v1.15, v1.16, v1.17, v1.18]}
+  appservices: {value: 'yes', how: claimed}
+  admin_api: {value: 'yes', how: claimed, note: admin room commands}
+  oidc_delegation: {value: 'yes', how: claimed, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/docs/authentication.mdx#L9',
+    note: 'built-in OAuth login ("next-gen auth") served by the homeserver itself, not MAS delegation'}
+  native_sliding_sync: {value: 'yes', how: code, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L376',
+    note: 'MSC4186: unstable'}
+  workers_scaling: {value: 'no', how: claimed}
+  media_auth: {value: 'yes', how: code, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L6',
+    note: 'implied: the server advertises spec v1.11, where MSC3916 landed; no MSC reference in the code'}
+  msc:
+  - {msc: 1929, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/conduwuit-example.toml#L2353',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2409, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/service/rooms/read_receipt/mod.rs#L148',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2666, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L38',
+    note: advertised in unstable_features}
+  - {msc: 2702, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/utils/content_disposition.rs#L7',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2815, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/service/rooms/timeline/append.rs#L493',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2867, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L365',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2870, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L366',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2967, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/service/oauth/grant.rs#L112',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3202, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/api/router/args.rs#L22',
+    note: unstable prefix in code}
+  - {msc: 3245, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L368',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3381, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L369',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3489, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L370',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3575, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L42',
+    note: advertised in unstable_features}
+  - {msc: 3814, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L367',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3930, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L371',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4075, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L372',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4076, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/service/pusher/mod.rs#L44',
+    note: unstable prefix in code}
+  - {msc: 4095, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L373',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4121, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L374',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4125, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L375',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4133, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/service/migrations.rs#L112',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4143, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L35',
+    note: advertised in unstable_features}
+  - {msc: 4155, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L44',
+    note: advertised in unstable_features}
+  - {msc: 4166, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/api/client/voip.rs#L21',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4168, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/api/client/room/upgrade.rs#L622',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4169, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/api/client/send.rs#L133',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4174, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L48',
+    note: advertised in unstable_features}
+  - {msc: 4175, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/service/migrations.rs#L113',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4186, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L376',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4190, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/api/router/auth.rs#L366',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4195, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L377',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4203, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L378',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4210, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/api/client/push.rs#L64',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4267, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/conduwuit-example.toml#L803',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4283, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/ruminuwuity/invite_permission_config.rs#L15',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4284, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/ruminuwuity/policy/event.rs#L1',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4293, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L382',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4310, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L379',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4323, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/ruminuwuity/admin/get_suspended.rs#L6',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4354, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L386',
+    note: unstable prefix in code}
+  - {msc: 4363, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L383',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4380, state: stable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L380',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4406, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L384',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4439, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L385',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4466, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L46',
+    note: advertised in unstable_features}
+  - {msc: 4480, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L387',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4484, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L52',
+    note: advertised in unstable_features}
+  - {msc: 4494, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L50',
+    note: advertised in unstable_features}
+  - {msc: 4540, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/Cargo.toml#L391',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4560, state: unstable, source: 'https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/src/core/matrix/versions.rs#L54',
+    note: advertised in unstable_features}
+ai:
+  policy:
+    value: allowed
+    quote: While we allow LLM-assisted contributions, we do not appreciate contributions that are low
+      quality, which is typical of machine-generated contributions that have not had a lot of love and
+      care from a human.
+    source: https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/.forgejo/pull_request_template.md#L54
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: 223e8894596eb46aa46e5fc6a60f7c00f184ba72
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: GitHub and GitLab repos are mirrors; the Forgejo instance is the main repo.
+checked: '2026-11-05'

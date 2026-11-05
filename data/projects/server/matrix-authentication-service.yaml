@@ -1,0 +1,57 @@
+slug: matrix-authentication-service
+name: Matrix Authentication Service
+category: server
+kind: auth service (OAuth 2.0 / OIDC provider)
+homepage: https://element-hq.github.io/matrix-authentication-service/
+summary: OAuth 2.0 and OpenID Connect provider for Matrix homeservers, the next-gen auth (MSC3861) server
+  used with Synapse.
+repos:
+- {url: 'https://github.com/element-hq/matrix-authentication-service', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - lane prompt
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-only OR LicenseRef-Element-Commercial
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  language: Rust, TypeScript
+  database: PostgreSQL
+  msc:
+  - {msc: 2965, state: stable, source: 'https://github.com/element-hq/matrix-authentication-service/blob/d407daa66e84f5e8c542fc6cce2afcf3f3ed8120/crates/oauth2-types/src/oidc.rs#L620',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2967, state: stable, source: 'https://github.com/element-hq/matrix-authentication-service/blob/d407daa66e84f5e8c542fc6cce2afcf3f3ed8120/crates/data-model/src/compat/device.rs#L17',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3824, state: stable, source: 'https://github.com/element-hq/matrix-authentication-service/blob/d407daa66e84f5e8c542fc6cce2afcf3f3ed8120/crates/cli/src/commands/doctor.rs#L306',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3861, state: stable, source: 'https://github.com/element-hq/matrix-authentication-service/blob/d407daa66e84f5e8c542fc6cce2afcf3f3ed8120/crates/oidc-client/src/lib.rs#L14',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4191, state: stable, source: 'https://github.com/element-hq/matrix-authentication-service/blob/d407daa66e84f5e8c542fc6cce2afcf3f3ed8120/crates/handlers/src/oauth2/discovery.rs#L32',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4198, state: unstable, source: 'https://github.com/element-hq/matrix-authentication-service/blob/d407daa66e84f5e8c542fc6cce2afcf3f3ed8120/crates/handlers/src/oauth2/discovery.rs#L36',
+    note: unstable prefix in code}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - 16 of 1645 non-bot commits in the last 365 days (1.0 %) carry an AI co-author trailer or similar
+    - https://github.com/element-hq/matrix-authentication-service/commit/cdc501fe7ae01f1c850bf49b8b095e20cb3b99df
+    - https://github.com/element-hq/matrix-authentication-service/commit/21f1b8a427b690dc2dfb7a5419f8a070c2664552
+    - https://github.com/element-hq/matrix-authentication-service/commit/9574a516c58fdc85b868abd781272fea9b4af5de
+    - 'AI bot authors: copilot-swe-agent[bot]'
+    checked_at: d407daa66e84f5e8c542fc6cce2afcf3f3ed8120
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Not a homeserver; pairs with Synapse. The matrix-org/ copy is archived.
+checked: '2026-11-05'

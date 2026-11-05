@@ -1,0 +1,42 @@
+slug: sydent
+name: Sydent
+category: server
+kind: identity server
+homepage: null
+summary: The reference Matrix identity server (email and phone number lookup), maintained by Element.
+repos:
+- {url: 'https://github.com/element-hq/sydent', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Servers/Hosting)
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-only OR LicenseRef-Element-Commercial
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  language: Python
+  database: SQLite
+  msc:
+  - {msc: 2134, state: stable, source: 'https://github.com/element-hq/sydent/blob/a4d741165ee25fc129e9c478e23c4d3b38678c1f/sydent/db/hashing_metadata.py#L138',
+    note: referenced in code; MSC is in the spec}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: a4d741165ee25fc129e9c478e23c4d3b38678c1f
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The matrix-org/sydent repo is archived and points to element-hq/sydent. Licence of the element-hq
+  copy not re-checked; the matrix-org copy was Apache-2.0.
+checked: '2026-11-05'

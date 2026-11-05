@@ -1,0 +1,139 @@
+slug: conduwuit
+name: conduwuit
+category: server
+kind: homeserver
+homepage: null
+summary: A hard fork of Conduit with many features and fixes; archived, succeeded by Tuwunel and continuwuity.
+repos:
+- {url: 'https://github.com/x86pup/conduwuit', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: archived
+platforms:
+- server
+licence: Apache-2.0
+fork_of: conduit
+distribution: []
+funding: []
+features:
+  language: Rust
+  database: RocksDB
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L27',
+    versions: [r0.0.1, r0.1.0, r0.2.0, r0.3.0, r0.4.0, r0.5.0, r0.6.0, r0.6.1, v1.1, v1.2, v1.3, v1.4,
+      v1.5, v1.11]}
+  appservices: {value: 'yes', how: claimed}
+  admin_api: {value: 'yes', how: claimed, note: admin room commands}
+  oidc_delegation: {value: not-found, note: no reference to MSC3861/2964/2965/2967 found in the code}
+  native_sliding_sync: {value: 'yes', how: code, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L383',
+    note: 'MSC4186: unstable'}
+  workers_scaling: {value: 'no', how: claimed}
+  media_auth: {value: 'yes', how: code, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L52',
+    note: 'MSC3916: stable'}
+  msc:
+  - {msc: 1659, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/matrix/state_res/room_version.rs#L19',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 1884, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/matrix/state_res/room_version.rs#L21',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2175, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/matrix/state_res/room_version.rs#L81',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2209, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/matrix/state_res/room_version.rs#L58',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2261, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/matrix/state_res/room_version.rs#L49',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2285, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L44',
+    note: advertised in unstable_features}
+  - {msc: 2432, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/matrix/state_res/room_version.rs#L49',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2448, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L367',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2666, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L45',
+    note: advertised in unstable_features}
+  - {msc: 2702, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/utils/content_disposition.rs#L7',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2836, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L46',
+    note: advertised in unstable_features}
+  - {msc: 2867, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L369',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2870, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L370',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2946, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L47',
+    note: advertised in unstable_features}
+  - {msc: 3026, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L48',
+    note: advertised in unstable_features}
+  - {msc: 3061, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L372',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3245, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L373',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3266, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L374',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3289, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/matrix/state_res/room_version.rs#L68',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3381, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L375',
+    note: unstable prefix in code}
+  - {msc: 3401, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/room/create.rs#L506',
+    note: unstable prefix in code}
+  - {msc: 3489, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L376',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3575, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L51',
+    note: advertised in unstable_features}
+  - {msc: 3667, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/matrix/state_res/room_version.rs#L76',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3787, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/core/matrix/state_res/room_version.rs#L72',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3827, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L49',
+    note: advertised in unstable_features}
+  - {msc: 3916, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L52',
+    note: advertised in unstable_features}
+  - {msc: 3930, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L378',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3952, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L50',
+    note: advertised in unstable_features}
+  - {msc: 3967, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/keys.rs#L189',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4075, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L379',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4076, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/service/pusher/mod.rs#L428',
+    note: unstable prefix in code}
+  - {msc: 4095, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L380',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4121, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L381',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4125, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L382',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4133, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L54',
+    note: advertised in unstable_features}
+  - {msc: 4166, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/voip.rs#L23',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4175, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L55',
+    note: advertised in unstable_features}
+  - {msc: 4180, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/unversioned.rs#L53',
+    note: advertised in unstable_features}
+  - {msc: 4186, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L383',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4190, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/src/api/client/device.rs#L93',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4203, state: unstable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L384',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4210, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/Cargo.toml#L385',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4267, state: stable, source: 'https://github.com/girlbossceo/conduwuit/blob/ffd7d61bc285b4159b4186ec5952aea695bc7eb2/conduwuit-example.toml#L449',
+    note: referenced in code; MSC is in the spec}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: ffd7d61bc285b4159b4186ec5952aea695bc7eb2
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: matrix.org links github.com/girlbossceo/conduwuit, which redirects here. The README names Tuwunel
+  as its only official successor; continuwuity also continues it.
+checked: '2026-11-05'
