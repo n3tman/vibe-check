@@ -1,0 +1,69 @@
+slug: matrix-discord-bridge
+name: matrix-discord-bridge
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Archived Python Matrix-Discord bridge with a puppeting appservice and a simpler non-puppeting
+  webhook bridge.
+repos:
+- url: https://github.com/git-bruh/matrix-discord-bridge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/discord/
+  other: []
+maturity: archived
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Discord
+  framework:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/git-bruh/matrix-discord-bridge/blob/924666ab1da8b075cf2d691024afc9c0983a7656/README.md
+    note: own (Python), matrix-nio for the non-puppeting variant
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/git-bruh/matrix-discord-bridge/blob/924666ab1da8b075cf2d691024afc9c0983a7656/README.md
+    note: appservice variant only
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: partial
+    how: claimed
+    source: https://github.com/git-bruh/matrix-discord-bridge/blob/924666ab1da8b075cf2d691024afc9c0983a7656/README.md
+    note: attachments converted to URLs
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/git-bruh/matrix-discord-bridge/blob/924666ab1da8b075cf2d691024afc9c0983a7656/README.md
+    note: multiple channels
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 924666ab1da8; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Archived on GitHub; last commit 2022-09-28; matrix.org still labels it Alpha.
+checked: 2026-11-05

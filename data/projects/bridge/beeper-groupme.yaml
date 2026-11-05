@@ -1,0 +1,74 @@
+slug: beeper-groupme
+name: beeper-groupme
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Development-stage GroupMe puppeting bridge on mautrix-go bridgev2 from Beeper.
+repos:
+- url: https://github.com/beeper/groupme
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search org:beeper
+maturity: alpha
+platforms:
+- server
+licence: AGPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: GroupMe
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/groupme/blob/6d88dd2d97547e1172a8d27a26f6e191863d29cb/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: not-found
+  e2ee:
+    value: not-found
+  backfill:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/groupme/blob/6d88dd2d97547e1172a8d27a26f6e191863d29cb/pkg/connector/backfill.go
+  media:
+    value: partial
+    how: claimed
+    source: https://github.com/beeper/groupme/blob/6d88dd2d97547e1172a8d27a26f6e191863d29cb/README.md
+    note: images, videos, group files; media validation incomplete
+  reactions_edits:
+    value: partial
+    how: claimed
+    source: https://github.com/beeper/groupme/blob/6d88dd2d97547e1172a8d27a26f6e191863d29cb/README.md
+    note: reactions
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/beeper/groupme/blob/6d88dd2d97547e1172a8d27a26f6e191863d29cb/README.md
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/beeper/groupme/blob/6d88dd2d97547e1172a8d27a26f6e191863d29cb/README.md
+    note: token or Beeper webview login
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 52 of 105 non-bot commits in the last 365 days (49.5 %) carry an AI co-author trailer or 'Generated
+      with' line, e.g. https://github.com/beeper/groupme/commit/e9413a098e45aba6cfe9289cde4873862ffe9844,
+      https://github.com/beeper/groupme/commit/e0891b3644fb7162aac48847bb791da855d75605
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'README calls it a development bridge. Successor to mx-puppet-groupme (matrix.org: Obsolete).'
+checked: 2026-11-05

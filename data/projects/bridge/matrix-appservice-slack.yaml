@@ -1,0 +1,70 @@
+slug: matrix-appservice-slack
+name: matrix-appservice-slack
+category: bridge
+kind: bot-based bridge
+homepage: https://matrix-appservice-slack.readthedocs.io/
+summary: The Matrix.org Foundation's Slack bridge (webhooks or the Events API, optional puppeting); archived.
+repos:
+- url: https://github.com/matrix-org/matrix-appservice-slack
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/slack/
+  other: []
+maturity: archived
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  network: Slack
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/matrix-org/matrix-appservice-slack/blob/1da3c1418c6c556ff53fe93343fcabfdca64dfcc/package.json
+    note: matrix-appservice-bridge
+  puppeting:
+    value: partial
+    how: claimed
+    source: https://github.com/matrix-org/matrix-appservice-slack/blob/1da3c1418c6c556ff53fe93343fcabfdca64dfcc/README.md
+    note: bot/webhook bridging with optional puppeting
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix-appservice-slack/blob/1da3c1418c6c556ff53fe93343fcabfdca64dfcc/README.md
+    note: channels
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix-appservice-slack/blob/1da3c1418c6c556ff53fe93343fcabfdca64dfcc/README.md
+    note: Slack webhooks or a Slack app (Events API)
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: https://github.com/matrix-org/matrix-appservice-bridge/blob/develop/CONTRIBUTING.md
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 1da3c1418c6c; no AI-attributed commits among 5 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'Archived on GitHub; matrix.org labels it Obsolete; last commit 2026-01-22. Successor for most
+  users: mautrix-slack.'
+checked: 2026-11-05

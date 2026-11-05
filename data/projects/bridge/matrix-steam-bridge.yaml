@@ -1,0 +1,63 @@
+slug: matrix-steam-bridge
+name: Matrix Steam Bridge
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Steam chat bridge on mautrix-go bridgev2 with a C# SteamKit2 service behind gRPC.
+repos:
+- url: https://github.com/jasonlaguidice/matrix-steam-bridge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - web search for Steam bridges
+maturity: beta
+platforms:
+- server
+licence: null
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Steam
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/jasonlaguidice/matrix-steam-bridge/blob/a3938326350dbe488724f979033d71a01e4ab1a3/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: not-found
+  e2ee:
+    value: not-found
+  backfill:
+    value: 'yes'
+    how: code
+    source: https://github.com/jasonlaguidice/matrix-steam-bridge/blob/a3938326350dbe488724f979033d71a01e4ab1a3/pkg/connector/backfill.go
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: allowed
+    quote: Some code in this repository was generated using the assistance of AI
+    source: https://github.com/jasonlaguidice/matrix-steam-bridge/blob/a3938326350dbe488724f979033d71a01e4ab1a3/README.md#L161
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD a3938326350d; no AI-attributed commits among 62 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'The README acknowledgement is a disclosure, not a contribution rule; recorded as allowed. Other
+  Steam bridge: mx-puppet-steam (archived).'
+checked: 2026-11-05

@@ -1,0 +1,83 @@
+slug: out-of-your-element
+name: Out Of Your Element
+category: bridge
+kind: bot-based bridge
+homepage: null
+summary: Matrix-Discord appservice bridge using a Discord bot and webhooks, with threads, stickers, custom
+  emoji and PluralKit support.
+repos:
+- url: https://gitdab.com/cadence/out-of-your-element
+  forge: forgejo
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/discord/
+  other: []
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Discord
+  framework:
+    value: 'yes'
+    how: claimed
+    source: https://gitdab.com/cadence/out-of-your-element/src/commit/dd6a5ca8a7908114fcb438174f7f54e69e9388b3/readme.md
+    note: own (JavaScript, no build step)
+  puppeting:
+    value: partial
+    how: claimed
+    source: https://gitdab.com/cadence/out-of-your-element/src/commit/dd6a5ca8a7908114fcb438174f7f54e69e9388b3/readme.md
+    note: Discord users as Matrix ghosts; Matrix users via webhooks (no Discord user login)
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://gitdab.com/cadence/out-of-your-element/src/commit/dd6a5ca8a7908114fcb438174f7f54e69e9388b3/readme.md#L45
+    note: '"Encrypted messages are not supported"'
+  backfill:
+    value: partial
+    how: claimed
+    source: https://gitdab.com/cadence/out-of-your-element/src/commit/dd6a5ca8a7908114fcb438174f7f54e69e9388b3/readme.md
+    note: messages sent during bridge downtime are bridged after restart
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://gitdab.com/cadence/out-of-your-element/src/commit/dd6a5ca8a7908114fcb438174f7f54e69e9388b3/readme.md
+    note: attachments, stickers; large files linked instead of reuploaded
+  reactions_edits:
+    value: 'yes'
+    how: claimed
+    source: https://gitdab.com/cadence/out-of-your-element/src/commit/dd6a5ca8a7908114fcb438174f7f54e69e9388b3/readme.md
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://gitdab.com/cadence/out-of-your-element/src/commit/dd6a5ca8a7908114fcb438174f7f54e69e9388b3/readme.md
+    note: guild channels, threads, spaces
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://gitdab.com/cadence/out-of-your-element/src/commit/dd6a5ca8a7908114fcb438174f7f54e69e9388b3/readme.md
+    note: Discord bot token set by the bridge admin
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: banned
+    quote: Out Of Your Element is 100% organically cultivated ethical hand-fed code. Let's work together
+      to conserve that!
+    source: https://gitdab.com/cadence/out-of-your-element/src/commit/dd6a5ca8a7908114fcb438174f7f54e69e9388b3/readme.md#L11-L13
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD dd6a5ca8a790; no AI-attributed commits among 340 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'The README''s "AI policy" section is read here as a request that contributions not be AI-generated
+  (our reading of the wording). Differs from mautrix-discord: no user login, bot plus webhooks, so nothing
+  runs as the user''s Discord account.'
+checked: 2026-11-05

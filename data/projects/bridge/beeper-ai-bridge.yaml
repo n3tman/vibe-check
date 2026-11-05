@@ -1,0 +1,60 @@
+slug: beeper-ai-bridge
+name: AI Bridge
+category: bridge
+kind: AI chat bridge
+homepage: null
+summary: Archived bridgev2 network connector that exposed AI models and agents as Beeper chat contacts.
+repos:
+- url: https://github.com/beeper/ai-bridge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search org:beeper
+maturity: archived
+platforms:
+- server
+licence: null
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: AI model providers
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/ai-bridge/blob/d797acca2dabada715dcd9346078f7be33553b3a/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: not-found
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD d797acca2dab; no AI-attributed commits among 45 non-bot commits in the last
+      365 days
+  in_product:
+    value: core
+    note: each AI model is a contact; responses stream with tool calls and generated images
+    source: https://github.com/beeper/ai-bridge/blob/d797acca2dabada715dcd9346078f7be33553b3a/README.md
+notes: 'Archived on GitHub; README: "This project is no longer supported." Found with GitHub search org:beeper.'
+checked: 2026-11-05
