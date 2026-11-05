@@ -116,15 +116,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "License": 0.0087,
-   "Markdown": 0.008,
-   "Nix": 0.0032,
-   "Rust": 0.8478,
-   "SVG": 0.0056,
-   "Shell": 0.0014,
-   "TOML": 0.116,
-   "XML": 0.0014,
-   "YAML": 0.0078
+   "Nix": 0.0026,
+   "Rust": 0.9949,
+   "Shell": 0.0026
   },
   "last_commit": "2026-11-04T04:11:06+00:00",
   "last_tag": "latest",
@@ -132,17 +126,11 @@
   "last_tag_repo": "https://github.com/ulyssa/iamb",
   "licence_detected": "Apache-2.0",
   "loc": {
-   "License": 169,
-   "Markdown": 221,
    "Nix": 66,
    "Rust": 25734,
-   "SVG": 126,
-   "Shell": 66,
-   "TOML": 3402,
-   "XML": 50,
-   "YAML": 280
+   "Shell": 66
   },
-  "loc_total": 30114,
+  "loc_total": 25866,
   "main_language": "Rust",
   "open_issues": null,
   "open_prs": null,
@@ -207,7 +195,7 @@
    8
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -357,6 +345,7 @@
    "error": null,
    "files": 122,
    "first_commit": "2021-07-03T06:22:37+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "55ad2d3402026e9824dc4fcdd3dce2added05575",
@@ -364,15 +353,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "License": 0.0087,
-    "Markdown": 0.008,
-    "Nix": 0.0032,
-    "Rust": 0.8478,
-    "SVG": 0.0056,
-    "Shell": 0.0014,
-    "TOML": 0.116,
-    "XML": 0.0014,
-    "YAML": 0.0078
+    "Nix": 0.0026,
+    "Rust": 0.9949,
+    "Shell": 0.0026
    },
    "languages_source": "scc",
    "last_commit": "2026-11-04T04:11:06+00:00",
@@ -382,15 +365,9 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "License": 169,
-    "Markdown": 221,
     "Nix": 66,
     "Rust": 25734,
-    "SVG": 126,
-    "Shell": 66,
-    "TOML": 3402,
-    "XML": 50,
-    "YAML": 280
+    "Shell": 66
    },
    "ok": true,
    "open_issues": null,

@@ -44,16 +44,12 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0618,
-   "Elm": 0.8025,
-   "HTML": 0.0151,
-   "JSON": 0.0103,
-   "JavaScript": 0.0062,
-   "License": 0.0429,
-   "Markdown": 0.0432,
-   "Nix": 0.0018,
-   "Python": 0.0058,
-   "YAML": 0.0105
+   "CSS": 0.0936,
+   "Elm": 0.874,
+   "HTML": 0.0183,
+   "JavaScript": 0.0048,
+   "Nix": 0.0034,
+   "Python": 0.006
   },
   "last_commit": "2023-07-07T01:18:00+00:00",
   "last_tag": "v0.13.0",
@@ -61,23 +57,17 @@
   "last_tag_repo": "https://gitlab.com/cactus-comments/cactus-client",
   "licence_detected": "LGPL-3.0",
   "loc": {
-   "Autoconf": 5,
    "CSS": 389,
    "Dockerfile": 9,
    "Elm": 3634,
    "HTML": 76,
-   "JSON": 112,
    "JavaScript": 20,
-   "License": 672,
-   "Markdown": 274,
    "Nix": 14,
-   "Plain Text": 56,
    "Python": 811,
    "Shell": 2,
-   "Systemd": 49,
-   "YAML": 307
+   "Systemd": 49
   },
-  "loc_total": 6430,
+  "loc_total": 5004,
   "main_language": "Elm",
   "open_issues": null,
   "open_prs": null,
@@ -142,7 +132,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -193,6 +183,7 @@
    "error": null,
    "files": 44,
    "first_commit": "2020-09-28T14:03:45+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "401f4ca35d15a7c8d2cb4b4d944113fa4fe6dafc",
@@ -200,16 +191,12 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0618,
-    "Elm": 0.8025,
-    "HTML": 0.0151,
-    "JSON": 0.0103,
-    "JavaScript": 0.0062,
-    "License": 0.0429,
-    "Markdown": 0.0432,
-    "Nix": 0.0018,
-    "Python": 0.0058,
-    "YAML": 0.0105
+    "CSS": 0.0936,
+    "Elm": 0.874,
+    "HTML": 0.0183,
+    "JavaScript": 0.0048,
+    "Nix": 0.0034,
+    "Python": 0.006
    },
    "languages_source": "scc",
    "last_commit": "2023-07-07T01:18:00+00:00",
@@ -222,13 +209,9 @@
     "CSS": 389,
     "Elm": 3634,
     "HTML": 76,
-    "JSON": 67,
     "JavaScript": 20,
-    "License": 128,
-    "Markdown": 151,
     "Nix": 14,
-    "Python": 25,
-    "YAML": 68
+    "Python": 25
    },
    "ok": true,
    "open_issues": null,
@@ -350,6 +333,7 @@
    "error": null,
    "files": 20,
    "first_commit": "2020-10-14T14:59:46+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "1ed01228204d8025a8b0a3e04c7686f2e84e3ebf",
@@ -357,14 +341,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0027,
-    "JSON": 0.01,
-    "License": 0.2337,
-    "Markdown": 0.0417,
-    "Plain Text": 0.0071,
-    "Python": 0.2221,
-    "Systemd": 0.0101,
-    "YAML": 0.472
+    "Dockerfile": 0.0106,
+    "Python": 0.9291,
+    "Shell": 0.0024,
+    "Systemd": 0.0579
    },
    "languages_source": "scc",
    "last_commit": "2022-05-07T22:29:22+00:00",
@@ -374,16 +354,10 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Autoconf": 5,
     "Dockerfile": 9,
-    "JSON": 45,
-    "License": 544,
-    "Markdown": 123,
-    "Plain Text": 56,
     "Python": 786,
     "Shell": 2,
-    "Systemd": 49,
-    "YAML": 239
+    "Systemd": 49
    },
    "ok": true,
    "open_issues": null,

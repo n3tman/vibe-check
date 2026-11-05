@@ -217,14 +217,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Go": 0.9221,
-   "JSON": 0.0392,
-   "JavaScript": 0.0012,
-   "License": 0.0149,
-   "Markdown": 0.0072,
-   "SQL": 0.0052,
-   "Thrift": 0.0016,
-   "YAML": 0.0068
+   "Go": 0.9893,
+   "JavaScript": 0.0011,
+   "Protocol Buffers": 0.0011,
+   "SQL": 0.0045,
+   "Thrift": 0.0028
   },
   "last_commit": "2026-11-03T21:36:41+00:00",
   "last_tag": "v0.2610.0",
@@ -232,21 +229,16 @@
   "last_tag_repo": "https://github.com/mautrix/meta",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Docker ignore": 6,
    "Dockerfile": 13,
    "Go": 55058,
-   "JSON": 1878,
    "JavaScript": 61,
-   "License": 544,
-   "Markdown": 439,
    "Modula3": 13,
    "Protocol Buffers": 60,
    "SQL": 250,
    "Shell": 43,
-   "Thrift": 156,
-   "YAML": 353
+   "Thrift": 156
   },
-  "loc_total": 58874,
+  "loc_total": 55654,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -311,7 +303,7 @@
    18
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -602,6 +594,7 @@
    "error": null,
    "files": 280,
    "first_commit": "2024-01-15T12:32:16+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "69a505d69039a24796ad5d24a599a548d315c300",
@@ -609,14 +602,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Go": 0.9221,
-    "JSON": 0.0392,
-    "JavaScript": 0.0012,
-    "License": 0.0149,
-    "Markdown": 0.0072,
-    "SQL": 0.0052,
-    "Thrift": 0.0016,
-    "YAML": 0.0068
+    "Go": 0.9893,
+    "JavaScript": 0.0011,
+    "Protocol Buffers": 0.0011,
+    "SQL": 0.0045,
+    "Thrift": 0.0028
    },
    "languages_source": "scc",
    "last_commit": "2026-11-03T21:36:41+00:00",
@@ -626,19 +616,14 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 6,
     "Dockerfile": 13,
     "Go": 55058,
-    "JSON": 1878,
     "JavaScript": 61,
-    "License": 544,
-    "Markdown": 439,
     "Modula3": 13,
     "Protocol Buffers": 60,
     "SQL": 250,
     "Shell": 43,
-    "Thrift": 156,
-    "YAML": 353
+    "Thrift": 156
    },
    "ok": true,
    "open_issues": null,

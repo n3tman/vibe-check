@@ -44,12 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0035,
-   "JSON": 0.0166,
-   "License": 0.4405,
-   "Markdown": 0.1203,
-   "TypeScript": 0.3884,
-   "YAML": 0.0308
+   "Dockerfile": 0.0213,
+   "TypeScript": 0.9787
   },
   "last_commit": "2024-09-16T01:34:38+00:00",
   "last_tag": "v3.1.5",
@@ -58,14 +54,10 @@
   "licence_detected": "AGPL-3.0",
   "loc": {
    "Dockerfile": 11,
-   "JSON": 52,
-   "License": 544,
-   "Markdown": 135,
-   "TypeScript": 505,
-   "YAML": 80
+   "TypeScript": 505
   },
-  "loc_total": 1327,
-  "main_language": "License",
+  "loc_total": 516,
+  "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -129,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -181,6 +173,7 @@
    "error": null,
    "files": 19,
    "first_commit": "2022-12-09T09:41:17+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "f2a7d6a3e158cb6040320840771fbeb4f4393db3",
@@ -188,12 +181,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0035,
-    "JSON": 0.0166,
-    "License": 0.4405,
-    "Markdown": 0.1203,
-    "TypeScript": 0.3884,
-    "YAML": 0.0308
+    "Dockerfile": 0.0213,
+    "TypeScript": 0.9787
    },
    "languages_source": "scc",
    "last_commit": "2024-09-16T01:34:38+00:00",
@@ -204,11 +193,7 @@
    "licence_source": "file",
    "loc": {
     "Dockerfile": 11,
-    "JSON": 52,
-    "License": 544,
-    "Markdown": 135,
-    "TypeScript": 505,
-    "YAML": 80
+    "TypeScript": 505
    },
    "ok": true,
    "open_issues": null,

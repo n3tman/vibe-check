@@ -44,16 +44,12 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "C Header": 0.0846,
-   "C++": 0.4061,
-   "License": 0.167,
-   "Markdown": 0.0071,
-   "Meson": 0.0179,
-   "QML": 0.1811,
-   "SVG": 0.0478,
-   "Shell": 0.0027,
-   "TypeScript": 0.0798,
-   "YAML": 0.0055
+   "C Header": 0.1274,
+   "C++": 0.4548,
+   "Meson": 0.0208,
+   "QML": 0.2632,
+   "Shell": 0.002,
+   "TypeScript": 0.1312
   },
   "last_commit": "2021-07-07T15:12:41+00:00",
   "last_tag": "0.0.6",
@@ -64,16 +60,12 @@
    "C Header": 503,
    "C++": 1795,
    "CMake": 2,
-   "License": 553,
-   "Markdown": 42,
    "Meson": 82,
    "QML": 1039,
-   "SVG": 239,
    "Shell": 8,
-   "TypeScript": 518,
-   "YAML": 44
+   "TypeScript": 518
   },
-  "loc_total": 4825,
+  "loc_total": 3947,
   "main_language": "C++",
   "open_issues": null,
   "open_prs": null,
@@ -138,7 +130,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -189,6 +181,7 @@
    "error": null,
    "files": 66,
    "first_commit": "2019-03-30T12:35:51+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "065884e3b47919a0b92611630b1919155dd5c385",
@@ -196,16 +189,12 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "C Header": 0.0846,
-    "C++": 0.4061,
-    "License": 0.167,
-    "Markdown": 0.0071,
-    "Meson": 0.0179,
-    "QML": 0.1811,
-    "SVG": 0.0478,
-    "Shell": 0.0027,
-    "TypeScript": 0.0798,
-    "YAML": 0.0055
+    "C Header": 0.1274,
+    "C++": 0.4548,
+    "Meson": 0.0208,
+    "QML": 0.2632,
+    "Shell": 0.002,
+    "TypeScript": 0.1312
    },
    "languages_source": "scc",
    "last_commit": "2021-07-07T15:12:41+00:00",
@@ -218,14 +207,10 @@
     "C Header": 503,
     "C++": 1795,
     "CMake": 2,
-    "License": 553,
-    "Markdown": 42,
     "Meson": 82,
     "QML": 1039,
-    "SVG": 239,
     "Shell": 8,
-    "TypeScript": 518,
-    "YAML": 44
+    "TypeScript": 518
    },
    "ok": true,
    "open_issues": null,

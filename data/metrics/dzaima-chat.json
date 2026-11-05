@@ -56,10 +56,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Java": 0.9843,
-   "License": 0.0032,
-   "Markdown": 0.0107,
-   "Python": 0.0019
+   "Java": 0.9984,
+   "Python": 0.0016
   },
   "last_commit": "2026-09-24T22:13:24+00:00",
   "last_tag": null,
@@ -68,11 +66,9 @@
   "licence_detected": "MIT",
   "loc": {
    "Java": 8559,
-   "License": 17,
-   "Markdown": 67,
    "Python": 14
   },
-  "loc_total": 8657,
+  "loc_total": 8573,
   "main_language": "Java",
   "open_issues": null,
   "open_prs": null,
@@ -137,7 +133,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -198,6 +194,7 @@
    "error": null,
    "files": 77,
    "first_commit": "2022-02-20T21:57:58+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "356c530f2d4a6e6f5243cdb80457613fdb2d2b9c",
@@ -205,10 +202,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Java": 0.9843,
-    "License": 0.0032,
-    "Markdown": 0.0107,
-    "Python": 0.0019
+    "Java": 0.9984,
+    "Python": 0.0016
    },
    "languages_source": "scc",
    "last_commit": "2026-09-24T22:13:24+00:00",
@@ -219,8 +214,6 @@
    "licence_source": "file",
    "loc": {
     "Java": 8559,
-    "License": 17,
-    "Markdown": 67,
     "Python": 14
    },
    "ok": true,

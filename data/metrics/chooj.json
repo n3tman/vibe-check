@@ -44,14 +44,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.027,
-   "HTML": 0.003,
-   "JSON": 0.0234,
-   "JavaScript": 0.1293,
-   "Markdown": 0.0329,
-   "TypeScript": 0.756,
-   "TypeScript Typings": 0.0081,
-   "YAML": 0.0203
+   "CSS": 0.0495,
+   "HTML": 0.0039,
+   "JavaScript": 0.1298,
+   "TypeScript": 0.8063,
+   "TypeScript Typings": 0.0105
   },
   "last_commit": "2025-08-03T07:55:38+00:00",
   "last_tag": "1.0.1",
@@ -61,15 +58,11 @@
   "loc": {
    "CSS": 441,
    "HTML": 37,
-   "JSON": 241,
    "JavaScript": 1275,
-   "Markdown": 188,
-   "SVG": 171,
    "TypeScript": 7534,
-   "TypeScript Typings": 100,
-   "YAML": 124
+   "TypeScript Typings": 100
   },
-  "loc_total": 10111,
+  "loc_total": 9387,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -134,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -186,6 +179,7 @@
    "error": null,
    "files": 91,
    "first_commit": "2021-07-16T14:15:50+00:00",
+   "first_parent": false,
    "forge": "forgejo",
    "forks": null,
    "head_sha": "763013c554bead6c80de2c43ba7cc44de77e7603",
@@ -193,14 +187,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.027,
-    "HTML": 0.003,
-    "JSON": 0.0234,
-    "JavaScript": 0.1293,
-    "Markdown": 0.0329,
-    "TypeScript": 0.756,
-    "TypeScript Typings": 0.0081,
-    "YAML": 0.0203
+    "CSS": 0.0495,
+    "HTML": 0.0039,
+    "JavaScript": 0.1298,
+    "TypeScript": 0.8063,
+    "TypeScript Typings": 0.0105
    },
    "languages_source": "scc",
    "last_commit": "2025-08-03T07:55:38+00:00",
@@ -211,12 +202,9 @@
    "loc": {
     "CSS": 244,
     "HTML": 19,
-    "JSON": 130,
     "JavaScript": 640,
-    "Markdown": 90,
     "TypeScript": 3976,
-    "TypeScript Typings": 52,
-    "YAML": 62
+    "TypeScript Typings": 52
    },
    "ok": true,
    "open_issues": null,
@@ -339,6 +327,7 @@
    "error": null,
    "files": 89,
    "first_commit": "2021-07-16T14:15:50+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "f4e78c2bc6e92c612373a267f231f4a149284c4b",
@@ -346,15 +335,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0222,
-    "HTML": 0.0029,
-    "JSON": 0.0202,
-    "JavaScript": 0.132,
-    "Markdown": 0.0423,
-    "SVG": 0.0556,
-    "TypeScript": 0.6964,
-    "TypeScript Typings": 0.0075,
-    "YAML": 0.0209
+    "CSS": 0.0442,
+    "HTML": 0.004,
+    "JavaScript": 0.1425,
+    "TypeScript": 0.7985,
+    "TypeScript Typings": 0.0108
    },
    "languages_source": "scc",
    "last_commit": "2024-02-18T15:28:12+00:00",
@@ -365,13 +350,9 @@
    "loc": {
     "CSS": 197,
     "HTML": 18,
-    "JSON": 111,
     "JavaScript": 635,
-    "Markdown": 98,
-    "SVG": 171,
     "TypeScript": 3558,
-    "TypeScript Typings": 48,
-    "YAML": 62
+    "TypeScript Typings": 48
    },
    "ok": true,
    "open_issues": null,

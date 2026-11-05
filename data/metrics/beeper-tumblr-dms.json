@@ -70,13 +70,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.002,
-   "Go": 0.9069,
-   "License": 0.0557,
-   "Markdown": 0.004,
-   "SQL": 0.0133,
-   "Shell": 0.0046,
-   "YAML": 0.0131
+   "Dockerfile": 0.0017,
+   "Go": 0.9832,
+   "SQL": 0.0098,
+   "Shell": 0.0053
   },
   "last_commit": "2026-11-03T21:38:57+00:00",
   "last_tag": "v0.1.0",
@@ -84,16 +81,12 @@
   "last_tag_repo": "https://github.com/beeper/tumblr-dms",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Docker ignore": 29,
    "Dockerfile": 29,
    "Go": 16393,
-   "License": 544,
-   "Markdown": 64,
    "SQL": 163,
-   "Shell": 88,
-   "YAML": 252
+   "Shell": 88
   },
-  "loc_total": 17562,
+  "loc_total": 16673,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -158,7 +151,7 @@
    4
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -237,6 +230,7 @@
    "error": null,
    "files": 66,
    "first_commit": "2026-06-03T22:16:21+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "5108ddbcf34b8e606e2f819276088c05c4df9caa",
@@ -244,13 +238,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.002,
-    "Go": 0.9069,
-    "License": 0.0557,
-    "Markdown": 0.004,
-    "SQL": 0.0133,
-    "Shell": 0.0046,
-    "YAML": 0.0131
+    "Dockerfile": 0.0017,
+    "Go": 0.9832,
+    "SQL": 0.0098,
+    "Shell": 0.0053
    },
    "languages_source": "scc",
    "last_commit": "2026-11-03T21:38:57+00:00",
@@ -260,14 +251,10 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 29,
     "Dockerfile": 29,
     "Go": 16393,
-    "License": 544,
-    "Markdown": 64,
     "SQL": 163,
-    "Shell": 88,
-    "YAML": 252
+    "Shell": 88
    },
    "ok": true,
    "open_issues": null,

@@ -44,10 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.0173,
-   "License": 0.4438,
-   "Markdown": 0.0102,
-   "TypeScript": 0.5277
+   "JavaScript": 0.0036,
+   "TypeScript": 0.9964
   },
   "last_commit": "2022-05-07T01:05:50+00:00",
   "last_tag": null,
@@ -55,13 +53,10 @@
   "last_tag_repo": null,
   "licence_detected": "GPL-3.0",
   "loc": {
-   "JSON": 54,
    "JavaScript": 4,
-   "License": 553,
-   "Markdown": 19,
    "TypeScript": 1118
   },
-  "loc_total": 1748,
+  "loc_total": 1122,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -126,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -175,6 +170,7 @@
    "error": null,
    "files": 23,
    "first_commit": "2022-01-25T23:28:08+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "29046c00fb881d74237b51d09542ce7b90841c1a",
@@ -182,10 +178,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.0173,
-    "License": 0.4438,
-    "Markdown": 0.0102,
-    "TypeScript": 0.5277
+    "JavaScript": 0.0036,
+    "TypeScript": 0.9964
    },
    "languages_source": "scc",
    "last_commit": "2022-05-07T01:05:50+00:00",
@@ -195,10 +189,7 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "JSON": 54,
     "JavaScript": 4,
-    "License": 553,
-    "Markdown": 19,
     "TypeScript": 1118
    },
    "ok": true,

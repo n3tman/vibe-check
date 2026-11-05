@@ -3,7 +3,7 @@
 The Matrix ecosystem at a glance: clients, servers, bots and bridges compared by features,
 development activity, and how each project treats AI.
 
-Site: https://n3tman.github.io/vibe-check/ (in progress)
+Site: https://n3tman.github.io/vibe-check/
 
 - Data: `data/projects/` (hand-checked, with sources), `data/metrics/` (generated weekly from
   the repositories), `data/mscs.yaml`.

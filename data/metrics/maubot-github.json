@@ -49,11 +49,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "License": 0.2162,
-   "Markdown": 0.0182,
-   "Python": 0.6698,
-   "TOML": 0.0014,
-   "YAML": 0.0945
+   "Python": 1.0
   },
   "last_commit": "2026-07-22T20:31:39+00:00",
   "last_tag": "v0.2.0",
@@ -61,13 +57,9 @@
   "last_tag_repo": "https://github.com/maubot/github",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "License": 544,
-   "Markdown": 51,
-   "Python": 2625,
-   "TOML": 10,
-   "YAML": 308
+   "Python": 2625
   },
-  "loc_total": 3538,
+  "loc_total": 2625,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -132,7 +124,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -189,6 +181,7 @@
    "error": null,
    "files": 32,
    "first_commit": "2019-04-18T14:30:57+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "64c5d4197e6b3659afcb8e484fc6a7e66fd22ca1",
@@ -196,11 +189,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "License": 0.2162,
-    "Markdown": 0.0182,
-    "Python": 0.6698,
-    "TOML": 0.0014,
-    "YAML": 0.0945
+    "Python": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2026-07-22T20:31:39+00:00",
@@ -210,11 +199,7 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "License": 544,
-    "Markdown": 51,
-    "Python": 2625,
-    "TOML": 10,
-    "YAML": 308
+    "Python": 2625
    },
    "ok": true,
    "open_issues": null,

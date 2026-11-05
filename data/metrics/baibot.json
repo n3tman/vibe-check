@@ -95,16 +95,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0014,
-   "JSON": 0.0018,
-   "License": 0.0255,
-   "Markdown": 0.101,
-   "Python": 0.0319,
-   "Rust": 0.6303,
-   "SVG": 0.1401,
-   "Shell": 0.0014,
-   "TOML": 0.002,
-   "YAML": 0.0647
+   "Dockerfile": 0.0015,
+   "Python": 0.0326,
+   "Rust": 0.9643,
+   "Shell": 0.0017
   },
   "last_commit": "2026-11-02T21:26:15+00:00",
   "last_tag": "v2026.11.02.1",
@@ -112,19 +106,12 @@
   "last_tag_repo": "https://github.com/etkecc/baibot",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Docker ignore": 2,
    "Dockerfile": 31,
-   "JSON": 73,
-   "License": 544,
-   "Markdown": 1081,
    "Python": 688,
    "Rust": 20367,
-   "SVG": 919,
-   "Shell": 35,
-   "TOML": 60,
-   "YAML": 837
+   "Shell": 35
   },
-  "loc_total": 24637,
+  "loc_total": 21121,
   "main_language": "Rust",
   "open_issues": null,
   "open_prs": null,
@@ -189,7 +176,7 @@
    22
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -367,6 +354,7 @@
    "error": null,
    "files": 268,
    "first_commit": "2024-09-12T10:44:06+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02",
@@ -374,16 +362,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0014,
-    "JSON": 0.0018,
-    "License": 0.0255,
-    "Markdown": 0.101,
-    "Python": 0.0319,
-    "Rust": 0.6303,
-    "SVG": 0.1401,
-    "Shell": 0.0014,
-    "TOML": 0.002,
-    "YAML": 0.0647
+    "Dockerfile": 0.0015,
+    "Python": 0.0326,
+    "Rust": 0.9643,
+    "Shell": 0.0017
    },
    "languages_source": "scc",
    "last_commit": "2026-11-02T21:26:15+00:00",
@@ -393,17 +375,10 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 2,
     "Dockerfile": 31,
-    "JSON": 73,
-    "License": 544,
-    "Markdown": 1081,
     "Python": 688,
     "Rust": 20367,
-    "SVG": 919,
-    "Shell": 35,
-    "TOML": 60,
-    "YAML": 837
+    "Shell": 35
    },
    "ok": true,
    "open_issues": null,

@@ -157,17 +157,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Autoconf": 0.0134,
-   "JSON": 0.0404,
-   "Markdown": 0.0087,
-   "Meson": 0.0045,
-   "Plain Text": 0.0413,
-   "Rust": 0.8265,
-   "SVG": 0.0512,
-   "Sass": 0.0056,
-   "TOML": 0.0026,
-   "XML": 0.002,
-   "YAML": 0.0025
+   "Meson": 0.0067,
+   "Rust": 0.9789,
+   "Sass": 0.0135
   },
   "last_commit": "2026-10-31T23:20:57+00:00",
   "last_tag": "14.3",
@@ -175,21 +167,13 @@
   "last_tag_repo": "https://gitlab.gnome.org/World/fractal",
   "licence_detected": null,
   "loc": {
-   "Autoconf": 1119,
    "HTML": 49,
-   "JSON": 7099,
-   "Markdown": 520,
    "Meson": 467,
-   "Plain Text": 2378,
    "Rust": 68465,
-   "SVG": 2608,
    "Sass": 943,
-   "Shell": 14,
-   "TOML": 335,
-   "XML": 99,
-   "YAML": 178
+   "Shell": 14
   },
-  "loc_total": 84274,
+  "loc_total": 69938,
   "main_language": "Rust",
   "open_issues": null,
   "open_prs": null,
@@ -254,7 +238,7 @@
    1
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -424,6 +408,7 @@
    "error": null,
    "files": 677,
    "first_commit": "2021-02-04T19:46:36+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "9fbc72834ad43746028008ea33878ea9fd2a82d6",
@@ -431,17 +416,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Autoconf": 0.0134,
-    "JSON": 0.0404,
-    "Markdown": 0.0087,
-    "Meson": 0.0045,
-    "Plain Text": 0.0413,
-    "Rust": 0.8265,
-    "SVG": 0.0512,
-    "Sass": 0.0056,
-    "TOML": 0.0026,
-    "XML": 0.002,
-    "YAML": 0.0025
+    "Meson": 0.0067,
+    "Rust": 0.9789,
+    "Sass": 0.0135
    },
    "languages_source": "scc",
    "last_commit": "2026-10-31T23:20:57+00:00",
@@ -451,19 +428,11 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Autoconf": 1119,
     "HTML": 49,
-    "JSON": 7099,
-    "Markdown": 520,
     "Meson": 467,
-    "Plain Text": 2378,
     "Rust": 68465,
-    "SVG": 2608,
     "Sass": 943,
-    "Shell": 14,
-    "TOML": 335,
-    "XML": 99,
-    "YAML": 178
+    "Shell": 14
    },
    "ok": true,
    "open_issues": null,

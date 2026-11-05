@@ -44,14 +44,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "HTML": 0.0129,
-   "JSON": 0.036,
-   "JavaScript": 0.6509,
-   "License": 0.206,
-   "Markdown": 0.0381,
-   "Sass": 0.0064,
-   "TypeScript": 0.025,
-   "YAML": 0.0247
+   "HTML": 0.0214,
+   "JavaScript": 0.9041,
+   "Sass": 0.0226,
+   "TypeScript": 0.0519
   },
   "last_commit": "2017-12-12T16:42:34+00:00",
   "last_tag": null,
@@ -60,15 +56,11 @@
   "licence_detected": "GPL-3.0",
   "loc": {
    "HTML": 52,
-   "JSON": 250,
    "JavaScript": 2197,
-   "License": 553,
-   "Markdown": 77,
    "Sass": 55,
-   "TypeScript": 126,
-   "YAML": 99
+   "TypeScript": 126
   },
-  "loc_total": 3409,
+  "loc_total": 2430,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -133,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -184,6 +176,7 @@
    "error": null,
    "files": 64,
    "first_commit": "2017-02-23T21:17:46+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "c60f4939a746b6db56e039f0b243ed7f09c25326",
@@ -191,14 +184,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "HTML": 0.0129,
-    "JSON": 0.036,
-    "JavaScript": 0.6509,
-    "License": 0.206,
-    "Markdown": 0.0381,
-    "Sass": 0.0064,
-    "TypeScript": 0.025,
-    "YAML": 0.0247
+    "HTML": 0.0214,
+    "JavaScript": 0.9041,
+    "Sass": 0.0226,
+    "TypeScript": 0.0519
    },
    "languages_source": "scc",
    "last_commit": "2017-12-12T16:42:34+00:00",
@@ -209,13 +198,9 @@
    "licence_source": "file",
    "loc": {
     "HTML": 52,
-    "JSON": 250,
     "JavaScript": 2197,
-    "License": 553,
-    "Markdown": 77,
     "Sass": 55,
-    "TypeScript": 126,
-    "YAML": 99
+    "TypeScript": 126
    },
    "ok": true,
    "open_issues": null,

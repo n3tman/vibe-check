@@ -1,0 +1,363 @@
+{
+ "collector_version": "1",
+ "combined": {
+  "ai": {
+   "agent_files": 0,
+   "ai_bot_commits_365d": 0,
+   "attributed_commits_365d": 49,
+   "commits_365d": 50,
+   "share_365d": 0.98,
+   "suggested_dev_usage": "regular",
+   "tools": {
+    "claude": 49
+   },
+   "workflows": 0
+  },
+  "archived": false,
+  "authors_365d": 1,
+  "authors_90d": 1,
+  "authors_all": 3,
+  "authors_by_quarter": {
+   "2023-Q1": 2,
+   "2023-Q2": 1,
+   "2023-Q3": 0,
+   "2023-Q4": 1,
+   "2024-Q1": 1,
+   "2024-Q2": 0,
+   "2024-Q3": 1,
+   "2024-Q4": 0,
+   "2025-Q1": 0,
+   "2025-Q2": 0,
+   "2025-Q3": 0,
+   "2025-Q4": 0,
+   "2026-Q1": 0,
+   "2026-Q2": 0,
+   "2026-Q3": 1,
+   "2026-Q4": 1
+  },
+  "bus_factor_365d": 1,
+  "ci": true,
+  "commits_30d": 2,
+  "commits_365d": 50,
+  "commits_90d": 50,
+  "commits_all": 171,
+  "daily_commits": {
+   "2026-09-08": 19,
+   "2026-09-10": 1,
+   "2026-10-01": 12,
+   "2026-10-02": 16,
+   "2026-10-07": 2
+  },
+  "first_commit": "2020-09-07T12:12:25+00:00",
+  "forks": null,
+  "issue_first_response_median_days": null,
+  "languages": {
+   "BASH": 0.0326,
+   "Dockerfile": 0.0015,
+   "Python": 0.1012,
+   "Rust": 0.8539,
+   "Shell": 0.0108
+  },
+  "last_commit": "2026-10-07T19:38:01+00:00",
+  "last_tag": "v0.3.0",
+  "last_tag_date": "2026-10-07T21:41:55+02:00",
+  "last_tag_repo": "https://github.com/rumpelsepp/mnotify",
+  "licence_detected": "EUPL-1.2",
+  "loc": {
+   "BASH": 106,
+   "Dockerfile": 5,
+   "Python": 329,
+   "Rust": 2777,
+   "Shell": 35
+  },
+  "loc_total": 3252,
+  "main_language": "Rust",
+  "open_issues": null,
+  "open_prs": null,
+  "security_policy": null,
+  "stars": null,
+  "status": "small-team",
+  "tags_365d": 2,
+  "telemetry_sdks": [],
+  "tests_present": true,
+  "weekly_commits": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   19,
+   1,
+   0,
+   0,
+   30,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "fetched_at": "2026-11-05T05:29:27+00:00",
+ "repos": [
+  {
+   "ai_scan": {
+    "agent_files": [],
+    "ai_bot_authors": [],
+    "attributed_commits_365d": 49,
+    "commits_365d": 50,
+    "examples": [
+     {
+      "date": "2026-10-07",
+      "sha": "3dffbb653e70b18dfa348bc6160fd9790a4c8fd1",
+      "tools": [
+       "claude"
+      ],
+      "url": "https://github.com/rumpelsepp/mnotify/commit/3dffbb653e70b18dfa348bc6160fd9790a4c8fd1"
+     },
+     {
+      "date": "2026-10-02",
+      "sha": "25621154ea5990072ea9ab89918ba229afc83bf1",
+      "tools": [
+       "claude"
+      ],
+      "url": "https://github.com/rumpelsepp/mnotify/commit/25621154ea5990072ea9ab89918ba229afc83bf1"
+     },
+     {
+      "date": "2026-10-02",
+      "sha": "0523a8b3ad8892d0311e84ca49162a7fa4d3b627",
+      "tools": [
+       "claude"
+      ],
+      "url": "https://github.com/rumpelsepp/mnotify/commit/0523a8b3ad8892d0311e84ca49162a7fa4d3b627"
+     },
+     {
+      "date": "2026-10-02",
+      "sha": "22aca7a0947de21bfac083e077a713a345b67476",
+      "tools": [
+       "claude"
+      ],
+      "url": "https://github.com/rumpelsepp/mnotify/commit/22aca7a0947de21bfac083e077a713a345b67476"
+     },
+     {
+      "date": "2026-10-02",
+      "sha": "69576ce46d3a9783297ddbc0ede983dc9e40f8bc",
+      "tools": [
+       "claude"
+      ],
+      "url": "https://github.com/rumpelsepp/mnotify/commit/69576ce46d3a9783297ddbc0ede983dc9e40f8bc"
+     },
+     {
+      "date": "2026-10-02",
+      "sha": "9035e342c08e8f676c7d294acd44763612f8b20a",
+      "tools": [
+       "claude"
+      ],
+      "url": "https://github.com/rumpelsepp/mnotify/commit/9035e342c08e8f676c7d294acd44763612f8b20a"
+     },
+     {
+      "date": "2026-10-02",
+      "sha": "af3874bafe782bb80093fed6721bf63cc4db53a2",
+      "tools": [
+       "claude"
+      ],
+      "url": "https://github.com/rumpelsepp/mnotify/commit/af3874bafe782bb80093fed6721bf63cc4db53a2"
+     },
+     {
+      "date": "2026-10-02",
+      "sha": "966e9323c5b3bf13cd046791fe753ed1955b4979",
+      "tools": [
+       "claude"
+      ],
+      "url": "https://github.com/rumpelsepp/mnotify/commit/966e9323c5b3bf13cd046791fe753ed1955b4979"
+     }
+    ],
+    "share_365d": 0.98,
+    "suggested_dev_usage": "regular",
+    "tools": {
+     "claude": 49
+    },
+    "workflows": []
+   },
+   "api_error": "skipped (--no-api)",
+   "archived": null,
+   "authors_365d": 1,
+   "authors_90d": 1,
+   "authors_all": 3,
+   "authors_by_quarter": {
+    "2023-Q1": 2,
+    "2023-Q2": 1,
+    "2023-Q3": 0,
+    "2023-Q4": 1,
+    "2024-Q1": 1,
+    "2024-Q2": 0,
+    "2024-Q3": 1,
+    "2024-Q4": 0,
+    "2025-Q1": 0,
+    "2025-Q2": 0,
+    "2025-Q3": 0,
+    "2025-Q4": 0,
+    "2026-Q1": 0,
+    "2026-Q2": 0,
+    "2026-Q3": 1,
+    "2026-Q4": 1
+   },
+   "bus_factor_365d": 1,
+   "ci": [
+    ".github/workflows/cargo.yml"
+   ],
+   "commits_30d": 2,
+   "commits_365d": 50,
+   "commits_90d": 50,
+   "commits_all": 171,
+   "daily_commits": {
+    "2026-09-08": 19,
+    "2026-09-10": 1,
+    "2026-10-01": 12,
+    "2026-10-02": 16,
+    "2026-10-07": 2
+   },
+   "default_branch": "master",
+   "description": null,
+   "error": null,
+   "files": 53,
+   "first_commit": "2020-09-07T12:12:25+00:00",
+   "first_parent": false,
+   "forge": "github",
+   "forks": null,
+   "head_sha": "5a9d8163b86aae053a4971971f6e5b2f31ab7ed1",
+   "issue_first_response_median_days": null,
+   "issues_responded": null,
+   "issues_sampled": null,
+   "languages": {
+    "BASH": 0.0326,
+    "Dockerfile": 0.0015,
+    "Python": 0.1012,
+    "Rust": 0.8539,
+    "Shell": 0.0108
+   },
+   "languages_source": "scc",
+   "last_commit": "2026-10-07T19:38:01+00:00",
+   "last_tag": "v0.3.0",
+   "last_tag_date": "2026-10-07T21:41:55+02:00",
+   "licence_detected": "EUPL-1.2",
+   "licence_file": "LICENSE",
+   "licence_source": "file",
+   "loc": {
+    "BASH": 106,
+    "Dockerfile": 5,
+    "Python": 329,
+    "Rust": 2777,
+    "Shell": 35
+   },
+   "ok": true,
+   "open_issues": null,
+   "open_prs": null,
+   "prerelease_tags_365d": 0,
+   "role": "main",
+   "security_policy": null,
+   "stars": null,
+   "status": "small-team",
+   "tags_365d": 2,
+   "telemetry_scan": {
+    "found": [],
+    "manifests_scanned": 1,
+    "sdks": []
+   },
+   "tests_present": true,
+   "url": "https://github.com/rumpelsepp/mnotify",
+   "weekly_commits": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    19,
+    1,
+    0,
+    0,
+    30,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ "slug": "mnotify"
+}

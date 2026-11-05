@@ -44,15 +44,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "HTML": 0.0012,
-   "JSON": 0.0068,
-   "JavaScript": 0.0194,
-   "License": 0.0168,
-   "Markdown": 0.0011,
-   "Sass": 0.0339,
-   "TOML": 0.0011,
-   "TypeScript": 0.9071,
-   "YAML": 0.0106
+   "HTML": 0.0017,
+   "JavaScript": 0.0241,
+   "Sass": 0.0782,
+   "TypeScript": 0.8949
   },
   "last_commit": "2023-09-19T11:35:16+00:00",
   "last_tag": null,
@@ -62,19 +57,12 @@
   "loc": {
    "Gherkin Specification": 5,
    "HTML": 21,
-   "JSON": 165,
    "JavaScript": 294,
-   "License": 169,
    "MDX": 8,
-   "Markdown": 14,
-   "Patch": 10,
-   "SVG": 1,
    "Sass": 953,
-   "TOML": 24,
-   "TypeScript": 10912,
-   "YAML": 185
+   "TypeScript": 10912
   },
-  "loc_total": 12761,
+  "loc_total": 12193,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -139,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -194,6 +182,7 @@
    "error": null,
    "files": 115,
    "first_commit": "2023-04-19T19:26:02+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "cb4e6a18b388553295e660fd6f6c167d5bd96bc0",
@@ -201,15 +190,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "HTML": 0.0012,
-    "JSON": 0.0068,
-    "JavaScript": 0.0194,
-    "License": 0.0168,
-    "Markdown": 0.0011,
-    "Sass": 0.0339,
-    "TOML": 0.0011,
-    "TypeScript": 0.9071,
-    "YAML": 0.0106
+    "HTML": 0.0017,
+    "JavaScript": 0.0241,
+    "Sass": 0.0782,
+    "TypeScript": 0.8949
    },
    "languages_source": "scc",
    "last_commit": "2023-09-19T11:35:16+00:00",
@@ -221,17 +205,10 @@
    "loc": {
     "Gherkin Specification": 5,
     "HTML": 21,
-    "JSON": 165,
     "JavaScript": 294,
-    "License": 169,
     "MDX": 8,
-    "Markdown": 14,
-    "Patch": 10,
-    "SVG": 1,
     "Sass": 953,
-    "TOML": 24,
-    "TypeScript": 10912,
-    "YAML": 185
+    "TypeScript": 10912
    },
    "ok": true,
    "open_issues": null,

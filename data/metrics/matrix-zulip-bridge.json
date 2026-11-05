@@ -44,11 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "License": 0.1384,
-   "Markdown": 0.0162,
-   "Python": 0.816,
-   "TOML": 0.0032,
-   "YAML": 0.025
+   "Dockerfile": 0.0018,
+   "Python": 0.9982
   },
   "last_commit": "2024-05-09T06:42:41+00:00",
   "last_tag": "v0.4.1",
@@ -56,16 +53,10 @@
   "last_tag_repo": "https://github.com/GearKite/MatrixZulipBridge",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Docker ignore": 6,
    "Dockerfile": 8,
-   "License": 544,
-   "Markdown": 82,
-   "Plain Text": 1,
-   "Python": 4346,
-   "TOML": 33,
-   "YAML": 135
+   "Python": 4346
   },
-  "loc_total": 5155,
+  "loc_total": 4354,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -130,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -184,6 +175,7 @@
    "error": null,
    "files": 32,
    "first_commit": "2024-01-19T06:52:49+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "2ba51f3da2ad8bd33460c953ef91a9cfc585a2d4",
@@ -191,11 +183,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "License": 0.1384,
-    "Markdown": 0.0162,
-    "Python": 0.816,
-    "TOML": 0.0032,
-    "YAML": 0.025
+    "Dockerfile": 0.0018,
+    "Python": 0.9982
    },
    "languages_source": "scc",
    "last_commit": "2024-05-09T06:42:41+00:00",
@@ -205,14 +194,8 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 6,
     "Dockerfile": 8,
-    "License": 544,
-    "Markdown": 82,
-    "Plain Text": 1,
-    "Python": 4346,
-    "TOML": 33,
-    "YAML": 135
+    "Python": 4346
    },
    "ok": true,
    "open_issues": null,

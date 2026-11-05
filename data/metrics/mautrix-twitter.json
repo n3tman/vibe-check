@@ -152,11 +152,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Go": 0.9509,
-   "JavaScript": 0.0115,
-   "License": 0.0273,
-   "Markdown": 0.0058,
-   "YAML": 0.0028
+   "Go": 0.9855,
+   "JavaScript": 0.0132
   },
   "last_commit": "2026-11-05T01:08:45+00:00",
   "last_tag": "v0.2609.0",
@@ -164,17 +161,12 @@
   "last_tag_repo": "https://github.com/mautrix/twitter",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Docker ignore": 8,
    "Dockerfile": 13,
    "Go": 30251,
    "JavaScript": 404,
-   "License": 544,
-   "Markdown": 168,
-   "SVG": 4,
-   "Shell": 27,
-   "YAML": 96
+   "Shell": 27
   },
-  "loc_total": 31515,
+  "loc_total": 30695,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -239,7 +231,7 @@
    11
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -425,6 +417,7 @@
    "error": null,
    "files": 144,
    "first_commit": "2020-07-16T21:19:51+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "3e2add166b93a03bf96390c987978f26ef2e4607",
@@ -432,11 +425,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Go": 0.9509,
-    "JavaScript": 0.0115,
-    "License": 0.0273,
-    "Markdown": 0.0058,
-    "YAML": 0.0028
+    "Go": 0.9855,
+    "JavaScript": 0.0132
    },
    "languages_source": "scc",
    "last_commit": "2026-11-05T01:08:45+00:00",
@@ -446,15 +436,10 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 8,
     "Dockerfile": 13,
     "Go": 30251,
     "JavaScript": 404,
-    "License": 544,
-    "Markdown": 168,
-    "SVG": 4,
-    "Shell": 27,
-    "YAML": 96
+    "Shell": 27
    },
    "ok": true,
    "open_issues": null,

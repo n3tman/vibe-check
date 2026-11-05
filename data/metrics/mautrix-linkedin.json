@@ -95,13 +95,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0011,
-   "Go": 0.8237,
-   "JSON": 0.0524,
-   "License": 0.0836,
-   "Markdown": 0.026,
-   "Shell": 0.0028,
-   "YAML": 0.0103
+   "Dockerfile": 0.0016,
+   "Go": 0.9948,
+   "Shell": 0.0036
   },
   "last_commit": "2026-11-03T21:35:10+00:00",
   "last_tag": "v0.2609.0",
@@ -109,16 +105,11 @@
   "last_tag_repo": "https://github.com/mautrix/linkedin",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Docker ignore": 9,
    "Dockerfile": 13,
    "Go": 8007,
-   "JSON": 716,
-   "License": 544,
-   "Markdown": 257,
-   "Shell": 29,
-   "YAML": 117
+   "Shell": 29
   },
-  "loc_total": 9692,
+  "loc_total": 8049,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -183,7 +174,7 @@
    10
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -312,6 +303,7 @@
    "error": null,
    "files": 84,
    "first_commit": "2021-05-31T23:13:15+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "3127fea810c03b6a7ab2cb91b366a7eb1a33a0b6",
@@ -319,13 +311,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0011,
-    "Go": 0.8237,
-    "JSON": 0.0524,
-    "License": 0.0836,
-    "Markdown": 0.026,
-    "Shell": 0.0028,
-    "YAML": 0.0103
+    "Dockerfile": 0.0016,
+    "Go": 0.9948,
+    "Shell": 0.0036
    },
    "languages_source": "scc",
    "last_commit": "2026-11-03T21:35:10+00:00",
@@ -335,14 +323,9 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 9,
     "Dockerfile": 13,
     "Go": 8007,
-    "JSON": 716,
-    "License": 544,
-    "Markdown": 257,
-    "Shell": 29,
-    "YAML": 117
+    "Shell": 29
    },
    "ok": true,
    "open_issues": null,

@@ -44,13 +44,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0273,
-   "JSON": 0.034,
-   "License": 0.1598,
-   "Markdown": 0.0659,
-   "Shell": 0.0108,
-   "TypeScript": 0.6434,
-   "YAML": 0.0585
+   "Dockerfile": 0.0399,
+   "Shell": 0.0159,
+   "TypeScript": 0.9442
   },
   "last_commit": "2022-05-13T17:36:01+00:00",
   "last_tag": "v0.1.2",
@@ -58,16 +54,11 @@
   "last_tag_repo": "https://gitlab.com/mx-puppet/slack/mx-puppet-slack",
   "licence_detected": "Apache-2.0",
   "loc": {
-   "Docker ignore": 1,
    "Dockerfile": 63,
-   "JSON": 93,
-   "License": 169,
-   "Markdown": 89,
    "Shell": 25,
-   "TypeScript": 1489,
-   "YAML": 43
+   "TypeScript": 1489
   },
-  "loc_total": 1972,
+  "loc_total": 1577,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -132,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -181,6 +172,7 @@
    "error": null,
    "files": 22,
    "first_commit": "2019-06-21T13:12:20+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "71b501797febf6b804faca1d9f827a045dce46f9",
@@ -188,13 +180,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0273,
-    "JSON": 0.034,
-    "License": 0.1598,
-    "Markdown": 0.0659,
-    "Shell": 0.0108,
-    "TypeScript": 0.6434,
-    "YAML": 0.0585
+    "Dockerfile": 0.0399,
+    "Shell": 0.0159,
+    "TypeScript": 0.9442
    },
    "languages_source": "scc",
    "last_commit": "2022-05-13T17:36:01+00:00",
@@ -204,14 +192,9 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 1,
     "Dockerfile": 63,
-    "JSON": 93,
-    "License": 169,
-    "Markdown": 89,
     "Shell": 25,
-    "TypeScript": 1489,
-    "YAML": 43
+    "TypeScript": 1489
    },
    "ok": true,
    "open_issues": null,

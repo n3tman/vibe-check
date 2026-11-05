@@ -172,14 +172,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.0406,
-   "JavaScript": 0.8071,
-   "License": 0.0189,
-   "Markdown": 0.0583,
-   "Plain Text": 0.0257,
-   "SQL": 0.0389,
-   "SVG": 0.0014,
-   "TypeScript Typings": 0.0089
+   "JavaScript": 0.9584,
+   "SQL": 0.0242,
+   "TypeScript Typings": 0.0173
   },
   "last_commit": "2026-11-04T22:26:36+00:00",
   "last_tag": "v3.8.2",
@@ -187,17 +182,12 @@
   "last_tag_repo": "https://gitdab.com/cadence/out-of-your-element",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "JSON": 128,
    "JavaScript": 36454,
-   "License": 544,
-   "Markdown": 1321,
-   "Plain Text": 3808,
    "SQL": 920,
-   "SVG": 61,
    "Shell": 2,
    "TypeScript Typings": 659
   },
-  "loc_total": 43897,
+  "loc_total": 38035,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -262,7 +252,7 @@
    14
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -439,6 +429,7 @@
    "error": null,
    "files": 268,
    "first_commit": "2022-12-07T00:10:31+00:00",
+   "first_parent": false,
    "forge": "forgejo",
    "forks": null,
    "head_sha": "dd6a5ca8a7908114fcb438174f7f54e69e9388b3",
@@ -446,14 +437,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.0406,
-    "JavaScript": 0.8071,
-    "License": 0.0189,
-    "Markdown": 0.0583,
-    "Plain Text": 0.0257,
-    "SQL": 0.0389,
-    "SVG": 0.0014,
-    "TypeScript Typings": 0.0089
+    "JavaScript": 0.9584,
+    "SQL": 0.0242,
+    "TypeScript Typings": 0.0173
    },
    "languages_source": "scc",
    "last_commit": "2026-11-04T22:26:36+00:00",
@@ -463,13 +449,8 @@
    "licence_file": "COPYING",
    "licence_source": "file",
    "loc": {
-    "JSON": 128,
     "JavaScript": 36454,
-    "License": 544,
-    "Markdown": 1321,
-    "Plain Text": 3808,
     "SQL": 920,
-    "SVG": 61,
     "Shell": 2,
     "TypeScript Typings": 659
    },

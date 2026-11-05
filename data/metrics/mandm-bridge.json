@@ -48,11 +48,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "License": 0.0362,
-   "Markdown": 0.1154,
-   "Plain Text": 0.002,
-   "Python": 0.8376,
-   "Systemd": 0.0087
+   "Python": 0.982,
+   "Systemd": 0.018
   },
   "last_commit": "2026-06-09T17:12:51+00:00",
   "last_tag": "v1.1",
@@ -60,13 +57,10 @@
   "last_tag_repo": "https://codeberg.org/karlpip/MandM-bridge",
   "licence_detected": "MIT",
   "loc": {
-   "License": 5,
-   "Markdown": 50,
-   "Plain Text": 7,
    "Python": 601,
    "Systemd": 11
   },
-  "loc_total": 674,
+  "loc_total": 612,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -131,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -184,6 +178,7 @@
    "error": null,
    "files": 17,
    "first_commit": "2022-05-02T12:33:39+00:00",
+   "first_parent": false,
    "forge": "forgejo",
    "forks": null,
    "head_sha": "3d8c2659de7072adbd08ad93cc615da318f22c40",
@@ -191,11 +186,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "License": 0.0362,
-    "Markdown": 0.1154,
-    "Plain Text": 0.002,
-    "Python": 0.8376,
-    "Systemd": 0.0087
+    "Python": 0.982,
+    "Systemd": 0.018
    },
    "languages_source": "scc",
    "last_commit": "2026-06-09T17:12:51+00:00",
@@ -205,9 +197,6 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "License": 5,
-    "Markdown": 50,
-    "Plain Text": 7,
     "Python": 601,
     "Systemd": 11
    },

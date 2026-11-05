@@ -44,12 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0041,
-   "JSON": 0.02,
-   "License": 0.2373,
-   "Markdown": 0.0091,
-   "TypeScript": 0.7205,
-   "YAML": 0.0086
+   "Dockerfile": 0.0104,
+   "TypeScript": 0.9896
   },
   "last_commit": "2019-11-16T22:11:19+00:00",
   "last_tag": null,
@@ -57,15 +53,10 @@
   "last_tag_repo": null,
   "licence_detected": "GPL-3.0",
   "loc": {
-   "Docker ignore": 8,
    "Dockerfile": 21,
-   "JSON": 131,
-   "License": 553,
-   "Markdown": 28,
-   "TypeScript": 2003,
-   "YAML": 38
+   "TypeScript": 2003
   },
-  "loc_total": 2782,
+  "loc_total": 2024,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -130,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -181,6 +172,7 @@
    "error": null,
    "files": 45,
    "first_commit": "2018-04-24T00:36:22+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "6a43cde31fda124873b26b0af173968871549545",
@@ -188,12 +180,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0041,
-    "JSON": 0.02,
-    "License": 0.2373,
-    "Markdown": 0.0091,
-    "TypeScript": 0.7205,
-    "YAML": 0.0086
+    "Dockerfile": 0.0104,
+    "TypeScript": 0.9896
    },
    "languages_source": "scc",
    "last_commit": "2019-11-16T22:11:19+00:00",
@@ -203,13 +191,8 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 8,
     "Dockerfile": 21,
-    "JSON": 131,
-    "License": 553,
-    "Markdown": 28,
-    "TypeScript": 2003,
-    "YAML": 38
+    "TypeScript": 2003
    },
    "ok": true,
    "open_issues": null,

@@ -117,13 +117,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "GDScript": 0.2269,
-   "Godot Scene": 0.4457,
-   "License": 0.0102,
-   "Markdown": 0.0069,
-   "Plain Text": 0.0059,
-   "SVG": 0.3027,
-   "YAML": 0.0014
+   "GDScript": 0.6986,
+   "Godot Scene": 0.3014
   },
   "last_commit": "2026-11-02T21:04:24+00:00",
   "last_tag": "dev-2026-10-13",
@@ -132,16 +127,10 @@
   "licence_detected": "MIT",
   "loc": {
    "GDScript": 21209,
-   "Godot Scene": 9149,
-   "JSON": 20,
-   "License": 752,
-   "Markdown": 492,
-   "Plain Text": 535,
-   "SVG": 7782,
-   "YAML": 196
+   "Godot Scene": 9149
   },
-  "loc_total": 40135,
-  "main_language": "Godot Scene",
+  "loc_total": 30358,
+  "main_language": "GDScript",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -205,7 +194,7 @@
    5
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -329,6 +318,7 @@
    "error": null,
    "files": 5747,
    "first_commit": "2022-12-16T22:22:22+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "9084ebeb6325275cbaf62899a3bf1fdcccb54d98",
@@ -336,13 +326,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "GDScript": 0.2269,
-    "Godot Scene": 0.4457,
-    "License": 0.0102,
-    "Markdown": 0.0069,
-    "Plain Text": 0.0059,
-    "SVG": 0.3027,
-    "YAML": 0.0014
+    "GDScript": 0.6986,
+    "Godot Scene": 0.3014
    },
    "languages_source": "scc",
    "last_commit": "2026-11-02T21:04:24+00:00",
@@ -353,13 +338,7 @@
    "licence_source": "file",
    "loc": {
     "GDScript": 21209,
-    "Godot Scene": 9149,
-    "JSON": 20,
-    "License": 752,
-    "Markdown": 492,
-    "Plain Text": 535,
-    "SVG": 7782,
-    "YAML": 196
+    "Godot Scene": 9149
    },
    "ok": true,
    "open_issues": null,

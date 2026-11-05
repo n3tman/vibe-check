@@ -44,14 +44,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0024,
-   "License": 0.0036,
-   "Markdown": 0.0432,
-   "Python": 0.913,
-   "SVG": 0.0148,
-   "Shell": 0.0024,
-   "TOML": 0.0011,
-   "YAML": 0.0192
+   "Dockerfile": 0.0023,
+   "Python": 0.9944,
+   "Shell": 0.0033
   },
   "last_commit": "2025-10-04T11:09:17+00:00",
   "last_tag": "v1.15.4",
@@ -59,19 +54,11 @@
   "last_tag_repo": "https://github.com/hifi/heisenbridge",
   "licence_detected": "MIT",
   "loc": {
-   "Autoconf": 1,
-   "Docker ignore": 6,
    "Dockerfile": 13,
-   "JSON": 3,
-   "License": 16,
-   "Markdown": 194,
    "Python": 5689,
-   "SVG": 153,
-   "Shell": 19,
-   "TOML": 13,
-   "YAML": 203
+   "Shell": 19
   },
-  "loc_total": 6310,
+  "loc_total": 5721,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -136,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -190,6 +177,7 @@
    "error": null,
    "files": 46,
    "first_commit": "2021-04-12T15:09:39+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "eb6e2f7f4cf5f915811505356af9f409c7b6faea",
@@ -197,14 +185,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0024,
-    "License": 0.0036,
-    "Markdown": 0.0432,
-    "Python": 0.913,
-    "SVG": 0.0148,
-    "Shell": 0.0024,
-    "TOML": 0.0011,
-    "YAML": 0.0192
+    "Dockerfile": 0.0023,
+    "Python": 0.9944,
+    "Shell": 0.0033
    },
    "languages_source": "scc",
    "last_commit": "2025-10-04T11:09:17+00:00",
@@ -214,17 +197,9 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Autoconf": 1,
-    "Docker ignore": 6,
     "Dockerfile": 13,
-    "JSON": 3,
-    "License": 16,
-    "Markdown": 194,
     "Python": 5689,
-    "SVG": 153,
-    "Shell": 19,
-    "TOML": 13,
-    "YAML": 203
+    "Shell": 19
    },
    "ok": true,
    "open_issues": null,

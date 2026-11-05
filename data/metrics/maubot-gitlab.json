@@ -44,11 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "HTML": 0.0744,
-   "License": 0.2694,
-   "Markdown": 0.0298,
-   "Python": 0.6222,
-   "YAML": 0.0042
+   "HTML": 0.1259,
+   "Python": 0.8741
   },
   "last_commit": "2025-10-13T13:37:18+00:00",
   "last_tag": "v0.2.1",
@@ -57,12 +54,9 @@
   "licence_detected": "AGPL-3.0",
   "loc": {
    "HTML": 240,
-   "License": 544,
-   "Markdown": 78,
-   "Python": 1667,
-   "YAML": 24
+   "Python": 1667
   },
-  "loc_total": 2553,
+  "loc_total": 1907,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -127,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -178,6 +172,7 @@
    "error": null,
    "files": 38,
    "first_commit": "2017-09-29T19:59:01+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "adc6e065c57b8c223ff0dc30f277deff98752224",
@@ -185,11 +180,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "HTML": 0.0744,
-    "License": 0.2694,
-    "Markdown": 0.0298,
-    "Python": 0.6222,
-    "YAML": 0.0042
+    "HTML": 0.1259,
+    "Python": 0.8741
    },
    "languages_source": "scc",
    "last_commit": "2025-10-13T13:37:18+00:00",
@@ -200,10 +192,7 @@
    "licence_source": "file",
    "loc": {
     "HTML": 240,
-    "License": 544,
-    "Markdown": 78,
-    "Python": 1667,
-    "YAML": 24
+    "Python": 1667
    },
    "ok": true,
    "open_issues": null,

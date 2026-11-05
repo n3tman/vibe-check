@@ -44,12 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0037,
-   "License": 0.4125,
-   "Markdown": 0.0864,
-   "Rust": 0.4787,
-   "TOML": 0.0097,
-   "YAML": 0.0089
+   "Dockerfile": 0.0102,
+   "Rust": 0.9898
   },
   "last_commit": "2024-03-21T13:16:56+00:00",
   "last_tag": "v0.1.0",
@@ -57,15 +53,10 @@
   "last_tag_repo": "https://github.com/bitbatter/Threematrix",
   "licence_detected": "GPL-3.0",
   "loc": {
-   "Docker ignore": 1,
    "Dockerfile": 10,
-   "License": 553,
-   "Markdown": 49,
-   "Rust": 975,
-   "TOML": 31,
-   "YAML": 34
+   "Rust": 975
   },
-  "loc_total": 1653,
+  "loc_total": 985,
   "main_language": "Rust",
   "open_issues": null,
   "open_prs": null,
@@ -130,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -179,6 +170,7 @@
    "error": null,
    "files": 20,
    "first_commit": "2022-02-07T20:57:30+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "db92bb325463b9b5bd43b56d29a092bfd25ca2ab",
@@ -186,12 +178,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0037,
-    "License": 0.4125,
-    "Markdown": 0.0864,
-    "Rust": 0.4787,
-    "TOML": 0.0097,
-    "YAML": 0.0089
+    "Dockerfile": 0.0102,
+    "Rust": 0.9898
    },
    "languages_source": "scc",
    "last_commit": "2024-03-21T13:16:56+00:00",
@@ -201,13 +189,8 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 1,
     "Dockerfile": 10,
-    "License": 553,
-    "Markdown": 49,
-    "Rust": 975,
-    "TOML": 31,
-    "YAML": 34
+    "Rust": 975
    },
    "ok": true,
    "open_issues": null,

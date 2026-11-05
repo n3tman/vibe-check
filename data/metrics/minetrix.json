@@ -44,11 +44,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Kotlin": 0.6734,
-   "License": 0.0525,
-   "Markdown": 0.0453,
-   "XML": 0.1696,
-   "YAML": 0.0591
+   "Kotlin": 1.0
   },
   "last_commit": "2019-10-13T19:52:47+00:00",
   "last_tag": null,
@@ -56,13 +52,9 @@
   "last_tag_repo": null,
   "licence_detected": "BSD-2-Clause",
   "loc": {
-   "Kotlin": 388,
-   "License": 19,
-   "Markdown": 28,
-   "XML": 111,
-   "YAML": 38
+   "Kotlin": 388
   },
-  "loc_total": 584,
+  "loc_total": 388,
   "main_language": "Kotlin",
   "open_issues": null,
   "open_prs": null,
@@ -127,7 +119,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -178,6 +170,7 @@
    "error": null,
    "files": 16,
    "first_commit": "2019-09-01T13:13:49+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "dd3367013234fd5acdd23855f2a15377e22b0390",
@@ -185,11 +178,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Kotlin": 0.6734,
-    "License": 0.0525,
-    "Markdown": 0.0453,
-    "XML": 0.1696,
-    "YAML": 0.0591
+    "Kotlin": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2019-10-13T19:52:47+00:00",
@@ -199,11 +188,7 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Kotlin": 388,
-    "License": 19,
-    "Markdown": 28,
-    "XML": 111,
-    "YAML": 38
+    "Kotlin": 388
    },
    "ok": true,
    "open_issues": null,

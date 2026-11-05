@@ -153,10 +153,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Go": 0.9853,
-   "Markdown": 0.0069,
-   "Python": 0.0044,
-   "Shell": 0.0024
+   "Go": 0.9976,
+   "Python": 0.0016
   },
   "last_commit": "2026-11-03T21:36:32+00:00",
   "last_tag": "1.2.0",
@@ -164,16 +162,12 @@
   "last_tag_repo": "https://github.com/beeper/line",
   "licence_detected": "MIT",
   "loc": {
-   "Docker ignore": 14,
    "Dockerfile": 25,
    "Go": 457891,
-   "License": 17,
-   "Markdown": 828,
    "Python": 712,
-   "Shell": 351,
-   "YAML": 154
+   "Shell": 351
   },
-  "loc_total": 459992,
+  "loc_total": 458979,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -238,7 +232,7 @@
    8
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -479,6 +473,7 @@
    "error": null,
    "files": 138,
    "first_commit": "2024-07-06T13:20:12+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "a9cefaf244d17f7bb6fb9685cdfd3ccf993c3293",
@@ -486,10 +481,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Go": 0.9853,
-    "Markdown": 0.0069,
-    "Python": 0.0044,
-    "Shell": 0.0024
+    "Go": 0.9976,
+    "Python": 0.0016
    },
    "languages_source": "scc",
    "last_commit": "2026-11-03T21:36:32+00:00",
@@ -499,14 +492,10 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 14,
     "Dockerfile": 25,
     "Go": 457891,
-    "License": 17,
-    "Markdown": 828,
     "Python": 712,
-    "Shell": 351,
-    "YAML": 154
+    "Shell": 351
    },
    "ok": true,
    "open_issues": null,

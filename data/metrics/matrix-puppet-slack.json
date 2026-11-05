@@ -44,10 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0023,
-   "JSON": 0.0207,
-   "JavaScript": 0.8807,
-   "Markdown": 0.0963
+   "Dockerfile": 0.0056,
+   "JavaScript": 0.9944
   },
   "last_commit": "2020-03-30T19:16:52+00:00",
   "last_tag": "1.12.0",
@@ -56,11 +54,9 @@
   "licence_detected": null,
   "loc": {
    "Dockerfile": 7,
-   "JSON": 39,
-   "JavaScript": 1241,
-   "Markdown": 74
+   "JavaScript": 1241
   },
-  "loc_total": 1361,
+  "loc_total": 1248,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -125,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -174,6 +170,7 @@
    "error": null,
    "files": 14,
    "first_commit": "2017-01-06T19:57:58+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "3630f19e593219ecf8da440b72a4b44b7481f1bc",
@@ -181,10 +178,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0023,
-    "JSON": 0.0207,
-    "JavaScript": 0.8807,
-    "Markdown": 0.0963
+    "Dockerfile": 0.0056,
+    "JavaScript": 0.9944
    },
    "languages_source": "scc",
    "last_commit": "2020-03-30T19:16:52+00:00",
@@ -194,9 +189,7 @@
    "licence_file": null,
    "loc": {
     "Dockerfile": 7,
-    "JSON": 39,
-    "JavaScript": 1241,
-    "Markdown": 74
+    "JavaScript": 1241
    },
    "ok": true,
    "open_issues": null,

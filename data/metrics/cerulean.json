@@ -44,17 +44,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0725,
-   "Dockerfile": 0.0024,
-   "HTML": 0.0094,
-   "JSON": 0.0077,
-   "JavaScript": 0.6645,
-   "License": 0.0627,
-   "Markdown": 0.0206,
-   "Plain Text": 0.01,
-   "SVG": 0.0586,
-   "Smarty Template": 0.0099,
-   "YAML": 0.081
+   "CSS": 0.1743,
+   "Dockerfile": 0.0037,
+   "HTML": 0.0045,
+   "JavaScript": 0.8016,
+   "Smarty Template": 0.0151
   },
   "last_commit": "2023-01-24T12:22:55+00:00",
   "last_tag": "helm-cerulean-0.1.0",
@@ -65,17 +59,11 @@
    "CSS": 659,
    "Dockerfile": 14,
    "HTML": 17,
-   "JSON": 68,
    "JavaScript": 3030,
-   "License": 169,
-   "Markdown": 64,
-   "Plain Text": 25,
-   "SVG": 43,
    "Shell": 3,
-   "Smarty Template": 57,
-   "YAML": 407
+   "Smarty Template": 57
   },
-  "loc_total": 4556,
+  "loc_total": 3780,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -140,7 +128,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -193,6 +181,7 @@
    "error": null,
    "files": 64,
    "first_commit": "2020-10-05T01:16:36+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "6c9d7814f63bdc5bf62a5e68dc9fbbdf118cc338",
@@ -200,17 +189,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0725,
-    "Dockerfile": 0.0024,
-    "HTML": 0.0094,
-    "JSON": 0.0077,
-    "JavaScript": 0.6645,
-    "License": 0.0627,
-    "Markdown": 0.0206,
-    "Plain Text": 0.01,
-    "SVG": 0.0586,
-    "Smarty Template": 0.0099,
-    "YAML": 0.081
+    "CSS": 0.1743,
+    "Dockerfile": 0.0037,
+    "HTML": 0.0045,
+    "JavaScript": 0.8016,
+    "Smarty Template": 0.0151
    },
    "languages_source": "scc",
    "last_commit": "2023-01-24T12:22:55+00:00",
@@ -223,15 +206,9 @@
     "CSS": 659,
     "Dockerfile": 14,
     "HTML": 17,
-    "JSON": 68,
     "JavaScript": 3030,
-    "License": 169,
-    "Markdown": 64,
-    "Plain Text": 25,
-    "SVG": 43,
     "Shell": 3,
-    "Smarty Template": 57,
-    "YAML": 407
+    "Smarty Template": 57
    },
    "ok": true,
    "open_issues": null,
