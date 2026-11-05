@@ -1,0 +1,38 @@
+slug: matrix-protection-suite
+name: matrix-protection-suite
+category: sdk
+kind: TypeScript
+homepage: https://github.com/the-draupnir-project/Draupnir
+summary: The moderation library under Draupnir (policy lists, protections); the standalone repo is superseded by
+  a package in the Draupnir monorepo.
+repos:
+- {url: 'https://github.com/Gnuxie/matrix-protection-suite', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: unmaintained
+platforms: [server]
+licence: AFL-3.0
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: bot, how: claimed, source: 'https://github.com/the-draupnir-project/Draupnir'}
+  used_by: [draupnir]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 48 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 59d1a72b9461']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-04-02, 48
+  non-bot commits in the last year and 0 authors in the last 90 days by our count at 59d1a72b9461 (the collector
+  recounts). README: "The matrix-protection-suite now lives at @the-draupnir-project in a monorepo". Draupnir has
+  its own file (category tool).'
+checked: 2026-11-05

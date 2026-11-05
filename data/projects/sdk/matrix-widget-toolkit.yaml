@@ -1,0 +1,35 @@
+slug: matrix-widget-toolkit
+name: matrix-widget-toolkit
+category: sdk
+kind: TypeScript
+homepage: https://github.com/nordeck/matrix-widget-toolkit
+summary: Nordeck's toolkit for building Matrix widgets with React on top of matrix-widget-api.
+repos:
+- {url: 'https://github.com/nordeck/matrix-widget-toolkit', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: stable
+platforms: [web]
+licence: Apache-2.0
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: widget, how: claimed, source: 'https://github.com/nordeck/matrix-widget-toolkit'}
+  used_by: [matrix-barcamp, matrix-neoboard, matrix-poll]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 8 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at ee82f956bcf1']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-10-20, 8 non-bot
+  commits in the last year and 2 authors in the last 90 days by our count at ee82f956bcf1 (the collector recounts).
+checked: 2026-11-05

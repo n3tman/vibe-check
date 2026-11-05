@@ -1,0 +1,42 @@
+slug: mautrix-python
+name: mautrix-python
+category: sdk
+kind: Python
+homepage: https://docs.mau.fi/python/latest/
+summary: A Python 3 asyncio Matrix framework by Tulir Asokan; the base of maubot and the legacy Python mautrix bridges.
+repos:
+- {url: 'https://github.com/mautrix/python', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: stable
+platforms: [server]
+licence: MPL-2.0
+fork_of: null
+distribution: [pypi]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/mautrix/python/blob/3ec2849729e4579593a7ab826d519f303a0de16f/setup.py#L5',
+    note: optional encryption extra on python-olm (libolm)}
+  crypto: libolm (python-olm)
+  sliding_sync: {value: not-found, how: code, note: no MSC4186 or MSC3575 code}
+  oidc_auth: {value: not-found, how: code, note: no OAuth / auth_metadata code}
+  threads: {value: partial, how: code, source: 'https://github.com/mautrix/python/blob/3ec2849729e4579593a7ab826d519f303a0de16f/mautrix/types/event/message.py',
+    note: thread relation type in the event models}
+  spaces: {value: partial, how: code, source: 'https://github.com/mautrix/python/blob/3ec2849729e4579593a7ab826d519f303a0de16f/mautrix/types/event/type.py',
+    note: space event types}
+  appservice: {value: 'yes', how: code, source: 'https://github.com/mautrix/python/blob/3ec2849729e4579593a7ab826d519f303a0de16f/mautrix/appservice/__init__.py'}
+  purpose: {value: 'client, bot, bridge', how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [alertbot, beeper-linkedin, heisenbridge, matrix-zulip-bridge, maubot, maubot-github, maubot-gitlab,
+    mautrix-facebook, mautrix-googlechat, mautrix-instagram, mautrix-twilio-legacy]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 20 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 3ec2849729e4']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "mautrix-python" (Stable, Python, maintainer: Tulir). Last non-bot commit 2026-10-12,
+  20 non-bot commits in the last year and 2 authors in the last 90 days by our count at 3ec2849729e4 (the collector
+  recounts).'
+checked: 2026-11-05

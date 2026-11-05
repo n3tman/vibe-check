@@ -1,0 +1,41 @@
+slug: pickle
+name: Pickle
+category: sdk
+kind: TypeScript (Go / WebAssembly core)
+homepage: https://github.com/beeper/pickle
+summary: Beeper's TypeScript Matrix SDK built on mautrix-go and goolm compiled to WebAssembly, with a bridge package
+  and adapters.
+repos:
+- {url: 'https://github.com/beeper/pickle', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: [Lane 6 notes]
+maturity: beta
+platforms: [web, server]
+licence: MPL-2.0
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/beeper/pickle/blob/b662c4ad6eb86987bb65084615d1d0d0728e56fd/README.md',
+    note: '"E2EE works out of the box", goolm (mautrix-go''s own Olm) in WebAssembly'}
+  crypto: goolm (via mautrix-go)
+  sliding_sync: {value: not-found, how: code}
+  oidc_auth: {value: not-found, how: code}
+  threads: {value: 'yes', how: claimed, source: 'https://github.com/beeper/pickle/blob/b662c4ad6eb86987bb65084615d1d0d0728e56fd/README.md'}
+  spaces: {value: 'yes', how: code, source: 'https://github.com/beeper/pickle/blob/b662c4ad6eb86987bb65084615d1d0d0728e56fd/packages/pi/src/spaces.ts'}
+  appservice: {value: 'yes', how: code, source: 'https://github.com/beeper/pickle/blob/b662c4ad6eb86987bb65084615d1d0d0728e56fd/packages/bridge/README.md'}
+  purpose: {value: 'client, bot, bridge', how: claimed, source: 'https://github.com/beeper/pickle'}
+  used_by: []
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: occasional
+    evidence: ['1 of 109 non-bot commits in the last 365 days carry an AI attribution (0.9 %), counted at b662c4ad6eb8',
+      'https://github.com/beeper/pickle/commit/1de46b6d5e (claude)']
+  in_product: {value: optional, note: 'Not an AI feature of its own, but it supports streaming AI responses ("Streaming
+      AI responses (debounced edits everywhere; native on Beeper)") and ships an AI SDK adapter.', source: 'https://github.com/beeper/pickle/blob/b662c4ad6eb86987bb65084615d1d0d0728e56fd/README.md#L81'}
+notes: 'Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-05-24, 109
+  non-bot commits in the last year and 0 authors in the last 90 days by our count at b662c4ad6eb8 (the collector
+  recounts). Licence per package: pickle MPL-2.0, packages/chat-adapter MIT.'
+checked: 2026-11-05

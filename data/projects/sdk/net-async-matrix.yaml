@@ -1,0 +1,32 @@
+slug: net-async-matrix
+name: Net::Async::Matrix
+category: sdk
+kind: Perl
+homepage: https://metacpan.org/release/Net-Async-Matrix
+summary: A Perl client library for Matrix on IO::Async, by LeoNerd, distributed on CPAN.
+repos: []
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: unmaintained
+platforms: []
+licence: GPL-1.0-or-later
+fork_of: null
+distribution: [cpan]
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: client, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: []
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: [no repository to scan]
+  in_product: {value: none-found, note: not checked, source: null}
+notes: matrix.org links the CPAN release page, not a source repository; activity not measured.
+checked: 2026-11-05

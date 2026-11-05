@@ -1,0 +1,41 @@
+slug: matrix-android-sdk2
+name: matrix-android-sdk2
+category: sdk
+kind: Kotlin
+homepage: https://github.com/matrix-org/matrix-android-sdk2
+summary: The Matrix SDK module extracted from Element Android (classic), published to Maven Central; changes go
+  to the Element Android repo.
+repos:
+- {url: 'https://github.com/matrix-org/matrix-android-sdk2', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: beta
+platforms: [android]
+licence: Apache-2.0
+fork_of: null
+distribution: [maven]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-android-sdk2/blob/9af37dfa3785ab79eb138568dcad17a8a6438239/matrix-sdk-android/build.gradle#L227',
+    note: 'Rust crypto (org.matrix.rustcomponents:crypto-android)'}
+  crypto: matrix-sdk-crypto (vodozemac)
+  sliding_sync: {value: not-found, how: code}
+  oidc_auth: {value: partial, how: code, source: 'https://github.com/matrix-org/matrix-android-sdk2/blob/9af37dfa3785ab79eb138568dcad17a8a6438239/matrix-sdk-android/src/main/java/org/matrix/android/sdk/api/auth/data/AuthMetadata.kt',
+    note: auth metadata types}
+  threads: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-android-sdk2/blob/9af37dfa3785ab79eb138568dcad17a8a6438239/matrix-sdk-android/src/androidTest/java/org/matrix/android/sdk/session/room/threads/ThreadMessagingTest.kt'}
+  spaces: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-android-sdk2/blob/9af37dfa3785ab79eb138568dcad17a8a6438239/matrix-sdk-android/src/main/java/org/matrix/android/sdk/api/session/events/model/EventType.kt'}
+  purpose: {value: client, how: claimed, source: 'https://github.com/matrix-org/matrix-android-sdk2'}
+  used_by: [element-classic, schildichat]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 9 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 9af37dfa3785']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-07-21, 9 non-bot
+  commits in the last year and 0 authors in the last 90 days by our count at 9af37dfa3785 (the collector recounts).
+  README: "this project is an extract of the Matrix SDK module from Element Android. Please do not open a pull request
+  on this project." The legacy matrix-android-sdk has its own file.'
+checked: 2026-11-05

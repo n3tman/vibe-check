@@ -1,0 +1,37 @@
+slug: matrix-appservice-node
+name: matrix-appservice-node
+category: sdk
+kind: JavaScript / TypeScript
+homepage: https://github.com/matrix-org/matrix-appservice-node
+summary: The low-level Matrix application service framework for Node.js under matrix-appservice-bridge.
+repos:
+- {url: 'https://github.com/matrix-org/matrix-appservice-node', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: not-found, how: code}
+  sliding_sync: {value: not-found, how: code}
+  oidc_auth: {value: not-found, how: code}
+  threads: {value: not-found, how: code}
+  spaces: {value: not-found, how: code}
+  appservice: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-appservice-node/blob/f332ccea8f3cfcc43105207b2237f0b6fe2507a8/README.md'}
+  purpose: {value: 'bot, bridge', how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [matrix-appservice-bridge]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 36 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at f332ccea8f3c']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "Matrix.org AS Node SDK" (Stable, JavaScript, maintainer: Matrix.org team). Last
+  non-bot commit 2026-08-10, 36 non-bot commits in the last year and 1 authors in the last 90 days by our count
+  at f332ccea8f3c (the collector recounts).'
+checked: 2026-11-05

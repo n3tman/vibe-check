@@ -1,0 +1,43 @@
+slug: matrix-nio
+name: matrix-nio
+category: sdk
+kind: Python
+homepage: https://matrix-nio.readthedocs.io/
+summary: A Python Matrix client library designed on sans-I/O principles, with an asyncio client; the most common
+  base for Python bots here.
+repos:
+- {url: 'https://github.com/matrix-nio/matrix-nio', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: ['matrix.org community space, SDKs section (sources/community-space.tsv)']
+maturity: stable
+platforms: [server, windows, macos, linux]
+licence: ISC
+fork_of: null
+distribution: [pypi]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/matrix-nio/matrix-nio/blob/331c93ed3e9ca86e7444b4dfdf05086654842ace/pyproject.toml#L40',
+    note: the e2e extra now depends on the vodozemac Python bindings; older releases used python-olm}
+  crypto: vodozemac
+  sliding_sync: {value: not-found, how: code, note: no MSC4186 or MSC3575 code}
+  oidc_auth: {value: not-found, how: code, note: no OAuth / auth_metadata code}
+  threads: {value: partial, how: code, source: 'https://github.com/matrix-nio/matrix-nio/blob/331c93ed3e9ca86e7444b4dfdf05086654842ace/src/nio/api.py#L134',
+    note: thread relation and thread-root filters}
+  spaces: {value: 'yes', how: code, source: 'https://github.com/matrix-nio/matrix-nio/blob/331c93ed3e9ca86e7444b4dfdf05086654842ace/src/nio/api.py#L611',
+    note: space_get_hierarchy}
+  purpose: {value: 'client, bot', how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [bubo, hemppa, langbot, matridge, matrix-chatgpt-bot-hibobmaster, matrix-commander, matrix-discord-bridge,
+    matrix-eno-bot, matrix-registration-bot, matrix-reminder-bot, matrix-rss-bridge, middleman, mirage, moment,
+    nio-template, ollamarama-matrix, opsdroid, pantalaimon, pipe2matrix, simplematrixbotlib, weechat-matrix]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 4 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 331c93ed3e9c']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "matrix-nio" (Stable, Python, maintainer: matrix-nio maintainers). Last non-bot commit
+  2026-07-23, 4 non-bot commits in the last year and 0 authors in the last 90 days by our count at 331c93ed3e9c
+  (the collector recounts).'
+checked: 2026-11-05

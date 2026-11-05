@@ -1,0 +1,37 @@
+slug: halcyon
+name: Halcyon
+category: sdk
+kind: Python
+homepage: https://github.com/WesR/Halcyon
+summary: A Matrix bot library inspired by discord.py.
+repos:
+- {url: 'https://github.com/WesR/Halcyon', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: ['matrix.org community space, SDKs section (sources/community-space.tsv)']
+maturity: beta
+platforms: [server]
+licence: BSD-3-Clause
+fork_of: null
+distribution: [pypi]
+funding: []
+features:
+  e2ee: {value: planned, how: claimed, source: 'https://github.com/WesR/Halcyon/blob/b2b0696f3a2839c87aa688809278c245ea4f607c/README.md',
+    note: '"Encryption is on the roadmap"'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: bot, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: []
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 11 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at b2b0696f3a28']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "Halcyon" (Beta, Python, maintainer: Wes Ring). Last non-bot commit 2026-04-12, 11
+  non-bot commits in the last year and 0 authors in the last 90 days by our count at b2b0696f3a28 (the collector
+  recounts).'
+checked: 2026-11-05

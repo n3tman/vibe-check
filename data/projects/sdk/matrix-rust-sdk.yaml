@@ -1,0 +1,57 @@
+slug: matrix-rust-sdk
+name: matrix-rust-sdk
+category: sdk
+kind: Rust
+homepage: https://github.com/matrix-org/matrix-rust-sdk
+summary: A Matrix client-server library in Rust with UniFFI bindings for Kotlin and Swift; the base of Element X
+  and many newer clients and bots.
+repos:
+- {url: 'https://github.com/matrix-org/matrix-rust-sdk', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: stable
+platforms: [android, ios, windows, macos, linux, web]
+licence: Apache-2.0
+fork_of: null
+distribution: [crates.io, maven, swift-package]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-rust-sdk/blob/b59505e2f5980ced579dd6d4d272583a34cca76e/crates/matrix-sdk-crypto/Cargo.toml',
+    note: 'own crypto crate matrix-sdk-crypto on vodozemac; also shipped as bindings (crypto-wasm, crypto-nodejs,
+      crypto-ffi)'}
+  crypto: vodozemac
+  sliding_sync: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-rust-sdk/blob/b59505e2f5980ced579dd6d4d272583a34cca76e/crates/matrix-sdk/src/sliding_sync/mod.rs#L543',
+    note: native MSC4186 simplified sliding sync; Element X uses it exclusively}
+  oidc_auth: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-rust-sdk/blob/b59505e2f5980ced579dd6d4d272583a34cca76e/crates/matrix-sdk/src/authentication/oauth/mod.rs',
+    note: 'OAuth 2.0 next-gen auth (MSC3861 family), including MSC4108 QR login'}
+  threads: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-rust-sdk/blob/b59505e2f5980ced579dd6d4d272583a34cca76e/crates/matrix-sdk-ui/src/timeline/thread_list_service.rs',
+    note: threaded timelines and a thread list service in matrix-sdk-ui}
+  spaces: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-rust-sdk/blob/b59505e2f5980ced579dd6d4d272583a34cca76e/crates/matrix-sdk-ui/src/spaces/mod.rs',
+    note: space service in matrix-sdk-ui}
+  qr_login: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-rust-sdk/blob/b59505e2f5980ced579dd6d4d272583a34cca76e/crates/matrix-sdk-crypto/src/types/qr_login/mod.rs',
+    note: MSC4108}
+  matrixrtc: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-rust-sdk/blob/b59505e2f5980ced579dd6d4d272583a34cca76e/bindings/matrix-sdk-ffi/src/room/mod.rs',
+    note: MatrixRTC / Element Call widget support}
+  purpose: {value: 'client, bot, bridge', how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [acter, axon, baibot, daydream, echelon, element-x, fermium, fractal, gosuto, iamb, komai, koushi, libquotient,
+    lightning, mactrix, mages, matrix-android-sdk2, matrix-commander-rs, matrix-ios-sdk, matrix-sdk-crypto-nodejs,
+    matrix-sdk-crypto-wasm, matrix-swift, mnotify, rivet, rumatui, sable, schildichat-next, schildichat-revenge,
+    singularity, tesseract, trinity-bot, wanchat, yapfast]
+ai:
+  policy: {value: restricted, quote: 'If content was made with the help of AI, you **must** convey that this is
+      the case. [...] It is **not allowed** to use AI in an autonomous-looking way to contribute to the Matrix Rust
+      SDK.', source: 'https://github.com/matrix-org/matrix-rust-sdk/blob/b59505e2f5980ced579dd6d4d272583a34cca76e/CONTRIBUTING.md#L367',
+    note: 'Its own "AI policy" section: disclosure required (PR template checkbox "This PR was made with the help
+      of AI."), human-written communication, general AI for review forbidden, no vibe coding or agent mode.'}
+  dev_usage:
+    value: occasional
+    evidence: ['2 of 2822 non-bot commits in the last 365 days carry an AI attribution (0.1 %), counted at b59505e2f598',
+      'https://github.com/matrix-org/matrix-rust-sdk/commit/e3a21fd842 (claude)', 'https://github.com/matrix-org/matrix-rust-sdk/commit/c6c518553b
+        (claude)']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "matrix-rust-sdk" (Stable, Rust, maintainer: Element Creations Ltd., on behalf of
+  The Matrix.org Foundation). Last non-bot commit 2026-10-26, 2822 non-bot commits in the last year and 55 authors
+  in the last 90 days by our count at b59505e2f598 (the collector recounts).'
+checked: 2026-11-05
