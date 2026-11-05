@@ -66,7 +66,7 @@ const data = Object.fromEntries(items.map((p) => [p.slug, summary(p)]));
               <option value="commitsAll">Commits, all time</option><option value="loc">Lines of code</option><option value="oldest">Oldest first</option>
               {category === 'server' && <option value="mscs">MSCs implemented</option>}
             </optgroup>
-            <optgroup label="Reach"><option value="stars">Stars</option></optgroup>
+            <optgroup label="Reach"><option value="stars">Stars</option>{category === 'sdk' && <option value="usedBy">Used by (projects listed here)</option>}</optgroup>
           </select>
         </label>
         {isClient && <label class="check"><input type="checkbox" name="mobile" /> <Icon name="phone" size={15} /> Mobile only</label>}
