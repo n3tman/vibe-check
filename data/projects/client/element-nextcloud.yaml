@@ -1,0 +1,83 @@
+slug: element-nextcloud
+name: Element for Nextcloud
+category: client
+kind: web (Nextcloud app)
+homepage: https://apps.nextcloud.com/apps/riotchat
+summary: A Nextcloud app that bundles Element Web so it can be installed and served from a Nextcloud
+  instance.
+repos:
+- url: https://github.com/gary-kim/riotchat
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - 'sources/community-space.tsv: room "Element for Nextcloud: General"'
+maturity: stable
+platforms:
+- web
+apps:
+- os: web
+  tech: other
+  status: stable
+  stores:
+  - name: nextcloud-apps
+    url: https://apps.nextcloud.com/apps/riotchat
+  source: https://github.com/gary-kim/riotchat/blob/5f11e302878bc00eb8fe857b9c520115544669a2/README.md
+  min_os: null
+licence: AGPL-3.0-or-later
+fork_of: element-web
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk (bundled Element Web 1.12.33)
+    how: code
+    source: https://github.com/gary-kim/riotchat/blob/5f11e302878bc00eb8fe857b9c520115544669a2/README.md
+  e2ee: not-found
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No attributed commits among 14 non-bot commits in the last 365 days; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  A packaging of Element Web, not a fork with its own features; it follows Element Web releases ("Update
+  Element Web to v1.12.33", 2026-11-01). Features: see element-web. Not affiliated with Element.
+checked: '2026-11-05'

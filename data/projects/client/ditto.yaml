@@ -36,7 +36,7 @@ apps:
     url: https://testflight.apple.com/join/9M0ERlKd
   source: https://gitlab.com/ditto-chat/ditto/-/blob/39b67697cab948c223a0ff06b0d6ab4154f33431/README.md
   min_os: null
-licence: GPL-3.0
+licence: GPL-3.0-only
 fork_of: null
 distribution: []
 funding: []

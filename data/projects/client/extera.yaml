@@ -1,0 +1,184 @@
+slug: extera
+name: Extera Next
+category: client
+kind: mobile, desktop, web
+homepage: https://extera.xyz
+summary: A FluffyChat fork with extra features (message translation, image editor, richer profiles);
+  development moved from GitHub to a self-hosted Forgejo.
+repos:
+- url: https://source.extera.xyz/Extera/Extera
+  forge: forgejo
+  role: main
+- url: https://github.com/ExteraApp/Extera
+  forge: github
+  role: other
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/extera-next/
+  other:
+  - GitHub topic matrix-client (archived GitHub mirror)
+maturity: beta
+platforms:
+- android
+- linux
+- windows
+- web
+apps:
+- os: android
+  tech: flutter
+  status: beta
+  stores:
+  - name: apk
+    url: https://source.extera.xyz/Extera/Extera/releases
+  source: https://source.extera.xyz/Extera/Extera/src/commit/9b12d0ff732dd209f29d5acf4694be23629c2091/.github/README.md
+  min_os: null
+- os: linux
+  tech: flutter
+  status: beta
+  stores:
+  - name: appimage
+    url: https://source.extera.xyz/Extera/Extera/releases
+  source: https://source.extera.xyz/Extera/Extera/src/commit/9b12d0ff732dd209f29d5acf4694be23629c2091/.github/README.md
+  min_os: null
+- os: windows
+  tech: flutter
+  status: beta
+  source: https://source.extera.xyz/Extera/Extera/src/commit/9b12d0ff732dd209f29d5acf4694be23629c2091/README.md
+  min_os: null
+  stores: []
+- os: web
+  tech: flutter
+  status: beta
+  source: https://source.extera.xyz/Extera/Extera/src/commit/9b12d0ff732dd209f29d5acf4694be23629c2091/.github/README.md
+  min_os: null
+  stores: []
+licence: AGPL-3.0
+fork_of: fluffychat
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-dart-sdk (vendored fork at ../matrix-dart-sdk)
+    how: code
+    source: https://source.extera.xyz/Extera/Extera/src/commit/9b12d0ff732dd209f29d5acf4694be23629c2091/pubspec.yaml
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+    note: vodozemac.
+  cross_signing:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  key_backup:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/extera-next.md
+  threads:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/extera-next.md
+  spaces:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  voip_1to1:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  group_calls:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+    note: Element Call compatible, LiveKit.
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  custom_emoji:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  stickers:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  location:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  voice_messages:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  private_read_receipts: not-found
+  presence:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+    note: Rich Presence (MSC4320).
+  room_upgrades: not-found
+  moderation_tools:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+  accessibility: not-found
+  translations:
+    value: partial
+    how: claimed
+    source: https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/README.md
+    note: '"We use LLMs for translating the app. Exceptions are English and Russian."'
+  telemetry:
+    value: none-found
+    how: null
+    source: null
+  default_homeserver:
+    value: not-found
+    how: null
+    source: null
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://source.extera.xyz/Extera/Extera/src/commit/9b12d0ff732dd209f29d5acf4694be23629c2091/README.md
+    note: Flutter plus a vendored matrix-dart-sdk fork; AGPL-3.0 (README does not say only or or-later).
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - AGENTS.md at the repo root (conventions for coding agents).
+    - >-
+      2 of about 1,070 non-bot commits in the last 365 days carry an Assisted-by trailer (opencode
+      with GLM and DeepSeek models).
+    - >-
+      UI strings other than English and Russian are machine-translated with an LLM (scripts/translate.js,
+      OpenAI API).
+  in_product:
+    value: optional
+    note: >-
+      Built-in message translation (toggleable) through Neurogate, the project's own "gateway API
+      for AI inference" (https://source.extera.xyz/Extera/Neurogate); default endpoint neurogate.extera.xyz;
+      not available in encrypted rooms (docs/translator.md).
+    source: https://source.extera.xyz/Extera/Extera/src/commit/9b12d0ff732dd209f29d5acf4694be23629c2091/lib/utils/neurogate.dart
+notes: >-
+  matrix.org lists it as "Extera Next" (maturity Beta). The GitHub repo ExteraApp/Extera is archived
+  and says "We have moved to https://source.extera.xyz/Extera/Extera". The older Cinny-based Extera
+  (officialdakari/Extera, matrix.org "Obsolete") returns 404 and has no file. Fork of FluffyChat.
+checked: '2026-11-05'
