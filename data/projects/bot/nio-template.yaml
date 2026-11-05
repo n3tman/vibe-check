@@ -1,0 +1,40 @@
+slug: nio-template
+name: nio-template
+category: bot
+kind: template
+homepage: https://github.com/anoadragon453/nio-template
+summary: A starter template for writing Python bots on matrix-nio, with commands, a config file, a SQLite
+  store and E2EE.
+repos:
+- url: https://github.com/anoadragon453/nio-template
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: archived
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: bot template (starting point for other bots), how: claimed, source: 'https://github.com/anoadragon453/nio-template/blob/98bd60aa6c1276bea36600a02714b7e6ed92d79f/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/anoadragon453/nio-template/blob/98bd60aa6c1276bea36600a02714b7e6ed92d79f/setup.py',
+    note: 'matrix-nio[e2e]'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/anoadragon453/nio-template/blob/98bd60aa6c1276bea36600a02714b7e6ed92d79f/README.md',
+    note: '"Participation in end-to-end encrypted rooms"'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/anoadragon453/nio-template/blob/98bd60aa6c1276bea36600a02714b7e6ed92d79f/README.md'}
+  config: {value: config.yaml and chat commands, how: claimed, source: 'https://github.com/anoadragon453/nio-template/blob/98bd60aa6c1276bea36600a02714b7e6ed92d79f/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/anoadragon453/nio-template/blob/98bd60aa6c1276bea36600a02714b7e6ed92d79f/setup.py'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2024-12-03), counted at 98bd60aa6c12
+  in_product: {value: none-found, note: null, source: null}
+notes: 'README: "It is no longer maintained." Archived on GitHub. matrix-eno-bot and others are built
+  on it.'
+checked: 2026-11-05

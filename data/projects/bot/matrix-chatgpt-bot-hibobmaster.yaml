@@ -1,0 +1,42 @@
+slug: matrix-chatgpt-bot-hibobmaster
+name: matrix_chatgpt_bot
+category: bot
+kind: ai-assistant
+homepage: https://github.com/hibobmaster/matrix_chatgpt_bot
+summary: A Python bot for chatting with OpenAI-compatible models, LangChain (Flowise) agents and image
+  generation from a room.
+repos:
+- url: https://github.com/hibobmaster/matrix_chatgpt_bot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, repositories sorted by stars, 2026-11-05
+maturity: unmaintained
+platforms: [server]
+licence: MIT
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: 'AI assistant (chat, vision, image generation)', how: claimed, source: 'https://github.com/hibobmaster/matrix_chatgpt_bot/blob/3b3a1a44c705f40f04f097af0264630428cd3b8e/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/hibobmaster/matrix_chatgpt_bot/blob/3b3a1a44c705f40f04f097af0264630428cd3b8e/requirements.txt',
+    note: 'matrix-nio[e2e]'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/hibobmaster/matrix_chatgpt_bot/blob/3b3a1a44c705f40f04f097af0264630428cd3b8e/README.md',
+    note: '"Support E2E Encrypted Room"'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/hibobmaster/matrix_chatgpt_bot/blob/3b3a1a44c705f40f04f097af0264630428cd3b8e/README.md',
+    note: Docker recommended}
+  config: {value: 'config.json or .env, and chat commands (!gpt, !chat, !pic, !lc, …)', how: claimed,
+    source: 'https://github.com/hibobmaster/matrix_chatgpt_bot/blob/3b3a1a44c705f40f04f097af0264630428cd3b8e/README.md'}
+  ai_backend: {value: 'OpenAI API and compatible endpoints (LocalAI), LangChain via Flowise, DALL·E /
+      LocalAI / stable-diffusion-webui for images', how: claimed, source: 'https://github.com/hibobmaster/matrix_chatgpt_bot/blob/3b3a1a44c705f40f04f097af0264630428cd3b8e/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2025-05-20), counted at 3b3a1a44c705
+  in_product: {value: core, note: The product is an LLM and image-generation front-end., source: 'https://github.com/hibobmaster/matrix_chatgpt_bot/blob/3b3a1a44c705f40f04f097af0264630428cd3b8e/README.md'}
+notes: Last commit 2025-05-20, none in the last 365 days; not archived. Maturity is our reading.
+checked: 2026-11-05

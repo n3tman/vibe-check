@@ -1,0 +1,40 @@
+slug: maubot-github
+name: maubot GitHub plugin
+category: bot
+kind: integration
+homepage: https://github.com/maubot/github
+summary: A maubot plugin that acts as a GitHub client and posts GitHub webhook events to rooms; a hosted
+  instance runs on maunium.net.
+repos:
+- url: https://github.com/maubot/github
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, topic matrix-bot, 2026-11-05
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: integration (GitHub), how: claimed, source: 'https://github.com/maubot/github/blob/64c5d4197e6b3659afcb8e484fc6a7e66fd22ca1/README.md'}
+  framework: {value: maubot, how: code, source: 'https://github.com/maubot/github/blob/64c5d4197e6b3659afcb8e484fc6a7e66fd22ca1/pyproject.toml'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://docs.mau.fi/maubot/usage/encryption.html', note: inherited
+      from the maubot instance it runs in}
+  hosting: {value: both, how: claimed, source: 'https://github.com/maubot/github/blob/64c5d4197e6b3659afcb8e484fc6a7e66fd22ca1/README.md',
+    note: 'https://github.com/maubot/github/blob/64c5d4197e6b3659afcb8e484fc6a7e66fd22ca1/github:maunium.net
+      hosted instance, or self-host in maubot'}
+  config: {value: maubot web UI and !github commands, how: claimed, source: 'https://github.com/maubot/github/blob/64c5d4197e6b3659afcb8e484fc6a7e66fd22ca1/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/maubot/github/blob/64c5d4197e6b3659afcb8e484fc6a7e66fd22ca1/pyproject.toml'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 5 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 64c5d4197e6b
+  in_product: {value: none-found, note: null, source: null}
+notes: The LICENSE file is the GNU AGPL v3; the -or-later choice follows maubot's own.
+checked: 2026-11-05

@@ -1,0 +1,42 @@
+slug: matrix-ai-moderator
+name: Matrix Harm Detection Bot (matrix-ai-moderator)
+category: bot
+kind: moderation
+homepage: https://github.com/iv-org/matrix-ai-moderator
+summary: A Deno bot from the Invidious project that checks new members' messages and avatars with an LLM
+  and deletes, warns or bans on inappropriate content.
+repos:
+- url: https://github.com/iv-org/matrix-ai-moderator
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, repositories sorted by stars, 2026-11-05
+maturity: beta
+platforms: [server]
+licence: null
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: moderation (LLM classification of new members' messages and images), how: claimed,
+    source: 'https://github.com/iv-org/matrix-ai-moderator/blob/d016cb2314ff9b83d62483255a112415829b031f/README.md'}
+  framework: {value: matrix-js-sdk, how: code, source: 'https://github.com/iv-org/matrix-ai-moderator/blob/d016cb2314ff9b83d62483255a112415829b031f/deno.json'}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/iv-org/matrix-ai-moderator/blob/d016cb2314ff9b83d62483255a112415829b031f/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/iv-org/matrix-ai-moderator/blob/d016cb2314ff9b83d62483255a112415829b031f/README.md',
+    note: Deno}
+  config: {value: environment variables, how: claimed, source: 'https://github.com/iv-org/matrix-ai-moderator/blob/d016cb2314ff9b83d62483255a112415829b031f/README.md'}
+  ai_backend: {value: OpenAI API or any OpenAI-compatible API (OpenRouter named); text and vision models,
+    how: code, source: 'https://github.com/iv-org/matrix-ai-moderator/blob/d016cb2314ff9b83d62483255a112415829b031f/deno.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 14 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at d016cb2314ff
+  in_product: {value: core, note: 'Moderation decisions (delete, warn, ban) come from an LLM''s classification
+      of text and images.', source: 'https://github.com/iv-org/matrix-ai-moderator/blob/d016cb2314ff9b83d62483255a112415829b031f/README.md'}
+notes: Filed as a bot (not with the moderation tools in tool/) because it is a single-purpose bot found
+  by search; moderation is its kind. No LICENSE file found; licence null.
+checked: 2026-11-05

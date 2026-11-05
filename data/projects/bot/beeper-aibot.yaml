@@ -1,0 +1,40 @@
+slug: beeper-aibot
+name: aibot (Beeper)
+category: bot
+kind: ai-assistant
+homepage: https://github.com/beeper/aibot
+summary: A maubot plugin by Beeper that answers in rooms with ChatGPT, with LangChain tools for web search
+  and Wikipedia.
+repos:
+- url: https://github.com/beeper/aibot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, repositories sorted by stars, 2026-11-05
+maturity: unmaintained
+platforms: [server]
+licence: null
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: AI assistant (ChatGPT front-end), how: claimed, source: 'https://github.com/beeper/aibot/blob/2414e4873e537a928905d37a6fcaf2d1194cf9d7/README.md'}
+  framework: {value: maubot, how: code, source: 'https://github.com/beeper/aibot/blob/2414e4873e537a928905d37a6fcaf2d1194cf9d7/maubot.yaml',
+    note: can run standalone (maubot.standalone)}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/beeper/aibot/blob/2414e4873e537a928905d37a6fcaf2d1194cf9d7/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/beeper/aibot/blob/2414e4873e537a928905d37a6fcaf2d1194cf9d7/README.md',
+    note: standalone Docker image or a maubot instance}
+  config: {value: config.yaml, how: claimed, source: 'https://github.com/beeper/aibot/blob/2414e4873e537a928905d37a6fcaf2d1194cf9d7/README.md'}
+  ai_backend: {value: 'OpenAI, with LangChain tools (Google search via SerpAPI, Wikipedia)', how: code,
+    source: 'https://github.com/beeper/aibot/blob/2414e4873e537a928905d37a6fcaf2d1194cf9d7/maubot.yaml'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2023-05-01), counted at 2414e4873e53
+  in_product: {value: core, note: The product is a ChatGPT front-end., source: 'https://github.com/beeper/aibot/blob/2414e4873e537a928905d37a6fcaf2d1194cf9d7/requirements.txt'}
+notes: Last commit 2023-05-01; no LICENSE file found in the repo, so the licence is unstated (null).
+checked: 2026-11-05
