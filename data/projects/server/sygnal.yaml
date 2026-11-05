@@ -1,0 +1,40 @@
+slug: sygnal
+name: Sygnal
+category: server
+kind: push gateway
+homepage: null
+summary: The reference Matrix push gateway (APNs, FCM, WebPush), maintained by Element.
+repos:
+- {url: 'https://github.com/element-hq/sygnal', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - own search
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-only OR LicenseRef-Element-Commercial
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  language: Python
+  database: null
+  msc: []
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: 710f0f60a129139a6968fc65b1ed84dfe76c47fd
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The matrix-org/sygnal repo is archived; development continues at element-hq/sygnal. Licence of
+  the element-hq copy not re-checked.
+checked: '2026-11-05'

@@ -1,0 +1,37 @@
+slug: matrex
+name: Matrex
+category: server
+kind: homeserver
+homepage: null
+summary: A work-in-progress toy Matrix server in Elixir.
+repos:
+- {url: 'https://github.com/bismark/matrex', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: unmaintained
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  language: Elixir
+  msc: []
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    note: no commits since 2018-02-22; not cloned
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: matrix.org labels it "Obsolete". Last push 2018-02-22 (GitHub API); not cloned or MSC-scanned.
+checked: '2026-11-05'

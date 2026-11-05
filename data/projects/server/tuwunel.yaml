@@ -1,0 +1,987 @@
+slug: tuwunel
+name: Tuwunel
+category: server
+kind: homeserver
+homepage: https://tuwunel.chat
+summary: A Rust Matrix homeserver, the successor to conduwuit, sponsored in part by the Swiss government.
+repos:
+- {url: 'https://github.com/matrix-construct/tuwunel', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: stable
+platforms:
+- server
+licence: Apache-2.0
+fork_of: conduwuit
+distribution:
+- docker
+- debian
+- rpm
+- nix
+funding: []
+features:
+  language: Rust
+  database: {value: 'yes', how: claimed, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/deploying.md#L60',
+    note: RocksDB (embedded; SQLite support removed)}
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L56',
+    versions: [r0.0.1, r0.1.0, r0.2.0, r0.3.0, r0.4.0, r0.5.0, r0.6.0, r0.6.1, v1.1, v1.2, v1.3, v1.4,
+      v1.5, v1.6, v1.7, v1.8, v1.9, v1.10, v1.11, v1.12, v1.13, v1.14, v1.15, v1.16, v1.17, v1.18, v1.19]}
+  appservices: {value: 'yes', how: claimed}
+  admin_api: {value: 'yes', how: claimed, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/synapse-admin.md',
+    note: 'admin room commands, and a Synapse admin API compatibility table'}
+  oidc_delegation: {value: 'yes', how: claimed, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/authentication/oidc-server.md',
+    note: built-in OIDC server (docs/authentication/oidc-server.md)}
+  native_sliding_sync: {value: 'yes', how: code, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L82',
+    note: 'MSC4186: unstable'}
+  workers_scaling: {value: 'no', how: claimed}
+  media_auth: {value: 'yes', how: code, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L110',
+    note: 'MSC3916: stable'}
+  msc:
+  - {msc: 1219, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L262',
+    note: 'project self-assessment: yes (82/100); better-key compare in add_key (all PUT routes); 403
+      M_WRONG_ROOM_KEYS_VERSION'}
+  - {msc: 1227, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L876',
+    note: 'project self-assessment: yes (80/90); lazy_load_members supported via filter; service in rooms/lazy_loading'}
+  - {msc: 1236, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L737',
+    note: 'project self-assessment: yes (100/100); m.widgets via generic account data; widget API/UI and
+      room state excluded'}
+  - {msc: 1425, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L875',
+    note: 'project self-assessment: yes (100/100); room versioning fully present; STABLE_ROOM_VERSIONS
+      in core/config'}
+  - {msc: 1442, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L261',
+    note: 'project self-assessment: yes (90/100); state res v2 implemented in src/service/rooms/state_res/resolve.rs'}
+  - {msc: 1466, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L260',
+    note: 'project self-assessment: yes (100/100); soft_logout=true returned for expired tokens in 401
+      responses'}
+  - {msc: 1497, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L874',
+    note: 'project self-assessment: yes (100/100); unstable_features map present in /_matrix/client/versions'}
+  - {msc: 1501, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L259',
+    note: 'project self-assessment: yes (90/90); upgrade endpoint present; tombstone, predecessor, PL
+      freeze all implemented'}
+  - {msc: 1597, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L873',
+    note: 'project self-assessment: partial (20/30); validate_strict is dispatched; ruma admits / and
+      +; ID grammars unenforced'}
+  - {msc: 1659, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L258',
+    note: 'project self-assessment: yes (90/100); reference_hash event IDs; v3 in UNSTABLE_ROOM_VERSIONS;
+      auth_events as list-o...'}
+  - {msc: 1692, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L257',
+    note: 'project self-assessment: yes (95/100); m.login.terms stage built from registration_terms config;
+      UIA completes it'}
+  - {msc: 1693, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L256',
+    note: 'project self-assessment: yes (100/100); rejected event handling in iterative auth check matches
+      MSC1442 amendment'}
+  - {msc: 1708, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L255',
+    note: 'project self-assessment: yes (90/100); src/service/resolver/well_known.rs; resolver/actual.rs
+      ordering matches spec'}
+  - {msc: 1711, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L254',
+    note: 'project self-assessment: yes (100/100); reqwest+rustls; tls_fingerprints not exposed; standard
+      CA validation'}
+  - {msc: 1721, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L253',
+    note: 'project self-assessment: yes (100/100); src/api/client/session/sso.rs and uiaa.rs advertise
+      m.login.sso'}
+  - {msc: 1730, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L252',
+    note: 'project self-assessment: yes (100/100); src/api/client/session/mod.rs:176 sets well_known on
+      login response'}
+  - {msc: 1753, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L251',
+    note: 'project self-assessment: yes (100/100); src/api/client/capabilities.rs handles GET /capabilities
+      incl m.change_password'}
+  - {msc: 1756, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L250',
+    note: 'project self-assessment: yes (90/100); src/api/client/keys/upload_signing_keys.rs and upload_signatures.rs
+      implement...'}
+  - {msc: 1767, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/message.rs#L86',
+    note: unstable prefix in code}
+  - {msc: 1772, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L247',
+    note: 'project self-assessment: yes (90/90); spaces implemented; src/api/client/space.rs hierarchy
+      + room create with type'}
+  - {msc: 1794, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L246',
+    note: 'project self-assessment: yes (100/100); src/api/server/invite.rs:28 implements PUT /federation/v2/invite'}
+  - {msc: 1802, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L245',
+    note: 'project self-assessment: yes (100/100); src/api/server/send_join.rs:30 and send_leave.rs:15
+      handle v2'}
+  - {msc: 1804, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L244',
+    note: 'project self-assessment: yes (100/100); src/api/client/capabilities.rs sets RoomVersionsCapability'}
+  - {msc: 1812, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L243',
+    note: 'project self-assessment: yes (100/100); src/api/server/make_leave.rs:34 and make_join.rs:52
+      set room_version'}
+  - {msc: 1819, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L242',
+    note: 'project self-assessment: yes (100/100); duplicate of MSC1818; presence lists not implemented'}
+  - {msc: 1831, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L241',
+    note: 'project self-assessment: yes (100/100); src/service/resolver/actual.rs:79 well-known before
+      SRV'}
+  - {msc: 1840, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L866',
+    note: 'project self-assessment: partial (60/100); room_types filter on sliding sync only; v3 filter
+      API unextended'}
+  - {msc: 1866, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L240',
+    note: 'project self-assessment: yes (100/100); client invite maps remote unsupported-version to M_UNSUPPORTED_ROOM_VERSION'}
+  - {msc: 1884, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L239',
+    note: 'project self-assessment: yes (100/100); room v4 supported via ruma EventIdFormatVersion::V3
+      (URL-safe base64)'}
+  - {msc: 1888, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L865',
+    note: 'project self-assessment: yes (90/100); [→ MSC2409] appservice receive_ephemeral with EDU push;
+      src/service/sending/s...'}
+  - {msc: 1915, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L238',
+    note: 'project self-assessment: partial (60/55); delete + deactivate return id_server_unbind_result;
+      IS unbind out of HS scope'}
+  - {msc: 1929, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L237',
+    note: 'project self-assessment: yes (100/100); src/api/client/well_known.rs:42; multiple contacts
+      via support_contact map'}
+  - {msc: 1930, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L236',
+    note: 'project self-assessment: yes (100/100); ruma Ruleset::server_default includes ConditionalPushRule::tombstone()'}
+  - {msc: 1935, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L864',
+    note: 'project self-assessment: partial (30/40); [→ MSC2076] no valid_until_ts enforcement; v4 and
+      v5 supported but listed uns...'}
+  - {msc: 1943, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L863',
+    note: 'project self-assessment: yes (100/100); default room version V12 (&gt;= v3)'}
+  - {msc: 1946, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L235',
+    note: 'project self-assessment: yes (80/90); generic account_data + to-device pipe carry secret storage/sharing'}
+  - {msc: 1953, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L862',
+    note: 'project self-assessment: yes (100/100); ruma redact() does not retain prev_content'}
+  - {msc: 1954, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L234',
+    note: 'project self-assessment: yes (100/100); merged; identical to MSC1953; ruma redact omits prev_content'}
+  - {msc: 1957, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L233',
+    note: 'project self-assessment: partial (50/50); account-data passthrough only; no m.integrations
+      key in well-known client'}
+  - {msc: 1958, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L861',
+    note: 'project self-assessment: yes (100/100); revised m.widgets stored verbatim; client widget rendering
+      and OpenID excluded'}
+  - {msc: 2002, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L232',
+    note: 'project self-assessment: yes (100/100); v4 in supported_room_versions; ruma rules implement
+      v4'}
+  - {msc: 2033, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L231',
+    note: 'project self-assessment: yes (100/100); src/api/client/account.rs:74 returns device_id in whoami
+      response'}
+  - {msc: 2061, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L858',
+    note: 'project self-assessment: yes (100/100); src/api/router.rs:250 routes both /key/v2/server and
+      /server/{key_id}'}
+  - {msc: 2077, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L229',
+    note: 'project self-assessment: yes (100/100); src/core/config/room_version.rs:7; v5 unstable but
+      supported'}
+  - {msc: 2078, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L228',
+    note: 'project self-assessment: yes (90/100); HS sends and validates email request tokens itself via
+      magic-link, no id server'}
+  - {msc: 2140, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L226',
+    note: 'project self-assessment: partial (50/60); no 3pid/unbind or IS relay; accepted_terms and register
+      cleanup present'}
+  - {msc: 2153, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L857',
+    note: 'project self-assessment: yes (100/100); Ruleset::server_default() includes .m.rule.reaction
+      via Ruma'}
+  - {msc: 2174, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L225',
+    note: 'project self-assessment: yes (100/100); src/core/matrix/event/redact.rs handles redacts move
+      per room rules'}
+  - {msc: 2175, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L224',
+    note: 'project self-assessment: yes (100/100); creator() falls back to sender when use_room_create_sender'}
+  - {msc: 2176, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L223',
+    note: 'project self-assessment: yes (100/100); redact_in_place uses room_version_rules.redaction'}
+  - {msc: 2181, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L222',
+    note: 'project self-assessment: yes (100/100); M_USER_DEACTIVATED returned by login paths'}
+  - {msc: 2190, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L721',
+    note: 'project self-assessment: yes (80/80); appservice token defaults to sender_localpart user'}
+  - {msc: 2197, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L221',
+    note: 'project self-assessment: yes (100/100); POST /_matrix/federation/v1/publicRooms with filter
+      implemented'}
+  - {msc: 2209, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L220',
+    note: 'project self-assessment: yes (100/100); limit_notifications_power_levels enforced for v6+'}
+  - {msc: 2229, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L219',
+    note: 'project self-assessment: partial (0/20); [→ MSC2290] owner exemption at 3pid/add only; requestToken
+      still rejects the ...'}
+  - {msc: 2230, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L218',
+    note: 'project self-assessment: yes (100/100); m.identity_server kept verbatim, base_url null too;
+      client IS choice excluded'}
+  - {msc: 2240, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L217',
+    note: 'project self-assessment: yes (100/100); V6 in STABLE_ROOM_VERSIONS; v6 auth rules and rules
+      engine implemented'}
+  - {msc: 2246, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L215',
+    note: 'project self-assessment: yes (100/100); async media routes wired; create_pending, upload_pending,
+      error codes present'}
+  - {msc: 2249, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L214',
+    note: 'project self-assessment: yes (90/100); src/api/client/report.rs:173 verifies sender is room
+      member; PDU lookup gated'}
+  - {msc: 2260, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L855',
+    note: 'project self-assessment: partial (50/50); Subsumed by MSC2432/v6 auth rules; aliases sender-domain
+      check enforced'}
+  - {msc: 2261, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L854',
+    note: 'project self-assessment: yes (100/100); Subsumed by MSC2432/v6 redaction rules'}
+  - {msc: 2263, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L213',
+    note: 'project self-assessment: yes (80/80); HS email registration; binds the address in any UIA stage
+      order'}
+  - {msc: 2264, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L212',
+    note: 'project self-assessment: yes (90/100); flag not advertised; r0.6.0 and later advertised instead,
+      as Synapse does'}
+  - {msc: 2265, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L211',
+    note: 'project self-assessment: partial (75/100); HS case-folds whole email (ss-fold) before storage;
+      IS migration out of scope'}
+  - {msc: 2270, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L714',
+    note: 'project self-assessment: partial (30/30); m.ignored_room_list absent; generic account-data
+      store only, no sync filter'}
+  - {msc: 2285, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L88',
+    note: advertised in unstable_features}
+  - {msc: 2290, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L209',
+    note: 'project self-assessment: partial (65/55); add endpoint (UIA+dupe) + HS email validation; IS-bind
+      half out of scope'}
+  - {msc: 2306, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L852',
+    note: 'project self-assessment: yes (100/100); msisdn pw reset endpoint absent; ThreepidDenied on
+      msisdn'}
+  - {msc: 2315, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L710',
+    note: 'project self-assessment: yes (100/100); m.integrations kept verbatim incl. unstable name; client
+      rendering excluded'}
+  - {msc: 2324, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L207',
+    note: 'project self-assessment: partial (60/100); two MUST misses: unprefixed unstable SSO callback;
+      stable v1/auth_issuer'}
+  - {msc: 2334, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L206',
+    note: 'project self-assessment: yes (100/100); Default room version is V12, well past V5'}
+  - {msc: 2367, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L205',
+    note: 'project self-assessment: yes (100/100); reason field handled in invite/leave/kick/ban/unban/join
+      membership routes'}
+  - {msc: 2403, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L204',
+    note: 'project self-assessment: yes (90/90); Knock CS+SS endpoints, sync key, public-rooms join_rule
+      all wired'}
+  - {msc: 2409, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L203',
+    note: 'project self-assessment: partial (70/70); typing+receipt EDUs sent to AS; presence not forwarded'}
+  - {msc: 2414, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L202',
+    note: 'project self-assessment: yes (100/100); reason and score are Option in ruma report types; route
+      accepts both'}
+  - {msc: 2416, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L848',
+    note: 'project self-assessment: yes (90/100); m.login.jwt fully wired in session module'}
+  - {msc: 2432, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L201',
+    note: 'project self-assessment: yes (80/90); alt_aliases wired; canonical_alias resolve check; rooms/{}/aliases
+      route present'}
+  - {msc: 2437, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L700',
+    note: 'project self-assessment: yes (100/100); m.tagged_events stored via existing room account_data
+      routes'}
+  - {msc: 2444, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L698',
+    note: 'project self-assessment: partial (30/30); world_readable allowed on some federation reads;
+      no /peek subscription API'}
+  - {msc: 2448, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L697',
+    note: 'project self-assessment: partial (70/80); blurhash on profile, federation query, media upload,
+      member events'}
+  - {msc: 2451, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L200',
+    note: 'project self-assessment: yes (100/100); No /query_auth route registered in src/api/router.rs'}
+  - {msc: 2454, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L199',
+    note: 'project self-assessment: yes (90/90); src/api/router/auth/uiaa.rs:53 sso_flow; sso/uiaa.rs
+      serves fallback'}
+  - {msc: 2457, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L198',
+    note: 'project self-assessment: yes (100/100); src/api/client/account.rs:41 honors body.logout_devices'}
+  - {msc: 2472, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L197',
+    note: 'project self-assessment: yes (100/100); SSSS key metadata and secrets kept verbatim; client
+      crypto and trust excluded'}
+  - {msc: 2474, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L696',
+    note: 'project self-assessment: yes (100/100); plaintext version in m.megolm_backup.v1 kept verbatim;
+      client matching excluded'}
+  - {msc: 2499, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L693',
+    note: 'project self-assessment: partial (10/30); src/service/resolver/well_known.rs follows redirects;
+      12288B cap; uses /versions'}
+  - {msc: 2526, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L196',
+    note: 'project self-assessment: yes (100/100); src/api/client/backup.rs:134 delete_backup_version_route'}
+  - {msc: 2540, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L195',
+    note: 'project self-assessment: yes (80/80); canonical JSON enforced at the parse boundary, not keyed
+      off room version'}
+  - {msc: 2545, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L194',
+    note: 'project self-assessment: yes (100/100); image_pack.rooms passthrough; federated packs never
+      grammar-checked; UX excluded'}
+  - {msc: 2579, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L846',
+    note: 'project self-assessment: yes (100/100); Generic account-data path carries `m.tag.<tag>`; ordering
+      rules are client-side'}
+  - {msc: 2631, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L844',
+    note: 'project self-assessment: yes (80/80); ruma HttpPusherData flattens custom data; default_payload
+      accepted via passth...'}
+  - {msc: 2659, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L192',
+    note: 'project self-assessment: yes (95/100); ping surfaces M_CONNECTION_TIMEOUT/FAILED and M_BAD_STATUS
+      per spec'}
+  - {msc: 2663, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L191',
+    note: 'project self-assessment: yes (100/100); src/api/client/push.rs all 7 endpoints return NotFound'}
+  - {msc: 2666, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L190',
+    note: 'project self-assessment: yes (92/100); v1 stable path + count + cursor pagination; self-query/non-compliant
+      400'}
+  - {msc: 2674, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L189',
+    note: 'project self-assessment: yes (90/100); relates_to handled in append; rel_type tracked'}
+  - {msc: 2675, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L188',
+    note: 'project self-assessment: partial (60/75); thread+edit+reference bundled (edit/ref gated); reactions
+      unbundled'}
+  - {msc: 2676, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L187',
+    note: 'project self-assessment: partial (50/60); edits accepted/relayed; no m.replace bundle or new_content
+      apply'}
+  - {msc: 2677, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L186',
+    note: 'project self-assessment: yes (80/90); Duplicate annotation rejected; reactions plumbed'}
+  - {msc: 2689, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L185',
+    note: 'project self-assessment: yes (100/100); Auth treats guests like users; /members open'}
+  - {msc: 2695, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L689',
+    note: 'project self-assessment: partial (40/40); Federation /event exists; no client /events/{eventId}
+      revival'}
+  - {msc: 2697, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L841',
+    note: 'project self-assessment: partial (40/60); [→ MSC3814] Dehydration served at the MSC3814 prefix;
+      no claim and no token r...'}
+  - {msc: 2700, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L840',
+    note: 'project self-assessment: partial (50/50); image crate handles png/jpeg/gif; no svg/video'}
+  - {msc: 2701, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L184',
+    note: 'project self-assessment: yes (80/90); Optional Content-Type accepted; stored and returned'}
+  - {msc: 2702, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L183',
+    note: 'project self-assessment: yes (100/100); Content-Disposition and inline allowlist enforced for
+      media downloads, thumbn...'}
+  - {msc: 2703, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L839',
+    note: 'project self-assessment: yes (100/100); 32-char alphanumeric media IDs; opaque'}
+  - {msc: 2704, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L838',
+    note: 'project self-assessment: yes (100/100); Fresh MXC per upload; no dedup'}
+  - {msc: 2705, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L182',
+    note: 'project self-assessment: yes (90/90); animated honored and animated GIF generated; webp output
+      preference unmet'}
+  - {msc: 2732, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L181',
+    note: 'project self-assessment: yes (100/100); src/api/client/keys/claim_keys.rs:86; upload, claim-fallback,
+      sync-unused-lis...'}
+  - {msc: 2765, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L180',
+    note: 'project self-assessment: yes (100/100); avatar_url in m.widgets kept verbatim; rendering and
+      room widget state excluded'}
+  - {msc: 2771, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L836',
+    note: 'project self-assessment: yes (100/100); room account data passthrough (m.bookmarks); client
+      selection, UI excluded'}
+  - {msc: 2778, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L179',
+    note: 'project self-assessment: yes (100/100); src/api/client/session/appservice.rs implements m.login.application_service'}
+  - {msc: 2782, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L681',
+    note: 'project self-assessment: yes (90/90); full_event opt-in works; membership absent, user_is_target
+      now correct'}
+  - {msc: 2788, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L178',
+    note: 'project self-assessment: yes (100/100); default_default_room_version is V12 in src/core/config/mod.rs:5752'}
+  - {msc: 2810, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L834',
+    note: 'project self-assessment: partial (70/70); ACL and push globs go through wildmatch; the backslash
+      escape is unimplemented'}
+  - {msc: 2815, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L676',
+    note: 'project self-assessment: yes (90/100); include_unredacted_content honored; admin or redact
+      PL gates access'}
+  - {msc: 2832, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L177',
+    note: 'project self-assessment: yes (100/100); src/service/appservice/request.rs sends Bearer header
+      and query'}
+  - {msc: 2836, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L95',
+    note: advertised in unstable_features}
+  - {msc: 2844, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L176',
+    note: 'project self-assessment: yes (90/90); src/api/client/versions.rs advertises v1.1 through v1.15'}
+  - {msc: 2858, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L175',
+    note: 'project self-assessment: yes (100/100); identity_providers in /login flows; /login/sso/redirect/{idpId}
+      routed'}
+  - {msc: 2867, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L174',
+    note: 'project self-assessment: yes (100/100); client convention; account data type stored generically'}
+  - {msc: 2870, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L173',
+    note: 'project self-assessment: yes (100/100); redaction dispatches on RoomVersionRules.redaction;
+      ruma MSC2870 enabled'}
+  - {msc: 2872, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L669',
+    note: 'project self-assessment: yes (100/100); m.widgets account data passthrough; top-level title
+      opaque; client UI excluded'}
+  - {msc: 2874, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L172',
+    note: 'project self-assessment: yes (100/100); SSSS key and default_key account data passthrough;
+      client key choice excluded'}
+  - {msc: 2895, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L666',
+    note: 'project self-assessment: partial (20/30); membership filter present but single valued; no /rooms,
+      joined_* not deprecated'}
+  - {msc: 2918, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L171',
+    note: 'project self-assessment: yes (90/100); /refresh, expires_in_ms, refresh_token in /login and
+      /register'}
+  - {msc: 2946, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L99',
+    note: advertised in unstable_features}
+  - {msc: 2949, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L662',
+    note: 'project self-assessment: yes (100/100); own auth and rate policy diverges from spec annotations;
+      client advice excluded'}
+  - {msc: 2964, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L135',
+    note: advertised in unstable_features}
+  - {msc: 2965, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L137',
+    note: advertised in unstable_features}
+  - {msc: 2966, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L139',
+    note: advertised in unstable_features}
+  - {msc: 2967, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L141',
+    note: advertised in unstable_features}
+  - {msc: 2970, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L659',
+    note: 'project self-assessment: partial (40/50); path/scheme constraints relaxed; lacks fragment/userinfo/8000-char
+      checks'}
+  - {msc: 2998, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L165',
+    note: 'project self-assessment: yes (100/100); V7 listed in STABLE_ROOM_VERSIONS; full knock support
+      present'}
+  - {msc: 3008, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L658',
+    note: 'project self-assessment: yes (100/100); m.widgets account data passthrough; auth.scopes opaque;
+      OAuth, client excluded'}
+  - {msc: 3009, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L657',
+    note: 'project self-assessment: yes (100/100); m.widgets account data passthrough; transports field
+      opaque; client ws excluded'}
+  - {msc: 3015, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L655',
+    note: 'project self-assessment: yes (100/100); override.* room account data rides the generic per-room
+      endpoint and sync'}
+  - {msc: 3026, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L101',
+    note: advertised in unstable_features}
+  - {msc: 3030, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L97',
+    note: advertised in unstable_features}
+  - {msc: 3069, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L163',
+    note: 'project self-assessment: yes (80/100); whoami returns is_guest; uses is_deactivated heuristic'}
+  - {msc: 3083, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L162',
+    note: 'project self-assessment: yes (100/100); restricted_join_rule auth via RoomVersionRules; v8/v9'}
+  - {msc: 3137, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L817',
+    note: 'project self-assessment: yes (100/100); type:m.space in m.room.create accepted; used in directory
+      and spaces'}
+  - {msc: 3173, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L161',
+    note: 'project self-assessment: yes (100/100); summary_stripped includes recommended events incl create'}
+  - {msc: 3202, state: experimental, flag: msc3202_transaction_extensions, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/core/config/mod.rs#L2467',
+    note: behind a config option}
+  - {msc: 3214, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L644',
+    note: 'project self-assessment: yes (90/100); initial_state PL effectively replaces default via later
+      append'}
+  - {msc: 3226, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L160',
+    note: 'project self-assessment: yes (100/100); room account data passthrough (m.input_language, fractal
+      type); UI excluded'}
+  - {msc: 3230, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L641',
+    note: 'project self-assessment: yes (100/100); room account data passthrough (m.space_order); ordering
+      logic client-side'}
+  - {msc: 3231, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L159',
+    note: 'project self-assessment: yes (100/100); registration token UIA + validity endpoint implemented'}
+  - {msc: 3245, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/Cargo.toml#L395',
+    note: unstable prefix in code}
+  - {msc: 3266, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L158',
+    note: 'project self-assessment: yes (100/100); summary endpoint routed at unstable and (via Ruma)
+      stable paths'}
+  - {msc: 3267, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L157',
+    note: 'project self-assessment: partial (60/80); m.reference bundle added; gated default-off; no ignore/visibility
+      filter'}
+  - {msc: 3270, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L814',
+    note: 'project self-assessment: yes (100/100); backup algorithm, auth_data, session_data kept raw;
+      SSSS secret via account data'}
+  - {msc: 3283, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L156',
+    note: 'project self-assessment: yes (100/100); src/api/client/capabilities.rs explicitly emits m.set_displayname,
+      m.set_avat...'}
+  - {msc: 3289, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L154',
+    note: 'project self-assessment: yes (100/100); room v8 listed stable; restricted join rule auth implemented'}
+  - {msc: 3302, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L813',
+    note: 'project self-assessment: yes (100/100); m.stories.blocklist and m.stories.ignore ride the generic
+      account-data path'}
+  - {msc: 3316, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L153',
+    note: 'project self-assessment: yes (100/100); appservice ts honored on /send and /state'}
+  - {msc: 3375, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L152',
+    note: 'project self-assessment: yes (100/100); room v9 stable; redaction keeps join_authorised_via_users_server'}
+  - {msc: 3381, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/Cargo.toml#L396',
+    note: unstable prefix in code}
+  - {msc: 3383, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L151',
+    note: 'project self-assessment: yes (100/100); X-Matrix destination field validated on inbound federation'}
+  - {msc: 3385, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L631',
+    note: 'project self-assessment: partial (30/40); upgrade copies fixed list of state, not all m.* state
+      nor account_data'}
+  - {msc: 3391, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L811',
+    note: 'project self-assessment: yes (100/100); Both DELETE routes reject protected keys before mutation'}
+  - {msc: 3401, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/room/create.rs#L845',
+    note: unstable prefix in code}
+  - {msc: 3419, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L150',
+    note: 'project self-assessment: yes (100/100); no guest-specific gate on state-event send path; PL/auth_check
+      applies unifor...'}
+  - {msc: 3440, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L160',
+    note: advertised in unstable_features}
+  - {msc: 3442, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L148',
+    note: 'project self-assessment: yes (100/100); prev_content placed under unsigned in created/appended
+      PDUs'}
+  - {msc: 3489, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/Cargo.toml#L398',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3567, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L146',
+    note: 'project self-assessment: yes (100/100); from is optional; defaults to start/end based on dir'}
+  - {msc: 3575, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L103',
+    note: advertised in unstable_features}
+  - {msc: 3585, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L807',
+    note: 'project self-assessment: yes (100/100); event_auth handler omits the requested event itself
+      per MSC'}
+  - {msc: 3588, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L806',
+    note: 'project self-assessment: yes (100/100); msc3588.stories.block-list rides the generic account-data
+      store and sync'}
+  - {msc: 3589, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L145',
+    note: 'project self-assessment: yes (100/100); default_room_version defaults to V12 (exceeds V9)'}
+  - {msc: 3604, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L144',
+    note: 'project self-assessment: yes (100/100); V10 supported; integer_power_levels and knock_restricted
+      enforced'}
+  - {msc: 3644, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L616',
+    note: 'project self-assessment: partial (50/100); Edits fold with no m.new_content, but a type-changing
+      edit is dropped'}
+  - {msc: 3664, state: experimental, flag: msc3664_related_event_match, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/core/config/push.rs#L73',
+    note: behind a config option}
+  - {msc: 3666, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L143',
+    note: 'project self-assessment: yes (90/100); result + context events bundled; thread always, edit/ref
+      gated default-off'}
+  - {msc: 3667, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L142',
+    note: 'project self-assessment: yes (100/100); integer_power_levels enforced via RoomVersionRules
+      from V10+'}
+  - {msc: 3672, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/message.rs#L93',
+    note: unstable prefix in code}
+  - {msc: 3706, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L141',
+    note: 'project self-assessment: yes (90/100); send_join supports omit_members, members_omitted, servers_in_room'}
+  - {msc: 3715, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L140',
+    note: 'project self-assessment: yes (100/100); dir parameter on /relations is parsed and used'}
+  - {msc: 3743, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L139',
+    note: 'project self-assessment: yes (90/100); M_UNRECOGNIZED 404/405 fallback wired in router'}
+  - {msc: 3754, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L801',
+    note: 'project self-assessment: yes (95/100); [→ MSC4133?] DELETE profile field route serves avatar_url
+      and displayname; ke...'}
+  - {msc: 3758, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L138',
+    note: 'project self-assessment: yes (90/100); event_property_is dispatched via Ruma Ruleset::get_actions'}
+  - {msc: 3765, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L137',
+    note: 'project self-assessment: yes (90/100); reader prefers m.topic text/plain; topic text now indexed
+      for search'}
+  - {msc: 3771, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L156',
+    note: advertised in unstable_features}
+  - {msc: 3773, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L158',
+    note: advertised in unstable_features}
+  - {msc: 3786, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L134',
+    note: 'project self-assessment: yes (100/100); server_acl predefined push rule via Ruma defaults'}
+  - {msc: 3787, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L133',
+    note: 'project self-assessment: yes (100/100); Knock-restricted fully wired; remote re-knock reconciles
+      the room server'}
+  - {msc: 3803, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L605',
+    note: 'project self-assessment: yes (100/100); m.widgets account data passthrough; widget protocol
+      and room state excluded'}
+  - {msc: 3814, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L604',
+    note: 'project self-assessment: partial (75/90); All four routes wired; events endpoint is the deprecated
+      POST, not the GET'}
+  - {msc: 3815, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L603',
+    note: 'project self-assessment: yes (100/100); m.world.profile global account data passthrough; 3D
+      and world state excluded'}
+  - {msc: 3816, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L132',
+    note: 'project self-assessment: yes (100/100); current_user_participated recomputed per requester
+      at read time on all paths'}
+  - {msc: 3818, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L131',
+    note: 'project self-assessment: yes (100/100); upgrade reuses old m.room.create content; type preserved
+      by default'}
+  - {msc: 3820, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L130',
+    note: 'project self-assessment: yes (90/100); v11 stable; redaction and auth rules dispatch via Ruma
+      RoomVersionRules'}
+  - {msc: 3821, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L129',
+    note: 'project self-assessment: yes (90/100); redact_in_place uses Ruma RedactionRules.V11 with keep
+      third_party_invite.signed'}
+  - {msc: 3823, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L128',
+    note: 'project self-assessment: yes (100/100); M_USER_SUSPENDED maps to 403; route and handler suspension
+      gates remain'}
+  - {msc: 3824, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L143',
+    note: advertised in unstable_features}
+  - {msc: 3827, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L107',
+    note: advertised in unstable_features}
+  - {msc: 3828, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L125',
+    note: 'project self-assessment: yes (100/100); media endpoints return Cross-Origin-Resource-Policy:
+      cross-origin'}
+  - {msc: 3856, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L124',
+    note: 'project self-assessment: yes (90/100); src/api/client/threads.rs:81 roots retained; full API,
+      residual fallbacks'}
+  - {msc: 3860, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L123',
+    note: 'project self-assessment: yes (95/100); Emits 307 to presigned object-store URL on allow_redirect;
+      default-off gate'}
+  - {msc: 3861, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L133',
+    note: advertised in unstable_features}
+  - {msc: 3864, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L594',
+    note: 'project self-assessment: yes (100/100); client-side; uses generic account_data endpoints already
+      implemented'}
+  - {msc: 3865, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L593',
+    note: 'project self-assessment: yes (100/100); client-side; uses generic account_data endpoints already
+      implemented'}
+  - {msc: 3873, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L121',
+    note: 'project self-assessment: yes (100/100); dotted-key escape semantics handled in ruma flattened
+      JSON'}
+  - {msc: 3881, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/admin/users/pushers.rs#L18',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3882, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L120',
+    note: 'project self-assessment: yes (90/100); POST /login/get_token implemented with UIA'}
+  - {msc: 3884, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L586',
+    note: 'project self-assessment: yes (90/100); sliding sync e2ee extension implemented'}
+  - {msc: 3885, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L585',
+    note: 'project self-assessment: partial (70/80); to_device extension uses its own opaque since token
+      in v5 sync'}
+  - {msc: 3890, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L584',
+    note: 'project self-assessment: yes (100/100); device removal deletes local_notification_settings
+      via MSC3391 tombstone'}
+  - {msc: 3904, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L119',
+    note: 'project self-assessment: yes (100/100); default is V12, at or above the v10 the MSC suggests'}
+  - {msc: 3905, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L118',
+    note: 'project self-assessment: yes (100/100); src/service/appservice/append.rs:66; local-user guard
+      at the three event-inte...'}
+  - {msc: 3916, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L110',
+    note: advertised in unstable_features}
+  - {msc: 3925, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L116',
+    note: 'project self-assessment: partial (70/70); Full m.replace fold; off by default (bundle_edit_relations);
+      backfill unindexed'}
+  - {msc: 3930, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L115',
+    note: 'project self-assessment: yes (100/100); Default poll push rules via ruma server_default; seeded
+      at registration'}
+  - {msc: 3938, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L114',
+    note: 'project self-assessment: yes (100/100); only the keyless /key/v2/server is routed; no notary
+      /query left to change'}
+  - {msc: 3939, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L113',
+    note: 'project self-assessment: yes (90/90); Login and refresh gates implemented; OIDC account-state
+      gates remain pending'}
+  - {msc: 3943, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L112',
+    note: 'project self-assessment: yes (100/100); send_join partial-state response includes hero memberships
+      and their auth chains'}
+  - {msc: 3945, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L787',
+    note: 'project self-assessment: partial (50/50); Federation hides device names by default; CSAPI /keys/query
+      still leaks them ...'}
+  - {msc: 3952, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L112',
+    note: advertised in unstable_features}
+  - {msc: 3958, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L110',
+    note: 'project self-assessment: yes (100/100); SuppressEdits push rule provided via Ruma server_default
+      ruleset'}
+  - {msc: 3959, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L566',
+    note: 'project self-assessment: yes (90/100); sliding sync account_data extension implemented'}
+  - {msc: 3960, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L565',
+    note: 'project self-assessment: yes (90/100); sliding sync receipts extension implemented'}
+  - {msc: 3961, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L786',
+    note: 'project self-assessment: yes (90/100); sliding sync typing extension implemented'}
+  - {msc: 3966, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L109',
+    note: 'project self-assessment: yes (100/100); event_property_contains supported via Ruma push conditions'}
+  - {msc: 3967, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L108',
+    note: 'project self-assessment: yes (100/100); keys/device_signing/upload skips UIA when user has
+      no existing cross-signing ...'}
+  - {msc: 3970, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L107',
+    note: 'project self-assessment: partial (70/80); txn key is user, device, txn with no path; redact
+      untracked; echo user scoped'}
+  - {msc: 3980, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L106',
+    note: 'project self-assessment: yes (90/90); event_fields trim on /sync; dotted paths use the MSC3873
+      escape grammar'}
+  - {msc: 3981, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L105',
+    note: 'project self-assessment: yes (100/100); /relations recurse parameter implemented with depth
+      3'}
+  - {msc: 3987, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L104',
+    note: 'project self-assessment: yes (90/90); unknown push actions ignored as no-ops'}
+  - {msc: 3989, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L103',
+    note: 'project self-assessment: yes (100/100); V11 redaction drops origin via Ruma RedactionRules'}
+  - {msc: 4009, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L102',
+    note: 'project self-assessment: yes (100/100); E.164 + character allowed via Ruma localpart validation'}
+  - {msc: 4010, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L101',
+    note: 'project self-assessment: yes (100/100); m.push_rules and m.fully_read rejected on /account_data'}
+  - {msc: 4015, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L783',
+    note: 'project self-assessment: partial (70/70); MSC4133 profile serves the bot key; no copy into
+      m.room.member on join'}
+  - {msc: 4025, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L100',
+    note: 'project self-assessment: yes (85/85); phase B landed: erased senders serve pruned to clients
+      and federation'}
+  - {msc: 4026, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L99',
+    note: 'project self-assessment: yes (80/90); versions endpoint accepts optional auth via Ruma'}
+  - {msc: 4029, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L538',
+    note: 'project self-assessment: partial (40/50); X-Matrix verification covers basics; canonicalization
+      rules not fully specified'}
+  - {msc: 4032, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L536',
+    note: 'project self-assessment: yes (100/100); account-data passthrough (2026-06-22 ruling); both
+      keys stored, served, synced'}
+  - {msc: 4037, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L781',
+    note: 'project self-assessment: yes (90/100); Receipts allowed for thread roots; spec wording is mostly
+      client-facing.'}
+  - {msc: 4040, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L98',
+    note: 'project self-assessment: yes (100/100); Tuwunel queries _matrix-fed first then falls back to
+      _matrix.'}
+  - {msc: 4041, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L97',
+    note: 'project self-assessment: yes (90/90); Ruma error type emits Retry-After header for LimitExceeded
+      responses.'}
+  - {msc: 4051, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L780',
+    note: 'project self-assessment: yes (80/80); V12 RoomVersionRules.room_create_event_id_as_room_id
+      dispatched.'}
+  - {msc: 4062, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L520',
+    note: 'project self-assessment: partial (50/50); Custom tweak round trips through ruma; no email pusher
+      to honour dont_email'}
+  - {msc: 4075, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/Cargo.toml#L402',
+    note: unstable prefix in code}
+  - {msc: 4076, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L517',
+    note: 'project self-assessment: partial (60/100); disable_badge_count honored when sending push notifications'}
+  - {msc: 4108, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L45',
+    note: advertised in unstable_features}
+  - {msc: 4115, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L96',
+    note: 'project self-assessment: yes (85/85); src/core/matrix/pdu/unsigned.rs add_membership; src/service/rooms/state_acces...'}
+  - {msc: 4121, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L497',
+    note: 'project self-assessment: yes (100/100); m.role.moderator served via Ruma ContactRole alias
+      and config'}
+  - {msc: 4125, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L496',
+    note: 'project self-assessment: yes (90/100); federation invite via field used both inbound and outbound'}
+  - {msc: 4128, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L495',
+    note: 'project self-assessment: yes (100/100); invalid token returns error even on optional auth endpoints'}
+  - {msc: 4133, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L94',
+    note: 'project self-assessment: yes (85/95); endpoints + caps/errcodes; unset legacy 200 omit by choice,
+      404 key-scoped'}
+  - {msc: 4138, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L93',
+    note: 'project self-assessment: yes (100/100); CORS METHODS list includes HEAD and PATCH; excludes
+      CONNECT/TRACE'}
+  - {msc: 4140, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/core/utils/url.rs#L162',
+    note: unstable prefix in code}
+  - {msc: 4143, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L492',
+    note: 'project self-assessment: partial (60/60); GET rtc/transports served; slots and sticky membership
+      are client and MSC4354'}
+  - {msc: 4149, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L490',
+    note: 'project self-assessment: yes (100/100); MSC policy available; frame denial defaults off for
+      attachment compatibility'}
+  - {msc: 4151, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L91',
+    note: 'project self-assessment: yes (100/100); POST /rooms/{roomId}/report implemented and routed'}
+  - {msc: 4154, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L488',
+    note: 'project self-assessment: yes (100/100); max_request_size default 24MB, M_TOO_LARGE returns
+      413'}
+  - {msc: 4155, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L147',
+    note: advertised in unstable_features}
+  - {msc: 4156, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L90',
+    note: 'project self-assessment: yes (100/100); via parameter handled via Ruma'}
+  - {msc: 4158, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L769',
+    note: 'project self-assessment: yes (80/100); rtc_foci exposed in .well-known/matrix/client'}
+  - {msc: 4163, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L89',
+    note: 'project self-assessment: yes (100/100); ACLs applied on receipt and typing EDUs'}
+  - {msc: 4164, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L485',
+    note: 'project self-assessment: yes (100/100); deactivation leaves all joined/invited/knocked rooms'}
+  - {msc: 4165, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L484',
+    note: 'project self-assessment: yes (100/100); power level entry removed for self on deactivation'}
+  - {msc: 4166, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L483',
+    note: 'project self-assessment: yes (100/100); turnServer returns 404 M_NOT_FOUND when no TURN URIs
+      configured'}
+  - {msc: 4168, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L481',
+    note: 'project self-assessment: partial (30/40); src/api/client/room/upgrade.rs:447; copies m.space.parent
+      always plus m.space...'}
+  - {msc: 4169, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L88',
+    note: 'project self-assessment: yes (100/100); src/api/client/send.rs:42; lifts content.redacts into
+      PduBuilder.redacts; adv...'}
+  - {msc: 4170, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L87',
+    note: 'project self-assessment: yes (100/100); profile lookup unrestricted; MUST minimum satisfied'}
+  - {msc: 4175, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L86',
+    note: 'project self-assessment: yes (100/100); timezone PUT/DELETE/GET routes; m.tz aliased in profile
+      and over federation'}
+  - {msc: 4178, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L85',
+    note: 'project self-assessment: partial (75/90); msisdn returns M_THREEPID_MEDIUM_NOT_SUPPORTED; bad
+      email returns M_INVALID_P...'}
+  - {msc: 4180, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L123',
+    note: advertised in unstable_features}
+  - {msc: 4186, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L82',
+    note: 'project self-assessment: yes (85/88); sync v5 served with lists, filters, extensions; no expanded_timeline
+      or stubs'}
+  - {msc: 4189, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L81',
+    note: 'project self-assessment: yes (80/100); guest tokens accepted on authenticated media routes'}
+  - {msc: 4190, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L80',
+    note: 'project self-assessment: yes (100/100); 201 on create; M_APPSERVICE_LOGIN_UNSUPPORTED on AS
+      login+register'}
+  - {msc: 4191, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L79',
+    note: 'project self-assessment: yes (100/100); all six actions advertised and handled; stable names
+      alias prototypes'}
+  - {msc: 4195, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L472',
+    note: 'project self-assessment: partial (10/10); MSC4143 transport advertised; no get_token, derivation,
+      salt or delayed leave'}
+  - {msc: 4203, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L468',
+    note: 'project self-assessment: yes (95/100); to_device in AS txns with to_user_id/to_device_id; retain
+      (dual /sync)'}
+  - {msc: 4208, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L465',
+    note: 'project self-assessment: partial (40/50); MSC4133 fields carry u.* generically; no 512B cap,
+      no disallowed list'}
+  - {msc: 4210, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L78',
+    note: 'project self-assessment: yes (100/100); deprecated mention push rules removed at /pushrules
+      read time'}
+  - {msc: 4213, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L77',
+    note: 'project self-assessment: yes (90/90); join/knock use via; server_name still accepted via Ruma
+      fallback'}
+  - {msc: 4222, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L162',
+    note: advertised in unstable_features}
+  - {msc: 4225, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L75',
+    note: 'project self-assessment: yes (100/100); OTKs issued in upload order via count_be prefix; src/service/users/keys.rs:99'}
+  - {msc: 4231, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L765',
+    note: 'project self-assessment: partial (0/100); thread-root check exists, but reply-bearing fallback
+      parses as Reply; accepted'}
+  - {msc: 4238, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L455',
+    note: 'project self-assessment: yes (100/100); room account-data passthrough (2026-06-22 ruling);
+      stored, served, synced'}
+  - {msc: 4239, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L74',
+    note: 'project self-assessment: yes (100/100); default is V12, at or above the v11 the MSC suggests'}
+  - {msc: 4249, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L449',
+    note: 'project self-assessment: yes (100/100); allow_legacy_media defaults to false; legacy disabled'}
+  - {msc: 4254, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L73',
+    note: 'project self-assessment: yes (95/100); src/api/oidc/revoke.rs:37; RFC7009 form-urlencoded;
+      revokes both tokens; 200 ...'}
+  - {msc: 4260, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L72',
+    note: 'project self-assessment: yes (85/90); src/api/client/report.rs:63; admin notification, 404
+      M_NOT_FOUND on unknown u...'}
+  - {msc: 4261, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L442',
+    note: 'project self-assessment: yes (80/100); DeviceKeys stored and served raw, so do_not_encrypt
+      survives upload and query'}
+  - {msc: 4262, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L441',
+    note: 'project self-assessment: partial (70/70); Visible updates and selected initial bases; no atomic
+      snapshots or user drops.'}
+  - {msc: 4265, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/Cargo.toml#L411',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4266, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L437',
+    note: 'project self-assessment: partial (75/75); multi-lang policies reachable from config; wire key
+      not unstable-prefixed'}
+  - {msc: 4267, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L71',
+    note: 'project self-assessment: yes (90/100); auto-forget on Leave/Ban; stable + unstable capability
+      advertised'}
+  - {msc: 4277, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L70',
+    note: 'project self-assessment: yes (100/100); all 3 wired; score removed; user report 200 regardless
+      to deter enumeration'}
+  - {msc: 4278, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L69',
+    note: 'project self-assessment: yes (100/100); global+room passthrough ok; seeded-value mutability
+      met; no content validation'}
+  - {msc: 4284, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L68',
+    note: 'project self-assessment: partial (70/90); outbound /sign, inbound verify, fetch-on-missing,
+      reversible soft-fail'}
+  - {msc: 4287, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L67',
+    note: 'project self-assessment: yes (100/100); global account-data passthrough (2026-06-22 ruling);
+      m.key_backup round-trips'}
+  - {msc: 4289, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L66',
+    note: 'project self-assessment: yes (100/100); Room v12 creator privilege; complement 22 pass, 0 fail
+      across six named tests'}
+  - {msc: 4291, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L65',
+    note: 'project self-assessment: yes (100/100); v12 upgrade create event omits deprecated predecessor.event_id'}
+  - {msc: 4297, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L64',
+    note: 'project self-assessment: yes (100/100); src/service/rooms/state_res/resolve.rs:257 conflicted
+      state subgraph; tests pass'}
+  - {msc: 4299, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L762',
+    note: 'project self-assessment: yes (100/100); Generic account data stores and syncs m.trusted_users;
+      no trust logic to break'}
+  - {msc: 4304, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L63',
+    note: 'project self-assessment: yes (100/100); V12 stable and the default room version'}
+  - {msc: 4307, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L62',
+    note: 'project self-assessment: yes (100/100); auth_event room_id mismatch rejected'}
+  - {msc: 4310, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/Cargo.toml#L413',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4311, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L61',
+    note: 'project self-assessment: yes (85/95); full-PDU invite/knock state; create-event validation
+      + M_MISSING_PARAM + 5xx'}
+  - {msc: 4312, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L60',
+    note: 'project self-assessment: yes (85/85); cross-signing reset via OAuth account deep-link; dual-stage
+      advertise deferred'}
+  - {msc: 4319, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L59',
+    note: 'project self-assessment: partial (50/50); state/mod.rs:464 puts inviter member in stripped
+      state; no `state` key'}
+  - {msc: 4323, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L58',
+    note: 'project self-assessment: yes (100/100); src/api/client/admin.rs four routes at stable v1 paths;
+      m.account_moderation ...'}
+  - {msc: 4324, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L759',
+    note: 'project self-assessment: yes (80/80); tombstone PL=150 set; matches highest-anchored intent
+      for default config'}
+  - {msc: 4326, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L57',
+    note: 'project self-assessment: yes (100/100); appservice query device_id asserted; M_UNKNOWN_DEVICE-equivalent
+      on missing'}
+  - {msc: 4330, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L423',
+    note: 'project self-assessment: partial (50/50); HTTP/2 via axum/hyper available; TLS 1.2+ via rustls;
+      not enforced as MUST'}
+  - {msc: 4341, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L55',
+    note: 'project self-assessment: yes (95/100); src/api/oidc/device.rs:62; RFC 8628 device grant advertised,
+      minted, polled'}
+  - {msc: 4351, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L413',
+    note: 'project self-assessment: yes (100/100); Context handler biases remainder to events_after via
+      div_ceil(2)'}
+  - {msc: 4356, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L54',
+    note: 'project self-assessment: yes (100/100); global account-data passthrough (2026-06-22 ruling);
+      m.recent_emoji round-trips'}
+  - {msc: 4359, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L407',
+    note: 'project self-assessment: partial (50/50); DnD account data passes through; device removal leaves
+      the per device key'}
+  - {msc: 4361, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L405',
+    note: 'project self-assessment: yes (100/100); src/service/rooms/state_res/event_auth/room_member.rs:56;
+      reject m.room.membe...'}
+  - {msc: 4376, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L53',
+    note: 'project self-assessment: yes (100/100); v1 send_join and v1 send_leave routes are not registered'}
+  - {msc: 4377, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L396',
+    note: 'project self-assessment: yes (100/100); account-data passthrough (2026-06-22 ruling); nested
+      order keys kept verbatim'}
+  - {msc: 4380, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L149',
+    note: advertised in unstable_features}
+  - {msc: 4383, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L394',
+    note: 'project self-assessment: yes (100/100); versions.rs:30 server object; :149 advertises net.zemos.msc4383'}
+  - {msc: 4384, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L755',
+    note: 'project self-assessment: partial (?/50); Largest-first sort is hardcoded; no alt-sort hook'}
+  - {msc: 4388, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L392',
+    note: 'project self-assessment: yes (90/100); router.rs:471 five MSC4388 routes; TTL default 600s
+      exceeds SHOULD 300s'}
+  - {msc: 4397, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L390',
+    note: 'project self-assessment: yes (100/100); global account-data passthrough (2026-06-22 ruling);
+      m.tag_space round-trips'}
+  - {msc: 4402, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L51',
+    note: 'project self-assessment: yes (100/100); [→ MSC2499?] Global CORS layer covers any 30x; well-known
+      client returns 200 ...'}
+  - {msc: 4406, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L388',
+    note: 'project self-assessment: partial (50/55); src/api/client/{room/event.rs:74,context.rs:86,relations.rs:175};
+      M_SENDER_IG...'}
+  - {msc: 4415, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L751',
+    note: 'project self-assessment: partial (0/50); whois is served, but a non admin may still look up
+      their own user'}
+  - {msc: 4418, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L750',
+    note: 'project self-assessment: yes (100/100); destination required on inbound and outbound; cited
+      verbatim in MSC.'}
+  - {msc: 4423, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L50',
+    note: 'project self-assessment: yes (100/100); directory.rs:331 member-count order stays valid once
+      ordering is undefined'}
+  - {msc: 4426, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L383',
+    note: 'project self-assessment: yes (90/90); Both budgets enforced with 400 M_TOO_LARGE; no rate limiting
+      anywhere in the ...'}
+  - {msc: 4429, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/src/api/client/versions.rs#L129',
+    note: advertised in unstable_features}
+  - {msc: 4436, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L49',
+    note: 'project self-assessment: yes (100/100); acl_check.rs:39 uses ruma is_allowed, which matches
+      case insensitively'}
+  - {msc: 4438, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L374',
+    note: 'project self-assessment: yes (100/100); Pure account-data convention; existing endpoints store
+      arbitrary types'}
+  - {msc: 4439, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L373',
+    note: 'project self-assessment: partial (70/85); check.rs:780 validates URI and rejects raw keys;
+      new https MUST unenforced'}
+  - {msc: 4441, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L371',
+    note: 'project self-assessment: yes (100/100); Account-data passthrough; owner-only global store,
+      GET, v3 and v5 sync'}
+  - {msc: 4446, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L369',
+    note: 'project self-assessment: yes (90/100); Fully-read gated; allow_backward on both routes; racing
+      writes unordered'}
+  - {msc: 4452, state: stable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L364',
+    note: 'project self-assessment: yes (100/100); capabilities.rs:89 advertises io.element.msc4452.preview_url'}
+  - {msc: 4458, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L360',
+    note: 'project self-assessment: yes (90/100); Federation JSON parsed first; signatures checked on
+      the parsed object'}
+  - {msc: 4461, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L359',
+    note: 'project self-assessment: yes (100/100); Pure account data passthrough; generic CS account-data
+      covers it'}
+  - {msc: 4466, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L356',
+    note: 'project self-assessment: yes (90/100); profile.rs:20 resolve_propagation; key-copy rules met
+      via build.rs:184'}
+  - {msc: 4476, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L350',
+    note: 'project self-assessment: yes (100/100); Account-data passthrough; m.image_pack.rooms stored,
+      served, synced opaque'}
+  - {msc: 4482, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L348',
+    note: 'project self-assessment: yes (100/100); Account-data passthrough; m.bookmarks_room stored,
+      served, synced opaque'}
+  - {msc: 4483, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L347',
+    note: 'project self-assessment: yes (100/100); Account-data passthrough; ADK secret and encrypted
+      envelopes stored opaque'}
+  - {msc: 4492, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L341',
+    note: 'project self-assessment: yes (90/100); PduCount tokens already directionless and shared across
+      the named endpoints'}
+  - {msc: 4499, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L335',
+    note: 'project self-assessment: partial (40/50); keys cached and persisted, but extend() overwrites
+      so last seen wins'}
+  - {msc: 4504, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L330',
+    note: 'project self-assessment: partial (50/100); Drops spec removals in Y%6 releases it advertises
+      (v1.6, v1.18); not yet live'}
+  - {msc: 4508, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L326',
+    note: 'project self-assessment: partial (50/70); typing extension present, but in the pre-MSC m.typing
+      shape and unadvertised'}
+  - {msc: 4513, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L322',
+    note: 'project self-assessment: yes (90/90); central kind to status map emits 413, 429, 502, 504 with
+      Matrix error bodies'}
+  - {msc: 4519, state: partial, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L319',
+    note: 'project self-assessment: partial (60/80); src/api/client/rtc.rs:7 serves the MSC4143-prefixed
+      unstable transports route'}
+  - {msc: 4522, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L317',
+    note: 'project self-assessment: yes (100/100); Custom profile field passthrough; object value stored
+      and served via MSC4133'}
+  - {msc: 4526, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L314',
+    note: 'project self-assessment: yes (80/100); invalid_grant on refresh failures, but every 4xx maps
+      to it, bad params too'}
+  - {msc: 4529, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L311',
+    note: 'project self-assessment: yes (100/100); Account-data passthrough; m.profile_overrides map stored,
+      served, synced'}
+  - {msc: 4534, state: unstable, source: 'https://github.com/matrix-construct/tuwunel/blob/b8901152479bea0a4f33fac67d715fea52bca2d0/docs/development/compliance/msc.md#L309',
+    note: 'project self-assessment: yes (100/100); Account-data passthrough; m.room.rules.accepted room
+      data stored and synced'}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - 5 of 2643 non-bot commits in the last 365 days (0.2 %) carry an AI co-author trailer or similar
+    - https://github.com/matrix-construct/tuwunel/commit/a9c0cf3a49691a1c8aacf81994e19f0a4ce785d1
+    - https://github.com/matrix-construct/tuwunel/commit/0d62d0514e92c0040a4c0454fb18cbed44e7ef49
+    - https://github.com/matrix-construct/tuwunel/commit/fee9b46e8a3b9d6a961cd441d5c19db9d61098f2
+    note: attributed share is below the 1 % threshold; marked occasional because attributed commits exist
+    checked_at: b8901152479bea0a4f33fac67d715fea52bca2d0
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Publishes its own per-MSC compliance table (docs/development/compliance/msc.md); states taken from
+  it are marked "project self-assessment" in the msc notes.
+checked: '2026-11-05'

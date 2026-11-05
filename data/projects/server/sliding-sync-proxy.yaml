@@ -1,0 +1,47 @@
+slug: sliding-sync-proxy
+name: Sliding Sync proxy
+category: server
+kind: sync proxy (MSC3575)
+homepage: null
+summary: Proxy implementing the MSC3575 sliding sync protocol in front of any homeserver; archived, superseded
+  by native MSC4186.
+repos:
+- {url: 'https://github.com/matrix-org/sliding-sync', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - lane prompt
+maturity: archived
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  language: Go
+  database: PostgreSQL
+  msc:
+  - {msc: 3575, state: unstable, source: 'https://github.com/matrix-org/sliding-sync/blob/c376f7f1dd13f14b97584ac456c8c33011a0145c/sync3/sort.go#L188',
+    note: unstable prefix in code}
+  - {msc: 4102, state: unstable, source: 'https://github.com/matrix-org/sliding-sync/blob/c376f7f1dd13f14b97584ac456c8c33011a0145c/state/receipt_table.go#L179',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4115, state: stable, source: 'https://github.com/matrix-org/sliding-sync/blob/c376f7f1dd13f14b97584ac456c8c33011a0145c/sync2/handler2/handler.go#L268',
+    note: referenced in code; MSC is in the spec}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: c376f7f1dd13f14b97584ac456c8c33011a0145c
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'README: "The proxy is no longer being worked on and is now archived." Homeservers now implement
+  simplified sliding sync natively.'
+checked: '2026-11-05'

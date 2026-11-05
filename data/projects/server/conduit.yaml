@@ -1,0 +1,70 @@
+slug: conduit
+name: Conduit
+category: server
+kind: homeserver
+homepage: https://conduit.rs
+summary: A simple, fast and reliable Matrix homeserver written in Rust.
+repos:
+- {url: 'https://gitlab.com/famedly/conduit', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+  - sources/community-space.tsv (Servers/Hosting)
+maturity: beta
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution:
+- docker
+- debian
+funding: []
+features:
+  language: Rust
+  database: {value: 'yes', how: claimed, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/docs/configuration.md#L32',
+    note: 'RocksDB (recommended), SQLite'}
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/src/api/client_server/unversioned.rs#L22',
+    versions: [r0.5.0, r0.6.0, v1.1, v1.2, v1.3, v1.4, v1.5, v1.6, v1.7, v1.8, v1.9, v1.10, v1.11, v1.12]}
+  appservices: {value: 'yes', how: claimed}
+  admin_api: {value: 'yes', how: claimed, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/docs/administration.md',
+    note: admin room commands}
+  oidc_delegation: {value: not-found, note: no reference to MSC3861/2964/2965/2967 found in the code}
+  native_sliding_sync: {value: 'yes', how: code, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/Cargo.toml#L159',
+    note: 'MSC4186: unstable'}
+  workers_scaling: {value: 'no', how: claimed}
+  media_auth: {value: 'yes', how: code, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/src/api/client_server/unversioned.rs#L39',
+    note: 'MSC3916: stable'}
+  msc:
+  - {msc: 2448, state: unstable, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/Cargo.toml#L158',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3575, state: unstable, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/src/api/client_server/unversioned.rs#L40',
+    note: advertised in unstable_features}
+  - {msc: 3911, state: unstable, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/src/service/admin/mod.rs#L1174',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3916, state: stable, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/src/api/client_server/unversioned.rs#L39',
+    note: advertised in unstable_features}
+  - {msc: 3967, state: stable, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/src/api/client_server/keys.rs#L161',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4029, state: unstable, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/src/api/ruma_wrapper/axum.rs#L141',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4186, state: unstable, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/Cargo.toml#L159',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4311, state: stable, source: 'https://gitlab.com/famedly/conduit/-/blob/c201feb4851f837d809244fd536c1c189266089f/conduit/src/utils/mod.rs#L205',
+    note: referenced in code; MSC is in the spec}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: c201feb4851f837d809244fd536c1c189266089f
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

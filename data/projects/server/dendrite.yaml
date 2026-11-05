@@ -1,0 +1,74 @@
+slug: dendrite
+name: Dendrite
+category: server
+kind: homeserver
+homepage: https://element-hq.github.io/dendrite/
+summary: A second-generation Matrix homeserver written in Go, maintained by Element.
+repos:
+- {url: 'https://github.com/element-hq/dendrite', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+  - sources/community-space.tsv (Servers/Hosting)
+maturity: beta
+platforms:
+- server
+licence: AGPL-3.0-or-later OR LicenseRef-Element-Commercial
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  language: Go
+  database: {value: 'yes', how: claimed, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/.github/ISSUE_TEMPLATE/BUG_REPORT.md#L20',
+    note: 'PostgreSQL, SQLite'}
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/clientapi/routing/routing.go#L133',
+    versions: [r0.0.1, r0.1.0, r0.2.0, r0.3.0, r0.4.0, r0.5.0, r0.6.1, v1.0, v1.1, v1.2]}
+  appservices: {value: 'yes', how: claimed}
+  admin_api: {value: 'yes', how: claimed, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/docs/administration/4_adminapi.md'}
+  oidc_delegation: {value: not-found, note: no reference to MSC3861/2964/2965/2967 found in the code}
+  native_sliding_sync: {value: 'no', how: code, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/clientapi/routing/routing.go#L49',
+    note: 'only an MSC3575 sliding sync proxy reference found (e.g. the .well-known proxy field), no native
+      MSC4186'}
+  workers_scaling: {value: partial, how: claimed, note: polylith mode was removed; runs as a monolith}
+  media_auth: {value: 'yes', how: code, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/clientapi/routing/routing.go#L89',
+    note: 'MSC3916: stable'}
+  msc:
+  - {msc: 1234, state: experimental, flag: msc12345, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/setup/config/config_mscs.go#L23',
+    note: behind a config option}
+  - {msc: 1772, state: stable, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/roomserver/internal/query/query_room_hierarchy.go#L487',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2285, state: stable, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/clientapi/routing/routing.go#L88',
+    note: advertised in unstable_features}
+  - {msc: 2444, state: experimental, flag: 'mscs.mscs: [msc2444]', source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/setup/mscs/mscs.go#L38',
+    note: opt-in via the mscs config list}
+  - {msc: 2625, state: unstable, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/are-we-synapse-yet.list#L914',
+    note: unstable prefix in code}
+  - {msc: 2753, state: experimental, flag: 'mscs.mscs: [msc2753]', source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/setup/mscs/mscs.go#L39',
+    note: opt-in via the mscs config list}
+  - {msc: 2836, state: experimental, flag: 'mscs.mscs: [msc2836]', source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/setup/mscs/mscs.go#L36',
+    note: opt-in via the mscs config list}
+  - {msc: 2946, state: stable, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/roomserver/internal/query/query_room_hierarchy.go#L503',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3575, state: unstable, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/clientapi/routing/routing.go#L49',
+    note: advertised in unstable_features}
+  - {msc: 3916, state: stable, source: 'https://github.com/element-hq/dendrite/blob/08cac1ccf0a45471132ad24a29e3ec15643675fa/clientapi/routing/routing.go#L89',
+    note: advertised in unstable_features}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: 08cac1ccf0a45471132ad24a29e3ec15643675fa
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The older matrix-org/dendrite repo is archived; development moved to element-hq/dendrite. Few commits
+  in the last year.
+checked: '2026-11-05'
