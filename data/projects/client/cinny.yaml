@@ -1,0 +1,239 @@
+slug: cinny
+name: Cinny
+category: client
+kind: web, desktop
+homepage: https://cinny.in
+summary: A web and desktop Matrix client with a Discord-like layout, built on matrix-js-sdk; the
+  desktop app wraps it with Tauri.
+repos:
+- url: https://github.com/cinnyapp/cinny
+  forge: github
+  role: main
+- url: https://github.com/cinnyapp/cinny-desktop
+  forge: github
+  role: desktop
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/cinny/
+  other:
+  - PLAN.md extra sources (https://cinny.in)
+  - GitHub topic matrix-client
+maturity: stable
+platforms:
+- web
+- windows
+- macos
+- linux
+apps:
+- os: web
+  tech: other
+  status: stable
+  stores:
+  - name: web
+    url: https://app.cinny.in/
+  - name: docker
+    url: https://hub.docker.com/r/ajbura/cinny
+  source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/README.md
+  min_os: null
+- os: windows
+  tech: tauri
+  status: stable
+  stores:
+  - name: github-releases
+    url: https://github.com/cinnyapp/cinny-desktop/releases
+  source: https://github.com/cinnyapp/cinny-desktop/blob/d4f78de9335976f3ac66de66772b1e28b75be95d/README.md
+  min_os: null
+- os: macos
+  tech: tauri
+  status: stable
+  stores:
+  - name: github-releases
+    url: https://github.com/cinnyapp/cinny-desktop/releases
+  source: https://github.com/cinnyapp/cinny-desktop/blob/d4f78de9335976f3ac66de66772b1e28b75be95d/README.md
+  min_os: null
+- os: linux
+  tech: tauri
+  status: stable
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/details/in.cinny.Cinny
+  - name: appimage
+    url: https://github.com/cinnyapp/cinny-desktop/releases/latest
+  source: https://github.com/cinnyapp/cinny-desktop/blob/d4f78de9335976f3ac66de66772b1e28b75be95d/README.md
+  min_os: null
+licence: AGPL-3.0-only
+fork_of: null
+distribution:
+- flathub
+- docker
+- appimage
+funding:
+- https://opencollective.com/cinny
+- https://liberapay.com/ajbura
+features:
+  sdk:
+    value: matrix-js-sdk 41.7.0 (Rust crypto via initRustCrypto)
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/package.json
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/client/initMatrix.ts
+    note: Rust crypto initialised with initRustCrypto().
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/features/settings/devices/Devices.tsx
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/hooks/useKeyBackup.ts
+  sliding_sync:
+    value: 'no'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/package.json
+    note: No MSC4186 or MSC3575 code found; matrix.org lists it as unknown.
+  oidc_auth:
+    value: partial
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/features/settings/devices/OtherDevices.tsx
+    note: 'Reads auth metadata and links device management to the OIDC account dashboard; no OIDC
+      login flow found in the code. matrix.org: unknown.'
+  multi_account:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/cinny.md
+  threads:
+    value: partial
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/features/room/RoomTimeline.tsx
+    note: Can send m.thread relations from the timeline; matrix.org lists threads as unsupported
+      (no thread panel found).
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/types/matrix/room.ts
+  voip_1to1:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/cinny.md
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/plugins/call/CallEmbed.ts
+    note: Embeds Element Call (MatrixRTC); matrix.org lists voip_matrixrtc as supported.
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/types/matrix/room.ts
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/utils/room.ts
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/features/room/RoomInput.tsx
+  polls:
+    value: 'no'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/components/RenderMessageContent.tsx
+    note: No m.poll / MSC3381 handling found.
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/plugins/custom-emoji/types.ts
+    note: 'im.ponies image packs (MSC2545); matrix.org: partial.'
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/utils/room.ts
+  location:
+    value: partial
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/components/RenderMessageContent.tsx
+    note: Renders m.location messages; no sending UI found.
+  voice_messages:
+    value: not-found
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/components/RenderMessageContent.tsx
+    note: Audio files play; no voice recording (MediaRecorder) found.
+  rich_text_editor:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/components/editor/Editor.tsx
+    note: Slate-based composer with formatting.
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/components/url-preview/index.ts
+  push_notifications:
+    value: partial
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/features/settings/notifications/SystemNotification.tsx
+    note: Browser/system notifications while open and email notifications; no mobile push.
+  private_read_receipts:
+    value: not-found
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/utils/room.ts
+    note: No m.read.private found.
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/hooks/useUserPresence.ts
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/features/room/RoomTombstone.tsx
+    note: Shows tombstones and the successor room.
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/features/common-settings/permissions/Powers.tsx
+    note: Power levels, kick/ban/redact.
+  accessibility:
+    value: not-found
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/src/app/components/editor/Editor.tsx
+    note: aria-label attributes in about 20 files; no documented screen-reader work found.
+  translations:
+    value: partial
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/public/locales/en.json
+    note: Two locale files in the repo (en, de).
+  telemetry:
+    value: none-found
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/package.json
+    note: No analytics or crash-report SDK in package.json.
+  default_homeserver:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/config.json
+    note: matrix.org (defaultHomeserver index 1 in the list converser.eu, matrix.org, mozilla.org,
+      unredacted.org, xmr.se).
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/package.json
+    note: 'About 75k lines of TS/JS/CSS; Vite build with npm; the desktop app adds a Rust/Tauri toolchain.
+      AGPL-3.0-only: hosted forks must offer source. Forks exist (Sable, Extera, app.cinny.ir).'
+ai:
+  policy:
+    value: banned
+    quote: >-
+      The Cinny project strictly does not allow any AI generated code. Any pull request containing
+      it will be rejected. **This is very important.**
+    source: https://github.com/cinnyapp/cinny/blob/474400cedc438f6fb4db69bc763037b0948bbe48/CONTRIBUTING.md
+  dev_usage:
+    value: none-found
+    evidence:
+    - >-
+      No attributed commits found in the last 365 days (103 non-bot commits in cinny, 54 in cinny-desktop).
+    - No agent files in either tree.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  matrix.org maturity: Stable. The old #cinny:matrix.org room is archived and replaced (community-space.tsv).
+checked: '2026-11-05'
