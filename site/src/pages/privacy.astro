@@ -5,7 +5,7 @@ import { dataset } from '../lib/data.ts';
 import { STATE_TEXT, feature, href, statusOf } from '../lib/view.ts';
 import Icon from '../components/Icon.astro';
 
-// Privacy at a glance for clients: what the hand-checked files say about telemetry, the default
+// Privacy at a glance for clients: what the project files say about telemetry, the default
 // homeserver and URL previews, next to the analytics SDKs the collector found in dependency manifests.
 const d = dataset();
 const clients = d.projects.filter((p) => p.category === 'client');
@@ -36,7 +36,7 @@ const show = (v: string) => (v in TEL_EMPTY ? null : v);
   </header>
   <p class="muted small">
     “SDKs in manifests” comes from the collector: a dependency file names Sentry, PostHog, Matomo, Firebase Analytics or similar. Named is not the same as switched on;
-    the “Telemetry” column is the hand-checked reading (opt-in, opt-out) where a lane looked. URL previews fetched by the client or the homeserver can reveal what you read.
+    the “Telemetry” column is an AI agent's reading of the client's docs or code (opt-in, opt-out) where it looked, not checked by a person. URL previews fetched by the client or the homeserver can reveal what you read.
   </p>
   <div class="table-wrap">
     <table class="data">

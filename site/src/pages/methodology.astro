@@ -30,14 +30,25 @@ try {
     <p class="lede">Where the data comes from, what each mark means, and what it cannot tell you.</p>
   </header>
   <div class="prose">
+    <h2 id="who">Who did the research</h2>
+    <p>
+      Everything on this site was researched and written by an AI agent: Claude (Anthropic), working in Claude Code sessions. The agent found the projects, read the READMEs,
+      docs, issues and source files linked from each claim, wrote the project files, and built the collector and this site. No person has checked the claims against their
+      sources, read the code behind a feature mark, or tried the products. The maintainer reviews the site as a whole, not entry by entry. Read every mark as the agent's
+      reading of the linked source, follow the link before relying on it, and please <a href="https://github.com/n3tman/vibe-check/issues">open an issue</a> when it is wrong.
+    </p>
+
     <h2>Sources and dates</h2>
     <p>
-      Each project has a hand-written file in <a href="https://github.com/n3tman/vibe-check/tree/main/data/projects"><code>data/projects/</code></a>: features, platforms and AI policy,
-      each claim with a link (a file at a commit, a docs page, an issue) and the date it was checked. Projects were found through the
-      <a href="https://matrix.org/ecosystem/">matrix.org ecosystem lists</a>, the rooms of the <code>#community:matrix.org</code> space, GitHub topics, awesome lists and This Week in Matrix.
+      Each project has a file in <a href="https://github.com/n3tman/vibe-check/tree/main/data/projects"><code>data/projects/</code></a>, written by the agent: features, platforms and AI policy,
+      each claim with a link (a file at a commit, a docs page, an issue) and the date the agent read it. Projects were found through the
+      <a href="https://matrix.org/ecosystem/">matrix.org ecosystem lists</a> and the rooms of the <code>#community:matrix.org</code> space, plus one GitHub topic per category
+      (<code>matrix-client</code>, <code>matrix-homeserver</code>, <code>matrix-bot</code>, <code>matrix-bridge</code>), keyword searches on GitHub and
+      <a href="https://github.com/jryans/awesome-matrix">jryans/awesome-matrix</a>. Other GitHub topics, topics on other forges, other awesome lists and This Week in Matrix
+      have not been searched yet, so projects are missing.
       {checked.length > 0 && (fmtDate(checked[0]) === fmtDate(checked[checked.length - 1])
-        ? <> All hand checks were made on {fmtDate(checked[0])}.</>
-        : <> Hand checks range from {fmtDate(checked[0])} to {fmtDate(checked[checked.length - 1])}.</>)}
+        ? <> All entries were researched on {fmtDate(checked[0])}.</>
+        : <> Entries were researched between {fmtDate(checked[0])} and {fmtDate(checked[checked.length - 1])}.</>)}
       Project logos are trademarks of their projects and are shown only to identify each project; each comes from the project's own repository or site (the source is in the project's file under <code>icon</code>) and is served from this site. Projects without one get a monogram.
     </p>
     <p>
@@ -46,7 +57,7 @@ try {
       {meta?.run_at ? <> The current metrics were collected on {fmtDate(meta.run_at)}.</> : ' The collector runs weekly.'}
       Nothing from a scanned repository is ever run.
     </p>
-    <p>“Not found” is never the same as “no”: it means we looked and found nothing either way. It is drawn with a dashed outline.</p>
+    <p>“Not found” is never the same as “no”: it means the agent looked and found nothing either way. It is drawn with a dashed outline.</p>
 
     <h2 id="ai-axes">The three AI axes</h2>
     <p>They are shown separately and never merged into one score.</p>
@@ -67,7 +78,7 @@ try {
             <strong>Regular</strong>: 5 % or more, and at least three attributed commits (one AI commit out of twelve is not a habit). Attribution is a lower bound: most AI use leaves no trace in a repository, so “none found” does not mean none was used.
           </p>
           <p class="small muted">
-            The collector suggests a level; the mark shown is the researcher's, checked against that suggestion. Where they differ the project page says why: an <code>AGENTS.md</code>
+            The collector suggests a level; the mark shown is the one the agent set in the project's file, compared with that suggestion. Where they differ the project page says why: an <code>AGENTS.md</code>
             that only tells agents to stay away is not AI use, and a project that rewrote its history to strip AI trailers, or says in prose that it is written with AI, is marked from
             its own statement. Merged pull requests that disclose AI use (squash merges drop the trailers) were searched on GitHub for the bot, tool and bridge lanes and are linked as evidence.
           </p>

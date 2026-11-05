@@ -72,7 +72,7 @@ const fullTitle = title === 'Vibe check' ? 'Vibe check: the Matrix ecosystem at 
     </main>
     <footer class="site-foot">
       <div class="wrap foot-row">
-        <p>Data checked by hand with sources, metrics collected from the repositories{d.collector?.run_at ? ` on ${new Date(d.collector.run_at).toLocaleDateString('en-GB', { dateStyle: 'medium', timeZone: 'UTC' })}` : ''}. Researched and built with Claude in Claude Code; see <a href={href('methodology/')}>methodology</a>.</p>
+        <p>Researched and written by an AI agent with linked sources, not checked by a person; metrics collected from the repositories{d.collector?.run_at ? ` on ${new Date(d.collector.run_at).toLocaleDateString('en-GB', { dateStyle: 'medium', timeZone: 'UTC' })}` : ''}. Researched and built with Claude in Claude Code; see <a href={href('methodology/')}>methodology</a>.</p>
         <p><a href="https://github.com/n3tman/vibe-check">Source and corrections</a> · code MIT, data CC BY 4.0 · no trackers, no external requests.</p>
       </div>
     </footer>

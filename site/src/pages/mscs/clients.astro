@@ -32,7 +32,7 @@ const S: Record<string, { s: string; icon: string }> = {
   <header class="page-head">
     <p class="eyebrow">Spec support</p>
     <h1>Clients × features</h1>
-    <p class="lede">Which client supports which feature, and the Matrix Spec Changes each feature rests on. Every cell was checked by hand and links to its source where there is one.</p>
+    <p class="lede">Which client supports which feature, and the Matrix Spec Changes each feature rests on. Every cell is an AI agent's reading of the client's docs or code, not checked by a person; it links to its source where there is one.</p>
     <nav class="subnav" aria-label="Spec support views">
       <a href={href('mscs/')}>Servers × MSCs</a>
       <a href={href('mscs/clients/')} aria-current="page">Clients × features</a>
@@ -41,7 +41,7 @@ const S: Record<string, { s: string; icon: string }> = {
 
   <section aria-labelledby="key-h">
     <h2 id="key-h">The features and their MSCs</h2>
-    <p class="muted small">Clients don't list the MSCs they implement the way servers advertise them, so this page uses the features we checked for each client. Features with no MSC are older core spec or purely client-side.</p>
+    <p class="muted small">Clients don't list the MSCs they implement the way servers advertise them, so this page uses the features the agent looked for in each client. Features with no MSC are older core spec or purely client-side.</p>
     <div class="table-wrap">
       <table class="data">
         <thead><tr><th scope="col">Feature</th><th scope="col">MSCs</th><th scope="col" class="num">Found</th><th scope="col" class="num">Partly</th><th scope="col" class="num">No</th><th scope="col" class="num">Not found</th><th scope="col" style="width:22%">Of {clients.length} clients</th></tr></thead>

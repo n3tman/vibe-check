@@ -152,7 +152,7 @@ function crossCheck(projects: Entry[], metrics: Map<string, Metrics>, errors: st
     }
     const c = p.metrics?.combined;
     if (p.repos.length && !p.metrics) warnings.push(`${p.file}: has repositories but no metrics yet (run the collector)`);
-    // The collector found an analytics or crash-report SDK; the hand value must say what it does.
+    // The collector found an analytics or crash-report SDK; the file's value must say what it does.
     const sdks = (c?.telemetry_sdks as string[] | undefined) ?? [];
     if (p.category === 'client' && sdks.length) {
       const t = f.telemetry;
