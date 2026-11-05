@@ -12,8 +12,7 @@ sources:
   matrix_org_listing: https://matrix.org/ecosystem/clients/miitrix/
   other: []
 maturity: unmaintained
-platforms:
-- other
+platforms: []
 apps:
 - os: other
   tech: native
