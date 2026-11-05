@@ -124,6 +124,17 @@ def test_same_name_as_flags_forks_and_moves():
     assert got == {"https://gitlab.gnome.org/world/fractal": "fractal", "https://github.com/y/other": ""}
 
 
+def test_gitlab_token_goes_to_gitlab_com_only(tmp_path: Path, monkeypatch):
+    monkeypatch.setenv("GITLAB_TOKEN", "glpat-x")
+    sent = {}
+    monkeypatch.setattr(d.Http, "get", lambda self, url, headers=None, tries=3: (sent.__setitem__(url, headers or {}), ({}, {}))[1])
+    fx = d.Fetch(tmp_path, refresh=True)
+    fx.get("https://gitlab.com/api/v4/projects/1")
+    fx.get("https://gitlab.gnome.org/api/v4/projects/1")
+    assert sent["https://gitlab.com/api/v4/projects/1"]["PRIVATE-TOKEN"] == "glpat-x"
+    assert "PRIVATE-TOKEN" not in sent["https://gitlab.gnome.org/api/v4/projects/1"]
+
+
 def test_rename_merges_rows():
     pool = d.Pool()
     pool.twim("https://github.com/mujx/nheko", "github", "2018-04-20", "nheko")

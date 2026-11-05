@@ -409,6 +409,9 @@ class Fetch:
         self.gh = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
         if token:
             self.gh["Authorization"] = f"Bearer {token}"
+        # A gitlab.com personal access token (scope read_api) lifts the per-IP limit that
+        # unauthenticated project lookups hit. Sent to gitlab.com only, never to other instances.
+        self.gitlab_token = os.environ.get("GITLAB_TOKEN")
 
     def _file(self, key: str) -> Path:
         return self.cache / (hashlib.sha1(key.encode()).hexdigest() + ".json")
@@ -422,6 +425,8 @@ class Fetch:
         if self.blocked.get(host, 0) > time.time():
             raise RuntimeError(f"{host} asked to wait until {time.strftime('%H:%M', time.localtime(self.blocked[host]))}")
         http = self.http.setdefault(host, Http(pause=pause))
+        if host == "gitlab.com" and self.gitlab_token:
+            headers = {**(headers or {}), "PRIVATE-TOKEN": self.gitlab_token}
         for attempt in range(6):
             try:
                 body, hdr = http.get(url, headers, tries=1 if max_wait < 3600 else 3)
