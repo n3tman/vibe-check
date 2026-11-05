@@ -110,7 +110,7 @@ export const featureLabel = (k: string) => LABELS[k] ?? k.replace(/_/g, ' ').rep
 export const HEADLINE: Record<Category, string[]> = {
   client: ['e2ee', 'sliding_sync', 'oidc_auth', 'threads', 'spaces', 'group_calls'],
   server: ['federation', 'native_sliding_sync', 'oidc_delegation', 'media_auth', 'appservices', 'workers_scaling'],
-  bot: ['purpose', 'e2ee', 'hosting', 'ai_backend'],
+  bot: ['purpose', 'e2ee', 'hosting'],
   bridge: ['network', 'puppeting', 'e2ee', 'backfill', 'reactions_edits'],
   sdk: ['e2ee', 'sliding_sync', 'oidc_auth', 'threads'],
   tool: ['purpose', 'e2ee', 'hosting'],
@@ -130,6 +130,8 @@ export function feature(key: string, raw: unknown): FeatureView {
   if (Array.isArray(raw)) return { key, label, state: 'text', value: raw.map(String).join(', ') };
   const o = raw as Record<string, any>;
   const v = o.value === undefined || o.value === null ? 'not-found' : typeof o.value === 'boolean' ? (o.value ? 'yes' : 'no') : String(o.value);
+  // A free-text feature whose value is a "not found" word is drawn as not found, not as text.
+  if (v === 'not-found' || (v === 'none-found' && key !== 'telemetry' && key !== 'ai_backend')) return { key, label, state: 'not-found', value: 'not found', how: o.how, source: o.source, note: o.note };
   const state: FeatureState = STATES.has(v) && !isFreeTextFeature(key) && key !== 'telemetry' ? (v as FeatureState) : 'text';
   return { key, label, state, value: v, how: o.how, source: o.source, note: o.note };
 }

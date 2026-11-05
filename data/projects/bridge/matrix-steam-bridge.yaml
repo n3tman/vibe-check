@@ -56,6 +56,8 @@ ai:
       365 days
     note: 'no attributed commits, but the README states: ''Some code in this repository was generated
       using the assistance of AI'' (README.md line 161); share unknown'
+    collector_override: no attributed commits, but the README says "Some code in this repository was generated
+      using the assistance of AI" (line 161), so AI use is stated by the project itself.
   in_product:
     value: none-found
     note: no generative-AI features found in the README or dependency manifests

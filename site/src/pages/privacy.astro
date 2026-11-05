@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import { dataset } from '../lib/data.ts';
+import { STATE_TEXT, feature, href, statusOf } from '../lib/view.ts';
+import Icon from '../components/Icon.astro';
+
+// Privacy at a glance for clients: what the hand-checked files say about telemetry, the default
+// homeserver and URL previews, next to the analytics SDKs the collector found in dependency manifests.
+const d = dataset();
+const clients = d.projects.filter((p) => p.category === 'client');
+const rows = clients
+  .map((p) => {
+    const f = (p.features ?? {}) as Record<string, any>;
+    const sdks = [...new Set((p.metrics?.repos ?? []).filter((r) => r.ok).flatMap((r) => (r.telemetry_scan?.found ?? []).map((t: any) => t.sdk as string)))];
+    const tel = f.telemetry;
+    const telValue = tel == null ? 'not-found' : typeof tel === 'object' ? String(tel.value ?? 'not-found') : String(tel);
+    return { p, sdks, tel: feature('telemetry', tel), telValue, home: feature('default_homeserver', f.default_homeserver), prev: feature('url_previews', f.url_previews) };
+  })
+  .sort((a, b) => Number(b.sdks.length > 0 || !/none|not-found/.test(a.telValue)) - Number(a.sdks.length > 0 || !/none|not-found/.test(b.telValue)) || a.p.name.localeCompare(b.p.name));
+const flagged = rows.filter((r) => r.sdks.length > 0 || !/^(none-found|not-found)$/.test(r.telValue));
+const show = (v: string) => (v === 'not-found' || v === 'none-found' ? null : v);
+---
+<Base title="Privacy at a glance" description="Telemetry, default homeserver and URL previews of Matrix clients">
+  <header class="page-head">
+    <p class="eyebrow">Clients</p>
+    <h1>Privacy at a glance</h1>
+    <p class="lede">
+      What each client sends home, where it points new users, and whether it fetches link previews. {flagged.length} of {clients.length} clients name an analytics or crash-report SDK
+      in their dependencies or document telemetry.
+    </p>
+  </header>
+  <p class="muted small">
+    “SDKs in manifests” comes from the collector: a dependency file names Sentry, PostHog, Matomo, Firebase Analytics or similar. Named is not the same as switched on;
+    the “Telemetry” column is the hand-checked reading (opt-in, opt-out) where a lane looked. URL previews fetched by the client or the homeserver can reveal what you read.
+  </p>
+  <div class="table-wrap">
+    <table class="data">
+      <thead><tr><th scope="col">Client</th><th scope="col">Activity</th><th scope="col">Telemetry</th><th scope="col">SDKs in manifests</th><th scope="col">Default homeserver</th><th scope="col">URL previews</th></tr></thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <th scope="row" style="font-weight:500"><a href={href(`p/${r.p.slug}/`)}>{r.p.name}</a></th>
+            <td><StatusBadge status={statusOf(r.p)} /></td>
+            <td>{show(r.telValue) ? (r.tel.source ? <a href={r.tel.source}>{r.telValue}</a> : r.telValue) : <span class="muted">{r.telValue === 'none-found' ? 'none found' : 'not checked'}</span>}{r.tel.note && <div class="muted small">{r.tel.note}</div>}</td>
+            <td>{r.sdks.length ? r.sdks.join(', ') : <span class="muted">none found</span>}</td>
+            <td>{r.home.state === 'not-found' || r.home.value === 'not-found' ? <span class="muted">not found</span> : r.home.source ? <a href={r.home.source}>{r.home.value}</a> : r.home.value}</td>
+            <td><span class="fchip" data-state={r.prev.state} title={r.prev.note ?? undefined}><Icon name={({ yes: 'check', partial: 'partial', no: 'cross', planned: 'clock', 'not-found': 'question', text: 'dot' } as Record<string, string>)[r.prev.state]} size={13} />{r.prev.state === 'text' ? r.prev.value : STATE_TEXT[r.prev.state]}</span></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</Base>

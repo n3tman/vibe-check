@@ -7,5 +7,6 @@ const { p, compact } = Astro.props;
 <span class="aimarks" role="group" aria-label="AI marks">
   <AiMark axis="policy" value={p.ai.policy.value} compact={compact} />
   <AiMark axis="dev_usage" value={p.ai.dev_usage.value} compact={compact} />
-  <AiMark axis="in_product" value={p.ai.in_product.value} compact={compact} />
+  {/* Shown only when the product has AI features; "none found" is left to the filter and the project page. */}
+  {p.ai.in_product.value !== 'none-found' && <AiMark axis="in_product" value={p.ai.in_product.value} compact={compact} />}
 </span>
