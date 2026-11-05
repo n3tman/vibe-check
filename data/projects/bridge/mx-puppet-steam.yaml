@@ -1,0 +1,69 @@
+slug: mx-puppet-steam
+name: mx-puppet-steam
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Archived Steam puppeting bridge on mx-puppet-bridge.
+repos:
+- url: https://github.com/icewind1991/mx-puppet-steam
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - search for Steam bridges
+maturity: archived
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Steam
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/icewind1991/mx-puppet-steam/blob/101ca17fb9a645377d3482e94c2c25d8182db1e8/package.json
+    note: mx-puppet-bridge
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 101ca17fb9a6; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'Archived on GitHub (last commit 2025-06-03). Other Steam bridge: matrix-steam-bridge (bridgev2,
+  active).'
+checked: 2026-11-05

@@ -1,0 +1,60 @@
+slug: matrix-appservice-revolt
+name: matrix-appservice-revolt
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Appservice bridge between Matrix and Revolt (now Stoat).
+repos:
+- url: https://codeberg.org/austinhuang/matrix-appservice-revolt
+  forge: forgejo
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/stoat/
+  other: []
+maturity: alpha
+platforms:
+- server
+licence: AGPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Stoat (formerly Revolt)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://codeberg.org/austinhuang/matrix-appservice-revolt/src/commit/2d64c808756f4849ee5adbe06121e51b72491812/package.json
+    note: matrix-appservice-bridge
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 2d64c808756f; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Last commit 2024-07-20. matrix.org files it under Stoat.
+checked: 2026-11-05

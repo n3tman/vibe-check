@@ -1,0 +1,70 @@
+slug: beeper-imessage
+name: beeper-imessage
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Archived iMessage puppeting bridge from Beeper, a mautrix-go bridge that used registration relays
+  instead of a Mac.
+repos:
+- url: https://github.com/beeper/imessage
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Mautrix-iMessage Bridge topic)
+maturity: archived
+platforms:
+- server
+licence: AGPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: iMessage
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/imessage/blob/3bed8bdcd6a10615679e7ac7e66417f520112b5c/go.mod
+    note: mautrix-go (legacy bridge)
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 3bed8bdcd6a1; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Archived on GitHub (last commit 2024-01-16). Differs from mautrix-imessage by not needing a Mac
+  for every user (registration providers, also archived).
+checked: 2026-11-05
