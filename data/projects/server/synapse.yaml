@@ -329,9 +329,13 @@ features:
     note: 'referenced in code, no flag found; extent not checked'}
 ai:
   policy:
-    value: none-found
-    quote: null
-    source: null
+    value: restricted
+    quote: AI-assisted contributions are accepted; unreviewed AI output is not. [...] If your PR was made
+      with the help of AI, you must convey that this is the case using the PR template.
+    source: https://github.com/element-hq/element-meta/blob/ea731f1fc96190b2214538c76d95ee34e00400cd/CONTRIBUTING.md#L26
+    note: Element-wide policy in element-meta CONTRIBUTING.md (added 2026-11-02), which says it applies
+      to all element-hq repositories; the repo's own CONTRIBUTING does not link it yet. Commit messages
+      may be AI-drafted if reviewed; reviews may use AI tools, but only a human approves or closes a PR.
   dev_usage:
     value: occasional
     evidence:
@@ -344,9 +348,9 @@ ai:
     value: none-found
     note: null
     source: null
-notes: No AI policy found in CONTRIBUTING or docs. A user asked for one in https://github.com/element-hq/synapse/issues/19793
-  ("Requesting a clearly-defined NO LLM Policy"), closed as completed on 2026-05-20 with one comment that
-  was not readable from this session; the outcome is unverified. Synapse Pro (closed source, Element)
-  is a separate listing. Spec versions come from rust/src/handlers/versions.rs (the /versions handler
-  moved to Rust).
+notes: A user asked for a no-LLM policy in https://github.com/element-hq/synapse/issues/19793, which was
+  moved to https://github.com/element-hq/element-meta/issues/3225 and closed as completed on 2026-11-03;
+  Element's answer is the AI policy in element-meta CONTRIBUTING.md (see ai.policy). The issue comments
+  were not readable from this session. Synapse Pro (closed source, Element) is a separate listing. Spec
+  versions come from rust/src/handlers/versions.rs (the /versions handler moved to Rust).
 checked: '2026-11-05'

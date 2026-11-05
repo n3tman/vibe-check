@@ -45,5 +45,6 @@ ai:
     value: none-found
     note: null
     source: null
-notes: Maturity is our reading.
+notes: 'Maturity is our reading. A matrix-org repo: whether Element counts as its core contributor, which
+  would bring it under Element''s AI policy in element-meta CONTRIBUTING.md, was not established.'
 checked: '2026-11-05'
