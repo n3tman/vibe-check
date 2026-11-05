@@ -405,7 +405,7 @@
   spec_version: null
   labels: [disposition-merge, 'kind:core', merged, proposal]
   url: https://github.com/matrix-org/matrix-spec-proposals/pull/2134
-  servers: [sydent]
+  servers: []
 - msc: 2140
   title: Terms of Service for ISes and IMs
   status: merged
