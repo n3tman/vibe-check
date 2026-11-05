@@ -119,3 +119,20 @@ commits), `weekly_commits` (52 numbers), `daily_commits` (date → count, last 3
 paths, attributed commits and their share, bot authors, AI workflows), `telemetry_scan`
 (analytics or crash-report SDKs found in dependency manifests), `status` (CLAUDE.md
 "Activity status"), `fetched_at`, `head_sha`. Fields a forge can't give are `null`.
+
+## Additions made by the lanes (reconciled in lane 7)
+- `repos[].first_parent: true`: the collector follows only the branch's own line
+  (`git log --first-parent`), for forks that merge upstream, so upstream's commits are not
+  credited to the fork (SchildiChat, Sable v1, Rooster, Vommet).
+- `ai.dev_usage.note`: free text shown under the mark. `ai.dev_usage.checked_at`: the commit read.
+- `ai.dev_usage.collector_override`: one sentence saying why the hand value differs from the
+  collector's `suggested_dev_usage` (a refusal-only `AGENTS.md`, history rewritten to strip
+  trailers, …). The project page shows it instead of "not reconciled yet".
+- `ai.funder_policy`: a list, one entry per funder with an AI policy for the work it pays for:
+  `funder`, `grant` (URL), `grant_start`, `policy` (URL), `policy_version`, `value` (the policy
+  enum), `quote`, `scope`, `transition`, `checked`. Never merged into `ai.policy`.
+- `apps[].note`: short free text about one app (minSdk, unsigned builds).
+- `features.spec_versions` (servers) may be a map with `versions: [...]` and a source.
+- `data/mscs.yaml` entries may carry `status_detail`, `labels` and `servers`.
+- Bot and tool features `purpose`, `framework`, `hosting`, `config`, `ai_backend` hold free text
+  in `value` (listed in `FREE_TEXT` in `site/src/lib/schema.ts`).

@@ -110,6 +110,9 @@ export const projectSchema = z
         policy: z.object({ value: z.enum(POLICY), quote: z.string().nullable().optional(), source: nullableUrl }).passthrough(),
         dev_usage: z.object({ value: z.enum(DEV_USAGE), evidence: z.array(evidence).nullable().optional() }).passthrough(),
         in_product: z.object({ value: z.enum(IN_PRODUCT), note: z.string().nullable().optional(), source: nullableUrl }).passthrough(),
+        funder_policy: z
+          .array(z.object({ funder: z.string(), grant: url, policy: url, value: z.enum(POLICY) }).passthrough())
+          .optional(),
       })
       .passthrough(),
     notes: z.string().nullable().optional(),

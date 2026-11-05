@@ -18,7 +18,7 @@ const server = createServer(async (req, res) => {
   try { res.setHeader('content-type', types[path.extname(f)] ?? 'application/octet-stream'); res.end(await readFile(f)); } catch { res.statusCode = 404; res.end('not found'); }
 }).listen(0);
 const base = `http://127.0.0.1:${server.address().port}/vibe-check/`;
-const fixed = process.env.PAGES ? process.env.PAGES.split(',') : ['', 'client/', 'server/', 'p/element-x/', 'p/beeper/', 'mscs/', 'compare/?p=element-x,conduit', 'methodology/'];
+const fixed = process.env.PAGES ? process.env.PAGES.split(',') : ['', 'client/', 'server/', 'bot/', 'bridge/', 'tool/', 'p/element-x/', 'p/synapse/', 'p/draupnir/', 'p/mirage/', 'p/mautrix-whatsapp/', 'p/schildichat/', 'mscs/', 'compare/?p=element-x,conduit', 'methodology/'];
 await mkdir(out, { recursive: true });
 const browser = await chromium.launch();
 const errors = [];
