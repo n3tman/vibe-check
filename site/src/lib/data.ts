@@ -94,7 +94,8 @@ export function loadDataset(): Dataset {
       if (path.basename(icon.file).replace(/\.[a-z]+$/, '') !== p.slug) errors.push(`${rel(f)}: icon.file "${icon.file}" should be named after the slug`);
       if (!fs.existsSync(path.join(iconDir, icon.file))) errors.push(`${rel(f)}: icon.file "${icon.file}" is missing from ${rel(iconDir)}/`);
     }
-    if (!icon && iconFiles.some((x) => x.replace(/\.[a-z]+$/, '') === p.slug)) errors.push(`${rel(f)}: ${rel(iconDir)}/ has an icon for "${p.slug}" but the file has no icon key (source and licence)`);
+    // Only for the real dataset: fixtures share the icons folder but carry no icon keys.
+    if (!icon && name === 'data' && iconFiles.some((x) => x.replace(/\.[a-z]+$/, '') === p.slug)) errors.push(`${rel(f)}: ${rel(iconDir)}/ has an icon for "${p.slug}" but the file has no icon key (source and licence)`);
     projects.push({ ...p, file: rel(f), metrics: metrics.get(p.slug) ?? null });
   }
 
