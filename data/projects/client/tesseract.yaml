@@ -1,0 +1,212 @@
+slug: tesseract
+name: Tesseract
+category: client
+kind: desktop
+homepage: https://surakin.github.io/tesseract
+summary: Desktop Matrix client for Linux, Windows and macOS built on matrix-rust-sdk, with a C++/Rust
+  bridge and thin per-platform shells; requires sliding sync.
+repos:
+- url: https://github.com/surakin/tesseract
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/tesseract/
+  other: []
+maturity: alpha
+platforms:
+- linux
+- windows
+- macos
+apps:
+- os: linux
+  tech: qt
+  min_os: null
+  status: alpha
+  stores:
+  - name: flatpak
+    url: https://surakin.github.io/tesseract/io.github.surakin.Tesseract.flatpakref
+  - name: aur
+    url: https://aur.archlinux.org/packages/tesseract-matrix
+  source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/README.md#L21
+  note: own Flatpak repo (KDE runtime); not on Flathub
+- os: windows
+  tech: native
+  min_os: null
+  status: alpha
+  stores:
+  - name: microsoft-store
+    url: https://apps.microsoft.com/detail/9nz8v8tcnvjw
+  source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/README.md#L39
+- os: macos
+  tech: native
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/README.md#L11
+licence: GPL-3.0-or-later
+fork_of: null
+distribution:
+- microsoft-store
+- aur
+- flatpak
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: claimed
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/README.md#L11
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/Cargo.toml#L19
+    note: pattern match [matrix-sdk-crypto]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/views/EncryptionSetupOverlay.h#L60
+    note: pattern match [Cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/views/LoginView.cpp#L1805
+    note: pattern match [recovery key]
+  sliding_sync:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/README.md#L13
+    note: 'required: "login will fail if the server does not support it"'
+  oidc_auth:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/README.md#L13
+    note: preferred login is MAS / OAuth2
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/CMakeLists.txt#L183
+    note: pattern match [ThreadList]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/CMakeLists.txt#L245
+    note: pattern match [SpaceChild]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/Cargo.toml#L5
+    note: pattern match [webrtc]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/CMakeLists.txt#L434
+    note: pattern match [livekit]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/views/MessageListView.cpp#L1320
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/views/MessageListView.h#L257
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/views/MessageListView.cpp#L655
+    note: pattern match [in_reply_to]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/packaging/flatpak/cargo-sources.json#L3245
+    note: pattern match [msc3381]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/CMakeLists.txt#L179
+    note: pattern match [image_pack]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/views/MessageListView.cpp#L5740
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/packaging/flatpak/cargo-sources.json#L3227
+    note: pattern match [msc3488]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/packaging/flatpak/cargo-sources.json#L3227
+    note: pattern match [msc3245]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/CMakeLists.txt#L141
+    note: pattern match [UrlPreview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/platform/CMakeLists.txt#L40
+    note: pattern match [UnifiedPush]
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/app/ShellBase.h#L6085
+    note: pattern match [m.read.private]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/CMakeLists.txt#L524
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/views/RoomReplacedBanner.h#L4
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/app/RoomPane.h#L515
+    note: pattern match [report_event]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/tk/side_tab_view.h#L226
+    note: pattern match [a11y]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: matrix.org
+    how: code
+    source: https://github.com/surakin/tesseract/blob/78686f64764bce6f0acf248145a5a9a3f32d35c3/ui/shared/views/LoginView.cpp#L41
+  fork_friendliness:
+    value: partial
+    how: code
+    note: GPL-3.0; Rust core plus C++ shared toolkit and four platform shells (about 1,570 files)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - CLAUDE.md and .claude/ (settings, hooks, skills msc-support and release-notes) at 78686f6476
+    - 2,338 of 2,730 commits in the last 365 days (86 %) carry Claude co-author trailers
+    - 'README: "This started as a Claude Code experiment" and "I used Claude to write everything else"
+      (all but the matrix-rust-sdk parts)'
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The Flatpak README says Flathub does not accept the app because of Flathub's 2026-05-29 policy
+  on AI-assisted code (packaging/flatpak/README.md).
+checked: '2026-11-05'

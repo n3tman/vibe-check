@@ -1,0 +1,171 @@
+slug: relay
+name: Relay
+category: client
+kind: desktop
+homepage: null
+summary: Native macOS Matrix client in SwiftUI, built on the author's pure-Swift MatrixKit SDK.
+repos:
+- url: https://github.com/subpop/Relay
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/relay/
+  other: []
+maturity: beta
+platforms:
+- macos
+apps:
+- os: macos
+  tech: native
+  min_os: '15'
+  status: beta
+  stores:
+  - name: testflight
+    url: https://testflight.apple.com/join/ehFD9g5c
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/relay.md
+  note: Package.swift declares .macOS(.v15)
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own
+    how: claimed
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/README.md#L5
+    note: MatrixKit, a pure-Swift Matrix SDK by the same author
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/Models/KeyFetchCoordinator.swift#L31
+    note: pattern match [megolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/Models/KeyBackupPresentation.swift#L50
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/RelayTests/KeyBackupSetupViewModelTests.swift#L21
+    note: pattern match [KeyBackup]
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/Views/Activity/ActivityView.swift#L42
+    note: pattern match [SlidingSync]
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/Models/RelayError.swift#L35
+    note: pattern match [OIDC]
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/RelayTests/RoomPresentationTests.swift#L25
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/Views/Call/CallE2EE.swift#L42
+    note: pattern match [webrtc]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/Views/Call/LiveKitLogBridge.swift#L16
+    note: pattern match [LiveKit]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/RelayTests/RelayRoomTests.swift#L87
+    note: pattern match [m.reaction]
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/RelayTests/StickerReplyTests.swift#L30
+    note: pattern match [inReplyTo]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/RelayTests/RelayRoomTests.swift#L54
+    note: pattern match [m.poll]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/RelayTests/StickerPickerViewModelTests.swift#L27
+    note: pattern match [ImagePack]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/ViewModels/TimelineViewModel.swift#L736
+    note: pattern match [m.sticker]
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/RelayTests/LinkPreviewSkipListTests.swift#L20
+    note: pattern match [LinkPreview]
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/RelayTests/MarkAsReadTests.swift#L58
+    note: pattern match [m.read.private]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/Views/Call/CallViewModel.swift#L435
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/ViewModels/TimelineViewModel.swift#L167
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/Resources/Relay.help/Contents/Resources/en.lproj/toc.html#L82
+    note: pattern match [/report]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/Relay/Views/Inspector/InspectorTabBar.swift#L57
+    note: pattern match [accessibilityLabel]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: Apache-2.0; Xcode/SwiftPM project, about 320 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - AGENTS.md (guidelines "to reduce common LLM coding mistakes") at 3d3c2b022f
+    - 79 of 797 commits in the last 365 days (10 %) carry Claude co-author trailers
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

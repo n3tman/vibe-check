@@ -1,0 +1,240 @@
+slug: zam
+name: Zam
+category: client
+kind: web, desktop, mobile
+homepage: https://matrix.crafty.moe
+summary: Svelte Matrix client on matrix-js-sdk for web (PWA), Electron desktop and Android (Capacitor),
+  with a long feature list; the hosted copy is matrix.crafty.moe.
+repos:
+- url: https://github.com/az4521/Zam
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/zam/
+  other:
+  - PLAN.md (https://matrix.crafty.moe/)
+maturity: beta
+platforms:
+- web
+- windows
+- macos
+- linux
+- android
+- ios
+apps:
+- os: web
+  tech: pwa
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/README.md#L5
+- os: android
+  tech: webview
+  min_os: '7.0'
+  status: beta
+  stores:
+  - name: apk
+    url: https://github.com/az4521/Zam/releases/latest
+  source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/README.md#L3
+  note: Capacitor; minSdkVersion 24
+- os: ios
+  tech: pwa
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/README.md#L5
+  note: README recommends installing the PWA on iOS; no native iOS app
+- os: linux
+  tech: electron
+  min_os: null
+  status: beta
+  stores:
+  - name: flatpak
+    url: https://az4521.github.io/Zam/
+  source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/README.md#L7
+- os: windows
+  tech: electron
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/zam.md
+- os: macos
+  tech: electron
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/zam.md
+licence: GPL-3.0-only
+fork_of: null
+distribution:
+- flatpak
+- apk
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/package.json
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/vite.config.ts#L81
+    note: pattern match [rust-crypto]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/stores/identityAlerts.svelte.ts#L2
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/logCapture.ts#L93
+    note: pattern match [recovery_key]
+  sliding_sync:
+    value: partial
+    how: claimed
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/README.md#L47
+    note: optional, in Debug settings, alongside classic sync
+  oidc_auth:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/README.md#L64
+    note: native OAuth 2.0 / OIDC (MAS); no QR login or device-code grant yet
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/README.md#L45
+    note: one account open at a time; all get notifications
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/components/layout/MessageArea.svelte#L256
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/stores/notifications.svelte.ts#L2
+    note: pattern match [SpaceChild]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/matrix/webrtcRealm.test.ts#L3
+    note: pattern match [webrtc]
+  group_calls:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/README.md
+    note: MatrixRTC (MSC4143) with LiveKit; needs server-side infrastructure
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/matrix/client.ts#L7204
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/components/debug/DebugPanel.svelte#L128
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/components/messages/MessageItem.svelte#L1085
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/matrix/client.ts#L4791
+    note: pattern match [org.matrix.msc3381]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/components/layout/AppShell.svelte#L2339
+    note: pattern match [im.ponies]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/components/debug/DebugPanel.svelte#L87
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/stores/liveLocation.svelte.ts#L344
+    note: pattern match [m.beacon]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/components/layout/MessageSearchPanel.svelte#L212
+    note: pattern match [org.matrix.msc3245.voice]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/svelte.config.js#L13
+    note: pattern match [link preview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/push.ts#L4
+    note: pattern match [UnifiedPush]
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/nativeSession.ts#L174
+    note: pattern match [private read receipt]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/app.d.ts#L137
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/components/layout/MessageArea.svelte#L41
+    note: pattern match [Tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/components/messages/MessageReportAction.svelte#L3
+    note: pattern match [reportEvent]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/components/ui/ModalDialog.test.ts#L89
+    note: pattern match [aria-label]
+  translations:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/README.md#L48
+    note: English, French, German, Assyrian Neo-Aramaic
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: matrix.org
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/src/lib/config.ts#L4
+  fork_friendliness:
+    value: partial
+    how: code
+    source: https://github.com/az4521/Zam/blob/e5f33ef253ee320dcb03a857bc9ec9a2020e4963/package.json
+    note: GPL-3.0; npm + Vite/SvelteKit, Capacitor for Android, Electron for desktop; plugins run unsandboxed
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 1,989 of 2,449 commits in the last 365 days (81 %) carry Claude co-author trailers (Claude Opus
+      4.8, 5, 5.5), at e5f33ef253
+    - no agent files (CLAUDE.md, AGENTS.md, .claude/) in the tree
+  in_product:
+    value: none-found
+    note: No LLM SDKs or endpoints in the code; GIFs come from KLIPY and plugins run third-party code.
+    source: null
+notes: 'PLAN.md says matrix.crafty.moe "uses AI". Found: the AI use is in development, shown by commit
+  trailers on most commits (both authors use them); no AI feature in the product was found, and no written
+  statement about AI was found in the README. The hosted page is the app itself (a single-page app) with
+  no text to read without JavaScript.'
+checked: '2026-11-05'

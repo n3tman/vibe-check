@@ -1,0 +1,221 @@
+slug: vommet
+name: Vommet
+category: client
+kind: desktop, mobile, web
+homepage: https://vommet.app
+summary: A downstream, LLM-assisted soft fork of Commet (Flutter), aimed at Discord-like papercuts and
+  the Nether voice bridges.
+repos:
+- url: https://nether.codes/nether/vommet
+  forge: forgejo
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - PLAN.md (https://vommet.app)
+maturity: alpha
+platforms:
+- linux
+- android
+- windows
+- macos
+- ios
+- web
+apps:
+- os: linux
+  tech: flutter
+  min_os: glibc 2.39 (Ubuntu 24.04, Debian 13)
+  status: alpha
+  stores: []
+  source: https://vommet.app
+- os: android
+  tech: flutter
+  min_os: null
+  status: alpha
+  stores:
+  - name: apk
+    url: https://vommet.app
+  source: https://vommet.app
+  note: arm64 APK; Play, F-Droid and Flathub listings "on the way"
+- os: windows
+  tech: flutter
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://vommet.app
+- os: macos
+  tech: flutter
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://vommet.app
+- os: ios
+  tech: flutter
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://vommet.app
+  note: unsigned .ipa for AltStore/SideStore; TestFlight planned
+- os: web
+  tech: flutter
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://vommet.app
+  note: web.vommet.app
+licence: AGPL-3.0-only
+fork_of: commet
+distribution:
+- apk
+funding: []
+features:
+  sdk:
+    value: matrix-dart-sdk
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/pubspec.yaml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/pubspec.yaml#L98
+    note: pattern match [vodozemac]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/ui/pages/settings/categories/account/security/matrix/matrix_security_tab.dart#L15
+    note: pattern match [cross_signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/ui/pages/settings/categories/account/security/matrix/cross_signing/cross_signing_view.dart#L18
+    note: pattern match [recoveryKey]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/integration_test/synapse/data/homeserver.yaml#L1845
+    note: pattern match [OIDC]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/ui/organisms/chat/chat.dart#L145
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/ui/organisms/space_summary/space_summary.dart#L8
+    note: pattern match [space_child]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/pubspec.yaml#L90
+    note: pattern match [webrtc]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/pubspec.yaml#L89
+    note: pattern match [livekit]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/ui/pages/developer/benchmarks/benchmark_utils.dart#L89
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/client/matrix/matrix_room.dart#L559
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/ui/organisms/chat/chat.dart#L253
+    note: pattern match [inReplyTo]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/client/matrix/components/polls/matrix_poll_component.dart#L21
+    note: pattern match [org.matrix.msc3381]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/ui/organisms/chat/chat.dart#L8
+    note: pattern match [emoticon]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/ui/pages/settings/categories/app/advanced_settings_page.dart#L31
+    note: pattern match [m.sticker]
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/lib/ui/pages/settings/categories/developer/developer_settings_page.dart#L64
+    note: pattern match [rich text editor]
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/integration_test/benchmark/benchmarks/timeline_viewer_benchmark.dart#L58
+    note: pattern match [Url Preview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/pubspec.yaml#L46
+    note: pattern match [unifiedpush]
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/integration_test/synapse/data/homeserver.yaml#L93
+    note: pattern match [presence]
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/integration_test/synapse/data/homeserver.yaml#L1508
+    note: pattern match [/report]
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: opt-in
+    how: claimed
+    source: https://vommet.app
+    note: asks once after sign-in; "Pseudonymous, never message content"
+  default_homeserver:
+    value: matrix.org
+    how: code
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/commet/assets/config/global_config.json#L2
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/README.md#L22
+    note: AGPL-3.0; a patch stack on top of Commet main; Flutter build
+ai:
+  policy:
+    value: allowed
+    quote: Most code here was written with the help of an LLM.
+    source: https://nether.codes/nether/vommet/src/commit/246a6e35df96f4ae8489fb5ccad87ec8f053e6dc/README.md#L15
+  dev_usage:
+    value: regular
+    evidence:
+    - AGENTS.md ("instructions for AI coding agents (Codex, Claude Code, opencode and others)") and CLAUDE.md
+      at 246a6e35df
+    - 246 of 549 first-parent commits in the last 365 days (45 %) carry AI co-author trailers; the rest
+      of the first-parent history is mostly Commet's own upstream commits
+    - 'homepage: "Most of Vommet''s code is written with the help of an LLM."'
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Third-party requests (GIF search, sticker import) go through the project's own proxy (README).
+  The README says Commet's contribution policy prohibits LLM-written code, so nothing from the fork is
+  submitted upstream.
+checked: '2026-11-05'

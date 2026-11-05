@@ -1,0 +1,206 @@
+slug: neochat
+name: NeoChat
+category: client
+kind: desktop, mobile
+homepage: https://apps.kde.org/neochat
+summary: KDE's Matrix client, built with Qt, Kirigami and libQuotient, for Linux desktops, Plasma Mobile,
+  Windows and Android.
+repos:
+- url: https://invent.kde.org/network/neochat
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/neochat/
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: beta
+platforms:
+- linux
+- windows
+- macos
+- android
+apps:
+- os: linux
+  tech: qt
+  min_os: null
+  status: stable
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/org.kde.neochat
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/neochat.md
+- os: windows
+  tech: qt
+  min_os: null
+  status: beta
+  stores:
+  - name: microsoft-store
+    url: https://www.microsoft.com/store/apps/9PNXWVNRC29H
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/neochat.md
+- os: android
+  tech: qt
+  min_os: null
+  status: beta
+  stores: []
+  source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/android/build.gradle
+  note: Android build exists (KDE F-Droid repo, per a commented-out line in the matrix.org listing)
+licence: GPL-3.0-only
+fork_of: null
+distribution:
+- flathub
+- microsoft-store
+funding: []
+features:
+  sdk:
+    value: libQuotient
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/CMakeLists.txt
+    note: libQuotient (Qt), with Quotient's Rust crypto
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/settings/ExportKeysDialog.qml#L47
+    note: pattern match [Megolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/app/qml/ManageKeyStorageDialog.qml#L112
+    note: pattern match [Cross-Signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/app/qml/ManageKeyStorageDialog.qml#L33
+    note: pattern match [KeyBackup]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/libneochat/jobs/neochatauthmetadatajob.cpp#L9
+    note: pattern match [auth_metadata]
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/neochat.md
+  threads:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/messagecontent/contentprovider.cpp#L79
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/app/roommanager.cpp#L606
+    note: pattern match [SpaceHierarchy]
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/app/qml/GlobalMenu.qml#L79
+    note: pattern match [element call]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/settings/models/permissionsmodel.cpp#L39
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/chatbar/actionsmodel.cpp#L527
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/libneochat/neochatroom.cpp#L1706
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/app/notificationsmanager.cpp#L143
+    note: pattern match [org.matrix.msc3381]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/chatbar/EmojiPicker.qml#L124
+    note: pattern match [emoticon]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/libneochat/events/imagepackevent.h#L42
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/messagecontent/LocationComponent.qml#L83
+    note: pattern match [geo:]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/chatbar/VoiceMessageDialog.qml#L19
+    note: pattern match [VoiceMessage]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/messagecontent/LinkPreviewComponent.qml#L14
+    note: pattern match [link preview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/snapcraft.yaml#L141
+    note: pattern match [unifiedpush]
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/autotests/server.cpp#L388
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/settings/RoomAdvancedPage.qml#L61
+    note: pattern match [roomUpgrade]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/timeline/DelegateContextMenu.qml#L419
+    note: pattern match [reportEvent]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/src/chatbar/NewPollDialog.qml#L119
+    note: pattern match [Accessible.name]
+  translations:
+    value: 'yes'
+    how: claimed
+    note: KDE l10n (Scripty) infrastructure
+  telemetry:
+    value: not-found
+    how: code
+    source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/android/build.gradle#L30
+    note: io.sentry:sentry-android-core is a dependency of the Android build; whether and how it reports
+      was not checked
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: partial
+    how: code
+    note: GPL-3.0; CMake/Qt6/KF6 build with libQuotient; about 740 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at 2bcdbc0f7b
+    - no AI-attributed commits in 1,147 non-bot commits of the last 365 days
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: A KDE-wide policy on AI contributions, if any, was not checked; nothing in the repo itself.
+checked: '2026-11-05'

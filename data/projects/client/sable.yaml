@@ -1,0 +1,234 @@
+slug: sable
+name: Sable
+category: client
+kind: web, desktop
+homepage: https://sable.moe
+summary: A Cinny fork focused on quality-of-life features; v1 (Sable Legacy) is in maintenance and development
+  moved to the Sable v2 rewrite ("Sable next").
+repos:
+- url: https://git.sable.moe/SableClient/Sable-next
+  forge: forgejo
+  role: main
+- url: https://github.com/SableClient/Sable-Legacy
+  forge: github
+  role: other
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/sable/
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+  - PLAN.md (https://next.sable.moe)
+maturity: beta
+platforms:
+- web
+- windows
+- macos
+- linux
+apps:
+- os: web
+  tech: other
+  min_os: null
+  status: beta
+  stores: []
+  source: https://next.sable.moe
+- os: linux
+  tech: electron
+  min_os: null
+  status: beta
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/moe.sable.client
+  source: https://github.com/SableClient/Sable-Legacy/blob/3adfe1e6cddf9cc724574a6bf58fb7eac041d294/README.md#L17
+- os: windows
+  tech: electron
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/SableClient/Sable-Legacy/blob/3adfe1e6cddf9cc724574a6bf58fb7eac041d294/README.md#L17
+- os: macos
+  tech: electron
+  min_os: null
+  status: beta
+  stores:
+  - name: homebrew
+    url: https://github.com/SableClient/homebrew-sable
+  source: https://github.com/SableClient/Sable-Legacy/blob/3adfe1e6cddf9cc724574a6bf58fb7eac041d294/README.md#L17
+licence: AGPL-3.0-only
+fork_of: cinny
+distribution:
+- flathub
+- homebrew
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/Cargo.toml
+    note: 'v2: own Rust core on matrix-sdk / matrix-sdk-ui (crates/sable-core), compiled to WASM; v1 used
+      matrix-js-sdk like Cinny'
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/transport/web.test.ts#L635
+    note: pattern match [megolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/packaging/flatpak/moe.sable.client.metainfo.xml#L42
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/packaging/flatpak/moe.sable.client.metainfo.xml#L42
+    note: pattern match [key backup]
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L1428
+    note: pattern match [sliding_sync]
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L232
+    note: pattern match [auth_metadata]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L492
+    note: pattern match [thread_root]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L189
+    note: pattern match [SpaceChild]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L1853
+    note: pattern match [call_invite]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/Cargo.toml#L44
+    note: pattern match [msc4143]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/lib/model/model.ts#L508
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/lib/features/room/timeline/state-event-icon.test.ts#L113
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L733
+    note: pattern match [in_reply_to]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/crates/sable-core/src/preview.rs#L178
+    note: pattern match [org.matrix.msc3381]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/emoji-data.d.ts#L2
+    note: pattern match [emoticon]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/lib/features/widgets/capabilities.ts#L52
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L1850
+    note: pattern match [geo:]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/lib/ui/VoiceMessagePlayer.svelte#L65
+    note: pattern match [voice-message]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L1950
+    note: pattern match [link_preview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L1085
+    note: pattern match [UnifiedPush]
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/crates/sable-core/src/sdk_timeline_tests.rs#L3541
+    note: pattern match [m.read.private]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/i18next.config.ts#L26
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/generated/protocol.ts#L1249
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/lib/ui/MediaContent.svelte.test.ts#L237
+    note: pattern match [/report]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/package.json#L119
+    note: pattern match [a11y]
+  translations:
+    value: not-found
+  telemetry:
+    value: opt-in
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/src/service-worker/telemetry.ts
+    note: Sentry; events are dropped unless the user consented (telemetryConsent)
+  default_homeserver:
+    value: 'yes'
+    how: code
+    source: https://github.com/SableClient/Sable-Legacy/blob/3adfe1e6cddf9cc724574a6bf58fb7eac041d294/config.json#L4
+    note: v1 config homeserverList starts with matrix.org
+  fork_friendliness:
+    value: partial
+    how: code
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/Cargo.toml
+    note: AGPL-3.0; v2 is a Rust workspace (about 10 crates) plus a TypeScript UI and Electron shell,
+      built with pnpm and mise; about 3,400 files
+ai:
+  policy:
+    value: banned
+    quote: Sable declines any contribution believed to include or derive from AI-generated content, including
+      ChatGPT, Claude, Copilot, Llama and similar tools.
+    source: https://git.sable.moe/SableClient/Sable-next/src/commit/4bfde17ab615f8cb69048e7f8dbbf65e629ed0da/CONTRIBUTING.md#L34
+  dev_usage:
+    value: none-found
+    evidence:
+    - 'v2 (Sable-next): no agent files, no AI-attributed commits in the last 365 days (first-parent history,
+      3,981 commits) at 4bfde17ab615'
+    - 'v1 (Sable-Legacy): CLAUDE.md, AGENTS.md, .cursorrules and .github/copilot-instructions.md hold
+      the same short deterrent text telling AI agents not to open issues or PRs; they are not working
+      agent configs'
+    - 'v1: 3 commits in its whole merged history carry Copilot co-author trailers; none in its own first-parent
+      history of the last year'
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'Sable Legacy (v1) PR template asked for an AI disclosure (none / partially / fully AI generated),
+  so v1 was "restricted"; v2 bans AI-generated content outright. The fork adds over Cinny: quality-of-life
+  features, cosmetics, a Tauri/Electron desktop app; v2 replaces the matrix-js-sdk core with a Rust one.
+  Metrics: count the v2 repo; v1 history includes all of Cinny.'
+checked: '2026-11-05'

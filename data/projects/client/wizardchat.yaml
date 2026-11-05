@@ -1,0 +1,204 @@
+slug: wizardchat
+name: WizardChat
+category: client
+kind: web, desktop, mobile
+homepage: https://wizardchat.org
+summary: Matrix client that moved from a web/desktop app to a new Rust core with native apps for web,
+  desktop, iOS and Android.
+repos:
+- url: https://gitlab.com/wizardchat/wizardchat
+  forge: gitlab
+  role: main
+- url: https://gitlab.com/wizardchat/wizardchat-web
+  forge: gitlab
+  role: other
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/wizardchat/
+  other: []
+maturity: beta
+platforms:
+- web
+- windows
+- macos
+- linux
+- ios
+- android
+apps:
+- os: web
+  tech: other
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/wizardchat.md
+  note: app.wizardchat.org
+- os: android
+  tech: native
+  min_os: '8.0'
+  status: beta
+  stores: []
+  source: https://gitlab.com/wizardchat/wizardchat-web/-/blob/9b85b14389ebcc8da9d72b6b5837696bd2923d41/README.md#L3
+  note: minSdk 26 in the new repo
+- os: ios
+  tech: native
+  min_os: '18'
+  status: beta
+  stores: []
+  source: https://gitlab.com/wizardchat/wizardchat-web/-/blob/9b85b14389ebcc8da9d72b6b5837696bd2923d41/README.md#L3
+  note: Package.swift .iOS(.v18)
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: not-found
+    note: own Rust core ("a new Rust core"); its Matrix library was not checked in this pass; the old
+      web app used matrix-js-sdk
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/Cargo.toml#L11
+    note: pattern match [matrix-sdk-crypto]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/encryption.rs#L35
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/encryption.rs#L30
+    note: pattern match [recovery key]
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/features.rs#L130
+    note: pattern match [Sliding sync]
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/auth.rs#L34
+    note: pattern match [MSC3861]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/rooms.rs#L730
+    note: pattern match [m.thread]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/features.rs#L183
+    note: pattern match [m.space.parent]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/rooms.rs#L265
+    note: pattern match [m.call.invite]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/calls.rs#L1
+    note: pattern match [MatrixRTC]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/calls.rs#L1249
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/content.rs#L315
+    note: pattern match [m.new_content]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/features.rs#L405
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/content.rs#L490
+    note: pattern match [m.poll]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/features.rs#L62
+    note: pattern match [emoticon]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/rooms.rs#L631
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/content.rs#L56
+    note: pattern match [geo:]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/content.rs#L115
+    note: pattern match [voice message]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/extras.rs#L1
+    note: pattern match [Link preview]
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/rooms.rs#L683
+    note: pattern match [ReadPrivate]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/packages/design-tokens/src/themes/garnet.json#L109
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/rooms.rs#L55
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/crates/core/src/room_admin.rs#L504
+    note: pattern match [report_event]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/wizardchat/wizardchat/-/blob/2c82b131724bc984b7f48c6a2fcda02062d2050a/eslint.config.js#L7
+    note: pattern match [a11y]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: partial
+    how: code
+    note: AGPL-3.0; Rust core with generated bindings and native shells
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: config-only
+    evidence:
+    - AGENTS.md at 2c82b13172 (points agents to the README and docs)
+    - 'docs/CONTRIBUTING.md: "No AI attribution in commits." so trailer counts say nothing here'
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'wizardchat-web README: "This repository has moved." The sdk note is unverified (the new core''s
+  Cargo.toml was not read in this pass).'
+checked: '2026-11-05'

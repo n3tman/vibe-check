@@ -1,0 +1,219 @@
+slug: mindroom-chat
+name: MindRoom Chat
+category: client
+kind: web, desktop, mobile
+homepage: https://chat.mindroom.chat
+summary: 'A Cinny-based Matrix client made for the MindRoom AI-agent platform: streaming agent replies,
+  tool traces, approval cards and canvases.'
+repos:
+- url: https://github.com/mindroom-ai/mindroom-chat
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - PLAN.md (category to check)
+maturity: beta
+platforms:
+- web
+- macos
+- ios
+- android
+apps:
+- os: web
+  tech: other
+  min_os: null
+  status: stable
+  stores: []
+  source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/README.md#L30
+- os: ios
+  tech: webview
+  min_os: '16.4'
+  status: stable
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/us/app/mindroom-ai/id6760272172
+  source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/README.md#L31
+  note: iPhone and iPad; Capacitor shell (IPHONEOS_DEPLOYMENT_TARGET 16.4)
+- os: macos
+  tech: other
+  min_os: '13.3'
+  status: stable
+  stores:
+  - name: homebrew
+    url: https://github.com/mindroom-ai/homebrew-tap
+  source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/README.md#L32
+- os: android
+  tech: webview
+  min_os: '7.0'
+  status: beta
+  stores: []
+  source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/README.md#L33
+  note: internal testing on Google Play, not public
+licence: AGPL-3.0-only
+fork_of: cinny
+distribution:
+- app-store
+- homebrew
+- docker
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/package.json
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/vite.config.js#L119
+    note: pattern match [matrix-sdk-crypto]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/types/matrix/accountData.ts#L15
+    note: pattern match [CrossSigning]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/types/matrix/accountData.ts#L13
+    note: pattern match [SecretStorage]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/i18nLiteralTokens.test.ts#L55
+    note: pattern match [OIDC]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/components/message/Reply.tsx#L51
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/types/matrix/room.ts#L39
+    note: pattern match [SpaceChild]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/mindroom/canvas/canvasDocument.test.ts#L135
+    note: pattern match [RTCPeerConnection]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/vite.config.js#L17
+    note: pattern match [ElementCall]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/types/matrix/room.ts#L51
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/matrixRelationsRace.test.ts#L14
+    note: pattern match [m.new_content]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/mindroom/message-search/SearchResultGroup.tsx#L133
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/mindroom/threads/sdk/roomTimelineSdk.test.ts#L46
+    note: pattern match [m.poll]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/types/matrix/accountData.ts#L10
+    note: pattern match [im.ponies]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/types/matrix/room.ts#L49
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/mindroom/threads/compactThreadRootData.test.ts#L975
+    note: pattern match [m.location]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/types/matrix/common.ts#L8
+    note: pattern match [VOICE_MESSAGE]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/capacitor.config.ts#L24
+    note: pattern match [LinkPreview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/mindroom/native/iosPush.ts#L23
+    note: pattern match [setPusher]
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/mindroom/notifications/readReceipts.ts#L17
+    note: pattern match [ReadPrivate]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/app/components/presence/Presence.tsx#L24
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/types/matrix/room.ts#L34
+    note: pattern match [Tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/src/serviceWorkerNavigation.ts#L15
+    note: pattern match [/report]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/package.json#L168
+    note: pattern match [a11y]
+  translations:
+    value: not-found
+  telemetry:
+    value: not-found
+  default_homeserver:
+    value: matrix.org
+    how: code
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/config.json#L3
+    note: first entry of homeserverList; the hosted app offers mindroom.chat accounts
+  fork_friendliness:
+    value: partial
+    how: code
+    note: AGPL-3.0; Cinny (Vite/React) plus Capacitor iOS/Android; about 2,900 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - 'CLAUDE.md, AGENTS.md and .claude/ (skills: pr-review, address-pr-review-comments, cinny-live-test,
+      native-subagent-pr-loop) at 9a35686964'
+    - 4 of 795 commits in the last 365 days carry Claude co-author trailers (0.5 %, below the 1 % mark;
+      the agent setup is what makes this more than config-only)
+  in_product:
+    value: core
+    note: 'Built to talk to MindRoom AI agents: streaming replies with tool traces, model and run details,
+      approval cards, canvases and agent-driven browsers.'
+    source: https://github.com/mindroom-ai/mindroom-chat/blob/9a35686964e6228ccf9b03483617d0b8b18f0b8d/README.md#L12
+notes: 'Category decided from the repo: it is a full Matrix client (a Cinny fork), so lane 3 owns it.
+  The agent backend, MindRoom (https://github.com/mindroom-ai/mindroom), is a bot/tool: listed in notes/03.md
+  for lane 5.'
+checked: '2026-11-05'

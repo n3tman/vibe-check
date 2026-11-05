@@ -1,0 +1,145 @@
+slug: mactrix
+name: Mactrix
+category: client
+kind: desktop
+homepage: null
+summary: Native macOS Matrix client in AppKit and SwiftUI, on the matrix-rust-sdk Swift bindings.
+repos:
+- url: https://github.com/viktorstrate/mactrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/mactrix/
+  other: []
+maturity: alpha
+platforms:
+- macos
+apps:
+- os: macos
+  tech: native
+  min_os: '15.7'
+  status: alpha
+  stores: []
+  source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/README.md
+  note: not notarized; GitHub releases
+licence: GPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    note: matrix-rust-components-swift
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixIntegration/MatrixClient.swift#L75
+    note: pattern match [CrossSigning]
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixIntegration/UserSession.swift#L39
+    note: pattern match [slidingSync]
+  oidc_auth:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/README.md
+    note: 'README feature list: OAuth checked'
+  multi_account:
+    value: 'no'
+    how: claimed
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/README.md
+    note: unchecked in the README feature list
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixIntegration/Extensions/MatrixRustSDK+Extensions.swift#L119
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MactrixUI/Sidebar/RoomRow.swift#L60
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixIntegration/LiveTimeline.swift#L213
+    note: pattern match [inReplyTo]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixProtocols/MsgLikeContent.swift#L25
+    note: pattern match [m.poll]
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixProtocols/MsgLikeContent.swift#L21
+    note: pattern match [m.sticker]
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixIntegration/Extensions/MatrixRustSDK+Extensions.swift#L445
+    note: pattern match [Tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MactrixApp/Views/Sidebar/SidebarGroupsList.swift#L119
+    note: pattern match [accessibilityLabel]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: matrix.org
+    how: code
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MactrixApp/Views/WelcomeSheetView.swift#L21
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: GPL-3.0; Xcode workspace, about 200 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI trailers in 175 commits at 2c6d195c4e
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

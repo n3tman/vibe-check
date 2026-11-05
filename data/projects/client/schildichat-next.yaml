@@ -1,0 +1,193 @@
+slug: schildichat-next
+name: SchildiChat Next
+category: client
+kind: mobile
+homepage: https://schildi.chat/android/next
+summary: Android Matrix client forked from Element X Android, with SchildiChat's UI and settings additions.
+repos:
+- url: https://github.com/SchildiChat/schildichat-android-next
+  forge: github
+  role: android
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/schildichat-next/
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: stable
+platforms:
+- android
+apps:
+- os: android
+  tech: native
+  min_os: null
+  status: stable
+  stores:
+  - name: google-play
+    url: https://play.google.com/store/apps/details?id=chat.schildi.android
+  - name: f-droid
+    url: https://f-droid.org/packages/chat.schildi.android
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/schildichat-next.md
+licence: AGPL-3.0-only
+fork_of: element-x
+distribution:
+- google-play
+- f-droid
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/gradle/libs.versions.toml
+    note: matrix-rust-sdk (via the Element X matrix-rust-components)
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/matrix/api/src/main/kotlin/io/element/android/libraries/matrix/api/timeline/item/event/MessageShield.kt#L33
+    note: pattern match [Megolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/matrix/impl/src/main/kotlin/io/element/android/libraries/matrix/impl/RustMatrixClientFactory.kt#L167
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/testtags/src/main/kotlin/io/element/android/libraries/testtags/TestTags.kt#L31
+    note: pattern match [recoveryKey]
+  sliding_sync:
+    value: 'yes'
+    how: claimed
+    note: inherited from Element X, which requires simplified sliding sync (MSC4186)
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/app/src/main/kotlin/io/element/android/x/ScApplication.kt#L12
+    note: pattern match [OIDC]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/mediaupload/impl/src/main/kotlin/io/element/android/libraries/mediaupload/impl/DefaultMediaSender.kt#L290
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/designsystem/src/main/kotlin/io/element/android/libraries/designsystem/theme/components/AlertDialogContent.kt#L291
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/eventformatter/impl/src/main/kotlin/io/element/android/libraries/eventformatter/impl/DefaultTimelineEventFormatter.kt#L22
+    note: pattern match [CallInvite]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/settings.gradle.kts#L92
+    note: pattern match [element-call]
+  reactions:
+    value: not-found
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/tools/dependencies/checkDependencies.py#L38
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/mediaupload/api/src/main/kotlin/io/element/android/libraries/mediaupload/api/MediaSender.kt#L73
+    note: pattern match [inReplyTo]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/matrix/api/src/main/kotlin/io/element/android/libraries/matrix/api/room/StateEventType.kt#L36
+    note: pattern match [ImagePack]
+  stickers:
+    value: not-found
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/matrix/api/src/main/kotlin/io/element/android/libraries/matrix/api/MatrixClient.kt#L39
+    note: pattern match [m.location]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/mediaupload/api/src/main/kotlin/io/element/android/libraries/mediaupload/api/MediaSender.kt#L102
+    note: pattern match [voice message]
+  rich_text_editor:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/settings.gradle.kts#L47
+    note: pattern match [wysiwyg]
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/schildi/matrixsdk/src/main/kotlin/chat/schildi/matrixsdk/urlpreview/UrlPreviewProvider.kt#L1
+    note: pattern match [urlpreview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/app/build.gradle.kts#L357
+    note: pattern match [UnifiedPush]
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/matrix/api/src/main/kotlin/io/element/android/libraries/matrix/api/timeline/ReceiptType.kt#L13
+    note: pattern match [READ_PRIVATE]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/libraries/preferences/api/src/main/kotlin/io/element/android/libraries/preferences/api/store/SessionPreferencesStore.kt#L21
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/.idea/dictionaries/shared.xml#L23
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/build.gradle.kts#L255
+    note: pattern match [/report]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/appicon/element/src/main/kotlin/io/element/android/appicon/element/IconPreview.kt#L30
+    note: pattern match [contentDescription]
+  translations:
+    value: not-found
+  telemetry:
+    value: opt-in
+    how: code
+    source: https://github.com/SchildiChat/schildichat-android-next/blob/588a9cd957e2581d1823f57cd066dbc35a27ca9e/services/analyticsproviders/posthog/build.gradle.kts
+    note: PostHog analytics module inherited from Element X (opt-in in Element X); whether SchildiChat
+      ships it enabled was not checked
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: partial
+    how: code
+    note: AGPL-3.0 plus Element's commercial licence file inherited; large Gradle multi-module Kotlin
+      project (about 7,900 files) tracking upstream merges
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: config-only
+    evidence:
+    - AGENTS.md and CLAUDE.md at the repo root, inherited from upstream element-x-android (the file names
+      that repo)
+    - 'SchildiChat''s own first-parent commits in the last 365 days: 174, none with AI trailers'
+    - merged upstream Element X history in the same window has 228 commits with Claude co-author trailers
+      (by Element developers, not SchildiChat)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The upstream_infra/ folder carries Element X's CONTRIBUTING, which says "We are also fine with
+  AI led contributions within reasonable bounds"; that is Element's policy, not SchildiChat's own. The
+  collector should count first-parent history only for this fork.
+checked: '2026-11-05'
