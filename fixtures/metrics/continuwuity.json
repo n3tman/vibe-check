@@ -336,7 +336,7 @@
   "security_policy": "https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/SECURITY.md",
   "stars": 116,
   "status": "active",
-  "tags_365d": 36,
+  "tags_365d": 29,
   "telemetry_sdks": [],
   "tests_present": true,
   "weekly_commits": [
@@ -394,7 +394,7 @@
    32
   ]
  },
- "fetched_at": "2026-11-05T04:06:48+00:00",
+ "fetched_at": "2026-11-05T04:19:14+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -751,12 +751,13 @@
    "ok": true,
    "open_issues": 144,
    "open_prs": 54,
+   "prerelease_tags_365d": 7,
    "role": "main",
    "security_policy": "SECURITY.md",
    "security_policy_url": "https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/223e8894596eb46aa46e5fc6a60f7c00f184ba72/SECURITY.md",
    "stars": 116,
    "status": "active",
-   "tags_365d": 36,
+   "tags_365d": 29,
    "telemetry_scan": {
     "found": [],
     "manifests_scanned": 14,

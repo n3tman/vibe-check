@@ -149,7 +149,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T04:06:48+00:00",
+ "fetched_at": "2026-11-05T04:19:14+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -252,6 +252,7 @@
    "ok": true,
    "open_issues": 195,
    "open_prs": 50,
+   "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
    "stars": 964,

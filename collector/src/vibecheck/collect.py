@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import threading
 from collections import Counter
 from dataclasses import dataclass, field
@@ -13,6 +14,10 @@ from urllib.parse import urlparse
 from . import VERSION, ai, forges, gitrepo, loc, repofiles, telemetry
 from .activity import Activity, human_commits, status
 from .authors import ai_bot_tool
+
+
+# Tags that are not releases: nightlies, betas, release candidates, test builds.
+PRERELEASE = re.compile(r"nightly|alpha|beta|[-.]rc\.?\d*|(\d|\b)rc\d|[-.]dev|preview|snapshot|canary|\btest|^untagged", re.I)
 
 
 @dataclass
@@ -117,14 +122,16 @@ def collect_repo(spec: dict, ctx: Context) -> tuple[dict, list[gitrepo.Commit]]:
     act = Activity(commits, ctx.now)
     m = act.metrics()
     all_tags = gitrepo.tags(dest)
+    releases = [t for t in all_tags if not PRERELEASE.search(t[0])] or all_tags
     cut = ctx.now - timedelta(days=365)
     out.update(
         head_sha=sha,
         default_branch=branch or None,
         **m,
-        last_tag=all_tags[0][0] if all_tags else None,
-        last_tag_date=_iso(all_tags[0][1]) if all_tags else None,
-        tags_365d=sum(1 for _, d in all_tags if d >= cut),
+        last_tag=releases[0][0] if releases else None,
+        last_tag_date=_iso(releases[0][1]) if releases else None,
+        tags_365d=sum(1 for _, d in releases if d >= cut),
+        prerelease_tags_365d=sum(1 for n, d in all_tags if d >= cut and PRERELEASE.search(n)),
         ci=repofiles.ci_files(paths),
         tests_present=repofiles.tests_present(paths),
         security_policy=repofiles.security_policy(paths),

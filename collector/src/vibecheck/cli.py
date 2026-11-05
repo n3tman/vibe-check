@@ -111,7 +111,7 @@ def main(argv: list[str] | None = None) -> int:
             for r in data["repos"]:
                 if r["ok"]:
                     summary["repos_ok"] += 1
-                    if r.get("api_error"):
+                    if r.get("api_error") and not r["api_error"].startswith("skipped"):
                         summary["api_errors"].append(f"{r['url']}: {r['api_error']}")
                 else:
                     summary["repos_failed"].append(f"{r['url']}: {r['error']}")

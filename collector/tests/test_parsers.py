@@ -274,3 +274,11 @@ def test_fetch_never_raises():
     out = forges.fetch("github", "https://github.com/o/r", Boom(), NOW)
     assert out["stars"] is None and "down" in out["api_error"]
     assert forges.fetch("sourcehut", "https://git.sr.ht/~a/b", Boom(), NOW)["api_error"].startswith("no API reader")
+
+
+def test_prerelease_tags():
+    from vibecheck.collect import PRERELEASE
+    for t in ["nightly/26.11.0.1353", "v1.2.0-rc.1", "v2.0.0-beta.3", "1.0rc2", "v3.0.0-dev"]:
+        assert PRERELEASE.search(t), t
+    for t in ["v1.12.0", "26.11.0", "release-2024-01", "sdk-v0.9.1"]:
+        assert not PRERELEASE.search(t), t
