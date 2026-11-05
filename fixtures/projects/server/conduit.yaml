@@ -1,0 +1,33 @@
+slug: conduit
+name: Conduit (fixture)
+category: server
+kind: homeserver
+homepage: https://conduit.rs
+summary: Fixture. A Matrix homeserver written in Rust.
+repos:
+  - {url: https://gitlab.com/famedly/conduit, forge: gitlab, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other: []
+maturity: beta
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  language: Rust
+  database: {value: yes, how: claimed, source: https://gitlab.com/famedly/conduit, note: RocksDB or SQLite}
+  federation: {value: yes, how: claimed, source: https://gitlab.com/famedly/conduit}
+  appservices: {value: yes, how: claimed, source: https://gitlab.com/famedly/conduit}
+  native_sliding_sync: {value: partial, how: claimed, source: https://gitlab.com/famedly/conduit}
+  media_auth: {value: yes, how: claimed, source: https://gitlab.com/famedly/conduit}
+  msc:
+    - {msc: 4186, state: partial, flag: null, source: https://gitlab.com/famedly/conduit}
+    - {msc: 3916, state: stable, flag: null, source: https://gitlab.com/famedly/conduit}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage: {value: none-found, evidence: []}
+  in_product: {value: none-found, note: null, source: null}
+notes: Fixture for a GitLab.com project; not checked.
+checked: 2026-11-05
