@@ -315,3 +315,13 @@ blockquote { margin: 0.6rem 0; padding: 0.35rem 0 0.35rem 0.85rem; border-left: 
   .kv { grid-template-columns: 1fr; gap: 0.1rem; }
   .kv dd { margin-bottom: 0.6rem; }
 }
+.matrix-wrap { max-height: 75vh; overflow: auto; }
+.matrix th.mcol { position: sticky; left: 0; z-index: 1; background: var(--surface); font-weight: 500; min-width: 15rem; max-width: 22rem; white-space: normal; }
+.matrix thead th { z-index: 2; }
+.matrix thead th.mcol { z-index: 3; background: var(--surface-2); }
+.matrix td.cell { padding: 0.25rem 0.35rem; }
+.mcell .mlabel { display: none; }
+.mcell { padding: 0.15rem 0.3rem; }
+details > summary { cursor: pointer; font-weight: 600; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; list-style: none; padding: 0; margin: 0.6rem 0 0.9rem; color: var(--muted); }
+.legend li { display: inline-flex; align-items: center; gap: 0.35rem; }

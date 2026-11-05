@@ -26,7 +26,7 @@ const data = Object.fromEntries(items.map((p) => [p.slug, summary(p)]));
   <header class="page-head">
     <p class="eyebrow">{items.length} {items.length === 1 ? L.one.toLowerCase() : L.many.toLowerCase()}</p>
     <h1>{L.many}</h1>
-    <p class="lede">{L.blurb} Filter, sort, or pick up to four to <a href={href('compare/')}>compare</a>.</p>
+    <p class="lede">{L.blurb} Filter, sort, or pick up to four to <a href={href('compare/')}>compare</a>.{category === 'client' && <> Telemetry and defaults side by side: <a href={href('privacy/')}>privacy at a glance</a>.</>}</p>
   </header>
 
   {items.length === 0 ? (

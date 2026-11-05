@@ -50,9 +50,11 @@ ai:
     quote: null
     source: null
   dev_usage:
-    value: occasional
+    value: regular
     evidence:
     - 'AI bot authors in the last 365 days: copilot-swe-agent[bot]'
+    - 'Integration pass: the collector counts 5 of 13 non-bot commits in the last 365 days as AI-made
+      (38 %): copilot-swe-agent[bot] 3, google-labs-jules[bot] 2. Above the 5 % threshold, so regular.'
   in_product:
     value: optional
     note: an OpenAI module that calls any OpenAI-compatible API to generate text and images

@@ -160,8 +160,9 @@ def collect_repo(spec: dict, ctx: Context) -> tuple[dict, list[gitrepo.Commit]]:
             with ctx.host(url):
                 lines, sizes = loc.count(url, ctx.scc, ctx.cache / "tmp")
             out["loc"] = lines
-            if out.get("languages") is None and sizes:
-                out["languages"] = forges._shares({k: float(v) for k, v in sizes.items()})
+            if out.get("languages") is None and lines:
+                # By lines of code, not bytes: one minified bundle would otherwise outweigh the source.
+                out["languages"] = forges._shares({k: float(v) for k, v in lines.items()})
                 out["languages_source"] = "scc"
             elif out.get("languages") is not None:
                 out["languages_source"] = "forge"

@@ -14,7 +14,7 @@ const parts = rest > 0.001 ? [...top, ['Other', rest] as [string, number]] : top
     </div>
     <figcaption>
       <ul class="langbar-legend">{parts.map(([k, v], i) => <li><i class={`lb lb${i}`} />{k} <span class="muted">{(v * 100).toFixed(1)} %</span></li>)}</ul>
-      {source && <span class="muted small">by {source === 'scc' ? 'file bytes (scc)' : 'the forge'}</span>}
+      {source && <span class="muted small">by {source === 'scc' ? 'lines of code (scc)' : 'the forge'}</span>}
     </figcaption>
   </figure>
 )}

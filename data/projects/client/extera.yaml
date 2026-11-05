@@ -3,8 +3,8 @@ name: Extera Next
 category: client
 kind: mobile, desktop, web
 homepage: https://extera.xyz
-summary: A FluffyChat fork with extra features (message translation, image editor, richer profiles);
-  development moved from GitHub to a self-hosted Forgejo.
+summary: A FluffyChat fork with extra features (message translation, image editor, richer profiles); development
+  moved from GitHub to a self-hosted Forgejo.
 repos:
 - url: https://source.extera.xyz/Extera/Extera
   forge: forgejo
@@ -164,21 +164,20 @@ ai:
     value: occasional
     evidence:
     - AGENTS.md at the repo root (conventions for coding agents).
-    - >-
-      2 of about 1,070 non-bot commits in the last 365 days carry an Assisted-by trailer (opencode
-      with GLM and DeepSeek models).
-    - >-
-      UI strings other than English and Russian are machine-translated with an LLM (scripts/translate.js,
+    - 2 of about 1,070 non-bot commits in the last 365 days carry an Assisted-by trailer (opencode with
+      GLM and DeepSeek models).
+    - UI strings other than English and Russian are machine-translated with an LLM (scripts/translate.js,
       OpenAI API).
+    collector_override: 'the collector could not clone the main Forgejo repo (HTTP 403 on 2026-11-05)
+      and saw only the archived GitHub mirror; the lane read the main repo: AGENTS.md, Assisted-by trailers,
+      and LLM-translated UI strings.'
   in_product:
     value: optional
-    note: >-
-      Built-in message translation (toggleable) through Neurogate, the project's own "gateway API
+    note: Built-in message translation (toggleable) through Neurogate, the project's own "gateway API
       for AI inference" (https://source.extera.xyz/Extera/Neurogate); default endpoint neurogate.extera.xyz;
       not available in encrypted rooms (docs/translator.md).
     source: https://source.extera.xyz/Extera/Extera/src/commit/9b12d0ff732dd209f29d5acf4694be23629c2091/lib/utils/neurogate.dart
-notes: >-
-  matrix.org lists it as "Extera Next" (maturity Beta). The GitHub repo ExteraApp/Extera is archived
-  and says "We have moved to https://source.extera.xyz/Extera/Extera". The older Cinny-based Extera
-  (officialdakari/Extera, matrix.org "Obsolete") returns 404 and has no file. Fork of FluffyChat.
+notes: matrix.org lists it as "Extera Next" (maturity Beta). The GitHub repo ExteraApp/Extera is archived
+  and says "We have moved to https://source.extera.xyz/Extera/Extera". The older Cinny-based Extera (officialdakari/Extera,
+  matrix.org "Obsolete") returns 404 and has no file. Fork of FluffyChat.
 checked: '2026-11-05'
