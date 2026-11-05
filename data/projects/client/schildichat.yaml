@@ -5,7 +5,15 @@ kind: web, desktop, mobile
 homepage: https://schildi.chat
 summary: 'The original SchildiChat: forks of Element Web/Desktop and Element Android (classic), now marked
   obsolete by matrix.org.'
-repos: []
+repos:
+- url: https://github.com/SchildiChat/schildichat-desktop
+  forge: github
+  role: desktop
+  first_parent: true
+- url: https://github.com/SchildiChat/schildichat-android
+  forge: github
+  role: android
+  first_parent: true
 sources:
   matrix_org_listing: https://matrix.org/ecosystem/clients/schildichat/
   other:
@@ -43,7 +51,7 @@ apps:
   stores: []
   source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/schildichat.md
 licence: Apache-2.0
-fork_of: element
+fork_of: element-web
 distribution: []
 funding: []
 features:
@@ -126,5 +134,8 @@ ai:
     note: null
     source: null
 notes: matrix.org lists it as "Obsolete" and points to the SchildiChat org rather than a single repo;
-  the successors are SchildiChat Next (Android) and SchildiChat Revenge. Not researched in depth.
+  the successors are SchildiChat Next (Android) and SchildiChat Revenge. Not researched in depth. fork_of
+  names element-web (the desktop/web app); the Android app is a fork of Element Android, our element-classic.
+  Repos added in the integration pass (both answer git ls-remote on 2026-11-05) so the collector can measure
+  them; the desktop repo merges upstream Element, so its commit counts include upstream work.
 checked: '2026-11-05'

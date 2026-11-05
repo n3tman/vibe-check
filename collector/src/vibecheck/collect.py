@@ -107,14 +107,14 @@ def telemetry_scan(paths: list[str], repo: Path, forge: str, url: str, sha: str)
 def collect_repo(spec: dict, ctx: Context) -> tuple[dict, list[gitrepo.Commit]]:
     url = spec["url"].rstrip("/")
     forge = spec.get("forge") or forges.guess_forge(url)
-    out: dict = {"url": url, "forge": forge, "role": spec.get("role", "main"), "ok": False, "error": None}
+    out: dict = {"url": url, "forge": forge, "role": spec.get("role", "main"), "first_parent": bool(spec.get("first_parent")), "ok": False, "error": None}
     dest = gitrepo.cache_dir_for(url, ctx.cache / "repos")
     try:
         with ctx.host(url):
             gitrepo.clone_or_fetch(url, dest, fetch=ctx.fetch)
         sha, branch = gitrepo.head_info(dest)
         paths = gitrepo.ls_tree(dest)
-        commits = gitrepo.log(dest, mailmap=".mailmap" in paths)
+        commits = gitrepo.log(dest, mailmap=".mailmap" in paths, first_parent=bool(spec.get("first_parent")))
     except gitrepo.GitError as e:
         out["error"] = str(e)
         return out, []

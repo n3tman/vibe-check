@@ -17,8 +17,6 @@ sources:
 maturity: unmaintained
 platforms:
 - linux
-- windows
-- macos
 apps:
 - os: linux
   tech: qt
@@ -26,9 +24,13 @@ apps:
   status: discontinued
   stores: []
   source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/README.md
-licence: GPL-3.0-only
+licence: LGPL-3.0-or-later
 fork_of: null
-distribution: []
+distribution:
+- appimage
+- flatpak-bundle
+- aur
+- nixpkgs
 funding: []
 features:
   sdk:
@@ -43,13 +45,19 @@ features:
   cross_signing:
     value: not-found
   key_backup:
-    value: not-found
+    value: partial
+    how: claimed
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/README.md#L40
+    note: E2E key file import and export; no server-side key backup found
   sliding_sync:
     value: not-found
   oidc_auth:
     value: not-found
   multi_account:
-    value: not-found
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/README.md
+    note: '"Multiple accounts in one client"'
   threads:
     value: not-found
   spaces:
@@ -59,10 +67,11 @@ features:
   group_calls:
     value: not-found
   reactions:
-    value: 'yes'
+    value: 'no'
     how: code
     source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/backend/matrix_client.py#L153
-    note: pattern match [m.reaction]
+    note: m.reaction is in the filter of event types hidden unless Chat.show_unknown_events is set (applied
+      at matrix_client.py#L502-L506); reactions are not shown
   edits:
     value: not-found
   replies:
@@ -83,9 +92,15 @@ features:
   rich_text_editor:
     value: not-found
   url_previews:
-    value: not-found
+    value: partial
+    how: claimed
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/README.md#L74
+    note: image previews of Matrix and HTTP URLs; no link (OpenGraph) previews
   push_notifications:
-    value: not-found
+    value: partial
+    how: claimed
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/README.md
+    note: desktop notifications and a push-rules editor; no pusher
   private_read_receipts:
     value: not-found
   presence:
@@ -94,12 +109,15 @@ features:
     source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/config/settings.py#L47
     note: pattern match [presence]
   room_upgrades:
+    value: 'no'
+    how: code
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/backend/matrix_client.py#L152
+    note: m.room.tombstone is in the same hidden-events filter; Utils.qml#L585 is only a push-rule label
+  moderation_tools:
     value: 'yes'
     how: code
-    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/gui/Utils.qml#L585
-    note: pattern match [tombstone]
-  moderation_tools:
-    value: not-found
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/gui/Popups/RemoveMemberPopup.qml#L24
+    note: kick, ban, power levels (README.md#L53)
   accessibility:
     value: not-found
   translations:
@@ -107,9 +125,15 @@ features:
   telemetry:
     value: none-found
   default_homeserver:
-    value: not-found
+    value: none
+    how: code
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/backend/backend.py#L554
+    note: empty server field and a server browser fed by publiclist.anchel.nl
   fork_friendliness:
-    value: not-found
+    value: Python + QML, about 470 files, qmake, five git submodules, matrix-nio from the author's own
+      fork; LGPL-3.0-or-later
+    how: code
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/requirements.txt
 ai:
   policy:
     value: none-found
@@ -123,5 +147,9 @@ ai:
     value: none-found
     note: null
     source: null
-notes: null
+notes: 'Licence, features and distribution corrected in the integration pass from lane 9''s reading of
+  the repo at 9a4ababd (SPDX headers say LGPL-3.0-or-later; README says "currently in alpha"; maturity
+  unmaintained is our reading: no commit since 2021). Continued as Moment, whose history contains Mirage''s
+  last commit. Releases: AppImage and a .flatpak bundle on GitHub (not on Flathub), AUR matrix-mirage,
+  nixpkgs mirage-im; docs/INSTALL.md says releases are Linux only.'
 checked: '2026-11-05'

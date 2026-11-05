@@ -9,6 +9,7 @@ repos:
 - url: https://nether.codes/nether/vommet
   forge: forgejo
   role: main
+  first_parent: true
 sources:
   matrix_org_listing: null
   other:

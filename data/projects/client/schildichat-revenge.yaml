@@ -9,6 +9,7 @@ repos:
 - url: https://github.com/SchildiChat/schildi-revenge
   forge: github
   role: main
+  first_parent: true
 sources:
   matrix_org_listing: https://matrix.org/ecosystem/clients/schildichat-revenge/
   other: []

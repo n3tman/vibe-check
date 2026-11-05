@@ -12,6 +12,7 @@ repos:
 - url: https://github.com/SableClient/Sable-Legacy
   forge: github
   role: other
+  first_parent: true
 sources:
   matrix_org_listing: https://matrix.org/ecosystem/clients/sable/
   other:

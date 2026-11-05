@@ -44,7 +44,7 @@ apps:
   source: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/android/build.gradle
   note: Android build exists (KDE F-Droid repo, per a commented-out line in the matrix.org listing)
 licence: GPL-3.0-only
-fork_of: null
+fork_of: spectral
 distribution:
 - flathub
 - microsoft-store
@@ -202,5 +202,6 @@ ai:
     value: none-found
     note: null
     source: null
-notes: A KDE-wide policy on AI contributions, if any, was not checked; nothing in the repo itself.
+notes: 'A KDE-wide policy on AI contributions, if any, was not checked; nothing in the repo itself. NeoChat
+  is a fork of Spectral (README.md line 86 at 2bcdbc0f: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/README.md).'
 checked: '2026-11-05'
