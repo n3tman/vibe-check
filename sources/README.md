@@ -24,8 +24,12 @@ Regenerate it with:
 git clone --filter=blob:none --no-checkout https://github.com/matrix-org/matrix.org cache/matrix.org-site
 git -C cache/matrix.org-site sparse-checkout set --no-cone '/content/blog/**/*.md'
 git -C cache/matrix.org-site checkout main
-GH_TOKEN=… uv run --project collector vibecheck-discover
+GH_TOKEN=… GITLAB_TOKEN=… uv run --project collector vibecheck-discover
 ```
+
+`GITLAB_TOKEN` is optional: a gitlab.com personal access token with the `read_api` scope, sent
+only to gitlab.com. Without it, gitlab.com rate-limits the per-project lookups after a few
+hundred calls and asks for waits of up to an hour; those rows then stay without metadata.
 
 Sources: the repository topics in `TOPICS` (`collector/src/vibecheck/discover.py`) on GitHub
 (search API, sliced by creation date under 1,000 results, forks left out by the search),
