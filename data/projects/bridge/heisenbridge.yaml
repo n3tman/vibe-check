@@ -1,0 +1,78 @@
+slug: heisenbridge
+name: Heisenbridge
+category: bridge
+kind: bouncer-style bridge
+homepage: null
+summary: 'Bouncer-style IRC bridge: each Matrix user connects to IRC networks individually, managed from
+  an admin room.'
+repos:
+- url: https://github.com/hifi/heisenbridge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/irc/
+  other: []
+maturity: stable
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution:
+- pypi
+- docker
+funding: []
+features:
+  network: IRC
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/hifi/heisenbridge/blob/eb6e2f7f4cf5f915811505356af9f409c7b6faea/setup.cfg
+    note: own (Python, mautrix-python for the appservice)
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/hifi/heisenbridge/blob/eb6e2f7f4cf5f915811505356af9f409c7b6faea/README.md
+    note: single puppet per user (bouncer); optional relaybot plumbing
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://github.com/hifi/heisenbridge/blob/eb6e2f7f4cf5f915811505356af9f409c7b6faea/README.md#L169
+    note: '"Heisenbridge currently does not support encryption"'
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: partial
+    how: claimed
+    source: https://github.com/hifi/heisenbridge/blob/eb6e2f7f4cf5f915811505356af9f409c7b6faea/README.md
+    note: edits sent to IRC as corrections
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/hifi/heisenbridge/blob/eb6e2f7f4cf5f915811505356af9f409c7b6faea/README.md
+    note: channels, tested with 2000 users
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/hifi/heisenbridge/blob/eb6e2f7f4cf5f915811505356af9f409c7b6faea/README.md
+    note: server password, SASL plain, CertFP
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD eb6e2f7f4cf5; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Last commit on master 2025-10-04 (the repo was pushed to in Oct 2026 on another ref). README compares
+  it with matrix-appservice-irc and matterbridge.
+checked: 2026-11-05

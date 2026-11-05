@@ -1,0 +1,69 @@
+slug: matterbridge
+name: matterbridge
+category: bridge
+kind: relay bridge
+homepage: null
+summary: Relay-bot chat bridge between many networks (Matrix, IRC, Discord, Slack, Telegram, XMPP, Mattermost,
+  …), not an appservice.
+repos:
+- url: https://github.com/42wim/matterbridge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (matterbridge)
+maturity: unmaintained
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution:
+- docker
+- snap
+funding: []
+features:
+  network: many (Discord, IRC, Mattermost, MS Teams, Slack, Telegram, WhatsApp, XMPP, Zulip, …)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/42wim/matterbridge/blob/c4157a4d5b49fce79c80a30730dc7c404bacd663/go.mod
+    note: own (Go), Matrix side via a regular user account
+  puppeting:
+    value: partial
+    how: claimed
+    source: https://github.com/hifi/heisenbridge/blob/eb6e2f7f4cf5f915811505356af9f409c7b6faea/README.md
+    note: relay through one Matrix account (Heisenbridge's comparison table)
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/42wim/matterbridge/blob/c4157a4d5b49fce79c80a30730dc7c404bacd663/README.md
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD c4157a4d5b49; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'Our reading of maturity: last commit on master 2024-08-27, no release since; not archived. Listed
+  in the community space Bridges section (room without topic).'
+checked: 2026-11-05

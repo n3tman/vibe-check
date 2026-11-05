@@ -1,0 +1,79 @@
+slug: postmoogle
+name: Postmoogle
+category: bridge
+kind: email bridge
+homepage: null
+summary: 'Email bridge that is itself an SMTP server: one Matrix room is one mailbox, for receiving and
+  sending email.'
+repos:
+- url: https://github.com/etkecc/postmoogle
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/email/
+  other: []
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/etkecc
+features:
+  network: Email (SMTP)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/etkecc/postmoogle/blob/b80fce145115061f4f0181d0b574b6699ef8a04e/go.mod
+    note: own bot (Go), not an appservice
+  puppeting:
+    value: 'no'
+    how: claimed
+    source: https://github.com/etkecc/postmoogle/blob/b80fce145115061f4f0181d0b574b6699ef8a04e/README.md
+    note: a bot account per instance
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/postmoogle/blob/b80fce145115061f4f0181d0b574b6699ef8a04e/README.md#L87
+    note: works in encrypted rooms (crypto store)
+  backfill:
+    value: 'no'
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/postmoogle/blob/b80fce145115061f4f0181d0b574b6699ef8a04e/README.md
+    note: attachments both ways
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/postmoogle/blob/b80fce145115061f4f0181d0b574b6699ef8a04e/README.md
+    note: mailbox per room
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/postmoogle/blob/b80fce145115061f4f0181d0b574b6699ef8a04e/README.md
+    note: the bridge acts as the mail server; rooms claim mailboxes with !pm commands
+  network_tos_risk:
+    value: 'no'
+    note: it runs its own SMTP server, no third-party account
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD b80fce145115; no AI-attributed commits among 22 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: matrix.org gives the licence as GPL-3.0; the repo LICENSE.md is the GNU AGPL v3 (no -only/-or-later
+  marker found). Agent files under vendor/ belong to vendored dependencies and are not counted.
+checked: 2026-11-05

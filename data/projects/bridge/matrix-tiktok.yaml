@@ -1,0 +1,75 @@
+slug: matrix-tiktok
+name: matrix-tiktok
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: TikTok direct-message bridge on mautrix-go bridgev2, intended for use with Beeper.
+repos:
+- url: https://github.com/httpjamesm/matrix-tiktok
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-bridge
+maturity: beta
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  network: TikTok DMs
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/httpjamesm/matrix-tiktok/blob/011a948528a4ca19c0e6a38c275af1cbd5044a06/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: not-found
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/httpjamesm/matrix-tiktok/blob/011a948528a4ca19c0e6a38c275af1cbd5044a06/README.md
+  reactions_edits:
+    value: partial
+    how: claimed
+    source: https://github.com/httpjamesm/matrix-tiktok/blob/011a948528a4ca19c0e6a38c275af1cbd5044a06/README.md
+    note: reactions
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/httpjamesm/matrix-tiktok/blob/011a948528a4ca19c0e6a38c275af1cbd5044a06/README.md
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/httpjamesm/matrix-tiktok/blob/011a948528a4ca19c0e6a38c275af1cbd5044a06/README.md
+    note: browser cookie string
+  network_tos_risk:
+    value: partial
+    how: claimed
+    source: https://github.com/httpjamesm/matrix-tiktok/blob/011a948528a4ca19c0e6a38c275af1cbd5044a06/README.md
+    note: 'README has a legal disclaimer: the project reverse-engineers TikTok''s private API'
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: config-only
+    evidence:
+    - 'agent files at HEAD: https://github.com/httpjamesm/matrix-tiktok/blob/011a948528a4ca19c0e6a38c275af1cbd5044a06/.cursorrules,
+      https://github.com/httpjamesm/matrix-tiktok/blob/011a948528a4ca19c0e6a38c275af1cbd5044a06/AGENTS.md,
+      https://github.com/httpjamesm/matrix-tiktok/blob/011a948528a4ca19c0e6a38c275af1cbd5044a06/CLAUDE.md'
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Found with GitHub topic matrix-bridge.
+checked: 2026-11-05

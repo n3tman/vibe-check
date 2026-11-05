@@ -1,0 +1,72 @@
+slug: beeper-tumblr-dms
+name: Tumblr for Beeper
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Unofficial Tumblr direct-message bridge for Beeper on mautrix-go bridgev2, self-hostable.
+repos:
+- url: https://github.com/beeper/tumblr-dms
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search org:beeper
+maturity: beta
+platforms:
+- server
+licence: AGPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Tumblr DMs
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/tumblr-dms/blob/5108ddbcf34b8e606e2f819276088c05c4df9caa/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: not-found
+  e2ee:
+    value: not-found
+  backfill:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/tumblr-dms/blob/5108ddbcf34b8e606e2f819276088c05c4df9caa/pkg/connector/backfill.go
+  media:
+    value: partial
+    how: claimed
+    source: https://github.com/beeper/tumblr-dms/blob/5108ddbcf34b8e606e2f819276088c05c4df9caa/README.md
+  reactions_edits:
+    value: 'no'
+    how: claimed
+    source: https://github.com/beeper/tumblr-dms/blob/5108ddbcf34b8e606e2f819276088c05c4df9caa/README.md
+  group_chats:
+    value: 'no'
+    how: claimed
+    source: https://github.com/beeper/tumblr-dms/blob/5108ddbcf34b8e606e2f819276088c05c4df9caa/README.md
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/beeper/tumblr-dms/blob/5108ddbcf34b8e606e2f819276088c05c4df9caa/README.md
+    note: username/password with 2FA
+  network_tos_risk:
+    value: not-found
+    note: 'README: not an official integration; web changes may break it'
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 5108ddbcf34b; no AI-attributed commits among 51 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Found with GitHub search org:beeper.
+checked: 2026-11-05
