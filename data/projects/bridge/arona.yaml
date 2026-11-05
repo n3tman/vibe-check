@@ -1,0 +1,61 @@
+slug: arona
+name: Arona
+category: bridge
+kind: relay bridge
+homepage: null
+summary: Relay bridge that forwards messages between several messengers, with optional OpenAI-compatible
+  integration.
+repos:
+- url: https://github.com/web-tech-tw/arona
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-bridge
+maturity: beta
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: LINE, Discord, Telegram, Matrix and others
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/web-tech-tw/arona/blob/296b44c8a68de60aee554e11875c47a59c0755a6/package.json
+    note: own (Node.js)
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - 'AI bot authors in the last 365 days: copilot-swe-agent[bot]'
+  in_product:
+    value: optional
+    note: an OpenAI module that calls any OpenAI-compatible API to generate text and images
+    source: https://github.com/web-tech-tw/arona/blob/296b44c8a68de60aee554e11875c47a59c0755a6/docs/integrations/openai.md
+notes: Matrix is one of several networks. Its last-year commits include copilot-swe-agent[bot] authorship.
+checked: 2026-11-05

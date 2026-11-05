@@ -1,0 +1,65 @@
+slug: kazarma
+name: Kazarma
+category: bridge
+kind: puppeting bridge
+homepage: https://kazar.ma
+summary: Bridge between Matrix and the ActivityPub fediverse, written in Elixir; Matrix users appear as
+  ActivityPub actors and the reverse.
+repos:
+- url: https://gitlab.com/kazarma/kazarma
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Kazarma)
+maturity: beta
+platforms:
+- server
+licence: AGPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: ActivityPub (Mastodon, Pleroma, …)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/kazarma/kazarma/-/blob/46dbc8d29006896b6b14057c1d0feb39bd768865/mix.exs
+    note: own (Elixir, matrix_app_service.ex)
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://docs.kazar.ma
+    note: Matrix users as ActivityPub actors and ActivityPub actors as Matrix ghosts
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 46dbc8d29006; no AI-attributed commits among 12 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Translations on Hosted Weblate. 12 commits in the last year, last 2025-12-24. The matrix.org ActivityPub
+  page has no entries; found through the community space.
+checked: 2026-11-05

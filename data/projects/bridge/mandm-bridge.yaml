@@ -1,0 +1,60 @@
+slug: mandm-bridge
+name: MandM-bridge
+category: bridge
+kind: relay bridge
+homepage: null
+summary: Bridge between a Mumble (Murmur) server's text chat and a Matrix room, through ICE and an appservice.
+repos:
+- url: https://codeberg.org/karlpip/MandM-bridge
+  forge: forgejo
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/mumble/
+  other: []
+maturity: alpha
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Mumble
+  framework:
+    value: 'yes'
+    how: claimed
+    source: https://codeberg.org/karlpip/MandM-bridge/src/commit/3d8c2659de7072adbd08ad93cc615da318f22c40/README.md
+    note: own (Python) appservice
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 3d8c2659de70; no AI-attributed commits among 7 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 7 commits in the last year (last 2026-06-09).
+checked: 2026-11-05

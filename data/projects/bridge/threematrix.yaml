@@ -1,0 +1,69 @@
+slug: threematrix
+name: Threematrix
+category: bridge
+kind: relay bridge
+homepage: null
+summary: Work-in-progress Rust bridge between Threema (through the Threema Gateway API) and Matrix, funded
+  by the German Prototype Fund.
+repos:
+- url: https://github.com/bitbatter/Threematrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Threematrix)
+maturity: unmaintained
+platforms:
+- server
+licence: GPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Threema (Gateway API)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/bitbatter/Threematrix/blob/db92bb325463b9b5bd43b56d29a092bfd25ca2ab/Cargo.toml
+    note: own (Rust)
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD db92bb325463; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Last commit 2024-03-21.
+checked: 2026-11-05

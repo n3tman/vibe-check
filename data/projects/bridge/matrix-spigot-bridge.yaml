@@ -1,0 +1,69 @@
+slug: matrix-spigot-bridge
+name: matrix-spigot-bridge
+category: bridge
+kind: game chat bridge
+homepage: null
+summary: Spigot plugin linking a Minecraft server chat with a Matrix room; the author stopped development.
+repos:
+- url: https://github.com/lautriva/matrix-spigot-bridge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-bridge
+maturity: unmaintained
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Minecraft (Spigot)
+  framework:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/lautriva/matrix-spigot-bridge/blob/89b8c353710445f1321f43aff6fd777fd2da7295/README.md
+    note: own (Java plugin)
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 89b8c3537104; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'README: the author stopped developing the plugin. Last commit 2025-11-04 (non-bot activity none
+  in the last year by our count).'
+checked: 2026-11-05

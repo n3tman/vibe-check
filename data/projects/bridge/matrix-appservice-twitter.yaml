@@ -1,0 +1,68 @@
+slug: matrix-appservice-twitter
+name: matrix-appservice-twitter
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Archived Twitter bridge (timelines and DMs) from 2016-2017.
+repos:
+- url: https://github.com/Half-Shot/matrix-appservice-twitter
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Matrix Twitter Bridge)
+maturity: archived
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: Twitter
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/Half-Shot/matrix-appservice-twitter/blob/312c2228f1f6b94e29da53c41ea070a0b6849ce9/package.json
+    note: matrix-appservice-bridge
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 312c2228f1f6; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Archived on GitHub (last commit 2016-11-01). Superseded by mautrix-twitter.
+checked: 2026-11-05

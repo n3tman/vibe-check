@@ -1,0 +1,68 @@
+slug: beeper-linkedin
+name: beeper-linkedin
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Archived Python LinkedIn messaging bridge from Beeper, replaced by mautrix-linkedin.
+repos:
+- url: https://github.com/beeper/linkedin
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search org:beeper
+maturity: archived
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: LinkedIn
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/linkedin/blob/cb3783855b79af7ec0df14af0c7e8dce18faff93/setup.py
+    note: mautrix-python
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD cb3783855b79; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Archived on GitHub (last commit 2025-03-17).
+checked: 2026-11-05

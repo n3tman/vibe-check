@@ -38,7 +38,9 @@ features:
       the bridge)
   backfill:
     value: 'no'
-    note: no FetchMessages implementation in the code
+    how: code
+    source: https://github.com/mautrix/twilio/blob/18579cdd5867f6b15323d4a39ffbe571d7701915/pkg/connector
+    note: no FetchMessages implementation in pkg/connector
   media:
     value: not-found
   reactions_edits:

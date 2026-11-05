@@ -1,0 +1,68 @@
+slug: matrix-sms-bridge
+name: matrix-sms-bridge
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Bridge from Matrix rooms to SMS with one phone number, in Kotlin on matrix-spring-boot-sdk.
+repos:
+- url: https://github.com/benkuly/matrix-sms-bridge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/sms/
+  other: []
+maturity: unmaintained
+platforms:
+- server
+licence: AGPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: SMS (modem via Gammu)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/benkuly/matrix-sms-bridge/blob/03d522da3044bf51996abf3dcbe980aadec02087/build.gradle.kts
+    note: matrix-spring-boot-sdk (Kotlin)
+  puppeting:
+    value: not-found
+    note: not checked in depth (inactive project)
+  e2ee:
+    value: not-found
+    note: not checked in depth (inactive project)
+  backfill:
+    value: not-found
+    note: not checked in depth (inactive project)
+  media:
+    value: not-found
+    note: not checked in depth (inactive project)
+  reactions_edits:
+    value: not-found
+    note: not checked in depth (inactive project)
+  group_chats:
+    value: not-found
+    note: not checked in depth (inactive project)
+  login_methods:
+    value: not-found
+    note: not checked in depth (inactive project)
+  network_tos_risk:
+    value: not-found
+    note: not checked in depth (inactive project)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 03d522da3044; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'Last commit 2025-10-20 (none in the 365 days before 2026-11-05 counted as non-bot). Differs from
+  mautrix-gmessages: needs its own modem/SIM, not a phone app.'
+checked: 2026-11-05
