@@ -1,0 +1,95 @@
+slug: chatrix
+name: Chatrix
+category: client
+kind: web (WordPress plugin)
+homepage: https://wordpress.com/plugins/chatrix
+summary: A WordPress plugin by Automattic that embeds a Matrix client (built on Hydrogen) in pages,
+  as a block or a popup.
+repos:
+- url: https://github.com/Automattic/chatrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/chatrix/
+  other: []
+maturity: stable
+platforms:
+- web
+apps:
+- os: web
+  tech: other
+  status: stable
+  stores:
+  - name: wordpress-plugins
+    url: https://wordpress.com/plugins/chatrix
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/chatrix.md
+  min_os: null
+licence: GPL-2.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: hydrogen-web (Automattic fork, chatrix-0.8.3)
+    how: code
+    source: https://github.com/Automattic/chatrix/blob/6ce3da78f66e11eaf0d7bc1993f4c00e687549b2/package.json
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/chatrix.md
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/chatrix.md
+  threads:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/chatrix.md
+  spaces:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/chatrix.md
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/chatrix.md
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - 3 commits in the last 365 days, none attributed; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'matrix.org maturity: Stable. Last commit 2026-06-08.'
+checked: '2026-11-05'

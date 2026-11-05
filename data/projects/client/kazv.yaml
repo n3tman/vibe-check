@@ -1,0 +1,114 @@
+slug: kazv
+name: kazv
+category: client
+kind: desktop, mobile
+homepage: https://kazv.chat
+summary: A convergent Qt/Kirigami Matrix client built on libkazv, the project's own C++ Matrix library.
+repos:
+- url: https://r.lily-is.land/the-kazv-project/kazv
+  forge: forgejo
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/kazv/
+  other:
+  - 'sources/community-space.tsv: room "The Kazv Project"'
+maturity: beta
+platforms:
+- linux
+apps:
+- os: linux
+  tech: qt
+  status: beta
+  stores:
+  - name: appimage
+    url: https://kazv.chat
+  - name: flatpak
+    url: https://kazv.chat
+  source: https://r.lily-is.land/the-kazv-project/kazv/src/commit/2f1ad32c77463562868ad2806928b9c2a16094f1/README.md
+  min_os: null
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: libkazv (own C++ library)
+    how: code
+    source: https://r.lily-is.land/the-kazv-project/kazv/src/commit/2f1ad32c77463562868ad2806928b9c2a16094f1/CMakeLists.txt
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/kazv.md
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/kazv.md
+  threads:
+    value: not-found
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/kazv.md
+    note: 'matrix.org: unknown.'
+  spaces:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/kazv.md
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji:
+    value: partial
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/kazv.md
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://r.lily-is.land/the-kazv-project/kazv/src/commit/2f1ad32c77463562868ad2806928b9c2a16094f1/src/matrix-room.hpp
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations:
+    value: partial
+    how: code
+    source: https://r.lily-is.land/the-kazv-project/kazv/src/commit/2f1ad32c77463562868ad2806928b9c2a16094f1/src/l10n
+    note: Four locales (en, zh-Hans, cmn-Hans, hi).
+  telemetry:
+    value: none-found
+    how: null
+    source: null
+  default_homeserver: not-found
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://r.lily-is.land/the-kazv-project/kazv/src/commit/2f1ad32c77463562868ad2806928b9c2a16094f1/README.md
+    note: C++/Qt 6/KF6 with CMake; needs libkazv; AGPL-3.0-or-later. Primary code review on Phorge.
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No attributed commits among 61 non-bot commits in the last 365 days; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  matrix.org maturity: Beta. The contributing guide is at https://kazv.chat/en/contributing/ (not
+  checked for an AI policy).
+checked: '2026-11-05'

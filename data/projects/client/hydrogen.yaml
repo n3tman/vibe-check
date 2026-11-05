@@ -1,0 +1,102 @@
+slug: hydrogen
+name: Hydrogen
+category: client
+kind: web
+homepage: https://hydrogen.element.io
+summary: A lightweight, embeddable Matrix web client by Element with broad browser support; marked
+  obsolete on matrix.org.
+repos:
+- url: https://github.com/element-hq/hydrogen-web
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/hydrogen/
+  other:
+  - 'sources/community-space.tsv: room "Hydrogen Web (OLD)"'
+maturity: unmaintained
+platforms:
+- web
+apps:
+- os: web
+  tech: pwa
+  status: discontinued
+  stores:
+  - name: web
+    url: https://hydrogen.element.io
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/hydrogen.md
+  min_os: null
+licence: AGPL-3.0-only OR LicenseRef-Element-Commercial
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own (Hydrogen's own SDK, also published as hydrogen-view-sdk)
+    how: code
+    source: https://github.com/element-hq/hydrogen-web/blob/ea5976e40b8d4974890e67bba3c139012044612c/README.md
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/hydrogen.md
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/hydrogen.md
+  threads:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/hydrogen.md
+  spaces:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/hydrogen.md
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/hydrogen.md
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/element-hq/hydrogen-web/blob/ea5976e40b8d4974890e67bba3c139012044612c/README.md
+    note: Small codebase meant to be embedded (Chatrix builds on it).
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - 1 commit in the last 365 days; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  matrix.org maturity: Obsolete. The repo was relicensed on 2025-01-17 (LICENSE-AGPL-3.0 and LICENSE-COMMERCIAL);
+  matrix.org still lists Apache-2.0, the earlier licence.
+checked: '2026-11-05'
