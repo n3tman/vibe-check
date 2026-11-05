@@ -1,0 +1,197 @@
+slug: schildichat-revenge
+name: SchildiChat Revenge
+category: client
+kind: desktop, mobile
+homepage: https://schildi.chat/revenge
+summary: A newer SchildiChat client built on matrix-rust-sdk (via matrix-sdk-ffi) with a Kotlin Compose
+  Multiplatform UI for desktop and Android.
+repos:
+- url: https://github.com/SchildiChat/schildi-revenge
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/schildichat-revenge/
+  other: []
+maturity: beta
+platforms:
+- windows
+- linux
+- android
+apps:
+- os: android
+  tech: other
+  min_os: '8.0'
+  status: beta
+  stores:
+  - name: google-play
+    url: https://play.google.com/store/apps/details?id=chat.schildi.revenge
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/schildichat-revenge.md
+  note: Compose Multiplatform; minSdk 26
+- os: windows
+  tech: other
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/schildichat-revenge.md
+- os: linux
+  tech: other
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/schildichat-revenge.md
+licence: GPL-3.0-only
+fork_of: null
+distribution:
+- google-play
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    note: matrix-rust-sdk through matrix-sdk-ffi; shares code with Element X
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/compose/destination/conversation/event/EventContentLayout.kt#L259
+    note: pattern match [Megolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/matrix/src/main/java/io/element/android/libraries/matrix/impl/RustMatrixClientFactory.kt#L167
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/model/account/AccountManagementViewModel.kt#L130
+    note: pattern match [recoveryKey]
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/matrix/src/main/java/io/element/android/libraries/matrix/api/MatrixClient.kt#L47
+    note: pattern match [SlidingSync]
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/matrix/src/main/java/io/element/android/libraries/sessionstorage/api/LoginType.kt#L14
+    note: pattern match [OIDC]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/model/conversation/ConversationViewModel.kt#L580
+    note: pattern match [m.thread]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/desktopMain/kotlin/chat/schildi/revenge/notification/SyncingNotificationProcessor.kt#L128
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/compose/destination/conversation/event/EventContentLayout.kt#L52
+    note: pattern match [CallInvite]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/matrix/src/main/java/io/element/android/libraries/matrix/api/MatrixClient.kt#L451
+    note: pattern match [Livekit]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/compose/destination/conversation/userlist/UserReactionRow.kt#L32
+    note: pattern match [m.reaction]
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/model/DraftRepo.kt#L192
+    note: pattern match [inReplyTo]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/model/DraftRepo.kt#L8
+    note: pattern match [ImagePack]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/actions/CommandSuggestionsProvider.kt#L72
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/matrix/src/main/java/io/element/android/libraries/matrix/api/MatrixClient.kt#L40
+    note: pattern match [m.location]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/model/conversation/ConversationViewModel.kt#L146
+    note: pattern match [VoiceMessage]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/Dimens.kt#L154
+    note: pattern match [UrlPreview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/build.gradle.kts#L127
+    note: pattern match [unifiedpush]
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/model/RoomActionProvider.kt#L173
+    note: pattern match [ReadPrivate]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/matrix/src/main/java/io/element/android/libraries/matrix/impl/auth/RustMatrixAuthenticationService.kt#L447
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/model/MutualRoomsProvider.kt#L60
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/matrix/src/main/java/io/element/android/libraries/matrix/api/room/JoinedRoom.kt#L218
+    note: pattern match [reportContent]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/composeApp/src/jvmMain/kotlin/chat/schildi/revenge/compose/components/EditableImage.kt#L81
+    note: pattern match [contentDescription]
+  translations:
+    value: not-found
+  telemetry:
+    value: not-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: partial
+    how: code
+    note: GPL-3.0; Kotlin Multiplatform with a Rust FFI build; about 1,200 files
+ai:
+  policy:
+    value: restricted
+    quote: If you used any AI/LLM, you should disclose it here.
+    source: https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/.github/PULL_REQUEST_TEMPLATE.md#L12
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at ff5d5ccea1
+    - 'first-parent history, last 365 days: 1,026 commits, none with AI trailers'
+    - merged Element X history in the repo has 48 commits with Claude trailers (Element developers)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The PR template asks contributors to confirm that the description is "largely written by human
+  hands" and to choose between no AI, largely AI-generated, or AI-assisted (naming tools and models).
+checked: '2026-11-05'

@@ -1,0 +1,196 @@
+slug: roosterchat
+name: Rooster
+category: client
+kind: desktop
+homepage: https://pondlabs.github.io/roosterchat/
+summary: A Commet fork (Flutter) built around always-on voice rooms, screen sharing, a soundboard and
+  a DJ booth, for Windows and Linux.
+repos:
+- url: https://github.com/PondLabs/roosterchat
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - PLAN.md (https://pondlabs.github.io/roosterchat/)
+maturity: beta
+platforms:
+- windows
+- linux
+- macos
+apps:
+- os: windows
+  tech: flutter
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/README.md#L41
+- os: linux
+  tech: flutter
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/README.md#L42
+- os: macos
+  tech: flutter
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/README.md#L43
+  note: unsigned archive; README line 49 names Windows and Linux as supported
+licence: AGPL-3.0-only
+fork_of: commet
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-dart-sdk
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/pubspec.yaml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/Cargo.toml#L4
+    note: pattern match [vodozemac]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/graphify-out/graph.html#L69
+    note: pattern match [Cross Signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/graphify-out/cache/ast/v0.9.72-s4/15a817a21802f2324552781b3fba4f7f53d28d9744e3072ef30214f91532dabd.json#L1
+    note: pattern match [recoverykey]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/graphify-out/graph.html#L69
+    note: pattern match [Oidc]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/graphify-out/cache/ast/v0.9.72-s4/bdedf27692fe349b74c21e507e37d4b3377ee5a074a4142f59d811b243cf7e68.json#L1
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/graphify-out/manifest.json#L2180
+    note: pattern match [space_child]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/.github/workflows/desktop-build.yml#L9
+    note: pattern match [webrtc]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/.github/workflows/ci.yml#L122
+    note: pattern match [LiveKit]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/rooster/lib/ui/pages/developer/benchmarks/benchmark_utils.dart#L89
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/rooster/lib/client/matrix/matrix_room.dart#L694
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/rooster/lib/ui/organisms/chat/chat.dart#L317
+    note: pattern match [inReplyTo]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/rooster/lib/client/matrix/components/polls/matrix_poll_component.dart#L21
+    note: pattern match [org.matrix.msc3381]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/graphify-out/manifest.json#L548
+    note: pattern match [emoticon]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/rooster/lib/ui/pages/settings/categories/app/advanced_settings_page.dart#L31
+    note: pattern match [m.sticker]
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/rooster/lib/ui/pages/settings/categories/developer/developer_settings_page.dart#L47
+    note: pattern match [rich text editor]
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/.github/workflows/stability.yml#L87
+    note: pattern match [url_preview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/graphify-out/graph.html#L69
+    note: pattern match [Unifiedpush]
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/graphify-out/cache/semantic/pd5fd89c46bb5/3fa2dca4e26a25c8fc5e79cdc92f3bf77f567f325fef22c77009687b13a32679.json#L1
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/rooster/lib/client/matrix/components/soundboard/matrix_space_soundboard_component.dart#L5
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/graphify-out/cache/ast/v0.9.72-s4/68d1820f435356224cf55b8c8373cc74dab85008fbb5298fab643dd41ea73228.json#L1
+    note: pattern match [reportevent]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/website/index.html#L50
+    note: pattern match [aria-label]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: matrix.org
+    how: code
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/rooster/assets/config/global_config.json#L2
+  fork_friendliness:
+    value: partial
+    how: code
+    note: AGPL-3.0; Flutter plus Rust and vendored third_party plugins (livekit, flutter-webrtc); about
+      5,600 files
+ai:
+  policy:
+    value: restricted
+    quote: If you use generative AI tools as an aid in developing code, ensure that you fully understand
+      the proposed changes and can explain why they are the correct approach.
+    source: https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/CONTRIBUTING.md#L13
+  dev_usage:
+    value: regular
+    evidence:
+    - CLAUDE.md at b815d6a60f; a graphify-out/ code-graph cache is committed
+    - 73 of 324 first-parent commits in the last 365 days (23 %) carry Claude co-author trailers (Claude
+      Opus 5.5, Claude Fable 5.1)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'CONTRIBUTING also says: "Do not post output from Large Language Models or similar generative AI
+  as comments on GitHub". The repo name is roosterchat; the product name is Rooster.'
+checked: '2026-11-05'

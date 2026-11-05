@@ -1,0 +1,221 @@
+slug: mages
+name: Mages
+category: client
+kind: mobile, desktop
+homepage: null
+summary: Experimental Matrix client with a Compose Multiplatform UI over its own Rust core on matrix-rust-sdk,
+  for Android and Linux.
+repos:
+- url: https://github.com/mlm-games/Mages
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/mages/
+  other: []
+maturity: alpha
+platforms:
+- android
+- linux
+- windows
+- macos
+apps:
+- os: android
+  tech: other
+  min_os: '7.0'
+  status: alpha
+  stores:
+  - name: f-droid
+    url: https://f-droid.org/packages/org.mlm.mages
+  source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/README.md
+  note: Compose; minSdk 24
+- os: linux
+  tech: other
+  min_os: null
+  status: alpha
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/io.github.mlm_games.mages
+  - name: aur
+    url: https://aur.archlinux.org/packages/mages-bin
+  - name: snap
+    url: null
+  source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/README.md
+- os: windows
+  tech: other
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/README.md
+  note: unsigned, rarely tested
+- os: macos
+  tech: other
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/README.md
+  note: unsigned, rarely tested
+licence: AGPL-3.0-only
+fork_of: null
+distribution:
+- f-droid
+- flathub
+- aur
+- snap
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: claimed
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/README.md
+    note: matrix-sdk and matrix-sdk-ui via its own UniFFI layer (not matrix-sdk-ffi)
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/commonMain/kotlin/org/mlm/mages/Model.kt#L134
+    note: pattern match [Megolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/rust/src/wasm_bridge.rs#L756
+    note: pattern match [cross_signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L552
+    note: pattern match [RecoveryKey]
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/commonMain/kotlin/org/mlm/mages/ui/viewmodel/BaseViewModel.kt#L69
+    note: pattern match [Sliding sync]
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/packaging/io.github.mlm_games.mages.metainfo.xml#L1029
+    note: pattern match [oidc]
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/README.md
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L744
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L1436
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L971
+    note: pattern match [CallInvite]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/platform/Platform.web.kt#L90
+    note: pattern match [ElementCall]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/rust/src/core.rs#L2473
+    note: pattern match [m.reaction]
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L770
+    note: pattern match [inReplyTo]
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/commonMain/kotlin/org/mlm/mages/ui/viewmodel/RoomsViewModel.kt#L571
+    note: pattern match [m.poll]
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/platform/ImagePackZip.web.kt#L11
+    note: pattern match [ImagePack]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/commonMain/kotlin/org/mlm/mages/ui/viewmodel/RoomsViewModel.kt#L569
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/commonMain/kotlin/org/mlm/mages/ui/components/location/TimelineLocationItem.kt#L36
+    note: pattern match [geo:]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/platform/MagesPaths.web.kt#L18
+    note: pattern match [voiceMessage]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L23
+    note: pattern match [LinkPreview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L1026
+    note: pattern match [UnifiedPush]
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/rust/src/core.rs#L1283
+    note: pattern match [ReadPrivate]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L1519
+    note: pattern match [setPresence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L1790
+    note: pattern match [RoomUpgrade]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/matrix/MatrixPort.web.kt#L1750
+    note: pattern match [reportContent]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/shared/src/wasmJsMain/kotlin/org/mlm/mages/ui/components/location/TimelineLocationMapView.web.kt#L50
+    note: pattern match [contentDescription]
+  translations:
+    value: partial
+    how: claimed
+    source: https://github.com/mlm-games/Mages/blob/1f17f25c23428140ea9a48db268ec13dd5a356a7/README.md
+    note: Spanish only besides English
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: partial
+    how: code
+    note: AGPL-3.0; Kotlin + Rust (cargo-ndk, JDK 21, JetBrains Runtime); about 880 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI trailers in 1,553 commits of the last 365 days at 1f17f25c23
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

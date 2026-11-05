@@ -1,0 +1,185 @@
+slug: nheko
+name: Nheko
+category: client
+kind: desktop
+homepage: https://nheko-reborn.github.io
+summary: Native desktop Matrix client in C++ and Qt/QML, built on mtxclient.
+repos:
+- url: https://github.com/Nheko-Reborn/nheko
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/nheko/
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: beta
+platforms:
+- linux
+- windows
+- macos
+apps:
+- os: linux
+  tech: qt
+  min_os: null
+  status: beta
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/details/im.nheko.Nheko
+  - name: aur
+    url: https://aur.archlinux.org/packages/nheko-git
+  source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/README.md#L15
+- os: windows
+  tech: qt
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/README.md#L58
+  note: msix / appinstaller
+- os: macos
+  tech: qt
+  min_os: null
+  status: beta
+  stores:
+  - name: dmg
+    url: https://github.com/Nheko-Reborn/nheko/releases
+  source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/README.md#L58
+licence: GPL-3.0-or-later
+fork_of: null
+distribution:
+- flathub
+- aur
+- debian
+- fedora
+funding: []
+features:
+  sdk:
+    value: mtxclient
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/CMakeLists.txt
+    note: mtxclient (C++), same maintainers
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/CMakeLists.txt#L54
+    note: pattern match [libolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/src/Cache.cpp#L1837
+    note: pattern match [cross_signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/src/Cache.cpp#L638
+    note: pattern match [SecretStorage]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: partial
+    how: claimed
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/README.md#L54
+    note: separate profiles from the command line (-p name)
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/resources/qml/TimelineMetadata.qml#L62
+    note: pattern match [m.thread]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/src/Cache.cpp#L79
+    note: pattern match [space_child]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/CMakeLists.txt#L641
+    note: pattern match [webrtc]
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/src/PowerlevelsEditModels.cpp#L180
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/README.md
+  replies:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/README.md#L44
+  polls:
+    value: not-found
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/CMakeLists.txt#L478
+    note: pattern match [ImagePack]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/src/PowerlevelsEditModels.cpp#L216
+    note: pattern match [m.sticker]
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/src/Cache.cpp#L2594
+    note: pattern match [ReadPrivate]
+  presence:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/README.md#L50
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/src/Cache_p.h#L89
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/CMakeLists.txt#L811
+    note: pattern match [/Report]
+  accessibility:
+    value: not-found
+  translations:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Nheko-Reborn/nheko/blob/b15dcd137e5384e0aabfd35583b5a6eba5f71ed9/README.md#L25
+    note: Weblate (weblate.nheko.im)
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: partial
+    how: code
+    note: GPL-3.0; CMake/Qt6 with mtxclient, olm and optional GStreamer for VoIP; about 500 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at b15dcd137e
+    - no AI-attributed commits in 67 commits of the last 365 days
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'README: "The current implementation [of E2EE] is mostly stable, but it was never audited."'
+checked: '2026-11-05'
