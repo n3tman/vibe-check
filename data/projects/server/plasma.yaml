@@ -1,0 +1,37 @@
+slug: plasma
+name: plasma
+category: server
+kind: homeserver
+homepage: null
+summary: A Matrix homeserver built on Elixir and the Erlang VM.
+repos:
+- {url: 'https://gitlab.com/plasmahs/plasma', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Servers/Hosting)
+maturity: unmaintained
+platforms:
+- server
+licence: null
+fork_of: null
+distribution: []
+funding: []
+features:
+  language: Elixir
+  msc: []
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    note: 'not checked: no clone'
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Found in the community space (Servers/Hosting). GitLab API last_activity_at 2022-04-24; not cloned.
+checked: '2026-11-05'
