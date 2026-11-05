@@ -1,0 +1,166 @@
+slug: thunderbird
+name: Thunderbird
+category: client
+kind: desktop
+homepage: https://www.thunderbird.net
+summary: Mozilla's mail client, whose chat module includes a Matrix account type built on matrix-js-sdk.
+repos:
+- url: https://github.com/thunderbird/thunderbird-desktop
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/thunderbird/
+  other: []
+maturity: beta
+platforms:
+- windows
+- macos
+- linux
+apps:
+- os: windows
+  tech: other
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/thunderbird.md
+- os: macos
+  tech: other
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/thunderbird.md
+- os: linux
+  tech: other
+  min_os: null
+  status: beta
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/org.mozilla.thunderbird
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/thunderbird.md
+licence: MPL-2.0
+fork_of: null
+distribution:
+- flathub
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrix-sdk.sys.mjs
+    note: vendored in chat/protocols/matrix/lib with matrix-sdk-crypto-wasm
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrix-sdk.sys.mjs#L105
+    note: pattern match [rust-crypto]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrixAccount.sys.mjs#L234
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrix-sdk.sys.mjs#L103
+    note: pattern match [keybackup]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrix-sdk.sys.mjs#L34
+    note: pattern match [oidc]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrixAccount.sys.mjs#L155
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrixAccount.sys.mjs#L653
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrixTextForEvent.sys.mjs#L346
+    note: pattern match [m.call.invite]
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrixAccount.sys.mjs#L109
+    note: pattern match [ReadPrivate]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrixAccount.sys.mjs#L379
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrixCommands.sys.mjs#L28
+    note: pattern match [Tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/chat/protocols/matrix/matrixAccount.sys.mjs#L167
+    note: pattern match [reportEvent]
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: not-found
+    note: Mozilla telemetry exists in the wider app; not assessed for the Matrix module
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'no'
+    how: code
+    note: MPL-2.0; the Matrix code is a module inside the Thunderbird/Firefox tree (40,000+ files in comm
+      alone)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - AGENTS.md at the root of the comm repo (a2318b178f)
+    - 13 of 3,823 commits in the last 365 days carry Claude co-author trailers (0.3 %, repo-wide, not
+      the Matrix module)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Only chat/protocols/matrix was checked out; features found there by pattern. Activity metrics for
+  this repo describe all of Thunderbird, not its Matrix support. Mozilla-wide AI contribution rules were
+  not checked.
+checked: '2026-11-05'

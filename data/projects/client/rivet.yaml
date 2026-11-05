@@ -1,0 +1,129 @@
+slug: rivet
+name: Rivet
+category: client
+kind: desktop
+homepage: null
+summary: Early desktop Matrix client in Rust (gpui) on matrix-sdk; README says it is in heavy development.
+repos:
+- url: https://github.com/Mjoyufull/Rivet
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-client
+maturity: alpha
+platforms:
+- linux
+apps:
+- os: linux
+  tech: native
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/README.md
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    source: https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/Cargo.toml
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/crates/rivet-ui/src/security/recovery/recovery_page.rs#L9
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/crates/rivet-ui/src/settings/mod.rs#L52
+    note: pattern match [recovery key]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/crates/rivet-ui/benches/room_hierarchy.rs#L16
+    note: pattern match [space_child]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/crates/rivet-ui/src/timeline/common/model.rs#L530
+    note: pattern match [CallInvite]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/Cargo.toml#L35
+    note: pattern match [livekit]
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/crates/rivet-ui/src/timeline/common/model/formatting.rs#L425
+    note: pattern match [in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/crates/rivet-ui/src/timeline/common/model.rs#L441
+    note: pattern match [Tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (12 non-bot commits in the last 365 days) at fccc61b471
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Platforms besides Linux not stated. Last commit 2026-03-18.
+checked: '2026-11-05'

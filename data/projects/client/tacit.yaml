@@ -1,0 +1,171 @@
+slug: tacit
+name: Tacit
+category: client
+kind: desktop, web
+homepage: https://fuchss.org/projects/tacit/
+summary: Fork of Tammy (Trixnity Messenger) with a reworked desktop-first visual style.
+repos:
+- url: https://gitlab.com/dfuchss/tacit
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/tacit/
+  other: []
+maturity: alpha
+platforms:
+- web
+- windows
+- macos
+- linux
+apps:
+- os: macos
+  tech: other
+  min_os: null
+  status: alpha
+  stores:
+  - name: dmg
+    url: https://github.com/dfuchss/tacit/releases/latest/download/tacit-macos-arm64.dmg
+  source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/README.md
+  note: Apple Silicon, unsigned
+- os: windows
+  tech: other
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/README.md
+- os: linux
+  tech: other
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/README.md
+- os: web
+  tech: other
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tacit.md
+  note: tacit.fuchss.org
+licence: AGPL-3.0-only
+fork_of: tammy
+distribution: []
+funding: []
+features:
+  sdk:
+    value: Trixnity
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/build.gradle.kts
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/jvmTest/kotlin/org/fuchss/matrix/tacit/readmeshots/SystemEventScreenshots.kt#L95
+    note: pattern match [m.megolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/settings/TacitDarkThemeMode.kt#L16
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/jvmTest/kotlin/org/fuchss/matrix/tacit/readmeshots/ScreenshotMessenger.kt#L286
+    note: pattern match [recoveryKey]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/tacitModule.kt#L55
+    note: pattern match [SpaceHierarchy]
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/jvmTest/kotlin/org/fuchss/matrix/tacit/readmeshots/MatrixHttp.kt#L188
+    note: pattern match [m.reaction]
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/jvmTest/kotlin/org/fuchss/matrix/tacit/readmeshots/MatrixHttp.kt#L150
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/build.gradle.kts#L181
+    note: pattern match [apns]
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/viewmodel/room/timeline/TacitTimelineViewModelFactory.kt#L179
+    note: pattern match [privateRead]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/views/room/list/RoomListChannels.kt#L72
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/TacitEvaluatePushRules.kt#L9
+    note: pattern match [m.room.Tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/views/TacitFlatMessageActions.kt#L84
+    note: pattern match [/report]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/settings.gradle.kts#L9
+    note: pattern match [a11y]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: AGPL-3.0; Gradle Kotlin Multiplatform, about 500 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (531 non-bot commits in the last 365 days) at a3b1466866
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'README: "Android/iOS are currently not actively tested in Tacit." (iosApp exists in the tree).
+  Maturity per README: Alpha.'
+checked: '2026-11-05'

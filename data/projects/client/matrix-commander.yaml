@@ -1,0 +1,128 @@
+slug: matrix-commander
+name: matrix-commander
+category: client
+kind: terminal (CLI)
+homepage: null
+summary: Python command-line client for sending, receiving and scripting Matrix messages, on matrix-nio.
+repos:
+- url: https://github.com/8go/matrix-commander
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/matrix-commander/
+  other: []
+maturity: stable
+platforms:
+- terminal
+apps:
+- os: terminal
+  tech: other
+  min_os: null
+  status: stable
+  stores:
+  - name: pypi
+    url: https://pypi.org/project/matrix-commander/
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/matrix-commander.md
+licence: GPL-3.0-or-later
+fork_of: null
+distribution:
+- pypi
+- docker
+funding: []
+features:
+  sdk:
+    value: matrix-nio
+    how: code
+    source: https://github.com/8go/matrix-commander/blob/d4c733cb2ab35a3d65919b5e9ddfd08af4b80442/setup.cfg
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/8go/matrix-commander/blob/d4c733cb2ab35a3d65919b5e9ddfd08af4b80442/help.manual.txt#L886
+    note: pattern match [Megolm]
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/8go/matrix-commander/blob/d4c733cb2ab35a3d65919b5e9ddfd08af4b80442/event-templates/template-msc3440-thread.json#L9
+    note: pattern match [m.thread]
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/8go/matrix-commander/blob/d4c733cb2ab35a3d65919b5e9ddfd08af4b80442/event-templates/template-msc2677-react.json#L4
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/8go/matrix-commander/blob/d4c733cb2ab35a3d65919b5e9ddfd08af4b80442/event-templates/template-msc2676-edit.json#L8
+    note: pattern match [m.new_content]
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/8go/matrix-commander/blob/d4c733cb2ab35a3d65919b5e9ddfd08af4b80442/help.manual.txt#L51
+    note: pattern match [presence]
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: GPL-3.0; mostly one Python file; pip
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (47 non-bot commits in the last 365 days) at d4c733cb2a
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

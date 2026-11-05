@@ -1,0 +1,146 @@
+slug: neoment
+name: Neoment
+category: client
+kind: terminal (Neovim plugin)
+homepage: null
+summary: Matrix client as a Neovim plugin in Lua; no E2EE.
+repos:
+- url: https://github.com/Massolari/neoment
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/neoment/
+  other: []
+maturity: beta
+platforms:
+- terminal
+apps:
+- os: terminal
+  tech: tui
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/README.md
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own
+    how: code
+    note: talks to the client-server API directly from Lua
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/README.md
+    note: '"Neoment does not currently support End-to-End Encryption (E2EE)."'
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/room.lua#L294
+    note: pattern match [thread_root]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/space.lua#L21
+    note: pattern match [SpaceHierarchy]
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/matrix/init.lua#L799
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/matrix/init.lua#L520
+    note: pattern match [m.new_content]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/matrix/init.lua#L492
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/markdown.lua#L297
+    note: pattern match [emoticon]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/matrix/event.lua#L15
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/matrix/event.lua#L13
+    note: pattern match [m.location]
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/rooms.lua#L1043
+    note: pattern match [read_private]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/sync.lua#L72
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/Massolari/neoment/blob/b128ae5e4d6adf04f7f1b9a4e2dd11a93740b3f0/lua/neoment/storage.lua#L100
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: MIT; about 40 Lua files, no build step
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - 'AGENTS.md (agent guidelines: build/test commands, code style) at b128ae5e4d'
+    - 6 of 167 commits in the last 365 days (3.6 %) carry Copilot co-author trailers
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'
