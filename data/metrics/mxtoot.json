@@ -44,12 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Java": 0.6679,
-   "License": 0.0608,
-   "Markdown": 0.1021,
-   "Systemd": 0.0022,
-   "XML": 0.1431,
-   "YAML": 0.024
+   "Java": 0.9933,
+   "Systemd": 0.0067
   },
   "last_commit": "2018-09-20T20:10:55+00:00",
   "last_tag": "0.5.0",
@@ -58,13 +54,9 @@
   "licence_detected": "Apache-2.0",
   "loc": {
    "Java": 2212,
-   "License": 169,
-   "Markdown": 305,
-   "Systemd": 15,
-   "XML": 560,
-   "YAML": 124
+   "Systemd": 15
   },
-  "loc_total": 3385,
+  "loc_total": 2227,
   "main_language": "Java",
   "open_issues": null,
   "open_prs": null,
@@ -129,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -178,6 +170,7 @@
    "error": null,
    "files": 46,
    "first_commit": "2018-06-01T18:29:31+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "1576e8ea896809e25fdb5dea30d244f6185e12c8",
@@ -185,12 +178,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Java": 0.6679,
-    "License": 0.0608,
-    "Markdown": 0.1021,
-    "Systemd": 0.0022,
-    "XML": 0.1431,
-    "YAML": 0.024
+    "Java": 0.9933,
+    "Systemd": 0.0067
    },
    "languages_source": "scc",
    "last_commit": "2018-09-20T20:10:55+00:00",
@@ -201,11 +190,7 @@
    "licence_source": "file",
    "loc": {
     "Java": 2212,
-    "License": 169,
-    "Markdown": 305,
-    "Systemd": 15,
-    "XML": 560,
-    "YAML": 124
+    "Systemd": 15
    },
    "ok": true,
    "open_issues": null,

@@ -44,12 +44,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0026,
-   "License": 0.0607,
-   "Markdown": 0.0157,
-   "Python": 0.8776,
-   "Shell": 0.0034,
-   "YAML": 0.0383
+   "Dockerfile": 0.0032,
+   "Python": 0.9929,
+   "Shell": 0.0039
   },
   "last_commit": "2024-03-02T12:40:32+00:00",
   "last_tag": "v0.3.1",
@@ -57,18 +54,11 @@
   "last_tag_repo": "https://github.com/mautrix/instagram",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Autoconf": 5,
-   "Docker ignore": 8,
    "Dockerfile": 34,
-   "License": 544,
-   "Markdown": 182,
-   "Plain Text": 27,
    "Python": 10580,
-   "Shell": 42,
-   "TOML": 10,
-   "YAML": 205
+   "Shell": 42
   },
-  "loc_total": 11637,
+  "loc_total": 10656,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -133,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -185,6 +175,7 @@
    "error": null,
    "files": 107,
    "first_commit": "2020-12-02T21:16:15+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "d3a3a100ddda25c0a68fc72281bd8c68e0705ac1",
@@ -192,12 +183,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0026,
-    "License": 0.0607,
-    "Markdown": 0.0157,
-    "Python": 0.8776,
-    "Shell": 0.0034,
-    "YAML": 0.0383
+    "Dockerfile": 0.0032,
+    "Python": 0.9929,
+    "Shell": 0.0039
    },
    "languages_source": "scc",
    "last_commit": "2024-03-02T12:40:32+00:00",
@@ -207,16 +195,9 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Autoconf": 5,
-    "Docker ignore": 8,
     "Dockerfile": 34,
-    "License": 544,
-    "Markdown": 182,
-    "Plain Text": 27,
     "Python": 10580,
-    "Shell": 42,
-    "TOML": 10,
-    "YAML": 205
+    "Shell": 42
    },
    "ok": true,
    "open_issues": null,

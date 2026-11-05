@@ -44,11 +44,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.3843,
-   "License": 0.0649,
-   "Markdown": 0.0744,
-   "TypeScript": 0.4568,
-   "YAML": 0.0195
+   "TypeScript": 1.0
   },
   "last_commit": "2020-06-22T12:57:16+00:00",
   "last_tag": null,
@@ -56,13 +52,9 @@
   "last_tag_repo": null,
   "licence_detected": "MIT",
   "loc": {
-   "JSON": 81,
-   "License": 17,
-   "Markdown": 34,
-   "TypeScript": 173,
-   "YAML": 16
+   "TypeScript": 173
   },
-  "loc_total": 321,
+  "loc_total": 173,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -127,7 +119,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -176,6 +168,7 @@
    "error": null,
    "files": 12,
    "first_commit": "2019-09-11T09:35:54+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "edc887f3697c9009b7e6c1c4b4894e93f0da6960",
@@ -183,11 +176,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.3843,
-    "License": 0.0649,
-    "Markdown": 0.0744,
-    "TypeScript": 0.4568,
-    "YAML": 0.0195
+    "TypeScript": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2020-06-22T12:57:16+00:00",
@@ -197,11 +186,7 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "JSON": 81,
-    "License": 17,
-    "Markdown": 34,
-    "TypeScript": 173,
-    "YAML": 16
+    "TypeScript": 173
    },
    "ok": true,
    "open_issues": null,

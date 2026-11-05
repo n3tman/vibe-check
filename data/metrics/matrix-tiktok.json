@@ -56,13 +56,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0035,
-   "Go": 0.9157,
-   "JSON": 0.001,
-   "License": 0.0015,
-   "Markdown": 0.0152,
-   "Protocol Buffers": 0.055,
-   "YAML": 0.0064
+   "Dockerfile": 0.0032,
+   "Go": 0.961,
+   "Protocol Buffers": 0.0351
   },
   "last_commit": "2026-08-15T17:18:12+00:00",
   "last_tag": "v1.1.0",
@@ -70,19 +66,13 @@
   "last_tag_repo": "https://github.com/httpjamesm/matrix-tiktok",
   "licence_detected": "MIT",
   "loc": {
-   "Docker ignore": 13,
    "Dockerfile": 56,
    "Go": 16741,
-   "JSON": 27,
-   "License": 17,
    "Makefile": 3,
-   "Markdown": 152,
    "Protocol Buffers": 612,
-   "Shell": 8,
-   "TOML": 2,
-   "YAML": 121
+   "Shell": 8
   },
-  "loc_total": 17752,
+  "loc_total": 17420,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -147,7 +137,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -226,6 +216,7 @@
    "error": null,
    "files": 64,
    "first_commit": "2026-04-13T22:17:13+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "011a948528a4ca19c0e6a38c275af1cbd5044a06",
@@ -233,13 +224,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0035,
-    "Go": 0.9157,
-    "JSON": 0.001,
-    "License": 0.0015,
-    "Markdown": 0.0152,
-    "Protocol Buffers": 0.055,
-    "YAML": 0.0064
+    "Dockerfile": 0.0032,
+    "Go": 0.961,
+    "Protocol Buffers": 0.0351
    },
    "languages_source": "scc",
    "last_commit": "2026-08-15T17:18:12+00:00",
@@ -249,17 +236,11 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 13,
     "Dockerfile": 56,
     "Go": 16741,
-    "JSON": 27,
-    "License": 17,
     "Makefile": 3,
-    "Markdown": 152,
     "Protocol Buffers": 612,
-    "Shell": 8,
-    "TOML": 2,
-    "YAML": 121
+    "Shell": 8
    },
    "ok": true,
    "open_issues": null,

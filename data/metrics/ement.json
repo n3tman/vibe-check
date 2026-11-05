@@ -47,13 +47,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Emacs Lisp": 0.7435,
-   "License": 0.0424,
-   "Makefile": 0.0017,
-   "Org": 0.0638,
-   "SVG": 0.0942,
-   "Shell": 0.0489,
-   "YAML": 0.0056
+   "Emacs Lisp": 0.8933,
+   "Makefile": 0.0029,
+   "Shell": 0.1037
   },
   "last_commit": "2025-11-18T01:17:48+00:00",
   "last_tag": "v0.17",
@@ -62,14 +58,10 @@
   "licence_detected": "GPL-3.0",
   "loc": {
    "Emacs Lisp": 8812,
-   "License": 553,
    "Makefile": 29,
-   "Org": 580,
-   "SVG": 915,
-   "Shell": 1023,
-   "YAML": 113
+   "Shell": 1023
   },
-  "loc_total": 12025,
+  "loc_total": 9864,
   "main_language": "Emacs Lisp",
   "open_issues": null,
   "open_prs": null,
@@ -134,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -188,6 +180,7 @@
    "error": null,
    "files": 38,
    "first_commit": "2020-11-26T21:46:21+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "790aee7d8fdd658bd1740b5e59a5e64c3842014b",
@@ -195,13 +188,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Emacs Lisp": 0.7435,
-    "License": 0.0424,
-    "Makefile": 0.0017,
-    "Org": 0.0638,
-    "SVG": 0.0942,
-    "Shell": 0.0489,
-    "YAML": 0.0056
+    "Emacs Lisp": 0.8933,
+    "Makefile": 0.0029,
+    "Shell": 0.1037
    },
    "languages_source": "scc",
    "last_commit": "2025-11-18T01:17:48+00:00",
@@ -212,12 +201,8 @@
    "licence_source": "file",
    "loc": {
     "Emacs Lisp": 8812,
-    "License": 553,
     "Makefile": 29,
-    "Org": 580,
-    "SVG": 915,
-    "Shell": 1023,
-    "YAML": 113
+    "Shell": 1023
    },
    "ok": true,
    "open_issues": null,

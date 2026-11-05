@@ -65,12 +65,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0013,
-   "Go": 0.8131,
-   "License": 0.0908,
-   "Markdown": 0.0436,
-   "Shell": 0.0043,
-   "YAML": 0.0463
+   "Dockerfile": 0.002,
+   "Go": 0.9948,
+   "Shell": 0.0032
   },
   "last_commit": "2026-11-04T13:13:19+00:00",
   "last_tag": null,
@@ -78,15 +75,11 @@
   "last_tag_repo": null,
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Docker ignore": 17,
    "Dockerfile": 16,
    "Go": 8085,
-   "License": 544,
-   "Markdown": 246,
-   "Shell": 26,
-   "YAML": 217
+   "Shell": 26
   },
-  "loc_total": 9151,
+  "loc_total": 8127,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -151,7 +144,7 @@
    8
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -288,6 +281,7 @@
    "error": null,
    "files": 72,
    "first_commit": "2018-08-12T19:26:05+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "6d88dd2d97547e1172a8d27a26f6e191863d29cb",
@@ -295,12 +289,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0013,
-    "Go": 0.8131,
-    "License": 0.0908,
-    "Markdown": 0.0436,
-    "Shell": 0.0043,
-    "YAML": 0.0463
+    "Dockerfile": 0.002,
+    "Go": 0.9948,
+    "Shell": 0.0032
    },
    "languages_source": "scc",
    "last_commit": "2026-11-04T13:13:19+00:00",
@@ -310,13 +301,9 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 17,
     "Dockerfile": 16,
     "Go": 8085,
-    "License": 544,
-    "Markdown": 246,
-    "Shell": 26,
-    "YAML": 217
+    "Shell": 26
    },
    "ok": true,
    "open_issues": null,

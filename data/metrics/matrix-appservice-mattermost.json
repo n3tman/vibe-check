@@ -44,14 +44,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0038,
-   "JSON": 0.0518,
-   "JavaScript": 0.0033,
-   "License": 0.003,
-   "Markdown": 0.0345,
-   "SQL": 0.4468,
-   "TypeScript": 0.4359,
-   "YAML": 0.0199
+   "Dockerfile": 0.0048,
+   "JavaScript": 0.0046,
+   "SQL": 0.3873,
+   "Shell": 0.0011,
+   "TypeScript": 0.6016
   },
   "last_commit": "2022-01-15T03:54:01+00:00",
   "last_tag": "v0.1.2",
@@ -61,17 +58,13 @@
   "loc": {
    "AWK": 4,
    "Dockerfile": 34,
-   "JSON": 621,
    "JavaScript": 32,
-   "License": 16,
-   "Markdown": 252,
    "SQL": 2721,
    "Shell": 8,
-   "TypeScript": 4226,
-   "YAML": 154
+   "TypeScript": 4226
   },
-  "loc_total": 8068,
-  "main_language": "SQL",
+  "loc_total": 7025,
+  "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -135,7 +128,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -186,6 +179,7 @@
    "error": null,
    "files": 64,
    "first_commit": "2020-08-03T13:25:14+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "c131df3ea090b602fcee8c62296ba5f011fa61ed",
@@ -193,14 +187,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0038,
-    "JSON": 0.0518,
-    "JavaScript": 0.0033,
-    "License": 0.003,
-    "Markdown": 0.0345,
-    "SQL": 0.4468,
-    "TypeScript": 0.4359,
-    "YAML": 0.0199
+    "Dockerfile": 0.0048,
+    "JavaScript": 0.0046,
+    "SQL": 0.3873,
+    "Shell": 0.0011,
+    "TypeScript": 0.6016
    },
    "languages_source": "scc",
    "last_commit": "2022-01-15T03:54:01+00:00",
@@ -212,14 +203,10 @@
    "loc": {
     "AWK": 4,
     "Dockerfile": 34,
-    "JSON": 621,
     "JavaScript": 32,
-    "License": 16,
-    "Markdown": 252,
     "SQL": 2721,
     "Shell": 8,
-    "TypeScript": 4226,
-    "YAML": 154
+    "TypeScript": 4226
    },
    "ok": true,
    "open_issues": null,

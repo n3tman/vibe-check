@@ -44,12 +44,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0304,
-   "Markdown": 0.0189,
-   "Plain Text": 0.0054,
-   "Python": 0.6101,
-   "Shell": 0.0156,
-   "YAML": 0.3196
+   "Dockerfile": 0.0591,
+   "Python": 0.9064,
+   "Shell": 0.0345
   },
   "last_commit": "2023-05-01T14:11:37+00:00",
   "last_tag": null,
@@ -58,13 +55,10 @@
   "licence_detected": null,
   "loc": {
    "Dockerfile": 12,
-   "Markdown": 12,
-   "Plain Text": 6,
    "Python": 184,
-   "Shell": 7,
-   "YAML": 133
+   "Shell": 7
   },
-  "loc_total": 354,
+  "loc_total": 203,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -129,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -180,6 +174,7 @@
    "error": null,
    "files": 13,
    "first_commit": "2023-03-31T10:40:05+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "2414e4873e537a928905d37a6fcaf2d1194cf9d7",
@@ -187,12 +182,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0304,
-    "Markdown": 0.0189,
-    "Plain Text": 0.0054,
-    "Python": 0.6101,
-    "Shell": 0.0156,
-    "YAML": 0.3196
+    "Dockerfile": 0.0591,
+    "Python": 0.9064,
+    "Shell": 0.0345
    },
    "languages_source": "scc",
    "last_commit": "2023-05-01T14:11:37+00:00",
@@ -202,11 +194,8 @@
    "licence_file": null,
    "loc": {
     "Dockerfile": 12,
-    "Markdown": 12,
-    "Plain Text": 6,
     "Python": 184,
-    "Shell": 7,
-    "YAML": 133
+    "Shell": 7
    },
    "ok": true,
    "open_issues": null,

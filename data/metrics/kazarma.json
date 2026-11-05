@@ -47,17 +47,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0073,
-   "Dockerfile": 0.0018,
-   "Elixir": 0.5429,
-   "HEEx": 0.0259,
-   "HTML": 0.0046,
-   "JSON": 0.0314,
-   "JavaScript": 0.0104,
-   "Markdown": 0.0648,
-   "Plain Text": 0.0863,
-   "SVG": 0.0021,
-   "YAML": 0.2218
+   "CSS": 0.0093,
+   "Elixir": 0.9295,
+   "HEEx": 0.0441,
+   "HTML": 0.0041,
+   "JavaScript": 0.0119
   },
   "last_commit": "2025-12-24T12:45:29+00:00",
   "last_tag": "v1.0.0-alpha.1",
@@ -66,20 +60,14 @@
   "licence_detected": "AGPL-3.0",
   "loc": {
    "CSS": 109,
-   "Docker ignore": 6,
    "Dockerfile": 11,
    "Elixir": 10929,
    "HEEx": 518,
    "HTML": 48,
-   "JSON": 977,
    "JavaScript": 140,
-   "Markdown": 802,
-   "Plain Text": 810,
-   "SVG": 27,
-   "Shell": 3,
-   "YAML": 848
+   "Shell": 3
   },
-  "loc_total": 15228,
+  "loc_total": 11758,
   "main_language": "Elixir",
   "open_issues": null,
   "open_prs": null,
@@ -144,7 +132,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -198,6 +186,7 @@
    "error": null,
    "files": 214,
    "first_commit": "2020-09-04T02:38:31+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "46dbc8d29006896b6b14057c1d0feb39bd768865",
@@ -205,17 +194,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0073,
-    "Dockerfile": 0.0018,
-    "Elixir": 0.5429,
-    "HEEx": 0.0259,
-    "HTML": 0.0046,
-    "JSON": 0.0314,
-    "JavaScript": 0.0104,
-    "Markdown": 0.0648,
-    "Plain Text": 0.0863,
-    "SVG": 0.0021,
-    "YAML": 0.2218
+    "CSS": 0.0093,
+    "Elixir": 0.9295,
+    "HEEx": 0.0441,
+    "HTML": 0.0041,
+    "JavaScript": 0.0119
    },
    "languages_source": "scc",
    "last_commit": "2025-12-24T12:45:29+00:00",
@@ -226,18 +209,12 @@
    "licence_source": "file",
    "loc": {
     "CSS": 109,
-    "Docker ignore": 6,
     "Dockerfile": 11,
     "Elixir": 10929,
     "HEEx": 518,
     "HTML": 48,
-    "JSON": 977,
     "JavaScript": 140,
-    "Markdown": 802,
-    "Plain Text": 810,
-    "SVG": 27,
-    "Shell": 3,
-    "YAML": 848
+    "Shell": 3
    },
    "ok": true,
    "open_issues": null,

@@ -44,11 +44,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Markdown": 0.0498,
-   "Plain Text": 0.0777,
-   "Rust": 0.6933,
-   "TOML": 0.0462,
-   "YAML": 0.133
+   "Rust": 1.0
   },
   "last_commit": "2023-06-23T15:40:58+00:00",
   "last_tag": "v0.3.0",
@@ -56,13 +52,9 @@
   "last_tag_repo": "https://github.com/DanNixon/matrix-mqtt-bridge",
   "licence_detected": "MIT",
   "loc": {
-   "Markdown": 10,
-   "Plain Text": 4,
-   "Rust": 269,
-   "TOML": 19,
-   "YAML": 62
+   "Rust": 269
   },
-  "loc_total": 364,
+  "loc_total": 269,
   "main_language": "Rust",
   "open_issues": null,
   "open_prs": null,
@@ -127,7 +119,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -178,6 +170,7 @@
    "error": null,
    "files": 10,
    "first_commit": "2022-03-03T18:41:48+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "f862eb6f49949fef43d10efe996bd349536e4803",
@@ -185,11 +178,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Markdown": 0.0498,
-    "Plain Text": 0.0777,
-    "Rust": 0.6933,
-    "TOML": 0.0462,
-    "YAML": 0.133
+    "Rust": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2023-06-23T15:40:58+00:00",
@@ -199,11 +188,7 @@
    "licence_file": "LICENSE.txt",
    "licence_source": "file",
    "loc": {
-    "Markdown": 10,
-    "Plain Text": 4,
-    "Rust": 269,
-    "TOML": 19,
-    "YAML": 62
+    "Rust": 269
    },
    "ok": true,
    "open_issues": null,

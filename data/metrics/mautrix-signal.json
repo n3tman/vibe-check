@@ -169,14 +169,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "C Header": 0.0939,
-   "Go": 0.8172,
-   "License": 0.0079,
-   "Markdown": 0.0076,
-   "Protocol Buffers": 0.0641,
-   "SQL": 0.0062,
-   "Shell": 0.0014,
-   "YAML": 0.0013
+   "C Header": 0.0802,
+   "Go": 0.8625,
+   "Protocol Buffers": 0.0502,
+   "SQL": 0.0051,
+   "Shell": 0.0016
   },
   "last_commit": "2026-11-04T22:28:39+00:00",
   "last_tag": "v0.2610.0",
@@ -185,17 +182,13 @@
   "licence_detected": "AGPL-3.0",
   "loc": {
    "C Header": 7255,
-   "Docker ignore": 6,
    "Dockerfile": 31,
    "Go": 78061,
-   "License": 544,
-   "Markdown": 663,
    "Protocol Buffers": 4547,
    "SQL": 466,
-   "Shell": 148,
-   "YAML": 125
+   "Shell": 148
   },
-  "loc_total": 91846,
+  "loc_total": 90508,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -260,7 +253,7 @@
    10
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -455,6 +448,7 @@
    "error": null,
    "files": 299,
    "first_commit": "2020-09-27T23:03:47+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "7501c40cba38fafeec636ccae6eb4eb870ea27e3",
@@ -462,14 +456,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "C Header": 0.0939,
-    "Go": 0.8172,
-    "License": 0.0079,
-    "Markdown": 0.0076,
-    "Protocol Buffers": 0.0641,
-    "SQL": 0.0062,
-    "Shell": 0.0014,
-    "YAML": 0.0013
+    "C Header": 0.0802,
+    "Go": 0.8625,
+    "Protocol Buffers": 0.0502,
+    "SQL": 0.0051,
+    "Shell": 0.0016
    },
    "languages_source": "scc",
    "last_commit": "2026-11-04T22:28:39+00:00",
@@ -480,15 +471,11 @@
    "licence_source": "file",
    "loc": {
     "C Header": 7255,
-    "Docker ignore": 6,
     "Dockerfile": 31,
     "Go": 78061,
-    "License": 544,
-    "Markdown": 663,
     "Protocol Buffers": 4547,
     "SQL": 466,
-    "Shell": 148,
-    "YAML": 125
+    "Shell": 148
    },
    "ok": true,
    "open_issues": null,

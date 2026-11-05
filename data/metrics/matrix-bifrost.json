@@ -56,15 +56,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "BASH": 0.0028,
-   "Dockerfile": 0.0053,
-   "JSON": 0.0051,
-   "License": 0.0197,
-   "Lua": 0.0161,
-   "Markdown": 0.0419,
-   "TOML": 0.0014,
-   "TypeScript": 0.8744,
-   "YAML": 0.0318
+   "BASH": 0.0019,
+   "Dockerfile": 0.0039,
+   "JavaScript": 0.0012,
+   "Lua": 0.0145,
+   "TypeScript": 0.9781
   },
   "last_commit": "2026-10-26T14:32:32+00:00",
   "last_tag": "3.0.0",
@@ -73,19 +69,13 @@
   "licence_detected": "Apache-2.0",
   "loc": {
    "BASH": 26,
-   "Docker ignore": 6,
    "Dockerfile": 53,
-   "JSON": 111,
    "JavaScript": 17,
-   "License": 169,
    "Lua": 198,
-   "Markdown": 343,
    "Shell": 6,
-   "TOML": 24,
-   "TypeScript": 13384,
-   "YAML": 395
+   "TypeScript": 13384
   },
-  "loc_total": 14732,
+  "loc_total": 13684,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -150,7 +140,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -227,6 +217,7 @@
    "error": null,
    "files": 118,
    "first_commit": "2018-10-17T23:25:38+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "75ed0cc3ba6901ab6c3dc29bac2ede2e4ad26577",
@@ -234,15 +225,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "BASH": 0.0028,
-    "Dockerfile": 0.0053,
-    "JSON": 0.0051,
-    "License": 0.0197,
-    "Lua": 0.0161,
-    "Markdown": 0.0419,
-    "TOML": 0.0014,
-    "TypeScript": 0.8744,
-    "YAML": 0.0318
+    "BASH": 0.0019,
+    "Dockerfile": 0.0039,
+    "JavaScript": 0.0012,
+    "Lua": 0.0145,
+    "TypeScript": 0.9781
    },
    "languages_source": "scc",
    "last_commit": "2026-10-26T14:32:32+00:00",
@@ -253,17 +240,11 @@
    "licence_source": "file",
    "loc": {
     "BASH": 26,
-    "Docker ignore": 6,
     "Dockerfile": 53,
-    "JSON": 111,
     "JavaScript": 17,
-    "License": 169,
     "Lua": 198,
-    "Markdown": 343,
     "Shell": 6,
-    "TOML": 24,
-    "TypeScript": 13384,
-    "YAML": 395
+    "TypeScript": 13384
    },
    "ok": true,
    "open_issues": null,

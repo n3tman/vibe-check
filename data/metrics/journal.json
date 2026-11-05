@@ -44,12 +44,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0174,
-   "Dockerfile": 0.003,
-   "JSON": 0.0215,
-   "JavaScript": 0.686,
-   "License": 0.1534,
-   "Markdown": 0.1182
+   "CSS": 0.0445,
+   "Dockerfile": 0.0062,
+   "JavaScript": 0.9493
   },
   "last_commit": "2019-12-22T19:19:01+00:00",
   "last_tag": "v1.3",
@@ -58,14 +55,10 @@
   "licence_detected": "Apache-2.0",
   "loc": {
    "CSS": 65,
-   "Docker ignore": 3,
    "Dockerfile": 9,
-   "JSON": 48,
-   "JavaScript": 1387,
-   "License": 150,
-   "Markdown": 142
+   "JavaScript": 1387
   },
-  "loc_total": 1804,
+  "loc_total": 1461,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -130,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -179,6 +172,7 @@
    "error": null,
    "files": 50,
    "first_commit": "2016-10-16T22:25:18+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "12e812625c33172094b37af42d3ed4ad8b45a2a2",
@@ -186,12 +180,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0174,
-    "Dockerfile": 0.003,
-    "JSON": 0.0215,
-    "JavaScript": 0.686,
-    "License": 0.1534,
-    "Markdown": 0.1182
+    "CSS": 0.0445,
+    "Dockerfile": 0.0062,
+    "JavaScript": 0.9493
    },
    "languages_source": "scc",
    "last_commit": "2019-12-22T19:19:01+00:00",
@@ -202,12 +193,8 @@
    "licence_source": "file",
    "loc": {
     "CSS": 65,
-    "Docker ignore": 3,
     "Dockerfile": 9,
-    "JSON": 48,
-    "JavaScript": 1387,
-    "License": 150,
-    "Markdown": 142
+    "JavaScript": 1387
    },
    "ok": true,
    "open_issues": null,

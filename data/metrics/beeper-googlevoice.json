@@ -44,8 +44,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Go": 0.9803,
-   "Markdown": 0.0197
+   "Go": 1.0
   },
   "last_commit": "2023-03-20T05:44:38+00:00",
   "last_tag": null,
@@ -53,10 +52,9 @@
   "last_tag_repo": null,
   "licence_detected": null,
   "loc": {
-   "Go": 988,
-   "Markdown": 28
+   "Go": 988
   },
-  "loc_total": 1016,
+  "loc_total": 988,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -121,7 +119,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -170,6 +168,7 @@
    "error": null,
    "files": 21,
    "first_commit": "2023-03-20T05:44:38+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "fc724fa68bfb91749341f7c0a5dd0fb9c35ddf82",
@@ -177,8 +176,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Go": 0.9803,
-    "Markdown": 0.0197
+    "Go": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2023-03-20T05:44:38+00:00",
@@ -187,8 +185,7 @@
    "licence_detected": null,
    "licence_file": null,
    "loc": {
-    "Go": 988,
-    "Markdown": 28
+    "Go": 988
    },
    "ok": true,
    "open_issues": null,

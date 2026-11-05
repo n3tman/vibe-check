@@ -47,15 +47,10 @@
   "issue_first_response_median_days": null,
   "languages": {
    "BASH": 0.0011,
-   "CSS": 0.0025,
-   "JSON": 0.0476,
-   "JavaScript": 0.2104,
-   "License": 0.0076,
-   "Markdown": 0.1031,
-   "Plain Text": 0.003,
-   "TOML": 0.001,
-   "TypeScript": 0.5756,
-   "YAML": 0.0468
+   "CSS": 0.0043,
+   "Dockerfile": 0.0011,
+   "JavaScript": 0.2879,
+   "TypeScript": 0.7047
   },
   "last_commit": "2026-10-26T13:44:53+00:00",
   "last_tag": "4.0.1",
@@ -67,17 +62,11 @@
    "CSS": 106,
    "Dockerfile": 27,
    "HTML": 12,
-   "JSON": 2755,
    "JavaScript": 7100,
-   "License": 169,
-   "Markdown": 2221,
-   "Plain Text": 75,
    "Shell": 12,
-   "TOML": 43,
-   "TypeScript": 17380,
-   "YAML": 1074
+   "TypeScript": 17380
   },
-  "loc_total": 31000,
+  "loc_total": 24663,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -144,7 +133,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -204,6 +193,7 @@
    "error": null,
    "files": 226,
    "first_commit": "2015-03-10T14:42:06+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "d3edeaa8306d33a213ba5307719a9a07e8788c9b",
@@ -212,15 +202,10 @@
    "issues_sampled": null,
    "languages": {
     "BASH": 0.0011,
-    "CSS": 0.0025,
-    "JSON": 0.0476,
-    "JavaScript": 0.2104,
-    "License": 0.0076,
-    "Markdown": 0.1031,
-    "Plain Text": 0.003,
-    "TOML": 0.001,
-    "TypeScript": 0.5756,
-    "YAML": 0.0468
+    "CSS": 0.0043,
+    "Dockerfile": 0.0011,
+    "JavaScript": 0.2879,
+    "TypeScript": 0.7047
    },
    "languages_source": "scc",
    "last_commit": "2026-10-26T13:44:53+00:00",
@@ -234,15 +219,9 @@
     "CSS": 106,
     "Dockerfile": 27,
     "HTML": 12,
-    "JSON": 2755,
     "JavaScript": 7100,
-    "License": 169,
-    "Markdown": 2221,
-    "Plain Text": 75,
     "Shell": 12,
-    "TOML": 43,
-    "TypeScript": 17380,
-    "YAML": 1074
+    "TypeScript": 17380
    },
    "ok": true,
    "open_issues": null,

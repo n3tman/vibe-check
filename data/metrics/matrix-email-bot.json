@@ -44,14 +44,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Docker ignore": 0.016,
-   "Dockerfile": 0.0116,
-   "JSON": 0.0247,
-   "JavaScript": 0.0422,
-   "License": 0.236,
-   "Markdown": 0.0848,
-   "TypeScript": 0.4368,
-   "YAML": 0.1479
+   "Dockerfile": 0.0342,
+   "JavaScript": 0.112,
+   "TypeScript": 0.8539
   },
   "last_commit": "2021-10-11T01:34:49+00:00",
   "last_tag": "v2.0.1",
@@ -59,16 +54,11 @@
   "last_tag_repo": "https://github.com/t2bot/matrix-email-bot",
   "licence_detected": "Apache-2.0",
   "loc": {
-   "Docker ignore": 28,
    "Dockerfile": 18,
-   "JSON": 52,
    "JavaScript": 59,
-   "License": 169,
-   "Markdown": 54,
-   "TypeScript": 450,
-   "YAML": 55
+   "TypeScript": 450
   },
-  "loc_total": 885,
+  "loc_total": 527,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -133,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -182,6 +172,7 @@
    "error": null,
    "files": 20,
    "first_commit": "2016-12-18T05:43:28+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "68e21579ca35db18752dd98b95ea3d696b1eb985",
@@ -189,14 +180,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Docker ignore": 0.016,
-    "Dockerfile": 0.0116,
-    "JSON": 0.0247,
-    "JavaScript": 0.0422,
-    "License": 0.236,
-    "Markdown": 0.0848,
-    "TypeScript": 0.4368,
-    "YAML": 0.1479
+    "Dockerfile": 0.0342,
+    "JavaScript": 0.112,
+    "TypeScript": 0.8539
    },
    "languages_source": "scc",
    "last_commit": "2021-10-11T01:34:49+00:00",
@@ -206,14 +192,9 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 28,
     "Dockerfile": 18,
-    "JSON": 52,
     "JavaScript": 59,
-    "License": 169,
-    "Markdown": 54,
-    "TypeScript": 450,
-    "YAML": 55
+    "TypeScript": 450
    },
    "ok": true,
    "open_issues": null,

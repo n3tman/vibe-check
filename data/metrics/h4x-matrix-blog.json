@@ -44,10 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "HTML": 0.0114,
-   "JavaScript": 0.9233,
-   "License": 0.0615,
-   "Markdown": 0.0037
+   "HTML": 0.4027,
+   "JavaScript": 0.5973
   },
   "last_commit": "2016-06-14T21:48:58+00:00",
   "last_tag": null,
@@ -56,11 +54,9 @@
   "licence_detected": "Apache-2.0",
   "loc": {
    "HTML": 89,
-   "JavaScript": 132,
-   "License": 150,
-   "Markdown": 17
+   "JavaScript": 132
   },
-  "loc_total": 388,
+  "loc_total": 221,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -125,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -174,6 +170,7 @@
    "error": null,
    "files": 5,
    "first_commit": "2015-03-23T17:59:51+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "b5bdabcec4380fd6165a8d7fa94612fdc811a39b",
@@ -181,10 +178,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "HTML": 0.0114,
-    "JavaScript": 0.9233,
-    "License": 0.0615,
-    "Markdown": 0.0037
+    "HTML": 0.4027,
+    "JavaScript": 0.5973
    },
    "languages_source": "scc",
    "last_commit": "2016-06-14T21:48:58+00:00",
@@ -195,9 +190,7 @@
    "licence_source": "file",
    "loc": {
     "HTML": 89,
-    "JavaScript": 132,
-    "License": 150,
-    "Markdown": 17
+    "JavaScript": 132
    },
    "ok": true,
    "open_issues": null,

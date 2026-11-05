@@ -44,11 +44,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.0091,
-   "JavaScript": 0.8303,
-   "License": 0.1237,
-   "Markdown": 0.0346,
-   "YAML": 0.0024
+   "JavaScript": 1.0
   },
   "last_commit": "2016-11-01T19:28:12+00:00",
   "last_tag": "v0.1.0-rc2",
@@ -56,13 +52,9 @@
   "last_tag_repo": "https://github.com/Half-Shot/matrix-appservice-twitter",
   "licence_detected": "Apache-2.0",
   "loc": {
-   "JSON": 30,
-   "JavaScript": 1875,
-   "License": 169,
-   "Markdown": 54,
-   "YAML": 6
+   "JavaScript": 1875
   },
-  "loc_total": 2134,
+  "loc_total": 1875,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -127,7 +119,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -176,6 +168,7 @@
    "error": null,
    "files": 16,
    "first_commit": "2016-05-23T15:34:37+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "312c2228f1f6b94e29da53c41ea070a0b6849ce9",
@@ -183,11 +176,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.0091,
-    "JavaScript": 0.8303,
-    "License": 0.1237,
-    "Markdown": 0.0346,
-    "YAML": 0.0024
+    "JavaScript": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2016-11-01T19:28:12+00:00",
@@ -197,11 +186,7 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "JSON": 30,
-    "JavaScript": 1875,
-    "License": 169,
-    "Markdown": 54,
-    "YAML": 6
+    "JavaScript": 1875
    },
    "ok": true,
    "open_issues": null,

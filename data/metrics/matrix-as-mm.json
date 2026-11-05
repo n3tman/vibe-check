@@ -44,13 +44,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0015,
-   "JSON": 0.0043,
-   "Markdown": 0.0078,
-   "SQL": 0.9259,
-   "SVG": 0.0041,
-   "TypeScript": 0.0518,
-   "YAML": 0.0034
+   "Dockerfile": 0.0032,
+   "SQL": 0.8246,
+   "Shell": 0.0015,
+   "TypeScript": 0.1696
   },
   "last_commit": "2023-07-28T08:49:44+00:00",
   "last_tag": "TGZ",
@@ -60,18 +57,13 @@
   "loc": {
    "AWK": 4,
    "Dockerfile": 146,
-   "JSON": 832,
    "JavaScript": 32,
-   "License": 16,
-   "Markdown": 787,
    "SQL": 37535,
-   "SVG": 274,
    "Shell": 70,
    "Systemd": 13,
-   "TypeScript": 7720,
-   "YAML": 376
+   "TypeScript": 7720
   },
-  "loc_total": 47805,
+  "loc_total": 45520,
   "main_language": "SQL",
   "open_issues": null,
   "open_prs": null,
@@ -136,7 +128,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -187,6 +179,7 @@
    "error": null,
    "files": 144,
    "first_commit": "2023-04-24T21:14:54+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "9f6d5a4d862d512eaaac54e421bed28da5598437",
@@ -194,13 +187,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0015,
-    "JSON": 0.0043,
-    "Markdown": 0.0078,
-    "SQL": 0.9259,
-    "SVG": 0.0041,
-    "TypeScript": 0.0518,
-    "YAML": 0.0034
+    "Dockerfile": 0.0032,
+    "SQL": 0.8246,
+    "Shell": 0.0015,
+    "TypeScript": 0.1696
    },
    "languages_source": "scc",
    "last_commit": "2023-07-28T08:49:44+00:00",
@@ -212,16 +202,11 @@
    "loc": {
     "AWK": 4,
     "Dockerfile": 146,
-    "JSON": 832,
     "JavaScript": 32,
-    "License": 16,
-    "Markdown": 787,
     "SQL": 37535,
-    "SVG": 274,
     "Shell": 70,
     "Systemd": 13,
-    "TypeScript": 7720,
-    "YAML": 376
+    "TypeScript": 7720
    },
    "ok": true,
    "open_issues": null,

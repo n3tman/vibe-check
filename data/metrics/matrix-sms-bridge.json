@@ -44,14 +44,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Batch": 0.0071,
-   "Dockerfile": 0.0018,
-   "Kotlin": 0.54,
-   "License": 0.0827,
-   "Markdown": 0.017,
-   "Plain Text": 0.0022,
-   "Shell": 0.0138,
-   "YAML": 0.3351
+   "Batch": 0.0157,
+   "Dockerfile": 0.004,
+   "Kotlin": 0.9545,
+   "Shell": 0.0258
   },
   "last_commit": "2025-10-20T18:30:24+00:00",
   "last_tag": "v0.5.13",
@@ -62,14 +58,9 @@
    "Batch": 78,
    "Dockerfile": 20,
    "Kotlin": 4744,
-   "License": 544,
-   "Markdown": 177,
-   "Plain Text": 15,
-   "Properties File": 5,
-   "Shell": 128,
-   "YAML": 567
+   "Shell": 128
   },
-  "loc_total": 6278,
+  "loc_total": 4970,
   "main_language": "Kotlin",
   "open_issues": null,
   "open_prs": null,
@@ -134,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -186,6 +177,7 @@
    "error": null,
    "files": 107,
    "first_commit": "2020-05-12T07:46:29+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "03d522da3044bf51996abf3dcbe980aadec02087",
@@ -193,14 +185,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Batch": 0.0071,
-    "Dockerfile": 0.0018,
-    "Kotlin": 0.54,
-    "License": 0.0827,
-    "Markdown": 0.017,
-    "Plain Text": 0.0022,
-    "Shell": 0.0138,
-    "YAML": 0.3351
+    "Batch": 0.0157,
+    "Dockerfile": 0.004,
+    "Kotlin": 0.9545,
+    "Shell": 0.0258
    },
    "languages_source": "scc",
    "last_commit": "2025-10-20T18:30:24+00:00",
@@ -213,12 +201,7 @@
     "Batch": 78,
     "Dockerfile": 20,
     "Kotlin": 4744,
-    "License": 544,
-    "Markdown": 177,
-    "Plain Text": 15,
-    "Properties File": 5,
-    "Shell": 128,
-    "YAML": 567
+    "Shell": 128
    },
    "ok": true,
    "open_issues": null,

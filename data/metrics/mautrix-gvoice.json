@@ -79,13 +79,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Go": 0.8621,
-   "JavaScript": 0.0098,
-   "License": 0.074,
-   "Markdown": 0.0056,
-   "Protocol Buffers": 0.0377,
-   "Shell": 0.002,
-   "YAML": 0.0071
+   "Dockerfile": 0.0011,
+   "Go": 0.9305,
+   "JavaScript": 0.0097,
+   "Protocol Buffers": 0.0557,
+   "Shell": 0.0025
   },
   "last_commit": "2026-11-05T04:19:07+00:00",
   "last_tag": "v0.2605.0",
@@ -96,14 +94,11 @@
    "Dockerfile": 13,
    "Go": 10522,
    "JavaScript": 110,
-   "License": 544,
-   "Markdown": 64,
    "Protocol Buffers": 630,
    "SQL": 5,
-   "Shell": 28,
-   "YAML": 94
+   "Shell": 28
   },
-  "loc_total": 12010,
+  "loc_total": 11308,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -168,7 +163,7 @@
    4
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -273,6 +268,7 @@
    "error": null,
    "files": 67,
    "first_commit": "2024-08-25T10:25:10+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "b81fca4a564ad0842f39a1943648db8bfd7512cc",
@@ -280,13 +276,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Go": 0.8621,
-    "JavaScript": 0.0098,
-    "License": 0.074,
-    "Markdown": 0.0056,
-    "Protocol Buffers": 0.0377,
-    "Shell": 0.002,
-    "YAML": 0.0071
+    "Dockerfile": 0.0011,
+    "Go": 0.9305,
+    "JavaScript": 0.0097,
+    "Protocol Buffers": 0.0557,
+    "Shell": 0.0025
    },
    "languages_source": "scc",
    "last_commit": "2026-11-05T04:19:07+00:00",
@@ -299,12 +293,9 @@
     "Dockerfile": 13,
     "Go": 10522,
     "JavaScript": 110,
-    "License": 544,
-    "Markdown": 64,
     "Protocol Buffers": 630,
     "SQL": 5,
-    "Shell": 28,
-    "YAML": 94
+    "Shell": 28
    },
    "ok": true,
    "open_issues": null,

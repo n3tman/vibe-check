@@ -46,14 +46,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "C Header": 0.0078,
-   "Go": 0.8182,
-   "License": 0.0584,
-   "Markdown": 0.0379,
-   "Objective C": 0.0201,
-   "SQL": 0.0138,
-   "Shell": 0.003,
-   "YAML": 0.0407
+   "C Header": 0.0021,
+   "Go": 0.9652,
+   "Objective C": 0.0164,
+   "SQL": 0.013,
+   "Shell": 0.0032
   },
   "last_commit": "2026-05-14T10:56:37+00:00",
   "last_tag": null,
@@ -63,14 +60,11 @@
   "loc": {
    "C Header": 27,
    "Go": 12523,
-   "License": 544,
-   "Markdown": 390,
    "Objective C": 213,
    "SQL": 169,
-   "Shell": 42,
-   "YAML": 252
+   "Shell": 42
   },
-  "loc_total": 14160,
+  "loc_total": 12974,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -135,7 +129,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -189,6 +183,7 @@
    "error": null,
    "files": 109,
    "first_commit": "2021-01-27T13:09:36+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "300ba6d0e5566d1f841d42ee1555779a9b6fa4be",
@@ -196,14 +191,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "C Header": 0.0078,
-    "Go": 0.8182,
-    "License": 0.0584,
-    "Markdown": 0.0379,
-    "Objective C": 0.0201,
-    "SQL": 0.0138,
-    "Shell": 0.003,
-    "YAML": 0.0407
+    "C Header": 0.0021,
+    "Go": 0.9652,
+    "Objective C": 0.0164,
+    "SQL": 0.013,
+    "Shell": 0.0032
    },
    "languages_source": "scc",
    "last_commit": "2026-05-14T10:56:37+00:00",
@@ -215,12 +207,9 @@
    "loc": {
     "C Header": 27,
     "Go": 12523,
-    "License": 544,
-    "Markdown": 390,
     "Objective C": 213,
     "SQL": 169,
-    "Shell": 42,
-    "YAML": 252
+    "Shell": 42
    },
    "ok": true,
    "open_issues": null,

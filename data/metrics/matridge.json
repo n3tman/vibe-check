@@ -103,18 +103,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0122,
-   "JavaScript": 0.0033,
-   "License": 0.1237,
-   "Lua": 0.0075,
-   "Makefile": 0.0023,
-   "Markdown": 0.0232,
-   "Python": 0.6473,
-   "ReStructuredText": 0.081,
-   "SVG": 0.0149,
-   "TOML": 0.018,
-   "XML": 0.0223,
-   "YAML": 0.0443
+   "Dockerfile": 0.0148,
+   "JavaScript": 0.0059,
+   "Lua": 0.0109,
+   "Makefile": 0.002,
+   "Python": 0.9664
   },
   "last_commit": "2026-10-31T07:53:52+00:00",
   "last_tag": "v0.5.1",
@@ -124,18 +117,11 @@
   "loc": {
    "Dockerfile": 68,
    "JavaScript": 27,
-   "License": 544,
    "Lua": 50,
    "Makefile": 9,
-   "Markdown": 109,
-   "Python": 4436,
-   "ReStructuredText": 499,
-   "SVG": 88,
-   "TOML": 137,
-   "XML": 127,
-   "YAML": 412
+   "Python": 4436
   },
-  "loc_total": 6506,
+  "loc_total": 4590,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -180,8 +166,8 @@
    0,
    1,
    0,
-   0,
-   3,
+   2,
+   1,
    0,
    10,
    0,
@@ -200,7 +186,7 @@
    6
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -314,6 +300,7 @@
    "error": null,
    "files": 69,
    "first_commit": "2023-07-13T06:55:17+00:00",
+   "first_parent": false,
    "forge": "forgejo",
    "forks": null,
    "head_sha": "1d76d7279a6ffca573ce0b45aee5f2d2f61cba3c",
@@ -321,18 +308,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0122,
-    "JavaScript": 0.0033,
-    "License": 0.1237,
-    "Lua": 0.0075,
-    "Makefile": 0.0023,
-    "Markdown": 0.0232,
-    "Python": 0.6473,
-    "ReStructuredText": 0.081,
-    "SVG": 0.0149,
-    "TOML": 0.018,
-    "XML": 0.0223,
-    "YAML": 0.0443
+    "Dockerfile": 0.0148,
+    "JavaScript": 0.0059,
+    "Lua": 0.0109,
+    "Makefile": 0.002,
+    "Python": 0.9664
    },
    "languages_source": "scc",
    "last_commit": "2026-10-31T07:53:52+00:00",
@@ -344,16 +324,9 @@
    "loc": {
     "Dockerfile": 68,
     "JavaScript": 27,
-    "License": 544,
     "Lua": 50,
     "Makefile": 9,
-    "Markdown": 109,
-    "Python": 4436,
-    "ReStructuredText": 499,
-    "SVG": 88,
-    "TOML": 137,
-    "XML": 127,
-    "YAML": 412
+    "Python": 4436
    },
    "ok": true,
    "open_issues": null,
@@ -406,8 +379,8 @@
     0,
     1,
     0,
-    0,
-    3,
+    2,
+    1,
     0,
     10,
     0,

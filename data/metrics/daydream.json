@@ -44,18 +44,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0307,
-   "HTML": 0.0087,
-   "JSON": 0.0058,
-   "JavaScript": 0.0785,
-   "License": 0.1697,
-   "Markdown": 0.0263,
-   "Rust": 0.4651,
-   "SVG": 0.0405,
-   "Sass": 0.108,
-   "TOML": 0.0363,
-   "XML": 0.0117,
-   "YAML": 0.0186
+   "CSS": 0.0397,
+   "HTML": 0.0101,
+   "JavaScript": 0.0698,
+   "Rust": 0.6308,
+   "Sass": 0.2497
   },
   "last_commit": "2020-08-22T15:51:50+00:00",
   "last_tag": null,
@@ -65,18 +58,11 @@
   "loc": {
    "CSS": 146,
    "HTML": 37,
-   "JSON": 44,
    "JavaScript": 257,
-   "License": 544,
-   "Markdown": 120,
    "Rust": 2322,
-   "SVG": 31,
-   "Sass": 919,
-   "TOML": 161,
-   "XML": 69,
-   "YAML": 50
+   "Sass": 919
   },
-  "loc_total": 4700,
+  "loc_total": 3681,
   "main_language": "Rust",
   "open_issues": null,
   "open_prs": null,
@@ -141,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -194,6 +180,7 @@
    "error": null,
    "files": 110,
    "first_commit": "2020-05-25T14:26:58+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "85c2cf395906e944174eb8e7acac1afe6426fefa",
@@ -201,18 +188,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0307,
-    "HTML": 0.0087,
-    "JSON": 0.0058,
-    "JavaScript": 0.0785,
-    "License": 0.1697,
-    "Markdown": 0.0263,
-    "Rust": 0.4651,
-    "SVG": 0.0405,
-    "Sass": 0.108,
-    "TOML": 0.0363,
-    "XML": 0.0117,
-    "YAML": 0.0186
+    "CSS": 0.0397,
+    "HTML": 0.0101,
+    "JavaScript": 0.0698,
+    "Rust": 0.6308,
+    "Sass": 0.2497
    },
    "languages_source": "scc",
    "last_commit": "2020-08-22T15:51:50+00:00",
@@ -224,16 +204,9 @@
    "loc": {
     "CSS": 146,
     "HTML": 37,
-    "JSON": 44,
     "JavaScript": 257,
-    "License": 544,
-    "Markdown": 120,
     "Rust": 2322,
-    "SVG": 31,
-    "Sass": 919,
-    "TOML": 161,
-    "XML": 69,
-    "YAML": 50
+    "Sass": 919
    },
    "ok": true,
    "open_issues": null,

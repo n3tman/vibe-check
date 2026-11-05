@@ -44,13 +44,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0231,
-   "License": 0.0809,
-   "Markdown": 0.2272,
-   "Python": 0.5612,
-   "Shell": 0.0224,
-   "Systemd": 0.0031,
-   "YAML": 0.0822
+   "Dockerfile": 0.025,
+   "Python": 0.9357,
+   "Shell": 0.0293,
+   "Systemd": 0.01
   },
   "last_commit": "2025-09-21T19:50:49+00:00",
   "last_tag": "v0.4.0",
@@ -59,14 +56,11 @@
   "licence_detected": "Apache-2.0",
   "loc": {
    "Dockerfile": 35,
-   "License": 150,
-   "Markdown": 528,
    "Python": 1310,
    "Shell": 41,
-   "Systemd": 14,
-   "YAML": 217
+   "Systemd": 14
   },
-  "loc_total": 2295,
+  "loc_total": 1400,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -131,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -183,6 +177,7 @@
    "error": null,
    "files": 33,
    "first_commit": "2020-04-26T21:10:57+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "dd51db6359ecc6c0aa80c70ed19d2ed773c92cc1",
@@ -190,13 +185,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0231,
-    "License": 0.0809,
-    "Markdown": 0.2272,
-    "Python": 0.5612,
-    "Shell": 0.0224,
-    "Systemd": 0.0031,
-    "YAML": 0.0822
+    "Dockerfile": 0.025,
+    "Python": 0.9357,
+    "Shell": 0.0293,
+    "Systemd": 0.01
    },
    "languages_source": "scc",
    "last_commit": "2025-09-21T19:50:49+00:00",
@@ -207,12 +199,9 @@
    "licence_source": "file",
    "loc": {
     "Dockerfile": 35,
-    "License": 150,
-    "Markdown": 528,
     "Python": 1310,
     "Shell": 41,
-    "Systemd": 14,
-    "YAML": 217
+    "Systemd": 14
    },
    "ok": true,
    "open_issues": null,

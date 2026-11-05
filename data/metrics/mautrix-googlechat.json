@@ -44,13 +44,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0014,
-   "License": 0.0361,
-   "Markdown": 0.0101,
-   "Protocol Buffers": 0.0683,
-   "Python": 0.8652,
-   "Shell": 0.0012,
-   "YAML": 0.0167
+   "Dockerfile": 0.0021,
+   "Protocol Buffers": 0.128,
+   "Python": 0.8682,
+   "Shell": 0.0017
   },
   "last_commit": "2025-07-16T10:44:56+00:00",
   "last_tag": "v0.5.2",
@@ -58,19 +55,12 @@
   "last_tag_repo": "https://github.com/mautrix/googlechat",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Autoconf": 5,
-   "Docker ignore": 5,
    "Dockerfile": 34,
-   "License": 544,
-   "Markdown": 214,
-   "Plain Text": 21,
    "Protocol Buffers": 2115,
    "Python": 14343,
-   "Shell": 28,
-   "TOML": 12,
-   "YAML": 168
+   "Shell": 28
   },
-  "loc_total": 17489,
+  "loc_total": 16520,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -135,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -187,6 +177,7 @@
    "error": null,
    "files": 71,
    "first_commit": "2019-05-09T18:14:49+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "a835bccd269eace6c28196a3f869eb1fb3c8acf7",
@@ -194,13 +185,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0014,
-    "License": 0.0361,
-    "Markdown": 0.0101,
-    "Protocol Buffers": 0.0683,
-    "Python": 0.8652,
-    "Shell": 0.0012,
-    "YAML": 0.0167
+    "Dockerfile": 0.0021,
+    "Protocol Buffers": 0.128,
+    "Python": 0.8682,
+    "Shell": 0.0017
    },
    "languages_source": "scc",
    "last_commit": "2025-07-16T10:44:56+00:00",
@@ -210,17 +198,10 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Autoconf": 5,
-    "Docker ignore": 5,
     "Dockerfile": 34,
-    "License": 544,
-    "Markdown": 214,
-    "Plain Text": 21,
     "Protocol Buffers": 2115,
     "Python": 14343,
-    "Shell": 28,
-    "TOML": 12,
-    "YAML": 168
+    "Shell": 28
    },
    "ok": true,
    "open_issues": null,

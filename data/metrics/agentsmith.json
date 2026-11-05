@@ -44,11 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Crystal": 0.8534,
-   "License": 0.0178,
-   "Markdown": 0.1063,
-   "Ruby": 0.0184,
-   "YAML": 0.0041
+   "Crystal": 0.9825,
+   "Ruby": 0.0175
   },
   "last_commit": "2019-06-14T20:23:48+00:00",
   "last_tag": null,
@@ -57,12 +54,9 @@
   "licence_detected": "MIT",
   "loc": {
    "Crystal": 1517,
-   "License": 17,
-   "Markdown": 101,
-   "Ruby": 27,
-   "YAML": 14
+   "Ruby": 27
   },
-  "loc_total": 1676,
+  "loc_total": 1544,
   "main_language": "Crystal",
   "open_issues": null,
   "open_prs": null,
@@ -127,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -176,6 +170,7 @@
    "error": null,
    "files": 44,
    "first_commit": "2018-11-19T00:07:04+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "ec28aa68d8fd1b76351de921313e441a32c03eb9",
@@ -183,11 +178,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Crystal": 0.8534,
-    "License": 0.0178,
-    "Markdown": 0.1063,
-    "Ruby": 0.0184,
-    "YAML": 0.0041
+    "Crystal": 0.9825,
+    "Ruby": 0.0175
    },
    "languages_source": "scc",
    "last_commit": "2019-06-14T20:23:48+00:00",
@@ -198,10 +190,7 @@
    "licence_source": "file",
    "loc": {
     "Crystal": 1517,
-    "License": 17,
-    "Markdown": 101,
-    "Ruby": 27,
-    "YAML": 14
+    "Ruby": 27
    },
    "ok": true,
    "open_issues": null,

@@ -46,12 +46,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.6215,
-   "Markdown": 0.0074,
-   "Plain Text": 0.2731,
-   "Rust": 0.091,
-   "SQL": 0.0015,
-   "YAML": 0.0031
+   "Dockerfile": 0.0077,
+   "Makefile": 0.0077,
+   "Rust": 0.9706,
+   "SQL": 0.0141
   },
   "last_commit": "2026-01-25T21:29:50+00:00",
   "last_tag": "v0.0.8",
@@ -60,17 +58,12 @@
   "licence_detected": "MIT",
   "loc": {
    "Dockerfile": 31,
-   "JSON": 1,
    "Makefile": 31,
-   "Markdown": 245,
-   "Plain Text": 50026,
    "Rust": 3927,
-   "SQL": 57,
-   "TOML": 57,
-   "YAML": 151
+   "SQL": 57
   },
-  "loc_total": 54526,
-  "main_language": "JSON",
+  "loc_total": 4046,
+  "main_language": "Rust",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -134,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -187,6 +180,7 @@
    "error": null,
    "files": 90,
    "first_commit": "2017-10-02T20:14:45+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "453a9ca5352fbcb09ec1b82811188b0ac96208ca",
@@ -194,12 +188,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.6215,
-    "Markdown": 0.0074,
-    "Plain Text": 0.2731,
-    "Rust": 0.091,
-    "SQL": 0.0015,
-    "YAML": 0.0031
+    "Dockerfile": 0.0077,
+    "Makefile": 0.0077,
+    "Rust": 0.9706,
+    "SQL": 0.0141
    },
    "languages_source": "scc",
    "last_commit": "2026-01-25T21:29:50+00:00",
@@ -210,14 +202,9 @@
    "licence_source": "file",
    "loc": {
     "Dockerfile": 31,
-    "JSON": 1,
     "Makefile": 31,
-    "Markdown": 245,
-    "Plain Text": 50026,
     "Rust": 3927,
-    "SQL": 57,
-    "TOML": 57,
-    "YAML": 151
+    "SQL": 57
    },
    "ok": true,
    "open_issues": null,

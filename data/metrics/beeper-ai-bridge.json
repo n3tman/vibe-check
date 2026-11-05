@@ -55,12 +55,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Go": 0.9614,
-   "JavaScript": 0.0076,
-   "Markdown": 0.0244,
-   "SQL": 0.0012,
-   "Shell": 0.0015,
-   "YAML": 0.0033
+   "Go": 0.9898,
+   "JavaScript": 0.0071,
+   "SQL": 0.0013,
+   "Shell": 0.0013
   },
   "last_commit": "2026-11-02T19:32:59+00:00",
   "last_tag": "v0.0.3",
@@ -68,16 +66,13 @@
   "last_tag_repo": "https://github.com/beeper/ai-bridge",
   "licence_detected": null,
   "loc": {
-   "Docker ignore": 17,
    "Dockerfile": 25,
    "Go": 46704,
    "JavaScript": 333,
-   "Markdown": 430,
    "SQL": 62,
-   "Shell": 62,
-   "YAML": 142
+   "Shell": 62
   },
-  "loc_total": 47775,
+  "loc_total": 47186,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -142,7 +137,7 @@
    1
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -204,6 +199,7 @@
    "error": null,
    "files": 228,
    "first_commit": "2026-05-23T22:22:28+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "d797acca2dabada715dcd9346078f7be33553b3a",
@@ -211,12 +207,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Go": 0.9614,
-    "JavaScript": 0.0076,
-    "Markdown": 0.0244,
-    "SQL": 0.0012,
-    "Shell": 0.0015,
-    "YAML": 0.0033
+    "Go": 0.9898,
+    "JavaScript": 0.0071,
+    "SQL": 0.0013,
+    "Shell": 0.0013
    },
    "languages_source": "scc",
    "last_commit": "2026-11-02T19:32:59+00:00",
@@ -225,14 +219,11 @@
    "licence_detected": null,
    "licence_file": null,
    "loc": {
-    "Docker ignore": 17,
     "Dockerfile": 25,
     "Go": 46704,
     "JavaScript": 333,
-    "Markdown": 430,
     "SQL": 62,
-    "Shell": 62,
-    "YAML": 142
+    "Shell": 62
    },
    "ok": true,
    "open_issues": null,

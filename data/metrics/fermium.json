@@ -56,11 +56,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Emacs Lisp": 0.7728,
-   "Markdown": 0.0123,
-   "Plain Text": 0.0043,
-   "Rust": 0.2075,
-   "TOML": 0.0031
+   "Emacs Lisp": 0.7336,
+   "Rust": 0.2664
   },
   "last_commit": "2026-08-13T06:24:21+00:00",
   "last_tag": null,
@@ -69,12 +66,9 @@
   "licence_detected": "BSD-3-Clause",
   "loc": {
    "Emacs Lisp": 5575,
-   "Markdown": 88,
-   "Plain Text": 6,
-   "Rust": 2025,
-   "TOML": 46
+   "Rust": 2025
   },
-  "loc_total": 7740,
+  "loc_total": 7600,
   "main_language": "Emacs Lisp",
   "open_issues": null,
   "open_prs": null,
@@ -139,7 +133,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -211,6 +205,7 @@
    "error": null,
    "files": 16,
    "first_commit": "2026-07-25T17:14:23+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "5437cadf358e6f7aedd6ff9918cabc78713d0b49",
@@ -218,11 +213,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Emacs Lisp": 0.7728,
-    "Markdown": 0.0123,
-    "Plain Text": 0.0043,
-    "Rust": 0.2075,
-    "TOML": 0.0031
+    "Emacs Lisp": 0.7336,
+    "Rust": 0.2664
    },
    "languages_source": "scc",
    "last_commit": "2026-08-13T06:24:21+00:00",
@@ -233,10 +225,7 @@
    "licence_source": "file",
    "loc": {
     "Emacs Lisp": 5575,
-    "Markdown": 88,
-    "Plain Text": 6,
-    "Rust": 2025,
-    "TOML": 46
+    "Rust": 2025
    },
    "ok": true,
    "open_issues": null,
