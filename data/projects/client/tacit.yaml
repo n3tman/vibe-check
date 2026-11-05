@@ -8,6 +8,9 @@ repos:
 - url: https://gitlab.com/dfuchss/tacit
   forge: gitlab
   role: main
+- url: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger
+  forge: gitlab
+  role: other
 sources:
   matrix_org_listing: https://matrix.org/ecosystem/clients/tacit/
   other: []
@@ -58,95 +61,125 @@ features:
   e2ee:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/jvmTest/kotlin/org/fuchss/matrix/tacit/readmeshots/SystemEventScreenshots.kt#L95
-    note: pattern match [m.megolm]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/CreateCryptoDriverModule.kt#L5
+    note: 'in trixnity-messenger v4.10.3: crypto driver module (vodozemac) (5 matches in main sources)'
   cross_signing:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/settings/TacitDarkThemeMode.kt#L16
-    note: pattern match [cross-signing]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/root/SelfVerificationSwitch.kt#L6
+    note: 'in trixnity-messenger v4.10.3: cross-signing bootstrap (81 matches in main sources)'
   key_backup:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/jvmTest/kotlin/org/fuchss/matrix/tacit/readmeshots/ScreenshotMessenger.kt#L286
-    note: pattern match [recoveryKey]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/connecting/StoreFailure.kt#L155
+    note: 'in trixnity-messenger v4.10.3: recovery key / key backup (154 matches in main sources)'
   sliding_sync:
     value: not-found
+    note: not found in trixnity-messenger v4.10.3 main sources
   oidc_auth:
-    value: not-found
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/MatrixMessengerSettings.kt#L6
+    note: 'in trixnity-messenger v4.10.3: OAuth 2.0 server login in the add-account flow (16 matches in
+      main sources)'
   multi_account:
-    value: not-found
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/profiles/ProfileSelection.kt#L53
+    note: 'in trixnity-messenger v4.10.3: multi-profile / MatrixMultiMessenger (117 matches in main sources)'
   threads:
     value: not-found
+    note: not found in trixnity-messenger v4.10.3 main sources
   spaces:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/tacitModule.kt#L55
-    note: pattern match [SpaceHierarchy]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/room/settings/ChangePowerLevel.kt#L316
+    note: 'in trixnity-messenger v4.10.3: spaces in the room list (4 matches in main sources)'
   voip_1to1:
     value: not-found
+    note: not found in trixnity-messenger v4.10.3 main sources
   group_calls:
     value: not-found
+    note: MatrixRTC code appears only in tests in trixnity-messenger v4.10.3, the version Tacit pins
   reactions:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/jvmTest/kotlin/org/fuchss/matrix/tacit/readmeshots/MatrixHttp.kt#L188
-    note: pattern match [m.reaction]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/room/settings/ChangePowerLevel.kt#L289
+    note: 'in trixnity-messenger v4.10.3: reactions (59 matches in main sources)'
   edits:
-    value: not-found
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/MatrixClientFactory.kt#L149
+    note: 'in trixnity-messenger v4.10.3: RelatesTo.Replace (8 matches in main sources)'
   replies:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/jvmTest/kotlin/org/fuchss/matrix/tacit/readmeshots/MatrixHttp.kt#L150
-    note: pattern match [m.in_reply_to]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/viewmodel/room/timeline/InputAreaViewModel.kt#L436
+    note: 'in trixnity-messenger v4.10.3: RelatesTo.Reply (2 matches in main sources)'
   polls:
     value: not-found
+    note: not found in trixnity-messenger v4.10.3 main sources
   custom_emoji:
     value: not-found
+    note: not found in trixnity-messenger v4.10.3 main sources
   stickers:
     value: not-found
+    note: not found in trixnity-messenger v4.10.3 main sources
   location:
-    value: not-found
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/DI.kt#L168
+    note: 'in trixnity-messenger v4.10.3: location messages (16 matches in main sources)'
   voice_messages:
-    value: not-found
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/DI.kt#L96
+    note: 'in trixnity-messenger v4.10.3: audio recorder / voice messages (33 matches in main sources)'
   rich_text_editor:
     value: not-found
+    note: not found in trixnity-messenger v4.10.3 main sources
   url_previews:
     value: not-found
+    note: not found in trixnity-messenger v4.10.3 main sources
   push_notifications:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/build.gradle.kts#L181
-    note: pattern match [apns]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/notification/PushNotificationProvider.kt#L8
+    note: 'in trixnity-messenger v4.10.3: pusher setup (7 matches in main sources)'
   private_read_receipts:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/viewmodel/room/timeline/TacitTimelineViewModelFactory.kt#L179
-    note: pattern match [privateRead]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/viewmodel/room/timeline/TimelineViewModel.kt#L1179
+    note: 'in trixnity-messenger v4.10.3: private read receipts (3 matches in main sources)'
   presence:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/views/room/list/RoomListChannels.kt#L72
-    note: pattern match [presence]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/theme/components/ThemedAvatar.kt#L200
+    note: 'in trixnity-messenger v4.10.3: presence on avatars (29 matches in main sources)'
   room_upgrades:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/TacitEvaluatePushRules.kt#L9
-    note: pattern match [m.room.Tombstone]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/DI.kt#L204
+    note: 'in trixnity-messenger v4.10.3: tombstone handling (36 matches in main sources)'
   moderation_tools:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/src/commonMain/kotlin/org/fuchss/matrix/tacit/views/TacitFlatMessageActions.kt#L84
-    note: pattern match [/report]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/room/timeline/MessageReport.kt#L23
+    note: 'in trixnity-messenger v4.10.3: report message (103 matches in main sources)'
   accessibility:
     value: 'yes'
     how: code
-    source: https://gitlab.com/dfuchss/tacit/-/blob/a3b1466866bb1fb30f58ccf5d36eb6c74ad42fe8/settings.gradle.kts#L9
-    note: pattern match [a11y]
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/common/CopyToClipboardButton.kt#L26
+    note: 'in trixnity-messenger v4.10.3: semantics / content descriptions in the Compose view (100 matches
+      in main sources)'
   translations:
-    value: not-found
+    value: partial
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/27315972de34d4836f9fa354649fd5885c21aab3/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/i18n/Language.kt#L10
+    note: German and English, built into trixnity-messenger
   telemetry:
     value: none-found
+    note: no analytics or crash-report SDK in tammy or trixnity-messenger build files
   default_homeserver:
     value: not-found
   fork_friendliness:
@@ -167,5 +200,6 @@ ai:
     note: null
     source: null
 notes: 'README: "Android/iOS are currently not actively tested in Tacit." (iosApp exists in the tree).
-  Maturity per README: Alpha.'
+  Maturity per README: Alpha. Client logic comes from trixnity-messenger v4.10.3 (gradle/libs.versions.toml),
+  read at that tag; Tacit is behind Tammy, which uses a 4.11.0 snapshot.'
 checked: '2026-11-05'
