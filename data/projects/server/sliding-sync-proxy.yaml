@@ -43,5 +43,6 @@ ai:
     note: null
     source: null
 notes: 'README: "The proxy is no longer being worked on and is now archived." Homeservers now implement
-  simplified sliding sync natively.'
+  simplified sliding sync natively. Element''s AI policy (element-meta CONTRIBUTING.md) covers matrix-org
+  repos where Element is the core contributor; not applied here (archived, scope unclear).'
 checked: '2026-11-05'
