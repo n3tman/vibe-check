@@ -223,6 +223,7 @@ export function summary(p: Entry) {
     authorsAll: c.authors_all ?? null,
     tags365: c.tags_365d ?? null,
     firstCommit: c.first_commit ?? null,
+    usedBy: Array.isArray((p.features as any)?.used_by) ? ((p.features as any).used_by as unknown[]).length : null,
     mscs: Array.isArray((p.features as any)?.msc) ? ((p.features as any).msc as { state: string }[]).filter((m) => m.state !== 'removed').length : null,
     lastCommit: c.last_commit ?? null,
     lastTag: c.last_tag ?? null,
