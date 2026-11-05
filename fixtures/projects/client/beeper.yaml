@@ -1,0 +1,29 @@
+slug: beeper
+name: Beeper (fixture)
+category: client
+kind: desktop
+homepage: https://www.beeper.com
+summary: Fixture. A closed-source multi-network chat app built on Matrix.
+repos: []
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: stable
+platforms: [android, ios, windows, macos, linux]
+apps:
+  - {os: android, tech: other, min_os: null, status: stable, stores: [], source: https://www.beeper.com}
+  - {os: ios, tech: other, min_os: null, status: stable, stores: [], source: https://www.beeper.com}
+  - {os: macos, tech: other, min_os: null, status: stable, stores: [], source: https://www.beeper.com}
+licence: proprietary
+fork_of: null
+distribution: []
+funding: []
+features:
+  e2ee: {value: yes, how: claimed, source: https://www.beeper.com}
+  threads: not-found
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage: {value: none-found, evidence: []}
+  in_product: {value: none-found, note: null, source: null}
+notes: Fixture for a project without a public repo; not checked.
+checked: 2026-11-05

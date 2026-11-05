@@ -1,0 +1,56 @@
+slug: element-x
+name: Element X (fixture)
+category: client
+kind: mobile
+homepage: https://element.io/app
+summary: Fixture. Element's mobile clients built on matrix-rust-sdk, plus the desktop app.
+repos:
+  - {url: https://github.com/element-hq/element-x-android, forge: github, role: android}
+  - {url: https://github.com/element-hq/element-x-ios, forge: github, role: ios}
+  - {url: https://github.com/element-hq/element-desktop, forge: github, role: desktop}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/element/
+  other: []
+maturity: stable
+platforms: [android, ios, windows, macos, linux]
+apps:
+  - os: android
+    tech: native
+    min_os: null
+    status: stable
+    stores:
+      - {name: google-play, url: "https://play.google.com/store/apps/details?id=io.element.android.x"}
+      - {name: f-droid, url: "https://f-droid.org/packages/io.element.android.x/"}
+    source: https://github.com/element-hq/element-x-android
+  - os: ios
+    tech: native
+    min_os: null
+    status: stable
+    stores: [{name: app-store, url: "https://apps.apple.com/app/element-x-secure-chat-call/id1631335820"}]
+    source: https://github.com/element-hq/element-x-ios
+  - {os: windows, tech: electron, min_os: null, status: stable, stores: [], source: https://github.com/element-hq/element-desktop}
+  - {os: macos, tech: electron, min_os: null, status: stable, stores: [], source: https://github.com/element-hq/element-desktop}
+  - {os: linux, tech: electron, min_os: null, status: stable, stores: [{name: flathub, url: "https://flathub.org/apps/im.riot.Riot"}], source: https://github.com/element-hq/element-desktop}
+licence: AGPL-3.0-only
+fork_of: null
+distribution: [google-play, f-droid, app-store, flathub]
+funding: []
+features:
+  sdk: {value: yes, how: claimed, source: https://github.com/element-hq/element-x-android, note: matrix-rust-sdk}
+  e2ee: {value: yes, how: claimed, source: https://github.com/element-hq/element-x-android}
+  sliding_sync: {value: yes, how: claimed, source: https://github.com/element-hq/element-x-android, note: MSC4186 simplified sliding sync}
+  oidc_auth: {value: yes, how: claimed, source: https://github.com/element-hq/element-x-android}
+  threads: {value: partial, how: claimed, source: https://github.com/element-hq/element-x-android}
+  spaces: {value: partial, how: claimed, source: https://github.com/element-hq/element-x-android}
+  group_calls: {value: yes, how: claimed, source: https://github.com/element-hq/element-x-android, note: Element Call}
+  polls: {value: yes, how: claimed, source: https://github.com/element-hq/element-x-android}
+  voice_messages: {value: yes, how: claimed, source: https://github.com/element-hq/element-x-android}
+  custom_emoji: not-found
+  telemetry: {value: opt-in, how: claimed, source: https://github.com/element-hq/element-x-android, note: PostHog and Sentry, opt-in}
+  default_homeserver: {value: yes, how: claimed, source: https://github.com/element-hq/element-x-android, note: matrix.org}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage: {value: none-found, evidence: []}
+  in_product: {value: none-found, note: null, source: null}
+notes: Fixture for the collector and the site; not checked.
+checked: 2026-11-05
