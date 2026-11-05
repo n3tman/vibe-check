@@ -1,0 +1,64 @@
+slug: mautrix-deltachat
+name: mautrix-deltachat
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/deltachat/index.html
+summary: Archived, unfinished puppeting bridge between Matrix and Delta Chat.
+repos:
+- url: https://github.com/mautrix/deltachat
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search org:mautrix
+maturity: archived
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: Delta Chat (email)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/deltachat/blob/23a615244f877ae7944bad8ebd23e57feb076e4c/go.mod
+    note: legacy mautrix-go bridge (v1)
+  puppeting:
+    value: not-found
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. The
+      author is accountable for the code. [...] AI should not be used for communicating with humans.
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/contributing.md#L23-L37
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 23a615244f87; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: 'GitHub description: "A work-in-progress Matrix-DeltaChat puppeting bridge". Archived, last commit
+  2023-04-05.'
+checked: 2026-11-05

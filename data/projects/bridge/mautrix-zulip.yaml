@@ -1,0 +1,81 @@
+slug: mautrix-zulip
+name: mautrix-zulip
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/zulip/index.html
+summary: Puppeting bridge between Matrix and Zulip on mautrix-go bridgev2, early stage.
+repos:
+- url: https://github.com/mautrix/zulip
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search org:mautrix
+maturity: alpha
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: Zulip
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/zulip/blob/c5a5dde25d3589e094f2523a53bd9c9bd30ff879/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/double-puppeting.md
+    note: 'double puppeting (automatic via an appservice registration, or manual login); relay mode: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/relay-mode.md'
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/end-to-bridge-encryption.md
+    note: optional end-to-bridge encryption of the Matrix side (Matrix rooms encrypted between users and
+      the bridge)
+  backfill:
+    value: not-found
+  media:
+    value: partial
+    how: claimed
+    source: https://github.com/mautrix/zulip/blob/c5a5dde25d3589e094f2523a53bd9c9bd30ff879/ROADMAP.md
+    note: Zulip to Matrix only
+  reactions_edits:
+    value: 'no'
+    how: claimed
+    source: https://github.com/mautrix/zulip/blob/c5a5dde25d3589e094f2523a53bd9c9bd30ff879/ROADMAP.md
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/zulip/blob/c5a5dde25d3589e094f2523a53bd9c9bd30ff879/ROADMAP.md
+    note: streams/topics
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/go/zulip/authentication.md
+    note: Zulip API token
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. The
+      author is accountable for the code. [...] AI should not be used for communicating with humans.
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/contributing.md#L23-L37
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD c5a5dde25d35; no AI-attributed commits among 11 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: 'Most ROADMAP items unchecked. Other Zulip bridge: MatrixZulipBridge (GearKite).'
+checked: 2026-11-05

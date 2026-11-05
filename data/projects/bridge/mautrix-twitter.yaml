@@ -1,0 +1,86 @@
+slug: mautrix-twitter
+name: mautrix-twitter
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/twitter/index.html
+summary: Puppeting bridge between Matrix and X/Twitter direct messages, rewritten in Go on mautrix-go
+  bridgev2.
+repos:
+- url: https://github.com/mautrix/twitter
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/X/
+  other: []
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: X (Twitter) DMs
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/twitter/blob/3e2add166b93a03bf96390c987978f26ef2e4607/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/double-puppeting.md
+    note: 'double puppeting (automatic via an appservice registration, or manual login); relay mode: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/relay-mode.md'
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/end-to-bridge-encryption.md
+    note: optional end-to-bridge encryption of the Matrix side (Matrix rooms encrypted between users and
+      the bridge)
+  backfill:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/twitter/blob/3e2add166b93a03bf96390c987978f26ef2e4607/pkg/connector/backfill.go
+    note: ROADMAP.md still lists message history as not done
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/twitter/blob/3e2add166b93a03bf96390c987978f26ef2e4607/ROADMAP.md
+  reactions_edits:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/twitter/blob/3e2add166b93a03bf96390c987978f26ef2e4607/ROADMAP.md
+    note: reactions
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/twitter/blob/3e2add166b93a03bf96390c987978f26ef2e4607/ROADMAP.md
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/go/twitter/authentication.md
+    note: browser cookies (ct0, auth_token)
+  network_tos_risk:
+    value: not-found
+    note: no ToS warning found in the docs
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. The
+      author is accountable for the code. [...] AI should not be used for communicating with humans.
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/contributing.md#L23-L37
+  dev_usage:
+    value: occasional
+    evidence:
+    - 3 of 207 non-bot commits in the last 365 days (1.4 %) carry an AI co-author trailer or 'Generated
+      with' line, e.g. https://github.com/mautrix/twitter/commit/df8ebc106078868fad233ff05e23de3c26ee195b,
+      https://github.com/mautrix/twitter/commit/3814539c1d828d4f71f7f0a5edbff6dd46e18240
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: matrix.org lists it as Python; CHANGELOG.md records the rewrite in Go on bridgev2. ROADMAP.md looks
+  out of date against the code.
+checked: 2026-11-05

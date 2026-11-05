@@ -1,0 +1,70 @@
+slug: mautrix-twilio
+name: mautrix-twilio
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/twilio/index.html
+summary: Demo bridge for mautrix-go bridgev2 that bridges Twilio SMS; described as a demo project.
+repos:
+- url: https://github.com/mautrix/twilio
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search org:mautrix
+maturity: alpha
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: SMS via Twilio
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/twilio/blob/18579cdd5867f6b15323d4a39ffbe571d7701915/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: not-found
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/end-to-bridge-encryption.md
+    note: optional end-to-bridge encryption of the Matrix side (Matrix rooms encrypted between users and
+      the bridge)
+  backfill:
+    value: 'no'
+    note: no FetchMessages implementation in the code
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+    note: Twilio account credentials
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. The
+      author is accountable for the code. [...] AI should not be used for communicating with humans.
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/contributing.md#L23-L37
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 18579cdd5867; no AI-attributed commits among 1 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: 'GitHub description: "A bridgev2 demo project for bridging Matrix and Twilio". beeper/line says
+  it is based on it. Replaces tulir/mautrix-twilio (archived 2019).'
+checked: 2026-11-05

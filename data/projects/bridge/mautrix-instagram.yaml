@@ -1,0 +1,77 @@
+slug: mautrix-instagram
+name: mautrix-instagram
+category: bridge
+kind: puppeting bridge
+homepage: https://docs.mau.fi/bridges/go/instagram/index.html
+summary: Archived Python puppeting bridge for Instagram DMs, replaced by mautrix-meta.
+repos:
+- url: https://github.com/mautrix/instagram
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/instagram/
+  other: []
+maturity: archived
+platforms:
+- server
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- docker
+funding:
+- https://github.com/sponsors/tulir
+features:
+  network: Instagram DMs
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/mautrix/instagram/blob/d3a3a100ddda25c0a68fc72281bd8c68e0705ac1/setup.py
+    note: mautrix-python
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/instagram/blob/d3a3a100ddda25c0a68fc72281bd8c68e0705ac1/ROADMAP.md
+    note: double puppeting
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/end-to-bridge-encryption.md
+    note: optional end-to-bridge encryption of the Matrix side (Matrix rooms encrypted between users and
+      the bridge)
+  backfill:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/instagram/blob/d3a3a100ddda25c0a68fc72281bd8c68e0705ac1/ROADMAP.md
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/instagram/blob/d3a3a100ddda25c0a68fc72281bd8c68e0705ac1/ROADMAP.md
+  reactions_edits:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/instagram/blob/d3a3a100ddda25c0a68fc72281bd8c68e0705ac1/ROADMAP.md
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/mautrix/instagram/blob/d3a3a100ddda25c0a68fc72281bd8c68e0705ac1/ROADMAP.md
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: restricted
+    quote: In general, you can use AI to help with contributions. However, AI slop is not accepted. The
+      author is accountable for the code. [...] AI should not be used for communicating with humans.
+    source: https://github.com/mautrix/docs/blob/da79465b14f6490d6f9a73d53ca5953d6cce0d75/bridges/general/contributing.md#L23-L37
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD d3a3a100ddda; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README, ROADMAP or code
+    source: null
+notes: Archived on GitHub (last commit 2024-03-02); matrix.org labels it Obsolete. Use mautrix-meta.
+checked: 2026-11-05
