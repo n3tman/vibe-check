@@ -8,7 +8,7 @@ import Sparkline from '../../components/Sparkline.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { dataset, type Category } from '../../lib/data.ts';
 import { CATEGORIES } from '../../lib/schema.ts';
-import { AXES, CATEGORY_LABEL, STATUS, fmtDate, fmtNum, href, osList, statusOf, summary } from '../../lib/view.ts';
+import { AXES, CATEGORY_LABEL, CLIENT_FEATURES, STATUS, fmtDate, fmtNum, href, osList, statusOf, summary } from '../../lib/view.ts';
 
 export function getStaticPaths() {
   const d = dataset();
@@ -26,7 +26,7 @@ const data = Object.fromEntries(items.map((p) => [p.slug, summary(p)]));
   <header class="page-head">
     <p class="eyebrow">{items.length} {items.length === 1 ? L.one.toLowerCase() : L.many.toLowerCase()}</p>
     <h1>{L.many}</h1>
-    <p class="lede">{L.blurb} Filter, sort, or pick up to four to <a href={href('compare/')}>compare</a>.{category === 'client' && <> Telemetry and defaults side by side: <a href={href('privacy/')}>privacy at a glance</a>.</>}</p>
+    <p class="lede">{L.blurb} Filter, sort, or pick up to four to <a href={href('compare/')}>compare</a>.{category === 'client' && <> Telemetry and defaults side by side: <a href={href('privacy/')}>privacy at a glance</a>; features and the MSCs behind them: <a href={href('mscs/clients/')}>clients × features</a>.</>}</p>
   </header>
 
   {items.length === 0 ? (
@@ -66,6 +66,7 @@ const data = Object.fromEntries(items.map((p) => [p.slug, summary(p)]));
               <option value="commitsAll">Commits, all time</option><option value="loc">Lines of code</option><option value="oldest">Oldest first</option>
               {category === 'server' && <option value="mscs">MSCs implemented</option>}
             </optgroup>
+            {isClient && <optgroup label="Features"><option value="features">Features found</option></optgroup>}
             <optgroup label="Reach"><option value="stars">Stars</option>{category === 'sdk' && <option value="usedBy">Used by (projects listed here)</option>}</optgroup>
           </select>
         </label>
@@ -95,6 +96,7 @@ const data = Object.fromEntries(items.map((p) => [p.slug, summary(p)]));
               <th scope="col" class="num" data-sort="activity"><button type="button">Commits 1y</button></th>
               <th scope="col" data-sort="recent"><button type="button">Last commit</button></th>
               <th scope="col">Weekly</th>
+              {isClient && <th scope="col" class="num" data-sort="features"><button type="button" title={`Of the ${CLIENT_FEATURES.length} features in the clients × features matrix, how many were found (yes)`}>Features</button></th>}
               <th scope="col">AI policy</th>
               <th scope="col">AI dev use</th>
               <th scope="col">AI in product</th>
@@ -114,6 +116,7 @@ const data = Object.fromEntries(items.map((p) => [p.slug, summary(p)]));
                   <td class="num">{fmtNum(s.commits365)}</td>
                   <td>{fmtDate(s.lastCommit)}</td>
                   <td>{p.repos.length ? <Sparkline weeks={s.weekly} width={90} height={22} /> : <span class="muted small">no repo</span>}</td>
+                  {isClient && <td class="num">{s.featYes}<span class="muted small"> / {CLIENT_FEATURES.length}</span></td>}
                   <td><AiMark axis="policy" value={p.ai.policy.value} compact showAxis={false} /></td>
                   <td><AiMark axis="dev_usage" value={p.ai.dev_usage.value} compact showAxis={false} /></td>
                   <td><AiMark axis="in_product" value={p.ai.in_product.value} compact showAxis={false} /></td>

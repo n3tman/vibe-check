@@ -7,7 +7,7 @@ import ProjectIcon from './ProjectIcon.astro';
 import Sparkline from './Sparkline.astro';
 import StatusBadge from './StatusBadge.astro';
 import type { Entry } from '../lib/data.ts';
-import { CATEGORY_LABEL, HEADLINE, feature, fmtDate, fmtNum, href, osList, statusOf, summary } from '../lib/view.ts';
+import { CATEGORY_LABEL, HEADLINE, feature, featureScore, fmtDate, fmtNum, href, osList, statusOf, summary } from '../lib/view.ts';
 interface Props { p: Entry; showCategory?: boolean }
 const { p, showCategory = false } = Astro.props;
 const s = summary(p);
@@ -17,6 +17,8 @@ const head = HEADLINE[p.category].map((k) => feature(k, (p.features as any)?.[k]
 const found = head.filter((f) => f.state !== 'not-found');
 const missing = head.filter((f) => f.state === 'not-found');
 const flat = !!c && !c.commits_365d;
+const score = featureScore(p);
+const seg = score ? [...Array(score.yes).fill('y'), ...Array(score.partial).fill('p'), ...Array(score.no).fill('n'), ...Array(score.total - score.yes - score.partial - score.no).fill('u')] : [];
 ---
 <article class="card" data-slug={p.slug}>
   <header class="card-head">
@@ -43,6 +45,12 @@ const flat = !!c && !c.commits_365d;
     )
   )}
   <div class="card-foot">
+  {score && (
+    <div class="fmeter">
+      <span class="fmeter-bar" aria-hidden="true">{seg.map((x) => <i data-f={x} />)}</span>
+      <span class="fmeter-text"><strong>{score.yes}</strong> of {score.total} features found{score.partial > 0 && <span class="muted"> · {score.partial} partly</span>}</span>
+    </div>
+  )}
   <AiMarks p={p} compact />
   <ul class="fchips" aria-label="Headline features">
     {found.map((f) => <li><FeatureChip f={f} /></li>)}

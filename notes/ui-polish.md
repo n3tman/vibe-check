@@ -34,3 +34,15 @@ sideways scroll at 390 or 1280 px, both themes.
 
 ## Open
 - vommet reports 41,333 tags in a year (its `pre-sync/...` tags): a collector question, not UI.
+
+## Clients × features (second pass)
+- New page `/mscs/clients/`: a summary table of 24 client features with the MSCs each rests on
+  (numbers, status and spec version from `data/mscs.yaml`; "none" for core spec or client-side
+  features), then a clients × features matrix sorted by features found. Clients with nothing
+  found fold into a details block. A switcher links it with the servers × MSCs page.
+- Client files have no per-MSC lists (unlike 19 servers), so the matrix is by feature, not by
+  MSC. A future research pass could add `features.msc` for clients that advertise unstable
+  features in code.
+- Client cards show a "N of 24 features found" bar; the client list gets a "Features found"
+  sort and a Features column in the table view. "Not found" counts as unknown, never as no.
+- The feature list and MSC mapping live in `CLIENT_FEATURES` in `site/src/lib/view.ts`.
