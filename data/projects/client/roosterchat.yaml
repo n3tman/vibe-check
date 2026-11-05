@@ -9,6 +9,7 @@ repos:
 - url: https://github.com/PondLabs/roosterchat
   forge: github
   role: main
+  first_parent: true
 sources:
   matrix_org_listing: null
   other:

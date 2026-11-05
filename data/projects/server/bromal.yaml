@@ -1,0 +1,69 @@
+slug: bromal
+name: Bromal
+category: server
+kind: homeserver
+homepage: https://bromal.im
+summary: A lightweight Matrix homeserver in Elixir, aimed at small servers, funded by NLnet's NGI0 Commons
+  Fund.
+repos:
+- url: https://code.bromal.im/main/bromal
+  forge: forgejo
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - notes/05.md (NLnet project index)
+  - https://nlnet.nl/project/Bromal/
+maturity: alpha
+platforms:
+- server
+licence: AGPL-3.0
+fork_of: null
+distribution:
+- guix
+funding:
+- https://nlnet.nl/project/Bromal/
+features:
+  language: Elixir
+  database: PostgreSQL
+  federation:
+    value: planned
+    how: claimed
+    source: https://code.bromal.im/main/bromal/src/commit/128b01ca6accf70c8f4a55f3a7ce11e1f652f9e2/README.org
+    note: '"The project aims to support server-to-server federation, state resolution …"'
+  resource_needs:
+    value: 'modest: "could be deployed even on small servers, including VPS"'
+    how: claimed
+    source: https://code.bromal.im/main/bromal/src/commit/128b01ca6accf70c8f4a55f3a7ce11e1f652f9e2/README.org
+  msc: []
+ai:
+  policy:
+    value: banned
+    quote: Contributions are always welcome, however they are always welcome without ANY use of generative
+      AI/LLMs.
+    source: https://code.bromal.im/main/bromal/src/commit/128b01ca6accf70c8f4a55f3a7ce11e1f652f9e2/README.org#L55-L56
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 172 non-merge commits since 2025-11-05 attributed; no agent files, counted at 128b01ca
+  in_product:
+    value: none-found
+    note: null
+    source: null
+  funder_policy:
+  - funder: NLnet Foundation (NGI0 Commons Fund)
+    grant: https://nlnet.nl/project/Bromal/
+    grant_start: 2026-04
+    grant_source: https://nlnet.nl/project/Bromal/
+    policy: https://nlnet.nl/foundation/policies/generativeAI/2.0/
+    policy_version: 2.0, in force since 2026-10-20; the NLnet FAQ names the NGI Zero Commons Fund among
+      the funds that may keep following v1.1
+    value: banned
+    quote: It is not allowed to use generative AI for producing artefacts of any kind, including code,
+      design, and documentation.
+    scope: work delivered within the NLnet-funded grant
+    checked: '2026-11-05'
+notes: 'Added in the integration pass from lane 5''s NLnet list. README: "This software is under active
+  development"; no releases, so maturity alpha is our reading. The repo carries a complement/ directory
+  (Matrix compliance tests). The project''s own ban is stricter than either NLnet policy version.'
+checked: '2026-11-05'
