@@ -1,0 +1,42 @@
+slug: matrix-appservice-bridge
+name: matrix-appservice-bridge
+category: sdk
+kind: TypeScript
+homepage: https://matrix-org.github.io/matrix-appservice-bridge/
+summary: Bridging infrastructure for Matrix application services in Node.js (intents, room and user stores, provisioning),
+  used by the matrix.org bridges and hookshot.
+repos:
+- {url: 'https://github.com/matrix-org/matrix-appservice-bridge', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: partial, how: code, source: 'https://github.com/matrix-org/matrix-appservice-bridge/blob/6392ab0550e23fffa9f014411148c667ba2e77da/examples/encryption/package.json',
+    note: encryption example via matrix-bot-sdk; no crypto of its own}
+  crypto: via matrix-bot-sdk (example)
+  sliding_sync: {value: not-found, how: code}
+  oidc_auth: {value: not-found, how: code}
+  threads: {value: not-found, how: code}
+  spaces: {value: not-found, how: code}
+  appservice: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-appservice-bridge/blob/6392ab0550e23fffa9f014411148c667ba2e77da/README.md'}
+  purpose: {value: bridge, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [matrix-appservice-discord, matrix-appservice-instagram-media, matrix-appservice-irc, matrix-appservice-mattermost,
+    matrix-appservice-mixer, matrix-appservice-revolt, matrix-appservice-slack, matrix-appservice-twilio, matrix-appservice-twitter,
+    matrix-appservice-wechaty, matrix-as-mm, matrix-bifrost, matrix-hookshot]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 9 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 6392ab0550e2']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "matrix-appservice-bridge" (Stable, TypeScript, maintainer: Matrix.org). Last non-bot
+  commit 2026-09-24, 9 non-bot commits in the last year and 1 authors in the last 90 days by our count at 6392ab0550e2
+  (the collector recounts).'
+checked: 2026-11-05

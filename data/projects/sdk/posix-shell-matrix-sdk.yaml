@@ -1,0 +1,36 @@
+slug: posix-shell-matrix-sdk
+name: POSIX Shell Matrix SDK
+category: sdk
+kind: POSIX shell
+homepage: https://gitlab.com/matrix-mellifluousness/sdk
+summary: Wrappers around curl and jq for shell scripts that use the Matrix client-server API.
+repos:
+- {url: 'https://gitlab.com/matrix-mellifluousness/sdk', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: beta
+platforms: [linux]
+licence: MIT-Modern-Variant
+fork_of: null
+distribution: []
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: 'client, bot', how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: []
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 0 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at ec678e2a9a70']
+  in_product: {value: none-found, note: 'A library; its code was not read for AI features (inactive or small library),
+      and its matrix.org description mentions none.', source: null}
+notes: 'matrix.org lists it as "POSIX Shell Matrix SDK" (Beta, POSIX Shell, maintainer: wj25czxj47bu6q). Last non-bot
+  commit 2023-11-14, 0 non-bot commits in the last year and 0 authors in the last 90 days by our count at ec678e2a9a70
+  (the collector recounts).'
+checked: 2026-11-05

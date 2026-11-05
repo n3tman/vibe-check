@@ -1,0 +1,38 @@
+slug: libcmatrix
+name: libcmatrix
+category: sdk
+kind: C (GObject)
+homepage: https://source.puri.sm/Librem5/libcmatrix
+summary: A Matrix protocol library in C using GObject, by Purism; the base of Chatty's Matrix support.
+repos:
+- {url: 'https://source.puri.sm/Librem5/libcmatrix', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: beta
+platforms: [linux]
+licence: LGPL-2.1-only
+fork_of: null
+distribution: [debian]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://source.puri.sm/Librem5/libcmatrix/-/blob/5999b7afcb02b459fe13a2b93ab018f3af6d2b05/meson.build',
+    note: libolm}
+  crypto: libolm
+  sliding_sync: {value: not-found, how: code}
+  oidc_auth: {value: not-found, how: code}
+  threads: {value: not-found, how: code}
+  spaces: {value: not-found, how: code}
+  purpose: {value: client, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [chatty]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 0 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 5999b7afcb02']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "libcmatrix" (Beta, C, maintainer: not given). Last non-bot commit 2025-10-20, 0
+  non-bot commits in the last year and 0 authors in the last 90 days by our count at 5999b7afcb02 (the collector
+  recounts).'
+checked: 2026-11-05

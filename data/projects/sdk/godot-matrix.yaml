@@ -1,0 +1,36 @@
+slug: godot-matrix
+name: godot-matrix
+category: sdk
+kind: C++ (Godot)
+homepage: https://gitlab.com/vurpo/godot-matrix
+summary: A Matrix client module for the Godot engine.
+repos:
+- {url: 'https://gitlab.com/vurpo/godot-matrix', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: unmaintained
+platforms: []
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: client, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: []
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 0 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at e452be85274d']
+  in_product: {value: none-found, note: 'A library; its code was not read for AI features (inactive or small library),
+      and its matrix.org description mentions none.', source: null}
+notes: 'matrix.org lists it as "godot-matrix" (Obsolete, C++, maintainer: vurpo). Last non-bot commit 2021-11-05,
+  0 non-bot commits in the last year and 0 authors in the last 90 days by our count at e452be85274d (the collector
+  recounts).'
+checked: 2026-11-05

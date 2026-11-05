@@ -1,0 +1,38 @@
+slug: simplematrixbotlib
+name: Simple-Matrix-Bot-Lib
+category: sdk
+kind: Python
+homepage: https://simple-matrix-bot-lib.readthedocs.io/
+summary: An easy-to-use Python bot library built on matrix-nio.
+repos:
+- {url: 'https://codeberg.org/imbev/simplematrixbotlib', forge: forgejo, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: ['matrix.org community space, SDKs section (sources/community-space.tsv)']
+maturity: stable
+platforms: [server]
+licence: MIT
+fork_of: null
+distribution: [pypi]
+funding: []
+features:
+  e2ee: {value: 'yes', how: claimed, source: 'https://codeberg.org/imbev/simplematrixbotlib/src/commit/b6df3af19c1390f0c2202a4cb6590b8469d13651/doc/manual/encryption.md',
+    note: through matrix-nio}
+  crypto: via matrix-nio
+  sliding_sync: {value: not-found, how: code}
+  oidc_auth: {value: not-found, how: code}
+  threads: {value: not-found, how: code}
+  spaces: {value: not-found, how: code}
+  purpose: {value: bot, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [matrix-registration-bot, matrix-rss-bridge]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 10 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at b6df3af19c13']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "Simple-Matrix-Bot-Lib" (Stable, Python, maintainer: KrazyKirby99999). Last non-bot
+  commit 2026-03-28, 10 non-bot commits in the last year and 0 authors in the last 90 days by our count at b6df3af19c13
+  (the collector recounts).'
+checked: 2026-11-05

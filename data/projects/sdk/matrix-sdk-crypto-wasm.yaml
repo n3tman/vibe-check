@@ -1,0 +1,40 @@
+slug: matrix-sdk-crypto-wasm
+name: matrix-sdk-crypto-wasm
+category: sdk
+kind: Rust / WebAssembly
+homepage: https://github.com/matrix-org/matrix-sdk-crypto-wasm
+summary: WebAssembly bindings of matrix-rust-sdk's crypto crate for JavaScript; matrix-js-sdk's crypto backend.
+repos:
+- {url: 'https://github.com/matrix-org/matrix-sdk-crypto-wasm', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: stable
+platforms: [web]
+licence: Apache-2.0
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-sdk-crypto-wasm/blob/ed3a5b6c4bea2564448186d77cf004b1b135502b/src/machine.rs',
+    note: 'matrix-sdk-crypto (vodozemac), with libolm migration'}
+  crypto: matrix-sdk-crypto (vodozemac)
+  sliding_sync: {value: not-found, note: not applicable}
+  oidc_auth: {value: not-found, note: not applicable}
+  threads: {value: not-found, note: not applicable}
+  spaces: {value: not-found, note: not applicable}
+  qr_login: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-sdk-crypto-wasm/blob/ed3a5b6c4bea2564448186d77cf004b1b135502b/src/qr_login.rs',
+    note: MSC4108}
+  purpose: {value: crypto, how: claimed, source: 'https://github.com/matrix-org/matrix-sdk-crypto-wasm'}
+  used_by: [cetirizine, jorvik, matrix-js-sdk, small-talk, thunderbird]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 148 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at ed3a5b6c4bea']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-11-02, 148
+  non-bot commits in the last year and 5 authors in the last 90 days by our count at ed3a5b6c4bea (the collector
+  recounts).
+checked: 2026-11-05

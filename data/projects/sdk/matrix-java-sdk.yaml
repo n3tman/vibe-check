@@ -1,0 +1,36 @@
+slug: matrix-java-sdk
+name: Matrix Java SDK (Kamax)
+category: sdk
+kind: Java
+homepage: https://github.com/kamax-io/matrix-java-sdk
+summary: A Java SDK by Kamax.io.
+repos:
+- {url: 'https://github.com/kamax-io/matrix-java-sdk', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: unmaintained
+platforms: []
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: [maven]
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: client, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: []
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 0 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at b0b634341de7']
+  in_product: {value: none-found, note: 'A library; its code was not read for AI features (inactive or small library),
+      and its matrix.org description mentions none.', source: null}
+notes: 'matrix.org lists it as "Matrix Java SDK" (Obsolete, Java, maintainer: Kamax.io). Last non-bot commit 2019-06-20,
+  0 non-bot commits in the last year and 0 authors in the last 90 days by our count at b0b634341de7 (the collector
+  recounts).'
+checked: 2026-11-05

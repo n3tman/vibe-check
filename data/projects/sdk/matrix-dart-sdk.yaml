@@ -1,0 +1,44 @@
+slug: matrix-dart-sdk
+name: Matrix Dart SDK
+category: sdk
+kind: Dart
+homepage: https://pub.dev/packages/matrix
+summary: Famedly's Matrix SDK in pure Dart, the base of FluffyChat and other Flutter clients.
+repos:
+- {url: 'https://github.com/famedly/matrix-dart-sdk', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: stable
+platforms: [android, ios, web, windows, macos, linux]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: [pub.dev]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/famedly/matrix-dart-sdk/blob/a4ea7a4cd80afd9e90ff0db347b31ef252d4429f/README.md#L13',
+    note: '"For E2EE, vodozemac must be provided" (vodozemac Dart bindings; flutter_vodozemac for Flutter apps)'}
+  crypto: vodozemac
+  sliding_sync: {value: not-found, how: code, note: no MSC4186 or MSC3575 code at this commit}
+  oidc_auth: {value: partial, how: code, source: 'https://github.com/famedly/matrix-dart-sdk/blob/a4ea7a4cd80afd9e90ff0db347b31ef252d4429f/doc/oidc-login.md',
+    note: native OIDC login documented; "Support is still in a MSC and therefore considered as beta"}
+  threads: {value: partial, how: code, source: 'https://github.com/famedly/matrix-dart-sdk/blob/a4ea7a4cd80afd9e90ff0db347b31ef252d4429f/lib/src/event.dart#L24',
+    note: m.thread relations and sending into a thread; no separate thread timeline found}
+  spaces: {value: 'yes', how: code, source: 'https://github.com/famedly/matrix-dart-sdk/blob/a4ea7a4cd80afd9e90ff0db347b31ef252d4429f/lib/src/utils/space_child.dart'}
+  purpose: {value: client, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [commet, extera, fluffychat, polycule, roosterchat, vommet]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: occasional
+    evidence: ['13 of 475 non-bot commits in the last 365 days carry an AI attribution (2.7 %), counted at a4ea7a4cd80a',
+      'https://github.com/famedly/matrix-dart-sdk/commit/536c27c35d (claude)', 'https://github.com/famedly/matrix-dart-sdk/commit/1887fcce03
+        (claude)', 'https://github.com/famedly/matrix-dart-sdk/commit/c557fbdec8 (cursor)', 'agent files: https://github.com/famedly/matrix-dart-sdk/blob/a4ea7a4cd80afd9e90ff0db347b31ef252d4429f/AGENTS.md',
+      'AGENTS.md has "Cursor Cloud specific instructions" and says commits must be "authored and committed solely
+        by cursoragent@cursor.com, with no Co-authored-by trailer"; the scan counts the cursoragent commits as AI-authored']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "Matrix Dart SDK" (Stable, Dart, maintainer: Famedly GmbH). Last non-bot commit 2026-11-04,
+  475 non-bot commits in the last year and 13 authors in the last 90 days by our count at a4ea7a4cd80a (the collector
+  recounts).'
+checked: 2026-11-05

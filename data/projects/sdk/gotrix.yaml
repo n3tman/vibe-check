@@ -1,0 +1,35 @@
+slug: gotrix
+name: gotrix
+category: sdk
+kind: Go
+homepage: https://github.com/diamondburned/gotrix
+summary: A work-in-progress Go implementation of the client side of the Matrix client-server API, used by gotktrix.
+repos:
+- {url: 'https://github.com/diamondburned/gotrix', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: [Lane 2 notes (gotktrix)]
+maturity: unmaintained
+platforms: []
+licence: MIT
+fork_of: null
+distribution: [go-module]
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: client, how: claimed, source: 'https://github.com/diamondburned/gotrix'}
+  used_by: [gotktrix]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 0 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 0e84da59259c']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2023-04-05, 0 non-bot
+  commits in the last year and 0 authors in the last 90 days by our count at 0e84da59259c (the collector recounts).
+checked: 2026-11-05

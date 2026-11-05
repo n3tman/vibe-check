@@ -1,0 +1,36 @@
+slug: matrix-widget-api
+name: matrix-widget-api
+category: sdk
+kind: TypeScript
+homepage: https://github.com/matrix-org/matrix-widget-api
+summary: The JavaScript/TypeScript implementation of the Matrix widget API (both the widget and the client side),
+  used by Element and Element Call.
+repos:
+- {url: 'https://github.com/matrix-org/matrix-widget-api', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: stable
+platforms: [web]
+licence: Apache-2.0
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: not-found, how: code, note: 'not applicable: widgets go through the client'}
+  sliding_sync: {value: not-found, how: code}
+  oidc_auth: {value: not-found, how: code}
+  threads: {value: not-found, how: code}
+  spaces: {value: not-found, how: code}
+  purpose: {value: widget, how: claimed, source: 'https://github.com/matrix-org/matrix-widget-api'}
+  used_by: [matrix-barcamp, matrix-meetings, matrix-neoboard, matrix-poll, matrix-widget-toolkit]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 26 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 19e340c8d8fb']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-10-01, 26 non-bot
+  commits in the last year and 3 authors in the last 90 days by our count at 19e340c8d8fb (the collector recounts).
+checked: 2026-11-05
