@@ -1,0 +1,11 @@
+---
+import AiMark from './AiMark.astro';
+import type { Entry } from '../lib/data.ts';
+interface Props { p: Entry; compact?: boolean }
+const { p, compact } = Astro.props;
+---
+<span class="aimarks" role="group" aria-label="AI marks">
+  <AiMark axis="policy" value={p.ai.policy.value} compact={compact} />
+  <AiMark axis="dev_usage" value={p.ai.dev_usage.value} compact={compact} />
+  <AiMark axis="in_product" value={p.ai.in_product.value} compact={compact} />
+</span>

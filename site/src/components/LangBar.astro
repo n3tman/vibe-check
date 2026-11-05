@@ -1,0 +1,20 @@
+---
+// Language shares as one stacked bar with a legend.
+interface Props { languages: Record<string, number> | null | undefined; source?: string }
+const { languages, source } = Astro.props;
+const entries = Object.entries(languages ?? {}).sort((a, b) => b[1] - a[1]);
+const top = entries.slice(0, 6);
+const rest = entries.slice(6).reduce((a, [, v]) => a + v, 0);
+const parts = rest > 0.001 ? [...top, ['Other', rest] as [string, number]] : top;
+---
+{parts.length > 0 && (
+  <figure class="langbar">
+    <div class="langbar-bar" role="img" aria-label={`Languages: ${parts.map(([k, v]) => `${k} ${(v * 100).toFixed(1)} %`).join(', ')}`}>
+      {parts.map(([k, v], i) => <span class={`lb lb${i}`} style={`width:${(v * 100).toFixed(2)}%`} title={`${k}: ${(v * 100).toFixed(1)} %`} />)}
+    </div>
+    <figcaption>
+      <ul class="langbar-legend">{parts.map(([k, v], i) => <li><i class={`lb lb${i}`} />{k} <span class="muted">{(v * 100).toFixed(1)} %</span></li>)}</ul>
+      {source && <span class="muted small">by {source === 'scc' ? 'file bytes (scc)' : 'the forge'}</span>}
+    </figcaption>
+  </figure>
+)}

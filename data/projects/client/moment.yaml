@@ -1,0 +1,133 @@
+slug: moment
+name: Moment
+category: client
+kind: desktop
+homepage: https://mx-moment.xyz
+summary: Customizable, keyboard-operable Qt/QML desktop client, a fork of Mirage on matrix-nio.
+repos:
+- url: https://gitlab.com/mx-moment/moment
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: beta
+platforms:
+- linux
+- windows
+- macos
+apps:
+- os: linux
+  tech: qt
+  min_os: null
+  status: beta
+  stores: []
+  source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/README.md
+licence: GPL-3.0-only
+fork_of: mirage
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-nio
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/requirements.txt
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/backend/matrix_client.py#L1923
+    note: pattern match [Megolm]
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/gui/Pages/Chat/Timeline/EventList.qml#L629
+    note: pattern match [m.thread]
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/backend/matrix_client.py#L891
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/backend/matrix_client.py#L2746
+    note: pattern match [m.new_content]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/backend/matrix_client.py#L728
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/config/settings.py#L48
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/src/gui/Utils.qml#L610
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: GPL-3.0; Python + QML, about 480 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (6 non-bot commits in the last 365 days) at 2667256dbb
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

@@ -1,0 +1,151 @@
+slug: singularity
+name: Singularity
+category: client
+kind: desktop
+homepage: null
+summary: Desktop Matrix client in Tauri (SvelteKit UI, Rust core on matrix-sdk).
+repos:
+- url: https://github.com/Luxuride/singularity
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/singularity/
+  other: []
+maturity: alpha
+platforms:
+- windows
+- macos
+- linux
+apps:
+- os: windows
+  tech: tauri
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/singularity.md
+- os: macos
+  tech: tauri
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/singularity.md
+- os: linux
+  tech: tauri
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/singularity.md
+licence: GPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src-tauri/Cargo.toml
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src/lib/generated/types.ts#L522
+    note: pattern match [crossSigning]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src/lib/generated/types.ts#L48
+    note: pattern match [recoveryKey]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src/lib/components/navigation/shared/RoomSettingsDialog.svelte#L28
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src-tauri/libs/types/src/event_types.rs#L3
+    note: pattern match [m.reaction]
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src/lib/generated/types.ts#L98
+    note: pattern match [inReplyTo]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src/lib/components/messaging/composer/MessageComposer.svelte#L265
+    note: pattern match [emoticon]
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src-tauri/libs/chat/src/emoji/pack_parsing.rs#L124
+    note: pattern match [m.sticker]
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src-tauri/libs/protocol/src/events_schema.rs#L515
+    note: pattern match [m.location]
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/Luxuride/singularity/blob/9f9f7ddc26ff4cce5e7dc319936fb32f48000e34/src/lib/components/navigation/shared/RoomSettingsDialog.svelte#L231
+    note: pattern match [aria-label]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: GPL-3.0; Tauri v2 + SvelteKit, dev container provided; about 290 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: config-only
+    evidence:
+    - .github/copilot-instructions.md at 9f9f7ddc26
+    - no AI-attributed commits in 206 commits of the last 365 days
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

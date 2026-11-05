@@ -1,0 +1,271 @@
+slug: tammy
+name: Tammy
+category: client
+kind: web, desktop, mobile
+homepage: https://tammy.connect2x.de
+summary: White-label messenger by connect2x on Trixnity Messenger (Kotlin Multiplatform), for web, desktop,
+  Android and iOS.
+repos:
+- url: https://gitlab.com/connect2x/tammy
+  forge: gitlab
+  role: main
+- url: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger
+  forge: gitlab
+  role: other
+- url: https://gitlab.com/trixnity/trixnity
+  forge: gitlab
+  role: other
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/tammy/
+  other: []
+maturity: stable
+platforms:
+- web
+- windows
+- macos
+- linux
+- android
+- ios
+apps:
+- os: android
+  tech: other
+  min_os: null
+  status: stable
+  stores:
+  - name: google-play
+    url: https://play.google.com/store/apps/details?id=de.connect2x.tammy
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+  note: Compose Multiplatform
+- os: ios
+  tech: other
+  min_os: '18.2'
+  status: stable
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/app/id6760345615
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+  note: IPHONEOS_DEPLOYMENT_TARGET 18.2 in iosApp
+- os: web
+  tech: other
+  min_os: null
+  status: stable
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+  note: app.tammy.connect2x.de (Kotlin/Wasm)
+- os: windows
+  tech: other
+  min_os: null
+  status: stable
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+- os: macos
+  tech: other
+  min_os: null
+  status: stable
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/tammy.md
+- os: linux
+  tech: other
+  min_os: null
+  status: stable
+  stores:
+  - name: flatpak
+    url: null
+  source: https://gitlab.com/connect2x/tammy/-/blob/cd71d8e4ad6078890bda2544d98a0dadbc086287/README.md
+  note: flatpak/ folder in the repo
+licence: AGPL-3.0-only
+fork_of: null
+distribution:
+- google-play
+- app-store
+funding: []
+features:
+  sdk:
+    value: Trixnity
+    how: code
+    source: https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/trixnity-client/build.gradle.kts
+    note: Trixnity 5.10.1 (Apache-2.0) via trixnity-messenger
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/CreateCryptoDriverModule.kt#L5
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): crypto driver
+      module (vodozemac) (5 matches in main sources)'
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/root/SelfVerificationSwitch.kt#L6
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): cross-signing
+      bootstrap (81 matches in main sources); Trixnity feature list: cross signing (https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/website/docs/client/features.md#L43)'
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/connecting/StoreFailure.kt#L155
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): recovery
+      key / key backup (156 matches in main sources); Trixnity feature list: room key backup (https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/website/docs/client/features.md#L45)'
+  sliding_sync:
+    value: not-found
+    note: not found in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df)
+      main sources; no MSC4186 / MSC3575 code in Trixnity 5.10.1 either, and its feature list does not
+      mention sliding sync
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/MatrixMessengerSettings.kt#L6
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): OAuth 2.0
+      server login in the add-account flow (16 matches in main sources); Trixnity feature list: "OAuth2-based
+      login" (https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/website/docs/client/features.md#L39)'
+  multi_account:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/profiles/ProfileSelection.kt#L53
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): multi-profile
+      / MatrixMultiMessenger (117 matches in main sources)'
+  threads:
+    value: not-found
+    note: 'not found in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df)
+      main sources; Trixnity 5.10.1 feature list: "thread (basic support, no separate timelines or client
+      aggregations yet)" (https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/website/docs/client/features.md#L58)'
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/room/settings/ChangePowerLevel.kt#L316
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): spaces in
+      the room list (4 matches in main sources)'
+  voip_1to1:
+    value: not-found
+    note: not found in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df)
+      main sources; Trixnity 5.10.1 models m.call.* events (https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/trixnity-core/src/commonMain/kotlin/de/connect2x/trixnity/core/model/events/m/call/CallEventContent.kt#L22)
+      but no UI uses them
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/room/timeline/element/message/RtcMemberMessageTimelineElementView.kt#L19
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): MatrixRTC
+      video calls (enableVideoCalls, default true) (16 matches in main sources)'
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/room/settings/ChangePowerLevel.kt#L289
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): reactions
+      (59 matches in main sources)'
+  edits:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/MatrixClientFactory.kt#L155
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): RelatesTo.Replace
+      (8 matches in main sources)'
+  replies:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/viewmodel/room/timeline/InputAreaViewModel.kt#L436
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): RelatesTo.Reply
+      (2 matches in main sources)'
+  polls:
+    value: not-found
+    note: not found in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df)
+      main sources; no poll event types in Trixnity 5.10.1
+  custom_emoji:
+    value: not-found
+    note: not found in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df)
+      main sources; Trixnity 5.10.1 added ImagePackEventContent (https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/trixnity-core/src/commonMain/kotlin/de/connect2x/trixnity/core/model/events/m/room/ImagePackEventContent.kt#L16);
+      not used by the UI yet
+  stickers:
+    value: not-found
+    note: not found in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df)
+      main sources; Trixnity 5.10.1 added StickerEventContent (https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/trixnity-core/src/commonMain/kotlin/de/connect2x/trixnity/core/model/events/m/StickerEventContent.kt#L10);
+      not used by the UI yet
+  location:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/DI.kt#L168
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): location
+      messages (16 matches in main sources)'
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/DI.kt#L94
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): audio recorder
+      / voice messages (33 matches in main sources)'
+  rich_text_editor:
+    value: not-found
+    note: not found in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df)
+      main sources
+  url_previews:
+    value: not-found
+    note: not found in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df)
+      main sources; Trixnity 5.10.1 has the media preview_url API (https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/trixnity-clientserverapi/trixnity-clientserverapi-client/src/commonMain/kotlin/de/connect2x/trixnity/clientserverapi/client/MediaApiClient.kt#L84)
+      but no UI uses it
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/notification/PushNotificationProvider.kt#L8
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): pusher setup
+      (7 matches in main sources)'
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/viewmodel/room/timeline/TimelineViewModel.kt#L1179
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): private
+      read receipts (3 matches in main sources)'
+  presence:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/theme/components/ThemedAvatar.kt#L200
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): presence
+      on avatars (29 matches in main sources)'
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/DI.kt#L215
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): tombstone
+      handling (36 matches in main sources); Trixnity feature list: room upgrades, invisible due to merged
+      timelines (https://gitlab.com/trixnity/trixnity/-/blob/4852889934671d35c6ed8626e2ab4e74ba2f69b7/website/docs/client/features.md#L50)'
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/room/timeline/MessageReport.kt#L23
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): report message
+      (103 matches in main sources)'
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger-compose-view/src/commonMain/kotlin/de/connect2x/trixnity/messenger/compose/view/common/CopyToClipboardButton.kt#L26
+    note: 'in trixnity-messenger 4.11.0-SNAPSHOT (CI build of 2026-10-21, commit f4b45841df): semantics
+      / content descriptions in the Compose view (106 matches in main sources)'
+  translations:
+    value: partial
+    how: code
+    source: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f4b45841dfc522899de23b19006c79177a677168/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/i18n/Language.kt#L10
+    note: German and English, built into trixnity-messenger
+  telemetry:
+    value: none-found
+    note: no analytics or crash-report SDK in tammy or trixnity-messenger build files
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: claimed
+    source: https://gitlab.com/connect2x/tammy/-/blob/cd71d8e4ad6078890bda2544d98a0dadbc086287/README.md
+    note: AGPL-3.0; designed as a white-label shell around Trixnity Messenger; Gradle
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (338 non-bot commits in the last 365 days) at cd71d8e4ad
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'Client logic lives in trixnity-messenger (https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger,
+  AGPL-3.0), pinned in gradle/libs.versions.toml as 4.11.0-SNAPSHOT.CI-20261021; features were read there
+  at the last main commit before that build (f4b45841df). trixnity-messenger itself: 2,009 non-bot commits
+  in the last 365 days, 20 authors in 90 days, no agent files, no AI-attributed commits, no AI policy
+  text found. Trixnity 5.10.1 (https://gitlab.com/trixnity/trixnity, Apache-2.0): checked at that tag;
+  at its main branch (2269b0bae4) 633 non-bot commits in the last 365 days, 13 authors in 90 days, no
+  agent files, no AI-attributed commits, no AI policy text.'
+checked: '2026-11-05'

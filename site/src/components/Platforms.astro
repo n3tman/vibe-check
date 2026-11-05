@@ -1,0 +1,13 @@
+---
+import Icon from './Icon.astro';
+import { MOBILE_OS, OS_ICON, OS_LABEL } from '../lib/view.ts';
+interface Props { os: string[] }
+const { os } = Astro.props;
+---
+{os.length > 0 && (
+  <ul class="platforms" aria-label="Platforms">
+    {os.map((o) => (
+      <li class:list={['plat', { mobile: MOBILE_OS.has(o) }]}><Icon name={OS_ICON[o] ?? 'dot'} size={13} />{OS_LABEL[o] ?? o}</li>
+    ))}
+  </ul>
+)}

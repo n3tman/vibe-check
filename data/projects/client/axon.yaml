@@ -1,0 +1,187 @@
+slug: axon
+name: Axon (matrix-axon)
+category: client
+kind: bouncer + web, desktop, mobile, terminal
+homepage: https://matrix-axon.github.io/matrix-axon/
+summary: A self-hosted always-on Matrix agent (sync, E2EE, full-history search) with its own API,
+  shipped with terminal, web, desktop and mobile clients.
+repos:
+- url: https://github.com/matrix-axon/matrix-axon
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - PLAN.md "Category to check first" (lane 2)
+maturity: beta
+platforms:
+- web
+- linux
+- macos
+- windows
+- ios
+- android
+- terminal
+- server
+apps:
+- os: web
+  tech: other
+  status: beta
+  source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  min_os: null
+  stores: []
+- os: terminal
+  tech: tui
+  status: beta
+  stores:
+  - name: homebrew
+    url: https://github.com/matrix-axon/homebrew-tap
+  source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  min_os: null
+- os: macos
+  tech: tauri
+  status: beta
+  stores:
+  - name: homebrew
+    url: https://github.com/matrix-axon/homebrew-tap
+  source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/clients/web/src-tauri/README.md
+  min_os: null
+- os: windows
+  tech: tauri
+  status: beta
+  stores:
+  - name: github-releases
+    url: https://github.com/matrix-axon/matrix-axon/releases/latest
+  source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  min_os: null
+- os: linux
+  tech: tauri
+  status: beta
+  stores:
+  - name: deb
+    url: https://github.com/matrix-axon/matrix-axon/releases/latest
+  - name: appimage
+    url: https://github.com/matrix-axon/matrix-axon/releases/latest
+  source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  min_os: null
+- os: ios
+  tech: tauri
+  status: beta
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/us/app/matrix-axon/id6813675186
+  - name: testflight
+    url: null
+  source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  min_os: null
+- os: android
+  tech: tauri
+  status: beta
+  stores:
+  - name: apk
+    url: https://github.com/matrix-axon/matrix-axon/releases/latest
+  - name: google-play
+    url: null
+  source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  note: Play Store beta.
+  min_os: null
+licence: Apache-2.0
+fork_of: null
+distribution:
+- docker
+- homebrew
+- app-store
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk 0.19.1 in the Axon server; clients use Axon's own /v1/ API
+    how: code
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/Cargo.toml
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+    note: Decryption happens on the self-hosted server.
+  cross_signing: not-found
+  key_backup:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  sliding_sync: not-found
+  oidc_auth:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/docs/matrix-oauth-browser-sign-in.md
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+    note: '"All your accounts, one place."'
+  threads:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  edits:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/README.md
+  replies: not-found
+  polls: not-found
+  custom_emoji:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/docs/custom-emoji.md
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/docs/bundled-link-previews.md
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry:
+    value: none-found
+    how: code
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/clients/web/src/stores/telemetry.ts
+    note: Only a local, on-device performance record; no analytics SDK found.
+  default_homeserver: not-found
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/docs/building.md
+    note: Large Rust workspace plus a pnpm/Tauri web client and a TUI; Apache-2.0.
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - >-
+      CLAUDE.md, AGENTS.md ("authoritative for agentic contributors") and per-client AGENTS.md files.
+    - >-
+      160 of 441 non-bot commits in the last 365 days (about 36 %) carry a Claude co-author trailer.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  Category check (PLAN.md): Axon is a server-side Matrix client (a bouncer in the ZNC sense) plus
+  first-party clients that speak its own API, so it is filed as a client. Its "agent" wording means
+  an always-on sync agent, not an AI agent. Slug `axon` (product name), repo matrix-axon/matrix-axon.
+checked: '2026-11-05'

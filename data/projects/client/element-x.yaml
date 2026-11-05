@@ -1,0 +1,215 @@
+slug: element-x
+name: Element X
+category: client
+kind: mobile
+homepage: https://element.io
+summary: Element's next-generation mobile apps for Android (Kotlin/Compose) and iOS (SwiftUI), both
+  on the matrix-rust-sdk.
+repos:
+- url: https://github.com/element-hq/element-x-android
+  forge: github
+  role: android
+- url: https://github.com/element-hq/element-x-ios
+  forge: github
+  role: ios
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/element-x/
+  other:
+  - 'sources/community-space.tsv: rooms "Element X Android (OLD)", "Element X iOS (OLD)"'
+maturity: stable
+platforms:
+- android
+- ios
+apps:
+- os: android
+  tech: native
+  min_os: '7.0'
+  status: stable
+  stores:
+  - name: google-play
+    url: https://play.google.com/store/apps/details?id=io.element.android.x
+  - name: f-droid
+    url: https://f-droid.org/packages/io.element.android.x
+  source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/plugins/src/main/kotlin/Versions.kt
+- os: ios
+  tech: native
+  min_os: '18.5'
+  status: stable
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/app/id1631335820
+  source: https://github.com/element-hq/element-x-ios/blob/dc3e47720df8c13137b27a3643f80d66defaf4df/project.yml
+licence: AGPL-3.0-only OR LicenseRef-Element-Commercial
+fork_of: null
+distribution:
+- google-play
+- f-droid
+- app-store
+funding: []
+features:
+  sdk:
+    value: 'matrix-rust-sdk (FFI bindings: org.matrix.rustcomponents:sdk-android, MatrixRustSDK on
+      iOS)'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/gradle/libs.versions.toml
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-x.md
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/features/verifysession
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/features/securebackup
+    note: Secure backup / recovery key.
+  sliding_sync:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-x.md
+    note: Native MSC4186 simplified sliding sync through matrix-rust-sdk; required.
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/libraries/oauth
+    note: Native OAuth 2.0 / MAS login.
+  multi_account:
+    value: partial
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/libraries/featureflag/api/src/main/kotlin/io/element/android/libraries/featureflag/api/FeatureFlags.kt
+    note: Behind the feature flag feature.multi_account (default off); also multiAccountEnabled on
+      iOS.
+  threads:
+    value: partial
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/libraries/featureflag/api/src/main/kotlin/io/element/android/libraries/featureflag/api/FeatureFlags.kt
+    note: 'Thread timeline behind feature.thread_timeline (default off); matrix.org: partial.'
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/features/space
+  voip_1to1:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-x.md
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/features/call
+    note: Element Call (MatrixRTC).
+  reactions:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-x.md
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/features/messages
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/features/messages
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/features/poll
+  custom_emoji:
+    value: not-found
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/element-x.md
+    note: 'matrix.org: image_packs unknown.'
+  stickers: not-found
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/features/location
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/libraries/voicerecorder
+  rich_text_editor:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/libraries/textcomposer
+    note: Matrix rich text editor (WYSIWYG).
+  url_previews:
+    value: not-found
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/libraries/previewutils
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/libraries/pushproviders
+    note: Firebase and UnifiedPush providers on Android, APNs on iOS.
+  private_read_receipts: not-found
+  presence:
+    value: not-found
+    how: null
+    source: null
+  room_upgrades:
+    value: not-found
+    how: null
+    source: null
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/features/roommembermoderation
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-ios/blob/dc3e47720df8c13137b27a3643f80d66defaf4df/AccessibilityTests
+    note: iOS has an AccessibilityTests target.
+  translations:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/libraries/ui-strings/src/main/res
+    note: Localazy; about 40 locales on each platform.
+  telemetry:
+    value: opt-in
+    how: code
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/services/analytics/api/src/main/kotlin/io/element/android/services/analytics/api/AnalyticsService.kt
+    note: PostHog and Sentry providers; "Nothing is sent to the providers until the user has given
+      their consent".
+  default_homeserver:
+    value: 'yes'
+    how: code
+    source: https://github.com/element-hq/element-x-ios/blob/dc3e47720df8c13137b27a3643f80d66defaf4df/ElementX/Sources/Application/Settings/AppSettings.swift
+    note: matrix.org (accountProviders default on iOS; Android falls back to matrix.org).
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/README.md
+    note: Two native codebases (Gradle/Kotlin, Xcode/xcodegen) on prebuilt Rust SDK bindings; AGPL-3.0
+      or commercial, CLA for contributions.
+ai:
+  policy:
+    value: restricted
+    quote: >-
+      Contributions are judged on their content, not on how they were produced. AI-assisted contributions
+      are accepted; unreviewed AI output is not. [...] If your PR was made with the help of AI, you
+      must convey that this is the case using the PR template.
+    source: https://github.com/element-hq/element-meta/blob/ea731f1fc96190b2214538c76d95ee34e00400cd/CONTRIBUTING.md
+  dev_usage:
+    value: regular
+    evidence:
+    - CLAUDE.md and AGENTS.md in both repos; .claude/skills in element-x-ios.
+    - >-
+      element-x-android: 284 of about 2,830 non-bot commits in the last 365 days (about 10 %) carry
+      an AI co-author trailer, mostly Claude.
+    - 'element-x-ios: 19 of about 1,420 (about 1.3 %), Claude and copilot-swe-agent.'
+    - >-
+      The Android PR template asks AI-assisted PRs to request a Copilot review; the iOS template
+      asks for the model and harness used.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  matrix.org maturity: Stable. Element's organisation-wide AI policy (element-meta CONTRIBUTING.md,
+  merged 2026-11-02 in https://github.com/element-hq/element-meta/pull/3393) applies to all element-hq
+  repositories and to matrix-org repositories where Element is the core contributor. Both repos'
+  CONTRIBUTING.md also say "We are also fine with AI led contributions within reasonable bounds".
+  Android FOSS builds need Android 7.0 (API 24), enterprise builds API 33.
+checked: '2026-11-05'

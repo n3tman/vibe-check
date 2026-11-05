@@ -1,0 +1,116 @@
+slug: watch-the-matrix
+name: Watch The Matrix
+category: client
+kind: mobile (watch)
+homepage: null
+summary: 'watchOS Matrix client: view rooms and send messages and reactions on Apple Watch.'
+repos:
+- url: https://github.com/pixlwave/Watch-The-Matrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/watch-the-matrix/
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: alpha
+platforms:
+- ios
+apps:
+- os: other
+  tech: native
+  min_os: watchOS 10
+  status: alpha
+  stores:
+  - name: testflight
+    url: https://testflight.apple.com/join/a06n3gN4
+  source: https://github.com/pixlwave/Watch-The-Matrix/blob/ceafed898f94adfa83a9cc7f93d42879b1253961/README.md#L3
+licence: MPL-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own
+    how: claimed
+    source: https://github.com/pixlwave/Watch-The-Matrix/blob/ceafed898f94adfa83a9cc7f93d42879b1253961/README.md#L2
+    note: pixlwave/Matrix Swift package
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/pixlwave/Watch-The-Matrix/blob/ceafed898f94adfa83a9cc7f93d42879b1253961/Sources/Views/RootView.swift#L16
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: MPL-2.0; small Xcode project, about 90 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (7 non-bot commits in the last 365 days) at ceafed898f
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

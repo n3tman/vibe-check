@@ -1,0 +1,243 @@
+---
+import Base from '../../layouts/Base.astro';
+import AiMark from '../../components/AiMark.astro';
+import Bars from '../../components/Bars.astro';
+import FeatureChip from '../../components/FeatureChip.astro';
+import Heatmap from '../../components/Heatmap.astro';
+import Icon from '../../components/Icon.astro';
+import LangBar from '../../components/LangBar.astro';
+import Platforms from '../../components/Platforms.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { dataset, type Entry } from '../../lib/data.ts';
+import { AXES, CATEGORY_LABEL, STATE_TEXT, ago, features, fmtDate, fmtNum, host, href, osList, pct, statusOf, type Axis } from '../../lib/view.ts';
+
+export function getStaticPaths() {
+  return dataset().projects.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props as { p: Entry };
+const d = dataset();
+const m = p.metrics;
+const c = m?.combined ?? null;
+const fetched = m ? new Date(m.fetched_at) : new Date();
+const feats = features(p);
+const mscs = Array.isArray((p.features as any)?.msc) ? ((p.features as any).msc as any[]) : [];
+const mscTitle = new Map(d.mscs.map((x) => [x.msc, x]));
+const weekly = (c?.weekly_commits as number[] | undefined) ?? [];
+const weekData = weekly.map((v, i) => {
+  const dt = new Date(+fetched - (weekly.length - i) * 7 * 86400000);
+  return { label: dt.toLocaleDateString('en-GB', { month: 'short', timeZone: 'UTC' }), value: v };
+});
+const quarters = Object.entries((c?.authors_by_quarter as Record<string, number>) ?? {}).map(([k, v]) => ({ label: k.replace('-', ' '), value: v }));
+const okRepos = (m?.repos ?? []).filter((r) => r.ok);
+const agentFiles = okRepos.flatMap((r) => (r.ai_scan?.agent_files ?? []).map((f: any) => ({ ...f, repo: r.url })));
+const aiExamples = okRepos.flatMap((r) => r.ai_scan?.examples ?? []);
+const aiWorkflows = okRepos.flatMap((r) => r.ai_scan?.workflows ?? []);
+const aiBots = okRepos.flatMap((r) => r.ai_scan?.ai_bot_authors ?? []);
+const telemetry = okRepos.flatMap((r) => r.telemetry_scan?.found ?? []);
+const handEvidence = (p.ai.dev_usage.evidence ?? []) as any[];
+const fund = p.funding ?? [];
+const sec = c?.security_policy as string | null | undefined;
+const ciRepos = okRepos.filter((r) => r.ci?.length);
+const linkText = (s: unknown) => (Array.isArray(s) ? s : s ? [s] : []) as string[];
+const axisSource: Record<Axis, { quote?: string | null; source?: string | null; note?: string | null }> = {
+  policy: p.ai.policy as any,
+  dev_usage: {},
+  in_product: p.ai.in_product as any,
+};
+---
+<Base title={p.name} description={p.summary ?? `${p.name}: ${CATEGORY_LABEL[p.category].one} for Matrix`}>
+  <header class="page-head proj-head">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href={href(`${p.category}/`)}>{CATEGORY_LABEL[p.category].many}</a> › {p.name}</nav>
+    <div class="proj-title">
+      <h1>{p.name}</h1>
+      <StatusBadge status={statusOf(p)} />
+      {p.maturity && <span class="badge" style="color:var(--muted)">{p.maturity}</span>}
+    </div>
+    <p class="lede" style="margin:0">{p.summary}</p>
+    <p class="muted" style="margin:0">{[p.kind, p.licence && `licence ${p.licence}`, p.fork_of && `fork of ${p.fork_of}`].filter(Boolean).join(' · ')}</p>
+    <Platforms os={osList(p)} />
+    <ul class="links">
+      {p.homepage && <li><a href={p.homepage}><Icon name="globe" size={14} />{host(p.homepage)}</a></li>}
+      {p.repos.map((r) => <li><a href={r.url}><Icon name="branch" size={14} />{host(r.url)}</a>{r.role && r.role !== 'main' && <span class="muted small"> ({r.role})</span>}</li>)}
+      {p.sources?.matrix_org_listing && <li><a href={p.sources.matrix_org_listing}><Icon name="matrix" size={14} />matrix.org listing</a></li>}
+      <li><a href={href(`compare/?p=${p.slug}`)}><Icon name="compare" size={14} />Compare</a></li>
+    </ul>
+  </header>
+
+  {c ? (
+    <dl class="stats">
+      <div class="stat"><dt>Last commit</dt><dd>{ago(c.last_commit, fetched)}<small>{fmtDate(c.last_commit)}</small></dd></div>
+      <div class="stat"><dt>Commits, last year</dt><dd>{fmtNum(c.commits_365d)}<small>{fmtNum(c.commits_90d)} in 90 days</small></dd></div>
+      <div class="stat"><dt><Icon name="users" size={12} />Authors, 90 days</dt><dd>{fmtNum(c.authors_90d)}<small>{fmtNum(c.authors_365d)} in a year, {fmtNum(c.authors_all)} ever</small></dd></div>
+      <div class="stat"><dt>Bus factor</dt><dd>{c.bus_factor_365d ?? '—'}<small>authors making half of last year's commits</small></dd></div>
+      <div class="stat"><dt><Icon name="tag" size={12} />Last release</dt><dd>{c.last_tag ?? '—'}<small>{c.last_tag_date ? `${fmtDate(c.last_tag_date)} · ${c.tags_365d} tags in a year` : 'no tags'}</small></dd></div>
+      <div class="stat"><dt><Icon name="star" size={12} />Stars</dt><dd>{fmtNum(c.stars)}<small>{c.forks != null ? `${fmtNum(c.forks)} forks` : 'forge did not say'}</small></dd></div>
+      <div class="stat"><dt>Open issues / PRs</dt><dd>{fmtNum(c.open_issues)} / {fmtNum(c.open_prs)}<small>{c.issue_first_response_median_days != null ? `median first response ${c.issue_first_response_median_days} days` : 'first response: not measured'}</small></dd></div>
+      <div class="stat"><dt><Icon name="code" size={12} />Lines of code</dt><dd>{fmtNum(c.loc_total)}<small>{c.main_language ?? ''}</small></dd></div>
+    </dl>
+  ) : p.repos.length === 0 ? (
+    <p class="callout">No public source repository is listed, so there are no activity metrics. Features and AI policy below are from the project's own pages.</p>
+  ) : (
+    <p class="callout">The collector has not measured this project yet.</p>
+  )}
+
+  <section aria-labelledby="ai-h">
+    <h2 id="ai-h"><Icon name="sparkle" size={20} /> AI</h2>
+    <div class="ai-axes">
+      {(Object.keys(AXES) as Axis[]).map((ax) => (
+        <div class="panel ai-axis">
+          <h3>{AXES[ax].label}</h3>
+          <p class="q">{AXES[ax].question}</p>
+          <AiMark axis={ax} value={(p.ai as any)[ax].value} showAxis={false} />
+          {axisSource[ax].quote && <blockquote>“{axisSource[ax].quote}”</blockquote>}
+          {axisSource[ax].note && <p class="small" style="margin:.5rem 0 0">{axisSource[ax].note}</p>}
+          {axisSource[ax].source && <p class="small" style="margin:.4rem 0 0"><a href={axisSource[ax].source!}>Source: {host(axisSource[ax].source)}</a></p>}
+          {ax === 'dev_usage' && (
+            <>
+              {c?.ai?.suggested_dev_usage && c.ai.suggested_dev_usage !== p.ai.dev_usage.value && (
+                <p class="small" style="margin:.6rem 0 0"><strong>The collector's evidence suggests “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”</strong>; the hand-checked value above has not been reconciled with it yet.</p>
+              )}
+              {c?.ai && (
+                <p class="small" style="margin:.6rem 0 0">
+                  Collector: {c.ai.attributed_commits_365d} of {fmtNum(c.ai.commits_365d)} commits in the last year credit an AI tool ({pct(c.ai.share_365d)}){Object.keys(c.ai.tools ?? {}).length ? `: ${Object.entries(c.ai.tools).map(([k, v]) => `${k} ${v}`).join(', ')}` : ''}.
+                  {c.ai.agent_files} agent file{c.ai.agent_files === 1 ? '' : 's'}, {c.ai.workflows} AI workflow{c.ai.workflows === 1 ? '' : 's'}. A lower bound: most AI use leaves no trace.
+                </p>
+              )}
+              {(handEvidence.length > 0 || agentFiles.length > 0 || aiWorkflows.length > 0 || aiExamples.length > 0 || aiBots.length > 0) && (
+                <ul class="evidence">
+                  {handEvidence.map((e) => <li>{typeof e === 'string' ? (e.startsWith('http') ? <a href={e}>{host(e)}</a> : e) : <>{e.note ?? e.kind ?? ''} {e.url && <a href={e.url}>{host(e.url)}</a>}</>}</li>)}
+                  {agentFiles.map((f) => <li><Icon name="book" size={12} /> <a href={f.url}><code>{f.path}</code></a> <span class="muted">({f.kind}{okRepos.length > 1 ? `, ${f.repo.split('/').pop()}` : ''})</span></li>)}
+                  {aiWorkflows.map((w: any) => <li><Icon name="branch" size={12} /> <a href={w.url}><code>{w.path}</code></a> <span class="muted">{w.matches.join(', ')}</span></li>)}
+                  {aiBots.map((b: any) => <li><Icon name="users" size={12} /> {b.name}: {b.commits_365d} commits</li>)}
+                  {aiExamples.slice(0, 5).map((e: any) => <li><Icon name="dot" size={12} /> <a href={e.url}><code>{e.sha.slice(0, 9)}</code></a> {e.date} <span class="muted">{e.tools.join(', ')}</span></li>)}
+                </ul>
+              )}
+            </>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {c && (
+    <section aria-labelledby="act-h">
+      <h2 id="act-h">Activity</h2>
+      <div class="panel" style="display:grid;gap:1.4rem">
+        <Heatmap daily={c.daily_commits} end={m!.fetched_at} />
+        <div class="grid-2">
+          <Bars data={weekData} caption="Commits per week, last 52 weeks" every={8} />
+          <Bars data={quarters} caption="Authors per quarter" every={4} />
+        </div>
+        {c.languages && <div><h3 style="margin-bottom:.5rem">Languages</h3><LangBar languages={c.languages} source={(okRepos.find((r) => r.role === 'main') ?? okRepos[0])?.languages_source} /></div>}
+      </div>
+    </section>
+  )}
+
+  {p.apps && p.apps.length > 0 && (
+    <section aria-labelledby="apps-h">
+      <h2 id="apps-h">Apps</h2>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th scope="col">OS</th><th scope="col">Built with</th><th scope="col">Status</th><th scope="col">Minimum OS</th><th scope="col">Where to get it</th></tr></thead>
+          <tbody>
+            {p.apps.map((a) => (
+              <tr>
+                <td><Platforms os={[a.os]} /></td>
+                <td>{a.tech ?? '—'}</td>
+                <td>{a.status ?? '—'}</td>
+                <td>{a.min_os ?? <span class="muted">not stated</span>}</td>
+                <td>{(a.stores ?? []).length ? (a.stores ?? []).map((s: any, i: number) => <>{i > 0 && ', '}{typeof s === 'string' ? s : s.url ? <a href={s.url}>{s.name}</a> : s.name}</>) : a.source ? <a href={a.source}>source</a> : '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+
+  <section aria-labelledby="feat-h">
+    <h2 id="feat-h">Features</h2>
+    {feats.length === 0 ? <p class="empty">No features recorded yet.</p> : (
+      <div class="table-wrap">
+        <table class="data feat-table">
+          <thead><tr><th scope="col">Feature</th><th scope="col">Value</th><th scope="col">How we know</th><th scope="col">Evidence</th></tr></thead>
+          <tbody>
+            {feats.map((f) => (
+              <tr>
+                <td>{f.label}</td>
+                <td>{f.state === 'text' ? <span>{f.value}</span> : <FeatureChip f={{ ...f, label: STATE_TEXT[f.state] }} />}{f.note && <div class="note">{f.note}</div>}</td>
+                <td>{f.how ? <span class="how">{f.how}</span> : <span class="muted">—</span>}</td>
+                <td>{linkText(f.source).length ? linkText(f.source).map((s, i) => <>{i > 0 && ' · '}<a href={s}>{host(s).slice(0, 48)}</a></>) : <span class="muted">—</span>}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+  </section>
+
+  {mscs.length > 0 && (
+    <section aria-labelledby="msc-h">
+      <h2 id="msc-h">MSCs</h2>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th scope="col">MSC</th><th scope="col">Title</th><th scope="col">In this server</th><th scope="col">Flag</th><th scope="col">Spec</th><th scope="col">Source</th></tr></thead>
+          <tbody>{mscs.map((x) => { const t = mscTitle.get(x.msc); return (
+            <tr><td><a href={`https://github.com/matrix-org/matrix-spec-proposals/pull/${x.msc}`}>MSC{x.msc}</a></td><td>{t?.title ?? <span class="muted">not in the catalogue</span>}</td>
+            <td><span class="mcell" data-s={x.state}>{x.state}</span></td><td>{x.flag ? <code>{x.flag}</code> : '—'}</td>
+            <td>{t ? `${t.status}${t.spec_version ? `, ${t.spec_version}` : ''}` : '—'}</td><td>{x.source ? <a href={x.source}>{host(x.source).slice(0, 40)}</a> : '—'}</td></tr>); })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+
+  {c && (
+    <section aria-labelledby="health-h">
+      <h2 id="health-h">Health signals</h2>
+      <div class="panel">
+        <dl class="kv">
+          <dt>Bus factor (last year)</dt><dd>{c.bus_factor_365d ?? '—'}</dd>
+          <dt>Issue first response</dt><dd>{c.issue_first_response_median_days != null ? `median ${c.issue_first_response_median_days} days (issues opened in the last 180 days)` : <span class="muted">not measured (the forge did not give it)</span>}</dd>
+          <dt>Release cadence</dt><dd>{c.tags_365d} tag{c.tags_365d === 1 ? '' : 's'} in the last year{c.last_tag ? `, latest ${c.last_tag} (${fmtDate(c.last_tag_date)})` : ''}</dd>
+          <dt>CI</dt><dd>{ciRepos.length ? ciRepos.map((r) => r.ci.slice(0, 3).map((f: string) => <code>{f}</code>)).flat().reduce((a: any[], x: any) => (a.length ? [...a, ' ', x] : [x]), []) : <span class="muted">none found</span>}</dd>
+          <dt>Tests</dt><dd>{c.tests_present ? 'test files found' : <span class="muted">none found</span>}</dd>
+          <dt>Security policy</dt><dd>{sec ? <a href={sec}>{sec.split('/').pop()}</a> : <span class="muted">none found</span>}</dd>
+          <dt>Licence</dt><dd>{p.licence ?? '—'}{c.licence_detected && c.licence_detected !== p.licence ? <span class="muted"> (repository: {c.licence_detected})</span> : null}</dd>
+          <dt>Funding</dt><dd>{fund.length ? fund.map((f, i) => <>{i > 0 && ' · '}<a href={f}>{host(f)}</a></>) : <span class="muted">none listed</span>}</dd>
+          <dt>Telemetry SDKs in manifests</dt><dd>{telemetry.length ? telemetry.map((t: any, i: number) => <>{i > 0 && ' · '}<a href={t.url}>{t.sdk}</a> <span class="muted small">({t.file})</span></>) : <span class="muted">none found</span>}</dd>
+        </dl>
+      </div>
+    </section>
+  )}
+
+  {m && m.repos.length > 0 && (
+    <section aria-labelledby="repos-h">
+      <h2 id="repos-h">Repositories</h2>
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th scope="col">Repository</th><th scope="col">Role</th><th scope="col">Activity</th><th scope="col">Last commit</th><th scope="col" class="num">Commits 1y</th><th scope="col" class="num">Authors 90d</th><th scope="col">Measured at</th></tr></thead>
+          <tbody>
+            {m.repos.map((r) => (
+              <tr>
+                <td><a href={r.url}>{host(r.url)}</a></td>
+                <td>{r.role}</td>
+                <td>{r.ok ? <StatusBadge status={r.status ?? 'unknown'} /> : <span class="muted small">failed: {r.error}</span>}</td>
+                <td>{fmtDate(r.last_commit)}</td>
+                <td class="num">{fmtNum(r.commits_365d)}</td>
+                <td class="num">{fmtNum(r.authors_90d)}</td>
+                <td>{r.head_sha ? <code>{r.head_sha.slice(0, 9)}</code> : '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  )}
+
+  {p.notes && (<section aria-labelledby="notes-h"><h2 id="notes-h">Notes</h2><p class="prose">{p.notes}</p></section>)}
+
+  <p class="muted small" style="margin-top:2rem">
+    Checked by hand on {fmtDate(p.checked)}{m ? `; metrics collected on ${fmtDate(m.fetched_at)}` : ''}. Source file: <a href={`https://github.com/n3tman/vibe-check/blob/main/${p.file}`}><code>{p.file}</code></a>. Spotted a mistake? <a href="https://github.com/n3tman/vibe-check/issues">Open an issue</a> with a link.
+  </p>
+</Base>

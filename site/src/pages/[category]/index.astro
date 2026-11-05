@@ -1,0 +1,123 @@
+---
+import Base from '../../layouts/Base.astro';
+import AiMark from '../../components/AiMark.astro';
+import Icon from '../../components/Icon.astro';
+import Platforms from '../../components/Platforms.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import Sparkline from '../../components/Sparkline.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { dataset, type Category } from '../../lib/data.ts';
+import { CATEGORIES } from '../../lib/schema.ts';
+import { AXES, CATEGORY_LABEL, STATUS, fmtDate, fmtNum, href, osList, statusOf, summary } from '../../lib/view.ts';
+
+export function getStaticPaths() {
+  const d = dataset();
+  return CATEGORIES.filter((c) => ['client', 'server', 'bot', 'bridge'].includes(c) || d.projects.some((p) => p.category === c)).map((category) => ({ params: { category } }));
+}
+const category = Astro.params.category as Category;
+const d = dataset();
+const items = d.projects.filter((p) => p.category === category);
+const L = CATEGORY_LABEL[category];
+const isClient = category === 'client';
+const statuses = Object.keys(STATUS).filter((s) => items.some((p) => statusOf(p) === s));
+const data = Object.fromEntries(items.map((p) => [p.slug, summary(p)]));
+---
+<Base title={L.many} description={`${L.many} for Matrix: ${L.blurb}`}>
+  <header class="page-head">
+    <p class="eyebrow">{items.length} {items.length === 1 ? L.one.toLowerCase() : L.many.toLowerCase()}</p>
+    <h1>{L.many}</h1>
+    <p class="lede">{L.blurb} Filter, sort, or pick up to four to <a href={href('compare/')}>compare</a>.</p>
+  </header>
+
+  {items.length === 0 ? (
+    <p class="empty">No {L.many.toLowerCase()} in the dataset yet.</p>
+  ) : (
+    <div data-listing>
+      <form class="toolbar" role="search" aria-label={`Filter ${L.many.toLowerCase()}`} onsubmit="return false">
+        <label class="field grow">Search<input type="search" name="q" placeholder="Name, kind, summary…" autocomplete="off" /></label>
+        <label class="field">Activity
+          <select name="status"><option value="">Any</option>{statuses.map((s) => <option value={s}>{STATUS[s].label}</option>)}</select>
+        </label>
+        {isClient && (
+          <label class="field">Platform
+            <select name="os">
+              <option value="">Any</option><option value="mobile">Mobile (any)</option><option value="android">Android</option><option value="ios">iOS</option>
+              <option value="desktop">Desktop</option><option value="web">Web</option><option value="terminal">Terminal</option>
+            </select>
+          </label>
+        )}
+        {(Object.keys(AXES) as (keyof typeof AXES)[]).map((ax) => (
+          <label class="field">{AXES[ax].label}
+            <select name={ax}><option value="">Any</option>{Object.entries(AXES[ax].values).map(([k, v]) => <option value={k}>{v.text}</option>)}</select>
+          </label>
+        ))}
+        <label class="field">Sort
+          <select name="sort">
+            <option value="name">Name</option><option value="activity">Commits, last year</option><option value="authors">Authors, 90 days</option>
+            <option value="recent">Last commit</option><option value="stars">Stars</option><option value="status">Activity status</option>
+          </select>
+        </label>
+        {isClient && <label class="check"><input type="checkbox" name="mobile" /> <Icon name="phone" size={15} /> Mobile only</label>}
+        <div class="seg" role="group" aria-label="View">
+          <button type="button" data-view="cards" aria-pressed="true"><Icon name="grid" size={15} />Cards</button>
+          <button type="button" data-view="table" aria-pressed="false"><Icon name="list" size={15} />Table</button>
+        </div>
+      </form>
+      <p class="result-count" aria-live="polite" data-count>{items.length} shown</p>
+
+      <div class="cards" data-cards>
+        {items.map((p) => <ProjectCard p={p} />)}
+      </div>
+
+      <div class="table-wrap" data-table hidden>
+        <table class="data">
+          <caption class="sr-only">{L.many}, sortable by column</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-sort="name" aria-sort="ascending"><button type="button">Name</button></th>
+              <th scope="col" data-sort="status"><button type="button">Activity</button></th>
+              <th scope="col">{isClient ? 'Platforms' : 'Kind'}</th>
+              <th scope="col">Licence</th>
+              <th scope="col">Language</th>
+              <th scope="col" class="num" data-sort="authors"><button type="button">Authors 90d</button></th>
+              <th scope="col" class="num" data-sort="activity"><button type="button">Commits 1y</button></th>
+              <th scope="col" data-sort="recent"><button type="button">Last commit</button></th>
+              <th scope="col">Weekly</th>
+              <th scope="col">AI policy</th>
+              <th scope="col">AI dev use</th>
+              <th scope="col">AI in product</th>
+            </tr>
+          </thead>
+          <tbody>
+            {items.map((p) => {
+              const s = summary(p);
+              return (
+                <tr data-slug={p.slug}>
+                  <td class="name"><a href={href(`p/${p.slug}/`)}>{p.name}</a></td>
+                  <td><StatusBadge status={statusOf(p)} /></td>
+                  <td>{isClient ? <Platforms os={osList(p)} /> : <span class="muted">{p.kind}</span>}</td>
+                  <td>{s.licence ?? '—'}</td>
+                  <td>{s.language ?? '—'}</td>
+                  <td class="num">{fmtNum(s.authors90)}</td>
+                  <td class="num">{fmtNum(s.commits365)}</td>
+                  <td>{fmtDate(s.lastCommit)}</td>
+                  <td>{p.repos.length ? <Sparkline weeks={s.weekly} width={90} height={22} /> : <span class="muted small">no repo</span>}</td>
+                  <td><AiMark axis="policy" value={p.ai.policy.value} compact showAxis={false} /></td>
+                  <td><AiMark axis="dev_usage" value={p.ai.dev_usage.value} compact showAxis={false} /></td>
+                  <td><AiMark axis="in_product" value={p.ai.in_product.value} compact showAxis={false} /></td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <p class="empty" data-none hidden>Nothing matches these filters.</p>
+      <script type="application/json" data-items set:html={JSON.stringify(data)} />
+    </div>
+  )}
+</Base>
+
+<script>
+  import { initListing } from '../../lib/listing.ts';
+  initListing();
+</script>

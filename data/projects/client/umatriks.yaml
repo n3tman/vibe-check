@@ -1,0 +1,110 @@
+slug: umatriks
+name: uMatriks
+category: client
+kind: mobile
+homepage: null
+summary: Matrix client for Ubuntu Touch; the README marks it unmaintained.
+repos:
+- url: https://github.com/uMatriks/uMatriks
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: unmaintained
+platforms: []
+apps:
+- os: ubuntu-touch
+  tech: qt
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://github.com/uMatriks/uMatriks/blob/27eab5ba21c96f8dabc243d87950c7860ead7552/README.md
+licence: GPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: libQuotient
+    how: claimed
+    note: libqmatrixclient (now libQuotient), per its history
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/uMatriks/uMatriks/blob/27eab5ba21c96f8dabc243d87950c7860ead7552/pushhelper/pushhelper.cpp#L71
+    note: pattern match [m.call.invite]
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2020-03-09, so no commits in the last 365 days (HEAD 27eab5ba21)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

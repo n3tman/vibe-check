@@ -1,0 +1,179 @@
+slug: lightning
+name: Lightning
+category: client
+kind: desktop
+homepage: https://www.lightning-matrix.org
+summary: A native Qt 6/QML desktop Matrix client on the official Rust matrix-sdk, with local search
+  of encrypted rooms and MatrixRTC group calls.
+repos:
+- url: https://github.com/Mizerd/lightning
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/lightning/
+  other:
+  - GitHub topic matrix-client
+maturity: beta
+platforms:
+- linux
+- windows
+- macos
+apps:
+- os: linux
+  tech: qt
+  status: beta
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/org.lightning_matrix.Lightning
+  - name: github-releases
+    url: https://github.com/Mizerd/lightning/releases/latest
+  source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  note: Also AppImage, deb, rpm, snap, Nix flake.
+  min_os: null
+- os: windows
+  tech: qt
+  status: beta
+  stores:
+  - name: github-releases
+    url: https://github.com/Mizerd/lightning/releases/latest
+  source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  note: Unsigned.
+  min_os: null
+- os: macos
+  tech: qt
+  status: beta
+  stores:
+  - name: github-releases
+    url: https://github.com/Mizerd/lightning/releases/latest
+  source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  note: Unsigned; calls not tested on macOS.
+  min_os: null
+licence: GPL-3.0-or-later
+fork_of: null
+distribution:
+- flathub
+- snap
+- appimage
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk (Rust FFI bridge, C++/QML UI)
+    how: code
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  cross_signing:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  key_backup:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+    note: Key backup restore.
+  sliding_sync: not-found
+  oidc_auth:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+    note: Browser OAuth 2.0 / OIDC sign-in.
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  threads:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  spaces:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  voip_1to1: not-found
+  group_calls:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+    note: MatrixRTC audio, camera and screen share, interoperable with Element Call.
+  reactions:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  edits:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  replies:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  polls:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  custom_emoji:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  stickers:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  location: not-found
+  voice_messages:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations:
+    value: partial
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+    note: Eleven languages including Arabic.
+  telemetry:
+    value: none-found
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/README.md
+    note: '"No telemetry. No analytics or crash reporting."'
+  default_homeserver: not-found
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/CONTRIBUTING.md
+    note: Qt 6 + C++20 + Rust with CMake and Nix; GPL-3.0-or-later. Development happens on a private
+      GitLab that force-pushes to the GitHub mirror.
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - >-
+      CLAUDE.md: "the authoritative operating guide for Claude Code, Codex, and other coding agents
+      working in this repository"; CONTRIBUTING.md points contributors to it.
+    - >-
+      CLAUDE.md records a 2026-08-11 history rewrite "stripping AI co-author/session trailers so
+      the GitHub mirror credits only him", so attributed commits cannot be counted (0 of about 2,730
+      in the last 365 days after the rewrite).
+    - >-
+      Earlier .claude/agents/*.md role definitions and an AGENTS.md were removed on 2026-08-17 (per
+      CLAUDE.md).
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  matrix.org maturity: Beta. dev_usage is set to regular from the project's own CLAUDE.md, not from
+  trailer counts, which were removed from history.
+checked: '2026-11-05'

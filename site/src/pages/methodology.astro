@@ -1,0 +1,108 @@
+---
+import Base from '../layouts/Base.astro';
+import AiMark from '../components/AiMark.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import { execFileSync } from 'node:child_process';
+import { dataset } from '../lib/data.ts';
+import { AXES, STATUS, fmtDate, href, type Axis } from '../lib/view.ts';
+
+const d = dataset();
+const meta = d.collector;
+const bots: string[] = meta?.bot_names ?? ['dependabot', 'renovate', 'weblate', 'github-actions', 'pre-commit-ci', 'mergify', 'transifex', 'crowdin', 'and other names ending in [bot]'];
+const aiBots: string[] = meta?.ai_bot_tools ?? [];
+const checked = d.projects.map((p) => p.checked).sort();
+// This project's own AI use, from its git history: the models named in Co-Authored-By lines.
+let models: { name: string; n: number }[] = [];
+try {
+  const out = execFileSync('git', ['log', '--format=%(trailers:key=Co-Authored-By,valueonly)'], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
+  const counts = new Map<string, number>();
+  for (const line of out.split('\n')) {
+    const name = line.replace(/<[^>]*>/, '').trim();
+    if (name) counts.set(name, (counts.get(name) ?? 0) + 1);
+  }
+  models = [...counts].map(([name, n]) => ({ name, n })).sort((a, b) => b.n - a.n);
+} catch { /* no git at build time */ }
+---
+<Base title="Methodology">
+  <header class="page-head">
+    <p class="eyebrow">How this was made</p>
+    <h1>Methodology</h1>
+    <p class="lede">Where the data comes from, what each mark means, and what it cannot tell you.</p>
+  </header>
+  <div class="prose">
+    <h2>Sources and dates</h2>
+    <p>
+      Each project has a hand-written file in <a href="https://github.com/n3tman/vibe-check/tree/main/data/projects"><code>data/projects/</code></a>: features, platforms and AI policy,
+      each claim with a link (a file at a commit, a docs page, an issue) and the date it was checked. Projects were found through the
+      <a href="https://matrix.org/ecosystem/">matrix.org ecosystem lists</a>, the rooms of the <code>#community:matrix.org</code> space, GitHub topics, awesome lists and This Week in Matrix.
+      {checked.length > 0 && <> Hand checks range from {fmtDate(checked[0])} to {fmtDate(checked[checked.length - 1])}.</>}
+    </p>
+    <p>
+      Development metrics are computed by a collector from each repository's git history (a blobless clone, so every forge gets the same numbers) plus the forge's API for stars,
+      issues, the archived flag and languages (GitHub, GitLab, Forgejo and Gitea; SourceHut and others give blanks). Lines of code come from <code>scc</code> on a shallow checkout.
+      {meta?.run_at ? <> The current metrics were collected on {fmtDate(meta.run_at)}.</> : ' The collector runs weekly.'}
+      Nothing from a scanned repository is ever run.
+    </p>
+    <p>“Not found” is never the same as “no”: it means we looked and found nothing either way. It is drawn with a dashed outline.</p>
+
+    <h2>The three AI axes</h2>
+    <p>They are shown separately and never merged into one score.</p>
+    {(Object.keys(AXES) as Axis[]).map((ax) => (
+      <>
+        <h3>{AXES[ax].label}</h3>
+        <p>{AXES[ax].question}.</p>
+        <ul class="evidence" style="display:flex;flex-wrap:wrap;gap:.4rem">{Object.keys(AXES[ax].values).map((v) => <li><AiMark axis={ax} value={v} showAxis={false} /></li>)}</ul>
+        {ax === 'policy' && <p class="small muted">From CONTRIBUTING, codes of conduct, PR templates, the README, docs, pinned issues and maintainers' own statements, quoted with a link. Restricted means allowed with disclosure or limits.</p>}
+        {ax === 'dev_usage' && (
+          <p class="small muted">
+            Evidence: agent instruction files (<code>CLAUDE.md</code>, <code>AGENTS.md</code>, <code>.cursorrules</code>, <code>.github/copilot-instructions.md</code> and others),
+            commits whose trailers or “Generated with” lines credit an AI tool, AI agent bot authors, and CI workflows that run AI actions or review bots, counted over the last 365 days.
+            <strong>Config only</strong>: agent files but no attributed commits. <strong>Occasional</strong>: 1 to 4 % of last year's commits attributed, or AI review or agent workflows.
+            <strong>Regular</strong>: 5 % or more. Attribution is a lower bound: most AI use leaves no trace in a repository, so “none found” does not mean none was used.
+          </p>
+        )}
+        {ax === 'in_product' && <p class="small muted">Features of the product that call a language model or other generative AI, from docs and code. Optional means the user turns it on or can turn it off.</p>}
+      </>
+    ))}
+
+    <h3>The AI-wary and AI-friendly switch</h3>
+    <p>
+      The switch in the header only changes how the marks are drawn. <em>AI-wary</em> draws AI use (and policies that allow it) with a red cross and “none found” with a green check;
+      <em>AI-friendly</em> does the reverse. Restricted policies get an amber half mark in both; an unknown policy stays grey. Every mark keeps its icon and text, so colour is never the only signal.
+      Nothing is hidden or reordered unless you filter. Neutral is the default; your choice stays on this device.
+    </p>
+
+    <h2>Activity status</h2>
+    <ul>
+      {Object.keys(STATUS).map((s) => <li><StatusBadge status={s} /> {STATUS[s].desc}.</li>)}
+    </ul>
+    <p>
+      Commits are counted on the default branch, without merge commits, by the date they landed. Authors are de-duplicated by email and name, honouring <code>.mailmap</code>.
+      For projects with several repositories (an Android and an iOS app, say), the status uses all of them together. The bus factor is the fewest authors who made half of last year's commits.
+      Issue response is the median time to the first comment by someone other than the reporter, for issues opened in the last 180 days (where the forge allows reading it).
+    </p>
+
+    <h2>The bot filter</h2>
+    <p>Commits by these bots count neither as commits nor as authors: {bots.map((b, i) => <>{i > 0 && ', '}<code>{b}</code></>)}, any author with <code>[bot]</code> in the name, and translation-platform commits (“Translated using Weblate”).</p>
+    {aiBots.length > 0 && <p>AI agents that commit under their own name ({aiBots.join(', ')}) are different: their commits count as changes and as AI evidence, but not as authors.</p>}
+
+    <h2>Caveats</h2>
+    <ul>
+      <li>A busy repository is not a better product, and a quiet one may simply be finished.</li>
+      <li>Telemetry “found” means a dependency manifest names an analytics or crash-report SDK; whether it is on, opt-in or compiled out is in the project's own entry.</li>
+      <li>Stars and forks depend on the forge and are not comparable across forges.</li>
+      <li>Projects change quickly. Every entry shows the date it was checked.</li>
+    </ul>
+
+    <h2>Corrections</h2>
+    <p>Spotted something wrong or missing? <a href="https://github.com/n3tman/vibe-check/issues">Open an issue</a> with a link to the source. Data is under CC BY 4.0, code under MIT. The whole dataset is one file: <a href={href("data.json")}><code>data.json</code></a>.</p>
+
+    <h2>This project's own AI use</h2>
+    <p>
+      In keeping with what it asks of others: this site was researched and built with Claude (Anthropic) in Claude Code, with people directing the work and merging it.
+      Every commit names the model that wrote it in a <code>Co-Authored-By</code> line.
+    </p>
+    {models.length > 0 && <ul>{models.map((m) => <li>{m.name}: {m.n} commit{m.n === 1 ? '' : 's'}</li>)}</ul>}
+    <p>In this site's own terms: policy <em>encouraged</em>, development use <em>regular</em>, no AI in the product (the pages call no AI service).</p>
+  </div>
+</Base>

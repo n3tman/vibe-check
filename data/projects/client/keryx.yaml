@@ -1,0 +1,88 @@
+slug: keryx
+name: Keryx
+category: client
+kind: mobile
+homepage: https://github.com/CocaKova/keryx
+summary: An Android app for watching and steering a self-hosted Hermes AI agent, talking to its gateway
+  directly or through a Matrix homeserver.
+repos:
+- url: https://github.com/CocaKova/keryx
+  forge: github
+  role: android
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub repository search "matrix client" (pushed since 2025-11), 2026-11-05
+maturity: beta
+platforms:
+- android
+apps:
+- os: android
+  tech: native
+  min_os: '8.0'
+  status: beta
+  source: https://github.com/CocaKova/keryx/blob/097c27355136c64d6a9c6a77f84cbe88278c175d/Hermes-Chat/app/build.gradle.kts
+  note: minSdk 26.
+  stores: []
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: Trixnity
+    how: code
+    source: https://github.com/CocaKova/keryx/blob/097c27355136c64d6a9c6a77f84cbe88278c175d/Hermes-Chat/app/build.gradle.kts
+  e2ee: not-found
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://github.com/CocaKova/keryx/blob/097c27355136c64d6a9c6a77f84cbe88278c175d/README.md
+    note: Single Android/Kotlin app; MIT; purpose-built for Hermes agents.
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 462 of 495 non-bot commits since 2026-06-28 (about 93 %) carry a Claude co-author trailer.
+  in_product:
+    value: core
+    note: >-
+      The app exists to chat with and steer a Hermes AI agent (plans, tool cards, reasoning, approvals);
+      Matrix is one of its transports.
+    source: https://github.com/CocaKova/keryx/blob/097c27355136c64d6a9c6a77f84cbe88278c175d/README.md
+notes: >-
+  A Matrix client only in part: it uses Matrix rooms as a transport to an AI agent gateway. Listed
+  so the AI-in-product axis has the full picture; lane 7 may prefer to show it under tools.
+checked: '2026-11-05'

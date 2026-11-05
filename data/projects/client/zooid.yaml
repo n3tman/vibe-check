@@ -1,0 +1,138 @@
+slug: zooid
+name: Zooid
+category: client
+kind: web
+homepage: https://zooid.dev
+summary: Web Matrix client built for collaborating with AI agents; the human-facing half of the Zooid
+  agent platform, whose daemon bridges agents onto Matrix.
+repos:
+- url: https://github.com/zooid-ai/clients
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/zooid/
+  other: []
+maturity: alpha
+platforms:
+- web
+apps:
+- os: web
+  tech: other
+  min_os: null
+  status: alpha
+  stores: []
+  source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/README.md#L3
+  note: no mobile app found
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk
+    how: code
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/package.json
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/packages/web/src/components/rooms/composer.tsx#L20
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/packages/web/src/components/structures/left-panel.test.tsx#L46
+    note: pattern match [m.space.child]
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/packages/web/src/components/timeline/reaction-picker.test.tsx#L46
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/packages/web/src/components/timeline/edit-delete.integration.test.tsx#L39
+    note: pattern match [m.replace]
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/packages/web/src/components/settings/notification-section.test.tsx#L116
+    note: pattern match [setPusher]
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/packages/web/src/components/user-avatar.test.tsx#L53
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/packages/web/src/components/timeline/edit-delete.integration.test.tsx#L113
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/packages/web/package.json#L56
+    note: pattern match [a11y]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: MIT; Node 22 / Vite monorepo, about 420 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 109 of 146 commits in the last 365 days (75 %) carry Claude co-author trailers; a zooidbot account
+      also commits
+    - no agent files in the tree at 2b8a626eda
+  in_product:
+    value: core
+    note: A chat client for working with AI agents run by the Zooid daemon (ACP harnesses such as Claude
+      Code, Codex, opencode).
+    source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/README.md#L3
+notes: 'The Zooid daemon (agents as a Matrix application service) is a bot/tool for lane 5: https://github.com/zooid-ai/zooid.'
+checked: '2026-11-05'

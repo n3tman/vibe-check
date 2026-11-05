@@ -1,0 +1,111 @@
+slug: miitrix
+name: Miitrix
+category: client
+kind: other (Nintendo 3DS homebrew)
+homepage: null
+summary: Matrix client for the Nintendo 3DS.
+repos:
+- url: https://github.com/Sorunome/miitrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/miitrix/
+  other: []
+maturity: unmaintained
+platforms: []
+apps:
+- os: other
+  tech: native
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/miitrix.md
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own
+    how: code
+    note: C++ on its own small Matrix library
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/miitrix.md
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/Sorunome/miitrix/blob/7770ad9ae0fa101f7aa244172e62c246901d0778/source/event.cpp#L78
+    note: pattern match [m.replace]
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2020-08-03, so no commits in the last 365 days (HEAD 7770ad9ae0)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

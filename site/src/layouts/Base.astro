@@ -1,0 +1,78 @@
+---
+import '@fontsource-variable/inter/wght.css';
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { dataset } from '../lib/data.ts';
+import { CATEGORY_LABEL, href } from '../lib/view.ts';
+import { CATEGORIES } from '../lib/schema.ts';
+interface Props { title: string; description?: string; wide?: boolean }
+const { title, description = 'Matrix clients, servers, bots and bridges compared by features, development activity and how they treat AI.', wide = false } = Astro.props;
+const d = dataset();
+const cats = CATEGORIES.filter((c) => ['client', 'server', 'bot', 'bridge'].includes(c) || d.projects.some((p) => p.category === c));
+const path = Astro.url.pathname;
+const nav = [
+  ...cats.map((c) => ({ href: href(`${c}/`), label: CATEGORY_LABEL[c].many })),
+  { href: href('mscs/'), label: 'MSCs' },
+  { href: href('compare/'), label: 'Compare' },
+  { href: href('methodology/'), label: 'Methodology' },
+];
+const fullTitle = title === 'Vibe check' ? 'Vibe check: the Matrix ecosystem at a glance' : `${title} · Vibe check`;
+---
+<!doctype html>
+<html lang="en" data-stance="neutral">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#16181d" media="(prefers-color-scheme: dark)" />
+    <meta name="referrer" content="no-referrer" />
+    <link rel="icon" href={href('favicon.svg')} type="image/svg+xml" />
+    <script is:inline>
+      // Before first paint: the remembered theme and AI stance, so nothing flashes.
+      (function () {
+        var r = document.documentElement, t = null, s = null;
+        try { t = localStorage.getItem('vc-theme'); s = localStorage.getItem('vc-stance'); } catch (e) {}
+        if (t === 'light' || t === 'dark') r.dataset.theme = t;
+        if (s === 'wary' || s === 'friendly') r.dataset.stance = s;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-head">
+      <div class="wrap head-row">
+        <a class="logo" href={href()} aria-label="Vibe check, home"><Icon name="matrix" size={22} /><span>Vibe check</span></a>
+        <nav class="site-nav" aria-label="Main">
+          <ul>{nav.map((n) => <li><a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a></li>)}</ul>
+        </nav>
+        <div class="switches">
+          <div class="stance" role="radiogroup" aria-label="AI stance: how AI marks are drawn">
+            <span class="stance-label" id="stance-label"><Icon name="sparkle" size={14} /><span class="hide-sm">AI marks</span></span>
+            <button type="button" role="radio" data-stance-set="neutral" aria-checked="true">Neutral</button>
+            <button type="button" role="radio" data-stance-set="wary" aria-checked="false">AI-wary</button>
+            <button type="button" role="radio" data-stance-set="friendly" aria-checked="false">AI-friendly</button>
+          </div>
+          <button type="button" class="theme-btn" aria-label="Colour theme: follows the system" data-theme-btn>
+            <span class="t-auto"><Icon name="auto" size={18} /></span><span class="t-light"><Icon name="sun" size={18} /></span><span class="t-dark"><Icon name="moon" size={18} /></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main" class:list={['wrap', { wide }]} tabindex="-1">
+      <slot />
+    </main>
+    <footer class="site-foot">
+      <div class="wrap foot-row">
+        <p>Data checked by hand with sources, metrics collected from the repositories{d.collector?.run_at ? ` on ${new Date(d.collector.run_at).toLocaleDateString('en-GB', { dateStyle: 'medium', timeZone: 'UTC' })}` : ''}. Researched and built with Claude in Claude Code; see <a href={href('methodology/')}>methodology</a>.</p>
+        <p><a href="https://github.com/n3tman/vibe-check">Source and corrections</a> · code MIT, data CC BY 4.0 · no trackers, no external requests.</p>
+      </div>
+    </footer>
+    <script>
+      import { initSwitches } from '../lib/switches.ts';
+      initSwitches();
+    </script>
+  </body>
+</html>

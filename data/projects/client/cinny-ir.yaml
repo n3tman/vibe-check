@@ -1,0 +1,102 @@
+slug: cinny-ir
+name: app.cinny.ir (Persian Cinny)
+category: client
+kind: web
+homepage: https://app.cinny.ir
+summary: A Persian, right-to-left fork of Cinny served from Iranian infrastructure so it stays reachable
+  during internet blackouts.
+repos:
+- url: https://github.com/erfnzdeh/app.cinny.ir
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-client
+maturity: beta
+platforms:
+- web
+apps:
+- os: web
+  tech: other
+  status: beta
+  stores:
+  - name: web
+    url: https://app.cinny.ir
+  source: https://github.com/erfnzdeh/app.cinny.ir/blob/427d57e2d0d8288255ae33abe2e7b6a1a5a162ef/README.md
+  min_os: null
+licence: AGPL-3.0-only
+fork_of: cinny
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk (inherited from Cinny)
+    how: code
+    source: https://github.com/erfnzdeh/app.cinny.ir/blob/427d57e2d0d8288255ae33abe2e7b6a1a5a162ef/package.json
+  e2ee: not-found
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations:
+    value: partial
+    how: claimed
+    source: https://github.com/erfnzdeh/app.cinny.ir/blob/427d57e2d0d8288255ae33abe2e7b6a1a5a162ef/README.md
+    note: Auth screens translated to Persian; RTL layout patches.
+  telemetry:
+    value: none-found
+    how: code
+    source: https://github.com/erfnzdeh/app.cinny.ir/blob/427d57e2d0d8288255ae33abe2e7b6a1a5a162ef/package.json
+  default_homeserver:
+    value: 'no'
+    how: code
+    source: https://github.com/erfnzdeh/app.cinny.ir/blob/427d57e2d0d8288255ae33abe2e7b6a1a5a162ef/config.json
+    note: Empty homeserverList; the user types a server (placeholder example.ir).
+  fork_friendliness:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/erfnzdeh/app.cinny.ir/blob/427d57e2d0d8288255ae33abe2e7b6a1a5a162ef/README.md
+    note: Keeps a narrow patch set on top of cinny dev so upstream can be pulled regularly.
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - >-
+      No attributed commits in the last 365 days (60 non-bot commits, most of them merged from upstream
+      Cinny).
+    - No agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  Fork of Cinny. Adds Persian translations for auth screens, RTL rendering (cherry-picked upstream
+  PRs 2839 and 2841), self-hosted Vazirmatn font, a single-field homeserver picker and an authNotice
+  explaining Matrix. Other features follow Cinny (see the cinny file).
+checked: '2026-11-05'

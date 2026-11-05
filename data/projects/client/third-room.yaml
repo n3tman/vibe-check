@@ -1,0 +1,152 @@
+slug: third-room
+name: Third Room
+category: client
+kind: web (3D)
+homepage: https://thirdroom.io
+summary: Matrix-based 3D virtual-world platform in the browser; paused in 2023 for lack of funding.
+repos:
+- url: https://github.com/thirdroom/thirdroom
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: unmaintained
+platforms:
+- web
+apps:
+- os: web
+  tech: other
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/README.md
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/package.json
+    note: '@thirdroom/hydrogen-view-sdk (a fork of Hydrogen)'
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/ui/views/HydrogenRootView.tsx#L26
+    note: pattern match [olm_]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/hydrogen-view-sdk.d.ts#L967
+    note: pattern match [CrossSigning]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/hydrogen-view-sdk.d.ts#L917
+    note: pattern match [KeyBackup]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/config.json#L8
+    note: pattern match [OidcClient]
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/engine/scripting/emscripten/src/js-runtime/quickjs/quickjs.c#L40330
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/hydrogen-view-sdk.d.ts#L1746
+    note: pattern match [m.call.invite]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/hydrogen-view-sdk.d.ts#L1744
+    note: pattern match [org.matrix.msc3401]
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/ui/hooks/useHomeWorld.ts#L32
+    note: pattern match [m.sticker]
+  location:
+    value: not-found
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/ui/site/archived/BlogSection.tsx#L79
+    note: pattern match [voice message]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/ui/hooks/useHomeWorld.ts#L46
+    note: pattern match [preview_url]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/hydrogen-view-sdk.d.ts#L2240
+    note: pattern match [setPusher]
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/packages/websg-types/types/websg.d.ts#L921
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/src/ui/hooks/useHomeWorld.ts#L27
+    note: pattern match [m.room.tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/thirdroom/thirdroom/blob/01bc731b057bd2a0e01d2152ad4828c05f1f6302/package.json#L122
+    note: pattern match [a11y]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2023-07-11, so no commits in the last 365 days (HEAD 01bc731b05)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'Community room topic: "Third Room is paused due to lack of funding". Not a chat client in the
+  usual sense.'
+checked: '2026-11-05'

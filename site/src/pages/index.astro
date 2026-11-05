@@ -1,0 +1,86 @@
+---
+import Base from '../layouts/Base.astro';
+import AiMark from '../components/AiMark.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { dataset } from '../lib/data.ts';
+import { CATEGORIES } from '../lib/schema.ts';
+import { AXES, CATEGORY_LABEL, STATUS, fmtDate, href, statusOf, type Axis } from '../lib/view.ts';
+
+const d = dataset();
+const cats = CATEGORIES.filter((c) => ['client', 'server', 'bot', 'bridge'].includes(c) || d.projects.some((p) => p.category === c));
+const order = Object.keys(STATUS);
+const dist = (list: typeof d.projects) => order.map((s) => ({ s, n: list.filter((p) => statusOf(p) === s).length })).filter((x) => x.n);
+const measured = d.projects.filter((p) => p.metrics?.combined);
+const lively = [...measured].sort((a, b) => (b.metrics!.combined!.commits_365d ?? 0) - (a.metrics!.combined!.commits_365d ?? 0)).slice(0, 6);
+const count = (ax: Axis) => Object.keys(AXES[ax].values).map((v) => ({ v, n: d.projects.filter((p) => (p.ai as any)[ax].value === v).length }));
+const lastChecked = d.projects.map((p) => p.checked).sort().pop();
+---
+<Base title="Vibe check">
+  <header class="page-head">
+    <p class="eyebrow">Matrix ecosystem</p>
+    <h1>The Matrix ecosystem at a glance</h1>
+    <p class="lede">
+      {d.projects.length} clients, servers, bots and bridges, compared by what they do, how alive their development is, and how they treat AI:
+      what they say about AI-made contributions, whether their developers use AI tools, and whether the product ships AI features.
+    </p>
+  </header>
+
+  <div class="callout" style="margin-bottom:1.5rem">
+    <p><strong>The AI marks switch.</strong> In the header, <em>AI-wary</em> marks AI use with a red cross and “none found” with a green check; <em>AI-friendly</em> does the reverse; <em>Neutral</em> shows plain marks. It only changes the marks, never the data or the order. Your choice is remembered on this device.</p>
+  </div>
+
+  <section aria-labelledby="cats-h">
+    <h2 id="cats-h" class="sr-only">Categories</h2>
+    <div class="cat-tiles">
+      {cats.map((c) => {
+        const list = d.projects.filter((p) => p.category === c);
+        const ds = dist(list);
+        return (
+          <a class="tile" href={href(`${c}/`)}>
+            <h2>{CATEGORY_LABEL[c].many} <span>{list.length}</span></h2>
+            <p>{CATEGORY_LABEL[c].blurb}</p>
+            {list.length > 0 && (
+              <>
+                <div class="dist" role="img" aria-label={`Activity: ${ds.map((x) => `${x.n} ${STATUS[x.s].label.toLowerCase()}`).join(', ')}`}>
+                  {ds.map((x) => <span class={`d-${x.s}`} style={`flex:${x.n}`} />)}
+                </div>
+                <div class="dist-legend" aria-hidden="true">{ds.map((x) => <span><i class={`legend-dot d-${x.s}`} />{x.n} {STATUS[x.s].label.toLowerCase()}</span>)}</div>
+              </>
+            )}
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  {d.projects.length > 0 && (
+    <section aria-labelledby="ai-h">
+      <h2 id="ai-h">AI across the ecosystem</h2>
+      <div class="ai-axes">
+        {(Object.keys(AXES) as Axis[]).map((ax) => (
+          <div class="panel ai-axis">
+            <h3>{AXES[ax].label}</h3>
+            <p class="q">{AXES[ax].question}</p>
+            <ul class="evidence" style="gap:.45rem">
+              {count(ax).map(({ v, n }) => <li style="display:flex;justify-content:space-between;align-items:center;gap:.5rem"><AiMark axis={ax} value={v} showAxis={false} /><span class="muted" style="font-variant-numeric:tabular-nums">{n}</span></li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <p class="muted small" style="margin-top:.8rem">“None found” for development use is a lower bound: most AI use leaves no trace in a repository. See the <a href={href('methodology/')}>methodology</a>.</p>
+    </section>
+  )}
+
+  {lively.length > 0 && (
+    <section aria-labelledby="lively-h">
+      <h2 id="lively-h">Busiest in the last year</h2>
+      <div class="cards">{lively.map((p) => <ProjectCard p={p} showCategory />)}</div>
+    </section>
+  )}
+
+  {d.projects.length === 0 && <p class="empty">No projects yet: the research lanes are still writing <code>data/projects/</code>.</p>}
+
+  <p class="muted small" style="margin-top:2rem">
+    {measured.length} of {d.projects.length} projects measured{d.collector?.run_at ? ` (collector run ${fmtDate(d.collector.run_at)})` : ''}{lastChecked ? `; hand checks up to ${fmtDate(lastChecked)}` : ''}.
+  </p>
+</Base>

@@ -1,0 +1,91 @@
+slug: circles
+name: Circles (FUTO)
+category: client
+kind: mobile (social network)
+homepage: https://github.com/circles-project
+summary: FUTO's prototype end-to-end encrypted social network for friends and families, built on
+  Matrix; development ended in late 2024.
+repos:
+- url: https://github.com/circles-project/circles-android
+  forge: github
+  role: android
+- url: https://github.com/circles-project/circles-ios
+  forge: github
+  role: ios
+sources:
+  matrix_org_listing: null
+  other:
+  - 'sources/community-space.tsv: room "Circles" (Not-chat Clients)'
+maturity: unmaintained
+platforms:
+- android
+- ios
+apps:
+- os: android
+  tech: native
+  status: discontinued
+  source: https://github.com/circles-project/circles-android/blob/250f9e53382d20e266be6a3d865582b4f7704879/README.md
+  min_os: null
+  stores: []
+- os: ios
+  tech: native
+  status: discontinued
+  source: https://github.com/circles-project/circles-ios/blob/5aec0b5cdb379fe13113ec55f4475a020b9c1834/README.md
+  min_os: null
+  stores: []
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk: not-found
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/circles-project/circles-android/blob/250f9e53382d20e266be6a3d865582b4f7704879/README.md
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No commits in the last 365 days; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  README: "Active development wrapped up in late 2024, and the code is now available under a very
+  liberal Open Source license to allow for new forks". A not-chat client.
+checked: '2026-11-05'

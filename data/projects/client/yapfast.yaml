@@ -1,0 +1,171 @@
+slug: yapfast
+name: Yapfast
+category: client
+kind: desktop
+homepage: https://yapfast.com
+summary: Native Rust Discord client that started as a Matrix client and still supports Matrix (encrypted
+  rooms, spaces, MatrixRTC voice).
+repos:
+- url: https://github.com/yapfast/yapfast
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-client
+maturity: beta
+platforms:
+- windows
+- linux
+apps:
+- os: windows
+  tech: native
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/README.md
+- os: linux
+  tech: native
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/README.md
+licence: GPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/Cargo.toml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/Cargo.toml#L133
+    note: pattern match [matrix-sdk-crypto]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/calls.rs#L122
+    note: pattern match [cross_signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/matrix_chat.rs#L841
+    note: pattern match [recovery key]
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/experiment.rs#L159
+    note: pattern match [Sliding Sync]
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/application.rs#L3427
+    note: pattern match [OAuthAuthoriz]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/application.rs#L95
+    note: pattern match [ThreadList]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/voice_demo.rs#L91
+    note: pattern match [m.space.child]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/Cargo.toml#L16
+    note: pattern match [webrtc]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/Cargo.toml#L16
+    note: pattern match [livekit]
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/matrix_chat.rs#L3045
+    note: pattern match [m.reaction]
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/matrix_chat.rs#L2014
+    note: pattern match [in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/application/server_settings/audit_log.rs#L1657
+    note: pattern match [emoticon]
+  stickers:
+    value: not-found
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/application/threads.rs#L483
+    note: pattern match [m.location]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/crates/yapfast-core/src/application/server_settings/audit_log.rs#L152
+    note: pattern match [Voice Message]
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/src/ui.rs#L965
+    note: pattern match [Link preview]
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/src/ui/refresh.rs#L953
+    note: pattern match [read_private]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/src/ui.rs#L2563
+    note: pattern match [presence]
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: partial
+    how: code
+    note: GPL-3.0; Rust workspace, about 1,700 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: occasional
+    evidence:
+    - 2 of 640 commits in the last 365 days carry Claude co-author trailers (0.3 %) at 03862f6394
+    - no agent files
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'README (line 320 on): Matrix "still works" but is available "from source, for now"; the main target
+  is Discord.'
+checked: '2026-11-05'

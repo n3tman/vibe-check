@@ -1,0 +1,107 @@
+slug: gosuto
+name: Gōsuto (gosuto)
+category: client
+kind: terminal
+homepage: https://github.com/MaikBuse/gosuto
+summary: A cyberpunk-styled terminal Matrix client in Rust with Vim motions, E2EE and LiveKit voice
+  calls.
+repos:
+- url: https://github.com/MaikBuse/gosuto
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-client
+maturity: beta
+platforms:
+- terminal
+- linux
+- windows
+- macos
+apps:
+- os: terminal
+  tech: tui
+  status: beta
+  stores:
+  - name: crates-io
+    url: https://crates.io/crates/gosuto
+  - name: github-releases
+    url: https://github.com/MaikBuse/gosuto/releases
+  source: https://github.com/MaikBuse/gosuto/blob/c99d18301fa54878d06f2bf9d98fafeda2fc912c/README.md
+  min_os: null
+licence: Apache-2.0 OR MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk 0.16
+    how: code
+    source: https://github.com/MaikBuse/gosuto/blob/c99d18301fa54878d06f2bf9d98fafeda2fc912c/Cargo.toml
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/MaikBuse/gosuto/blob/c99d18301fa54878d06f2bf9d98fafeda2fc912c/README.md
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/MaikBuse/gosuto/blob/c99d18301fa54878d06f2bf9d98fafeda2fc912c/README.md
+  voip_1to1: not-found
+  group_calls:
+    value: partial
+    how: claimed
+    source: https://github.com/MaikBuse/gosuto/blob/c99d18301fa54878d06f2bf9d98fafeda2fc912c/README.md
+    note: LiveKit-based voice with push-to-talk.
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools:
+    value: partial
+    how: claimed
+    source: https://github.com/MaikBuse/gosuto/blob/c99d18301fa54878d06f2bf9d98fafeda2fc912c/README.md
+    note: Member lists and power levels.
+  accessibility: not-found
+  translations: not-found
+  telemetry:
+    value: none-found
+    how: null
+    source: null
+  default_homeserver: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/MaikBuse/gosuto/blob/c99d18301fa54878d06f2bf9d98fafeda2fc912c/README.md
+    note: Single Rust crate; Apache-2.0 OR MIT.
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No attributed commits among 217 non-bot commits in the last 365 days; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'Our reading: beta, one maintainer; last commit 2026-03-29 (slowing).'
+checked: '2026-11-05'
