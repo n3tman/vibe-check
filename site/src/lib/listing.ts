@@ -4,7 +4,7 @@ type Item = {
   slug: string; name: string; kind: string; status: string; os: string[]; mobile: boolean; stars: number | null;
   authors90: number | null; commits365: number | null; lastCommit: string | null;
   commits90: number | null; commitsAll: number | null; authors365: number | null; authorsAll: number | null; tags365: number | null;
-  firstCommit: string | null; mscs: number | null; busFactor: number | null; loc: number | null; policy: string; dev: string; product: string;
+  firstCommit: string | null; mscs: number | null; usedBy: number | null; busFactor: number | null; loc: number | null; policy: string; dev: string; product: string;
 };
 const STATUS_RANK = ['active', 'small-team', 'slowing', 'dormant', 'abandoned', 'archived', 'no-repo', 'unknown'];
 const DESKTOP = ['windows', 'macos', 'linux'];
@@ -49,6 +49,7 @@ export function initListing() {
       case 'releases': return -(it.tags365 ?? -1);
       case 'bus': return -(it.busFactor ?? -1);
       case 'loc': return -(it.loc ?? -1);
+      case 'usedBy': return -(it.usedBy ?? -1);
       case 'mscs': return -(it.mscs ?? -1);
       case 'oldest': return it.firstCommit ? Date.parse(it.firstCommit) : Number.MAX_SAFE_INTEGER;
       case 'recent': return -(it.lastCommit ? Date.parse(it.lastCommit) : 0);
