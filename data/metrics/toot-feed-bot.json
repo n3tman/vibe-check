@@ -48,12 +48,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Docker ignore": 0.0012,
-   "Dockerfile": 0.0052,
-   "JSON": 0.0112,
-   "License": 0.0145,
-   "Markdown": 0.0525,
-   "TypeScript": 0.9153
+   "Dockerfile": 0.0089,
+   "TypeScript": 0.9911
   },
   "last_commit": "2026-02-19T20:08:45+00:00",
   "last_tag": "v2.4.1",
@@ -61,14 +57,10 @@
   "last_tag_repo": "https://codeberg.org/urmaul/toot-feed-bot",
   "licence_detected": "MIT",
   "loc": {
-   "Docker ignore": 10,
    "Dockerfile": 13,
-   "JSON": 20,
-   "License": 17,
-   "Markdown": 64,
    "TypeScript": 1451
   },
-  "loc_total": 1575,
+  "loc_total": 1464,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -133,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -186,6 +178,7 @@
    "error": null,
    "files": 30,
    "first_commit": "2022-11-30T20:38:00+00:00",
+   "first_parent": false,
    "forge": "forgejo",
    "forks": null,
    "head_sha": "bb450efd595e0ecacbb318e644f86e8aaf71f2eb",
@@ -193,12 +186,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Docker ignore": 0.0012,
-    "Dockerfile": 0.0052,
-    "JSON": 0.0112,
-    "License": 0.0145,
-    "Markdown": 0.0525,
-    "TypeScript": 0.9153
+    "Dockerfile": 0.0089,
+    "TypeScript": 0.9911
    },
    "languages_source": "scc",
    "last_commit": "2026-02-19T20:08:45+00:00",
@@ -208,11 +197,7 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 10,
     "Dockerfile": 13,
-    "JSON": 20,
-    "License": 17,
-    "Markdown": 64,
     "TypeScript": 1451
    },
    "ok": true,

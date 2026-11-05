@@ -317,15 +317,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0052,
-   "HTML": 0.0029,
-   "JSON": 0.4208,
-   "JavaScript": 0.0019,
-   "Markdown": 0.0517,
-   "SVG": 0.0048,
-   "TypeScript": 0.5032,
-   "TypeScript Typings": 0.0014,
-   "YAML": 0.0057
+   "CSS": 0.0154,
+   "HTML": 0.0039,
+   "JavaScript": 0.0017,
+   "TypeScript": 0.9741,
+   "TypeScript Typings": 0.0023
   },
   "last_commit": "2026-11-04T15:12:25+00:00",
   "last_tag": "v1.12.33",
@@ -335,27 +331,18 @@
   "loc": {
    "Batch": 4,
    "CSS": 5687,
-   "Docker ignore": 1,
    "Dockerfile": 128,
    "HCL": 21,
    "HTML": 1444,
-   "JSON": 235752,
    "JSONC": 63,
    "JavaScript": 640,
-   "Markdown": 25632,
-   "Patch": 403,
    "Perl": 152,
-   "Plain Text": 177,
    "Python": 304,
-   "ReStructuredText": 17,
-   "SVG": 1019,
    "Shell": 432,
-   "TOML": 2,
    "TypeScript": 364033,
-   "TypeScript Typings": 971,
-   "YAML": 6230
+   "TypeScript Typings": 971
   },
-  "loc_total": 643112,
+  "loc_total": 373879,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -423,7 +410,7 @@
    38
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -837,6 +824,7 @@
    "error": null,
    "files": 5485,
    "first_commit": "2015-06-09T16:40:42+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "a3f5be54f4bf77eee950e38aedb3251bf059dc38",
@@ -844,15 +832,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0052,
-    "HTML": 0.0029,
-    "JSON": 0.4208,
-    "JavaScript": 0.0019,
-    "Markdown": 0.0517,
-    "SVG": 0.0048,
-    "TypeScript": 0.5032,
-    "TypeScript Typings": 0.0014,
-    "YAML": 0.0057
+    "CSS": 0.0154,
+    "HTML": 0.0039,
+    "JavaScript": 0.0017,
+    "TypeScript": 0.9741,
+    "TypeScript Typings": 0.0023
    },
    "languages_source": "scc",
    "last_commit": "2026-11-04T15:12:25+00:00",
@@ -863,25 +847,16 @@
    "licence_source": "file",
    "loc": {
     "CSS": 5687,
-    "Docker ignore": 1,
     "Dockerfile": 106,
     "HCL": 21,
     "HTML": 1444,
-    "JSON": 232276,
     "JSONC": 63,
     "JavaScript": 640,
-    "Markdown": 20247,
-    "Patch": 386,
     "Perl": 152,
-    "Plain Text": 177,
     "Python": 304,
-    "ReStructuredText": 17,
-    "SVG": 1019,
     "Shell": 317,
-    "TOML": 2,
     "TypeScript": 360150,
-    "TypeScript Typings": 844,
-    "YAML": 4559
+    "TypeScript Typings": 844
    },
    "ok": true,
    "open_issues": null,
@@ -1090,6 +1065,7 @@
    "error": null,
    "files": 170,
    "first_commit": "2019-12-06T13:07:37+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "264c591b9cbec73782fc6c95aa94b4dc9ac32754",
@@ -1097,13 +1073,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0013,
-    "JSON": 0.1279,
-    "Markdown": 0.6158,
-    "Shell": 0.0047,
-    "TypeScript": 0.1711,
-    "TypeScript Typings": 0.0044,
-    "YAML": 0.0742
+    "Dockerfile": 0.0053,
+    "Shell": 0.0277,
+    "TypeScript": 0.9354,
+    "TypeScript Typings": 0.0306
    },
    "languages_source": "scc",
    "last_commit": "2026-03-25T10:26:54+00:00",
@@ -1115,13 +1088,9 @@
    "loc": {
     "Batch": 4,
     "Dockerfile": 22,
-    "JSON": 3476,
-    "Markdown": 5385,
-    "Patch": 17,
     "Shell": 115,
     "TypeScript": 3883,
-    "TypeScript Typings": 127,
-    "YAML": 1671
+    "TypeScript Typings": 127
    },
    "ok": true,
    "open_issues": null,

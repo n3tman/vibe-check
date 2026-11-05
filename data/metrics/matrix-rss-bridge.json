@@ -44,17 +44,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.006,
-   "INI": 0.069,
-   "JSON": 0.2866,
-   "Makefile": 0.0277,
-   "Markdown": 0.3832,
-   "Properties File": 0.0014,
-   "Python": 0.0988,
-   "Shell": 0.0273,
-   "Snakemake": 0.0031,
-   "TOML": 0.0055,
-   "YAML": 0.0905
+   "Dockerfile": 0.0465,
+   "Makefile": 0.1802,
+   "Python": 0.6047,
+   "Shell": 0.1424,
+   "Snakemake": 0.0262
   },
   "last_commit": "2025-10-21T23:37:02+00:00",
   "last_tag": "0.0.1",
@@ -62,21 +56,14 @@
   "last_tag_repo": "https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge",
   "licence_detected": "GPL-3.0",
   "loc": {
-   "Docker ignore": 9,
    "Dockerfile": 16,
-   "INI": 23,
-   "JSON": 1070,
    "Makefile": 62,
-   "Markdown": 657,
-   "Properties File": 4,
    "Python": 208,
    "Shell": 49,
-   "Snakemake": 9,
-   "TOML": 21,
-   "YAML": 253
+   "Snakemake": 9
   },
-  "loc_total": 2381,
-  "main_language": "Markdown",
+  "loc_total": 344,
+  "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -140,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -192,6 +179,7 @@
    "error": null,
    "files": 30,
    "first_commit": "2022-07-20T23:24:17+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "1d039fcad25908ccade3a494717a3163740a02d8",
@@ -199,17 +187,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.006,
-    "INI": 0.069,
-    "JSON": 0.2866,
-    "Makefile": 0.0277,
-    "Markdown": 0.3832,
-    "Properties File": 0.0014,
-    "Python": 0.0988,
-    "Shell": 0.0273,
-    "Snakemake": 0.0031,
-    "TOML": 0.0055,
-    "YAML": 0.0905
+    "Dockerfile": 0.0465,
+    "Makefile": 0.1802,
+    "Python": 0.6047,
+    "Shell": 0.1424,
+    "Snakemake": 0.0262
    },
    "languages_source": "scc",
    "last_commit": "2025-10-21T23:37:02+00:00",
@@ -219,18 +201,11 @@
    "licence_file": "LICENSE.md",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 9,
     "Dockerfile": 16,
-    "INI": 23,
-    "JSON": 1070,
     "Makefile": 62,
-    "Markdown": 657,
-    "Properties File": 4,
     "Python": 208,
     "Shell": 49,
-    "Snakemake": 9,
-    "TOML": 21,
-    "YAML": 253
+    "Snakemake": 9
    },
    "ok": true,
    "open_issues": null,

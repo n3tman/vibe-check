@@ -44,9 +44,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "License": 0.013,
-   "Markdown": 0.0788,
-   "Python": 0.9073
+   "Python": 1.0
   },
   "last_commit": "2022-09-28T12:07:23+00:00",
   "last_tag": null,
@@ -54,12 +52,9 @@
   "last_tag_repo": null,
   "licence_detected": "MIT",
   "loc": {
-   "License": 17,
-   "Markdown": 120,
-   "Plain Text": 6,
    "Python": 1797
   },
-  "loc_total": 1940,
+  "loc_total": 1797,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -124,7 +119,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -173,6 +168,7 @@
    "error": null,
    "files": 19,
    "first_commit": "2020-11-11T09:42:42+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "924666ab1da8b075cf2d691024afc9c0983a7656",
@@ -180,9 +176,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "License": 0.013,
-    "Markdown": 0.0788,
-    "Python": 0.9073
+    "Python": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2022-09-28T12:07:23+00:00",
@@ -192,9 +186,6 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "License": 17,
-    "Markdown": 120,
-    "Plain Text": 6,
     "Python": 1797
    },
    "ok": true,

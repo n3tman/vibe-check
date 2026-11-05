@@ -46,18 +46,12 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "BASH": 0.0024,
-   "CSS": 0.0054,
-   "Dockerfile": 0.0013,
-   "HTML": 0.0014,
-   "JSON": 0.0066,
-   "JavaScript": 0.0124,
-   "License": 0.0168,
-   "Markdown": 0.1068,
-   "Plain Text": 0.0074,
-   "TOML": 0.0012,
-   "TypeScript": 0.8057,
-   "YAML": 0.0313
+   "BASH": 0.0022,
+   "CSS": 0.0085,
+   "Dockerfile": 0.0017,
+   "HTML": 0.0019,
+   "JavaScript": 0.0218,
+   "TypeScript": 0.9638
   },
   "last_commit": "2026-01-21T13:29:18+00:00",
   "last_tag": "2.1.2",
@@ -67,20 +61,13 @@
   "loc": {
    "BASH": 26,
    "CSS": 102,
-   "Docker ignore": 22,
    "Dockerfile": 21,
    "HTML": 23,
-   "JSON": 143,
    "JavaScript": 262,
-   "License": 169,
-   "Markdown": 1102,
-   "Plain Text": 85,
    "Shell": 2,
-   "TOML": 24,
-   "TypeScript": 11592,
-   "YAML": 513
+   "TypeScript": 11592
   },
-  "loc_total": 14086,
+  "loc_total": 12028,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -145,7 +132,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -204,6 +191,7 @@
    "error": null,
    "files": 179,
    "first_commit": "2015-09-17T15:48:43+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "1da3c1418c6c556ff53fe93343fcabfdca64dfcc",
@@ -211,18 +199,12 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "BASH": 0.0024,
-    "CSS": 0.0054,
-    "Dockerfile": 0.0013,
-    "HTML": 0.0014,
-    "JSON": 0.0066,
-    "JavaScript": 0.0124,
-    "License": 0.0168,
-    "Markdown": 0.1068,
-    "Plain Text": 0.0074,
-    "TOML": 0.0012,
-    "TypeScript": 0.8057,
-    "YAML": 0.0313
+    "BASH": 0.0022,
+    "CSS": 0.0085,
+    "Dockerfile": 0.0017,
+    "HTML": 0.0019,
+    "JavaScript": 0.0218,
+    "TypeScript": 0.9638
    },
    "languages_source": "scc",
    "last_commit": "2026-01-21T13:29:18+00:00",
@@ -234,18 +216,11 @@
    "loc": {
     "BASH": 26,
     "CSS": 102,
-    "Docker ignore": 22,
     "Dockerfile": 21,
     "HTML": 23,
-    "JSON": 143,
     "JavaScript": 262,
-    "License": 169,
-    "Markdown": 1102,
-    "Plain Text": 85,
     "Shell": 2,
-    "TOML": 24,
-    "TypeScript": 11592,
-    "YAML": 513
+    "TypeScript": 11592
    },
    "ok": true,
    "open_issues": null,

@@ -176,13 +176,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSV": 0.0015,
-   "Go": 0.9487,
+   "Go": 0.9854,
    "Go Template": 0.0021,
-   "JSON": 0.0048,
-   "License": 0.0014,
-   "Markdown": 0.002,
-   "TL": 0.0379
+   "TL": 0.0123
   },
   "last_commit": "2026-11-03T21:36:36+00:00",
   "last_tag": "v0.2610.0",
@@ -190,23 +186,16 @@
   "last_tag_repo": "https://github.com/mautrix/telegram",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "CSV": 534,
-   "Docker ignore": 8,
    "Dockerfile": 13,
    "Go": 704125,
    "Go Template": 1495,
    "HEX": 2,
-   "JSON": 1,
-   "License": 562,
    "Makefile": 18,
-   "Markdown": 1023,
-   "Plain Text": 216,
    "SQL": 95,
    "Shell": 30,
-   "TL": 8812,
-   "YAML": 142
+   "TL": 8812
   },
-  "loc_total": 717076,
+  "loc_total": 714590,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -273,7 +262,7 @@
    9
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -467,6 +456,7 @@
    "error": null,
    "files": 17841,
    "first_commit": "2017-11-12T15:42:45+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "f7bb767679114f0e1c0e901cbf1562e56f53ac60",
@@ -474,13 +464,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSV": 0.0015,
-    "Go": 0.9487,
+    "Go": 0.9854,
     "Go Template": 0.0021,
-    "JSON": 0.0048,
-    "License": 0.0014,
-    "Markdown": 0.002,
-    "TL": 0.0379
+    "TL": 0.0123
    },
    "languages_source": "scc",
    "last_commit": "2026-11-03T21:36:36+00:00",
@@ -490,21 +476,14 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "CSV": 534,
-    "Docker ignore": 8,
     "Dockerfile": 13,
     "Go": 704125,
     "Go Template": 1495,
     "HEX": 2,
-    "JSON": 1,
-    "License": 562,
     "Makefile": 18,
-    "Markdown": 1023,
-    "Plain Text": 216,
     "SQL": 95,
     "Shell": 30,
-    "TL": 8812,
-    "YAML": 142
+    "TL": 8812
    },
    "ok": true,
    "open_issues": null,

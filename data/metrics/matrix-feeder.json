@@ -44,13 +44,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "BASH": 0.0566,
-   "Dockerfile": 0.0304,
-   "JSON": 0.193,
-   "JavaScript": 0.2867,
-   "License": 0.1497,
-   "Markdown": 0.2137,
-   "YAML": 0.0699
+   "BASH": 0.0303,
+   "Dockerfile": 0.0909,
+   "JavaScript": 0.8788
   },
   "last_commit": "2022-02-10T09:30:44+00:00",
   "last_tag": "v0.2.1",
@@ -60,13 +56,9 @@
   "loc": {
    "BASH": 2,
    "Dockerfile": 6,
-   "JSON": 51,
-   "JavaScript": 58,
-   "License": 17,
-   "Markdown": 40,
-   "YAML": 6
+   "JavaScript": 58
   },
-  "loc_total": 180,
+  "loc_total": 66,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -131,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -180,6 +172,7 @@
    "error": null,
    "files": 11,
    "first_commit": "2020-10-14T15:28:42+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "0b5b803aa1d6f8308b79868ecbfb4fbcc6692480",
@@ -187,13 +180,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "BASH": 0.0566,
-    "Dockerfile": 0.0304,
-    "JSON": 0.193,
-    "JavaScript": 0.2867,
-    "License": 0.1497,
-    "Markdown": 0.2137,
-    "YAML": 0.0699
+    "BASH": 0.0303,
+    "Dockerfile": 0.0909,
+    "JavaScript": 0.8788
    },
    "languages_source": "scc",
    "last_commit": "2022-02-10T09:30:44+00:00",
@@ -205,11 +194,7 @@
    "loc": {
     "BASH": 2,
     "Dockerfile": 6,
-    "JSON": 51,
-    "JavaScript": 58,
-    "License": 17,
-    "Markdown": 40,
-    "YAML": 6
+    "JavaScript": 58
    },
    "ok": true,
    "open_issues": null,

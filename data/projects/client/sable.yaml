@@ -224,6 +224,9 @@ ai:
       agent configs'
     - 'v1: 3 commits in its whole merged history carry Copilot co-author trailers; none in its own first-parent
       history of the last year'
+    collector_override: the four agent files in Sable v1 (CLAUDE.md, AGENTS.md, .cursorrules, copilot-instructions.md)
+      hold the same short text addressed to AI agents, a deterrent rather than a working configuration;
+      Sable v2 bans AI-generated contributions.
   in_product:
     value: none-found
     note: null

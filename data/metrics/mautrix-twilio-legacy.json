@@ -44,16 +44,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0055,
-   "INI": 0.0047,
-   "License": 0.3139,
-   "Mako": 0.0045,
-   "Markdown": 0.0013,
-   "Plain Text": 0.009,
-   "Python": 0.4971,
-   "Shell": 0.0092,
-   "Smarty Template": 0.0159,
-   "YAML": 0.1385
+   "Dockerfile": 0.0226,
+   "Mako": 0.0167,
+   "Python": 0.8811,
+   "Shell": 0.0295,
+   "Smarty Template": 0.0501
   },
   "last_commit": "2019-12-06T13:58:03+00:00",
   "last_tag": null,
@@ -61,19 +56,13 @@
   "last_tag_repo": null,
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Docker ignore": 5,
    "Dockerfile": 23,
-   "INI": 28,
-   "License": 544,
    "Mako": 17,
-   "Markdown": 4,
-   "Plain Text": 28,
    "Python": 897,
    "Shell": 30,
-   "Smarty Template": 51,
-   "YAML": 313
+   "Smarty Template": 51
   },
-  "loc_total": 1940,
+  "loc_total": 1018,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -138,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -189,6 +178,7 @@
    "error": null,
    "files": 52,
    "first_commit": "2019-09-22T14:58:36+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "b0c1924e208f71e3a3c6f41389368731f6009940",
@@ -196,16 +186,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0055,
-    "INI": 0.0047,
-    "License": 0.3139,
-    "Mako": 0.0045,
-    "Markdown": 0.0013,
-    "Plain Text": 0.009,
-    "Python": 0.4971,
-    "Shell": 0.0092,
-    "Smarty Template": 0.0159,
-    "YAML": 0.1385
+    "Dockerfile": 0.0226,
+    "Mako": 0.0167,
+    "Python": 0.8811,
+    "Shell": 0.0295,
+    "Smarty Template": 0.0501
    },
    "languages_source": "scc",
    "last_commit": "2019-12-06T13:58:03+00:00",
@@ -215,17 +200,11 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 5,
     "Dockerfile": 23,
-    "INI": 28,
-    "License": 544,
     "Mako": 17,
-    "Markdown": 4,
-    "Plain Text": 28,
     "Python": 897,
     "Shell": 30,
-    "Smarty Template": 51,
-    "YAML": 313
+    "Smarty Template": 51
    },
    "ok": true,
    "open_issues": null,

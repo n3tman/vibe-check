@@ -1,0 +1,16 @@
+{
+ "collector_version": "1",
+ "combined": null,
+ "fetched_at": "2026-11-05T05:29:27+00:00",
+ "repos": [
+  {
+   "error": "git clone failed: fatal: unable to access 'https://gitlab.computer.surgery/matrix/grapevine/': Recv failure: Connection reset by peer",
+   "first_parent": false,
+   "forge": "gitlab",
+   "ok": false,
+   "role": "main",
+   "url": "https://gitlab.computer.surgery/matrix/grapevine"
+  }
+ ],
+ "slug": "grapevine"
+}

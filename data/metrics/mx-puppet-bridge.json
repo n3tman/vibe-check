@@ -44,14 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.0051,
-   "JavaScript": 0.0012,
-   "License": 0.0178,
-   "Makefile": 0.0036,
-   "Markdown": 0.0301,
-   "Shell": 0.0019,
-   "TypeScript": 0.9248,
-   "YAML": 0.0149
+   "Makefile": 0.0031,
+   "TypeScript": 0.9955
   },
   "last_commit": "2022-05-21T14:07:21+00:00",
   "last_tag": "v0.1.8",
@@ -59,17 +53,12 @@
   "last_tag_repo": "https://gitlab.com/mx-puppet/mx-puppet-bridge",
   "licence_detected": "Apache-2.0",
   "loc": {
-   "JSON": 123,
    "JavaScript": 14,
-   "License": 169,
    "Makefile": 57,
-   "Markdown": 450,
    "Shell": 10,
-   "TOML": 9,
-   "TypeScript": 18086,
-   "YAML": 235
+   "TypeScript": 18086
   },
-  "loc_total": 19153,
+  "loc_total": 18167,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -134,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -186,6 +175,7 @@
    "error": null,
    "files": 840,
    "first_commit": "2019-06-16T12:06:29+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "f536fad8067b096720b9e5d19751000f3527306e",
@@ -193,14 +183,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.0051,
-    "JavaScript": 0.0012,
-    "License": 0.0178,
-    "Makefile": 0.0036,
-    "Markdown": 0.0301,
-    "Shell": 0.0019,
-    "TypeScript": 0.9248,
-    "YAML": 0.0149
+    "Makefile": 0.0031,
+    "TypeScript": 0.9955
    },
    "languages_source": "scc",
    "last_commit": "2022-05-21T14:07:21+00:00",
@@ -210,15 +194,10 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "JSON": 123,
     "JavaScript": 14,
-    "License": 169,
     "Makefile": 57,
-    "Markdown": 450,
     "Shell": 10,
-    "TOML": 9,
-    "TypeScript": 18086,
-    "YAML": 235
+    "TypeScript": 18086
    },
    "ok": true,
    "open_issues": null,

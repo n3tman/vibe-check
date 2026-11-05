@@ -44,14 +44,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Batch": 0.0061,
-   "JSON": 0.6008,
-   "Kotlin": 0.2436,
-   "License": 0.0767,
-   "Markdown": 0.0081,
-   "Nix": 0.0428,
-   "Shell": 0.0179,
-   "YAML": 0.0036
+   "Batch": 0.0238,
+   "Kotlin": 0.7581,
+   "Nix": 0.1838,
+   "Shell": 0.0343
   },
   "last_commit": "2022-07-23T04:30:09+00:00",
   "last_tag": null,
@@ -60,17 +56,12 @@
   "licence_detected": "AGPL-3.0",
   "loc": {
    "Batch": 68,
-   "JSON": 6968,
    "Kotlin": 2165,
-   "License": 544,
-   "Markdown": 117,
    "Nix": 525,
-   "Properties File": 5,
-   "Shell": 98,
-   "YAML": 57
+   "Shell": 98
   },
-  "loc_total": 10547,
-  "main_language": "JSON",
+  "loc_total": 2856,
+  "main_language": "Kotlin",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -134,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -183,6 +174,7 @@
    "error": null,
    "files": 28,
    "first_commit": "2022-04-30T02:11:00+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "e8f4f394cb15569a38783192fd2489c4c47ecedb",
@@ -190,14 +182,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Batch": 0.0061,
-    "JSON": 0.6008,
-    "Kotlin": 0.2436,
-    "License": 0.0767,
-    "Markdown": 0.0081,
-    "Nix": 0.0428,
-    "Shell": 0.0179,
-    "YAML": 0.0036
+    "Batch": 0.0238,
+    "Kotlin": 0.7581,
+    "Nix": 0.1838,
+    "Shell": 0.0343
    },
    "languages_source": "scc",
    "last_commit": "2022-07-23T04:30:09+00:00",
@@ -208,14 +196,9 @@
    "licence_source": "file",
    "loc": {
     "Batch": 68,
-    "JSON": 6968,
     "Kotlin": 2165,
-    "License": 544,
-    "Markdown": 117,
     "Nix": 525,
-    "Properties File": 5,
-    "Shell": 98,
-    "YAML": 57
+    "Shell": 98
    },
    "ok": true,
    "open_issues": null,

@@ -46,14 +46,11 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0273,
-   "HTML": 0.0767,
-   "JSON": 0.0031,
-   "JavaScript": 0.3733,
-   "Markdown": 0.0628,
-   "SVG": 0.0096,
-   "TypeScript": 0.4406,
-   "YAML": 0.0053
+   "CSS": 0.0521,
+   "HTML": 0.0889,
+   "JavaScript": 0.4049,
+   "Shell": 0.0011,
+   "TypeScript": 0.4527
   },
   "last_commit": "2025-11-06T10:43:52+00:00",
   "last_tag": "sdk-v0.3.1",
@@ -62,19 +59,14 @@
   "licence_detected": "AGPL-3.0",
   "loc": {
    "CSS": 2872,
-   "Docker ignore": 2,
    "Dockerfile": 13,
    "HTML": 4898,
-   "JSON": 260,
    "JavaScript": 22299,
-   "Markdown": 2536,
-   "SVG": 177,
    "Shell": 62,
    "TypeScript": 24930,
-   "TypeScript Typings": 1,
-   "YAML": 476
+   "TypeScript Typings": 1
   },
-  "loc_total": 58526,
+  "loc_total": 55075,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -139,7 +131,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -195,6 +187,7 @@
    "error": null,
    "files": 737,
    "first_commit": "2018-12-21T13:35:24+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "ea5976e40b8d4974890e67bba3c139012044612c",
@@ -202,14 +195,11 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0273,
-    "HTML": 0.0767,
-    "JSON": 0.0031,
-    "JavaScript": 0.3733,
-    "Markdown": 0.0628,
-    "SVG": 0.0096,
-    "TypeScript": 0.4406,
-    "YAML": 0.0053
+    "CSS": 0.0521,
+    "HTML": 0.0889,
+    "JavaScript": 0.4049,
+    "Shell": 0.0011,
+    "TypeScript": 0.4527
    },
    "languages_source": "scc",
    "last_commit": "2025-11-06T10:43:52+00:00",
@@ -220,17 +210,12 @@
    "licence_source": "file",
    "loc": {
     "CSS": 2872,
-    "Docker ignore": 2,
     "Dockerfile": 13,
     "HTML": 4898,
-    "JSON": 260,
     "JavaScript": 22299,
-    "Markdown": 2536,
-    "SVG": 177,
     "Shell": 62,
     "TypeScript": 24930,
-    "TypeScript Typings": 1,
-    "YAML": 476
+    "TypeScript Typings": 1
    },
    "ok": true,
    "open_issues": null,

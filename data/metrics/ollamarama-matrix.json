@@ -64,13 +64,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0037,
-   "JSON": 0.0154,
-   "License": 0.0354,
-   "Markdown": 0.1938,
-   "Python": 0.7278,
-   "TOML": 0.0046,
-   "YAML": 0.0185
+   "Dockerfile": 0.0046,
+   "Python": 0.9954
   },
   "last_commit": "2026-09-19T16:41:31+00:00",
   "last_tag": "v1.6.0",
@@ -78,17 +73,10 @@
   "last_tag_repo": "https://github.com/h1ddenpr0cess20/ollamarama-matrix",
   "licence_detected": "Apache-2.0",
   "loc": {
-   "Docker ignore": 18,
    "Dockerfile": 22,
-   "JSON": 187,
-   "License": 169,
-   "Markdown": 1006,
-   "Plain Text": 6,
-   "Python": 4774,
-   "TOML": 55,
-   "YAML": 220
+   "Python": 4774
   },
-  "loc_total": 6457,
+  "loc_total": 4796,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -153,7 +141,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -298,6 +286,7 @@
    "error": null,
    "files": 100,
    "first_commit": "2023-12-15T05:55:33+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "23310be63227810d3dd9a4e4c7112996e24f1c75",
@@ -305,13 +294,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0037,
-    "JSON": 0.0154,
-    "License": 0.0354,
-    "Markdown": 0.1938,
-    "Python": 0.7278,
-    "TOML": 0.0046,
-    "YAML": 0.0185
+    "Dockerfile": 0.0046,
+    "Python": 0.9954
    },
    "languages_source": "scc",
    "last_commit": "2026-09-19T16:41:31+00:00",
@@ -321,15 +305,8 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 18,
     "Dockerfile": 22,
-    "JSON": 187,
-    "License": 169,
-    "Markdown": 1006,
-    "Plain Text": 6,
-    "Python": 4774,
-    "TOML": 55,
-    "YAML": 220
+    "Python": 4774
    },
    "ok": true,
    "open_issues": null,

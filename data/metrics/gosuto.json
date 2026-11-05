@@ -63,12 +63,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Markdown": 0.032,
-   "Rust": 0.9495,
-   "SVG": 0.0019,
-   "TOML": 0.0024,
-   "XML": 0.002,
-   "YAML": 0.0114
+   "Rust": 0.9995
   },
   "last_commit": "2026-03-29T20:49:04+00:00",
   "last_tag": "v0.11.1",
@@ -77,15 +72,9 @@
   "licence_detected": "Apache-2.0",
   "loc": {
    "BASH": 12,
-   "Markdown": 340,
-   "Plain Text": 6,
-   "Rust": 23882,
-   "SVG": 52,
-   "TOML": 68,
-   "XML": 52,
-   "YAML": 298
+   "Rust": 23882
   },
-  "loc_total": 24710,
+  "loc_total": 23894,
   "main_language": "Rust",
   "open_issues": null,
   "open_prs": null,
@@ -150,7 +139,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -223,6 +212,7 @@
    "error": null,
    "files": 108,
    "first_commit": "2026-02-24T12:02:28+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "c99d18301fa54878d06f2bf9d98fafeda2fc912c",
@@ -230,12 +220,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Markdown": 0.032,
-    "Rust": 0.9495,
-    "SVG": 0.0019,
-    "TOML": 0.0024,
-    "XML": 0.002,
-    "YAML": 0.0114
+    "Rust": 0.9995
    },
    "languages_source": "scc",
    "last_commit": "2026-03-29T20:49:04+00:00",
@@ -246,13 +231,7 @@
    "licence_source": "file",
    "loc": {
     "BASH": 12,
-    "Markdown": 340,
-    "Plain Text": 6,
-    "Rust": 23882,
-    "SVG": 52,
-    "TOML": 68,
-    "XML": 52,
-    "YAML": 298
+    "Rust": 23882
    },
    "ok": true,
    "open_issues": null,

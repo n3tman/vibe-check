@@ -44,11 +44,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.1201,
-   "License": 0.3191,
-   "Markdown": 0.0095,
-   "TypeScript": 0.5252,
-   "YAML": 0.026
+   "TypeScript": 1.0
   },
   "last_commit": "2024-07-21T03:53:06+00:00",
   "last_tag": null,
@@ -56,13 +52,9 @@
   "last_tag_repo": null,
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "JSON": 128,
-   "License": 544,
-   "Markdown": 11,
-   "TypeScript": 1351,
-   "YAML": 88
+   "TypeScript": 1351
   },
-  "loc_total": 2122,
+  "loc_total": 1351,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -127,7 +119,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -176,6 +168,7 @@
    "error": null,
    "files": 47,
    "first_commit": "2024-06-03T03:52:41+00:00",
+   "first_parent": false,
    "forge": "forgejo",
    "forks": null,
    "head_sha": "2d64c808756f4849ee5adbe06121e51b72491812",
@@ -183,11 +176,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.1201,
-    "License": 0.3191,
-    "Markdown": 0.0095,
-    "TypeScript": 0.5252,
-    "YAML": 0.026
+    "TypeScript": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2024-07-21T03:53:06+00:00",
@@ -197,11 +186,7 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "JSON": 128,
-    "License": 544,
-    "Markdown": 11,
-    "TypeScript": 1351,
-    "YAML": 88
+    "TypeScript": 1351
    },
    "ok": true,
    "open_issues": null,

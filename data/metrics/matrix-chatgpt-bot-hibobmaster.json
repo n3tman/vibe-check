@@ -44,13 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Docker ignore": 0.0014,
-   "Dockerfile": 0.0037,
-   "License": 0.0071,
-   "Markdown": 0.0382,
-   "Plain Text": 0.0049,
-   "Python": 0.8584,
-   "YAML": 0.0863
+   "Dockerfile": 0.0045,
+   "Python": 0.9955
   },
   "last_commit": "2025-05-20T09:40:33+00:00",
   "last_tag": "v1.9.1",
@@ -58,15 +53,10 @@
   "last_tag_repo": "https://github.com/hibobmaster/matrix_chatgpt_bot",
   "licence_detected": "MIT",
   "loc": {
-   "Docker ignore": 23,
    "Dockerfile": 12,
-   "License": 17,
-   "Markdown": 151,
-   "Plain Text": 27,
-   "Python": 2649,
-   "YAML": 345
+   "Python": 2649
   },
-  "loc_total": 3224,
+  "loc_total": 2661,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -131,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -183,6 +173,7 @@
    "error": null,
    "files": 27,
    "first_commit": "2023-03-05T14:24:15+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "3b3a1a44c705f40f04f097af0264630428cd3b8e",
@@ -190,13 +181,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Docker ignore": 0.0014,
-    "Dockerfile": 0.0037,
-    "License": 0.0071,
-    "Markdown": 0.0382,
-    "Plain Text": 0.0049,
-    "Python": 0.8584,
-    "YAML": 0.0863
+    "Dockerfile": 0.0045,
+    "Python": 0.9955
    },
    "languages_source": "scc",
    "last_commit": "2025-05-20T09:40:33+00:00",
@@ -206,13 +192,8 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 23,
     "Dockerfile": 12,
-    "License": 17,
-    "Markdown": 151,
-    "Plain Text": 27,
-    "Python": 2649,
-    "YAML": 345
+    "Python": 2649
    },
    "ok": true,
    "open_issues": null,

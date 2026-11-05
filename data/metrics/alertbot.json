@@ -46,11 +46,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.1177,
-   "Markdown": 0.0656,
-   "Plain Text": 0.605,
-   "Python": 0.2085,
-   "YAML": 0.0032
+   "Python": 1.0
   },
   "last_commit": "2025-11-25T22:12:45+00:00",
   "last_tag": "1.1.6",
@@ -58,14 +54,10 @@
   "last_tag_repo": "https://github.com/moan0s/alertbot",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "JSON": 216,
-   "Markdown": 74,
-   "Plain Text": 547,
-   "Python": 250,
-   "YAML": 10
+   "Python": 250
   },
-  "loc_total": 1097,
-  "main_language": "Plain Text",
+  "loc_total": 250,
+  "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -129,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -180,6 +172,7 @@
    "error": null,
    "files": 21,
    "first_commit": "2022-07-11T06:44:05+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "8f94dc08afd7ca263a1896626347e8986f94c6b7",
@@ -187,11 +180,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.1177,
-    "Markdown": 0.0656,
-    "Plain Text": 0.605,
-    "Python": 0.2085,
-    "YAML": 0.0032
+    "Python": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2025-11-25T22:12:45+00:00",
@@ -201,11 +190,7 @@
    "licence_file": "LICENSE.txt",
    "licence_source": "file",
    "loc": {
-    "JSON": 216,
-    "Markdown": 74,
-    "Plain Text": 547,
-    "Python": 250,
-    "YAML": 10
+    "Python": 250
    },
    "ok": true,
    "open_issues": null,

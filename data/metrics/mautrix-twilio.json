@@ -46,12 +46,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Go": 0.738,
-   "License": 0.0455,
-   "Markdown": 0.034,
-   "SVG": 0.0667,
-   "Shell": 0.0496,
-   "YAML": 0.0662
+   "Go": 0.9446,
+   "Shell": 0.0554
   },
   "last_commit": "2025-11-16T13:15:40+00:00",
   "last_tag": null,
@@ -60,13 +56,9 @@
   "licence_detected": "MIT",
   "loc": {
    "Go": 494,
-   "License": 17,
-   "Markdown": 12,
-   "SVG": 1,
-   "Shell": 29,
-   "YAML": 56
+   "Shell": 29
   },
-  "loc_total": 609,
+  "loc_total": 523,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -131,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -185,6 +177,7 @@
    "error": null,
    "files": 15,
    "first_commit": "2024-07-06T13:20:12+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "18579cdd5867f6b15323d4a39ffbe571d7701915",
@@ -192,12 +185,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Go": 0.738,
-    "License": 0.0455,
-    "Markdown": 0.034,
-    "SVG": 0.0667,
-    "Shell": 0.0496,
-    "YAML": 0.0662
+    "Go": 0.9446,
+    "Shell": 0.0554
    },
    "languages_source": "scc",
    "last_commit": "2025-11-16T13:15:40+00:00",
@@ -208,11 +197,7 @@
    "licence_source": "file",
    "loc": {
     "Go": 494,
-    "License": 17,
-    "Markdown": 12,
-    "SVG": 1,
-    "Shell": 29,
-    "YAML": 56
+    "Shell": 29
    },
    "ok": true,
    "open_issues": null,

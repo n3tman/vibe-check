@@ -49,13 +49,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Docker ignore": 0.0022,
-   "Dockerfile": 0.0073,
-   "JSON": 0.0412,
-   "JavaScript": 0.64,
-   "License": 0.0492,
-   "Markdown": 0.2428,
-   "Shell": 0.0173
+   "Dockerfile": 0.0211,
+   "JavaScript": 0.942,
+   "Shell": 0.0369
   },
   "last_commit": "2026-08-15T22:43:46+00:00",
   "last_tag": "v0.10.0",
@@ -63,15 +59,11 @@
   "last_tag_repo": "https://github.com/jaywink/matrix-alertmanager",
   "licence_detected": "MIT",
   "loc": {
-   "Docker ignore": 6,
    "Dockerfile": 8,
-   "JSON": 40,
    "JavaScript": 357,
-   "License": 17,
-   "Markdown": 129,
    "Shell": 14
   },
-  "loc_total": 571,
+  "loc_total": 379,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -136,7 +128,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -190,6 +182,7 @@
    "error": null,
    "files": 19,
    "first_commit": "2018-12-02T20:45:43+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "666bd936b8e2c13e076254cef4c784e2d4392a67",
@@ -197,13 +190,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Docker ignore": 0.0022,
-    "Dockerfile": 0.0073,
-    "JSON": 0.0412,
-    "JavaScript": 0.64,
-    "License": 0.0492,
-    "Markdown": 0.2428,
-    "Shell": 0.0173
+    "Dockerfile": 0.0211,
+    "JavaScript": 0.942,
+    "Shell": 0.0369
    },
    "languages_source": "scc",
    "last_commit": "2026-08-15T22:43:46+00:00",
@@ -213,12 +202,8 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 6,
     "Dockerfile": 8,
-    "JSON": 40,
     "JavaScript": 357,
-    "License": 17,
-    "Markdown": 129,
     "Shell": 14
    },
    "ok": true,

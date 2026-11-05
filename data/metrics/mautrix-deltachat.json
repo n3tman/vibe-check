@@ -44,11 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Go": 0.5503,
-   "License": 0.3243,
-   "Markdown": 0.0027,
-   "SQL": 0.0097,
-   "YAML": 0.1131
+   "Go": 0.9817,
+   "SQL": 0.0183
   },
   "last_commit": "2023-04-05T18:10:01+00:00",
   "last_tag": null,
@@ -57,12 +54,9 @@
   "licence_detected": "AGPL-3.0",
   "loc": {
    "Go": 1874,
-   "License": 544,
-   "Markdown": 4,
-   "SQL": 35,
-   "YAML": 91
+   "SQL": 35
   },
-  "loc_total": 2548,
+  "loc_total": 1909,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -127,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -176,6 +170,7 @@
    "error": null,
    "files": 21,
    "first_commit": "2023-04-03T11:49:27+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "23a615244f877ae7944bad8ebd23e57feb076e4c",
@@ -183,11 +178,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Go": 0.5503,
-    "License": 0.3243,
-    "Markdown": 0.0027,
-    "SQL": 0.0097,
-    "YAML": 0.1131
+    "Go": 0.9817,
+    "SQL": 0.0183
    },
    "languages_source": "scc",
    "last_commit": "2023-04-05T18:10:01+00:00",
@@ -198,10 +190,7 @@
    "licence_source": "file",
    "loc": {
     "Go": 1874,
-    "License": 544,
-    "Markdown": 4,
-    "SQL": 35,
-    "YAML": 91
+    "SQL": 35
    },
    "ok": true,
    "open_issues": null,

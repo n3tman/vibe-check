@@ -44,17 +44,12 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Batch": 0.0013,
-   "C": 0.0611,
-   "C Header": 0.0079,
-   "Kotlin": 0.6082,
-   "License": 0.0052,
-   "Markdown": 0.0013,
-   "Plain Text": 0.0017,
-   "Prolog": 0.0036,
-   "Shell": 0.0041,
-   "XML": 0.3004,
-   "YAML": 0.0033
+   "Batch": 0.002,
+   "C": 0.0767,
+   "C Header": 0.0083,
+   "Kotlin": 0.9017,
+   "Prolog": 0.0055,
+   "Shell": 0.0053
   },
   "last_commit": "2025-02-03T21:48:36+00:00",
   "last_tag": "v1.1.0",
@@ -67,21 +62,13 @@
    "C Header": 554,
    "CMake": 14,
    "Gemfile": 2,
-   "JSON": 513,
    "Kotlin": 30442,
-   "License": 338,
-   "Markdown": 333,
    "Objective C": 1007,
-   "Plain Text": 102,
    "Prolog": 185,
-   "Properties File": 11,
-   "SVG": 89,
    "Shell": 179,
-   "Swift": 17190,
-   "XML": 13739,
-   "YAML": 182
+   "Swift": 17190
   },
-  "loc_total": 68275,
+  "loc_total": 52968,
   "main_language": "Kotlin",
   "open_issues": null,
   "open_prs": null,
@@ -149,7 +136,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -200,6 +187,7 @@
    "error": null,
    "files": 1059,
    "first_commit": "2022-02-15T17:48:37+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "250f9e53382d20e266be6a3d865582b4f7704879",
@@ -207,17 +195,12 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Batch": 0.0013,
-    "C": 0.0611,
-    "C Header": 0.0079,
-    "Kotlin": 0.6082,
-    "License": 0.0052,
-    "Markdown": 0.0013,
-    "Plain Text": 0.0017,
-    "Prolog": 0.0036,
-    "Shell": 0.0041,
-    "XML": 0.3004,
-    "YAML": 0.0033
+    "Batch": 0.002,
+    "C": 0.0767,
+    "C Header": 0.0083,
+    "Kotlin": 0.9017,
+    "Prolog": 0.0055,
+    "Shell": 0.0053
    },
    "languages_source": "scc",
    "last_commit": "2025-02-03T21:48:36+00:00",
@@ -232,16 +215,9 @@
     "C Header": 280,
     "CMake": 14,
     "Gemfile": 2,
-    "JSON": 39,
     "Kotlin": 30442,
-    "License": 169,
-    "Markdown": 36,
-    "Plain Text": 102,
     "Prolog": 185,
-    "Properties File": 11,
-    "Shell": 179,
-    "XML": 13739,
-    "YAML": 182
+    "Shell": 179
    },
    "ok": true,
    "open_issues": null,
@@ -389,6 +365,7 @@
    "error": null,
    "files": 299,
    "first_commit": "2021-05-26T01:43:19+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "5aec0b5cdb379fe13113ec55f4475a020b9c1834",
@@ -396,14 +373,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "C": 0.0174,
-    "C Header": 0.008,
-    "JSON": 0.4858,
-    "License": 0.0058,
-    "Markdown": 0.0077,
-    "Objective C": 0.0231,
-    "SVG": 0.0317,
-    "Swift": 0.4204
+    "C": 0.0383,
+    "C Header": 0.0143,
+    "Objective C": 0.0524,
+    "Swift": 0.895
    },
    "languages_source": "scc",
    "last_commit": "2025-02-03T21:44:41+00:00",
@@ -415,11 +388,7 @@
    "loc": {
     "C": 736,
     "C Header": 274,
-    "JSON": 474,
-    "License": 169,
-    "Markdown": 297,
     "Objective C": 1007,
-    "SVG": 89,
     "Swift": 17190
    },
    "ok": true,

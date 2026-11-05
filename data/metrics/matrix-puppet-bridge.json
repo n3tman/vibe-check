@@ -44,9 +44,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.0257,
-   "JavaScript": 0.8182,
-   "Markdown": 0.1561
+   "JavaScript": 1.0
   },
   "last_commit": "2021-02-11T21:13:42+00:00",
   "last_tag": "v1.17.0",
@@ -54,11 +52,9 @@
   "last_tag_repo": "https://github.com/matrix-hacks/matrix-puppet-bridge",
   "licence_detected": null,
   "loc": {
-   "JSON": 86,
-   "JavaScript": 1167,
-   "Markdown": 96
+   "JavaScript": 1167
   },
-  "loc_total": 1349,
+  "loc_total": 1167,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -123,7 +119,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -172,6 +168,7 @@
    "error": null,
    "files": 10,
    "first_commit": "2017-01-01T23:38:36+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "7c2ed78e430b81a536ae4a1dc0b57f707ca6a3f0",
@@ -179,9 +176,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.0257,
-    "JavaScript": 0.8182,
-    "Markdown": 0.1561
+    "JavaScript": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2021-02-11T21:13:42+00:00",
@@ -190,9 +185,7 @@
    "licence_detected": null,
    "licence_file": null,
    "loc": {
-    "JSON": 86,
-    "JavaScript": 1167,
-    "Markdown": 96
+    "JavaScript": 1167
    },
    "ok": true,
    "open_issues": null,

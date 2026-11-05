@@ -52,15 +52,12 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.3544,
-   "JavaScript": 0.3596,
-   "License": 0.0486,
-   "Makefile": 0.0023,
-   "Markdown": 0.1668,
-   "PHP": 0.0385,
-   "Vue": 0.0207,
-   "XML": 0.003,
-   "YAML": 0.0043
+   "CSS": 0.0015,
+   "JavaScript": 0.6991,
+   "Makefile": 0.0137,
+   "PHP": 0.1622,
+   "Shell": 0.0048,
+   "Vue": 0.1187
   },
   "last_commit": "2026-11-02T04:06:56+00:00",
   "last_tag": "v0.21.0",
@@ -69,20 +66,13 @@
   "licence_detected": "AGPL-3.0",
   "loc": {
    "CSS": 4,
-   "JSON": 1825,
    "JavaScript": 1884,
-   "License": 544,
    "Makefile": 37,
-   "Markdown": 1160,
    "PHP": 437,
-   "SVG": 10,
    "Shell": 13,
-   "TOML": 5,
-   "Vue": 320,
-   "XML": 37,
-   "YAML": 89
+   "Vue": 320
   },
-  "loc_total": 6365,
+  "loc_total": 2695,
   "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
@@ -147,7 +137,7 @@
    6
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -206,6 +196,7 @@
    "error": null,
    "files": 144,
    "first_commit": "2020-04-27T16:56:31+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "5f11e302878bc00eb8fe857b9c520115544669a2",
@@ -213,15 +204,12 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.3544,
-    "JavaScript": 0.3596,
-    "License": 0.0486,
-    "Makefile": 0.0023,
-    "Markdown": 0.1668,
-    "PHP": 0.0385,
-    "Vue": 0.0207,
-    "XML": 0.003,
-    "YAML": 0.0043
+    "CSS": 0.0015,
+    "JavaScript": 0.6991,
+    "Makefile": 0.0137,
+    "PHP": 0.1622,
+    "Shell": 0.0048,
+    "Vue": 0.1187
    },
    "languages_source": "scc",
    "last_commit": "2026-11-02T04:06:56+00:00",
@@ -232,18 +220,11 @@
    "licence_source": "file",
    "loc": {
     "CSS": 4,
-    "JSON": 1825,
     "JavaScript": 1884,
-    "License": 544,
     "Makefile": 37,
-    "Markdown": 1160,
     "PHP": 437,
-    "SVG": 10,
     "Shell": 13,
-    "TOML": 5,
-    "Vue": 320,
-    "XML": 37,
-    "YAML": 89
+    "Vue": 320
    },
    "ok": true,
    "open_issues": null,

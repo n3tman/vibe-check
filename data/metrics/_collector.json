@@ -1,0 +1,63 @@
+{
+ "collector_version": "1",
+ "run_at": "2026-11-05T05:29:27+00:00",
+ "bot_names": [
+  "dependabot",
+  "renovate",
+  "renovate-bot",
+  "weblate",
+  "hosted weblate",
+  "github-actions",
+  "gitlab-bot",
+  "forgejo-actions",
+  "pre-commit-ci",
+  "mergify",
+  "snyk-bot",
+  "greenkeeper",
+  "imgbot",
+  "allcontributors",
+  "semantic-release-bot",
+  "release-please",
+  "codecov",
+  "deepsource-autofix",
+  "transifex",
+  "crowdin",
+  "translate bot",
+  "translations bot",
+  "localazy",
+  "pyup-bot",
+  "depfu",
+  "stale",
+  "copybara"
+ ],
+ "ai_bot_tools": [
+  "aider",
+  "amp",
+  "claude",
+  "coderabbit",
+  "codex",
+  "copilot",
+  "cursor",
+  "devin",
+  "gemini",
+  "jules",
+  "openhands",
+  "sweep"
+ ],
+ "weeks": 52,
+ "summary": {
+  "projects": 270,
+  "written": 269,
+  "unchanged": 1,
+  "repos_ok": 288,
+  "repos_failed": [
+   "https://git.flaxeneel2.net/streigen/echelon: git clone failed: fatal: unable to access 'https://git.flaxeneel2.net/streigen/echelon/': The requested URL returned error: 403",
+   "https://source.extera.xyz/Extera/Extera: git clone failed: fatal: unable to access 'https://source.extera.xyz/Extera/Extera/': The requested URL returned error: 403",
+   "https://gitlab.computer.surgery/matrix/grapevine: git clone failed: fatal: unable to access 'https://gitlab.computer.surgery/matrix/grapevine/': Recv failure: Connection reset by peer"
+  ],
+  "api_errors": [],
+  "seconds": 421,
+  "http_calls": 0,
+  "project_errors": []
+ }
+}

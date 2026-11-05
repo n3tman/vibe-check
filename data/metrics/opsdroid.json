@@ -46,12 +46,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.224,
-   "License": 0.0043,
-   "Markdown": 0.1048,
-   "Python": 0.4618,
-   "SVG": 0.1822,
-   "YAML": 0.0198
+   "Dockerfile": 0.002,
+   "Jinja": 0.0032,
+   "Jupyter": 0.0017,
+   "Python": 0.9928
   },
   "last_commit": "2025-11-24T17:46:58+00:00",
   "last_tag": "v0.31.0",
@@ -59,21 +57,13 @@
   "last_tag_repo": "https://github.com/opsdroid/opsdroid",
   "licence_detected": "Apache-2.0",
   "loc": {
-   "Autoconf": 12,
    "CSS": 8,
    "Dockerfile": 55,
-   "INI": 58,
-   "JSON": 11537,
    "Jinja": 85,
    "Jupyter": 45,
-   "License": 169,
-   "Markdown": 5442,
-   "Plain Text": 10,
-   "Python": 26788,
-   "SVG": 3,
-   "YAML": 959
+   "Python": 26788
   },
-  "loc_total": 45171,
+  "loc_total": 26981,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -138,7 +128,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -196,6 +186,7 @@
    "error": null,
    "files": 397,
    "first_commit": "2016-07-23T20:18:57+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "4f1ef7c45a2ed26a95fb88b8fdb7e4deb33bde4a",
@@ -203,12 +194,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.224,
-    "License": 0.0043,
-    "Markdown": 0.1048,
-    "Python": 0.4618,
-    "SVG": 0.1822,
-    "YAML": 0.0198
+    "Dockerfile": 0.002,
+    "Jinja": 0.0032,
+    "Jupyter": 0.0017,
+    "Python": 0.9928
    },
    "languages_source": "scc",
    "last_commit": "2025-11-24T17:46:58+00:00",
@@ -218,19 +207,11 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Autoconf": 12,
     "CSS": 8,
     "Dockerfile": 55,
-    "INI": 58,
-    "JSON": 11537,
     "Jinja": 85,
     "Jupyter": 45,
-    "License": 169,
-    "Markdown": 5442,
-    "Plain Text": 10,
-    "Python": 26788,
-    "SVG": 3,
-    "YAML": 959
+    "Python": 26788
    },
    "ok": true,
    "open_issues": null,

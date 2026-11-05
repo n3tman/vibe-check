@@ -44,11 +44,7 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.0225,
-   "JavaScript": 0.1573,
-   "License": 0.6792,
-   "Markdown": 0.0942,
-   "YAML": 0.0467
+   "JavaScript": 1.0
   },
   "last_commit": "2016-12-29T13:33:54+00:00",
   "last_tag": null,
@@ -56,14 +52,10 @@
   "last_tag_repo": null,
   "licence_detected": "Apache-2.0",
   "loc": {
-   "JSON": 15,
-   "JavaScript": 65,
-   "License": 169,
-   "Markdown": 31,
-   "YAML": 28
+   "JavaScript": 65
   },
-  "loc_total": 308,
-  "main_language": "License",
+  "loc_total": 65,
+  "main_language": "JavaScript",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -127,7 +119,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -176,6 +168,7 @@
    "error": null,
    "files": 9,
    "first_commit": "2016-12-29T13:11:36+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "7cd529853d60ef3a166ffc800e1b906124067d05",
@@ -183,11 +176,7 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.0225,
-    "JavaScript": 0.1573,
-    "License": 0.6792,
-    "Markdown": 0.0942,
-    "YAML": 0.0467
+    "JavaScript": 1.0
    },
    "languages_source": "scc",
    "last_commit": "2016-12-29T13:33:54+00:00",
@@ -197,11 +186,7 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "JSON": 15,
-    "JavaScript": 65,
-    "License": 169,
-    "Markdown": 31,
-    "YAML": 28
+    "JavaScript": 65
    },
    "ok": true,
    "open_issues": null,

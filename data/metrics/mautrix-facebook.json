@@ -44,16 +44,12 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0207,
-   "Dockerfile": 0.0023,
-   "HTML": 0.0028,
-   "JSON": 0.0093,
-   "JavaScript": 0.0674,
-   "License": 0.053,
-   "Markdown": 0.0147,
-   "Python": 0.7887,
-   "Shell": 0.0029,
-   "YAML": 0.0366
+   "CSS": 0.0083,
+   "Dockerfile": 0.0032,
+   "HTML": 0.0023,
+   "JavaScript": 0.0266,
+   "Python": 0.9559,
+   "Shell": 0.0038
   },
   "last_commit": "2024-03-02T12:40:58+00:00",
   "last_tag": "v0.5.1",
@@ -61,22 +57,14 @@
   "last_tag_repo": "https://github.com/mautrix/facebook",
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Autoconf": 5,
    "CSS": 91,
-   "Docker ignore": 5,
    "Dockerfile": 35,
    "HTML": 25,
-   "JSON": 213,
    "JavaScript": 293,
-   "License": 544,
-   "Markdown": 216,
-   "Plain Text": 29,
    "Python": 10523,
-   "Shell": 42,
-   "TOML": 10,
-   "YAML": 230
+   "Shell": 42
   },
-  "loc_total": 12261,
+  "loc_total": 11009,
   "main_language": "Python",
   "open_issues": null,
   "open_prs": null,
@@ -141,7 +129,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -193,6 +181,7 @@
    "error": null,
    "files": 113,
    "first_commit": "2019-04-28T23:32:49+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "2ab4342c0d1ec1714de2b05f1a7ef6698d4fcf3f",
@@ -200,16 +189,12 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0207,
-    "Dockerfile": 0.0023,
-    "HTML": 0.0028,
-    "JSON": 0.0093,
-    "JavaScript": 0.0674,
-    "License": 0.053,
-    "Markdown": 0.0147,
-    "Python": 0.7887,
-    "Shell": 0.0029,
-    "YAML": 0.0366
+    "CSS": 0.0083,
+    "Dockerfile": 0.0032,
+    "HTML": 0.0023,
+    "JavaScript": 0.0266,
+    "Python": 0.9559,
+    "Shell": 0.0038
    },
    "languages_source": "scc",
    "last_commit": "2024-03-02T12:40:58+00:00",
@@ -219,20 +204,12 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Autoconf": 5,
     "CSS": 91,
-    "Docker ignore": 5,
     "Dockerfile": 35,
     "HTML": 25,
-    "JSON": 213,
     "JavaScript": 293,
-    "License": 544,
-    "Markdown": 216,
-    "Plain Text": 29,
     "Python": 10523,
-    "Shell": 42,
-    "TOML": 10,
-    "YAML": 230
+    "Shell": 42
    },
    "ok": true,
    "open_issues": null,

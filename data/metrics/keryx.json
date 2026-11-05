@@ -126,14 +126,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "JSON": 0.0014,
-   "Kotlin": 0.3199,
-   "Markdown": 0.0306,
-   "Plain Text": 0.2446,
-   "Python": 0.0181,
-   "SVG": 0.0013,
-   "Shell": 0.0025,
-   "XML": 0.3808
+   "Kotlin": 0.9263,
+   "Python": 0.0661,
+   "Shell": 0.0065
   },
   "last_commit": "2026-11-04T19:44:13+00:00",
   "last_tag": "v3.0.0",
@@ -142,22 +137,13 @@
   "licence_detected": "MIT",
   "loc": {
    "Batch": 61,
-   "JSON": 849,
    "Kotlin": 87133,
-   "License": 17,
-   "Markdown": 6672,
-   "Plain Text": 38733,
    "Prolog": 46,
-   "Properties File": 16,
    "Python": 6218,
-   "SVG": 6,
-   "Shell": 609,
-   "TOML": 84,
-   "XML": 80409,
-   "YAML": 63
+   "Shell": 609
   },
-  "loc_total": 220916,
-  "main_language": "XML",
+  "loc_total": 94067,
+  "main_language": "Kotlin",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -221,7 +207,7 @@
    43
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -419,6 +405,7 @@
    "error": null,
    "files": 907,
    "first_commit": "2026-06-29T04:16:44+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "097c27355136c64d6a9c6a77f84cbe88278c175d",
@@ -426,14 +413,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "JSON": 0.0014,
-    "Kotlin": 0.3199,
-    "Markdown": 0.0306,
-    "Plain Text": 0.2446,
-    "Python": 0.0181,
-    "SVG": 0.0013,
-    "Shell": 0.0025,
-    "XML": 0.3808
+    "Kotlin": 0.9263,
+    "Python": 0.0661,
+    "Shell": 0.0065
    },
    "languages_source": "scc",
    "last_commit": "2026-11-04T19:44:13+00:00",
@@ -444,19 +426,10 @@
    "licence_source": "file",
    "loc": {
     "Batch": 61,
-    "JSON": 849,
     "Kotlin": 87133,
-    "License": 17,
-    "Markdown": 6672,
-    "Plain Text": 38733,
     "Prolog": 46,
-    "Properties File": 16,
     "Python": 6218,
-    "SVG": 6,
-    "Shell": 609,
-    "TOML": 84,
-    "XML": 80409,
-    "YAML": 63
+    "Shell": 609
    },
    "ok": true,
    "open_issues": null,

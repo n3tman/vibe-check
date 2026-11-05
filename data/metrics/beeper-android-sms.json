@@ -44,15 +44,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Batch": 0.0031,
-   "JSON": 0.2561,
-   "Kotlin": 0.6897,
-   "License": 0.0132,
-   "Prolog": 0.0018,
-   "Properties File": 0.0016,
-   "Shell": 0.0089,
-   "XML": 0.0233,
-   "YAML": 0.0015
+   "Batch": 0.0051,
+   "Kotlin": 0.9787,
+   "Prolog": 0.0028,
+   "Shell": 0.0134
   },
   "last_commit": "2023-07-05T14:07:43+00:00",
   "last_tag": "0.1.89",
@@ -61,17 +56,11 @@
   "licence_detected": "Apache-2.0",
   "loc": {
    "Batch": 68,
-   "JSON": 7178,
    "Kotlin": 13071,
-   "License": 169,
-   "Markdown": 10,
    "Prolog": 38,
-   "Properties File": 9,
-   "Shell": 179,
-   "XML": 241,
-   "YAML": 33
+   "Shell": 179
   },
-  "loc_total": 20996,
+  "loc_total": 13356,
   "main_language": "Kotlin",
   "open_issues": null,
   "open_prs": null,
@@ -136,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -187,6 +176,7 @@
    "error": null,
    "files": 263,
    "first_commit": "2021-06-22T20:19:22+00:00",
+   "first_parent": false,
    "forge": "gitlab",
    "forks": null,
    "head_sha": "4d5fe823e719e4e754a34d180d12996f1378f288",
@@ -194,15 +184,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Batch": 0.0031,
-    "JSON": 0.2561,
-    "Kotlin": 0.6897,
-    "License": 0.0132,
-    "Prolog": 0.0018,
-    "Properties File": 0.0016,
-    "Shell": 0.0089,
-    "XML": 0.0233,
-    "YAML": 0.0015
+    "Batch": 0.0051,
+    "Kotlin": 0.9787,
+    "Prolog": 0.0028,
+    "Shell": 0.0134
    },
    "languages_source": "scc",
    "last_commit": "2023-07-05T14:07:43+00:00",
@@ -213,15 +198,9 @@
    "licence_source": "file",
    "loc": {
     "Batch": 68,
-    "JSON": 7178,
     "Kotlin": 13071,
-    "License": 169,
-    "Markdown": 10,
     "Prolog": 38,
-    "Properties File": 9,
-    "Shell": 179,
-    "XML": 241,
-    "YAML": 33
+    "Shell": 179
    },
    "ok": true,
    "open_issues": null,

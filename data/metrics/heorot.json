@@ -50,12 +50,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0937,
-   "JSON": 0.0055,
-   "JavaScript": 0.016,
-   "License": 0.0232,
-   "Markdown": 0.0112,
-   "TypeScript": 0.8487
+   "CSS": 0.1682,
+   "JavaScript": 0.0169,
+   "TypeScript": 0.8133
   },
   "last_commit": "2026-03-24T18:44:15+00:00",
   "last_tag": null,
@@ -65,16 +62,11 @@
   "loc": {
    "CSS": 6229,
    "HTML": 30,
-   "JSON": 254,
    "JavaScript": 624,
-   "License": 544,
-   "Markdown": 454,
-   "SVG": 2,
    "TypeScript": 30114,
-   "TypeScript Typings": 29,
-   "YAML": 6
+   "TypeScript Typings": 29
   },
-  "loc_total": 38286,
+  "loc_total": 37026,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -139,7 +131,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -194,6 +186,7 @@
    "error": null,
    "files": 197,
    "first_commit": "2026-03-08T14:14:27+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "65b3fe2cc09b95e10bc3b1e6adb11ee0a8cfdfaf",
@@ -201,12 +194,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "CSS": 0.0937,
-    "JSON": 0.0055,
-    "JavaScript": 0.016,
-    "License": 0.0232,
-    "Markdown": 0.0112,
-    "TypeScript": 0.8487
+    "CSS": 0.1682,
+    "JavaScript": 0.0169,
+    "TypeScript": 0.8133
    },
    "languages_source": "scc",
    "last_commit": "2026-03-24T18:44:15+00:00",
@@ -218,14 +208,9 @@
    "loc": {
     "CSS": 6229,
     "HTML": 30,
-    "JSON": 254,
     "JavaScript": 624,
-    "License": 544,
-    "Markdown": 454,
-    "SVG": 2,
     "TypeScript": 30114,
-    "TypeScript Typings": 29,
-    "YAML": 6
+    "TypeScript Typings": 29
    },
    "ok": true,
    "open_issues": null,

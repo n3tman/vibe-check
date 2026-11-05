@@ -44,13 +44,8 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "License": 0.1705,
-   "Markdown": 0.0072,
-   "Python": 0.0121,
-   "Rust": 0.1794,
-   "SVG": 0.6233,
-   "TOML": 0.004,
-   "XML": 0.0035
+   "Python": 0.0776,
+   "Rust": 0.9224
   },
   "last_commit": "2020-04-01T14:06:50+00:00",
   "last_tag": null,
@@ -58,16 +53,11 @@
   "last_tag_repo": null,
   "licence_detected": "GPL-3.0",
   "loc": {
-   "License": 553,
-   "Markdown": 37,
    "Python": 62,
-   "Rust": 737,
-   "SVG": 772,
-   "TOML": 31,
-   "XML": 17
+   "Rust": 737
   },
-  "loc_total": 2209,
-  "main_language": "SVG",
+  "loc_total": 799,
+  "main_language": "Rust",
   "open_issues": null,
   "open_prs": null,
   "security_policy": null,
@@ -131,7 +121,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -180,6 +170,7 @@
    "error": null,
    "files": 39,
    "first_commit": "2016-12-29T16:22:33+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "4d6efd9e3a89d71502d112acc28362de691499fe",
@@ -187,13 +178,8 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "License": 0.1705,
-    "Markdown": 0.0072,
-    "Python": 0.0121,
-    "Rust": 0.1794,
-    "SVG": 0.6233,
-    "TOML": 0.004,
-    "XML": 0.0035
+    "Python": 0.0776,
+    "Rust": 0.9224
    },
    "languages_source": "scc",
    "last_commit": "2020-04-01T14:06:50+00:00",
@@ -203,13 +189,8 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "License": 553,
-    "Markdown": 37,
     "Python": 62,
-    "Rust": 737,
-    "SVG": 772,
-    "TOML": 31,
-    "XML": 17
+    "Rust": 737
    },
    "ok": true,
    "open_issues": null,

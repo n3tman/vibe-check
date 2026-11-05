@@ -64,14 +64,10 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0022,
-   "Go": 0.5087,
-   "License": 0.0803,
-   "Markdown": 0.0308,
-   "Plain Text": 0.3643,
-   "Powershell": 0.0023,
-   "Shell": 0.005,
-   "YAML": 0.0062
+   "Dockerfile": 0.0039,
+   "Go": 0.9845,
+   "Powershell": 0.0038,
+   "Shell": 0.0079
   },
   "last_commit": "2026-11-04T12:24:21+00:00",
   "last_tag": null,
@@ -79,17 +75,12 @@
   "last_tag_repo": null,
   "licence_detected": "AGPL-3.0",
   "loc": {
-   "Docker ignore": 15,
    "Dockerfile": 24,
    "Go": 6019,
-   "License": 544,
-   "Markdown": 234,
-   "Plain Text": 2569,
    "Powershell": 23,
-   "Shell": 48,
-   "YAML": 89
+   "Shell": 48
   },
-  "loc_total": 9565,
+  "loc_total": 6114,
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
@@ -154,7 +145,7 @@
    8
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -259,6 +250,7 @@
    "error": null,
    "files": 54,
    "first_commit": "2026-10-02T13:28:42+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3",
@@ -266,14 +258,10 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0022,
-    "Go": 0.5087,
-    "License": 0.0803,
-    "Markdown": 0.0308,
-    "Plain Text": 0.3643,
-    "Powershell": 0.0023,
-    "Shell": 0.005,
-    "YAML": 0.0062
+    "Dockerfile": 0.0039,
+    "Go": 0.9845,
+    "Powershell": 0.0038,
+    "Shell": 0.0079
    },
    "languages_source": "scc",
    "last_commit": "2026-11-04T12:24:21+00:00",
@@ -283,15 +271,10 @@
    "licence_file": "LICENSE",
    "licence_source": "file",
    "loc": {
-    "Docker ignore": 15,
     "Dockerfile": 24,
     "Go": 6019,
-    "License": 544,
-    "Markdown": 234,
-    "Plain Text": 2569,
     "Powershell": 23,
-    "Shell": 48,
-    "YAML": 89
+    "Shell": 48
    },
    "ok": true,
    "open_issues": null,

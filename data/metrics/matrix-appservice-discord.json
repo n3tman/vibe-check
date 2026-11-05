@@ -44,14 +44,9 @@
   "forks": null,
   "issue_first_response_median_days": null,
   "languages": {
-   "BASH": 0.0027,
+   "BASH": 0.0021,
    "Dockerfile": 0.0012,
-   "JSON": 0.0052,
-   "License": 0.0184,
-   "Markdown": 0.0302,
-   "TOML": 0.0013,
-   "TypeScript": 0.9205,
-   "YAML": 0.02
+   "TypeScript": 0.9965
   },
   "last_commit": "2023-09-15T08:04:30+00:00",
   "last_tag": "v4.0.0",
@@ -60,17 +55,11 @@
   "licence_detected": "Apache-2.0",
   "loc": {
    "BASH": 26,
-   "Docker ignore": 12,
    "Dockerfile": 14,
-   "JSON": 104,
-   "License": 169,
-   "Markdown": 290,
    "Shell": 2,
-   "TOML": 24,
-   "TypeScript": 12130,
-   "YAML": 302
+   "TypeScript": 12130
   },
-  "loc_total": 13073,
+  "loc_total": 12172,
   "main_language": "TypeScript",
   "open_issues": null,
   "open_prs": null,
@@ -135,7 +124,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:19:03+00:00",
+ "fetched_at": "2026-11-05T05:29:27+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -189,6 +178,7 @@
    "error": null,
    "files": 111,
    "first_commit": "2016-06-18T23:09:33+00:00",
+   "first_parent": false,
    "forge": "github",
    "forks": null,
    "head_sha": "8ae61dda84df45b0a558604ef97e60e5870b201a",
@@ -196,14 +186,9 @@
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "BASH": 0.0027,
+    "BASH": 0.0021,
     "Dockerfile": 0.0012,
-    "JSON": 0.0052,
-    "License": 0.0184,
-    "Markdown": 0.0302,
-    "TOML": 0.0013,
-    "TypeScript": 0.9205,
-    "YAML": 0.02
+    "TypeScript": 0.9965
    },
    "languages_source": "scc",
    "last_commit": "2023-09-15T08:04:30+00:00",
@@ -214,15 +199,9 @@
    "licence_source": "file",
    "loc": {
     "BASH": 26,
-    "Docker ignore": 12,
     "Dockerfile": 14,
-    "JSON": 104,
-    "License": 169,
-    "Markdown": 290,
     "Shell": 2,
-    "TOML": 24,
-    "TypeScript": 12130,
-    "YAML": 302
+    "TypeScript": 12130
    },
    "ok": true,
    "open_issues": null,
