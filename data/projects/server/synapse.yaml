@@ -131,8 +131,8 @@ features:
     note: advertised in unstable_features when enabled}
   - {msc: 3440, state: stable, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L313',
     note: 'advertised in unstable_features, on by default'}
-  - {msc: 3575, state: experimental, flag: experimental_features.msc3575_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L329',
-    note: advertised in unstable_features when enabled}
+  - {msc: 3575, state: unstable, flag: experimental_features.msc3575_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/rust/src/handlers/versions.rs#L329',
+    note: advertised in unstable_features; config option on by default}
   - {msc: 3664, state: experimental, flag: experimental_features.msc3664_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L129',
     note: behind a config option}
   - {msc: 3720, state: experimental, flag: experimental_features.msc3720_enabled, source: 'https://github.com/element-hq/synapse/blob/e3b6b231f6108981a1696ba21a660ebfec87694b/synapse/config/experimental.py#L106',
@@ -344,6 +344,9 @@ ai:
     value: none-found
     note: null
     source: null
-notes: Synapse Pro (closed source, Element) is a separate listing. Spec versions come from rust/src/handlers/versions.rs
-  (the /versions handler moved to Rust).
+notes: No AI policy found in CONTRIBUTING or docs. A user asked for one in https://github.com/element-hq/synapse/issues/19793
+  ("Requesting a clearly-defined NO LLM Policy"), closed as completed on 2026-05-20 with one comment that
+  was not readable from this session; the outcome is unverified. Synapse Pro (closed source, Element)
+  is a separate listing. Spec versions come from rust/src/handlers/versions.rs (the /versions handler
+  moved to Rust).
 checked: '2026-11-05'
