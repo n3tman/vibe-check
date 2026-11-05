@@ -1,0 +1,39 @@
+slug: radicale-auth-matrix
+name: radicale-auth-matrix
+category: tool
+kind: auth-plugin
+homepage: https://github.com/etkecc/radicale-auth-matrix
+summary: An authentication plugin that lets the Radicale CalDAV/CardDAV server log users in against a
+  Matrix homeserver.
+repos:
+- url: https://github.com/etkecc/radicale-auth-matrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: LGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: authentication (Matrix accounts for Radicale), how: claimed, source: 'https://github.com/etkecc/radicale-auth-matrix/blob/0f07e8ba32cf595e744403f70dd4ff81db3886b6/README.md'}
+  framework: {value: own, how: claimed, source: 'https://github.com/etkecc/radicale-auth-matrix/blob/0f07e8ba32cf595e744403f70dd4ff81db3886b6/README.md',
+    note: Python Radicale plugin calling the homeserver login API}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/etkecc/radicale-auth-matrix/blob/0f07e8ba32cf595e744403f70dd4ff81db3886b6/README.md',
+    note: not applicable}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/etkecc/radicale-auth-matrix/blob/0f07e8ba32cf595e744403f70dd4ff81db3886b6/README.md',
+    note: in Radicale; a dockerised Radicale with it exists (etkecc/radicale)}
+  config: {value: Radicale config file, how: claimed, source: 'https://github.com/etkecc/radicale-auth-matrix/blob/0f07e8ba32cf595e744403f70dd4ff81db3886b6/README.md'}
+  ai_backend: {value: none-found, how: claimed, source: 'https://github.com/etkecc/radicale-auth-matrix/blob/0f07e8ba32cf595e744403f70dd4ff81db3886b6/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 2 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 0f07e8ba32cf
+  in_product: {value: none-found, note: null, source: null}
+notes: null
+checked: 2026-11-05

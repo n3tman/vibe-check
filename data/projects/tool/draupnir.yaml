@@ -1,0 +1,43 @@
+slug: draupnir
+name: Draupnir
+category: tool
+kind: moderation
+homepage: https://the-draupnir-project.github.io/draupnir-documentation/
+summary: A moderation and community-management bot that applies shared policy lists across rooms, with
+  protections and prompts instead of typed commands; a continuation of Mjolnir.
+repos:
+- url: https://github.com/the-draupnir-project/Draupnir
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: AFL-3.0
+fork_of: mjolnir
+distribution: [docker]
+funding: ['https://opencollective.com/draupnir']
+features:
+  purpose: {value: 'moderation (policy lists, bans, protections)', how: claimed, source: 'https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/README.md'}
+  framework: {value: matrix-bot-sdk and matrix-protection-suite, how: code, source: 'https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/apps/draupnir/package.json',
+    note: Element's fork @vector-im/matrix-bot-sdk}
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/apps/draupnir/package.json',
+    note: 'https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/matrix-org/matrix-sdk-crypto-nodejs
+      dependency'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/README.md',
+    note: bot or appservice mode; Docker image gnuxie/draupnir}
+  config: {value: config file and !draupnir commands / prompts, how: claimed, source: 'https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/apps/draupnir/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 74 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at d57af49a6a97
+  in_product: {value: none-found, note: null, source: null}
+notes: 'Licence: the code is AFL-3.0 per matrix.org, with other files under the licences in LICENSES/
+  (REUSE layout; the README is CC-BY-SA-4.0). Policy on AI: an open issue by the lead maintainer (https://github.com/the-draupnir-project/Draupnir/issues/990,
+  "Formalise LLM Policy: Liberation for Synthetics", 2025-10-29) discusses LLMs, but no contribution rule
+  had been adopted in CONTRIBUTING.md at the checked commit, so the policy reads none-found.'
+checked: 2026-11-05

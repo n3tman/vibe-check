@@ -1,0 +1,39 @@
+slug: jenkins-matrix-communication
+name: Matrix Communication Plugin for Jenkins
+category: tool
+kind: ci-plugin
+homepage: https://plugins.jenkins.io/matrix-communication
+summary: A Jenkins plugin with a pipeline step that sends messages to a Matrix room.
+repos:
+- url: https://github.com/jenkinsci/matrix-communication-plugin
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: MIT
+fork_of: null
+distribution: [jenkins-update-center]
+funding: []
+features:
+  purpose: {value: CI notifications (Jenkins pipeline step), how: claimed, source: 'https://github.com/jenkinsci/matrix-communication-plugin/blob/93a66bff812841bcae471d4377beeb582c9c6b21/README.md'}
+  framework: {value: own, how: claimed, source: 'https://github.com/jenkinsci/matrix-communication-plugin/blob/93a66bff812841bcae471d4377beeb582c9c6b21/README.md',
+    note: 'Java, calls the client-server API with an access token'}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/jenkinsci/matrix-communication-plugin/blob/93a66bff812841bcae471d4377beeb582c9c6b21/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/jenkinsci/matrix-communication-plugin/blob/93a66bff812841bcae471d4377beeb582c9c6b21/README.md',
+    note: inside a Jenkins controller}
+  config: {value: pipeline step arguments and Jenkins credentials, how: claimed, source: 'https://github.com/jenkinsci/matrix-communication-plugin/blob/93a66bff812841bcae471d4377beeb582c9c6b21/README.md'}
+  ai_backend: {value: none-found, how: claimed, source: 'https://github.com/jenkinsci/matrix-communication-plugin/blob/93a66bff812841bcae471d4377beeb582c9c6b21/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2026-04-28), counted at 93a66bff8128
+  in_product: {value: none-found, note: null, source: null}
+notes: 'No non-bot commits in the last 365 days (last commit 2026-04-28 is from a bot account). The README
+  defers to the jenkinsci organisation''s contribution guidelines, which have no statement on AI (checked
+  2026-11-05: https://github.com/jenkinsci/.github/blob/master/CONTRIBUTING.md).'
+checked: 2026-11-05

@@ -1,0 +1,38 @@
+slug: ttm
+name: Time-to-Matrix (ttm)
+category: tool
+kind: cli
+homepage: https://github.com/etkecc/ttm
+summary: A time-like wrapper that runs a command and sends its output tail, timing and exit status to
+  a Matrix room.
+repos:
+- url: https://github.com/etkecc/ttm
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: notifications (command results to a room), how: claimed, source: 'https://github.com/etkecc/ttm/blob/624016f96daa2f426fedc8de6daaa2bb39406bb8/README.md'}
+  framework: {value: own, how: code, source: 'https://github.com/etkecc/ttm/blob/624016f96daa2f426fedc8de6daaa2bb39406bb8/go.mod',
+    note: no Matrix SDK in go.mod}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/etkecc/ttm/blob/624016f96daa2f426fedc8de6daaa2bb39406bb8/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/etkecc/ttm/blob/624016f96daa2f426fedc8de6daaa2bb39406bb8/README.md',
+    note: CLI}
+  config: {value: environment variables (TTM_*), how: claimed, source: 'https://github.com/etkecc/ttm/blob/624016f96daa2f426fedc8de6daaa2bb39406bb8/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/etkecc/ttm/blob/624016f96daa2f426fedc8de6daaa2bb39406bb8/go.mod'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 5 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 624016f96daa
+  in_product: {value: none-found, note: null, source: null}
+notes: null
+checked: 2026-11-05

@@ -1,0 +1,45 @@
+slug: ketesa
+name: Ketesa
+category: tool
+kind: admin-ui
+homepage: https://github.com/etkecc/ketesa
+summary: A web admin UI for Synapse (and Matrix Authentication Service), formerly etke.cc's Synapse Admin
+  fork, with server actions, scheduling and branding options.
+repos:
+- url: https://github.com/etkecc/ketesa
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: synapse-admin
+distribution: [docker, tarball, ansible-playbook]
+funding: []
+features:
+  purpose: {value: 'homeserver admin UI (Synapse admin API, MAS)', how: claimed, source: 'https://github.com/etkecc/ketesa/blob/7d6b0786e1bc71ca98049ff5da517946ef256c55/README.md'}
+  framework: {value: 'own (react-admin, talks to the Synapse and MAS admin APIs from the browser)', how: code,
+    source: 'https://github.com/etkecc/ketesa/blob/7d6b0786e1bc71ca98049ff5da517946ef256c55/AGENTS.md'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/etkecc/ketesa/blob/7d6b0786e1bc71ca98049ff5da517946ef256c55/README.md',
+    note: 'not applicable: an admin API client'}
+  hosting: {value: both, how: claimed, source: 'https://github.com/etkecc/ketesa/blob/7d6b0786e1bc71ca98049ff5da517946ef256c55/README.md',
+    note: self-host (static files or Docker) or the hosted cloud.ketesa.app build}
+  config: {value: config.json and per-user preferences in the UI, how: claimed, source: 'https://github.com/etkecc/ketesa/blob/7d6b0786e1bc71ca98049ff5da517946ef256c55/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/etkecc/ketesa/blob/7d6b0786e1bc71ca98049ff5da517946ef256c55/AGENTS.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: occasional
+    evidence:
+    - 'agent file: AGENTS.md'
+    - 1 of 337 non-bot commits in the last 365 days carry an AI attribution (0.3%), counted at 7d6b0786e1bc
+    - 'tools named in attributions: claude'
+    - 'example: 2c367f323496 (Co-Authored-By: Claude)'
+    - below the 1 % threshold for occasional; set to occasional because attributed commits exist (lane
+      7 may revise)
+  in_product: {value: none-found, note: null, source: null}
+notes: '"the evolution of Synapse Admin" (matrix.org listing); it began as a fork of Awesome-Technologies/synapse-admin.
+  AGENTS.md was added on 2026-10-24. CONTRIBUTING has no statement on AI-made contributions.'
+checked: 2026-11-05
