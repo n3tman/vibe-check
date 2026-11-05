@@ -1,0 +1,7 @@
+---
+import Icon from './Icon.astro';
+import { STATUS } from '../lib/view.ts';
+interface Props { status: string }
+const s = STATUS[Astro.props.status] ?? STATUS.unknown;
+---
+<span class="badge status" data-status={Astro.props.status} title={s.desc}><Icon name={s.icon} size={13} />{s.label}</span>

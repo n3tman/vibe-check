@@ -1,0 +1,19 @@
+---
+// One AI axis as a mark. The stance switch (html[data-stance]) decides, in CSS only, whether
+// a polarity is drawn neutral, as a green check or as a red cross; the text never changes.
+import Icon from './Icon.astro';
+import { AXES, aiMark, type Axis } from '../lib/view.ts';
+interface Props { axis: Axis; value?: string; compact?: boolean; showAxis?: boolean }
+const { axis, value, compact = false, showAxis = true } = Astro.props;
+const m = aiMark(axis, value);
+const neutral = { ai: 'sparkle', noai: 'dash', mixed: 'partial', unknown: 'question' }[m.pol];
+---
+<span class:list={['aimark', { compact }]} data-pol={m.pol} data-axis={axis} title={`${AXES[axis].label}: ${m.text}`}>
+  <span class="aimark-ic" aria-hidden="true">
+    <span class="ic-n"><Icon name={neutral} size={14} /></span>
+    <span class="ic-good"><Icon name="check" size={14} /></span>
+    <span class="ic-bad"><Icon name="cross" size={14} /></span>
+  </span>
+  <span class="aimark-text">{showAxis && <span class="aimark-axis">{AXES[axis].short}</span>}<span class="aimark-val">{m.text}</span></span>
+  <span class="sr-only sn-good">(fits the chosen stance)</span><span class="sr-only sn-bad">(against the chosen stance)</span>
+</span>

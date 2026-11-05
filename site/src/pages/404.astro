@@ -1,0 +1,7 @@
+---
+import Base from '../layouts/Base.astro';
+import { href } from '../lib/view.ts';
+---
+<Base title="Not found">
+  <header class="page-head"><h1>Page not found</h1><p class="lede">That page is not here. Try the <a href={href()}>overview</a>.</p></header>
+</Base>
