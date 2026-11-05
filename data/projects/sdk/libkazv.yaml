@@ -1,0 +1,40 @@
+slug: libkazv
+name: libkazv
+category: sdk
+kind: C++
+homepage: https://kazv.chat
+summary: A Matrix client SDK in C++ built on lager and value-oriented design, the base of the kazv client.
+repos:
+- {url: 'https://r.lily-is.land/the-kazv-project/libkazv', forge: forgejo, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: [Lane 2 notes (kazv)]
+maturity: beta
+platforms: [windows, macos, linux]
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://r.lily-is.land/the-kazv-project/libkazv/src/commit/4d1c8b10a7fd9a859dc74ed2bec29bc12e51963b/cmake/Findvodozemac.cmake',
+    note: vodozemac}
+  crypto: vodozemac
+  sliding_sync: {value: not-found, how: code}
+  oidc_auth: {value: not-found, how: code}
+  threads: {value: not-found, how: code}
+  spaces: {value: partial, how: code, source: 'https://r.lily-is.land/the-kazv-project/libkazv/src/commit/4d1c8b10a7fd9a859dc74ed2bec29bc12e51963b/src/api/csapi/space_hierarchy.hpp',
+    note: generated hierarchy API only}
+  purpose: {value: 'client, bot', how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [kazv]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: occasional
+    evidence: ['1 of 37 non-bot commits in the last 365 days carry an AI attribution (2.7 %), counted at 4d1c8b10a7fd',
+      'https://r.lily-is.land/the-kazv-project/libkazv/commit/51c5366380 (opencode)']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "libkazv" (Beta, C++, maintainer: The Kazv Project). Last non-bot commit 2026-10-24,
+  37 non-bot commits in the last year and 1 authors in the last 90 days by our count at 4d1c8b10a7fd (the collector
+  recounts).'
+checked: 2026-11-05

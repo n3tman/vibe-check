@@ -1,0 +1,38 @@
+slug: vodozemac
+name: vodozemac
+category: sdk
+kind: Rust
+homepage: https://github.com/matrix-org/vodozemac
+summary: A pure-Rust implementation of Olm and Megolm, Matrix's end-to-end encryption ratchets, audited in 2022
+  and the successor to libolm.
+repos:
+- {url: 'https://github.com/matrix-org/vodozemac', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: stable
+platforms: []
+licence: Apache-2.0
+fork_of: null
+distribution: [crates.io]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/matrix-org/vodozemac/blob/508613d14441ceff4bf8c62c6b693b700536828f/README.md',
+    note: 'it is the crypto primitive itself: Olm, Megolm, SAS, ECIES (MSC4108)'}
+  crypto: own (vodozemac)
+  sliding_sync: {value: not-found, note: not applicable}
+  oidc_auth: {value: not-found, note: not applicable}
+  threads: {value: not-found, note: not applicable}
+  spaces: {value: not-found, note: not applicable}
+  purpose: {value: crypto, how: claimed, source: 'https://github.com/matrix-org/vodozemac'}
+  used_by: [commet, fluffychat, libkazv, matrix-dart-sdk, matrix-nio, matrix-rust-sdk, trixnity]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 86 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 508613d14441']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-11-03, 86 non-bot
+  commits in the last year and 3 authors in the last 90 days by our count at 508613d14441 (the collector recounts).
+checked: 2026-11-05

@@ -1,0 +1,47 @@
+slug: matrix-bot-sdk
+name: matrix-bot-sdk
+category: sdk
+kind: TypeScript
+homepage: https://turt2live.github.io/matrix-bot-sdk/
+summary: A TypeScript SDK for Matrix bots and appservices by Travis Ralston; Element maintains a fork (@vector-im/matrix-bot-sdk)
+  that hookshot, Mjolnir and Draupnir use.
+repos:
+- {url: 'https://github.com/turt2live/matrix-bot-sdk', forge: github, role: main}
+- {url: 'https://github.com/element-hq/matrix-bot-sdk', forge: github, role: other}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: ['matrix.org community space, SDKs section (sources/community-space.tsv)']
+maturity: beta
+platforms: [server]
+licence: MIT
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/element-hq/matrix-bot-sdk/blob/ccaa9f06d67cf2d1cef61721e86a923694bc2d62/docs/tutorials/encryption-bots.md',
+    note: Rust crypto through @matrix-org/matrix-sdk-crypto-nodejs (both the original and the Element fork)}
+  crypto: matrix-sdk-crypto-nodejs (vodozemac)
+  sliding_sync: {value: not-found, how: code, note: no MSC4186 or MSC3575 code}
+  oidc_auth: {value: not-found, how: code, note: no OAuth / auth_metadata code}
+  threads: {value: not-found, how: code, note: no m.thread handling found in the Element fork}
+  spaces: {value: 'yes', how: code, source: 'https://github.com/element-hq/matrix-bot-sdk/blob/ccaa9f06d67cf2d1cef61721e86a923694bc2d62/src/models/Spaces.ts'}
+  appservice: {value: 'yes', how: code, source: 'https://github.com/element-hq/matrix-bot-sdk/blob/ccaa9f06d67cf2d1cef61721e86a923694bc2d62/docs/tutorials/appservice.md'}
+  purpose: {value: 'bot, bridge', how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [draupnir, gatho-bot, matrix-chatgpt-bot, matrix-dimension, matrix-email-bot, matrix-feeder, matrix-hookshot,
+    matrix-meetings, matrix-protection-suite, matrix-trello-bot, mjolnir, toot-feed-bot]
+ai:
+  policy: {value: restricted, quote: 'AI-assisted contributions are accepted; unreviewed AI output is not. [...]
+      If your PR was made with the help of AI, you must convey that this is the case using the PR template.', source: 'https://github.com/element-hq/element-meta/blob/ea731f1fc96190b2214538c76d95ee34e00400cd/CONTRIBUTING.md#L26',
+    note: Applies to the Element fork (element-hq/matrix-bot-sdk) through Element's organisation-wide policy in
+      element-meta; the original turt2live repo has no AI text.}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 7 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at abfc53c5a040',
+      'Element fork: 0 of 100 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at ccaa9f06d67c']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "matrix-bot-sdk" (Beta, TypeScript, maintainer: Travis Ralston). Last non-bot commit
+  2026-03-27, 7 non-bot commits in the last year and 0 authors in the last 90 days by our count at abfc53c5a040
+  (the collector recounts). The original repo had 7 non-bot commits in the last year; the Element fork (role other)
+  had 100. Element''s organisation-wide AI policy covers the fork, not the original.'
+checked: 2026-11-05

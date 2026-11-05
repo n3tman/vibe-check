@@ -1,0 +1,39 @@
+slug: matrix-sdk-crypto-nodejs
+name: matrix-sdk-crypto-nodejs
+category: sdk
+kind: Rust / Node.js
+homepage: https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs
+summary: Node.js bindings (napi) of matrix-rust-sdk's crypto crate, used by matrix-bot-sdk for encrypted bots.
+repos:
+- {url: 'https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/blob/b29219c69b996224d6b8e7c94cb40fb3e4949516/README.md',
+    note: matrix-sdk-crypto (vodozemac)}
+  crypto: matrix-sdk-crypto (vodozemac)
+  sliding_sync: {value: not-found, note: not applicable}
+  oidc_auth: {value: not-found, note: not applicable}
+  threads: {value: not-found, note: not applicable}
+  spaces: {value: not-found, note: not applicable}
+  purpose: {value: crypto, how: claimed, source: 'https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs'}
+  used_by: [matrix-bot-sdk, toot-feed-bot]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: occasional
+    evidence: ['1 of 169 non-bot commits in the last 365 days carry an AI attribution (0.6 %), counted at b29219c69b99',
+      'https://github.com/matrix-org/matrix-rust-sdk-crypto-nodejs/commit/0bd29c8376 (claude)']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-09-02, 169
+  non-bot commits in the last year and 3 authors in the last 90 days by our count at b29219c69b99 (the collector
+  recounts).
+checked: 2026-11-05

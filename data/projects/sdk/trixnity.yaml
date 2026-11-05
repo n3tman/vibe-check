@@ -1,0 +1,43 @@
+slug: trixnity
+name: Trixnity
+category: sdk
+kind: Kotlin
+homepage: https://trixnity.connect2x.de
+summary: A multiplatform Kotlin SDK (JVM, Android, iOS, JS, native) by connect2x for clients, bots, appservices
+  and servers.
+repos:
+- {url: 'https://gitlab.com/connect2x/trixnity/trixnity', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: ['matrix.org community space, SDKs section (sources/community-space.tsv)']
+maturity: stable
+platforms: [android, ios, web, windows, macos, linux, server]
+licence: Apache-2.0
+fork_of: null
+distribution: [maven]
+funding: []
+features:
+  e2ee: {value: 'yes', how: claimed, source: 'https://gitlab.com/connect2x/trixnity/trixnity/-/blob/2269b0bae464a9be387bf19770d470051923d352/website/docs/client/features.md',
+    note: 'exchangeable crypto driver: libolm or vodozemac (with migration from libolm); cross-signing, key backup,
+      dehydrated devices'}
+  crypto: vodozemac or libolm
+  sliding_sync: {value: not-found, how: code, note: no MSC4186 or MSC3575 code at this commit}
+  oidc_auth: {value: 'yes', how: claimed, source: 'https://gitlab.com/connect2x/trixnity/trixnity/-/blob/2269b0bae464a9be387bf19770d470051923d352/website/docs/client/features.md',
+    note: '"OAuth2-based login"'}
+  threads: {value: partial, how: claimed, source: 'https://gitlab.com/connect2x/trixnity/trixnity/-/blob/2269b0bae464a9be387bf19770d470051923d352/website/docs/client/features.md',
+    note: '"basic support, no separate timelines or client aggregations yet"'}
+  spaces: {value: partial, how: code, source: 'https://gitlab.com/connect2x/trixnity/trixnity/-/blob/2269b0bae464a9be387bf19770d470051923d352/trixnity-clientserverapi/trixnity-clientserverapi-client/src/commonMain/kotlin/de/connect2x/trixnity/clientserverapi/client/RoomApiClient.kt',
+    note: hierarchy API in the client-server API module; no space model in trixnity-client found}
+  purpose: {value: 'client, bot, bridge, server', how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [keryx, matrix-qq-bridge, matrix-sms-bridge, matrix-spring-boot-sdk, tacit, tammy, trixnity-messenger]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 636 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 2269b0bae464']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "Trixnity" (Stable, Kotlin, maintainer: connect2x GmbH). Last non-bot commit 2026-11-04,
+  636 non-bot commits in the last year and 12 authors in the last 90 days by our count at 2269b0bae464 (the collector
+  recounts).'
+checked: 2026-11-05

@@ -1,0 +1,37 @@
+slug: libolm
+name: libolm
+category: sdk
+kind: C / C++
+homepage: https://gitlab.matrix.org/matrix-org/olm
+summary: Matrix's first implementation of the Olm and Megolm ratchets in C and C++; deprecated in favour of vodozemac.
+repos:
+- {url: 'https://gitlab.matrix.org/matrix-org/olm', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: unmaintained
+platforms: []
+licence: Apache-2.0
+fork_of: null
+distribution: [npm, pypi]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://gitlab.matrix.org/matrix-org/olm/-/blob/6d4b5b07887821a95b144091c8497d09d377f985/README.md#L12',
+    note: 'Olm and Megolm; README: "IMPORTANT: libolm is now deprecated."'}
+  crypto: own (libolm)
+  sliding_sync: {value: not-found, note: not applicable}
+  oidc_auth: {value: not-found, note: not applicable}
+  threads: {value: not-found, note: not applicable}
+  spaces: {value: not-found, note: not applicable}
+  purpose: {value: crypto, how: claimed, source: 'https://gitlab.matrix.org/matrix-org/olm'}
+  used_by: [libcmatrix, mautrix-go, mautrix-python, mtxclient, trixnity]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 0 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 6d4b5b078878']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2024-07-31, 0 non-bot
+  commits in the last year and 0 authors in the last 90 days by our count at 6d4b5b078878 (the collector recounts).
+checked: 2026-11-05

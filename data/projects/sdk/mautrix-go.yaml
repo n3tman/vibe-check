@@ -1,0 +1,50 @@
+slug: mautrix-go
+name: mautrix-go
+category: sdk
+kind: Go
+homepage: https://maunium.net/go/mautrix
+summary: A Go Matrix framework by Tulir Asokan for clients, bots and appservices; includes bridgev2, the framework
+  of the current mautrix bridges.
+repos:
+- {url: 'https://github.com/mautrix/go', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: ['matrix.org community space, SDKs section (sources/community-space.tsv)']
+maturity: stable
+platforms: [server, windows, macos, linux]
+licence: MPL-2.0
+fork_of: null
+distribution: [go-module]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/mautrix/go/blob/bd0b1eef45525852445580731c3625e51c1410ed/crypto/registerlibolm.go',
+    note: 'libolm through cgo by default; goolm, its own pure-Go Olm/Megolm, with the goolm build tag'}
+  crypto: libolm (default) or goolm (own)
+  sliding_sync: {value: not-found, how: code, note: no MSC4186 or MSC3575 code}
+  oidc_auth: {value: 'yes', how: code, source: 'https://github.com/mautrix/go/blob/bd0b1eef45525852445580731c3625e51c1410ed/oauth.go#L52',
+    note: 'OAuth server metadata, dynamic client registration and authorization URL helpers'}
+  threads: {value: 'yes', how: code, source: 'https://github.com/mautrix/go/blob/bd0b1eef45525852445580731c3625e51c1410ed/event/relations.go#L24',
+    note: m.thread relations}
+  spaces: {value: 'yes', how: code, source: 'https://github.com/mautrix/go/blob/bd0b1eef45525852445580731c3625e51c1410ed/client.go#L2455',
+    note: hierarchy endpoint}
+  appservice: {value: 'yes', how: code, source: 'https://github.com/mautrix/go/blob/bd0b1eef45525852445580731c3625e51c1410ed/appservice/appservice.go',
+    note: appservice package and bridgev2}
+  purpose: {value: 'client, bot, bridge', how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [beeper-ai-bridge, beeper-android-sms, beeper-chatgpt-dots, beeper-googlevoice, beeper-groupme, beeper-imessage,
+    beeper-line, beeper-reddit, beeper-tumblr-dms, emm, go-neb, go-skype-bridge, gomuks, honoroit, matrix-qq, matrix-steam-bridge,
+    matrix-tiktok, matrix-wechat, maunium-stickerpicker, mautrix-bluesky, mautrix-deltachat, mautrix-discord, mautrix-gmessages,
+    mautrix-gvoice, mautrix-imessage, mautrix-irc, mautrix-linkedin, mautrix-meta, mautrix-signal, mautrix-slack,
+    mautrix-telegram, mautrix-twilio, mautrix-twitter, mautrix-whatsapp, mautrix-zulip, meowlnir, pickle]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: occasional
+    evidence: ['7 of 700 non-bot commits in the last 365 days carry an AI attribution (1.0 %), counted at bd0b1eef4552',
+      'https://github.com/mautrix/go/commit/aa7eede2b4 (claude)', 'https://github.com/mautrix/go/commit/8c64f024d2
+        (claude)', 'https://github.com/mautrix/go/commit/5bdd29bfd1 (claude)']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "mautrix-go" (Stable, Go, maintainer: Tulir). Last non-bot commit 2026-11-03, 700
+  non-bot commits in the last year and 9 authors in the last 90 days by our count at bd0b1eef4552 (the collector
+  recounts).'
+checked: 2026-11-05

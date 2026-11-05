@@ -1,0 +1,41 @@
+slug: matrix-ios-sdk
+name: Matrix iOS SDK
+category: sdk
+kind: Objective-C / Swift
+homepage: https://github.com/matrix-org/matrix-ios-sdk
+summary: The Objective-C Matrix SDK for iOS behind Element iOS (classic); its pod is no longer published, the repo
+  is still maintained.
+repos:
+- {url: 'https://github.com/matrix-org/matrix-ios-sdk', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: []
+maturity: beta
+platforms: [ios, macos]
+licence: Apache-2.0
+fork_of: null
+distribution: [swift-package]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-ios-sdk/blob/097208ccc5bec72b37261d8ea0bc857c9ccd8361/MatrixSDK/Crypto/MXCryptoV2.swift',
+    note: crypto V2 on the Rust matrix-sdk-crypto (MatrixSDKCrypto pod)}
+  crypto: matrix-sdk-crypto (vodozemac)
+  sliding_sync: {value: not-found, how: code}
+  oidc_auth: {value: partial, how: code, source: 'https://github.com/matrix-org/matrix-ios-sdk/blob/097208ccc5bec72b37261d8ea0bc857c9ccd8361/MatrixSDK/JSONModels/AutoDiscovery/MXWellKnownAuthentication.h',
+    note: reads the MSC2965 authentication well-known only}
+  threads: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-ios-sdk/blob/097208ccc5bec72b37261d8ea0bc857c9ccd8361/MatrixSDK/JSONModels/MXEvent.m'}
+  spaces: {value: 'yes', how: code, source: 'https://github.com/matrix-org/matrix-ios-sdk/blob/097208ccc5bec72b37261d8ea0bc857c9ccd8361/MatrixSDK/MXRestClient.m'}
+  purpose: {value: client, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [element-classic, nio, seaglass]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 15 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 097208ccc5be']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "Matrix.org iOS SDK" (Beta, Objective-C, maintainer: Matrix.org team). Last non-bot
+  commit 2026-05-27, 15 non-bot commits in the last year and 0 authors in the last 90 days by our count at 097208ccc5be
+  (the collector recounts). README: "The SDK is no longer published directly to Cocopods [...] the SDK is still
+  being maintained." matrix.org labels it beta.'
+checked: 2026-11-05

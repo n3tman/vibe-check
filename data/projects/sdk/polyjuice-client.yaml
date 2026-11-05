@@ -1,0 +1,35 @@
+slug: polyjuice-client
+name: Polyjuice Client
+category: sdk
+kind: Elixir
+homepage: https://gitlab.com/polyjuice/polyjuice_client
+summary: A Matrix client library for Elixir, on Hex.pm.
+repos:
+- {url: 'https://gitlab.com/polyjuice/polyjuice_client', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: null
+  other: ['matrix.org community space, SDKs section (sources/community-space.tsv)']
+maturity: beta
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [hex]
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: 'client, bot', how: claimed, source: 'https://gitlab.com/polyjuice/polyjuice_client'}
+  used_by: []
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 4 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 59f3c6aa5b18']
+  in_product: {value: none-found, note: 'A library; its code was not read for AI features (inactive or small library),
+      and its matrix.org description mentions none.', source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-10-29, 4 non-bot
+  commits in the last year and 1 authors in the last 90 days by our count at 59f3c6aa5b18 (the collector recounts).
+checked: 2026-11-05
