@@ -1,0 +1,41 @@
+slug: synapse-admin
+name: synapse-admin
+category: tool
+kind: admin-ui
+homepage: https://awesome-technologies.github.io/synapse-admin/
+summary: The original web admin console for Synapse built on react-admin; Ketesa started as a fork of
+  it.
+repos:
+- url: https://github.com/Awesome-Technologies/synapse-admin
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, repositories sorted by stars, 2026-11-05
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker, tarball]
+funding: []
+features:
+  purpose: {value: homeserver admin UI (Synapse admin API), how: claimed, source: 'https://github.com/Awesome-Technologies/synapse-admin/blob/b3925704aeb85d29ea2db8e1975b407310dcae7a/README.md'}
+  framework: {value: own (react-admin client for the Synapse admin API), how: claimed, source: 'https://github.com/Awesome-Technologies/synapse-admin/blob/b3925704aeb85d29ea2db8e1975b407310dcae7a/README.md'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/Awesome-Technologies/synapse-admin/blob/b3925704aeb85d29ea2db8e1975b407310dcae7a/README.md',
+    note: 'not applicable: an admin API client'}
+  hosting: {value: both, how: claimed, source: 'https://github.com/Awesome-Technologies/synapse-admin/blob/b3925704aeb85d29ea2db8e1975b407310dcae7a/README.md',
+    note: self-host (static files or Docker) or the GitHub Pages build}
+  config: {value: config.json, how: claimed, source: 'https://github.com/Awesome-Technologies/synapse-admin/blob/b3925704aeb85d29ea2db8e1975b407310dcae7a/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/Awesome-Technologies/synapse-admin/blob/b3925704aeb85d29ea2db8e1975b407310dcae7a/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: occasional
+    evidence:
+    - 1 of 78 non-bot commits in the last 365 days carry an AI attribution (1.3%), counted at b3925704aeb8
+    - 'tools named in attributions: copilot'
+    - 'example: 9bd1c5be3a8c (Co-authored-by: Copilot)'
+  in_product: {value: none-found, note: null, source: null}
+notes: Not on the matrix.org integrations list (Ketesa is); found by search, 1,206 stars.
+checked: 2026-11-05
