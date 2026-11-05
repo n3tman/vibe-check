@@ -1,0 +1,249 @@
+slug: fluffychat
+name: FluffyChat
+category: client
+kind: mobile, desktop, web
+homepage: https://fluffychat.im
+summary: A cross-platform Flutter Matrix client for Android, iOS, desktop and web, built on the Matrix
+  Dart SDK.
+repos:
+- url: https://github.com/krille-chan/fluffychat
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/fluffychat/
+  other:
+  - PLAN.md extra sources (https://fluffychat.im)
+  - 'sources/community-space.tsv: room "[DEPRECATED] FluffyChat Support"'
+maturity: stable
+platforms:
+- android
+- ios
+- web
+- linux
+- windows
+- macos
+apps:
+- os: android
+  tech: flutter
+  status: stable
+  stores:
+  - name: google-play
+    url: https://play.google.com/store/apps/details?id=chat.fluffy.fluffychat
+  - name: f-droid
+    url: https://f-droid.org/packages/chat.fluffy.fluffychat
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fluffychat.md
+  note: null
+  min_os: null
+- os: ios
+  tech: flutter
+  min_os: '15.0'
+  status: stable
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/app/id1551469600
+  source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/ios/Runner.xcodeproj/project.pbxproj
+- os: linux
+  tech: flutter
+  status: stable
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/im.fluffychat.Fluffychat
+  - name: snap
+    url: https://snapcraft.io/fluffychat
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fluffychat.md
+  min_os: null
+- os: web
+  tech: flutter
+  status: stable
+  stores:
+  - name: web
+    url: https://fluffychat.im/web
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fluffychat.md
+  min_os: null
+- os: windows
+  tech: flutter
+  status: beta
+  source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/windows
+  min_os: null
+  stores: []
+- os: macos
+  tech: flutter
+  status: beta
+  source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/macos
+  min_os: null
+  stores: []
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution:
+- google-play
+- f-droid
+- app-store
+- flathub
+- snap
+- docker
+funding: []
+features:
+  sdk:
+    value: matrix-dart-sdk (package matrix ^14.1.0) with flutter_vodozemac
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/pubspec.yaml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/utils/client_manager.dart
+    note: vodozemac via flutter_vodozemac.
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/bootstrap/view_model/bootstrap_state.dart
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/settings/settings.dart
+    note: Online key backup / recovery via the bootstrap flow.
+  sliding_sync:
+    value: 'no'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/pubspec.yaml
+    note: No MSC4186/MSC3575 use found (only a field in public homeserver data).
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/utils/sign_in_flows/oidc_login.dart
+    note: Native OIDC login.
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fluffychat.md
+  threads:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fluffychat.md
+    note: 'matrix.org: supported; thread handling in lib/utils/matrix_sdk_extensions/filtered_timeline_extension.dart.'
+  spaces:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fluffychat.md
+  voip_1to1:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fluffychat.md
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/utils/matrix_live_kit_calls/matrix_live_kit_call.dart
+    note: MatrixRTC calls over LiveKit.
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/events/message.dart
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/chat.dart
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/chat.dart
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/chat.dart
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/settings_emotes/settings_emotes.dart
+    note: 'im.ponies emote packs; matrix.org: partial.'
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/utils/matrix_sdk_extensions/event_extension.dart
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/send_location_dialog.dart
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/chat.dart
+  rich_text_editor:
+    value: not-found
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/chat.dart
+    note: Markdown input; no WYSIWYG editor found.
+  url_previews:
+    value: not-found
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/events/message.dart
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/utils/background_push.dart
+    note: UnifiedPush and Firebase (Google Play builds).
+  private_read_receipts:
+    value: not-found
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/utils/push_helper.dart
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/widgets/presence_builder.dart
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/chat.dart
+    note: Handles tombstones.
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/pages/chat/events/message_content.dart
+  accessibility: not-found
+  translations:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/l10n
+    note: Weblate; about 58 .arb locale files.
+  telemetry:
+    value: none-found
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/pubspec.yaml
+    note: No analytics or crash-report SDK in pubspec.yaml; see PRIVACY.md.
+  default_homeserver:
+    value: 'yes'
+    how: code
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/lib/config/setting_keys.dart
+    note: matrix.org (setting chat.fluffy.default_homeserver).
+  fork_friendliness:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/CONTRIBUTING.md
+    note: One Flutter codebase for all platforms; AGPL-3.0-or-later; many forks (Extera Next and
+      others).
+ai:
+  policy:
+    value: restricted
+    quote: >-
+      We do not vibe code! You are required to understand and be able to explain every single line
+      of code of your contribution.
+    source: https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/CONTRIBUTING.md
+  dev_usage:
+    value: occasional
+    evidence:
+    - >-
+      2 of about 1,390 non-bot commits in the last 365 days carry a Claude co-author trailer (both
+      2026-10-22), below the 1 % line.
+    - >-
+      AGENTS.md, which told agents "it is strictly prohibited to let an LLM edit any files in this
+      repository", was removed on 2026-10-22 (commit 607edd5a765d32228af9dee012b1b2e4718cc729).
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  AI policy history: CONTRIBUTING said "Usage of LLMs to generate code, documentation, commit messages
+  or PR description is strictly prohibited" from 2026-06-01 (commit 264f4533a44e3f5f7cc3d5bc6265154dfd782019)
+  until 2026-10-22, when it became "Do not vibe code!". Contributions are limited to collaborators
+  "for now due to spam". Issue https://github.com/krille-chan/fluffychat/issues/3753 asked to also
+  reject LLM code reviews. dev_usage is set to occasional on attributed commits although the share
+  is under 1 %.
+checked: '2026-11-05'
