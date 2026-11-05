@@ -48,3 +48,9 @@ notes: 'matrix.org lists it as "mautrix-go" (Stable, Go, maintainer: Tulir). Las
   non-bot commits in the last year and 9 authors in the last 90 days by our count at bd0b1eef4552 (the collector
   recounts).'
 checked: 2026-11-05
+icon:
+  file: mautrix-go.webp
+  source: "https://avatars.githubusercontent.com/u/88519669?v=4&s=256"
+  licence: null
+  note: "the mautrix organisation's avatar on GitHub"
+  checked: 2026-11-05

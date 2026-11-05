@@ -41,3 +41,9 @@ notes: 'matrix.org lists it as "mtxclient" (Obsolete, C++, maintainer: mujx). La
   recounts). The original repo (mujx/mtxclient, listed on matrix.org as obsolete, last commit 2019) is kept as a
   second repo; Nheko-Reborn continued it.'
 checked: 2026-11-05
+icon:
+  file: mtxclient.webp
+  source: "https://avatars.githubusercontent.com/u/46657606?v=4&s=256"
+  licence: null
+  note: "Nheko's logo: the Nheko-Reborn organisation's avatar on GitHub (mtxclient is Nheko's client library)"
+  checked: 2026-11-05

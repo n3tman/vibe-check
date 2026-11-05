@@ -39,3 +39,9 @@ notes: 'Last commit 2021-04-16; GitHub search did not return the repo, so its ar
   were not read. README: "a fork (not successor)" of mxisd. LICENSE is the GNU AGPL v3 (-only vs -or-later
   not checked).'
 checked: 2026-11-05
+icon:
+  file: ma1sd.webp
+  source: "https://github.com/ma1uta/ma1sd/blob/ae5864cd91f7db57c3a99b7847c3c327980e74e8/media/mx-id-icon.png"
+  licence: "AGPL-3.0-only"
+  note: "mxisd's logo, which this fork (ma1sd) still ships"
+  checked: 2026-11-05

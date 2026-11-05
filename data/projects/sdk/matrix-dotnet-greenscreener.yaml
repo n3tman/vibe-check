@@ -34,3 +34,10 @@ notes: 'matrix.org lists it as "matrix_dotnet" (Obsolete, C#, maintainer: Greens
   0 non-bot commits in the last year and 0 authors in the last 90 days by our count at 8376e6d1d500 (the collector
   recounts).'
 checked: 2026-11-05
+icon:
+  file: matrix-dotnet-greenscreener.svg
+  source: "https://gitlab.com/Greenscreener/matrix-dotnet/-/blob/8376e6d1d500ed170da647a2b7b0ecf54ae40c13/docs/images/logo.svg"
+  licence: "GPL-3.0-or-later"
+  note: null
+  backing: light
+  checked: 2026-11-05

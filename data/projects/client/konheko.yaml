@@ -83,3 +83,9 @@ ai:
 notes: >-
   README: "still very much WIP and you probably shouldn't use it yet". Last commit 2021-07-07.
 checked: '2026-11-05'
+icon:
+  file: konheko.svg
+  source: "https://nheko.im/nheko-reborn/konheko/-/blob/065884e3b47919a0b92611630b1919155dd5c385/icons/harbour-konheko.svg"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

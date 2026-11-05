@@ -33,3 +33,9 @@ ai:
 notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-10-29, 4 non-bot
   commits in the last year and 1 authors in the last 90 days by our count at 59f3c6aa5b18 (the collector recounts).
 checked: 2026-11-05
+icon:
+  file: polyjuice-client.webp
+  source: "https://gitlab.com/uploads/-/system/group/avatar/12703366/polyjuice.png?v=1639769021"
+  licence: null
+  note: "the polyjuice group's avatar on gitlab.com"
+  checked: 2026-11-05
