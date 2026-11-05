@@ -1,0 +1,63 @@
+{
+ "collector_version": "1",
+ "run_at": "2026-11-05T04:06:48+00:00",
+ "bot_names": [
+  "dependabot",
+  "renovate",
+  "renovate-bot",
+  "weblate",
+  "hosted weblate",
+  "github-actions",
+  "gitlab-bot",
+  "forgejo-actions",
+  "pre-commit-ci",
+  "mergify",
+  "snyk-bot",
+  "greenkeeper",
+  "imgbot",
+  "allcontributors",
+  "semantic-release-bot",
+  "release-please",
+  "codecov",
+  "deepsource-autofix",
+  "transifex",
+  "crowdin",
+  "translate bot",
+  "translations bot",
+  "localazy",
+  "pyup-bot",
+  "depfu",
+  "stale",
+  "copybara"
+ ],
+ "ai_bot_tools": [
+  "aider",
+  "amp",
+  "claude",
+  "coderabbit",
+  "codex",
+  "copilot",
+  "cursor",
+  "devin",
+  "gemini",
+  "jules",
+  "openhands",
+  "sweep"
+ ],
+ "weeks": 52,
+ "summary": {
+  "projects": 4,
+  "written": 3,
+  "unchanged": 1,
+  "repos_ok": 5,
+  "repos_failed": [],
+  "api_errors": [
+   "https://github.com/element-hq/element-x-android: HTTPError: HTTP Error 403: Forbidden",
+   "https://github.com/element-hq/element-x-ios: HTTPError: HTTP Error 403: Forbidden",
+   "https://github.com/element-hq/element-desktop: HTTPError: HTTP Error 403: Forbidden"
+  ],
+  "seconds": 60,
+  "http_calls": 24,
+  "project_errors": []
+ }
+}

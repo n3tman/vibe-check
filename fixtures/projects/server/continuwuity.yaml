@@ -1,0 +1,29 @@
+slug: continuwuity
+name: Continuwuity (fixture)
+category: server
+kind: homeserver
+homepage: https://continuwuity.org
+summary: Fixture. A community-run Rust homeserver, continuing conduwuit.
+repos:
+  - {url: https://forgejo.ellis.link/continuwuation/continuwuity, forge: forgejo, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: beta
+platforms: [server]
+licence: Apache-2.0
+fork_of: conduit
+distribution: [docker]
+funding: []
+features:
+  language: Rust
+  federation: {value: yes, how: claimed, source: https://forgejo.ellis.link/continuwuation/continuwuity}
+  native_sliding_sync: {value: yes, how: claimed, source: https://forgejo.ellis.link/continuwuation/continuwuity}
+  msc:
+    - {msc: 4186, state: stable, flag: null, source: https://forgejo.ellis.link/continuwuation/continuwuity}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage: {value: none-found, evidence: []}
+  in_product: {value: none-found, note: null, source: null}
+notes: Fixture for a self-hosted Forgejo project; not checked.
+checked: 2026-11-05
