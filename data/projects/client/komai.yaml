@@ -1,0 +1,197 @@
+slug: komai
+name: Komai
+category: client
+kind: desktop
+homepage: https://komai.chat
+summary: A desktop-first Qt/QML Matrix client by etke.cc, a fork of Nheko rebuilt around the Rust
+  matrix-sdk, developed largely with AI coding agents.
+repos:
+- url: https://github.com/etkecc/komai
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/komai/
+  other:
+  - PLAN.md extra sources (listed there under bots and tools; matrix.org lists it as a client)
+maturity: beta
+platforms:
+- linux
+- windows
+- macos
+apps:
+- os: linux
+  tech: qt
+  status: beta
+  stores:
+  - name: flatpak
+    url: https://github.com/etkecc/komai/releases
+  - name: snap
+    url: https://github.com/etkecc/komai/releases
+  - name: aur
+    url: https://aur.archlinux.org/packages/komai
+  - name: appimage
+    url: https://github.com/etkecc/komai/releases
+  source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/README.md
+  min_os: null
+- os: windows
+  tech: qt
+  min_os: 10 22H2
+  status: beta
+  stores:
+  - name: zip
+    url: https://github.com/etkecc/komai/releases
+  source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/README.md
+- os: macos
+  tech: qt
+  min_os: '13.3'
+  status: beta
+  stores:
+  - name: homebrew
+    url: https://github.com/etkecc/homebrew-komai
+  - name: dmg
+    url: https://github.com/etkecc/komai/releases
+  source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/README.md
+  note: Apple Silicon only, not notarised.
+licence: GPL-3.0-or-later
+fork_of: nheko
+distribution:
+- aur
+- homebrew
+- snap
+- appimage
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk 0.19.0 (Rust core via FFI, C++/QML UI)
+    how: code
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/src/rust/Cargo.toml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/src/rust/Cargo.toml
+    note: matrix-sdk feature e2e-encryption.
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/src/encryption/SelfVerificationStatus.cpp
+  key_backup:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/features/encryption-keys.md
+  sliding_sync:
+    value: not-found
+    how: code
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/src/matrix/backend/MatrixBackendRuntimeService.h
+    note: Code comments mention sliding sync; not confirmed which mode is used.
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/src/auth/LoginPageDiscovery.cpp
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/features/application-profiles.md
+    note: Via application profiles.
+  threads:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/features/threads.md
+    note: '"Discord-style threads".'
+  spaces:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/features/communities-sidebar.md
+  voip_1to1:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/features/legacy-calls.md
+    note: Legacy 1:1 calls on Linux and Windows builds, not macOS.
+  group_calls:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/features/element-call.md
+    note: Element Call / MatrixRTC built in.
+  reactions: not-found
+  edits: not-found
+  replies:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/README.md
+  polls: not-found
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/src/rust/src/matrix_backend/image_packs_legacy.rs
+  stickers:
+    value: partial
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/features/stickers.md
+    note: '"Sending stickers from the composer is not supported."'
+  location: not-found
+  voice_messages:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/features/voice-transcription.md
+    note: Voice messages, plus optional speech-to-text.
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/src/rust/src/matrix_backend/runtime_room_list/enrich.rs
+  presence: not-found
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/src/matrix/backend/MatrixBackendRuntimeServiceTimeline.cpp
+  moderation_tools: not-found
+  accessibility:
+    value: partial
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/README.md
+    note: Built-in themes tuned for WCAG AA contrast.
+  translations:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/maintainers/translations.md
+    note: 30+ languages, with AI-assisted gap filling.
+  telemetry:
+    value: none-found
+    how: code
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/src/app/MainApplication.cpp
+  default_homeserver: not-found
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/README.md
+    note: C++/QML + Rust (CMake, Cargo, just); GPL-3.0-or-later, no CLA.
+ai:
+  policy:
+    value: encouraged
+    quote: >-
+      Anyone can use AI and send Pull Requests for new features and bugfixes. However, large changes
+      require engineering judgment [...] If you're not comfortable reviewing and defending the code
+      your AI produces, please submit an Issue instead.
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/ai.md
+  dev_usage:
+    value: regular
+    evidence:
+    - >-
+      README: "Komai is built with AI"; docs/user-guide/ai.md: "Komai is a largely AI-vibe-engineered
+      Matrix chat application" (Claude Code and Codex).
+    - >-
+      About 1,575 of 3,564 non-bot commits in the last 365 days (about 44 %) carry an AI co-author
+      trailer, mostly Claude.
+    - >-
+      CLAUDE.md and AGENTS.md at the repo root; Claude-assisted translation tooling in bin/translations/.
+  in_product:
+    value: optional
+    note: >-
+      Optional voice transcription (speech-to-text) through any OpenAI-compatible API, cloud or self-hosted;
+      a local MCP server lets AI hosts such as Claude Code read and act on a running profile.
+    source: https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/docs/user-guide/features/voice-transcription.md
+notes: >-
+  matrix.org maturity: Beta. PLAN.md lists Komai among bots and tools (lane 5); it is a chat client,
+  so lane 2 writes it. Lane 5 should not add a second komai file.
+checked: '2026-11-05'
