@@ -1,0 +1,44 @@
+slug: sygnal
+name: Sygnal
+category: tool
+kind: push-gateway
+homepage: https://github.com/element-hq/sygnal
+summary: The reference Matrix push gateway, relaying homeserver push notifications to APNs, Firebase (GCM/FCM)
+  and WebPush.
+repos:
+- url: https://github.com/element-hq/sygnal
+  forge: github
+  role: main
+- url: https://github.com/matrix-org/sygnal
+  forge: github
+  role: other
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: [docker, pypi]
+funding: []
+features:
+  purpose: {value: 'push gateway (APNs, FCM/GCM, WebPush)', how: code, source: 'https://github.com/element-hq/sygnal/blob/710f0f60a129139a6968fc65b1ed84dfe76c47fd/sygnal/gcmpushkin.py'}
+  framework: {value: 'own (Python, Twisted)', how: claimed, source: 'https://github.com/element-hq/sygnal/blob/710f0f60a129139a6968fc65b1ed84dfe76c47fd/README.md'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/element-hq/sygnal/blob/710f0f60a129139a6968fc65b1ed84dfe76c47fd/README.md',
+    note: 'not applicable: forwards push payloads'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/element-hq/sygnal/blob/710f0f60a129139a6968fc65b1ed84dfe76c47fd/README.md',
+    note: pip or Docker; run by app publishers}
+  config: {value: sygnal.yaml, how: claimed, source: 'https://github.com/element-hq/sygnal/blob/710f0f60a129139a6968fc65b1ed84dfe76c47fd/README.md'}
+  ai_backend: {value: none-found, how: claimed, source: 'https://github.com/element-hq/sygnal/blob/710f0f60a129139a6968fc65b1ed84dfe76c47fd/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 10 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 710f0f60a129
+  in_product: {value: none-found, note: null, source: null}
+notes: 'Dual-licensed by Element: AGPL v3 ("version 3 of the License", no "or later") or an Element commercial
+  licence. The old matrix-org/sygnal repo is archived; development continues at element-hq/sygnal. CONTRIBUTING.md
+  has no statement on AI.'
+checked: 2026-11-05

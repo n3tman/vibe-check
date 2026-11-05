@@ -1,0 +1,38 @@
+slug: ess-helm
+name: Element Server Suite Community (ess-helm)
+category: tool
+kind: deployment
+homepage: https://element.io/server-suite/community
+summary: Element's Helm charts that deploy a Matrix stack (Synapse, Matrix Authentication Service, Element
+  Web, Element Call backend, …) on Kubernetes.
+repos:
+- url: https://github.com/element-hq/ess-helm
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/distributions/
+  other: []
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: [helm]
+funding: []
+features:
+  purpose: {value: deployment (Kubernetes Helm charts for a full Matrix stack), how: claimed, source: 'https://github.com/element-hq/ess-helm/blob/2775f542938152267b0c133faeaffab8e993b5d1/README.md'}
+  framework: {value: Helm / Kubernetes, how: claimed, source: 'https://github.com/element-hq/ess-helm/blob/2775f542938152267b0c133faeaffab8e993b5d1/README.md'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/element-hq/ess-helm/blob/2775f542938152267b0c133faeaffab8e993b5d1/README.md',
+    note: 'not applicable: deploys services'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/element-hq/ess-helm/blob/2775f542938152267b0c133faeaffab8e993b5d1/README.md',
+    note: any Kubernetes distribution; the guide uses K3s. ESS Pro is Element's commercial edition}
+  config: {value: Helm values files, how: claimed, source: 'https://github.com/element-hq/ess-helm/blob/2775f542938152267b0c133faeaffab8e993b5d1/README.md'}
+  ai_backend: {value: none-found, how: claimed, source: 'https://github.com/element-hq/ess-helm/blob/2775f542938152267b0c133faeaffab8e993b5d1/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 1991 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 2775f5429381
+  in_product: {value: none-found, note: null, source: null}
+notes: Found on matrix.org's distributions list. No CONTRIBUTING file at the checked commit.
+checked: 2026-11-05
