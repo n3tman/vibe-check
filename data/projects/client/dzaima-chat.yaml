@@ -1,0 +1,88 @@
+slug: dzaima-chat
+name: dzaima/chat
+category: client
+kind: desktop
+homepage: https://github.com/dzaima/chat
+summary: A keyboard-oriented Java desktop chat client for Matrix with its own UI toolkit.
+repos:
+- url: https://github.com/dzaima/chat
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub topic matrix-client
+maturity: beta
+platforms:
+- linux
+- windows
+- macos
+apps:
+- os: linux
+  tech: other
+  status: beta
+  source: https://github.com/dzaima/chat/blob/356c530f2d4a6e6f5243cdb80457613fdb2d2b9c/README.md
+  note: Java 11+, built from source with build.py.
+  min_os: null
+  stores: []
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own (Java)
+    how: code
+    source: https://github.com/dzaima/chat/blob/356c530f2d4a6e6f5243cdb80457613fdb2d2b9c/README.md
+  e2ee: not-found
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/dzaima/chat/blob/356c530f2d4a6e6f5243cdb80457613fdb2d2b9c/README.md
+    note: Several accounts in accounts/profile.json.
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver:
+    value: 'no'
+    how: claimed
+    source: https://github.com/dzaima/chat/blob/356c530f2d4a6e6f5243cdb80457613fdb2d2b9c/README.md
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No attributed commits among 30 commits in the last 365 days; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'Our reading: beta, one maintainer, built from source only. Last commit 2026-09-25.'
+checked: '2026-11-05'

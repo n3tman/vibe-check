@@ -25,7 +25,7 @@ apps:
     url: https://openrepos.net/content/deepbluev7/konheko
   source: https://nheko.im/nheko-reborn/konheko/-/blob/065884e3b47919a0b92611630b1919155dd5c385/README.md
   min_os: null
-licence: GPL-3.0
+licence: GPL-3.0-only
 fork_of: null
 distribution: []
 funding: []

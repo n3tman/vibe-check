@@ -1,0 +1,90 @@
+slug: chooj
+name: chooj
+category: client
+kind: mobile (feature phone)
+homepage: https://chooj.app
+summary: A Matrix client for KaiOS feature phones with VoIP calls; no longer developed.
+repos:
+- url: https://codeberg.org/chooj/chooj
+  forge: forgejo
+  role: main
+- url: https://github.com/farooqkz/chooj
+  forge: github
+  role: other
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/chooj/
+  other:
+  - GitHub topic matrix-client (archived GitHub copy)
+maturity: unmaintained
+platforms:
+- other
+apps:
+- os: other
+  tech: webview
+  min_os: KaiOS 2.5
+  status: discontinued
+  source: https://codeberg.org/chooj/chooj/src/commit/763013c554bead6c80de2c43ba7cc44de77e7603/README.md
+  stores: []
+licence: GPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-js-sdk ^26.0.0
+    how: code
+    source: https://codeberg.org/chooj/chooj/src/commit/763013c554bead6c80de2c43ba7cc44de77e7603/package.json
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/chooj.md
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1:
+    value: 'yes'
+    how: claimed
+    source: https://codeberg.org/chooj/chooj/src/commit/763013c554bead6c80de2c43ba7cc44de77e7603/README.md
+    note: '"Matrix client for KaiOS with VoIP call support"; matrix.org lists voip_1to1 as unsupported.'
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No commits in the last 365 days; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  README: "Given the state of KaiOS, chooj is no longer developed or maintained". matrix.org maturity:
+  Obsolete. Last commit 2025-08-03.
+checked: '2026-11-05'
