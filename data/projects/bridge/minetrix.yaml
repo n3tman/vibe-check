@@ -15,7 +15,7 @@ sources:
 maturity: unmaintained
 platforms:
 - server
-licence: MIT
+licence: BSD-2-Clause
 fork_of: null
 distribution: []
 funding: []
@@ -64,5 +64,6 @@ ai:
     value: none-found
     note: no generative-AI features found in the README or dependency manifests
     source: null
-notes: Last commit 2019-10-13.
+notes: 'Last commit 2019-10-13. Licence: BSD-2-Clause (LICENSE at
+  https://github.com/rrerrNet/Minetrix/blob/dd3367013234fd5acdd23855f2a15377e22b0390/LICENSE, checked 2026-11-05).'
 checked: 2026-11-05

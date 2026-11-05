@@ -16,7 +16,11 @@ summary: One neutral line on what it is.
 repos:                      # the collector reads these
   - url: https://github.com/cinnyapp/cinny
     forge: github           # github | gitlab | forgejo | gitea | sourcehut | other
-    role: main              # main | desktop | android | ios | server | other
+    role: main              # main | desktop | android | ios | server | other | mirror | upstream
+                            # upstream: a library the app builds on (Trixnity for Tacit), measured
+                            # but left out of the project's own numbers; mirror: the same code
+                            # elsewhere, counted once (repos sharing half their commits are
+                            # treated the same way automatically)
 sources:                    # where the project was found
   matrix_org_listing: https://matrix.org/ecosystem/clients/cinny/   # or null
   other: []                 # reddit post, the matrix.org community space, a blog, …
@@ -67,8 +71,10 @@ simplified sliding sync, or the older MSC3575 proxy: say which in the note), `oi
 `custom_emoji` (MSC2545 image packs), `stickers`, `location`, `voice_messages`,
 `rich_text_editor`, `url_previews`, `push_notifications`, `private_read_receipts`,
 `presence`, `room_upgrades`, `moderation_tools`, `accessibility` (screen-reader work found?),
-`translations` (platform and language count), `telemetry` (`none-found` | `opt-in` |
-`opt-out`, name the service: Sentry, PostHog, Matomo, …), `default_homeserver` (matrix.org or
+`translations` (platform and language count), `telemetry` (`none-found` (looked, none) |
+`not-found` (could not tell) | `opt-in` | `opt-out`, name the service: Sentry, PostHog, Matomo,
+…; when the collector finds an SDK in the manifests and the value is `none-found` or
+`not-found`, a `note` says why, or `npm run validate` warns), `default_homeserver` (matrix.org or
 none or another), `fork_friendliness` (size in lines, build complexity, licence obligations:
 a short note for someone who would fork it).
 
@@ -159,6 +165,15 @@ paths, attributed commits and their share, bot authors, AI workflows), `telemetr
         checked: 2026-11-05
   ```
 - `apps[].note`: short free text about one app (minSdk, unsigned builds).
+- `features.crypto` (SDKs): free text naming the crypto library (vodozemac, libolm, …).
+
+## Checks (`npm run validate`)
+Errors stop the build: a file that does not match the schema, a feature value outside
+`yes | partial | no | planned | not-found` (bare or in a map) for a key not listed in `FREE_TEXT`,
+a telemetry value outside its list, a `fork_of` that is neither a slug nor a URL, a slug used
+twice. Warnings are listed and fail only with `--strict`: a `yes`, `partial` or `no` without a
+`source`, a client whose manifests name a telemetry SDK while `telemetry` says nothing was found
+and has no `note`, a project with repositories but no metrics, a metrics file with no project.
 - `features.spec_versions` (servers) may be a map with `versions: [...]` and a source.
 - `data/mscs.yaml` entries may carry `status_detail`, `labels` and `servers`.
 - Bot and tool features `purpose`, `framework`, `hosting`, `config`, `ai_backend` hold free text

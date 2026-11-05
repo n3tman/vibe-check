@@ -11,10 +11,10 @@ repos:
   role: main
 - url: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger
   forge: gitlab
-  role: other
+  role: upstream
 - url: https://gitlab.com/trixnity/trixnity
   forge: gitlab
-  role: other
+  role: upstream
 sources:
   matrix_org_listing: https://matrix.org/ecosystem/clients/tammy/
   other: []

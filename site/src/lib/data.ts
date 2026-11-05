@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { parse } from 'yaml';
-import { CATEGORIES, metricsSchema, mscSchema, projectSchema, type Msc, type Project } from './schema.ts';
+import { CATEGORIES, FEATURE_VALUES, TELEMETRY, isFreeTextFeature, metricsSchema, mscSchema, projectSchema, type Msc, type Project } from './schema.ts';
 
 export type Category = (typeof CATEGORIES)[number];
 
@@ -24,7 +24,10 @@ export interface Dataset {
   projects: Entry[];
   mscs: Msc[];
   collector: Record<string, any> | null;
+  /** Malformed files: the build stops. */
   errors: string[];
+  /** Things to reconcile by hand: `npm run validate` lists them, `--strict` fails on them. */
+  warnings: string[];
 }
 
 function repoRoot() {
@@ -115,8 +118,50 @@ export function loadDataset(): Dataset {
   const cf = path.join(dir, 'metrics', '_collector.json');
   if (fs.existsSync(cf)) collector = JSON.parse(fs.readFileSync(cf, 'utf8'));
 
+  const warnings: string[] = [];
+  crossCheck(projects, metrics, errors, warnings);
+
   projects.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
-  return { dir: rel(dir) || '.', projects, mscs, collector, errors };
+  return { dir: rel(dir) || '.', projects, mscs, collector, errors, warnings };
+}
+
+const NOT_FOUND = new Set(['not-found', 'none-found']);
+const valueOf = (raw: unknown) => (raw && typeof raw === 'object' && !Array.isArray(raw) ? (raw as { value?: unknown }).value : raw);
+
+/** Rules across fields and files that the per-file schema cannot express. */
+function crossCheck(projects: Entry[], metrics: Map<string, Metrics>, errors: string[], warnings: string[]) {
+  const slugs = new Set(projects.map((p) => p.slug));
+  for (const m of metrics.keys()) if (!slugs.has(m)) warnings.push(`metrics/${m}.json: no project file has the slug "${m}" (stale after a rename?)`);
+  for (const p of projects) {
+    const f = (p.features ?? {}) as Record<string, unknown>;
+    // fork_of names a project in the dataset, or is a URL.
+    if (p.fork_of && !/^https?:\/\//.test(p.fork_of) && !slugs.has(p.fork_of)) errors.push(`${p.file}: fork_of "${p.fork_of}" is neither a slug in the dataset nor a URL`);
+    for (const [k, raw] of Object.entries(f)) {
+      if (k === 'msc' || Array.isArray(raw)) continue;
+      const v = valueOf(raw);
+      // Bare values ("threads: yes") get the same check as maps ({value: yes, …}).
+      if (k === 'telemetry') {
+        if (typeof v === 'string' && !(TELEMETRY as readonly string[]).includes(v)) errors.push(`${p.file}: features.telemetry: "${v}" is not one of ${TELEMETRY.join(', ')}`);
+        continue;
+      }
+      if (isFreeTextFeature(k)) continue;
+      if (typeof v === 'string' && !(FEATURE_VALUES as readonly string[]).includes(v)) errors.push(`${p.file}: features.${k}: "${v}" is not one of ${FEATURE_VALUES.join(', ')} (or add the key to FREE_TEXT in schema.ts)`);
+      // Every yes / partial / no is a claim and carries its source.
+      const src = raw && typeof raw === 'object' ? (raw as { source?: unknown }).source : null;
+      if (typeof v === 'string' && ['yes', 'partial', 'no'].includes(v) && !src) warnings.push(`${p.file}: features.${k} is "${v}" with no source`);
+    }
+    const c = p.metrics?.combined;
+    if (p.repos.length && !p.metrics) warnings.push(`${p.file}: has repositories but no metrics yet (run the collector)`);
+    // The collector found an analytics or crash-report SDK; the hand value must say what it does.
+    const sdks = (c?.telemetry_sdks as string[] | undefined) ?? [];
+    if (p.category === 'client' && sdks.length) {
+      const t = f.telemetry;
+      const v = valueOf(t);
+      const note = t && typeof t === 'object' ? (t as { note?: string }).note : null;
+      if ((v == null || NOT_FOUND.has(String(v))) && !note)
+        warnings.push(`${p.file}: the collector found ${sdks.join(', ')} in the manifests but features.telemetry is "${v ?? 'missing'}" with no note: check whether it is opt-in, opt-out or compiled out`);
+    }
+  }
 }
 
 let cached: Dataset | null = null;

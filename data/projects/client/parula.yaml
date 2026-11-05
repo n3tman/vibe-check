@@ -51,7 +51,7 @@ apps:
   status: beta
   stores: []
   source: https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/README.md
-licence: not-found
+licence: EUPL-1.2
 fork_of: null
 distribution: []
 funding: []
@@ -177,7 +177,8 @@ features:
     value: not-found
   fork_friendliness:
     value: not-found
-    note: licence not identified from the LICENSE file head
+    note: 'EUPL-1.2 only, unless a subdirectory or file says otherwise (LICENSE at
+      https://github.com/parula-app/parula/blob/76dbee21056a4b714ebad12728e19591757d48e1/LICENSE)'
 ai:
   policy:
     value: none-found
@@ -192,11 +193,11 @@ ai:
     note: null
     source: null
 notes: 'Not a Matrix-first client; Matrix is one item in its feature list (README line 181). Licence:
-  the LICENSE file did not start with a standard licence header; check by hand.'
+  EUPL 1.2 only, from the LICENSE file''s prose header (checked 2026-11-05).'
 checked: '2026-11-05'
 icon:
   file: parula.webp
   source: "https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/frontend/asset/icon/general/logo-parula.svg"
-  licence: "not-found"
+  licence: "EUPL-1.2"
   note: null
   checked: 2026-11-05

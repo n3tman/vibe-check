@@ -32,6 +32,22 @@ def c(author="Ada", email="ada@example.org", days=1, msg="Fix a bug", committer=
         ("Improve claude-like naming in docs", set()),
         ("Add support for Cursor pagination", set()),
         ("Fix\n\nSigned-off-by: Claude Monet <claude@monet.fr>", set()),
+        # People who share a name with a tool, and ordinary words, are not AI credits.
+        ("Fix\n\nCo-authored-by: Devin Smith <devin.smith@example.org>", set()),
+        ("Fix\n\nCo-authored-by: Claude Dupont <claude.dupont@example.fr>", set()),
+        ("Fix\n\nCo-authored-by: Jules Lasne <jules@example.org>", set()),
+        ("Fix\n\nCo-authored-by: Patrick Cline <pc@example.org>", set()),
+        ("Fix\n\nCo-authored-by: Claude <claude.martin@example.org>", set()),
+        ("Keep the text selection created by cursor keys", set()),
+        ('Revert "Generated with Claude Code" footer from the template', set()),
+        # Real credits in the forms seen in the dataset.
+        ("Fix\n\nCo-authored-by: Junie <junie@jetbrains.com>", {"junie"}),
+        ("Fix\n\nCo-authored-by: Qwen-Coder <qwen-coder@alibabacloud.com>", {"qwen"}),
+        ("Fix\n\nCo-authored-by: Claude Sonnet 4.5 (1M context) <noreply@anthropic.com>", {"claude"}),
+        ("Fix\n\nCo-authored-by: GitHub Copilot", {"copilot"}),
+        ("Fix\n\nAssisted-by: Claude", {"claude"}),
+        ("Summary:\nThe code of this diff was generated using OpenCode with the MiMo model. I reviewed it.", {"opencode"}),
+        ("Fix\n\n- Generated with Codex", {"codex"}),
     ],
 )
 def test_commit_ai_tools(msg, tools):
@@ -177,7 +193,11 @@ def test_agent_files():
 
 def test_workflows():
     assert ai.scan_workflow("steps:\n  - uses: anthropics/claude-code-action@v1\n") == ["claude-code-action"]
-    assert ai.scan_workflow("env:\n  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}") == ["llm-api-key"]
+    # An LLM key in CI usually tests the product's own AI feature; an image named after an agent
+    # the product ships is not AI used on the repository.
+    assert ai.scan_workflow("env:\n  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}") == []
+    assert ai.scan_workflow("jobs:\n  agent-opencode:\n    steps:\n      - name: Build and push agent-opencode") == []
+    assert ai.scan_workflow("steps:\n  - uses: sst/opencode/github@latest") == ["ai-review-action"]
     assert ai.scan_workflow("steps:\n  - uses: actions/checkout@v4") == []
     assert ai.is_workflow_path(".github/workflows/review.yml") and ai.is_workflow_path(".gitlab-ci.yml")
     assert not ai.is_workflow_path("docs/workflows/a.yml")
@@ -186,7 +206,8 @@ def test_workflows():
 @pytest.mark.parametrize(
     "agent,share,attributed,wf,bots,expected",
     [(0, 0.0, 0, 0, 0, "none-found"), (2, 0.0, 0, 0, 0, "config-only"), (0, 0.02, 4, 0, 0, "occasional"),
-     (0, 0.0, 0, 1, 0, "occasional"), (1, 0.06, 12, 0, 0, "regular"), (0, 0.004, 1, 0, 0, "occasional")],
+     (0, 0.0, 0, 1, 0, "occasional"), (1, 0.06, 12, 0, 0, "regular"), (0, 0.004, 1, 0, 0, "occasional"),
+     (0, 0.083, 1, 0, 0, "occasional"), (0, 0.054, 2, 0, 0, "occasional"), (0, 0.108, 4, 0, 0, "regular")],
 )
 def test_suggest_dev_usage(agent, share, attributed, wf, bots, expected):
     assert ai.suggest_dev_usage(agent, share, attributed, wf, bots) == expected
@@ -209,6 +230,10 @@ def test_repofiles():
     assert repofiles.security_policy(paths) == "SECURITY.md"
     assert repofiles.security_policy([".github/SECURITY.md"]) == ".github/SECURITY.md"
     assert repofiles.licence_file(paths) == "LICENSE"
+    assert repofiles.licence_file(["COPYING", "COPYING.LESSER", "README.md"]) == "COPYING.LESSER"
+    assert repofiles.licence_file(["LICENSE-AGPL.txt", "LICENSE.txt"]) == "LICENSE.txt"
+    assert repofiles.licence_file(["LICENSE-APACHE", "LICENSE-MIT"]) == "LICENSE-APACHE"
+    assert repofiles.licence_file(["docs/LICENSE"]) is None
     assert repofiles.detect_licence("GNU AFFERO GENERAL PUBLIC LICENSE\n   Version 3, 19 November 2007") == "AGPL-3.0"
     assert repofiles.detect_licence("Apache License\nVersion 2.0, January 2004") == "Apache-2.0"
 
@@ -282,3 +307,70 @@ def test_prerelease_tags():
         assert PRERELEASE.search(t), t
     for t in ["v1.12.0", "26.11.0", "release-2024-01", "sdk-v0.9.1"]:
         assert not PRERELEASE.search(t), t
+
+
+def test_tool_of_identity():
+    assert ai.tool_of_identity("Claude Opus 4.5 <noreply@anthropic.com>") == "claude"
+    assert ai.tool_of_identity("Copilot <175728472+Copilot@users.noreply.github.com>") == "copilot"
+    assert ai.tool_of_identity("Jane Doe <jane@anthropic.com>") is None
+    assert ai.tool_of_identity("Devin AI") == "devin"
+    assert ai.tool_of_identity("Devin Smith") is None
+
+
+# --- a change landed twice counts once ---------------------------------------------------
+
+def test_unique_changes():
+    from vibecheck.activity import unique_changes
+
+    written = NOW - timedelta(days=40)
+    a = Commit("a1", "Ada", "ada@example.org", "Ada", "ada@example.org", NOW - timedelta(days=3), "fix(x): y", written)
+    b = Commit("b2", "Ada", "ada@example.org", "Ada", "ada@example.org", NOW - timedelta(days=2), "fix(x): y", written)
+    d = Commit("d3", "Ada", "ada@example.org", "Ada", "ada@example.org", NOW - timedelta(days=1), "fix(x): y", NOW - timedelta(days=1))
+    assert [x.sha for x in unique_changes([b, a, d])] == ["b2", "d3"]
+    assert Activity([b, a, d], NOW).metrics()["commits_30d"] == 2
+
+
+# --- several repos in one project ---------------------------------------------------------
+
+def _repo(url, role, shas, loc=100, tags=1, agent=0):
+    return {"url": url, "role": role, "ok": True, "loc": {"Rust": loc}, "tags_365d": tags, "last_tag": None, "last_tag_date": None,
+            "ai_scan": {"agent_files": [{}] * agent, "workflows": []}, "telemetry_scan": {"sdks": []}}, [
+        Commit(s, "Ada", "ada@example.org", "Ada", "ada@example.org", NOW - timedelta(days=i + 1), f"change {s}\n\nCo-authored-by: Claude <noreply@anthropic.com>" if i == 0 else f"change {s}")
+        for i, s in enumerate(shas)]
+
+
+def test_combine_mirrors_and_upstream():
+    from vibecheck.collect import combine
+
+    main, mc = _repo("https://a/main", "main", ["s1", "s2", "s3", "s4"], agent=1)
+    mirror, rc = _repo("https://b/mirror", "other", ["s1", "s2", "s3", "s4"], agent=1)
+    lib, lc = _repo("https://c/lib", "upstream", [f"l{i}" for i in range(50)], loc=10_000, tags=9)
+    out = combine([main, mirror, lib], [mc, rc, lc], NOW)
+    assert mirror["duplicate_of"] == "https://a/main" and "duplicate_of" not in main
+    assert out["loc_total"] == 100 and out["tags_365d"] == 1  # the mirror's copy and the library are not added
+    assert out["commits_365d"] == 4 and out["repos_counted"] == ["https://a/main", "https://b/mirror"]
+    assert out["ai"]["commits_365d"] == 4 and out["ai"]["attributed_commits_365d"] == 1 and out["ai"]["agent_files"] == 1
+    only_lib = combine([lib], [lc], NOW)  # a project with only an upstream repo still gets numbers
+    assert only_lib["commits_365d"] == 50
+
+
+# --- GitHub issue response: comments and issues cover the same stretch ---------------------
+
+def test_github_issue_window_follows_capped_comments():
+    start = NOW - timedelta(days=20)  # the oldest comment the 10-page cap reaches
+    comments = [{"issue_url": f"https://api/issues/{1 + (k % 5)}", "created_at": (NOW - timedelta(days=20) * k / 999).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                 "user": {"login": "maintainer"}} for k in range(1000)]
+    issues = [{"number": n, "created_at": (NOW - timedelta(days=d)).strftime("%Y-%m-%dT%H:%M:%SZ"), "user": {"login": "reporter"}}
+              for n, d in ((1, 1), (2, 5), (3, 10), (4, 15), (5, 19), (6, 60), (7, 90))]
+
+    class FakeHttp:
+        def get(self, url, h=None):
+            if "/issues/comments" in url:
+                page = int(url.rsplit("page=", 1)[1])
+                return comments[(page - 1) * 100: page * 100], {}
+            return (issues if url.endswith("page=1") else []), {}
+
+    out = {}
+    forges._github_issues(FakeHttp(), "https://api", {}, NOW, out)
+    assert out["issues_sampled"] == 5 and out["issues_responded"] == 5  # issues 6 and 7 predate the comments read
+    assert out["issues_window_from"].startswith(start.date().isoformat())

@@ -13,7 +13,7 @@ sources:
 maturity: unmaintained
 platforms:
 - server
-licence: BSD-2-Clause
+licence: ISC
 fork_of: null
 distribution: []
 funding: []
@@ -58,6 +58,7 @@ ai:
     value: none-found
     note: null
     source: null
-notes: matrix.org labels it "Obsolete"; last commit 2023-05-01. Licence from matrix.org ("BSD"); the forge
-  reports NOASSERTION.
+notes: matrix.org labels it "Obsolete"; last commit 2023-05-01. matrix.org says "BSD", but the LICENSE file is the
+  ISC text (https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/LICENSE,
+  checked 2026-11-05); the forge reports NOASSERTION.
 checked: '2026-11-05'

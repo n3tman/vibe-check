@@ -9,61 +9,120 @@ from __future__ import annotations
 import posixpath
 import re
 
-# Tool names as they appear in trailers and "Generated with" lines.
-_TOOLS: dict[str, str] = {
-    "claude": r"claude|anthropic",
-    "copilot": r"copilot",
-    "codex": r"codex|chatgpt|openai|gpt-?[345o]",
-    "gemini": r"gemini|google-labs-jules|jules",
-    "cursor": r"cursor(agent)?",
-    "devin": r"devin",
-    "aider": r"aider",
-    "windsurf": r"windsurf|codeium",
-    "cline": r"\bcline\b|roo ?code",
-    "amp": r"\bamp\b|ampcode",
-    "opencode": r"opencode",
-    "junie": r"junie",
-    "qwen": r"qwen",
-    "kiro": r"\bkiro\b",
-    "amazon-q": r"amazon q\b|codewhisperer",
-    "tabnine": r"tabnine",
-    "openhands": r"openhands",
-    "coderabbit": r"coderabbit",
+# A trailer credits an AI tool only when it names one: a known AI address, or a name made of a
+# tool's name plus model or product words ("Claude Opus 4.5", "GitHub Copilot", "Qwen-Coder").
+# A person who shares a name with a tool ("Claude Dupont", "Devin Smith", "Patrick Cline") is
+# not an AI.
+_AI_EMAILS: dict[str, re.Pattern[str]] = {
+    tool: re.compile(pat, re.I)
+    for tool, pat in {
+        "claude": r"^(noreply|claude)@anthropic\.com$|claude(-code)?\[bot\]",
+        "copilot": r"\+copilot@users\.noreply\.github\.com$|^copilot@github\.com$|copilot-swe-agent|copilot\[bot\]",
+        "codex": r"^(codex|noreply)@openai\.com$|chatgpt-codex-connector|codex\[bot\]",
+        "gemini": r"gemini-code-assist|gemini-cli|google-labs-jules|^(jules|gemini)@google\.com$",
+        "cursor": r"^cursoragent@cursor\.com$|cursor(agent)?\[bot\]",
+        "devin": r"devin-ai-integration|devin\[bot\]|@devin\.ai$",
+        "aider": r"@aider\.chat$",
+        "amp": r"^amp@ampcode\.com$",
+        "junie": r"^junie@jetbrains\.com$",
+        "openhands": r"^openhands@all-hands\.dev$|openhands(-agent|\[bot\])",
+        "opencode": r"@opencode\.ai$|opencode(-agent)?\[bot\]",
+        "qwen": r"^qwen-coder@",
+        "windsurf": r"@(codeium|windsurf)\.com$",
+        "coderabbit": r"coderabbitai\[bot\]",
+    }.items()
 }
-_TOOL_RES = {k: re.compile(v, re.I) for k, v in _TOOLS.items()}
+# Words that name a tool, and the tool they stand for.
+_TOOL_WORDS = {
+    "claude": "claude", "copilot": "copilot", "codex": "codex", "chatgpt": "codex", "gpt": "codex", "gemini": "gemini",
+    "jules": "gemini", "cursor": "cursor", "cursoragent": "cursor", "devin": "devin", "aider": "aider",
+    "windsurf": "windsurf", "codeium": "windsurf", "cline": "cline", "roo": "cline", "roocode": "cline", "amp": "amp",
+    "ampcode": "amp", "opencode": "opencode", "junie": "junie", "qwen": "qwen", "kiro": "kiro", "codewhisperer": "amazon-q",
+    "tabnine": "tabnine", "openhands": "openhands", "coderabbit": "coderabbit", "coderabbitai": "coderabbit",
+}
+# Vendor names: a tool only when nothing more specific is named ("Anthropic", "OpenAI").
+_VENDOR_WORDS = {"anthropic": "claude", "openai": "codex"}
+# Words that may sit next to a tool's name in its own trailer.
+_QUALIFIERS = {
+    "code", "coder", "cli", "agent", "ai", "assistant", "opus", "sonnet", "haiku", "fable", "mythos", "max", "pro", "flash",
+    "lite", "ultra", "mini", "nano", "turbo", "preview", "instant", "thinking", "high", "low", "medium", "bot", "swe",
+    "connector", "integration", "labs", "github", "google", "jetbrains", "amazon", "the", "model", "chat", "context",
+    "cloud", "free", "via", "in", "with", "and", "vscode", "intellij", "zed",
+}
+_VERSIONISH = re.compile(r"^(v?\d+([.]\d+)*[a-z]*|o\d+|\d+[a-z]+)$", re.I)
+# A tool name that is also a given name counts on its own only with an AI or no-reply address.
+_GIVEN_NAMES = {"claude", "devin", "jules", "junie", "cline", "amp", "kiro", "roo"}
+_NOREPLY = re.compile(r"no-?reply|users\.noreply\.github\.com", re.I)
+_IDENT = re.compile(r"^\s*(?P<name>[^<]*?)\s*(<(?P<email>[^>]*)>)?\s*$")
+
+
+def tool_of_identity(value: str) -> str | None:
+    """The AI tool a trailer value ("Name <email>", or a bare name) stands for, or None."""
+    m = _IDENT.match(value)
+    name, email = (m.group("name"), m.group("email") or "") if m else (value, "")
+    for tool, pat in _AI_EMAILS.items():
+        if email and pat.search(email.strip()):
+            return tool
+    words = [w for w in re.split(r"[\s\-_/:,()\[\]]+", name.lower()) if w]
+    if not words:
+        return None
+    tools = [_TOOL_WORDS[w] for w in words if w in _TOOL_WORDS]
+    vendors = [_VENDOR_WORDS[w] for w in words if w in _VENDOR_WORDS]
+    if not tools and not vendors:
+        return None
+    if any(w not in _TOOL_WORDS and w not in _VENDOR_WORDS and w not in _QUALIFIERS and not _VERSIONISH.match(w) for w in words):
+        return None  # another word in the name: a person, not a tool
+    if len(words) == 1 and words[0] in _GIVEN_NAMES and email and not _NOREPLY.search(email):
+        return None  # "Claude <claude@example.org>" is a person called Claude
+    return (tools or vendors)[0]
+
 
 # Trailers whose value names a tool: Co-authored-by, Assisted-by, Generated-by, …
 _TRAILER = re.compile(
     r"^\s*(co-authored-by|assisted-by|generated-by|ai-assisted-by|coded-by|made-with)\s*:\s*(.+)$",
     re.I | re.M,
 )
+_TOOL_ALT = (
+    r"claude( code)?|copilot|chatgpt|codex|cursor|gemini( cli)?|aider|devin|windsurf|amp|opencode|jules|junie|"
+    r"openhands|kiro|qwen code"
+)
+# "🤖 Generated with [Claude Code](…)", "Generated by Copilot": a statement that opens its line.
 _GENERATED = re.compile(
-    r"(generated|created|written|made|authored|co-authored|assisted)\s+(with|by|using|via)\s+"
-    r"\[?(claude( code)?|copilot|chatgpt|codex|cursor|gemini( cli)?|aider|devin|windsurf|amp|"
-    r"opencode|jules|junie|openhands|kiro|qwen code)\b",
+    r"^[\W_]{0,8}(generated|created|written|made|authored|co-authored|assisted|built)\s+(with|by|using|via)\s+"
+    rf"\[?({_TOOL_ALT})\b",
+    re.I | re.M,
+)
+# "The code of this diff was generated using OpenCode": a passive statement anywhere, for tool
+# names that are no ordinary word or given name (not cursor, amp, devin, jules).
+_GENERATED_PASSIVE = re.compile(
+    r"\b(was|were|is|are|been|being)\s+(mostly\s+|partly\s+|largely\s+|fully\s+|entirely\s+)?"
+    r"(generated|written|created|made|produced|authored|assisted)\s+(with|by|using|via)\s+(the\s+help\s+of\s+)?"
+    r"\[?(claude( code)?|copilot|chatgpt|codex|gemini( cli)?|aider|windsurf|opencode|junie|openhands|kiro|qwen code)\b",
     re.I,
 )
 _AMP_THREAD = re.compile(r"^\s*amp-thread(-id)?\s*:", re.I | re.M)
 
 
 def tool_in(text: str) -> str | None:
-    for tool, pat in _TOOL_RES.items():
-        if pat.search(text):
-            return tool
+    """The tool a short tool phrase ("Claude Code", "Gemini CLI") names."""
+    for w in re.split(r"[\s\-_/:,()\[\]]+", text.lower()):
+        if w in _TOOL_WORDS:
+            return _TOOL_WORDS[w]
     return None
 
 
 def commit_ai_tools(message: str) -> set[str]:
-    """AI tools a commit message credits, from trailers and "Generated with" lines."""
+    """AI tools a commit message credits, from trailers and "Generated with" statements."""
     found: set[str] = set()
     for _key, value in _TRAILER.findall(message):
-        t = tool_in(value)
+        t = tool_of_identity(value)
         if t:
             found.add(t)
-    for m in _GENERATED.finditer(message):
-        t = tool_in(m.group(3))
-        if t:
-            found.add(t)
+    for pat, group in ((_GENERATED, 3), (_GENERATED_PASSIVE, 6)):
+        for m in pat.finditer(message):
+            t = tool_in(m.group(group))
+            if t:
+                found.add(t)
     if _AMP_THREAD.search(message):
         found.add("amp")
     return found
@@ -164,11 +223,13 @@ WORKFLOW_PATTERNS: dict[str, re.Pattern[str]] = {
     "pr-agent": re.compile(r"(codium-ai|qodo-ai)/pr-agent", re.I),
     "ai-review-action": re.compile(
         r"ai-pr-reviewer|ai-codereviewer|chatgpt-codereview|code-review-gpt|gpt-review|actions/ai-inference|"
-        r"sweepai/|cursor-agent|amp-action|opencode",
+        r"sweepai/|amp-action|sst/opencode|opencode-ai/|\bopencode (run|github)\b|\bcursor-agent (-p|--print)\b",
         re.I,
     ),
-    "llm-api-key": re.compile(r"\b(ANTHROPIC|OPENAI|GEMINI|CLAUDE_CODE_OAUTH)_(API_KEY|TOKEN)\b"),
+    "claude-code-oauth": re.compile(r"\bCLAUDE_CODE_OAUTH_TOKEN\b"),
 }
+# Not counted: an LLM API key in CI (OPENAI_API_KEY, …) usually tests a product's own AI feature,
+# and a product that ships an agent (an image called agent-opencode) is not AI used on the repo.
 
 
 def is_workflow_path(path: str) -> bool:
@@ -185,14 +246,19 @@ def scan_workflow(text: str) -> list[str]:
     return [name for name, pat in WORKFLOW_PATTERNS.items() if pat.search(text)]
 
 
+# Fewest attributed commits for "regular": one AI commit in twelve is 8 %, but not a habit.
+REGULAR_MIN_COMMITS = 3
+
+
 def suggest_dev_usage(agent_files: int, share: float | None, attributed: int, workflows: int, ai_bot_commits: int) -> str:
     """The rubric's thresholds, as a suggestion for the research lanes.
 
-    regular: 5 % or more of last-year commits attributed. occasional: 1 to 4 %, or AI
-    review/agent workflows. Below 1 % but at least one attributed commit is also reported
-    as occasional (the rubric has no lower step): the share is shown next to it.
+    regular: 5 % or more of last-year commits attributed, and at least REGULAR_MIN_COMMITS of
+    them. occasional: 1 to 4 %, or AI review/agent workflows. Below 1 % but at least one
+    attributed commit is also reported as occasional (the rubric has no lower step): the share
+    is shown next to it.
     """
-    if share is not None and share >= 0.05:
+    if share is not None and share >= 0.05 and attributed >= REGULAR_MIN_COMMITS:
         return "regular"
     if attributed > 0 or workflows > 0 or ai_bot_commits > 0:
         return "occasional"

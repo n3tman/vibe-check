@@ -12,7 +12,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from . import VERSION, ai, forges, gitrepo, loc, repofiles, telemetry
-from .activity import Activity, human_commits, status
+from .activity import Activity, human_commits, status, unique_changes
 from .authors import ai_bot_tool
 
 
@@ -49,13 +49,14 @@ def _iso(d: datetime | None) -> str | None:
     return d.isoformat() if d else None
 
 
-def ai_scan(commits: list[gitrepo.Commit], paths: list[str], repo: Path, forge: str, url: str, sha: str, now: datetime) -> dict:
+def attribution(commits: list[gitrepo.Commit], now: datetime) -> tuple[list[gitrepo.Commit], list[tuple[gitrepo.Commit, set[str]]], Counter, Counter]:
+    """Last year's changes (bots dropped, a change landed twice counted once), the ones that
+    credit an AI tool with the tools, and the tool and AI-bot tallies."""
     cut = now - timedelta(days=365)
-    recent = [c for c in human_commits(commits) if c.date >= cut]
+    recent = [c for c in human_commits(unique_changes(commits)) if c.date >= cut]
     tools: Counter[str] = Counter()
     bots: Counter[tuple[str, str]] = Counter()
-    examples = []
-    attributed = 0
+    credited = []
     for c in recent:
         found = ai.commit_ai_tools(c.message)
         bot = ai_bot_tool(c.author, c.email)
@@ -63,10 +64,18 @@ def ai_scan(commits: list[gitrepo.Commit], paths: list[str], repo: Path, forge: 
             found.add(bot)
             bots[(c.author, bot)] += 1
         if found:
-            attributed += 1
             tools.update(found)
-            if len(examples) < 8:
-                examples.append({"sha": c.sha, "url": forges.commit_url(forge, url, c.sha), "date": c.date.date().isoformat(), "tools": sorted(found)})
+            credited.append((c, found))
+    return recent, credited, tools, bots
+
+
+def ai_scan(commits: list[gitrepo.Commit], paths: list[str], repo: Path, forge: str, url: str, sha: str, now: datetime) -> dict:
+    recent, credited, tools, bots = attribution(commits, now)
+    attributed = len(credited)
+    examples = [
+        {"sha": c.sha, "url": forges.commit_url(forge, url, c.sha), "date": c.date.date().isoformat(), "tools": sorted(found)}
+        for c, found in credited[:8]
+    ]
     agent_files = [{**f, "url": forges.blob_url(forge, url, sha, f["path"].rstrip("/"))} for f in ai.find_agent_files(paths)]
     wf_paths = [p for p in paths if ai.is_workflow_path(p)][:40]
     gitrepo.prefetch(repo, wf_paths)
@@ -173,33 +182,63 @@ def collect_repo(spec: dict, ctx: Context) -> tuple[dict, list[gitrepo.Commit]]:
     return out, commits
 
 
-def combine(repos: list[dict], commits: list[gitrepo.Commit], now: datetime) -> dict | None:
-    ok = [r for r in repos if r.get("ok")]
-    if not ok:
+# Repos whose activity belongs to someone else: a library the app builds on (Tacit and Tammy
+# list Trixnity). They are measured and shown, but left out of the project's own numbers.
+NOT_OWN = {"upstream"}
+# Two repos that share at least this share of the smaller one's commits are one codebase (a
+# mirror, an old home, a copy): their commits are merged and their lines of code, tags, agent
+# files and workflows are counted once.
+SAME_CODEBASE = 0.5
+
+
+def _same_codebase(repos: list[dict], shas: list[set[str]]) -> None:
+    """Mark each repo that repeats an earlier one with `duplicate_of` (main repo first)."""
+    order = sorted(range(len(repos)), key=lambda i: (repos[i].get("role") != "main", i))
+    kept: list[int] = []
+    for i in order:
+        r = repos[i]
+        r.pop("duplicate_of", None)
+        twin = next(
+            (k for k in kept if shas[i] and shas[k] and len(shas[i] & shas[k]) >= SAME_CODEBASE * min(len(shas[i]), len(shas[k]))),
+            None,
+        )
+        if twin is None and r.get("role") == "mirror" and kept:
+            twin = kept[0]
+        if twin is not None:
+            r["duplicate_of"] = repos[twin]["url"]
+        else:
+            kept.append(i)
+
+
+def combine(repos: list[dict], commits_by_repo: list[list[gitrepo.Commit]], now: datetime) -> dict | None:
+    pairs = [(r, c) for r, c in zip(repos, commits_by_repo) if r.get("ok")]
+    if not pairs:
         return None
+    own = [(r, c) for r, c in pairs if r.get("role") not in NOT_OWN] or pairs
+    ok = [r for r, _ in own]
+    _same_codebase(ok, [{c.sha for c in cs} for _, cs in own])
+    distinct = [r for r in ok if not r.get("duplicate_of")]
     seen: set[str] = set()
     uniq = []
-    for c in commits:
-        if c.sha not in seen:
-            seen.add(c.sha)
-            uniq.append(c)
+    for _, cs in own:
+        for c in cs:
+            if c.sha not in seen:
+                seen.add(c.sha)
+                uniq.append(c)
     act = Activity(uniq, now)
     m = act.metrics()
     archived = all(r.get("archived") for r in ok)
-    attributed = sum(r["ai_scan"]["attributed_commits_365d"] for r in ok)
-    total = sum(r["ai_scan"]["commits_365d"] for r in ok)
+    recent, credited, tools, bots = attribution(uniq, now)
+    attributed, total = len(credited), len(recent)
     share = round(attributed / total, 4) if total else None
-    tools: Counter[str] = Counter()
-    for r in ok:
-        tools.update(r["ai_scan"]["tools"])
-    n_agent = sum(len(r["ai_scan"]["agent_files"]) for r in ok)
-    n_wf = sum(len(r["ai_scan"]["workflows"]) for r in ok)
-    n_bot = sum(b["commits_365d"] for r in ok for b in r["ai_scan"]["ai_bot_authors"])
+    n_agent = sum(len(r["ai_scan"]["agent_files"]) for r in distinct)
+    n_wf = sum(len(r["ai_scan"]["workflows"]) for r in distinct)
+    n_bot = sum(bots.values())
     tags = [(r["last_tag_date"], r["last_tag"], r["url"]) for r in ok if r.get("last_tag_date")]
-    last = max(tags) if tags else None
+    last = max(tags, key=lambda t: datetime.fromisoformat(t[0])) if tags else None
     main = next((r for r in ok if r.get("role") == "main"), ok[0])
     loc_total: Counter[str] = Counter()
-    for r in ok:
+    for r in distinct:
         loc_total.update(r.get("loc") or {})
 
     def total_of(key: str) -> int | None:
@@ -216,7 +255,7 @@ def combine(repos: list[dict], commits: list[gitrepo.Commit], now: datetime) -> 
         "last_tag": last[1] if last else None,
         "last_tag_date": last[0] if last else None,
         "last_tag_repo": last[2] if last else None,
-        "tags_365d": sum(r.get("tags_365d") or 0 for r in ok),
+        "tags_365d": sum(r.get("tags_365d") or 0 for r in distinct),
         "languages": main.get("languages"),
         "main_language": next(iter(main.get("languages") or {}), None),
         "loc_total": sum(loc_total.values()) or None,
@@ -227,6 +266,7 @@ def combine(repos: list[dict], commits: list[gitrepo.Commit], now: datetime) -> 
         "tests_present": any(r.get("tests_present") for r in ok),
         "security_policy": next((r["security_policy_url"] for r in ok if r.get("security_policy_url")), None),
         "issue_first_response_median_days": main.get("issue_first_response_median_days"),
+        "repos_counted": [r["url"] for r in ok],
         "ai": {
             "attributed_commits_365d": attributed,
             "commits_365d": total,
@@ -248,7 +288,7 @@ def collect_project(project: dict, ctx: Context) -> dict:
             continue
         r, c = collect_repo(spec, ctx)
         repos.append(r)
-        commits.extend(c)
+        commits.append(c)
     return {
         "slug": project["slug"],
         "collector_version": VERSION,

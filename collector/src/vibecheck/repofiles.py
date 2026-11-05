@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import posixpath
 import re
 
 _CI = re.compile(
@@ -37,10 +36,22 @@ def security_policy(paths: list[str]) -> str | None:
 
 
 def licence_file(paths: list[str]) -> str | None:
-    for p in paths:
-        if "/" not in p and re.match(r"^(licen[sc]e|copying|unlicense)(\.|$|-)", posixpath.basename(p), re.I):
-            return p
-    return None
+    """The top-level licence file that says what the project is under.
+
+    An LGPL project ships the GPL in COPYING and the LGPL additions in COPYING.LESSER, so the
+    LESSER file wins; then a plain LICENSE / COPYING (with or without an extension) over
+    variants such as LICENSE-AGPL.txt, which often hold a secondary or change licence."""
+    top = [p for p in paths if "/" not in p and re.match(r"^(licen[sc]e|copying|unlicense)(\.|$|-|_)", p, re.I)]
+
+    def rank(p: str) -> tuple[int, str]:
+        base = p.lower()
+        if re.match(r"^(copying|licen[sc]e)[._-]?(lesser|lgpl)", base):
+            return (0, base)
+        if re.match(r"^(licen[sc]e|copying|unlicense)(\.(md|txt|rst))?$", base):
+            return (1, base)
+        return (2, base)
+
+    return min(top, key=rank) if top else None
 
 
 # Rough SPDX detection from a licence file's text, used when the forge does not say.

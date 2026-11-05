@@ -10,7 +10,7 @@ import Platforms from '../../components/Platforms.astro';
 import ProjectIcon from '../../components/ProjectIcon.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { dataset, type Entry } from '../../lib/data.ts';
-import { AXES, CATEGORY_LABEL, STATE_TEXT, dateStat, features, fmtDate, fmtNum, host, href, osList, pct, splitTag, statusOf, type Axis } from '../../lib/view.ts';
+import { AXES, CATEGORY_LABEL, STATE_TEXT, dateStat, features, fmtDate, fmtNum, host, href, osList, pct, sameLicence, splitTag, statusOf, type Axis } from '../../lib/view.ts';
 
 export function getStaticPaths() {
   return dataset().projects.map((p) => ({ params: { slug: p.slug }, props: { p } }));
@@ -284,7 +284,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
           <dt>CI</dt><dd>{ciRepos.length ? ciRepos.map((r) => r.ci.slice(0, 3).map((f: string) => <code>{f}</code>)).flat().reduce((a: any[], x: any) => (a.length ? [...a, ' ', x] : [x]), []) : <span class="muted">none found</span>}</dd>
           <dt>Tests</dt><dd>{c.tests_present ? 'test files found' : <span class="muted">none found</span>}</dd>
           <dt>Security policy</dt><dd>{sec ? <a href={sec}>{sec.split('/').pop()}</a> : <span class="muted">none found</span>}</dd>
-          <dt>Licence</dt><dd>{p.licence ?? '—'}{c.licence_detected && c.licence_detected !== p.licence ? <span class="muted"> (repository: {c.licence_detected})</span> : null}</dd>
+          <dt>Licence</dt><dd>{p.licence ?? '—'}{c.licence_detected && !sameLicence(p.licence, c.licence_detected) ? <span class="muted"> (repository: {c.licence_detected})</span> : null}</dd>
           <dt>Funding</dt><dd>{fund.length ? fund.map((f, i) => <>{i > 0 && ' · '}<a href={f}>{host(f)}</a></>) : <span class="muted">none listed</span>}</dd>
           <dt>Telemetry SDKs in manifests</dt><dd>{telemetry.length ? telemetry.map((t: any, i: number) => <>{i > 0 && ' · '}<a href={t.url}>{t.sdk}</a> <span class="muted small">({t.file})</span></>) : <span class="muted">none found</span>}</dd>
         </dl>
@@ -302,7 +302,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
             {m.repos.map((r) => (
               <tr>
                 <td><a href={r.url} class="repo-link"><Icon name={forgeOf(r).icon} size={14} label={forgeOf(r).label} />{host(r.url)}</a></td>
-                <td>{r.role}</td>
+                <td>{r.role}{r.role === 'upstream' ? <div class="muted small">a library it builds on: not in the project's numbers</div> : r.duplicate_of ? <div class="muted small">same history as {host(r.duplicate_of)}: counted once</div> : null}</td>
                 <td>{r.ok ? <StatusBadge status={r.status ?? 'unknown'} /> : <span class="muted small">failed: {r.error}</span>}</td>
                 <td>{fmtDate(r.last_commit)}</td>
                 <td class="num">{fmtNum(r.commits_365d)}</td>
