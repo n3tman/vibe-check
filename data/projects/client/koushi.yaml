@@ -1,0 +1,117 @@
+slug: koushi
+name: Koushi (koushi-matrix)
+category: client
+kind: desktop
+homepage: https://github.com/shinaoka/koushi-matrix
+summary: A Tauri desktop Matrix client on the Rust matrix-sdk for multilingual (CJK) use, with multi-account
+  tabs, local encrypted search and an MCP server for AI assistants.
+repos:
+- url: https://github.com/shinaoka/koushi-matrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub repository search "matrix client" (pushed since 2025-11), 2026-11-05
+maturity: beta
+platforms:
+- macos
+- windows
+- linux
+apps:
+- os: macos
+  tech: tauri
+  status: beta
+  stores:
+  - name: dmg
+    url: https://github.com/shinaoka/koushi-matrix/releases/latest
+  source: https://github.com/shinaoka/koushi-matrix/blob/a653d79a85bbd7e84f0d6e943d6f93f0078324bc/README.md
+  note: Apple Silicon.
+  min_os: null
+- os: windows
+  tech: tauri
+  status: alpha
+  source: https://github.com/shinaoka/koushi-matrix/blob/a653d79a85bbd7e84f0d6e943d6f93f0078324bc/README.md
+  note: '"Untested", unsigned.'
+  min_os: null
+  stores: []
+- os: linux
+  tech: tauri
+  status: alpha
+  source: https://github.com/shinaoka/koushi-matrix/blob/a653d79a85bbd7e84f0d6e943d6f93f0078324bc/README.md
+  note: '"Untested" AppImage.'
+  min_os: null
+  stores: []
+licence: Apache-2.0 OR MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk (Rust core, Tauri shell)
+    how: code
+    source: https://github.com/shinaoka/koushi-matrix/blob/a653d79a85bbd7e84f0d6e943d6f93f0078324bc/README.md
+  e2ee: not-found
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/shinaoka/koushi-matrix/blob/a653d79a85bbd7e84f0d6e943d6f93f0078324bc/README.md
+    note: One tab per account.
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications:
+    value: partial
+    how: claimed
+    source: https://github.com/shinaoka/koushi-matrix/blob/a653d79a85bbd7e84f0d6e943d6f93f0078324bc/README.md
+    note: Can send notifications by email or ServerChan from the user's own computer.
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations:
+    value: partial
+    how: claimed
+    source: https://github.com/shinaoka/koushi-matrix/blob/a653d79a85bbd7e84f0d6e943d6f93f0078324bc/README.md
+    note: English, Japanese, Simplified and Traditional Chinese, Korean.
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - >-
+      619 of about 3,360 non-bot commits since 2026-06-11 (about 18 %) carry an AI co-author trailer,
+      mostly Claude.
+    - >-
+      CLAUDE.md, AGENTS.md, llms.txt, .claude/skills/, .agents/, .opencode/ in the tree; REPOSITORY_RULES.md
+      describes a main agent and subagents.
+  in_product:
+    value: optional
+    note: >-
+      Local MCP server ("Let AI assistants connect" setting) so Claude Code, Codex and other MCP
+      clients can search, summarise and reply to messages.
+    source: https://github.com/shinaoka/koushi-matrix/blob/a653d79a85bbd7e84f0d6e943d6f93f0078324bc/docs/help/ai-assistants.md
+notes: 'README tagline: "A desktop Matrix client for many languages, and for your AI assistant."'
+checked: '2026-11-05'

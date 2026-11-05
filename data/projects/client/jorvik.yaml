@@ -1,0 +1,112 @@
+slug: jorvik
+name: Jorvik
+category: client
+kind: web, desktop
+homepage: https://github.com/jorvikapp/jorvik
+summary: A Discord-style self-hosted Matrix client continuing Heorot, with voice and video channels,
+  screen sharing and E2EE on by default.
+repos:
+- url: https://github.com/jorvikapp/jorvik
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub repository search "matrix client" (pushed since 2025-11), 2026-11-05
+maturity: alpha
+platforms:
+- web
+- windows
+- macos
+- linux
+apps:
+- os: web
+  tech: other
+  status: alpha
+  source: https://github.com/jorvikapp/jorvik/blob/b4fc6f793464350c8def0e20dec3c64bf4a40a67/README.md
+  note: Docker Compose self-hosting.
+  min_os: null
+  stores: []
+- os: windows
+  tech: electron
+  status: alpha
+  source: https://github.com/jorvikapp/jorvik/blob/b4fc6f793464350c8def0e20dec3c64bf4a40a67/package.json
+  min_os: null
+  stores: []
+- os: macos
+  tech: electron
+  status: alpha
+  source: https://github.com/jorvikapp/jorvik/blob/b4fc6f793464350c8def0e20dec3c64bf4a40a67/package.json
+  min_os: null
+  stores: []
+- os: linux
+  tech: electron
+  status: alpha
+  source: https://github.com/jorvikapp/jorvik/blob/b4fc6f793464350c8def0e20dec3c64bf4a40a67/package.json
+  min_os: null
+  stores: []
+licence: AGPL-3.0
+fork_of: heorot
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own client logic derived from Element, matrix-sdk-crypto-wasm for E2EE
+    how: code
+    source: https://github.com/jorvikapp/jorvik/blob/b4fc6f793464350c8def0e20dec3c64bf4a40a67/apps/web/package.json
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/jorvikapp/jorvik/blob/b4fc6f793464350c8def0e20dec3c64bf4a40a67/README.md
+    note: On by default.
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/jorvikapp/jorvik/blob/b4fc6f793464350c8def0e20dec3c64bf4a40a67/apps/web/package.json
+    note: LiveKit voice/video channels with screen sharing.
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/jorvikapp/jorvik/blob/b4fc6f793464350c8def0e20dec3c64bf4a40a67/README.md
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No attributed commits among 347 commits since 2026-03-08; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Continuation of Heorot; keeps com.heorot.* event types for compatibility.
+checked: '2026-11-05'
