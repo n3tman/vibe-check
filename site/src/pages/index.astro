@@ -11,9 +11,11 @@ const cats = CATEGORIES.filter((c) => ['client', 'server', 'bot', 'bridge'].incl
 const order = Object.keys(STATUS);
 const dist = (list: typeof d.projects) => order.map((s) => ({ s, n: list.filter((p) => statusOf(p) === s).length })).filter((x) => x.n);
 const measured = d.projects.filter((p) => p.metrics?.combined);
-const lively = [...measured].sort((a, b) => (b.metrics!.combined!.commits_365d ?? 0) - (a.metrics!.combined!.commits_365d ?? 0)).slice(0, 6);
+const lively = [...measured].sort((a, b) => (b.metrics!.combined!.commits_365d ?? 0) - (a.metrics!.combined!.commits_365d ?? 0)).slice(0, 9);
 const count = (ax: Axis) => Object.keys(AXES[ax].values).map((v) => ({ v, n: d.projects.filter((p) => (p.ai as any)[ax].value === v).length }));
-const lastChecked = d.projects.map((p) => p.checked).sort().pop();
+const checkedDates = d.projects.map((p) => p.checked).sort();
+const firstChecked = checkedDates[0];
+const lastChecked = checkedDates[checkedDates.length - 1];
 ---
 <Base title="Vibe check">
   <header class="page-head">
@@ -81,6 +83,6 @@ const lastChecked = d.projects.map((p) => p.checked).sort().pop();
   {d.projects.length === 0 && <p class="empty">No projects yet: the research lanes are still writing <code>data/projects/</code>.</p>}
 
   <p class="muted small" style="margin-top:2rem">
-    {measured.length} of {d.projects.length} projects measured{d.collector?.run_at ? ` (collector run ${fmtDate(d.collector.run_at)})` : ''}{lastChecked ? `; hand checks up to ${fmtDate(lastChecked)}` : ''}.
+    {measured.length} of {d.projects.length} projects measured{d.collector?.run_at ? ` (collector run ${fmtDate(d.collector.run_at)})` : ''}{lastChecked ? (fmtDate(firstChecked) === fmtDate(lastChecked) ? `; hand checks on ${fmtDate(lastChecked)}` : `; hand checks up to ${fmtDate(lastChecked)}`) : ''}.
   </p>
 </Base>

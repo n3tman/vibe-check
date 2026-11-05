@@ -53,8 +53,20 @@ const data = Object.fromEntries(items.map((p) => [p.slug, summary(p)]));
         ))}
         <label class="field">Sort
           <select name="sort">
-            <option value="name">Name</option><option value="activity">Commits, last year</option><option value="authors">Authors, 90 days</option>
-            <option value="recent">Last commit</option><option value="stars">Stars</option><option value="status">Activity status</option>
+            <option value="name">Name</option>
+            <optgroup label="Activity">
+              <option value="activity">Commits, last year</option><option value="commits90">Commits, 90 days</option><option value="recent">Last commit</option>
+              <option value="releases">Releases, last year</option><option value="status">Activity status</option>
+            </optgroup>
+            <optgroup label="People">
+              <option value="authors">Authors, 90 days</option><option value="authors365">Authors, last year</option><option value="authorsAll">Authors, all time</option>
+              <option value="bus">Bus factor</option>
+            </optgroup>
+            <optgroup label="Effort">
+              <option value="commitsAll">Commits, all time</option><option value="loc">Lines of code</option><option value="oldest">Oldest first</option>
+              {category === 'server' && <option value="mscs">MSCs implemented</option>}
+            </optgroup>
+            <optgroup label="Reach"><option value="stars">Stars</option></optgroup>
           </select>
         </label>
         {isClient && <label class="check"><input type="checkbox" name="mobile" /> <Icon name="phone" size={15} /> Mobile only</label>}
