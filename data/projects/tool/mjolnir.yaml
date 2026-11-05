@@ -1,0 +1,41 @@
+slug: mjolnir
+name: Mjolnir
+category: tool
+kind: moderation
+homepage: https://github.com/matrix-org/mjolnir
+summary: Matrix.org's moderation bot that applies shared ban lists (policy lists) across protected rooms,
+  with an optional Synapse module and report handling.
+repos:
+- url: https://github.com/matrix-org/mjolnir
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: 'moderation (policy lists, bans, protections, abuse reports)', how: claimed, source: 'https://github.com/matrix-org/mjolnir/blob/23f2fec90e09752a7d28f58c35f76cfbd5e8999a/README.md'}
+  framework: {value: matrix-bot-sdk, how: code, source: 'https://github.com/matrix-org/mjolnir/blob/23f2fec90e09752a7d28f58c35f76cfbd5e8999a/package.json',
+    note: Element's fork @vector-im/matrix-bot-sdk}
+  e2ee: {value: partial, how: claimed, source: 'https://github.com/matrix-org/mjolnir/blob/23f2fec90e09752a7d28f58c35f76cfbd5e8999a/README.md',
+    note: the report-handling web API can only read unencrypted rooms; the README does not state E2EE
+      support for the bot}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/matrix-org/mjolnir/blob/23f2fec90e09752a7d28f58c35f76cfbd5e8999a/README.md',
+    note: bot (Docker or Node) plus an optional Synapse antispam module}
+  config: {value: config file and !mjolnir commands, how: claimed, source: 'https://github.com/matrix-org/mjolnir/blob/23f2fec90e09752a7d28f58c35f76cfbd5e8999a/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/matrix-org/mjolnir/blob/23f2fec90e09752a7d28f58c35f76cfbd5e8999a/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 21 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 23f2fec90e09
+  in_product: {value: none-found, note: null, source: null}
+notes: Draupnir is a continuation of Mjolnir by a former contributor; Meowlnir is an unrelated rewrite.
+  CONTRIBUTING.md (the matrix-org template) has no statement on AI.
+checked: 2026-11-05

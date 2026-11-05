@@ -1,0 +1,40 @@
+slug: matrix-dimension
+name: Dimension
+category: tool
+kind: integration-manager
+homepage: https://dimension.t2bot.io
+summary: An open-source integration manager (widgets, bots, bridges, sticker packs) for Element, an alternative
+  to Element's own; archived.
+repos:
+- url: https://github.com/turt2live/matrix-dimension
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: archived
+platforms: [server]
+licence: GPL-3.0-only
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: 'integration manager (widgets, bots, bridges, stickers)', how: claimed, source: 'https://github.com/turt2live/matrix-dimension/blob/2f9f848fb082af2eb717c7efe52807d99acbd51a/README.md'}
+  framework: {value: matrix-bot-sdk, how: code, source: 'https://github.com/turt2live/matrix-dimension/blob/2f9f848fb082af2eb717c7efe52807d99acbd51a/package.json'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/turt2live/matrix-dimension/blob/2f9f848fb082af2eb717c7efe52807d99acbd51a/README.md',
+    note: not applicable}
+  hosting: {value: both, how: claimed, source: 'https://github.com/turt2live/matrix-dimension/blob/2f9f848fb082af2eb717c7efe52807d99acbd51a/README.md',
+    note: dimension.t2bot.io hosted instance; self-hosting "no longer recommended"}
+  config: {value: config file and admin web UI, how: claimed, source: 'https://github.com/turt2live/matrix-dimension/blob/2f9f848fb082af2eb717c7efe52807d99acbd51a/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/turt2live/matrix-dimension/blob/2f9f848fb082af2eb717c7efe52807d99acbd51a/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2023-08-10), counted at 2f9f848fb082
+  in_product: {value: none-found, note: null, source: null}
+notes: 'README: "Dimension is no longer formally maintained." Archived on GitHub; last commit 2023-08-10.
+  Licence from the LICENSE file (GPL v3; -only vs -or-later not checked).'
+checked: 2026-11-05
