@@ -48,6 +48,11 @@ lane N", never writes the file itself.
   - Category to check first: https://github.com/matrix-axon/matrix-axon (lane 2 checks it:
     if it isn't a client, it goes in lane 2's notes "For lane N"),
     https://github.com/mindroom-ai/mindroom-chat (lane 3, the same way)
+- Third-party roundup (clients): https://www.linuxlinks.com/best-free-open-source-matrix-clients/
+  (LinuxLinks, 22 clients, published 2026-08-10, no repo links). Checked against the
+  matrix.org list on 2026-11-05 (website repo at `041599b`): 18 of the 22 are on it. The four
+  that are not, with their repos, are named in lanes 2 and 3's prompts: Moment, Mirage,
+  Spectral, and "Chats" (the current name of Chatty, same repo).
 - Forges: GitHub, GitLab.com, Codeberg and other Forgejo / Gitea hosts, SourceHut, and
   self-hosted GitLab or Forgejo instances. Use each forge's API for what git can't give
   (stars, issues, archived flag, languages); use `git log` on a blobless clone for activity,

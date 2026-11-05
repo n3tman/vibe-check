@@ -23,3 +23,18 @@ Client specifics:
   (`element-web`, `element-x`, … are separate slugs when they are separate apps).
 - Forks (Sable from Cinny, SchildiChat from Element, …): set `fork_of` and note what the
   fork adds.
+
+Also from https://www.linuxlinks.com/best-free-open-source-matrix-clients/ (checked against
+the matrix.org list on 2026-11-05): in your range it lists Chatty, Chats, Cinny, Commet,
+Element, Extera, FluffyChat, Fractal, Hydrogen and kazv. Make sure each has a file; notes:
+- Chatty and "Chats" are the same app (https://gitlab.gnome.org/World/Chatty, Purism / GNOME,
+  C and GTK, SMS/MMS, Matrix via libcmatrix, XMPP via libpurple): one file, slug `chatty`,
+  mention the newer display name "Chats" with a source.
+- Extera: matrix.org lists two repos, https://github.com/officialdakari/Extera (marked
+  obsolete) and https://github.com/ExteraApp/Extera ("Extera Next", beta). LinuxLinks says it
+  derives from FluffyChat: check that and set `fork_of`. Decide from the repos whether they
+  are one product family (repos with roles) or two slugs, and say why in your notes.
+- Hydrogen (https://github.com/vector-im/hydrogen-web) is marked obsolete on matrix.org:
+  check whether the repo is archived.
+- kazv lives on a self-hosted forge: https://r.lily-is.land/the-kazv-project/kazv.
+
