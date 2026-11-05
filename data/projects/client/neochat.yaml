@@ -48,7 +48,8 @@ fork_of: spectral
 distribution:
 - flathub
 - microsoft-store
-funding: []
+funding:
+- https://nlnet.nl/project/NeoChat/
 features:
   sdk:
     value: libQuotient
@@ -202,6 +203,20 @@ ai:
     value: none-found
     note: null
     source: null
+  funder_policy:
+  - funder: NLnet Foundation (NGI Assure fund)
+    grant: https://nlnet.nl/project/NeoChat/
+    grant_start: 2021-06
+    grant_end: 2024-08
+    grant_source: https://nlnet.nl/project/NeoChat/
+    policy: https://nlnet.nl/foundation/policies/generativeAI/archive/
+    policy_version: none; NLnet's first GenAI policy (1.0) came into force on 2025-12-08
+    value: none-found
+    quote: null
+    scope: work delivered within the grant (end-to-end encryption, mostly in libQuotient)
+    transition: The grant ended (2024-08) before NLnet had a GenAI policy, so no version binds it.
+    transparency: not applicable
+    checked: 2026-11-05
 notes: 'A KDE-wide policy on AI contributions, if any, was not checked; nothing in the repo itself. NeoChat
   is a fork of Spectral (README.md line 86 at 2bcdbc0f: https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/README.md).'
 checked: '2026-11-05'
