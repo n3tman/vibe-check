@@ -118,3 +118,10 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: small-talk.webp
+  source: "https://github.com/ouchadam/small-talk/blob/5a391676d0d482596fe5d270798c2b361dba67e7/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+  licence: "Apache-2.0"
+  note: null
+  backing: dark
+  checked: 2026-11-05

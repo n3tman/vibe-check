@@ -88,3 +88,9 @@ notes: 'matrix.org still lists it as Python/Beta; the repo''s CHANGELOG.md says 
   in Go on bridgev2, and v26.10 dropped migration from the Python version. Other Telegram bridges: matrix-appservice-telegram
   (FruitieX, abandoned).'
 checked: 2026-11-05
+icon:
+  file: mautrix-telegram.webp
+  source: "https://avatars.githubusercontent.com/u/88519669?v=4&s=256"
+  licence: null
+  note: "the mautrix bridges' shared logo: the mautrix organisation's avatar on GitHub (the repo itself ships only the bridged network's logo, or none)"
+  checked: 2026-11-05

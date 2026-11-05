@@ -38,3 +38,9 @@ ai:
 notes: 'Plugins are separate repos (for example maubot/github, maubot/gitlab, which have their own files
   here). Plugin list: https://plugins.mau.bot'
 checked: 2026-11-05
+icon:
+  file: maubot.webp
+  source: "https://github.com/maubot/maubot/blob/f20825b5e3031a89eb5b2edea7f6f7726ada9a10/maubot/management/frontend/public/favicon.png"
+  licence: "AGPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

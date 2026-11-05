@@ -41,3 +41,9 @@ ai:
     source: null
 notes: matrix.org labels it "Obsolete"; last commit 2021-09-22.
 checked: '2026-11-05'
+icon:
+  file: ligase.webp
+  source: "https://github.com/finogeeks/Ligase/blob/9835270b055a80602ecff9037274aad8e9542fb4/logo/ligase_480_480.png"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

@@ -87,3 +87,9 @@ notes: >-
   README: "Given the state of KaiOS, chooj is no longer developed or maintained". matrix.org maturity:
   Obsolete. Last commit 2025-08-03.
 checked: '2026-11-05'
+icon:
+  file: chooj.webp
+  source: "https://codeberg.org/chooj/chooj/src/commit/763013c554bead6c80de2c43ba7cc44de77e7603/src/chooj.png"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

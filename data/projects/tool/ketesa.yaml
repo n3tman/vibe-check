@@ -51,3 +51,9 @@ ai:
 notes: '"the evolution of Synapse Admin" (matrix.org listing); it began as a fork of Awesome-Technologies/synapse-admin.
   AGENTS.md was added on 2026-10-24. CONTRIBUTING has no statement on AI-made contributions.'
 checked: 2026-11-05
+icon:
+  file: ketesa.webp
+  source: "https://github.com/etkecc/ketesa/blob/7d6b0786e1bc71ca98049ff5da517946ef256c55/public/images/logo.webp"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

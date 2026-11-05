@@ -73,3 +73,9 @@ ai:
     source: null
 notes: Superseded by Ement.el (same maintainer). Last commit 2021-09-16.
 checked: '2026-11-05'
+icon:
+  file: emacs-matrix-client.svg
+  source: "https://github.com/alphapapa/matrix-client.el/blob/5302530c4685729fbeb5759f5d3703db603a322c/images/logo.svg"
+  licence: "GPL-3.0"
+  note: null
+  checked: 2026-11-05

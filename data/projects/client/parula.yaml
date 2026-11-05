@@ -194,3 +194,9 @@ ai:
 notes: 'Not a Matrix-first client; Matrix is one item in its feature list (README line 181). Licence:
   the LICENSE file did not start with a standard licence header; check by hand.'
 checked: '2026-11-05'
+icon:
+  file: parula.webp
+  source: "https://github.com/parula-app/parula/blob/5fb283b67f8a079f91b0fa3b2bd39184d0580267/app/frontend/asset/icon/general/logo-parula.svg"
+  licence: "not-found"
+  note: null
+  checked: 2026-11-05

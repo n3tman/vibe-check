@@ -108,3 +108,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: umatriks.svg
+  source: "https://github.com/uMatriks/uMatriks/blob/27eab5ba21c96f8dabc243d87950c7860ead7552/uMatriks/resources/umatriks.svg"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

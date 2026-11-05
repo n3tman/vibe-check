@@ -41,3 +41,9 @@ ai:
 notes: One non-bot commit in the last 365 days (last 2025-11-24); not archived. matrix.org lists it as
   "a connector for opsdroid", i.e. its Matrix connector.
 checked: 2026-11-05
+icon:
+  file: opsdroid.webp
+  source: "https://opsdroid.dev/favicons/apple-touch-icon.png"
+  licence: null
+  note: null
+  checked: 2026-11-05

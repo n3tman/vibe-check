@@ -136,3 +136,9 @@ ai:
     source: https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/README.md#L3
 notes: 'The Zooid daemon (agents as a Matrix application service) is a bot/tool for lane 5: https://github.com/zooid-ai/zooid.'
 checked: '2026-11-05'
+icon:
+  file: zooid.svg
+  source: "https://github.com/zooid-ai/clients/blob/2b8a626eda46aaeccdc0c5059469d73824731c7c/packages/web/public/favicon.svg"
+  licence: "MIT"
+  note: null
+  checked: 2026-11-05

@@ -130,3 +130,9 @@ ai:
 notes: The policy allows LLM use "to research, debugging, or help to understand code or concepts, given
   that no output is included in your contributions."
 checked: '2026-11-05'
+icon:
+  file: sailtrix.webp
+  source: "https://gitlab.com/HengYeDev/harbour-sailtrix/-/blob/c87734cdfed5342874758f154c8f7169a73af140/icons/172x172/harbour-sailtrix.png"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

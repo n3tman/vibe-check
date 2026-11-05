@@ -40,3 +40,9 @@ notes: 'README: "Note: This is unmaintained. You should use Baibot instead of th
   on GitHub; last commit 2024-09-16. Licence from the LICENSE file (AGPL 3.0); check the -only / -or-later
   choice in package.json before reuse.'
 checked: 2026-11-05
+icon:
+  file: matrix-chatgpt-bot.webp
+  source: "https://avatars.githubusercontent.com/u/121816964?v=4&s=256"
+  licence: null
+  note: "the matrixgpt organisation's avatar on GitHub"
+  checked: 2026-11-05

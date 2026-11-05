@@ -107,3 +107,9 @@ ai:
 notes: >-
   matrix.org maturity: beta. Matrix is one of several protocols (SMS/MMS via ModemManager and mmsd-tng).
 checked: '2026-11-05'
+icon:
+  file: chatty.svg
+  source: "https://gitlab.gnome.org/World/Chatty/-/blob/55cb152cf296bcf29d8f278c2e3d882de6ff04d8/data/icons/hicolor/scalable/apps/sm.puri.Chatty.svg"
+  licence: "GPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

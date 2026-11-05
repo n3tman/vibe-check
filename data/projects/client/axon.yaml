@@ -185,3 +185,9 @@ notes: >-
   first-party clients that speak its own API, so it is filed as a client. Its "agent" wording means
   an always-on sync agent, not an AI agent. Slug `axon` (product name), repo matrix-axon/matrix-axon.
 checked: '2026-11-05'
+icon:
+  file: axon.svg
+  source: "https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/docs/brand/axon-mark-light.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

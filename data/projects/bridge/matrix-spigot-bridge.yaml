@@ -67,3 +67,9 @@ ai:
 notes: 'README: the author stopped developing the plugin. Last commit 2025-11-04 (non-bot activity none
   in the last year by our count).'
 checked: 2026-11-05
+icon:
+  file: matrix-spigot-bridge.webp
+  source: "https://github.com/lautriva/matrix-spigot-bridge/blob/89b8c353710445f1321f43aff6fd777fd2da7295/logo.jpg"
+  licence: "MIT"
+  note: null
+  checked: 2026-11-05

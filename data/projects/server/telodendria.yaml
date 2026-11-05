@@ -45,3 +45,9 @@ ai:
 notes: The forge homepage points to git.telodendria.io, which may be the main repo now; the GitHub copy
   was read.
 checked: '2026-11-05'
+icon:
+  file: telodendria.webp
+  source: "https://avatars.githubusercontent.com/u/117198076?v=4&s=256"
+  licence: null
+  note: "the Telodendria organisation's avatar on GitHub"
+  checked: 2026-11-05

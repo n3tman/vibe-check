@@ -169,3 +169,10 @@ ai:
 notes: 'README (line 320 on): Matrix "still works" but is available "from source, for now"; the main target
   is Discord.'
 checked: '2026-11-05'
+icon:
+  file: yapfast.svg
+  source: "https://github.com/yapfast/yapfast/blob/03862f6394fad09b541d731181b819a3c9713d3f/ui/icons/logo.svg"
+  licence: "GPL-3.0-only"
+  note: null
+  backing: dark
+  checked: 2026-11-05

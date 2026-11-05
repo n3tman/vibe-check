@@ -201,3 +201,9 @@ ai:
     source: null
 notes: 'matrix.org maturity: Beta.'
 checked: '2026-11-05'
+icon:
+  file: commet.webp
+  source: "https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/fastlane/metadata/android/zh-CN/images/icon.jpg"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

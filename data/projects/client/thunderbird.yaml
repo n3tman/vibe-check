@@ -164,3 +164,9 @@ notes: Only chat/protocols/matrix was checked out; features found there by patte
   this repo describe all of Thunderbird, not its Matrix support. Mozilla-wide AI contribution rules were
   not checked.
 checked: '2026-11-05'
+icon:
+  file: thunderbird.webp
+  source: "https://github.com/thunderbird/thunderbird-desktop/blob/a2318b178f8c2a4200cc7e65aff12496cb55f1ab/mail/branding/thunderbird/default256.png"
+  licence: "MPL-2.0"
+  note: null
+  checked: 2026-11-05

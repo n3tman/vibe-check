@@ -79,3 +79,9 @@ notes: >-
   The community room is titled "[Dead]" and says the hosted app ran only until 2021-06-15. Last commit
   2020-08-22. Licence file is AGPL-3.0 (version suffix not stated in README).
 checked: '2026-11-05'
+icon:
+  file: daydream.webp
+  source: "https://avatars.githubusercontent.com/u/67391358?v=4&s=256"
+  licence: null
+  note: "the daydream-mx organisation's avatar on GitHub"
+  checked: 2026-11-05

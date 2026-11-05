@@ -196,3 +196,9 @@ ai:
 notes: The PR template asks contributors to confirm that the description is "largely written by human
   hands" and to choose between no AI, largely AI-generated, or AI-assisted (naming tools and models).
 checked: '2026-11-05'
+icon:
+  file: schildichat-revenge.svg
+  source: "https://github.com/SchildiChat/schildi-revenge/blob/ff5d5ccea1de587f70c255a4d099366abfa43a4a/graphics/ic_launcher.svg"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

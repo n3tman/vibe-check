@@ -171,3 +171,9 @@ ai:
 notes: The Google Play badge in the README links to Element X's own listing (io.element.android.x), not
   a WanChat listing.
 checked: '2026-11-05'
+icon:
+  file: wanchat.webp
+  source: "https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/fastlane/metadata/android/en-US/images/icon.png"
+  licence: "AGPL-3.0-only"
+  note: "ships Element's logo (a fork of Element X)"
+  checked: 2026-11-05

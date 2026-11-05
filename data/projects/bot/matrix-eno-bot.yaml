@@ -38,3 +38,9 @@ ai:
 notes: Last commit 2024-09-03, not archived. matrix.org lists the licence as WTFPL; the GitHub API and
   the LICENSE file at this commit is the Apache License 2.0, which we use here.
 checked: 2026-11-05
+icon:
+  file: matrix-eno-bot.svg
+  source: "https://github.com/8go/matrix-eno-bot/blob/e18c5cc2bbced2229f661a3b9a8bc022e2a7d808/eno/logos/eno-logo.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

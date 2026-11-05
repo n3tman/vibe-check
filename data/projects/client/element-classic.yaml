@@ -159,3 +159,9 @@ notes: >-
   new features or usability enhancements are made. It is recommended to use Element X". matrix.org
   maturity: Stable.
 checked: '2026-11-05'
+icon:
+  file: element-classic.webp
+  source: "https://github.com/element-hq/element-android/blob/08dc499968c2a7f8b6e8a25a0a834a8a783376e7/fastlane/metadata/android/en-US/images/icon.png"
+  licence: "AGPL-3.0-only OR LicenseRef-Element-Commercial"
+  note: null
+  checked: 2026-11-05

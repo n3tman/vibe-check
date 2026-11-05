@@ -115,3 +115,9 @@ notes: >-
   Not on the matrix.org clients list (it is a calling app). Its own CONTRIBUTING.md: "Take responsibility
   for AI-generated code." Element's organisation-wide AI policy (element-meta PR 3393) applies.
 checked: '2026-11-05'
+icon:
+  file: element-call.svg
+  source: "https://github.com/element-hq/element-call/blob/1e17a6411cb625b369b9d88fc300ce46329ae46d/src/icons/LogoMark.svg"
+  licence: "AGPL-3.0-only OR LicenseRef-Element-Commercial"
+  note: null
+  checked: 2026-11-05

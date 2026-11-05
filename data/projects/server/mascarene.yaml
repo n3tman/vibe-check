@@ -36,3 +36,9 @@ ai:
 notes: 'Found in the community space (Servers/Hosting, "Unstable: 0.2.0"). GitLab API last_activity_at
   2023-07-18; not cloned.'
 checked: '2026-11-05'
+icon:
+  file: mascarene.webp
+  source: "https://gitlab.com/uploads/-/system/project/avatar/18083164/dodo.jpg?v=1702157327"
+  licence: null
+  note: "the repository's avatar on gitlab.com"
+  checked: 2026-11-05

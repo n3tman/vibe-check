@@ -86,3 +86,9 @@ notes: >-
   A Matrix client only in part: it uses Matrix rooms as a transport to an AI agent gateway. Listed
   so the AI-in-product axis has the full picture; lane 7 may prefer to show it under tools.
 checked: '2026-11-05'
+icon:
+  file: keryx.webp
+  source: "https://github.com/CocaKova/keryx/blob/097c27355136c64d6a9c6a77f84cbe88278c175d/Hermes-Chat/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+  licence: "MIT"
+  note: null
+  checked: 2026-11-05

@@ -181,3 +181,9 @@ notes: matrix.org lists it as "Extera Next" (maturity Beta). The GitHub repo Ext
   and says "We have moved to https://source.extera.xyz/Extera/Extera". The older Cinny-based Extera (officialdakari/Extera,
   matrix.org "Obsolete") returns 404 and has no file. Fork of FluffyChat.
 checked: '2026-11-05'
+icon:
+  file: extera.webp
+  source: "https://github.com/ExteraApp/Extera/blob/915e1d86aade210553cbddcf8c39b5b75898de20/android/fastlane/metadata/android/en-US/images/icon.png"
+  licence: "AGPL-3.0"
+  note: null
+  checked: 2026-11-05

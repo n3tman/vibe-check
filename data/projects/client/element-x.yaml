@@ -213,3 +213,9 @@ notes: >-
   CONTRIBUTING.md also say "We are also fine with AI led contributions within reasonable bounds".
   Android FOSS builds need Android 7.0 (API 24), enterprise builds API 33.
 checked: '2026-11-05'
+icon:
+  file: element-x.webp
+  source: "https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/fastlane/metadata/android/en-US/images/icon.png"
+  licence: "AGPL-3.0-only OR LicenseRef-Element-Commercial"
+  note: null
+  checked: 2026-11-05

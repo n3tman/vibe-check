@@ -71,3 +71,9 @@ ai:
 notes: 'matrix.org labels it "Obsolete", but the repo was rewritten in April 2026 (README: "Alpha -- under
   active development").'
 checked: '2026-11-05'
+icon:
+  file: maelstrom.webp
+  source: "https://avatars.githubusercontent.com/u/63146455?v=4&s=256"
+  licence: null
+  note: "the maelstrom-rs organisation's avatar on GitHub"
+  checked: 2026-11-05

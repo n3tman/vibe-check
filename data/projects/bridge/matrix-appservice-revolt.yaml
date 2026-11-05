@@ -58,3 +58,9 @@ ai:
     source: null
 notes: Last commit 2024-07-20. matrix.org files it under Stoat.
 checked: 2026-11-05
+icon:
+  file: matrix-appservice-revolt.webp
+  source: "https://codeberg.org/repo-avatars/530fe25e4b3555e7da8287e81ab6566ffd5cb34c8fff2da8a68c59603ad10840"
+  licence: null
+  note: "the repository's avatar on codeberg.org"
+  checked: 2026-11-05

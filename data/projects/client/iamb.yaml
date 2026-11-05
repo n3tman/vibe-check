@@ -147,3 +147,9 @@ ai:
     source: null
 notes: 'matrix.org maturity: Beta.'
 checked: '2026-11-05'
+icon:
+  file: iamb.svg
+  source: "https://github.com/ulyssa/iamb/blob/55ad2d3402026e9824dc4fcdd3dce2added05575/docs/iamb.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05
