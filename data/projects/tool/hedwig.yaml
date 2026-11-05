@@ -1,0 +1,39 @@
+slug: hedwig
+name: Matrix Hedwig
+category: tool
+kind: push-gateway
+homepage: https://github.com/famedly/hedwig
+summary: Famedly's push gateway in Rust that delivers Matrix push notifications through Firebase Cloud
+  Messaging and APNs.
+repos:
+- url: https://github.com/famedly/hedwig
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, repositories sorted by stars, 2026-11-05
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: 'push gateway (FCM, APNs)', how: code, source: 'https://github.com/famedly/hedwig/blob/e5ce07856e7e08b20b27f42e7fc5ac29ddc095ba/Cargo.toml'}
+  framework: {value: 'own (Rust, axum)', how: code, source: 'https://github.com/famedly/hedwig/blob/e5ce07856e7e08b20b27f42e7fc5ac29ddc095ba/Cargo.toml'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/famedly/hedwig/blob/e5ce07856e7e08b20b27f42e7fc5ac29ddc095ba/README.md',
+    note: not applicable}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/famedly/hedwig/blob/e5ce07856e7e08b20b27f42e7fc5ac29ddc095ba/README.md',
+    note: Docker}
+  config: {value: config.yaml or PUSHGW_* environment variables, how: claimed, source: 'https://github.com/famedly/hedwig/blob/e5ce07856e7e08b20b27f42e7fc5ac29ddc095ba/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/famedly/hedwig/blob/e5ce07856e7e08b20b27f42e7fc5ac29ddc095ba/Cargo.toml'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 30 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at e5ce07856e7e
+  in_product: {value: none-found, note: null, source: null}
+notes: LICENSE is the GNU AGPL v3 (-only vs -or-later not checked).
+checked: 2026-11-05

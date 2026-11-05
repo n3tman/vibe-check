@@ -1,0 +1,40 @@
+slug: pantalaimon
+name: Pantalaimon
+category: tool
+kind: e2ee-proxy
+homepage: https://github.com/matrix-org/pantalaimon
+summary: An E2EE-aware reverse proxy that encrypts and decrypts on behalf of clients and bots without
+  encryption support; archived.
+repos:
+- url: https://github.com/matrix-org/pantalaimon
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: archived
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [pypi]
+funding: []
+features:
+  purpose: {value: E2EE proxy for clients and bots without encryption, how: claimed, source: 'https://github.com/matrix-org/pantalaimon/blob/e4a14b0a9b876abb1913b953457de15a9fc06d32/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/matrix-org/pantalaimon/blob/e4a14b0a9b876abb1913b953457de15a9fc06d32/setup.py',
+    note: 'matrix-nio[e2e], libolm'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/matrix-org/pantalaimon/blob/e4a14b0a9b876abb1913b953457de15a9fc06d32/README.md',
+    note: its whole purpose; uses libolm}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/matrix-org/pantalaimon/blob/e4a14b0a9b876abb1913b953457de15a9fc06d32/README.md',
+    note: 'pip, with an optional D-Bus UI'}
+  config: {value: config file (pantalaimon.conf), how: claimed, source: 'https://github.com/matrix-org/pantalaimon/blob/e4a14b0a9b876abb1913b953457de15a9fc06d32/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/matrix-org/pantalaimon/blob/e4a14b0a9b876abb1913b953457de15a9fc06d32/setup.py'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2025-06-03), counted at e4a14b0a9b87
+  in_product: {value: none-found, note: null, source: null}
+notes: Archived on GitHub; last commit 2025-06-03.
+checked: 2026-11-05

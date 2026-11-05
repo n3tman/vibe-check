@@ -1,0 +1,38 @@
+slug: synapse-operator
+name: synapse-operator
+category: tool
+kind: deployment
+homepage: https://github.com/opdev/synapse-operator
+summary: A Kubernetes operator, built with operator-sdk, that deploys and manages Synapse; archived.
+repos:
+- url: https://github.com/opdev/synapse-operator
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/distributions/
+  other: []
+maturity: archived
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: deployment (Kubernetes operator for Synapse), how: claimed, source: 'https://github.com/opdev/synapse-operator/blob/03ae59ac10b5c98a99d5e914effa0d7162e4bae5/README.md'}
+  framework: {value: operator-sdk (Go), how: claimed, source: 'https://github.com/opdev/synapse-operator/blob/03ae59ac10b5c98a99d5e914effa0d7162e4bae5/README.md'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/opdev/synapse-operator/blob/03ae59ac10b5c98a99d5e914effa0d7162e4bae5/README.md',
+    note: not applicable}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/opdev/synapse-operator/blob/03ae59ac10b5c98a99d5e914effa0d7162e4bae5/README.md',
+    note: Kubernetes}
+  config: {value: Kubernetes custom resources, how: claimed, source: 'https://github.com/opdev/synapse-operator/blob/03ae59ac10b5c98a99d5e914effa0d7162e4bae5/README.md'}
+  ai_backend: {value: none-found, how: claimed, source: 'https://github.com/opdev/synapse-operator/blob/03ae59ac10b5c98a99d5e914effa0d7162e4bae5/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 3 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 03ae59ac10b5
+  in_product: {value: none-found, note: null, source: null}
+notes: Archived on GitHub (search API, 2026-11-05) though still on matrix.org's distributions list. The
+  LICENSE file is the Apache License 2.0.
+checked: 2026-11-05

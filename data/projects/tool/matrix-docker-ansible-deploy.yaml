@@ -1,0 +1,49 @@
+slug: matrix-docker-ansible-deploy
+name: matrix-docker-ansible-deploy
+category: tool
+kind: deployment
+homepage: https://github.com/spantaleev/matrix-docker-ansible-deploy
+summary: An Ansible playbook that installs and upgrades a Matrix homeserver with dozens of optional bridges,
+  bots and services, each in a Docker container under systemd.
+repos:
+- url: https://github.com/spantaleev/matrix-docker-ansible-deploy
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/distributions/
+  other: []
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: 'deployment (homeserver, bridges, bots, admin and monitoring stack)', how: claimed,
+    source: 'https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/53515e6e08088dda43f9623b2201ac510ae71455/README.md'}
+  framework: {value: Ansible and Docker, how: claimed, source: 'https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/53515e6e08088dda43f9623b2201ac510ae71455/README.md'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/53515e6e08088dda43f9623b2201ac510ae71455/README.md',
+    note: 'not applicable: deploys services'}
+  hosting: {value: both, how: claimed, source: 'https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/53515e6e08088dda43f9623b2201ac510ae71455/README.md',
+    note: self-host on your own server; managed hosting offered by etke.cc}
+  config: {value: Ansible inventory variables (vars.yml), how: claimed, source: 'https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/53515e6e08088dda43f9623b2201ac510ae71455/README.md'}
+  ai_backend: {value: none-found, how: claimed, source: 'https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/53515e6e08088dda43f9623b2201ac510ae71455/README.md',
+    note: 'can deploy LLM bots (baibot, others) as optional services'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: regular
+    evidence:
+    - 'agent file: AGENTS.md'
+    - 'bot author copilot-swe-agent[bot]: 3 commits in the last 365 days'
+    - 358 of 859 non-bot commits in the last 365 days carry an AI attribution (41.7%), counted at 53515e6e0808
+    - 'tools named in attributions: claude'
+    - 'example: a0091c47055c (Co-Authored-By: Claude)'
+    - 'example: c4ff5fe9b67a (Co-Authored-By: Claude)'
+    - AGENTS.md ("Guidance for AI agents") added 2026-07-18; most attributed commits are Co-Authored-By
+      Claude trailers from the lead maintainer
+  in_product: {value: none-found, note: The playbook itself has no AI feature; it can deploy optional
+      LLM bots such as baibot., source: 'https://github.com/spantaleev/matrix-docker-ansible-deploy/blob/53515e6e08088dda43f9623b2201ac510ae71455/README.md'}
+notes: 6,511 stars, 54 non-bot authors in the last 365 days. Found on matrix.org's distributions list.
+  No contribution policy on AI found (no CONTRIBUTING file).
+checked: 2026-11-05

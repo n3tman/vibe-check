@@ -1,0 +1,41 @@
+slug: ma1sd
+name: ma1sd
+category: tool
+kind: identity-server
+homepage: https://github.com/ma1uta/ma1sd
+summary: A federated identity server for self-hosted Matrix setups (LDAP, SQL and other stores), a fork
+  of the archived mxisd.
+repos:
+- url: https://github.com/ma1uta/ma1sd
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: unmaintained
+platforms: [server]
+licence: AGPL-3.0-only
+fork_of: https://github.com/kamax-matrix/mxisd
+distribution: []
+funding: []
+features:
+  purpose: {value: 'identity server (3PID lookup, directory and auth backends)', how: claimed, source: 'https://github.com/ma1uta/ma1sd/blob/ae5864cd91f7db57c3a99b7847c3c327980e74e8/README.md'}
+  framework: {value: own (Java), how: claimed, source: 'https://github.com/ma1uta/ma1sd/blob/ae5864cd91f7db57c3a99b7847c3c327980e74e8/README.md'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/ma1uta/ma1sd/blob/ae5864cd91f7db57c3a99b7847c3c327980e74e8/README.md',
+    note: not applicable}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/ma1uta/ma1sd/blob/ae5864cd91f7db57c3a99b7847c3c327980e74e8/README.md',
+    note: 'packages, Docker, matrix-docker-ansible-deploy'}
+  config: {value: config file (ma1sd.yaml), how: claimed, source: 'https://github.com/ma1uta/ma1sd/blob/ae5864cd91f7db57c3a99b7847c3c327980e74e8/README.md'}
+  ai_backend: {value: none-found, how: claimed, source: 'https://github.com/ma1uta/ma1sd/blob/ae5864cd91f7db57c3a99b7847c3c327980e74e8/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2021-04-16), counted at ae5864cd91f7
+  in_product: {value: none-found, note: null, source: null}
+notes: 'Last commit 2021-04-16; GitHub search did not return the repo, so its archived flag and stars
+  were not read. README: "a fork (not successor)" of mxisd. LICENSE is the GNU AGPL v3 (-only vs -or-later
+  not checked).'
+checked: 2026-11-05
