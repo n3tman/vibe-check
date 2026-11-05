@@ -9,17 +9,21 @@ import Icon from '../components/Icon.astro';
 // homeserver and URL previews, next to the analytics SDKs the collector found in dependency manifests.
 const d = dataset();
 const clients = d.projects.filter((p) => p.category === 'client');
-const rows = clients
-  .map((p) => {
-    const f = (p.features ?? {}) as Record<string, any>;
-    const sdks = [...new Set((p.metrics?.repos ?? []).filter((r) => r.ok).flatMap((r) => (r.telemetry_scan?.found ?? []).map((t: any) => t.sdk as string)))];
-    const tel = f.telemetry;
-    const telValue = tel == null ? 'not-found' : typeof tel === 'object' ? String(tel.value ?? 'not-found') : String(tel);
-    return { p, sdks, tel: feature('telemetry', tel), telValue, home: feature('default_homeserver', f.default_homeserver), prev: feature('url_previews', f.url_previews) };
-  })
-  .sort((a, b) => Number(b.sdks.length > 0 || !/none|not-found/.test(a.telValue)) - Number(a.sdks.length > 0 || !/none|not-found/.test(b.telValue)) || a.p.name.localeCompare(b.p.name));
-const flagged = rows.filter((r) => r.sdks.length > 0 || !/^(none-found|not-found)$/.test(r.telValue));
-const show = (v: string) => (v === 'not-found' || v === 'none-found' ? null : v);
+const rows = clients.map((p) => {
+  const f = (p.features ?? {}) as Record<string, any>;
+  const sdks = [...new Set((p.metrics?.repos ?? []).filter((r) => r.ok).flatMap((r) => (r.telemetry_scan?.found ?? []).map((t: any) => t.sdk as string)))];
+  const tel = f.telemetry;
+  // "missing": no lane looked; "not-found": looked, could not tell; "none-found": looked, none.
+  const telValue = tel == null ? 'missing' : typeof tel === 'object' ? String(tel.value ?? 'missing') : String(tel);
+  return { p, sdks, tel: feature('telemetry', tel), telValue, home: feature('default_homeserver', f.default_homeserver), prev: feature('url_previews', f.url_previews) };
+});
+// Clients that name an SDK or document telemetry come first, then by name.
+const isFlagged = (r: (typeof rows)[number]) => r.sdks.length > 0 || !['missing', 'not-found', 'none-found'].includes(r.telValue);
+rows.sort((a, b) => Number(isFlagged(b)) - Number(isFlagged(a)) || a.p.name.localeCompare(b.p.name));
+const flagged = rows.filter(isFlagged);
+const TEL_EMPTY: Record<string, string> = { missing: 'not checked', 'not-found': 'not found', 'none-found': 'none found' };
+const firstUrl = (s: unknown) => (Array.isArray(s) ? s[0] : s) as string | undefined;
+const show = (v: string) => (v in TEL_EMPTY ? null : v);
 ---
 <Base title="Privacy at a glance" description="Telemetry, default homeserver and URL previews of Matrix clients">
   <header class="page-head">
@@ -42,9 +46,9 @@ const show = (v: string) => (v === 'not-found' || v === 'none-found' ? null : v)
           <tr>
             <th scope="row" style="font-weight:500"><a href={href(`p/${r.p.slug}/`)}>{r.p.name}</a></th>
             <td><StatusBadge status={statusOf(r.p)} /></td>
-            <td>{show(r.telValue) ? (r.tel.source ? <a href={r.tel.source}>{r.telValue}</a> : r.telValue) : <span class="muted">{r.telValue === 'none-found' ? 'none found' : 'not checked'}</span>}{r.tel.note && <div class="muted small">{r.tel.note}</div>}</td>
+            <td>{show(r.telValue) ? (firstUrl(r.tel.source) ? <a href={firstUrl(r.tel.source)}>{r.telValue}</a> : r.telValue) : <span class="muted">{TEL_EMPTY[r.telValue]}</span>}{r.tel.note && <div class="muted small">{r.tel.note}</div>}</td>
             <td>{r.sdks.length ? r.sdks.join(', ') : <span class="muted">none found</span>}</td>
-            <td>{r.home.state === 'not-found' || r.home.value === 'not-found' ? <span class="muted">not found</span> : r.home.source ? <a href={r.home.source}>{r.home.value}</a> : r.home.value}</td>
+            <td>{r.home.state === 'not-found' || r.home.value === 'not-found' ? <span class="muted">not found</span> : firstUrl(r.home.source) ? <a href={firstUrl(r.home.source)}>{r.home.value}</a> : r.home.value}</td>
             <td><span class="fchip" data-state={r.prev.state} title={r.prev.note ?? undefined}><Icon name={({ yes: 'check', partial: 'partial', no: 'cross', planned: 'clock', 'not-found': 'question', text: 'dot' } as Record<string, string>)[r.prev.state]} size={13} />{r.prev.state === 'text' ? r.prev.value : STATE_TEXT[r.prev.state]}</span></td>
           </tr>
         ))}

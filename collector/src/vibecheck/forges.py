@@ -170,25 +170,18 @@ def github(http: Http, url: str, now: datetime) -> dict:
 
 
 def _github_issues(http: Http, api: str, h: dict, now: datetime, out: dict) -> None:
-    since = (now - timedelta(days=ISSUE_WINDOW_DAYS)).strftime("%Y-%m-%dT%H:%M:%SZ")
-    issues = []
-    for page in range(1, 6):
-        data, _ = http.get(f"{api}/issues?state=all&since={since}&per_page=100&page={page}", h)
-        if not isinstance(data, list) or not data:
-            break
-        for i in data:
-            created = _dt(i.get("created_at"))
-            if "pull_request" in i or not created or created < now - timedelta(days=ISSUE_WINDOW_DAYS):
-                continue
-            login = (i.get("user") or {}).get("login")
-            if is_bot_login(login):
-                continue
-            issues.append({"number": i["number"], "created": created, "author": login})
-        if len(data) < 100:
-            break
+    """Newest issues and newest comments, so the two cover the same stretch of time.
+
+    Comments come newest first. When the page cap stops the comment list early, only issues
+    opened after the oldest comment read are kept: a first response to any of them comes later
+    than the issue, so it is among the comments read. (Oldest-first comments paired with the
+    newest issues left the recent issues of a busy repository with no response.)"""
+    window = now - timedelta(days=ISSUE_WINDOW_DAYS)
+    since = window.strftime("%Y-%m-%dT%H:%M:%SZ")
     comments = []
+    capped = False
     for page in range(1, 11):
-        data, _ = http.get(f"{api}/issues/comments?since={since}&sort=created&direction=asc&per_page=100&page={page}", h)
+        data, _ = http.get(f"{api}/issues/comments?since={since}&sort=created&direction=desc&per_page=100&page={page}", h)
         if not isinstance(data, list) or not data:
             break
         for c in data:
@@ -197,8 +190,30 @@ def _github_issues(http: Http, api: str, h: dict, now: datetime, out: dict) -> N
                 comments.append({"number": int(m.group(1)), "created": _dt(c["created_at"]), "author": (c.get("user") or {}).get("login")})
         if len(data) < 100:
             break
+        capped = page == 10
+    covered_from = window
+    if capped and comments:
+        covered_from = max(window, min(c["created"] for c in comments if c["created"]))
+    issues = []
+    for page in range(1, 6):
+        data, _ = http.get(f"{api}/issues?state=all&since={since}&sort=created&direction=desc&per_page=100&page={page}", h)
+        if not isinstance(data, list) or not data:
+            break
+        for i in data:
+            created = _dt(i.get("created_at"))
+            if "pull_request" in i or not created or created < covered_from:
+                continue
+            login = (i.get("user") or {}).get("login")
+            if is_bot_login(login):
+                continue
+            issues.append({"number": i["number"], "created": created, "author": login})
+        oldest = _dt(data[-1].get("created_at"))
+        if len(data) < 100 or (oldest and oldest < covered_from):
+            break
     med, n, responded = _median_days(_first_responses(issues, comments))
     out.update(issue_first_response_median_days=med, issues_sampled=n, issues_responded=responded)
+    if covered_from > window:
+        out["issues_window_from"] = covered_from.isoformat(timespec="seconds")
 
 
 def _count_from_link(link: str | None, http: Http, url: str, h: dict) -> int | None:
@@ -314,6 +329,7 @@ def _forgejo_issues(http: Http, api: str, now: datetime, out: dict) -> None:
         if len(data) < 50:
             break
     comments = []
+    capped = False
     for page in range(1, 11):
         data, _ = http.get(f"{api}/issues/comments?since={since}&limit=50&page={page}")
         if not isinstance(data, list) or not data:
@@ -324,6 +340,12 @@ def _forgejo_issues(http: Http, api: str, now: datetime, out: dict) -> None:
                 comments.append({"number": int(m.group(1)), "created": _dt(c["created_at"]), "author": (c.get("user") or {}).get("login")})
         if len(data) < 50:
             break
+        capped = page == 10
+    if capped and comments:
+        # Forgejo lists comments oldest first and the cap stopped the list: a response after
+        # the last comment read is missing, so keep only issues opened 14 days before it.
+        last = max(c["created"] for c in comments if c["created"])
+        issues = [i for i in issues if i["created"] <= last - timedelta(days=14)]
     med, n, responded = _median_days(_first_responses(issues, comments))
     out.update(issue_first_response_median_days=med, issues_sampled=n, issues_responded=responded)
 

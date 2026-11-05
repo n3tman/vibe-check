@@ -8,7 +8,7 @@ import Sparkline from '../../components/Sparkline.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { dataset, type Category } from '../../lib/data.ts';
 import { CATEGORIES } from '../../lib/schema.ts';
-import { AXES, CATEGORY_LABEL, CLIENT_FEATURES, STATUS, fmtDate, fmtNum, href, osList, statusOf, summary } from '../../lib/view.ts';
+import { AXES, CATEGORY_LABEL, CLIENT_FEATURES, STATUS, fmtDate, fmtNum, href, jsonForScript, osList, statusOf, summary } from '../../lib/view.ts';
 
 export function getStaticPaths() {
   const d = dataset();
@@ -127,7 +127,7 @@ const data = Object.fromEntries(items.map((p) => [p.slug, summary(p)]));
         </table>
       </div>
       <p class="empty" data-none hidden>Nothing matches these filters.</p>
-      <script type="application/json" data-items set:html={JSON.stringify(data)} />
+      <script type="application/json" data-items set:html={jsonForScript(data)} />
     </div>
   )}
 </Base>

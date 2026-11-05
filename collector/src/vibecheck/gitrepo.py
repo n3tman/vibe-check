@@ -89,6 +89,7 @@ class Commit:
     cemail: str
     date: datetime  # committer date: when the change landed on the branch
     message: str
+    adate: datetime | None = None  # author date: when the change was written (kept by rebases and cherry-picks)
 
 
 _SEP = "\x1e"
@@ -110,18 +111,18 @@ def log(repo: Path, mailmap: bool, first_parent: bool = False) -> list[Commit]:
         "--no-merges",
         *(["--first-parent"] if first_parent else []),
         "--use-mailmap",
-        f"--format=%H%x00%aN%x00%aE%x00%cN%x00%cE%x00%cI%x00%B{_SEP}",
+        f"--format=%H%x00%aN%x00%aE%x00%cN%x00%cE%x00%cI%x00%aI%x00%B{_SEP}",
     )
     commits = []
     for rec in out.split(_SEP):
         rec = rec.lstrip("\n")
         if not rec:
             continue
-        parts = rec.split("\x00", 6)
-        if len(parts) < 7:
+        parts = rec.split("\x00", 7)
+        if len(parts) < 8:
             continue
-        sha, an, ae, cn, ce, cd, body = parts
-        commits.append(Commit(sha, an, ae, cn, ce, datetime.fromisoformat(cd), body))
+        sha, an, ae, cn, ce, cd, ad, body = parts
+        commits.append(Commit(sha, an, ae, cn, ce, datetime.fromisoformat(cd), body, datetime.fromisoformat(ad)))
     return commits
 
 

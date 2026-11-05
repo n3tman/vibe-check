@@ -15,6 +15,8 @@ export const DEV_USAGE = ['none-found', 'config-only', 'occasional', 'regular'] 
 export const IN_PRODUCT = ['none-found', 'optional', 'core'] as const;
 export const MSC_STATE = ['stable', 'unstable', 'experimental', 'partial', 'removed'] as const;
 export const MSC_STATUS = ['merged', 'fcp', 'open', 'closed', 'postponed'] as const;
+// none-found: looked, no telemetry; not-found: not determined either way.
+export const TELEMETRY = ['none-found', 'not-found', 'opt-in', 'opt-out'] as const;
 
 const url = z.string().url();
 const nullableUrl = url.nullable().optional();
@@ -115,7 +117,6 @@ export const projectSchema = z
           .optional(),
       })
       .passthrough(),
-    notes: z.string().nullable().optional(),
     // The project's own icon in site/public/icons/ (lane 10); data.ts checks the file exists.
     icon: z
       .object({
@@ -136,6 +137,7 @@ export const projectSchema = z
 const FREE_TEXT = new Set([
   'sdk', 'language', 'database', 'spec_versions', 'resource_needs', 'default_homeserver', 'translations', 'fork_friendliness',
   'purpose', 'framework', 'hosting', 'config', 'ai_backend', 'network', 'puppeting', 'login_methods', 'network_tos_risk', 'accessibility',
+  'crypto', // SDKs: the crypto library (vodozemac, libolm, …)
 ]);
 function isFreeText(k: string) {
   return FREE_TEXT.has(k);

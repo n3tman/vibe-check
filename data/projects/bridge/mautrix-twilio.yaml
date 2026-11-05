@@ -15,7 +15,7 @@ sources:
 maturity: alpha
 platforms:
 - server
-licence: AGPL-3.0-or-later
+licence: MIT
 fork_of: null
 distribution:
 - docker
@@ -68,7 +68,8 @@ ai:
     note: no generative-AI features found in the README, ROADMAP or code
     source: null
 notes: 'GitHub description: "A bridgev2 demo project for bridging Matrix and Twilio". beeper/line says
-  it is based on it. Replaces tulir/mautrix-twilio (archived 2019).'
+  it is based on it. Replaces tulir/mautrix-twilio (archived 2019). Licence: MIT, unlike the rest of the mautrix family (LICENSE at
+  https://github.com/mautrix/twilio/blob/18579cdd5867f6b15323d4a39ffbe571d7701915/LICENSE, checked 2026-11-05).'
 checked: 2026-11-05
 icon:
   file: mautrix-twilio.webp

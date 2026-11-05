@@ -21,14 +21,32 @@ export const STATUS: Record<string, { label: string; icon: string; desc: string;
   slowing: { label: 'Slowing', icon: 'slow', desc: 'Last commit 31 to 180 days ago', rank: 2 },
   dormant: { label: 'Dormant', icon: 'moon', desc: 'No commit for 180 days to 2 years', rank: 3 },
   abandoned: { label: 'Abandoned', icon: 'stop', desc: 'No commit for over 2 years', rank: 4 },
-  archived: { label: 'Archived', icon: 'box', desc: 'The forge marks the repository archived', rank: 5 },
+  archived: { label: 'Archived', icon: 'box', desc: 'The forge marks the repository archived, or the project says it is no longer maintained', rank: 5 },
   'no-repo': { label: 'No public repo', icon: 'lock', desc: 'No public source repository to measure', rank: 6 },
   unknown: { label: 'Not measured yet', icon: 'dash', desc: 'The collector has not run for this project yet', rank: 7 },
 };
 
 export function statusOf(p: Entry): string {
+  // A project its maintainers have archived or deprecated stays archived, even when the forge
+  // flag is not set or its last commit (often the deprecation notice itself) is recent.
+  if (p.maturity === 'archived') return 'archived';
   if (!p.repos?.length) return 'no-repo';
   return (p.metrics?.combined?.status as string) || 'unknown';
+}
+
+/** JSON for a <script type="application/json"> block: `<` is escaped so no string in the data
+ *  (a quoted README line, say) can close the script element. */
+export const jsonForScript = (v: unknown) =>
+  JSON.stringify(v).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
+
+/** Whether the licence the repository's files or forge show is the one in the project file,
+ *  ignoring -only / -or-later (forges report the bare id) and taking any id in an OR / AND
+ *  expression ("MIT OR Apache-2.0" matches a repo that shows Apache-2.0). */
+export function sameLicence(stated: string | null | undefined, detected: string | null | undefined): boolean {
+  if (!stated || !detected) return true;
+  const norm = (id: string) => id.trim().replace(/(-only|-or-later|\+)$/i, '').toUpperCase();
+  const ids = stated.split(/\s+(?:OR|AND|WITH)\s+|[()]/i).filter(Boolean).map(norm);
+  return ids.includes(norm(detected));
 }
 
 // ---- AI marks -------------------------------------------------------------------------

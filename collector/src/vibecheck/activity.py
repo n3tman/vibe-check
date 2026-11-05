@@ -25,6 +25,22 @@ def human_commits(commits: list[Commit]) -> list[Commit]:
     return out
 
 
+def unique_changes(commits: list[Commit]) -> list[Commit]:
+    """One commit per change: a change rebased or cherry-picked onto the branch a second time
+    keeps its author, author date and subject, so later copies are dropped (the newest-first
+    order of git log keeps the copy that landed last). Commits without an author date stay."""
+    seen: set[tuple[str, str, str]] = set()
+    out = []
+    for c in commits:
+        if c.adate is not None:
+            key = (c.email.strip().lower(), c.adate.isoformat(), c.message.strip().split("\n", 1)[0])
+            if key in seen:
+                continue
+            seen.add(key)
+        out.append(c)
+    return out
+
+
 def bus_factor(counts: list[int]) -> int | None:
     """Fewest authors whose commits make up at least half of the total."""
     total = sum(counts)
@@ -73,7 +89,7 @@ class Activity:
 
     def __init__(self, commits: list[Commit], now: datetime):
         self.now = now
-        self.all = human_commits(commits)
+        self.all = human_commits(unique_changes(commits))
         self.index = AuthorIndex()
         for c in self.all:
             if not ai_bot_tool(c.author, c.email):

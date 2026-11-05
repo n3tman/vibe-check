@@ -17,12 +17,13 @@ from pathlib import Path
 from .gitrepo import git
 
 SCC_VERSION = "3.5.0"
-# Release asset checksums (from the release's checksums.txt), per platform.
+# Release assets per platform and their SHA-256, pinned here (copied from the v3.5.0 release's
+# checksums.txt and checked against a download on 2026-11-05), so a changed asset is refused.
 SCC_ASSETS = {
-    ("Linux", "x86_64"): "scc_Linux_x86_64.tar.gz",
-    ("Linux", "aarch64"): "scc_Linux_arm64.tar.gz",
-    ("Darwin", "x86_64"): "scc_Darwin_x86_64.tar.gz",
-    ("Darwin", "arm64"): "scc_Darwin_arm64.tar.gz",
+    ("Linux", "x86_64"): ("scc_Linux_x86_64.tar.gz", "6c31f4d0cf3b7a8c5ca910fa4e451949434798f6541ec5dea4b83f4973e13772"),
+    ("Linux", "aarch64"): ("scc_Linux_arm64.tar.gz", "64446b1ca954aa1ac34984bbb4f098f46e6c69c84d64a7d096275ea6e50461eb"),
+    ("Darwin", "x86_64"): ("scc_Darwin_x86_64.tar.gz", "33fee1db983a6d22297d5f4e41bca25438c8a09d5c7c558acbfb5f9cd4deb19b"),
+    ("Darwin", "arm64"): ("scc_Darwin_arm64.tar.gz", "0e967d77ad564fa77bc5ed157d4e04bc6b56c5619edef317e5c99b15c9fca9d2"),
 }
 
 
@@ -33,21 +34,19 @@ def ensure_scc(bin_dir: Path) -> Path | None:
     target = bin_dir / f"scc-{SCC_VERSION}"
     if target.exists():
         return target
-    asset = SCC_ASSETS.get((platform.system(), platform.machine()))
-    if not asset:
+    entry = SCC_ASSETS.get((platform.system(), platform.machine()))
+    if not entry:
         return None
+    asset, want = entry
     base = f"https://github.com/boyter/scc/releases/download/v{SCC_VERSION}/"
     ua = {"User-Agent": "vibe-check (+https://github.com/n3tman/vibe-check)"}
     try:
-        with urllib.request.urlopen(urllib.request.Request(base + "checksums.txt", headers=ua), timeout=60) as r:
-            sums = r.read().decode()
         with urllib.request.urlopen(urllib.request.Request(base + asset, headers=ua), timeout=120) as r:
             data = r.read()
     except Exception:  # noqa: BLE001
         return None
-    want = next((line.split()[0] for line in sums.splitlines() if line.strip().endswith(asset)), None)
-    if want and hashlib.sha256(data).hexdigest() != want:
-        return None
+    if hashlib.sha256(data).hexdigest() != want:
+        return None  # fail closed: never run a binary whose checksum is not the pinned one
     with tarfile.open(fileobj=io.BytesIO(data)) as tf:
         member = next((m for m in tf.getmembers() if m.name.endswith("scc") and m.isfile()), None)
         if member is None:
