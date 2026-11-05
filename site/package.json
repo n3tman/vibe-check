@@ -1,0 +1,21 @@
+{
+  "name": "vibe-check-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "validate": "node --experimental-strip-types --no-warnings scripts/validate.ts",
+    "shots": "node scripts/screenshots.mjs"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "astro": "^5.18.2",
+    "yaml": "^2.9.1",
+    "zod": "^3.25.76"
+  }
+}

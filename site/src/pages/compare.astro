@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import AiMark from '../components/AiMark.astro';
+import Icon from '../components/Icon.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import { dataset } from '../lib/data.ts';
+import { AXES, CATEGORY_LABEL, OS_LABEL, STATUS, featureLabel, summary, type Axis } from '../lib/view.ts';
+
+const d = dataset();
+const all = d.projects.map(summary);
+const labels = Object.fromEntries([...new Set(all.flatMap((s) => Object.keys(s.features)))].map((k) => [k, featureLabel(k)]));
+const groups = Object.entries(CATEGORY_LABEL).map(([k, v]) => ({ k, label: v.many, items: all.filter((s) => s.category === k) })).filter((g) => g.items.length);
+---
+<Base title="Compare" wide>
+  <header class="page-head">
+    <p class="eyebrow">Side by side</p>
+    <h1>Compare</h1>
+    <p class="lede">Pick two to four projects. The link updates as you pick, so you can share the comparison.</p>
+  </header>
+  <div data-compare>
+    <form class="toolbar" onsubmit="return false" aria-label="Choose projects">
+      <label class="field grow">Add a project
+        <select name="add">
+          <option value="">Choose…</option>
+          {groups.map((g) => <optgroup label={g.label}>{g.items.map((s) => <option value={s.slug}>{s.name}</option>)}</optgroup>)}
+        </select>
+      </label>
+      <button type="button" class="btn" data-clear><Icon name="cross" size={14} />Clear</button>
+    </form>
+    <ul class="picker" data-picked aria-label="Chosen projects" aria-live="polite"></ul>
+    <p class="empty" data-hint style="margin-top:1rem">Choose at least two projects to compare.</p>
+    <div class="table-wrap" data-out hidden style="margin-top:1rem"></div>
+    <noscript><p class="empty">The compare view needs JavaScript; every project page has the same data.</p></noscript>
+    <div hidden data-templates>
+      {(Object.keys(AXES) as Axis[]).map((ax) => Object.keys(AXES[ax].values).map((v) => <template data-mark={`${ax}:${v}`}><AiMark axis={ax} value={v} showAxis={false} compact /></template>))}
+      {Object.keys(STATUS).map((s) => <template data-status={s}><StatusBadge status={s} /></template>)}
+      {['yes', 'partial', 'no', 'planned', 'not-found', 'text'].map((s) => <template data-ficon={s}><Icon name={({ yes: 'check', partial: 'partial', no: 'cross', planned: 'clock', 'not-found': 'question', text: 'dot' } as any)[s]} size={13} /></template>)}
+    </div>
+    <script type="application/json" data-all set:html={JSON.stringify({ all, labels, os: OS_LABEL, cats: Object.fromEntries(Object.entries(CATEGORY_LABEL).map(([k, v]) => [k, v.one])) })} />
+  </div>
+</Base>
+<script>
+  import { initCompare } from '../lib/compare.ts';
+  initCompare();
+</script>

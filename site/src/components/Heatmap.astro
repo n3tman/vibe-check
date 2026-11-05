@@ -1,0 +1,44 @@
+---
+// Commits per day over the last year, one column per week (Monday on top), built at build time.
+interface Props { daily: Record<string, number> | null | undefined; end: string }
+const { daily = {}, end } = Astro.props;
+const DAY = 86400000;
+const endDate = new Date(end.slice(0, 10) + 'T00:00:00Z');
+const endDow = (endDate.getUTCDay() + 6) % 7; // 0 = Monday
+const start = new Date(+endDate - (52 * 7 + endDow) * DAY);
+const cells: { x: number; y: number; d: string; n: number }[] = [];
+for (let t = +start, i = 0; t <= +endDate; t += DAY, i++) {
+  const d = new Date(t).toISOString().slice(0, 10);
+  cells.push({ x: Math.floor(i / 7), y: i % 7, d, n: (daily ?? {})[d] ?? 0 });
+}
+const nonzero = cells.map((c) => c.n).filter((n) => n > 0).sort((a, b) => a - b);
+const q = (f: number) => nonzero[Math.min(nonzero.length - 1, Math.floor(f * nonzero.length))] ?? 1;
+const t1 = q(0.25), t2 = q(0.5), t3 = q(0.8);
+const level = (n: number) => (n === 0 ? 0 : n <= t1 ? 1 : n <= t2 ? 2 : n <= t3 ? 3 : 4);
+const S = 11, G = 2, L = 26, T = 16;
+const cols = Math.max(...cells.map((c) => c.x)) + 1;
+const W = L + cols * (S + G), H = T + 7 * (S + G);
+const months: { x: number; label: string }[] = [];
+let lastM = -1;
+for (const c of cells) {
+  const m = new Date(c.d).getUTCMonth();
+  if (c.y === 0 && m !== lastM) { months.push({ x: c.x, label: new Date(c.d).toLocaleDateString('en-GB', { month: 'short', timeZone: 'UTC' }) }); lastM = m; }
+}
+const total = nonzero.reduce((a, b) => a + b, 0);
+const activeDays = nonzero.length;
+---
+<figure class="chart heatmap">
+  <div class="scroll-x">
+    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Commits per day over the last year: ${total} commits on ${activeDays} days`}>
+      {months.filter((m, i) => i > 0 || m.x < cols - 2).map((m) => <text x={L + m.x * (S + G)} y={10} class="axis">{m.label}</text>)}
+      {['Mon', 'Wed', 'Fri'].map((d, i) => <text x={0} y={T + (i * 2) * (S + G) + 9} class="axis">{d}</text>)}
+      {cells.map((c) => (
+        <rect x={L + c.x * (S + G)} y={T + c.y * (S + G)} width={S} height={S} rx="2" class={`hm hm${level(c.n)}`}><title>{`${c.d}: ${c.n} commit${c.n === 1 ? '' : 's'}`}</title></rect>
+      ))}
+    </svg>
+  </div>
+  <figcaption>
+    <span>{total} commits on {activeDays} days in the last year</span>
+    <span class="hm-legend" aria-hidden="true">less {[0, 1, 2, 3, 4].map((l) => <i class={`hm${l}`} />)} more</span>
+  </figcaption>
+</figure>

@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { dataset } from '../lib/data.ts';
+import { href } from '../lib/view.ts';
+
+const d = dataset();
+const servers = d.projects.filter((p) => p.category === 'server');
+const byServer = new Map(servers.map((s) => [s.slug, new Map((((s.features as any)?.msc ?? []) as any[]).map((x) => [x.msc, x]))]));
+const known = new Set(d.mscs.map((m) => m.msc));
+const extra = [...new Set(servers.flatMap((s) => [...byServer.get(s.slug)!.keys()]))].filter((n) => !known.has(n)).sort((a, b) => a - b);
+const rows = [...d.mscs.map((m) => ({ msc: m.msc, title: m.title, status: m.status, spec: m.spec_version, url: m.url })), ...extra.map((n) => ({ msc: n, title: null, status: null, spec: null, url: null }))];
+const cols = servers.filter((s) => byServer.get(s.slug)!.size > 0);
+const ICON: Record<string, string> = { stable: 'check', unstable: 'partial', experimental: 'clock', partial: 'partial', removed: 'cross' };
+---
+<Base title="Servers × MSCs" wide>
+  <header class="page-head">
+    <p class="eyebrow">Spec support</p>
+    <h1>Servers × MSCs</h1>
+    <p class="lede">Which homeserver implements which Matrix Spec Change, and how: stable, behind an unstable prefix, behind a flag, partly, or removed. The MSC's own status (merged into the spec, in final comment period, open) is in the second column.</p>
+  </header>
+  {rows.length === 0 || cols.length === 0 ? (
+    <p class="empty">No MSC data yet: the servers lane writes <code>data/mscs.yaml</code> and the server files.</p>
+  ) : (
+    <div class="table-wrap">
+      <table class="data matrix">
+        <caption class="sr-only">MSC support by server</caption>
+        <thead>
+          <tr><th scope="col">MSC</th><th scope="col">Spec status</th>{cols.map((s) => <th scope="col" class="rot"><a href={href(`p/${s.slug}/`)}>{s.name}</a></th>)}</tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr>
+              <th scope="row" style="font-weight:500;min-width:14rem"><a href={r.url ?? `https://github.com/matrix-org/matrix-spec-proposals/pull/${r.msc}`}>MSC{r.msc}</a>{r.title && <span class="muted"> {r.title}</span>}</th>
+              <td>{r.status ? `${r.status}${r.spec ? `, ${r.spec}` : ''}` : <span class="muted">not catalogued</span>}</td>
+              {cols.map((s) => {
+                const x = byServer.get(s.slug)!.get(r.msc);
+                return (
+                  <td class="cell">
+                    {x ? (x.source ? <a class="mcell" data-s={x.state} href={x.source} title={x.flag ? `flag: ${x.flag}` : undefined}><Icon name={ICON[x.state] ?? 'dot'} size={12} />{x.state}</a>
+                         : <span class="mcell" data-s={x.state}><Icon name={ICON[x.state] ?? 'dot'} size={12} />{x.state}</span>)
+                       : <span class="mcell" data-s="none"><Icon name="question" size={12} />not found</span>}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+  <p class="muted small" style="margin-top:1rem">“Not found” means nobody found it in that server's code or docs, not that it is missing.</p>
+</Base>

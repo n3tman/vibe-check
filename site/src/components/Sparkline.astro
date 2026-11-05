@@ -1,0 +1,18 @@
+---
+// 52 weekly commit counts as a small area chart, drawn at build time.
+interface Props { weeks: number[] | null | undefined; width?: number; height?: number; label?: string }
+const { weeks, width = 140, height = 32, label = 'Commits per week, last 52 weeks' } = Astro.props;
+const data = weeks ?? [];
+const max = Math.max(1, ...data);
+const step = data.length > 1 ? width / (data.length - 1) : width;
+const pts = data.map((v, i) => [i * step, height - 2 - (v / max) * (height - 4)]);
+const line = pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)},${y.toFixed(1)}`).join('');
+const area = pts.length ? `${line}L${width},${height}L0,${height}Z` : '';
+const total = data.reduce((a, b) => a + b, 0);
+---
+{data.length ? (
+  <svg class="spark" width={width} height={height} viewBox={`0 0 ${width} ${height}`} role="img" aria-label={`${label}: ${total} commits, peak ${max} in a week`} preserveAspectRatio="none">
+    <path d={area} class="spark-area" />
+    <path d={line} class="spark-line" fill="none" />
+  </svg>
+) : <span class="spark-empty muted">no activity data</span>}
