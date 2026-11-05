@@ -41,11 +41,35 @@ try {
     <h2>Sources and dates</h2>
     <p>
       Each project has a file in <a href="https://github.com/n3tman/vibe-check/tree/main/data/projects"><code>data/projects/</code></a>, written by the agent: features, platforms and AI policy,
-      each claim with a link (a file at a commit, a docs page, an issue) and the date the agent read it. Projects were found through the
-      <a href="https://matrix.org/ecosystem/">matrix.org ecosystem lists</a> and the rooms of the <code>#community:matrix.org</code> space, plus one GitHub topic per category
-      (<code>matrix-client</code>, <code>matrix-homeserver</code>, <code>matrix-bot</code>, <code>matrix-bridge</code>), keyword searches on GitHub and
-      <a href="https://github.com/jryans/awesome-matrix">jryans/awesome-matrix</a>. Other GitHub topics, topics on other forges, other awesome lists and This Week in Matrix
-      have not been searched yet, so projects are missing.
+      each claim with a link (a file at a commit, a docs page, an issue) and the date the agent read it. The first projects were found through the
+      <a href="https://matrix.org/ecosystem/">matrix.org ecosystem lists</a>, the rooms of the <code>#community:matrix.org</code> space, one GitHub topic per category,
+      keyword searches on GitHub and <a href="https://github.com/jryans/awesome-matrix">jryans/awesome-matrix</a>.
+      A discovery sweep on 5 November 2026 then searched further. It read every repository carrying a Matrix topic on GitHub, GitLab.com and Codeberg,
+      every forge link in three awesome lists about Matrix (<a href="https://github.com/jryans/awesome-matrix">jryans/awesome-matrix</a>,
+      <a href="https://github.com/rodolpheh/awesome-matrix">rodolpheh/awesome-matrix</a> and <a href="https://github.com/cyb3rko/awesome-matrix-bots">cyb3rko/awesome-matrix-bots</a>;
+      the other GitHub repositories named "awesome matrix" are about maths), and every forge link in the 435 This Week in Matrix posts from 20 April 2018 to 30 October 2026
+      (read from the <a href="https://github.com/matrix-org/matrix.org">matrix.org website repository</a>).
+      Repositories found only through <code>matrix</code> or <code>element</code>, which are also maths and UI words, were kept only when another Matrix topic,
+      their description or their README names Matrix. The sweep found 2,325 repositories. It left out the ones a project file already names, the archived and deleted ones,
+      and those with no push since 5 November 2024. That left 1,073 candidates, listed in
+      <a href="https://github.com/n3tman/vibe-check/blob/main/sources/candidates.tsv"><code>sources/candidates.tsv</code></a> with where each was found.
+      A candidate becomes a project only after the agent has read it and written a project file; until then it isn't on this site, so projects are still missing.
+    </p>
+    <details>
+      <summary>Topics searched, with the repositories kept per topic (GitHub + GitLab.com + Codeberg, before removing duplicates)</summary>
+      <p>
+        <code>matrix</code> 1,118 of 6,192 · <code>matrix-org</code> 294 · <code>matrix-bot</code> 109 · <code>matrix-client</code> 101 · <code>maubot</code> 88 ·
+        <code>element</code> 62 of 714 · <code>matrix-synapse</code> 50 · <code>matrix-bridge</code> 39 · <code>matrix-appservice</code> 37 · <code>matrix.org</code> 37 (GitLab only) ·
+        <code>matrix-protocol</code> 35 · <code>matrix-nio</code> 34 · <code>matrix-chat</code> 31 · <code>matrix-homeserver</code> 27 · <code>matrix-server</code> 25 ·
+        <code>mautrix</code> 23 · <code>element-web</code> 14 · <code>matrix-sdk</code> 13 · <code>matrix-js-sdk</code> 10 · <code>matrix-bots</code> 8 ·
+        <code>matrix-rust-sdk</code> 7 · <code>matrix-synapse-homeserver</code> 7 · <code>matrix-api</code> 6 · <code>matrix-widget-api</code> 6 · <code>matrixbot</code> 6 ·
+        <code>matrixrtc</code> 5 · <code>matrix-registration</code> 4 · <code>matrix-synapse-server</code> 4 · <code>matrix-admin-api</code> 3 ·
+        <code>matrix-authentication-service</code> 3 · <code>matrix-room</code> 3 · <code>matrix-dendrite</code> 2 · <code>matrix-rooms</code> 2 ·
+        <code>matrix-server-management</code> 2 · <code>matrix-widget</code> 2 · <code>element-matrix</code>, <code>matrix-federation</code> and <code>matrixorg</code> 0.
+        The list started from the topics of this site's own repository and grew by every Matrix topic found on five or more kept repositories.
+      </p>
+    </details>
+    <p>
       {checked.length > 0 && (fmtDate(checked[0]) === fmtDate(checked[checked.length - 1])
         ? <> All entries were researched on {fmtDate(checked[0])}.</>
         : <> Entries were researched between {fmtDate(checked[0])} and {fmtDate(checked[checked.length - 1])}.</>)}
