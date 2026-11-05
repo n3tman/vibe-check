@@ -63,7 +63,7 @@ Three separate axes; the site shows all three and never merges them into one sco
    `none-found` | `optional` | `core`, with a one-line description.
 
 Thresholds for `dev_usage`: `occasional` = 1 to 4 % of last-year commits attributed, or AI
-review/agent workflows; `regular` = 5 % or more. Attribution is a lower bound (most AI use
+review/agent workflows; `regular` = 5 % or more and at least 3 attributed commits. Attribution is a lower bound (most AI use
 leaves no trace): say so on the methodology page.
 
 ## Activity status (computed by the collector, shown as a badge)

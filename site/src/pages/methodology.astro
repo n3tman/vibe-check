@@ -59,9 +59,12 @@ try {
         {ax === 'dev_usage' && (
           <p class="small muted">
             Evidence: agent instruction files (<code>CLAUDE.md</code>, <code>AGENTS.md</code>, <code>.cursorrules</code>, <code>.github/copilot-instructions.md</code> and others),
-            commits whose trailers or “Generated with” lines credit an AI tool, AI agent bot authors, and CI workflows that run AI actions or review bots, counted over the last 365 days.
+            commits whose trailers or “Generated with” statements credit an AI tool, AI agent bot authors, and CI workflows that run AI actions or review bots, counted over the last 365 days.
+            A trailer counts only when it names an AI: a tool's own address (<code>noreply@anthropic.com</code>, Copilot's GitHub address, …) or the tool's name with model words
+            (“Claude Opus 4.5”, “GitHub Copilot”), so a co-author who shares a name with a tool (Claude, Devin, Jules) is not counted. An LLM API key in CI is not counted either:
+            it usually tests the product's own AI feature.
             <strong>Config only</strong>: agent files but no attributed commits. <strong>Occasional</strong>: some attributed commits but under 5 % of last year's (the rubric says 1 to 4 %; a project with even one attributed commit below 1 % is also counted here, with its share shown), or AI review or agent workflows.
-            <strong>Regular</strong>: 5 % or more. Attribution is a lower bound: most AI use leaves no trace in a repository, so “none found” does not mean none was used.
+            <strong>Regular</strong>: 5 % or more, and at least three attributed commits (one AI commit out of twelve is not a habit). Attribution is a lower bound: most AI use leaves no trace in a repository, so “none found” does not mean none was used.
           </p>
           <p class="small muted">
             The collector suggests a level; the mark shown is the researcher's, checked against that suggestion. Where they differ the project page says why: an <code>AGENTS.md</code>
@@ -105,7 +108,9 @@ try {
     </ul>
     <p>
       Commits are counted on the default branch, without merge commits, by the date they landed. Authors are de-duplicated by email and name, honouring <code>.mailmap</code>.
-      For projects with several repositories (an Android and an iOS app, say), the status uses all of them together. For forks that merge their upstream (SchildiChat, Rooster, Vommet, Sable's first version)
+      For projects with several repositories (an Android and an iOS app, say), the status uses all of them together. A mirror or an old home that shares most of its history
+      with another repository is counted once, and a library the project builds on (listed with the role <em>upstream</em>) is shown but left out of the project's numbers.
+      A change that landed on the branch twice (rebased or cherry-picked again, with the same author, author date and subject) counts once. For forks that merge their upstream (SchildiChat, Rooster, Vommet, Sable's first version)
       only the fork's own line of history is counted (<code>git log --first-parent</code>), so the upstream's work is not credited to the fork. The bus factor is the fewest authors who made half of last year's commits.
       Issue response is the median time to the first comment by someone other than the reporter, for issues opened in the last 180 days (where the forge allows reading it).
     </p>
