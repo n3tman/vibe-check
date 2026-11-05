@@ -1,0 +1,63 @@
+slug: construct
+name: Construct
+category: server
+kind: homeserver
+homepage: null
+summary: A Matrix homeserver written in C++.
+repos:
+- {url: 'https://github.com/matrix-construct/construct', forge: github, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: unmaintained
+platforms:
+- server
+licence: BSD-2-Clause
+fork_of: null
+distribution: []
+funding: []
+features:
+  language: C++
+  database: RocksDB
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/modules/client/versions.cc#L75',
+    versions: [r0.0.1, r0.1.0, r0.2.0, r0.3.0, r0.4.0, r0.5.0, r0.6.0, r0.6.1, v1.1, v1.2, v1.3, v1.4,
+      v1.5, v1.6]}
+  oidc_delegation: {value: not-found, note: no reference to MSC3861/2964/2965/2967 found in the code}
+  native_sliding_sync: {value: not-found, note: no reference to MSC4186 found in the code}
+  workers_scaling: {value: not-found}
+  media_auth: {value: not-found, note: no reference to MSC3916 found in the code}
+  msc:
+  - {msc: 2285, state: stable, source: 'https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/modules/m_receipt.cc#L367',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2314, state: unstable, source: 'https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/modules/federation/state.cc#L137',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 2432, state: stable, source: 'https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/matrix/fed.cc#L905',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2697, state: unstable, source: 'https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/modules/client/dehydrated_device.cc#L28',
+    note: unstable prefix in code}
+  - {msc: 2855, state: unstable, source: 'https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/modules/client/sync.cc#L31',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3030, state: stable, source: 'https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/matrix/fed.cc#L668',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3316, state: stable, source: 'https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/include/ircd/m/vm/opts.h#L226',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3827, state: stable, source: 'https://github.com/matrix-construct/construct/blob/0624b69246878da592d3f5c2c3737ad0b5ff6277/modules/client/versions.cc#L245',
+    note: referenced in code; MSC is in the spec}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: 0624b69246878da592d3f5c2c3737ad0b5ff6277
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: matrix.org labels it "Obsolete"; last commit 2023-05-01. Licence from matrix.org ("BSD"); the forge
+  reports NOASSERTION.
+checked: '2026-11-05'

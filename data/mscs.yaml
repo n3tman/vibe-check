@@ -1,0 +1,3598 @@
+# MSC catalogue (lane 4). Generated from the matrix-spec-proposals PR/issue states and labels
+# (GitHub search API, 2026-11-05) and the spec changelogs at matrix-org/matrix-spec@ecfbc3a54cdc.
+# status: merged | fcp | open | closed | postponed. "fcp" also covers proposals that passed FCP
+# but whose spec PR is not merged yet (see status_detail). spec_version: the first changelog from
+# v1.1 on that cites the MSC; null for pre-v1.1 or not yet released. servers: lane 4 files that list it.
+- msc: 1219
+  title: Proposal for storing megolm keys serverside
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1219
+  servers: [tuwunel]
+- msc: 1227
+  title: Proposal for lazy-loading room members to improve initial sync speed and client RAM usage
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1227
+  servers: [tuwunel]
+- msc: 1234
+  title: Rich Replies format
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1234
+  servers: [dendrite, harmony, zendrite]
+- msc: 1236
+  title: null
+  status: not-found
+  status_detail: null
+  spec_version: null
+  labels: []
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1236
+  servers: [tuwunel]
+- msc: 1301
+  title: null
+  status: not-found
+  status_detail: null
+  spec_version: null
+  labels: []
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1301
+  servers: [synapse]
+- msc: 1425
+  title: Room Versioning
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1425
+  servers: [tuwunel]
+- msc: 1442
+  title: 'State Resolution: Reloaded'
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1442
+  servers: [synapse, tuwunel]
+- msc: 1466
+  title: Soft Logout
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1466
+  servers: [tuwunel]
+- msc: 1497
+  title: Advertising support of experimental features in the CS API
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1497
+  servers: [synapse, tuwunel]
+- msc: 1501
+  title: Room version upgrades
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/1501
+  servers: [tuwunel]
+- msc: 1597
+  title: Better spec for matrix identifiers
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1597
+  servers: [tuwunel]
+- msc: 1659
+  title: 'Proposal: Change Event IDs to Hashes'
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1659
+  servers: [conduwuit, palpo, synapse, tuwunel]
+- msc: 1692
+  title: Terms of service at registration
+  status: merged
+  status_detail: null
+  spec_version: v1.11
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1692
+  servers: [tuwunel, zendrite]
+- msc: 1693
+  title: Specify how to handle rejected events in new state res
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1693
+  servers: [tuwunel]
+- msc: 1708
+  title: .well-known support for server name resolution
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1708
+  servers: [tuwunel]
+- msc: 1711
+  title: X.509 certificate verification for federation connections
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1711
+  servers: [tuwunel]
+- msc: 1721
+  title: Rename m.login.cas to m.login.sso
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1721
+  servers: [synapse, tuwunel]
+- msc: 1730
+  title: Mechanism for redirecting to an alternative server during login
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1730
+  servers: [tuwunel]
+- msc: 1753
+  title: client-server capabilities API
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1753
+  servers: [tuwunel]
+- msc: 1756
+  title: cross-signing devices using a master identity key
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1756
+  servers: [synapse, tuwunel]
+- msc: 1763
+  title: Proposal for specifying configurable message retention periods
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1763
+  servers: [palpo, synapse]
+- msc: 1767
+  title: Extensible event types & fallback in Matrix (v2)
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: [blocked, 'kind:core', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1767
+  servers: [palpo, synapse, tuwunel]
+- msc: 1772
+  title: Matrix spaces
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1772
+  servers: [dendrite, harmony, synapse, tuwunel, zendrite]
+- msc: 1794
+  title: Federation v2 Invite API
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1794
+  servers: [tuwunel]
+- msc: 1802
+  title: Remove the '200' value from some federation responses
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1802
+  servers: [tuwunel]
+- msc: 1804
+  title: Advertising capable room versions to clients
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1804
+  servers: [tuwunel]
+- msc: 1812
+  title: null
+  status: not-found
+  status_detail: null
+  spec_version: null
+  labels: []
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1812
+  servers: [tuwunel]
+- msc: 1819
+  title: MSC:1819 Remove Presence Lists
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1819
+  servers: [tuwunel]
+- msc: 1831
+  title: Change the order of .well-known and SRV discovery techniques
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1831
+  servers: [tuwunel]
+- msc: 1840
+  title: Typed rooms
+  status: closed
+  status_detail: rejected
+  spec_version: null
+  labels: ['kind:core', proposal, rejected]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1840
+  servers: [tuwunel]
+- msc: 1866
+  title: Add proposal for invite error code for unsupported room version
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1866
+  servers: [tuwunel]
+- msc: 1884
+  title: Proposal to replace slashes in event IDs
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1884
+  servers: [conduwuit, palpo, synapse, tuwunel]
+- msc: 1888
+  title: '[WIP] MSC1888: Proposal to send EDUs to appservices'
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:feature', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1888
+  servers: [tuwunel]
+- msc: 1915
+  title: Add a 3PID unbind API
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1915
+  servers: [tuwunel]
+- msc: 1929
+  title: Homeserver Admin Contact and Support page
+  status: merged
+  status_detail: null
+  spec_version: v1.10
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1929
+  servers: [continuwuity, tuwunel, zendrite]
+- msc: 1930
+  title: Add a push rule for m.room.tombstone events
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1930
+  servers: [tuwunel]
+- msc: 1935
+  title: Key validity enforcement
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1935
+  servers: [tuwunel]
+- msc: 1943
+  title: Set default room as v3
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1943
+  servers: [tuwunel]
+- msc: 1946
+  title: Secure Secret Storage and Sharing
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1946
+  servers: [tuwunel]
+- msc: 1953
+  title: Neilj/remove prev content from the essential keys list
+  status: closed
+  status_detail: null
+  spec_version: null
+  labels: []
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1953
+  servers: [tuwunel]
+- msc: 1954
+  title: Proposal to remove prev_content from the essential keys list
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1954
+  servers: [tuwunel]
+- msc: 1957
+  title: Integration manager discovery
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: [blocked, disposition-merge, 'kind:feature', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1957
+  servers: [tuwunel]
+- msc: 1958
+  title: Widget architecture changes
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:feature', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/1958
+  servers: [tuwunel]
+- msc: 2000
+  title: Server-side password policies
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2000
+  servers: [synapse]
+- msc: 2002
+  title: Proposal for adopting MSC1884 as v4 rooms
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2002
+  servers: [tuwunel]
+- msc: 2033
+  title: Adding a device_id to /account/whoami
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2033
+  servers: [tuwunel]
+- msc: 2061
+  title: make the trailing slash on `GET /_matrix/key/v2/server/` optional
+  status: closed
+  status_detail: null
+  spec_version: null
+  labels: []
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2061
+  servers: [tuwunel]
+- msc: 2077
+  title: room v5
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2077
+  servers: [tuwunel]
+- msc: 2078
+  title: Sending Third-Party Request Tokens via the Homeserver
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2078
+  servers: [synapse, tuwunel]
+- msc: 2134
+  title: Identity Hash Lookups
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2134
+  servers: [sydent]
+- msc: 2140
+  title: Terms of Service for ISes and IMs
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2140
+  servers: [tuwunel]
+- msc: 2153
+  title: Add a default push rule to ignore m.reaction events
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2153
+  servers: [tuwunel]
+- msc: 2174
+  title: Move the `redacts` key to a sane place
+  status: merged
+  status_detail: null
+  spec_version: v1.8
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2174
+  servers: [synapse, tuwunel, zendrite]
+- msc: 2175
+  title: Remove the `creator` field from `m.room.create` events
+  status: merged
+  status_detail: null
+  spec_version: v1.8
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2175
+  servers: [conduwuit, synapse, tuwunel]
+- msc: 2176
+  title: Update the redaction rules
+  status: merged
+  status_detail: null
+  spec_version: v1.8
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2176
+  servers: [synapse, tuwunel]
+- msc: 2181
+  title: Add an Error Code for Signaling a Deactivated User
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2181
+  servers: [tuwunel]
+- msc: 2190
+  title: Allow appservice bots to use /sync
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2190
+  servers: [tuwunel]
+- msc: 2197
+  title: Search Filtering in Federation /publicRooms
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2197
+  servers: [synapse, tuwunel]
+- msc: 2209
+  title: Alter auth rules to check notifications in m.room.power_levels
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2209
+  servers: [conduwuit, synapse, tuwunel]
+- msc: 2229
+  title: Allowing 3PID Owners to Rebind
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: [disposition-merge, 'kind:feature', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2229
+  servers: [tuwunel]
+- msc: 2230
+  title: Store Identity Server in Account Data
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2230
+  servers: [tuwunel]
+- msc: 2240
+  title: Room version 6
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2240
+  servers: [tuwunel]
+- msc: 2241
+  title: Key verification in DMs
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2241
+  servers: [palpo]
+- msc: 2246
+  title: Asynchronous media uploads
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2246
+  servers: [palpo, tuwunel, zendrite]
+- msc: 2249
+  title: Require users to have visibility on an event when submitting reports
+  status: merged
+  status_detail: null
+  spec_version: v1.8
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2249
+  servers: [tuwunel]
+- msc: 2260
+  title: Update the auth rules for `m.room.aliases` events
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2260
+  servers: [tuwunel]
+- msc: 2261
+  title: Allow `m.room.aliases` events to be redacted by room admins
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2261
+  servers: [conduwuit, synapse, tuwunel]
+- msc: 2263
+  title: Give homeservers the ability to handle their own 3PID registrations/password resets
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2263
+  servers: [tuwunel]
+- msc: 2264
+  title: Add an unstable feature flag to MSC2140 for clients to detect support
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2264
+  servers: [tuwunel]
+- msc: 2265
+  title: Proposal for mandating case folding when processing e-mail address localparts
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2265
+  servers: [synapse, tuwunel, zendrite]
+- msc: 2270
+  title: Proposal for Ignoring Invites
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2270
+  servers: [tuwunel]
+- msc: 2285
+  title: Private read receipts
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2285
+  servers: [conduwuit, construct, dendrite, harmony, palpo, synapse, tuwunel, zendrite]
+- msc: 2290
+  title: Separate Endpoints for Threepid Binding
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2290
+  servers: [tuwunel]
+- msc: 2306
+  title: '[WIP] MSC2306: Removing MSISDN password resets'
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2306
+  servers: [tuwunel]
+- msc: 2314
+  title: A Method to Backfill Room State
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2314
+  servers: [construct]
+- msc: 2315
+  title: Allow users to select 'none' as an integration manager
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2315
+  servers: [tuwunel]
+- msc: 2324
+  title: Facilitating early releases of software dependent on spec
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2324
+  servers: [tuwunel]
+- msc: 2326
+  title: Label based filtering
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2326
+  servers: [synapse]
+- msc: 2334
+  title: Change default room version to v5
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2334
+  servers: [tuwunel]
+- msc: 2367
+  title: Add reason field to all membership events
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2367
+  servers: [tuwunel]
+- msc: 2403
+  title: Add "knock" feature
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2403
+  servers: [tuwunel]
+- msc: 2409
+  title: Proposal to send typing, presence and receipts to appservices
+  status: merged
+  status_detail: null
+  spec_version: v1.13
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2409
+  servers: [continuwuity, palpo, synapse, tuwunel, zendrite]
+- msc: 2414
+  title: Make reason and score parameters optional for reporting content
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2414
+  servers: [tuwunel]
+- msc: 2416
+  title: Add m.login.jwt authentication type
+  status: closed
+  status_detail: rejected
+  spec_version: null
+  labels: ['kind:feature', proposal, rejected]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2416
+  servers: [tuwunel]
+- msc: 2432
+  title: Updated semantics for publishing room aliases
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2432
+  servers: [conduwuit, construct, palpo, synapse, tuwunel, zendrite]
+- msc: 2437
+  title: Store tagged events in Room Account Data
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2437
+  servers: [tuwunel]
+- msc: 2444
+  title: peeking over federation via /peek
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2444
+  servers: [dendrite, harmony, palpo, tuwunel, zendrite]
+- msc: 2448
+  title: Using BlurHash as a Placeholder for Matrix Media
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2448
+  servers: [conduit, conduwuit, palpo, tuwunel]
+- msc: 2451
+  title: Remove `query_auth` federation endpoint.
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2451
+  servers: [tuwunel]
+- msc: 2454
+  title: Support UI auth for SSO
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2454
+  servers: [tuwunel]
+- msc: 2457
+  title: Invalidating devices during password modification
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2457
+  servers: [tuwunel]
+- msc: 2472
+  title: Symmetric SSSS
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2472
+  servers: [tuwunel]
+- msc: 2474
+  title: Add key backup version to SSSS account data
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2474
+  servers: [tuwunel]
+- msc: 2499
+  title: Fixes for Well-known URIs
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2499
+  servers: [tuwunel]
+- msc: 2526
+  title: Add ability to delete key backups
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2526
+  servers: [tuwunel]
+- msc: 2540
+  title: 'Stricter event validation: JSON compliance'
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2540
+  servers: [tuwunel]
+- msc: 2545
+  title: Image Packs (Emoticons & Stickers)
+  status: merged
+  status_detail: null
+  spec_version: v1.19
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2545
+  servers: [palpo, tuwunel]
+- msc: 2579
+  title: Improved tagging support
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2579
+  servers: [tuwunel]
+- msc: 2625
+  title: Add `mark_unread` push rule action
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2625
+  servers: [dendrite, harmony, zendrite]
+- msc: 2631
+  title: Add `default_payload` to PusherData
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2631
+  servers: [tuwunel]
+- msc: 2654
+  title: Unread counts
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2654
+  servers: [palpo, synapse]
+- msc: 2659
+  title: Application service ping endpoint
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2659
+  servers: [palpo, synapse, tuwunel, zendrite]
+- msc: 2663
+  title: Errors for dealing with non-existent push rules
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2663
+  servers: [tuwunel]
+- msc: 2666
+  title: Get rooms in common with another user
+  status: merged
+  status_detail: null
+  spec_version: v1.19
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2666
+  servers: [conduwuit, continuwuity, palpo, synapse, tuwunel, zendrite]
+- msc: 2674
+  title: Event Relationships
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2674
+  servers: [tuwunel]
+- msc: 2675
+  title: Serverside aggregations of message relationships
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2675
+  servers: [tuwunel]
+- msc: 2676
+  title: Message editing
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2676
+  servers: [synapse, tuwunel]
+- msc: 2677
+  title: Annotations and reactions
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2677
+  servers: [synapse, tuwunel, zendrite]
+- msc: 2689
+  title: Fix E2EE for guests
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2689
+  servers: [tuwunel]
+- msc: 2695
+  title: Get event by ID over federation
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2695
+  servers: [tuwunel]
+- msc: 2697
+  title: '[WIP] MSC2697: Device dehydration'
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2697
+  servers: [construct, synapse, tuwunel]
+- msc: 2700
+  title: Thumbnail requirements for the media repo
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2700
+  servers: [tuwunel]
+- msc: 2701
+  title: Clarifying `Content-Type` usage in the media repo
+  status: merged
+  status_detail: null
+  spec_version: v1.12
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2701
+  servers: [tuwunel, zendrite]
+- msc: 2702
+  title: Specifying semantics for Content-Disposition on media
+  status: merged
+  status_detail: null
+  spec_version: v1.12
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2702
+  servers: [conduwuit, continuwuity, palpo, tuwunel, zendrite]
+- msc: 2703
+  title: Media ID grammar
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2703
+  servers: [tuwunel]
+- msc: 2704
+  title: Explicitly allow alternative origins in MXC URIs and specify deduplication requirements on uploads
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2704
+  servers: [tuwunel]
+- msc: 2705
+  title: Animated thumbnails for media
+  status: merged
+  status_detail: null
+  spec_version: v1.11
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2705
+  servers: [matrix-media-repo, tuwunel, zendrite]
+- msc: 2713
+  title: Remove deprecated v1 Identity Service API
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2713
+  servers: [zendrite]
+- msc: 2716
+  title: Incrementally importing history into existing rooms
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2716
+  servers: [synapse]
+- msc: 2732
+  title: Olm fallback keys
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2732
+  servers: [tuwunel, zendrite]
+- msc: 2747
+  title: VoIP call transfers
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2747
+  servers: [palpo]
+- msc: 2753
+  title: Peeking via sync (take 2)
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2753
+  servers: [dendrite, harmony, palpo, synapse, zendrite]
+- msc: 2765
+  title: Widget avatars
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: [blocked, 'kind:feature', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2765
+  servers: [tuwunel]
+- msc: 2771
+  title: Bookmarks
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2771
+  servers: [tuwunel]
+- msc: 2778
+  title: Providing authentication method for appservice users
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2778
+  servers: [tuwunel]
+- msc: 2782
+  title: Pushers with the full event content
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2782
+  servers: [tuwunel]
+- msc: 2788
+  title: Room version 6 as the default room version
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2788
+  servers: [tuwunel]
+- msc: 2810
+  title: Consistent globs specification
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2810
+  servers: [tuwunel]
+- msc: 2815
+  title: Proposal to allow room moderators to view redacted event content
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2815
+  servers: [continuwuity, synapse, tuwunel]
+- msc: 2828
+  title: Proposal to restrict allowed user IDs over federation
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2828
+  servers: [palpo]
+- msc: 2832
+  title: HS -> AS authorization header
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2832
+  servers: [tuwunel]
+- msc: 2836
+  title: Twitter-style Threading
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2836
+  servers: [conduwuit, dendrite, harmony, palpo, tuwunel, zendrite]
+- msc: 2844
+  title: Global version number for the whole spec
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2844
+  servers: [tuwunel]
+- msc: 2855
+  title: Server-Initiated Client Clear-Cache & Reload
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2855
+  servers: [construct]
+- msc: 2858
+  title: Multiple SSO Identity Providers
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2858
+  servers: [palpo, synapse, tuwunel]
+- msc: 2867
+  title: Marking rooms as unread
+  status: merged
+  status_detail: null
+  spec_version: v1.12
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2867
+  servers: [conduwuit, continuwuity, palpo, tuwunel]
+- msc: 2870
+  title: Protect server ACLs from redaction
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: [blocked, 'kind:maintenance', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2870
+  servers: [conduwuit, continuwuity, palpo, tuwunel]
+- msc: 2872
+  title: Move the widget title to the top level of the definition
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2872
+  servers: [tuwunel]
+- msc: 2874
+  title: Single SSSS
+  status: merged
+  status_detail: null
+  spec_version: v1.1
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2874
+  servers: [tuwunel]
+- msc: 2895
+  title: Proposal to improve /members and /joined_rooms
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2895
+  servers: [tuwunel]
+- msc: 2918
+  title: Refresh tokens
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2918
+  servers: [palpo, synapse, tuwunel, zendrite]
+- msc: 2946
+  title: Spaces Summary
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2946
+  servers: [conduwuit, dendrite, harmony, maelstrom, palpo, synapse, tuwunel, zendrite]
+- msc: 2949
+  title: Proposal to clarify "Requires auth" and "Rate-limited" in the spec
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2949
+  servers: [tuwunel]
+- msc: 2964
+  title: Usage of OAuth 2.0 authorization code grant and refresh token grant
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2964
+  servers: [tuwunel]
+- msc: 2965
+  title: OAuth 2.0 Authorization Server Metadata discovery
+  status: merged
+  status_detail: null
+  spec_version: v1.15
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2965
+  servers: [matrix-authentication-service, palpo, synapse, tuwunel, zendrite]
+- msc: 2966
+  title: Usage of OAuth 2.0 Dynamic Client Registration in Matrix
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2966
+  servers: [tuwunel]
+- msc: 2967
+  title: API scopes
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2967
+  servers: [continuwuity, matrix-authentication-service, palpo, synapse, tuwunel, zendrite]
+- msc: 2970
+  title: Remove pusher path requirement
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2970
+  servers: [tuwunel]
+- msc: 2998
+  title: Room Version 7
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/2998
+  servers: [tuwunel]
+- msc: 3008
+  title: Scoped access for widgets
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3008
+  servers: [tuwunel]
+- msc: 3009
+  title: Websocket transport for client <--> widget communications
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3009
+  servers: [tuwunel]
+- msc: 3015
+  title: Room state personal overrides
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3015
+  servers: [tuwunel]
+- msc: 3026
+  title: '"busy" presence state'
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3026
+  servers: [conduwuit, palpo, synapse, tuwunel]
+- msc: 3030
+  title: Jump to date API endpoint
+  status: merged
+  status_detail: null
+  spec_version: v1.6
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3030
+  servers: [construct, palpo, tuwunel, venator, zendrite]
+- msc: 3061
+  title: Sharing room keys for past messages
+  status: closed
+  status_detail: rejected
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', proposal, rejected]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3061
+  servers: [conduwuit, palpo]
+- msc: 3069
+  title: Allow guests to use /account/whoami
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3069
+  servers: [matrix-media-repo, tuwunel]
+- msc: 3083
+  title: Restricting room membership based on membership in other rooms
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3083
+  servers: [harmony, synapse, tuwunel]
+- msc: 3137
+  title: Define space room type, subset of MSC1772
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3137
+  servers: [tuwunel]
+- msc: 3173
+  title: Expose stripped state events to any potential joiner
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3173
+  servers: [synapse, tuwunel]
+- msc: 3202
+  title: Encrypted appservices
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3202
+  servers: [continuwuity, palpo, synapse, tuwunel, zendrite]
+- msc: 3214
+  title: Allow overriding `m.room.power_levels` using `initial_state`
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3214
+  servers: [tuwunel]
+- msc: 3226
+  title: Per-room spell check
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:feature', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3226
+  servers: [tuwunel]
+- msc: 3230
+  title: Spaces top level order
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3230
+  servers: [palpo, tuwunel]
+- msc: 3231
+  title: Token authenticated registration
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3231
+  servers: [palpo, tuwunel, zendrite]
+- msc: 3245
+  title: Voice messages (using extensible events)
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3245
+  servers: [conduwuit, continuwuity, palpo, tuwunel]
+- msc: 3246
+  title: Audio waveform for extensible events
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3246
+  servers: [palpo]
+- msc: 3266
+  title: Room summary API
+  status: merged
+  status_detail: null
+  spec_version: v1.15
+  labels: [disposition-merge, 'kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3266
+  servers: [conduwuit, palpo, tuwunel, zendrite]
+- msc: 3267
+  title: Reference relations
+  status: merged
+  status_detail: null
+  spec_version: v1.5
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3267
+  servers: [tuwunel]
+- msc: 3270
+  title: Symmetric megolm backup
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3270
+  servers: [tuwunel]
+- msc: 3283
+  title: Expose capabilities for profile actions
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3283
+  servers: [tuwunel]
+- msc: 3288
+  title: Add room type to `/_matrix/identity/v2/store-invite` API
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3288
+  servers: [zendrite]
+- msc: 3289
+  title: Room version 8
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3289
+  servers: [conduwuit, tuwunel]
+- msc: 3302
+  title: Stories via To-Device-Messaging
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3302
+  servers: [tuwunel]
+- msc: 3316
+  title: Add timestamp massaging to the spec
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3316
+  servers: [construct, tuwunel, zendrite]
+- msc: 3375
+  title: Room version 9
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3375
+  servers: [tuwunel]
+- msc: 3381
+  title: Polls (mk II)
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: [blocked, 'kind:feature', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3381
+  servers: [conduwuit, continuwuity, maelstrom, palpo, synapse, tuwunel]
+- msc: 3383
+  title: Include destination in X-Matrix Auth Header
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3383
+  servers: [tuwunel]
+- msc: 3385
+  title: '[WIP] MSC3385: Bulk small improvements to room upgrades'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3385
+  servers: [tuwunel]
+- msc: 3389
+  title: Relation redactions
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3389
+  servers: [synapse]
+- msc: 3391
+  title: API to delete account data
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3391
+  servers: [maelstrom, palpo, synapse, tuwunel]
+- msc: 3401
+  title: Native Group VoIP Signalling
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3401
+  servers: [conduwuit, palpo, tuwunel]
+- msc: 3414
+  title: '[WIP] MSC3414: Encrypted state events'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3414
+  servers: [venator]
+- msc: 3417
+  title: Call room room type
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3417
+  servers: [palpo]
+- msc: 3419
+  title: Allow guests to send more event types
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3419
+  servers: [tuwunel]
+- msc: 3440
+  title: Threading via `m.thread` relation
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: [disposition-merge, 'kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3440
+  servers: [synapse, tuwunel]
+- msc: 3442
+  title: move the `prev_content` key to `unsigned`
+  status: merged
+  status_detail: null
+  spec_version: v1.2
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3442
+  servers: [tuwunel]
+- msc: 3488
+  title: Extending events with location data
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: [blocked, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3488
+  servers: [palpo]
+- msc: 3489
+  title: Sharing streams of location data with history
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3489
+  servers: [conduwuit, continuwuity, palpo, tuwunel]
+- msc: 3551
+  title: Extensible Events - Files
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3551
+  servers: [palpo]
+- msc: 3552
+  title: Extensible Events - Images and Stickers
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3552
+  servers: [palpo]
+- msc: 3553
+  title: Extensible Events - Videos
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3553
+  servers: [palpo]
+- msc: 3554
+  title: Extensible Events - Translatable Text
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3554
+  servers: [palpo]
+- msc: 3567
+  title: Allow requesting events from the start/end of the room history
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3567
+  servers: [tuwunel]
+- msc: 3575
+  title: Sliding Sync (aka Sync v3)
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3575
+  servers: [babbleserv, conduit, conduwuit, continuwuity, dendrite, harmony, maelstrom, palpo, sliding-sync-proxy,
+    synapse, tuwunel, zendrite]
+- msc: 3585
+  title: Allow the base event to be omitted from `/federation/v1/event_auth` response
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3585
+  servers: [tuwunel]
+- msc: 3588
+  title: 'WIP: MSC3588: Encrypted Stories As Rooms'
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3588
+  servers: [tuwunel]
+- msc: 3589
+  title: Room version 9 as the default room version
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3589
+  servers: [tuwunel]
+- msc: 3604
+  title: Room Version 10
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3604
+  servers: [tuwunel]
+- msc: 3618
+  title: Proposal to simplify federation `/send` response
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3618
+  servers: [palpo]
+- msc: 3644
+  title: 'Extensible Events: Edits and replies'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3644
+  servers: [tuwunel]
+- msc: 3664
+  title: Pushrules for relations
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3664
+  servers: [synapse, tuwunel]
+- msc: 3666
+  title: Bundled aggregations for server side search
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3666
+  servers: [tuwunel]
+- msc: 3667
+  title: Enforce integer power levels
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3667
+  servers: [conduwuit, harmony, tuwunel]
+- msc: 3672
+  title: Sharing ephemeral streams of location data
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3672
+  servers: [palpo, tuwunel]
+- msc: 3706
+  title: Extensions to `/_matrix/federation/v2/send_join/{roomId}/{eventId}` for partial state
+  status: merged
+  status_detail: null
+  spec_version: v1.6
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3706
+  servers: [maelstrom, tuwunel, zendrite]
+- msc: 3715
+  title: Add a pagination direction parameter to `/relations`
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3715
+  servers: [tuwunel]
+- msc: 3720
+  title: Account status
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3720
+  servers: [synapse]
+- msc: 3723
+  title: Federation `/versions`
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3723
+  servers: [palpo]
+- msc: 3743
+  title: Standardized error response for unknown endpoints
+  status: merged
+  status_detail: null
+  spec_version: v1.6
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3743
+  servers: [tuwunel]
+- msc: 3754
+  title: Removing profile information
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3754
+  servers: [tuwunel]
+- msc: 3757
+  title: Restricting who can overwrite a state event
+  status: closed
+  status_detail: rejected
+  spec_version: null
+  labels: ['kind:core', proposal, rejected]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3757
+  servers: [synapse]
+- msc: 3758
+  title: Add `event_property_is` push rule condition kind
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3758
+  servers: [tuwunel]
+- msc: 3765
+  title: Rich text in room topics
+  status: merged
+  status_detail: null
+  spec_version: v1.15
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3765
+  servers: [tuwunel, zendrite]
+- msc: 3771
+  title: Read receipts for threads
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3771
+  servers: [synapse, tuwunel]
+- msc: 3773
+  title: Notifications for threads
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3773
+  servers: [babbleserv, synapse, tuwunel, zendrite]
+- msc: 3786
+  title: Add a default push rule to ignore `m.room.server_acl` events
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3786
+  servers: [tuwunel]
+- msc: 3787
+  title: Allowing knocks to restricted rooms
+  status: merged
+  status_detail: null
+  spec_version: v1.3
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3787
+  servers: [conduwuit, harmony, palpo, synapse, tuwunel]
+- msc: 3803
+  title: Matrix Widget API v2
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/issues/3803
+  servers: [tuwunel]
+- msc: 3814
+  title: '[WIP] MSC3814: Dehydrated devices with SSSS'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3814
+  servers: [continuwuity, palpo, synapse, tuwunel, zendrite]
+- msc: 3815
+  title: '[WIP] MSC3815: 3D Worlds'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3815
+  servers: [tuwunel]
+- msc: 3816
+  title: Clarify Thread Participation
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3816
+  servers: [tuwunel]
+- msc: 3818
+  title: Copy room type on upgrade
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3818
+  servers: [synapse, tuwunel]
+- msc: 3820
+  title: Room version 11
+  status: merged
+  status_detail: null
+  spec_version: v1.8
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3820
+  servers: [synapse, tuwunel]
+- msc: 3821
+  title: Update the redaction rules, again
+  status: merged
+  status_detail: null
+  spec_version: v1.8
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3821
+  servers: [tuwunel]
+- msc: 3823
+  title: Account Suspension
+  status: merged
+  status_detail: null
+  spec_version: v1.13
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3823
+  servers: [synapse, tuwunel, zendrite]
+- msc: 3824
+  title: OAuth 2.0 API aware clients
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3824
+  servers: [matrix-authentication-service, tuwunel]
+- msc: 3827
+  title: Filtering of `/publicRooms` by room type
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3827
+  servers: [conduwuit, construct, palpo, synapse, tuwunel, zendrite]
+- msc: 3828
+  title: Content Repository CORP Headers
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3828
+  servers: [tuwunel]
+- msc: 3843
+  title: Reporting content over federation (API approach)
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3843
+  servers: [palpo]
+- msc: 3848
+  title: Introduce errcodes for specific event sending failures
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3848
+  servers: [synapse]
+- msc: 3852
+  title: Expose user agent information on `Device`
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3852
+  servers: [synapse]
+- msc: 3856
+  title: Threads List API
+  status: merged
+  status_detail: null
+  spec_version: v1.4
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3856
+  servers: [palpo, tuwunel]
+- msc: 3860
+  title: Media Download Redirects
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3860
+  servers: [tuwunel, zendrite]
+- msc: 3861
+  title: Next-generation auth for Matrix, based on OAuth 2.0/OIDC
+  status: merged
+  status_detail: null
+  spec_version: v1.15
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3861
+  servers: [matrix-authentication-service, palpo, synapse, tuwunel, zendrite]
+- msc: 3864
+  title: '[WIP] MSC3864: User-given attributes for rooms'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3864
+  servers: [tuwunel]
+- msc: 3865
+  title: '[WIP] MSC3865: User-given attributes for users'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3865
+  servers: [tuwunel]
+- msc: 3866
+  title: '`M_USER_AWAITING_APPROVAL` error code'
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3866
+  servers: [synapse]
+- msc: 3871
+  title: Gappy timelines
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3871
+  servers: [synapse]
+- msc: 3873
+  title: event_match dotted keys
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3873
+  servers: [tuwunel]
+- msc: 3874
+  title: Filtering threads from the /messages endpoint
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3874
+  servers: [maelstrom, synapse]
+- msc: 3881
+  title: Remotely toggle push notifications for another client
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3881
+  servers: [synapse, tuwunel]
+- msc: 3882
+  title: Allow an existing session to sign in a new session
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3882
+  servers: [palpo, synapse, tuwunel, zendrite]
+- msc: 3884
+  title: 'Sliding Sync Extension: E2EE'
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3884
+  servers: [palpo, synapse, tuwunel, zendrite]
+- msc: 3885
+  title: 'Sliding Sync Extension: To-Device messages'
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3885
+  servers: [palpo, synapse, tuwunel]
+- msc: 3890
+  title: Remotely silence local notifications
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3890
+  servers: [maelstrom, synapse, tuwunel]
+- msc: 3895
+  title: Federation API Behaviour of Partial-State Resident Servers
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3895
+  servers: [synapse, zendrite]
+- msc: 3902
+  title: Faster remote room joins over federation (overview)
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3902
+  servers: [zendrite]
+- msc: 3904
+  title: Room version 10 as the default room version
+  status: merged
+  status_detail: null
+  spec_version: v1.6
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3904
+  servers: [tuwunel]
+- msc: 3905
+  title: Application services should only be interested in local users
+  status: merged
+  status_detail: null
+  spec_version: v1.5
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3905
+  servers: [tuwunel, zendrite]
+- msc: 3911
+  title: Linking media to events
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3911
+  servers: [conduit, matrix-media-repo]
+- msc: 3912
+  title: Redaction of related events
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3912
+  servers: [synapse]
+- msc: 3916
+  title: Authentication for media
+  status: merged
+  status_detail: null
+  spec_version: v1.11
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3916
+  servers: [conduit, conduwuit, dendrite, harmony, matrix-media-repo, palpo, synapse, tuwunel, zendrite]
+- msc: 3925
+  title: m.replace aggregation with full event
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3925
+  servers: [synapse, tuwunel]
+- msc: 3927
+  title: Extensible Events - Audio
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3927
+  servers: [palpo]
+- msc: 3930
+  title: Polls push rules/notifications
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: [blocked, disposition-merge, 'kind:feature', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3930
+  servers: [conduwuit, continuwuity, maelstrom, palpo, synapse, tuwunel]
+- msc: 3931
+  title: Push rule condition for room version features
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3931
+  servers: [palpo, synapse]
+- msc: 3932
+  title: Extensible events room version push rule feature flag
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3932
+  servers: [palpo, synapse]
+- msc: 3933
+  title: Core push rules for Extensible Events
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3933
+  servers: [synapse]
+- msc: 3938
+  title: Remove keyId from `/keys` endpoints
+  status: merged
+  status_detail: null
+  spec_version: v1.6
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3938
+  servers: [tuwunel, zendrite]
+- msc: 3939
+  title: Account locking
+  status: merged
+  status_detail: null
+  spec_version: v1.12
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3939
+  servers: [tuwunel, zendrite]
+- msc: 3943
+  title: Partial joins to nameless rooms should include heroes' memberships
+  status: merged
+  status_detail: null
+  spec_version: v1.6
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3943
+  servers: [tuwunel]
+- msc: 3945
+  title: Private device names
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:feature', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3945
+  servers: [tuwunel]
+- msc: 3952
+  title: Intentional Mentions
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3952
+  servers: [conduwuit, palpo, tuwunel]
+- msc: 3954
+  title: Extensible Events - Text Emotes
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3954
+  servers: [palpo]
+- msc: 3955
+  title: Extensible Events - Automated event mixin (notices)
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3955
+  servers: [palpo]
+- msc: 3956
+  title: '[WIP] MSC3956: Extensible Events - Encrypted Events'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3956
+  servers: [palpo]
+- msc: 3958
+  title: Suppress notifications from message edits
+  status: merged
+  status_detail: null
+  spec_version: v1.9
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3958
+  servers: [tuwunel]
+- msc: 3959
+  title: 'Sliding Sync Extension: Account Data'
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3959
+  servers: [synapse, tuwunel, zendrite]
+- msc: 3960
+  title: 'Sliding Sync Extension: Receipts'
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3960
+  servers: [palpo, synapse, tuwunel, zendrite]
+- msc: 3961
+  title: 'Sliding Sync Extension: Typing Notifications'
+  status: closed
+  status_detail: in review
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal, proposal-in-review]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3961
+  servers: [synapse, tuwunel, zendrite]
+- msc: 3966
+  title: '`event_property_contains` push rule condition'
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3966
+  servers: [tuwunel]
+- msc: 3967
+  title: Do not require UIA when first uploading cross signing keys
+  status: merged
+  status_detail: null
+  spec_version: v1.11
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3967
+  servers: [conduit, conduwuit, maelstrom, synapse, tuwunel]
+- msc: 3970
+  title: Scope transaction IDs to devices
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3970
+  servers: [synapse, tuwunel, zendrite]
+- msc: 3980
+  title: Dotted Field Consistency
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3980
+  servers: [tuwunel]
+- msc: 3981
+  title: '`/relations` recursion'
+  status: merged
+  status_detail: null
+  spec_version: v1.10
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3981
+  servers: [synapse, tuwunel, zendrite]
+- msc: 3983
+  title: Sending One-Time Key (OTK) claims to appservices
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3983
+  servers: [palpo, synapse]
+- msc: 3984
+  title: Sending key queries to appservices
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3984
+  servers: [synapse]
+- msc: 3987
+  title: Push actions clean-up
+  status: merged
+  status_detail: null
+  spec_version: v1.7
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3987
+  servers: [tuwunel]
+- msc: 3989
+  title: Redact `origin` property on events
+  status: merged
+  status_detail: null
+  spec_version: v1.8
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/3989
+  servers: [tuwunel]
+- msc: 4009
+  title: Expanding the Matrix ID grammar to enable E.164 IDs
+  status: merged
+  status_detail: null
+  spec_version: v1.8
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4009
+  servers: [tuwunel]
+- msc: 4010
+  title: Push rules and account data
+  status: merged
+  status_detail: null
+  spec_version: v1.10
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4010
+  servers: [tuwunel, zendrite]
+- msc: 4015
+  title: Voluntary Bot indicators
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4015
+  servers: [tuwunel]
+- msc: 4025
+  title: Local user erasure requests
+  status: merged
+  status_detail: null
+  spec_version: v1.10
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4025
+  servers: [tuwunel, zendrite]
+- msc: 4026
+  title: Allow `/versions` to optionally accept authentication
+  status: merged
+  status_detail: null
+  spec_version: v1.10
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4026
+  servers: [tuwunel]
+- msc: 4028
+  title: Push all encrypted events except for muted rooms
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4028
+  servers: [synapse]
+- msc: 4029
+  title: '[WIP] Fixing `X-Matrix` request authentication'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4029
+  servers: [conduit, tuwunel]
+- msc: 4032
+  title: Asset Collections
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4032
+  servers: [tuwunel]
+- msc: 4034
+  title: Media limits
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4034
+  servers: [matrix-media-repo]
+- msc: 4037
+  title: Thread root is not in the thread
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4037
+  servers: [tuwunel]
+- msc: 4040
+  title: Update SRV service name to IANA registration
+  status: merged
+  status_detail: null
+  spec_version: v1.8
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4040
+  servers: [tuwunel]
+- msc: 4041
+  title: http header Retry-After for http code 429
+  status: merged
+  status_detail: null
+  spec_version: v1.10
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4041
+  servers: [tuwunel]
+- msc: 4051
+  title: '[WIP] MSC4051: Using the create event as the room ID'
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4051
+  servers: [tuwunel]
+- msc: 4062
+  title: Add a new push rule tweak to disable email notification
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4062
+  servers: [tuwunel]
+- msc: 4069
+  title: Inhibit profile propagation
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:feature', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4069
+  servers: [synapse, venator]
+- msc: 4075
+  title: MatrixRTC invites and notifications
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4075
+  servers: [conduwuit, continuwuity, palpo, synapse, tuwunel]
+- msc: 4076
+  title: Let E2EE clients calculate app badge counts themselves (disable_badge_count)
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4076
+  servers: [conduwuit, continuwuity, synapse, tuwunel]
+- msc: 4095
+  title: Bundled URL previews
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: ['kind:feature', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4095
+  servers: [conduwuit, continuwuity, palpo]
+- msc: 4102
+  title: Clarifying precedence in threaded and unthreaded read receipts in EDUs
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4102
+  servers: [maelstrom, sliding-sync-proxy, synapse]
+- msc: 4108
+  title: Mechanism to allow OAuth 2.0 API sign in and E2EE set up via QR code
+  status: fcp
+  status_detail: final comment period proposed
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', proposal, proposed-final-comment-period]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4108
+  servers: [palpo, synapse, tuwunel, zendrite]
+- msc: 4115
+  title: membership information on events
+  status: merged
+  status_detail: null
+  spec_version: v1.11
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4115
+  servers: [sliding-sync-proxy, synapse, tuwunel, zendrite]
+- msc: 4121
+  title: '`m.role.moderator` `/.well-known/matrix/support` role.'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4121
+  servers: [conduwuit, continuwuity, palpo, tuwunel]
+- msc: 4125
+  title: Specify servers to join via for federated invites
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4125
+  servers: [conduwuit, continuwuity, palpo, tuwunel]
+- msc: 4128
+  title: Error on invalid auth where it is optional
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4128
+  servers: [tuwunel]
+- msc: 4133
+  title: Extending User Profile API with Key:Value Pairs
+  status: merged
+  status_detail: null
+  spec_version: v1.16
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4133
+  servers: [babbleserv, conduwuit, continuwuity, palpo, synapse, tuwunel, zendrite]
+- msc: 4138
+  title: Update allowed HTTP methods in CORS responses
+  status: merged
+  status_detail: null
+  spec_version: v1.13
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4138
+  servers: [tuwunel]
+- msc: 4140
+  title: Cancellable delayed events
+  status: fcp
+  status_detail: accepted, spec PR in review
+  spec_version: null
+  labels: ['kind:feature', proposal, spec-pr-in-review]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4140
+  servers: [lk-jwt-service, palpo, synapse, tuwunel, zendrite]
+- msc: 4143
+  title: MatrixRTC – Real-time communication over Matrix
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: ['kind:core', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4143
+  servers: [continuwuity, palpo, synapse, tuwunel, zendrite]
+- msc: 4149
+  title: Update CSP Directives for Media Repository
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4149
+  servers: [tuwunel]
+- msc: 4151
+  title: Reporting rooms (Client-Server API)
+  status: merged
+  status_detail: null
+  spec_version: v1.13
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4151
+  servers: [synapse, tuwunel, zendrite]
+- msc: 4154
+  title: Request max body size
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4154
+  servers: [tuwunel]
+- msc: 4155
+  title: Invite filtering
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4155
+  servers: [continuwuity, palpo, synapse, tuwunel]
+- msc: 4156
+  title: Migrate server_name to via
+  status: merged
+  status_detail: null
+  spec_version: v1.12
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4156
+  servers: [synapse, tuwunel]
+- msc: 4158
+  title: MatrixRTC focus information in .well-known
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4158
+  servers: [tuwunel]
+- msc: 4163
+  title: Make ACLs apply to EDUs
+  status: merged
+  status_detail: null
+  spec_version: v1.13
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4163
+  servers: [synapse, tuwunel]
+- msc: 4164
+  title: Leave all rooms on deactivation
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4164
+  servers: [tuwunel]
+- msc: 4165
+  title: Remove own power level on deactivation
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4165
+  servers: [tuwunel]
+- msc: 4166
+  title: Specify `/turnServer` response when no TURN servers are available
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4166
+  servers: [conduwuit, continuwuity, palpo, tuwunel]
+- msc: 4168
+  title: Update `m.space.*` state on room upgrade
+  status: open
+  status_detail: in review
+  spec_version: null
+  labels: ['kind:maintenance', proposal, proposal-in-review]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4168
+  servers: [continuwuity, tuwunel]
+- msc: 4169
+  title: Backwards-compatible redaction sending using `/send`
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4169
+  servers: [continuwuity, synapse, tuwunel, venator, zendrite]
+- msc: 4170
+  title: 403 error responses for profile APIs
+  status: merged
+  status_detail: null
+  spec_version: v1.12
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4170
+  servers: [tuwunel]
+- msc: 4171
+  title: Service members
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4171
+  servers: [palpo]
+- msc: 4174
+  title: Web push
+  status: open
+  status_detail: in review
+  spec_version: null
+  labels: ['kind:feature', proposal, proposal-in-review]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4174
+  servers: [continuwuity]
+- msc: 4175
+  title: Profile field for user time zone
+  status: merged
+  status_detail: null
+  spec_version: v1.16
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4175
+  servers: [conduwuit, continuwuity, palpo, tuwunel]
+- msc: 4178
+  title: Additional Error Codes for requestToken endpoint
+  status: merged
+  status_detail: null
+  spec_version: v1.13
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4178
+  servers: [tuwunel, zendrite]
+- msc: 4180
+  title: Add a stable flag to MSC3916
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: []
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4180
+  servers: [conduwuit, palpo, tuwunel]
+- msc: 4186
+  title: Simplified Sliding Sync
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: ['kind:core', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4186
+  servers: [babbleserv, conduit, conduwuit, continuwuity, palpo, synapse, tuwunel, zendrite]
+- msc: 4189
+  title: Allowing guests to access uploaded media
+  status: merged
+  status_detail: null
+  spec_version: v1.12
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4189
+  servers: [tuwunel]
+- msc: 4190
+  title: Device management for application services
+  status: merged
+  status_detail: null
+  spec_version: v1.17
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4190
+  servers: [conduwuit, continuwuity, palpo, synapse, tuwunel, zendrite]
+- msc: 4191
+  title: Account management for OAuth 2.0 API
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4191
+  servers: [matrix-authentication-service, palpo, tuwunel]
+- msc: 4195
+  title: LiveKit transport for MatrixRTC
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: ['kind:core', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4195
+  servers: [continuwuity, lk-jwt-service, palpo, tuwunel]
+- msc: 4198
+  title: Usage of OIDC login_hint
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4198
+  servers: [matrix-authentication-service]
+- msc: 4203
+  title: Sending to-device events to appservices
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4203
+  servers: [conduwuit, continuwuity, palpo, synapse, tuwunel]
+- msc: 4208
+  title: Adding User-Defined Custom Fields to User Global Profiles
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4208
+  servers: [tuwunel]
+- msc: 4210
+  title: Remove legacy mentions
+  status: merged
+  status_detail: null
+  spec_version: v1.17
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4210
+  servers: [conduwuit, continuwuity, synapse, tuwunel, zendrite]
+- msc: 4213
+  title: Remove server_name parameter from `join` and `knock` endpoints
+  status: merged
+  status_detail: null
+  spec_version: v1.14
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4213
+  servers: [tuwunel]
+- msc: 4222
+  title: Adding `state_after` to `/sync`
+  status: merged
+  status_detail: null
+  spec_version: v1.16
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4222
+  servers: [babbleserv, synapse, tuwunel, zendrite]
+- msc: 4225
+  title: Specification of an order in which one-time-keys should be issued
+  status: merged
+  status_detail: null
+  spec_version: v1.13
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4225
+  servers: [babbleserv, tuwunel]
+- msc: 4230
+  title: Flag for animated images
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4230
+  servers: [palpo]
+- msc: 4231
+  title: Backwards compatibility for media captions
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:core', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4231
+  servers: [tuwunel]
+- msc: 4235
+  title: '`via` query param for hierarchy endpoint'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4235
+  servers: [synapse]
+- msc: 4238
+  title: Pinned events read marker
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4238
+  servers: [tuwunel]
+- msc: 4239
+  title: Room version 11 as the default room version
+  status: merged
+  status_detail: null
+  spec_version: v1.14
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4239
+  servers: [tuwunel]
+- msc: 4242
+  title: State DAGs
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4242
+  servers: [synapse]
+- msc: 4249
+  title: Removal of legacy media endpoints
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4249
+  servers: [tuwunel]
+- msc: 4254
+  title: Usage of RFC7009 Token Revocation for Matrix client logout
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4254
+  servers: [tuwunel]
+- msc: 4259
+  title: Profile Update EDUs for Federation
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4259
+  servers: [palpo]
+- msc: 4260
+  title: Reporting users (Client-Server API)
+  status: merged
+  status_detail: null
+  spec_version: v1.14
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4260
+  servers: [synapse, tuwunel, zendrite]
+- msc: 4261
+  title: '"Do not encrypt for device" flag'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4261
+  servers: [tuwunel]
+- msc: 4262
+  title: 'Sliding Sync Extension: Profile Updates'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4262
+  servers: [palpo, synapse, tuwunel, zendrite]
+- msc: 4263
+  title: Preventing MXID enumeration via key queries
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4263
+  servers: [synapse]
+- msc: 4265
+  title: Data Protection Officer contact in /.well-known/matrix/support
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4265
+  servers: [tuwunel]
+- msc: 4266
+  title: Policies in /.well-known/matrix/support
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4266
+  servers: [tuwunel]
+- msc: 4267
+  title: Automatically forgetting rooms on leave
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4267
+  servers: [conduwuit, continuwuity, palpo, synapse, tuwunel]
+- msc: 4268
+  title: Sharing room keys for past messages
+  status: merged
+  status_detail: null
+  spec_version: v1.19
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4268
+  servers: [palpo]
+- msc: 4274
+  title: Inline media galleries via msgtypes
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4274
+  servers: [palpo]
+- msc: 4277
+  title: Harmonizing the reporting endpoints
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4277
+  servers: [synapse, tuwunel]
+- msc: 4278
+  title: Media preview controls
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4278
+  servers: [palpo, tuwunel]
+- msc: 4283
+  title: Distinction between Ignore and Block
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4283
+  servers: [continuwuity]
+- msc: 4284
+  title: Policy Servers
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4284
+  servers: [continuwuity, palpo, policyserv, synapse, tuwunel, zendrite]
+- msc: 4287
+  title: Sharing key backup preference between clients
+  status: merged
+  status_detail: null
+  spec_version: v1.19
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4287
+  servers: [tuwunel]
+- msc: 4289
+  title: Explicitly privilege room creators
+  status: merged
+  status_detail: null
+  spec_version: v1.16
+  labels: [disposition-merge, merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4289
+  servers: [synapse, tuwunel, zendrite]
+- msc: 4291
+  title: Room IDs as hashes of the create event
+  status: merged
+  status_detail: null
+  spec_version: v1.16
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4291
+  servers: [synapse, tuwunel]
+- msc: 4293
+  title: Redact on kick/ban
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4293
+  servers: [continuwuity, palpo, synapse, venator]
+- msc: 4297
+  title: State Resolution 2.1
+  status: merged
+  status_detail: null
+  spec_version: v1.16
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4297
+  servers: [synapse, tuwunel]
+- msc: 4299
+  title: '[WIP] MSC4299: trusted users'
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4299
+  servers: [tuwunel]
+- msc: 4304
+  title: Room Version 12
+  status: merged
+  status_detail: null
+  spec_version: v1.16
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4304
+  servers: [tuwunel]
+- msc: 4306
+  title: Thread Subscriptions
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4306
+  servers: [babbleserv, palpo, synapse, zendrite]
+- msc: 4307
+  title: Validate that `auth_events` are in the correct room
+  status: merged
+  status_detail: null
+  spec_version: v1.16
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4307
+  servers: [tuwunel]
+- msc: 4308
+  title: Thread Subscriptions extension to Sliding Sync
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4308
+  servers: [palpo, synapse, zendrite]
+- msc: 4310
+  title: MatrixRTC decline `m.rtc.decline`
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4310
+  servers: [continuwuity, palpo, tuwunel]
+- msc: 4311
+  title: Ensuring the create event is available on invites
+  status: merged
+  status_detail: null
+  spec_version: v1.16
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4311
+  servers: [conduit, palpo, synapse, tuwunel, zendrite]
+- msc: 4312
+  title: Resetting cross-signing keys in the OAuth world
+  status: merged
+  status_detail: null
+  spec_version: v1.17
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4312
+  servers: [synapse, tuwunel]
+- msc: 4319
+  title: Room member events for invite and knock rooms in the `/sync` response
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: ['kind:maintenance', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4319
+  servers: [palpo, synapse, tuwunel]
+- msc: 4323
+  title: User suspension & locking endpoints
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4323
+  servers: [continuwuity, palpo, tuwunel, venator, zendrite]
+- msc: 4324
+  title: Fixing MSC4289's power level for tombstones
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4324
+  servers: [tuwunel]
+- msc: 4326
+  title: Device masquerading for appservices
+  status: merged
+  status_detail: null
+  spec_version: v1.17
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4326
+  servers: [synapse, tuwunel, zendrite]
+- msc: 4330
+  title: specify HTTP and TLS versions which must be supported
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4330
+  servers: [tuwunel]
+- msc: 4334
+  title: Add `m.room.language` state event.
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4334
+  servers: [palpo]
+- msc: 4341
+  title: Support for RFC 8628 Device Authorization Grant
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4341
+  servers: [tuwunel]
+- msc: 4342
+  title: Limiting the number of devices per user ID
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4342
+  servers: [venator]
+- msc: 4351
+  title: Odd Context Limits
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4351
+  servers: [tuwunel]
+- msc: 4354
+  title: Sticky Events
+  status: fcp
+  status_detail: accepted, spec PR in review
+  spec_version: null
+  labels: ['kind:core', proposal, spec-pr-in-review]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4354
+  servers: [continuwuity, palpo, synapse, zendrite]
+- msc: 4356
+  title: Recently used emoji
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4356
+  servers: [tuwunel]
+- msc: 4359
+  title: '"Do not Disturb" notification settings'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4359
+  servers: [palpo, tuwunel]
+- msc: 4361
+  title: Non-federating Membership Authorization Rule Amendments
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4361
+  servers: [tuwunel]
+- msc: 4362
+  title: Simplified Encrypted State Events
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4362
+  servers: [palpo]
+- msc: 4363
+  title: OAuth step up authentication
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4363
+  servers: [continuwuity, palpo]
+- msc: 4370
+  title: Federation endpoint for retrieving current extremities
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4370
+  servers: [synapse]
+- msc: 4376
+  title: Remove /v1/send_join and /v1/send_leave
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4376
+  servers: [tuwunel]
+- msc: 4377
+  title: Clarify Image Pack Ordering
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4377
+  servers: [tuwunel]
+- msc: 4380
+  title: Invite blocking
+  status: merged
+  status_detail: null
+  spec_version: v1.18
+  labels: ['kind:core', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4380
+  servers: [continuwuity, palpo, synapse, tuwunel, venator, zendrite]
+- msc: 4383
+  title: Client-Server Discovery of Server Version
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4383
+  servers: [palpo, tuwunel, venator]
+- msc: 4384
+  title: Supporting alternative room directory sorting
+  status: closed
+  status_detail: obsolete
+  spec_version: null
+  labels: ['kind:maintenance', obsolete, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4384
+  servers: [tuwunel]
+- msc: 4387
+  title: '`M_SAFETY` error code'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4387
+  servers: [policyserv]
+- msc: 4388
+  title: Secure out-of-band channel for sign in with QR
+  status: fcp
+  status_detail: final comment period proposed
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', proposal, proposed-final-comment-period]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4388
+  servers: [palpo, synapse, tuwunel, zendrite]
+- msc: 4397
+  title: Tags as spaces
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4397
+  servers: [tuwunel]
+- msc: 4402
+  title: Consistent redirects for .well-known-files
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4402
+  servers: [tuwunel]
+- msc: 4406
+  title: '`M_SENDER_IGNORED` error code'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4406
+  servers: [continuwuity, palpo, tuwunel]
+- msc: 4415
+  title: Make `/_matrix/client/v3/admin/whois/{userId}` only available to admins
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4415
+  servers: [tuwunel]
+- msc: 4418
+  title: Make `destination` a required server authentication field
+  status: closed
+  status_detail: abandoned
+  spec_version: null
+  labels: [abandoned, 'kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4418
+  servers: [tuwunel]
+- msc: 4420
+  title: Duplicate one-time key error response for /keys/upload
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4420
+  servers: [venator]
+- msc: 4423
+  title: Undefine order of room directory
+  status: merged
+  status_detail: null
+  spec_version: v1.19
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4423
+  servers: [tuwunel]
+- msc: 4426
+  title: User Status Profile Fields
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4426
+  servers: [synapse, tuwunel]
+- msc: 4429
+  title: Profile Updates for Legacy Sync
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4429
+  servers: [synapse, tuwunel]
+- msc: 4436
+  title: Make server ACLs case insensitive
+  status: merged
+  status_detail: null
+  spec_version: v1.19
+  labels: [disposition-merge, 'kind:maintenance', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4436
+  servers: [tuwunel, zendrite]
+- msc: 4437
+  title: Endpoint to replace entire profile
+  status: fcp
+  status_detail: final comment period proposed
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', proposal, proposed-final-comment-period]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4437
+  servers: [venator]
+- msc: 4438
+  title: Message bookmarks via account data
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4438
+  servers: [tuwunel]
+- msc: 4439
+  title: Encryption key URIs in `/.well-known/matrix/support`
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4439
+  servers: [continuwuity, palpo, tuwunel]
+- msc: 4441
+  title: User Profile Annotations ("Profile Notes")
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4441
+  servers: [tuwunel]
+- msc: 4445
+  title: Clarify `/sync` timeline order
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4445
+  servers: [synapse]
+- msc: 4446
+  title: Allow moving the fully read marker to older events
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4446
+  servers: [synapse, tuwunel]
+- msc: 4449
+  title: Updated /members filtering
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4449
+  servers: [venator]
+- msc: 4450
+  title: Identity Provider selection for User-Interactive Authentication with Legacy Single Sign-On
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4450
+  servers: [synapse]
+- msc: 4452
+  title: Preview URL capabilities API
+  status: merged
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', merged, proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4452
+  servers: [synapse, tuwunel]
+- msc: 4455
+  title: Catch-all property for spaces
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4455
+  servers: [synapse]
+- msc: 4456
+  title: Harms taxonomy
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4456
+  servers: [policyserv]
+- msc: 4458
+  title: Handling incoming JSON in the server-server API
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: ['kind:core', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4458
+  servers: [tuwunel]
+- msc: 4461
+  title: Storing per-message profiles for users
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4461
+  servers: [tuwunel]
+- msc: 4466
+  title: Altering profile change propagation
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4466
+  servers: [continuwuity, palpo, tuwunel]
+- msc: 4476
+  title: Image pack rooms
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4476
+  servers: [tuwunel]
+- msc: 4480
+  title: 'Sliding Sync Extension: Sticky Events'
+  status: fcp
+  status_detail: final comment period proposed
+  spec_version: null
+  labels: [disposition-merge, 'kind:core', proposal, proposed-final-comment-period]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4480
+  servers: [continuwuity, synapse, zendrite]
+- msc: 4482
+  title: Ability to bookmark messages
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4482
+  servers: [tuwunel]
+- msc: 4483
+  title: Encrypted Account Data
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4483
+  servers: [tuwunel]
+- msc: 4484
+  title: Server Administration OAuth Scope
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4484
+  servers: [continuwuity, palpo]
+- msc: 4486
+  title: Listing delayed events with filtering & pagination
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4486
+  servers: [zendrite]
+- msc: 4491
+  title: Invite reasons in room creation
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4491
+  servers: [synapse]
+- msc: 4492
+  title: Clarify that pagination tokens are directionless
+  status: fcp
+  status_detail: final comment period proposed
+  spec_version: null
+  labels: [disposition-merge, 'kind:maintenance', proposal, proposed-final-comment-period]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4492
+  servers: [tuwunel]
+- msc: 4494
+  title: Membership-based invite blocking
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4494
+  servers: [continuwuity, palpo, venator]
+- msc: 4495
+  title: Selective Presence
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4495
+  servers: [palpo]
+- msc: 4499
+  title: Strict server signing key caching and key ID uniqueness
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4499
+  servers: [tuwunel]
+- msc: 4502
+  title: Targeted and unrestricted room member queries
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4502
+  servers: [lk-jwt-service, synapse]
+- msc: 4504
+  title: Using a global version number for the entire specification (v2)
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:core', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4504
+  servers: [tuwunel]
+- msc: 4508
+  title: 'Sliding Sync Extensions: Common format and Typing'
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: ['kind:core', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4508
+  servers: [synapse, tuwunel]
+- msc: 4509
+  title: Auto join on accepted knock
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4509
+  servers: [venator]
+- msc: 4512
+  title: Delegating parts of the Client-Server and Server-Server API to application services
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4512
+  servers: [lk-jwt-service, synapse]
+- msc: 4513
+  title: Standard HTTP status codes for all endpoints, current and future
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4513
+  servers: [tuwunel]
+- msc: 4519
+  title: MatrixRTC Transports Registry
+  status: open
+  status_detail: in review
+  spec_version: null
+  labels: ['kind:core', proposal, proposal-in-review]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4519
+  servers: [tuwunel]
+- msc: 4522
+  title: Username colors
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4522
+  servers: [tuwunel]
+- msc: 4526
+  title: Improve OAuth 2.0 refresh token grant error handling
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4526
+  servers: [tuwunel]
+- msc: 4528
+  title: '`M_INCOMPATIBLE_SERVER` error code'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4528
+  servers: [synapse]
+- msc: 4529
+  title: Client-side profile overrides
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4529
+  servers: [tuwunel]
+- msc: 4532
+  title: Revised Social Presence
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4532
+  servers: [palpo]
+- msc: 4534
+  title: Simple room rules
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4534
+  servers: [tuwunel]
+- msc: 4537
+  title: Restore `200 {}` for unset profile fields
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4537
+  servers: [synapse]
+- msc: 4540
+  title: '`m.admin` capability'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4540
+  servers: [continuwuity, palpo]
+- msc: 4548
+  title: 'Sliding Sync Extensions: Account data'
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: ['kind:core', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4548
+  servers: [synapse]
+- msc: 4551
+  title: 'Sliding Sync Extensions: Receipts'
+  status: fcp
+  status_detail: accepted, spec PR missing
+  spec_version: null
+  labels: ['kind:core', proposal, spec-pr-missing]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4551
+  servers: [synapse]
+- msc: 4559
+  title: 'Sliding Sync Extensions: Presence'
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:feature', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4559
+  servers: [palpo]
+- msc: 4560
+  title: Stripped state requests over federation
+  status: open
+  status_detail: null
+  spec_version: null
+  labels: ['kind:maintenance', proposal]
+  url: https://github.com/matrix-org/matrix-spec-proposals/pull/4560
+  servers: [continuwuity, venator]

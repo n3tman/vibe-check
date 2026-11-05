@@ -1,0 +1,221 @@
+slug: zendrite
+name: Zendrite
+category: server
+kind: homeserver
+homepage: https://zendrite.pat-s.me/
+summary: A fork of Dendrite (February 2026) adding recent spec features, high availability and fixes.
+repos:
+- {url: 'https://codefloe.com/pat-s/zendrite', forge: forgejo, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/servers/
+  other:
+  - https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/servers/servers.toml
+maturity: beta
+platforms:
+- server
+licence: AGPL-3.0-or-later OR LicenseRef-Element-Commercial
+fork_of: dendrite
+distribution:
+- docker
+funding: []
+features:
+  language: Go
+  database: {value: 'yes', how: claimed, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/.forgejo/ISSUE_TEMPLATE/BUG_REPORT.md#L21',
+    note: 'PostgreSQL, SQLite'}
+  federation: {value: 'yes', how: claimed}
+  spec_versions: {value: 'yes', how: code, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L211',
+    versions: [r0.0.1, r0.1.0, r0.2.0, r0.3.0, r0.4.0, r0.5.0, r0.6.1, v1.0, v1.1, v1.2, v1.3, v1.4, v1.5,
+      v1.6, v1.7, v1.8, v1.9, v1.10, v1.11, v1.12, v1.13, v1.14, v1.15, v1.16, v1.17, v1.18, v1.19]}
+  appservices: {value: 'yes', how: claimed}
+  admin_api: {value: 'yes', how: claimed, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/website/src/content/docs/administration/adminapi.md'}
+  oidc_delegation: {value: 'yes', how: code, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/setup/mscs/mscs.go#L57',
+    note: 'MSC3861: experimental, flag mscs.mscs: [msc3861]'}
+  native_sliding_sync: {value: 'yes', how: code, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L105',
+    note: 'MSC4186: unstable'}
+  workers_scaling: {value: 'yes', how: claimed, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/website/src/content/docs/administration/high-availability.md',
+    note: high-availability mode}
+  media_auth: {value: 'yes', how: code, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L104',
+    note: 'MSC3916: stable'}
+  msc:
+  - {msc: 1234, state: experimental, flag: msc12345, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/setup/config/config_mscs.go#L244',
+    note: behind a config option}
+  - {msc: 1692, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/auth/authtypes/logintypes.go#L18',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 1772, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/roomserver/internal/query/query_room_hierarchy.go#L574',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 1929, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L189',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2174, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/synctypes/clientevent.go#L160',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2246, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/mediaapi/routing/routing.go#L76',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2265, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/auth/authtypes/threepid.go#L25',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2285, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L103',
+    note: advertised in unstable_features}
+  - {msc: 2409, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/appservice/appservice.go#L70',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2432, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/sendevent.go#L680',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2444, state: experimental, flag: 'mscs.mscs: [msc2444]', source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/setup/mscs/mscs.go#L55',
+    note: opt-in via the mscs config list}
+  - {msc: 2625, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/are-we-synapse-yet.list#L914',
+    note: unstable prefix in code}
+  - {msc: 2659, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/appservice_ping.go#L49',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2666, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L120',
+    note: advertised in unstable_features}
+  - {msc: 2677, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/sendevent.go#L654',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2701, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/mediaapi/routing/download.go#L107',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2702, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/mediaapi/routing/download.go#L1202',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2705, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/mediaapi/routing/download.go#L59',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2713, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/threepid/identity_auth.go#L27',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2732, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/types/v4types.go#L472',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2753, state: experimental, flag: 'mscs.mscs: [msc2753]', source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/setup/mscs/mscs.go#L56',
+    note: opt-in via the mscs config list}
+  - {msc: 2836, state: experimental, flag: 'mscs.mscs: [msc2836]', source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/setup/mscs/mscs.go#L51',
+    note: opt-in via the mscs config list}
+  - {msc: 2918, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/auth/user_interactive.go#L67',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2946, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/roomserver/internal/query/query_room_hierarchy.go#L590',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 2965, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L132',
+    note: advertised in unstable_features}
+  - {msc: 2967, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L133',
+    note: advertised in unstable_features}
+  - {msc: 3030, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/routing/timestamp_to_event.go#L111',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3202, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/auth/auth.go#L59',
+    note: unstable prefix in code}
+  - {msc: 3231, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/register.go#L1412',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3266, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/room_summary.go#L44',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3288, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/threepid/invites.go#L227',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3316, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/httputil/parse.go#L18',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3575, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L54',
+    note: advertised in unstable_features}
+  - {msc: 3706, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/joinroom.go#L33',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3765, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/internal/eventutil/eventcontent.go#L22',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3773, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/types/types.go#L555',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3814, state: experimental, flag: 'mscs.mscs: [msc3814]', source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/setup/mscs/mscs.go#L53',
+    note: opt-in via the mscs config list}
+  - {msc: 3823, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/auth/auth.go#L139',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3827, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/directory_public.go#L74',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3860, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/mediaapi/routing/download.go#L1174',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3861, state: experimental, flag: 'mscs.mscs: [msc3861]', source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/setup/mscs/mscs.go#L57',
+    note: opt-in via the mscs config list}
+  - {msc: 3882, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/login_token.go#L25',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3884, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/sync/v4_extensions.go#L131',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3895, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/federationapi/routing/routing.go#L663',
+    note: unstable prefix in code}
+  - {msc: 3902, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/federationapi/internal/partialstate.go#L704',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3905, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/appservice/consumers/roomserver.go#L300',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3916, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L104',
+    note: advertised in unstable_features}
+  - {msc: 3938, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/federationapi/routing/routing.go#L93',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3939, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/auth/auth.go#L122',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3959, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/sync/v4_extensions.go#L30',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3960, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/sync/v4_extensions.go#L30',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3961, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/sync/v4_extensions.go#L30',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 3970, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/internal/transactions/transactions.go#L27',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 3981, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/routing/relations.go#L71',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4010, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/account_data.go#L91',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4025, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/admin_mas.go#L677',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4108, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L139',
+    note: advertised in unstable_features}
+  - {msc: 4115, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/roomserver/types/headered_event.go#L26',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4133, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L112',
+    note: advertised in unstable_features}
+  - {msc: 4140, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L106',
+    note: advertised in unstable_features}
+  - {msc: 4143, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L56',
+    note: advertised in unstable_features}
+  - {msc: 4151, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/admin.go#L532',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4169, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L114',
+    note: advertised in unstable_features}
+  - {msc: 4178, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/password_reset.go#L83',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4186, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L105',
+    note: advertised in unstable_features}
+  - {msc: 4190, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/device.go#L162',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4210, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/internal/pushrules/condition.go#L52',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4222, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L111',
+    note: advertised in unstable_features}
+  - {msc: 4260, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/admin.go#L559',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4262, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L109',
+    note: advertised in unstable_features}
+  - {msc: 4284, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/federationapi/api/api.go#L59',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4289, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/roomserver/internal/perform/perform_create_room.go#L171',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4306, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L117',
+    note: advertised in unstable_features}
+  - {msc: 4308, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/routing/routing.go#L60',
+    note: unstable prefix in code}
+  - {msc: 4311, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/federationapi/api/api.go#L216',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4323, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/admin_moderation.go#L23',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4326, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/auth/auth.go#L58',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4354, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L110',
+    note: advertised in unstable_features}
+  - {msc: 4380, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L115',
+    note: advertised in unstable_features}
+  - {msc: 4388, state: experimental, flag: MSC4388, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/setup/config/config_mscs.go#L33',
+    note: behind a config option}
+  - {msc: 4436, state: stable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/roomserver/acls/acls.go#L100',
+    note: referenced in code; MSC is in the spec}
+  - {msc: 4480, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/syncapi/sync/v4_extensions.go#L305',
+    note: 'referenced in code, no flag found; extent not checked'}
+  - {msc: 4486, state: unstable, source: 'https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/clientapi/routing/routing.go#L537',
+    note: 'referenced in code, no flag found; extent not checked'}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: c68f55c60d89a91b4532e6b7a2da9d8edbba8174
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: matrix.org lists the licence as AGPL-3.0-or-later; the repo keeps Dendrite's LICENSE-COMMERCIAL
+  file.
+checked: '2026-11-05'

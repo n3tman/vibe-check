@@ -1,0 +1,47 @@
+slug: lk-jwt-service
+name: LiveKit JWT service
+category: server
+kind: MatrixRTC authorisation service
+homepage: null
+summary: Issues LiveKit tokens to Matrix users so MatrixRTC (Element Call) can use a LiveKit SFU.
+repos:
+- {url: 'https://github.com/element-hq/lk-jwt-service', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other:
+  - own search
+maturity: stable
+platforms:
+- server
+licence: AGPL-3.0-only OR LicenseRef-Element-Commercial
+fork_of: null
+distribution:
+- docker
+funding: []
+features:
+  language: Go
+  database: null
+  msc:
+  - {msc: 4140, state: unstable, source: 'https://github.com/element-hq/lk-jwt-service/blob/83be6cf930b579c9d22617390e15dcc593c9f3be/integration-tests/src/fake_homeserver.rs#L171',
+    note: unstable prefix in code}
+  - {msc: 4195, state: unstable, source: 'https://github.com/element-hq/lk-jwt-service/blob/83be6cf930b579c9d22617390e15dcc593c9f3be/integration-tests/src/helpers.rs#L277',
+    note: unstable prefix in code}
+  - {msc: 4502, state: unstable, source: 'https://github.com/element-hq/lk-jwt-service/blob/83be6cf930b579c9d22617390e15dcc593c9f3be/e2e-tests/docker/app-service-a.yaml#L14',
+    note: unstable prefix in code}
+  - {msc: 4512, state: unstable, source: 'https://github.com/element-hq/lk-jwt-service/blob/83be6cf930b579c9d22617390e15dcc593c9f3be/e2e-tests/docker/app-service-a.yaml#L17',
+    note: unstable prefix in code}
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence: []
+    checked_at: 83be6cf930b579c9d22617390e15dcc593c9f3be
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'
