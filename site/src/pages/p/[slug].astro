@@ -37,6 +37,12 @@ const aiBots = okRepos.flatMap((r) => r.ai_scan?.ai_bot_authors ?? []);
 const telemetry = okRepos.flatMap((r) => r.telemetry_scan?.found ?? []);
 const handEvidence = (p.ai.dev_usage.evidence ?? []) as any[];
 const fund = p.funding ?? [];
+// Forge mark and name for a repo row; Codeberg runs Forgejo, so it shares that mark.
+const FORGE_NAME: Record<string, string> = { github: 'GitHub', gitlab: 'GitLab', forgejo: 'Forgejo', gitea: 'Gitea', sourcehut: 'SourceHut', other: 'Git host' };
+const forgeOf = (r: { url: string; forge?: string | null }) => {
+  const f = r.forge && FORGE_NAME[r.forge] ? r.forge : 'other';
+  return { icon: `forge-${f}`, label: host(r.url).startsWith('codeberg.org') ? 'Codeberg (Forgejo)' : FORGE_NAME[f] };
+};
 const funderPolicies = (((p.ai as any).funder_policy ?? []) as any[]);
 const override = (p.ai.dev_usage as any).collector_override as string | undefined;
 const sec = c?.security_policy as string | null | undefined;
@@ -62,7 +68,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
     <Platforms os={osList(p)} />
     <ul class="links">
       {p.homepage && <li><a href={p.homepage}><Icon name="globe" size={14} />{host(p.homepage)}</a></li>}
-      {p.repos.map((r) => <li><a href={r.url}><Icon name="branch" size={14} />{host(r.url)}</a>{r.role && r.role !== 'main' && <span class="muted small"> ({r.role})</span>}</li>)}
+      {p.repos.map((r) => <li><a href={r.url}><Icon name={forgeOf(r).icon} size={14} label={forgeOf(r).label} />{host(r.url)}</a>{r.role && r.role !== 'main' && <span class="muted small"> ({r.role})</span>}</li>)}
       {p.sources?.matrix_org_listing && <li><a href={p.sources.matrix_org_listing}><Icon name="matrix" size={14} />matrix.org listing</a></li>}
       <li><a href={href(`compare/?p=${p.slug}`)}><Icon name="compare" size={14} />Compare</a></li>
     </ul>
@@ -243,7 +249,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
           <tbody>
             {m.repos.map((r) => (
               <tr>
-                <td><a href={r.url}>{host(r.url)}</a></td>
+                <td><a href={r.url} class="repo-link"><Icon name={forgeOf(r).icon} size={14} label={forgeOf(r).label} />{host(r.url)}</a></td>
                 <td>{r.role}</td>
                 <td>{r.ok ? <StatusBadge status={r.status ?? 'unknown'} /> : <span class="muted small">failed: {r.error}</span>}</td>
                 <td>{fmtDate(r.last_commit)}</td>
