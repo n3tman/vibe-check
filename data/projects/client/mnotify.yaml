@@ -1,0 +1,134 @@
+slug: mnotify
+name: mnotify
+category: client
+kind: terminal (CLI)
+homepage: null
+summary: Small Rust CLI (mn) for getting messages from scripts and servers into Matrix rooms, E2EE included,
+  with JSON output.
+repos:
+- url: https://github.com/rumpelsepp/mnotify
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/mnotify/
+  other: []
+maturity: beta
+platforms:
+- terminal
+apps:
+- os: terminal
+  tech: other
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/rumpelsepp/mnotify/blob/5a9d8163b86aae053a4971971f6e5b2f31ab7ed1/README.md
+licence: EUPL-1.2
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    source: https://github.com/rumpelsepp/mnotify/blob/5a9d8163b86aae053a4971971f6e5b2f31ab7ed1/Cargo.toml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/rumpelsepp/mnotify/blob/5a9d8163b86aae053a4971971f6e5b2f31ab7ed1/Cargo.toml#L20
+    note: pattern match [matrix-sdk-crypto]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/rumpelsepp/mnotify/blob/5a9d8163b86aae053a4971971f6e5b2f31ab7ed1/src/main.rs#L214
+    note: pattern match [cross-signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/rumpelsepp/mnotify/blob/5a9d8163b86aae053a4971971f6e5b2f31ab7ed1/src/output.rs#L193
+    note: pattern match [key backup]
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://github.com/rumpelsepp/mnotify/blob/5a9d8163b86aae053a4971971f6e5b2f31ab7ed1/src/main.rs#L401
+    note: pattern match [sliding sync]
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/rumpelsepp/mnotify/blob/5a9d8163b86aae053a4971971f6e5b2f31ab7ed1/src/output.rs#L275
+    note: pattern match [m.thread]
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/rumpelsepp/mnotify/blob/5a9d8163b86aae053a4971971f6e5b2f31ab7ed1/src/main.rs#L13
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/rumpelsepp/mnotify/blob/5a9d8163b86aae053a4971971f6e5b2f31ab7ed1/src/output.rs#L121
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: EUPL-1.2; one Rust crate, about 50 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 49 of 50 commits in the last 365 days carry Claude co-author trailers (Claude Opus 5.5, Sonnet 5)
+      at 5a9d8163b8
+    - no agent files
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: matrix.org marks it "Obsolete" and lists E2EE as unsupported; the current repo is active again
+  (commits in October 2026) and its README says E2EE rooms work. The listing looks out of date.
+checked: '2026-11-05'

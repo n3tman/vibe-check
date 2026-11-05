@@ -1,0 +1,133 @@
+slug: sailtrix
+name: Sailtrix
+category: client
+kind: mobile
+homepage: null
+summary: Matrix client for Sailfish OS with E2EE, in beta.
+repos:
+- url: https://gitlab.com/HengYeDev/harbour-sailtrix
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: beta
+platforms:
+- other
+apps:
+- os: sailfish
+  tech: qt
+  min_os: null
+  status: beta
+  stores:
+  - name: openrepos
+    url: https://openrepos.net/content/hengyedev/sailtrix
+  source: https://gitlab.com/HengYeDev/harbour-sailtrix/-/blob/c87734cdfed5342874758f154c8f7169a73af140/README.md
+licence: GPL-3.0-only
+fork_of: null
+distribution: []
+funding:
+- https://liberapay.com/HengYe/donate
+features:
+  sdk:
+    value: own
+    how: code
+    note: Qt/C++ with olm
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/HengYeDev/harbour-sailtrix/-/blob/c87734cdfed5342874758f154c8f7169a73af140/src/rooms.cpp#L70
+    note: pattern match [olm_]
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/HengYeDev/harbour-sailtrix/-/blob/c87734cdfed5342874758f154c8f7169a73af140/src/enc-util.cpp#L600
+    note: pattern match [SecretStorage]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/HengYeDev/harbour-sailtrix/-/blob/c87734cdfed5342874758f154c8f7169a73af140/src/messages.cpp#L1169
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/HengYeDev/harbour-sailtrix/-/blob/c87734cdfed5342874758f154c8f7169a73af140/src/messages.cpp#L1918
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/HengYeDev/harbour-sailtrix/-/blob/c87734cdfed5342874758f154c8f7169a73af140/src/messages.cpp#L757
+    note: pattern match [presence]
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: 'yes'
+    how: claimed
+    source: https://gitlab.com/HengYeDev/harbour-sailtrix/-/blob/c87734cdfed5342874758f154c8f7169a73af140/README.md
+    note: Weblate (hosted.weblate.org/projects/sailtrix)
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: GPL-3.0; Sailfish SDK build, about 100 files
+ai:
+  policy:
+    value: banned
+    quote: Current policy is to REJECT any merge request that are believed to include LLM generated content,
+      at the maintainer's sole discretion.
+    source: https://gitlab.com/HengYeDev/harbour-sailtrix/-/blob/c87734cdfed5342874758f154c8f7169a73af140/README.md#L21
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (38 non-bot commits in the last 365 days) at c87734cdfe
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The policy allows LLM use "to research, debugging, or help to understand code or concepts, given
+  that no output is included in your contributions."
+checked: '2026-11-05'

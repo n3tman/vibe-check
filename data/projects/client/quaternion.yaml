@@ -1,0 +1,148 @@
+slug: quaternion
+name: Quaternion
+category: client
+kind: desktop
+homepage: null
+summary: Cross-platform Qt desktop client of the Quotient project, the reference client for libQuotient.
+repos:
+- url: https://github.com/quotient-im/Quaternion
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/quaternion/
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: beta
+platforms:
+- linux
+- windows
+- macos
+apps:
+- os: linux
+  tech: qt
+  min_os: null
+  status: beta
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/com.github.quaternion
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/quaternion.md
+- os: windows
+  tech: qt
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/quaternion.md
+- os: macos
+  tech: qt
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/quaternion.md
+licence: GPL-3.0-only
+fork_of: null
+distribution:
+- flathub
+funding: []
+features:
+  sdk:
+    value: libQuotient
+    how: code
+    source: https://github.com/quotient-im/Quaternion/blob/5297ce9208c846732b194b71a9d2363777e7167b/CMakeLists.txt
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/quotient-im/Quaternion/blob/5297ce9208c846732b194b71a9d2363777e7167b/.lgtm.yml#L24
+    note: pattern match [Olm_]
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://github.com/quotient-im/Quaternion/blob/5297ce9208c846732b194b71a9d2363777e7167b/client/quaternionroom.h#L48
+    note: pattern match [sliding sync]
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/quaternion.md
+  threads:
+    value: not-found
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/quotient-im/Quaternion/blob/5297ce9208c846732b194b71a9d2363777e7167b/client/chatedit.cpp#L284
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/quotient-im/Quaternion/blob/5297ce9208c846732b194b71a9d2363777e7167b/client/htmlfilter.cpp#L74
+    note: pattern match [emoticon]
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: 'yes'
+    how: code
+    source: https://github.com/quotient-im/Quaternion/blob/5297ce9208c846732b194b71a9d2363777e7167b/client/chatroomwidget.cpp#L102
+    note: pattern match [rich_text_editor]
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/quotient-im/Quaternion/blob/5297ce9208c846732b194b71a9d2363777e7167b/client/models/messageeventmodel.cpp#L28
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: GPL-3.0; small CMake/Qt project (about 125 files) on libQuotient
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (26 non-bot commits in the last 365 days) at 5297ce9208
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: matrix.org lists E2EE as unsupported; the code matches libQuotient's E2EE API names (see e2ee source)
+  but this was not tested.
+checked: '2026-11-05'

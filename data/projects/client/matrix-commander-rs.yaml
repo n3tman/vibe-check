@@ -1,0 +1,121 @@
+slug: matrix-commander-rs
+name: matrix-commander-rs
+category: client
+kind: terminal (CLI)
+homepage: null
+summary: 'Rust rewrite of matrix-commander on matrix-sdk: a CLI client for sending, receiving and scripting.'
+repos:
+- url: https://github.com/8go/matrix-commander-rs
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/matrix-commander-rs/
+  other: []
+maturity: stable
+platforms:
+- terminal
+apps:
+- os: terminal
+  tech: other
+  min_os: null
+  status: stable
+  stores:
+  - name: crates.io
+    url: https://crates.io/crates/matrix-commander
+  source: https://github.com/8go/matrix-commander-rs/blob/878068bd5b64c2acdb7fdb541e06910e928e1b7a/README.md
+licence: GPL-3.0-or-later
+fork_of: null
+distribution:
+- crates.io
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    source: https://github.com/8go/matrix-commander-rs/blob/878068bd5b64c2acdb7fdb541e06910e928e1b7a/Cargo.toml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/8go/matrix-commander-rs/blob/878068bd5b64c2acdb7fdb541e06910e928e1b7a/src/listen.rs#L820
+    note: pattern match [Megolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/8go/matrix-commander-rs/blob/878068bd5b64c2acdb7fdb541e06910e928e1b7a/src/main.rs#L977
+    note: pattern match [cross signing]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/8go/matrix-commander-rs/blob/878068bd5b64c2acdb7fdb541e06910e928e1b7a/src/listen.rs#L752
+    note: pattern match [key backup]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: GPL-3.0; single Rust crate, about 50 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (110 non-bot commits in the last 365 days) at 878068bd5b
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'README "News": a new maintainer joined in June 2026.'
+checked: '2026-11-05'

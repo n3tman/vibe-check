@@ -1,0 +1,168 @@
+slug: polycule
+name: polycule
+category: client
+kind: mobile, desktop, web
+homepage: https://polycule.im
+summary: Keyboard-optimised Flutter Matrix client for Android, Linux and web.
+repos:
+- url: https://gitlab.com/polycule_client/polycule
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/polycule/
+  other: []
+maturity: beta
+platforms:
+- android
+- linux
+- web
+apps:
+- os: android
+  tech: flutter
+  min_os: '6.0'
+  status: beta
+  stores:
+  - name: f-droid
+    url: https://f-droid.org/packages/business.braid.polycule
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/polycule.md
+  note: minSdk 23
+- os: linux
+  tech: flutter
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/polycule.md
+- os: web
+  tech: flutter
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/polycule.md
+  note: polycule.im/web
+licence: EUPL-1.2
+fork_of: null
+distribution:
+- f-droid
+funding: []
+features:
+  sdk:
+    value: matrix-dart-sdk
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/pubspec.yaml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/.gitlab-ci.yml#L523
+    note: pattern match [vodozemac]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/lib/src/pages/account_settings/components/ssss_available_tile.dart#L45
+    note: pattern match [crossSigning]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/integration_test/flows/login.dart#L98
+    note: pattern match [keyBackup]
+  sliding_sync:
+    value: 'no'
+    how: claimed
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/README.md#L94
+  oidc_auth:
+    value: 'yes'
+    how: claimed
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/README.md#L85
+    note: native OIDC
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/polycule.md
+  threads:
+    value: not-found
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/lib/src/router/extensions/room_available_shell_route.dart#L61
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/linux/business.braid.polycule.metainfo.xml#L93
+    note: pattern match [element.call]
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/lib/src/pages/room/components/compose/compose_scope.dart#L116
+    note: pattern match [inReplyTo]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/lib/src/utils/matrix/client_util.dart#L40
+    note: pattern match [im.ponies]
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/pubspec.yaml#L75
+    note: pattern match [unifiedpush]
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/lib/src/utils/matrix/polycule_command_extension.dart#L9
+    note: pattern match [upgraderoom]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/lib/src/pages/room/room_view.dart#L68
+    note: pattern match [Semantics(]
+  translations:
+    value: not-found
+  telemetry:
+    value: not-found
+    how: code
+    source: https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/pubspec.yaml#L70
+    note: sentry Dart package is a dependency; whether reporting is opt-in was not checked
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: 'yes'
+    how: code
+    note: EUPL-1.2; Flutter, about 830 files
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (13 non-bot commits in the last 365 days) at 4b294296e4
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

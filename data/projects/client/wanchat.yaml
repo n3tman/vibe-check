@@ -1,0 +1,173 @@
+slug: wanchat
+name: WanChat
+category: client
+kind: mobile
+homepage: https://wanchat.info
+summary: Element X Android fork adapted to China's network environment, with ntfy notifications and auto-delete.
+repos:
+- url: https://github.com/lj92458/wanchat-android
+  forge: github
+  role: android
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/wanchat/
+  other: []
+maturity: beta
+platforms:
+- android
+apps:
+- os: android
+  tech: native
+  min_os: null
+  status: beta
+  stores: []
+  source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/README.md#L3
+licence: AGPL-3.0-only
+fork_of: element-x
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/gradle/libs.versions.toml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/matrix/api/src/main/kotlin/io/element/android/libraries/matrix/api/timeline/item/event/MessageShield.kt#L32
+    note: pattern match [Megolm]
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/matrix/impl/src/main/kotlin/io/element/android/libraries/matrix/impl/RustMatrixClientFactory.kt#L119
+    note: pattern match [CrossSigning]
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/.github/workflows/maestro-local.yml#L89
+    note: pattern match [RECOVERY_KEY]
+  sliding_sync:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/session-storage/api/src/main/kotlin/io/element/android/libraries/sessionstorage/api/SessionData.kt#L28
+    note: pattern match [Sliding Sync]
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/app/src/main/AndroidManifest.xml#L81
+    note: pattern match [Oidc]
+  multi_account:
+    value: not-found
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/mediaupload/api/src/main/kotlin/io/element/android/libraries/mediaupload/api/MediaSender.kt#L216
+    note: pattern match [threadRoot]
+  spaces:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/designsystem/src/main/kotlin/io/element/android/libraries/designsystem/theme/components/AlertDialogContent.kt#L290
+    note: pattern match [isSpace]
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/eventformatter/impl/src/main/kotlin/io/element/android/libraries/eventformatter/impl/DefaultTimelineEventFormatter.kt#L21
+    note: pattern match [CallInvite]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/.github/workflows/build.yml#L49
+    note: pattern match [ELEMENT_CALL]
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/mediaupload/api/src/main/kotlin/io/element/android/libraries/mediaupload/api/MediaSender.kt#L64
+    note: pattern match [inReplyTo]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/matrix/api/src/main/kotlin/io/element/android/libraries/matrix/api/room/location/AssetType.kt#L8
+    note: pattern match [m.location]
+  voice_messages:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/mediaupload/api/src/main/kotlin/io/element/android/libraries/mediaupload/api/MediaSender.kt#L105
+    note: pattern match [VoiceMessage]
+  rich_text_editor:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/textcomposer/impl/build.gradle.kts#L36
+    note: pattern match [richtexteditor]
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/textcomposer/impl/src/main/kotlin/io/element/android/libraries/textcomposer/TextComposerLinkDialog.kt#L195
+    note: pattern match [LinkPreview]
+  push_notifications:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/README.md#L3
+    note: ntfy (UnifiedPush) and periodic wake-ups
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/matrix/api/src/main/kotlin/io/element/android/libraries/matrix/api/timeline/ReceiptType.kt#L12
+    note: pattern match [READ_PRIVATE]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/preferences/impl/src/main/kotlin/io/element/android/libraries/preferences/impl/store/SessionPreferencesStoreMigration.kt#L24
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/libraries/designsystem/src/main/kotlin/io/element/android/libraries/designsystem/components/avatar/Avatar.kt#L90
+    note: pattern match [Tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/.github/workflows/quality.yml#L104
+    note: pattern match [/report]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/appicon/element/src/main/kotlin/io/element/android/appicon/element/IconPreview.kt#L29
+    note: pattern match [contentDescription]
+  translations:
+    value: not-found
+  telemetry:
+    value: not-found
+    how: code
+    source: https://github.com/lj92458/wanchat-android/blob/a20cdb70b3c270edd9a9f8bf70b64eb746736170/services/analyticsproviders/posthog/build.gradle.kts
+    note: PostHog module inherited from Element X; build use not checked
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: partial
+    how: code
+    note: AGPL-3.0; Element X's large Gradle project
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI-attributed commits (9 non-bot commits in the last 365 days) at a20cdb70b3
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The Google Play badge in the README links to Element X's own listing (io.element.android.x), not
+  a WanChat listing.
+checked: '2026-11-05'
