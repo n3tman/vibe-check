@@ -338,8 +338,8 @@
    "YAML": 0.0041
   },
   "last_commit": "2026-11-04T17:20:53+00:00",
-  "last_tag": "nightly/26.11.0.1353",
-  "last_tag_date": "2026-11-04T17:20:53+00:00",
+  "last_tag": "release/26.10.8",
+  "last_tag_date": "2026-10-26T10:00:39+01:00",
   "last_tag_repo": "https://github.com/element-hq/element-x-ios",
   "licence_detected": "AGPL-3.0",
   "loc": {
@@ -375,7 +375,7 @@
   "security_policy": "https://github.com/element-hq/element-x-ios/blob/dc3e47720df8c13137b27a3643f80d66defaf4df/SECURITY.md",
   "stars": null,
   "status": "active",
-  "tags_365d": 365,
+  "tags_365d": 90,
   "telemetry_sdks": [
    "PostHog",
    "Sentry"
@@ -436,7 +436,7 @@
    105
   ]
  },
- "fetched_at": "2026-11-05T04:06:48+00:00",
+ "fetched_at": "2026-11-05T04:19:14+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -903,6 +903,7 @@
    "ok": true,
    "open_issues": null,
    "open_prs": null,
+   "prerelease_tags_365d": 0,
    "role": "android",
    "security_policy": null,
    "stars": null,
@@ -1409,8 +1410,8 @@
    },
    "languages_source": "scc",
    "last_commit": "2026-11-04T17:20:53+00:00",
-   "last_tag": "nightly/26.11.0.1353",
-   "last_tag_date": "2026-11-04T17:20:53+00:00",
+   "last_tag": "release/26.10.8",
+   "last_tag_date": "2026-10-26T10:00:39+01:00",
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
    "licence_source": "file",
@@ -1428,12 +1429,13 @@
    "ok": true,
    "open_issues": null,
    "open_prs": null,
+   "prerelease_tags_365d": 263,
    "role": "ios",
    "security_policy": "SECURITY.md",
    "security_policy_url": "https://github.com/element-hq/element-x-ios/blob/dc3e47720df8c13137b27a3643f80d66defaf4df/SECURITY.md",
    "stars": null,
    "status": "active",
-   "tags_365d": 305,
+   "tags_365d": 42,
    "telemetry_scan": {
     "found": [],
     "manifests_scanned": 3,
@@ -1646,11 +1648,12 @@
    "ok": true,
    "open_issues": null,
    "open_prs": null,
+   "prerelease_tags_365d": 12,
    "role": "desktop",
    "security_policy": null,
    "stars": null,
    "status": "dormant",
-   "tags_365d": 22,
+   "tags_365d": 10,
    "telemetry_scan": {
     "found": [
      {
