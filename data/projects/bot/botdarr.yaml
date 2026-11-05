@@ -1,0 +1,40 @@
+slug: botdarr
+name: botdarr
+category: bot
+kind: media-server
+homepage: https://github.com/shayaantx/botdarr
+summary: A multi-network Java bot (Slack, Discord, Telegram, Matrix) for searching and adding films, shows
+  and music in Radarr, Sonarr and Lidarr.
+repos:
+- url: https://github.com/shayaantx/botdarr
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, repositories sorted by stars, 2026-11-05
+maturity: stable
+platforms: [server]
+licence: GPL-3.0-only
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: 'media-server control (Radarr, Sonarr, Lidarr)', how: claimed, source: 'https://github.com/shayaantx/botdarr/blob/107469c5c471dc72b8a0753585d581b00953c58a/README.md'}
+  framework: {value: own, how: code, source: 'https://github.com/shayaantx/botdarr/blob/107469c5c471dc72b8a0753585d581b00953c58a/src/main/java/com/botdarr/clients/matrix/MatrixChatClient.java',
+    note: own Java client-server API calls}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/shayaantx/botdarr/blob/107469c5c471dc72b8a0753585d581b00953c58a/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/shayaantx/botdarr/blob/107469c5c471dc72b8a0753585d581b00953c58a/README.md',
+    note: Docker or jar}
+  config: {value: properties file / environment variables and chat commands, how: claimed, source: 'https://github.com/shayaantx/botdarr/blob/107469c5c471dc72b8a0753585d581b00953c58a/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/shayaantx/botdarr/blob/107469c5c471dc72b8a0753585d581b00953c58a/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 7 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 107469c5c471
+  in_product: {value: none-found, note: null, source: null}
+notes: 'Multi-network: Matrix is one of four chat clients. Licence from the LICENSE file (GPL v3) and
+  the README badge; -only vs -or-later not stated.'
+checked: 2026-11-05
