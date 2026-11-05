@@ -36,12 +36,14 @@ const aiBots = okRepos.flatMap((r) => r.ai_scan?.ai_bot_authors ?? []);
 const telemetry = okRepos.flatMap((r) => r.telemetry_scan?.found ?? []);
 const handEvidence = (p.ai.dev_usage.evidence ?? []) as any[];
 const fund = p.funding ?? [];
+const funderPolicies = (((p.ai as any).funder_policy ?? []) as any[]);
+const override = (p.ai.dev_usage as any).collector_override as string | undefined;
 const sec = c?.security_policy as string | null | undefined;
 const ciRepos = okRepos.filter((r) => r.ci?.length);
 const linkText = (s: unknown) => (Array.isArray(s) ? s : s ? [s] : []) as string[];
 const axisSource: Record<Axis, { quote?: string | null; source?: string | null; note?: string | null }> = {
   policy: p.ai.policy as any,
-  dev_usage: {},
+  dev_usage: { note: (p.ai.dev_usage as any).note ?? null },
   in_product: p.ai.in_product as any,
 };
 ---
@@ -95,7 +97,9 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
           {ax === 'dev_usage' && (
             <>
               {c?.ai?.suggested_dev_usage && c.ai.suggested_dev_usage !== p.ai.dev_usage.value && (
-                <p class="small" style="margin:.6rem 0 0"><strong>The collector's evidence suggests “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”</strong>; the hand-checked value above has not been reconciled with it yet.</p>
+                override
+                  ? <p class="small" style="margin:.6rem 0 0">The collector's evidence alone would suggest “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”; the value above was kept after checking: {override}</p>
+                  : <p class="small" style="margin:.6rem 0 0"><strong>The collector's evidence suggests “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”</strong>; the hand-checked value above has not been reconciled with it yet.</p>
               )}
               {c?.ai && (
                 <p class="small" style="margin:.6rem 0 0">
@@ -117,6 +121,21 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
         </div>
       ))}
     </div>
+    {funderPolicies.length > 0 && (
+      <div class="panel" style="margin-top:1rem">
+        <h3>Funder's AI policy</h3>
+        <p class="q">A funder's rules for the work it pays for, shown apart from the project's own policy.</p>
+        {funderPolicies.map((f) => (
+          <div style="margin-top:.6rem">
+            <AiMark axis="policy" value={f.value} showAxis={false} />
+            <p class="small" style="margin:.4rem 0 0"><a href={f.grant}>{f.funder}</a>{f.grant_start && `, grant from ${f.grant_start}`}. Policy <a href={f.policy}>{f.policy_version}</a>.</p>
+            {f.quote && <blockquote>“{f.quote}”</blockquote>}
+            {f.scope && <p class="small" style="margin:.4rem 0 0">Applies to: {f.scope}.</p>}
+            {f.transition && <p class="small" style="margin:.4rem 0 0">{f.transition}</p>}
+          </div>
+        ))}
+      </div>
+    )}
   </section>
 
   {c && (

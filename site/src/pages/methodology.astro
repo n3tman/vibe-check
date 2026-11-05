@@ -57,13 +57,24 @@ try {
           <p class="small muted">
             Evidence: agent instruction files (<code>CLAUDE.md</code>, <code>AGENTS.md</code>, <code>.cursorrules</code>, <code>.github/copilot-instructions.md</code> and others),
             commits whose trailers or “Generated with” lines credit an AI tool, AI agent bot authors, and CI workflows that run AI actions or review bots, counted over the last 365 days.
-            <strong>Config only</strong>: agent files but no attributed commits. <strong>Occasional</strong>: 1 to 4 % of last year's commits attributed, or AI review or agent workflows.
+            <strong>Config only</strong>: agent files but no attributed commits. <strong>Occasional</strong>: some attributed commits but under 5 % of last year's (the rubric says 1 to 4 %; a project with even one attributed commit below 1 % is also counted here, with its share shown), or AI review or agent workflows.
             <strong>Regular</strong>: 5 % or more. Attribution is a lower bound: most AI use leaves no trace in a repository, so “none found” does not mean none was used.
           </p>
+          <p class="small muted">
+            The collector suggests a level; the mark shown is the researcher's, checked against that suggestion. Where they differ the project page says why: an <code>AGENTS.md</code>
+            that only tells agents to stay away is not AI use, and a project that rewrote its history to strip AI trailers, or says in prose that it is written with AI, is marked from
+            its own statement. Merged pull requests that disclose AI use (squash merges drop the trailers) were searched on GitHub for the bot, tool and bridge lanes and are linked as evidence.
+          </p>
         )}
-        {ax === 'in_product' && <p class="small muted">Features of the product that call a language model or other generative AI, from docs and code. Optional means the user turns it on or can turn it off.</p>}
+        {ax === 'in_product' && <p class="small muted">Features of the product that call a language model or other generative AI, from docs and code. Optional means the user turns it on or can turn it off. On-device machine learning that generates nothing (a background blur in calls) is not counted, and is mentioned in the entry's note.</p>}
       </>
     ))}
+
+    <h3>Funders' AI policies</h3>
+    <p class="small muted">
+      Some projects are paid for by grants whose funder has its own rules on generative AI (NLnet's GenAI policy, for example, which in version 2.0 bans AI-produced artefacts in funded work).
+      Those are shown on the project page as a separate panel, never merged into the project's own policy, because they bind the funded work rather than every contributor.
+    </p>
 
     <h3>The AI-wary and AI-friendly switch</h3>
     <p>
@@ -78,7 +89,8 @@ try {
     </ul>
     <p>
       Commits are counted on the default branch, without merge commits, by the date they landed. Authors are de-duplicated by email and name, honouring <code>.mailmap</code>.
-      For projects with several repositories (an Android and an iOS app, say), the status uses all of them together. The bus factor is the fewest authors who made half of last year's commits.
+      For projects with several repositories (an Android and an iOS app, say), the status uses all of them together. For forks that merge their upstream (SchildiChat, Rooster, Vommet, Sable's first version)
+      only the fork's own line of history is counted (<code>git log --first-parent</code>), so the upstream's work is not credited to the fork. The bus factor is the fewest authors who made half of last year's commits.
       Issue response is the median time to the first comment by someone other than the reporter, for issues opened in the last 180 days (where the forge allows reading it).
     </p>
 
@@ -90,7 +102,8 @@ try {
     <ul>
       <li>A busy repository is not a better product, and a quiet one may simply be finished.</li>
       <li>Telemetry “found” means a dependency manifest names an analytics or crash-report SDK; whether it is on, opt-in or compiled out is in the project's own entry.</li>
-      <li>Stars and forks depend on the forge and are not comparable across forges.</li>
+      <li>Stars and forks depend on the forge and are not comparable across forges. Where the forge's API could not be read when the data was collected, they show as a dash, and languages come from <code>scc</code> instead of the forge.</li>
+      <li>Forks that merge upstream by squashing or rebasing cannot be separated from upstream's commits; their numbers may include the upstream's work.</li>
       <li>Projects change quickly. Every entry shows the date it was checked.</li>
     </ul>
 
