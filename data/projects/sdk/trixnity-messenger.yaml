@@ -38,3 +38,9 @@ notes: 'matrix.org lists it as "Trixnity Messenger" (Beta, Kotlin, maintainer: c
   2026-11-04, 2014 non-bot commits in the last year and 19 authors in the last 90 days by our count at f1a46bb0e094
   (the collector recounts).'
 checked: 2026-11-05
+icon:
+  file: trixnity-messenger.webp
+  source: "https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f1a46bb0e09435bea5992bba8569ff49594e8977/trixnity-messenger-compose-app/src/androidMain/ic_launcher-playstore.png"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

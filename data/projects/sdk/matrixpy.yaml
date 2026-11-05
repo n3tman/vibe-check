@@ -34,3 +34,10 @@ notes: 'matrix.org lists it as "matrix.py" (Beta, Python, maintainer: Code Socie
   Last non-bot commit 2026-08-03, 62 non-bot commits in the last year and 0 authors in the last 90 days by our count
   at 972033fa5158 (the collector recounts).'
 checked: 2026-11-05
+icon:
+  file: matrixpy.svg
+  source: "https://github.com/Code-Society-Lab/matrixpy/blob/972033fa5158916463c6bf4f476bbd940d4938cc/docs/docs/img/favicon.svg"
+  licence: "MIT"
+  note: null
+  backing: dark
+  checked: 2026-11-05

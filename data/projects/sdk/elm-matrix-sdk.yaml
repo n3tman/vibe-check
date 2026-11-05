@@ -34,3 +34,10 @@ notes: 'matrix.org lists it as "Elm SDK" (Beta, Elm, maintainer: Bram Noordstar)
   0 non-bot commits in the last year and 0 authors in the last 90 days by our count at 4daac54732d0 (the collector
   recounts).'
 checked: 2026-11-05
+icon:
+  file: elm-matrix-sdk.svg
+  source: "https://github.com/noordstar/elm-matrix-sdk-beta/blob/4daac54732d0185161e7a7aaf5e9f761aa361552/docs/logo.svg"
+  licence: "EUPL-1.2"
+  note: null
+  backing: light
+  checked: 2026-11-05

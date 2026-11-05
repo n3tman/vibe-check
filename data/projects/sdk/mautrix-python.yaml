@@ -40,3 +40,9 @@ notes: 'matrix.org lists it as "mautrix-python" (Stable, Python, maintainer: Tul
   20 non-bot commits in the last year and 2 authors in the last 90 days by our count at 3ec2849729e4 (the collector
   recounts).'
 checked: 2026-11-05
+icon:
+  file: mautrix-python.webp
+  source: "https://avatars.githubusercontent.com/u/88519669?v=4&s=256"
+  licence: null
+  note: "the mautrix organisation's avatar on GitHub"
+  checked: 2026-11-05

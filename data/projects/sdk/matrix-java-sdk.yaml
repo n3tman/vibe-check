@@ -34,3 +34,9 @@ notes: 'matrix.org lists it as "Matrix Java SDK" (Obsolete, Java, maintainer: Ka
   0 non-bot commits in the last year and 0 authors in the last 90 days by our count at b0b634341de7 (the collector
   recounts).'
 checked: 2026-11-05
+icon:
+  file: matrix-java-sdk.webp
+  source: "https://github.com/kamax-io/matrix-java-sdk/blob/b0b634341de793e2f9bedccc5b4bd315e0bf6dd6/media/mx-java-sdk.png"
+  licence: "AGPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

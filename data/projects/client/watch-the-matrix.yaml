@@ -114,3 +114,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: watch-the-matrix.webp
+  source: "https://github.com/pixlwave/Watch-The-Matrix/blob/ceafed898f94adfa83a9cc7f93d42879b1253961/Watch%20App/Assets.xcassets/AppIcon.appiconset/Icon_AppStore.png"
+  licence: "MPL-2.0"
+  note: null
+  checked: 2026-11-05

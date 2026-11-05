@@ -39,3 +39,9 @@ notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last
   non-bot commits in the last year and 3 authors in the last 90 days by our count at d8150bd55555 (the collector
   recounts).
 checked: 2026-11-05
+icon:
+  file: libquotient.webp
+  source: "https://github.com/quotient-im/libQuotient/blob/d8150bd555554ff87fe15111bbd0ea0172ee3de4/logo.png"
+  licence: "LGPL-2.1-only"
+  note: null
+  checked: 2026-11-05
