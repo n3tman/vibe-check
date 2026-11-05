@@ -13,8 +13,7 @@ sources:
   other:
   - sources/community-space.tsv (#community:matrix.org)
 maturity: unmaintained
-platforms:
-- other
+platforms: []
 apps:
 - os: ubuntu-touch
   tech: qt
