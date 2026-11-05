@@ -116,6 +116,36 @@ export const HEADLINE: Record<Category, string[]> = {
   tool: ['purpose', 'e2ee', 'hosting'],
 };
 
+/** The client features shown in the clients × features matrix and counted on client cards, with the
+ *  MSCs each one rests on (numbers from data/mscs.yaml; an empty list means no single MSC: either
+ *  older core spec, or a client-side feature). Order: the protocol work that matters most first. */
+export const CLIENT_FEATURES: { key: string; mscs: number[] }[] = [
+  { key: 'e2ee', mscs: [] },
+  { key: 'cross_signing', mscs: [1756] },
+  { key: 'key_backup', mscs: [1219] },
+  { key: 'sliding_sync', mscs: [4186, 3575] },
+  { key: 'oidc_auth', mscs: [3861] },
+  { key: 'threads', mscs: [3440] },
+  { key: 'spaces', mscs: [1772] },
+  { key: 'voip_1to1', mscs: [] },
+  { key: 'group_calls', mscs: [4143, 3401] },
+  { key: 'reactions', mscs: [2677] },
+  { key: 'edits', mscs: [2676] },
+  { key: 'replies', mscs: [] },
+  { key: 'polls', mscs: [3381] },
+  { key: 'custom_emoji', mscs: [2545] },
+  { key: 'stickers', mscs: [] },
+  { key: 'location', mscs: [3488, 3489] },
+  { key: 'voice_messages', mscs: [3245] },
+  { key: 'private_read_receipts', mscs: [2285] },
+  { key: 'presence', mscs: [] },
+  { key: 'room_upgrades', mscs: [1501] },
+  { key: 'url_previews', mscs: [] },
+  { key: 'push_notifications', mscs: [] },
+  { key: 'rich_text_editor', mscs: [] },
+  { key: 'moderation_tools', mscs: [] },
+];
+
 const STATES = new Set(['yes', 'partial', 'no', 'planned', 'not-found']);
 
 export function feature(key: string, raw: unknown): FeatureView {
@@ -141,6 +171,14 @@ export function features(p: Entry): FeatureView[] {
   return Object.entries(f)
     .filter(([k]) => k !== 'msc')
     .map(([k, v]) => feature(k, v));
+}
+
+/** How many of the client features were found (yes) or found partly. "Not found" counts as unknown, not as no. */
+export function featureScore(p: Entry): { yes: number; partial: number; no: number; total: number } | null {
+  if (p.category !== 'client') return null;
+  const f = (p.features ?? {}) as Record<string, unknown>;
+  const states = CLIENT_FEATURES.map(({ key }) => feature(key, f[key]).state);
+  return { yes: states.filter((s) => s === 'yes').length, partial: states.filter((s) => s === 'partial').length, no: states.filter((s) => s === 'no').length, total: states.length };
 }
 
 export const STATE_TEXT: Record<FeatureState, string> = {
@@ -255,6 +293,8 @@ export function summary(p: Entry) {
     weekly: (c.weekly_commits as number[] | undefined) ?? null,
     features: Object.fromEntries(features(p).map((f) => [f.key, f.state === 'text' ? f.value : f.state])),
     busFactor: c.bus_factor_365d ?? null,
+    featYes: featureScore(p)?.yes ?? null,
+    featPartial: featureScore(p)?.partial ?? null,
     loc: c.loc_total ?? null,
     telemetry: c.telemetry_sdks ?? [],
     checked: p.checked,

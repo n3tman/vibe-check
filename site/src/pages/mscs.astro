@@ -36,6 +36,10 @@ const ICON: Record<string, string> = { stable: 'check', unstable: 'partial', exp
     <p class="eyebrow">Spec support</p>
     <h1>Servers × MSCs</h1>
     <p class="lede">Which homeserver implements which Matrix Spec Change, and how: stable, behind an unstable prefix, behind a flag, partly, or removed. The MSC's own status (merged into the spec, in final comment period, open) is in the second column.</p>
+    <nav class="subnav" aria-label="Spec support views">
+      <a href={href('mscs/')} aria-current="page">Servers × MSCs</a>
+      <a href={href('mscs/clients/')}>Clients × features</a>
+    </nav>
   </header>
   {specRows.length > 0 && (
     <section aria-labelledby="spec-h">

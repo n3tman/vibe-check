@@ -1,0 +1,120 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { dataset } from '../../lib/data.ts';
+import { CLIENT_FEATURES, STATE_TEXT, feature, featureLabel, featureScore, href, statusOf, type FeatureState } from '../../lib/view.ts';
+
+const d = dataset();
+const mscBy = new Map(d.mscs.map((m) => [m.msc, m]));
+const clients = d.projects.filter((p) => p.category === 'client');
+const cell = (p: (typeof clients)[number], key: string) => feature(key, ((p.features ?? {}) as Record<string, unknown>)[key]);
+const firstSource = (s: unknown) => (Array.isArray(s) ? s[0] : s) as string | undefined;
+
+// Clients sorted by features found (yes), then partly found, then name. Clients with nothing
+// found at all fold away below, so the matrix opens on the part that has data.
+const rows = clients
+  .map((p) => ({ p, s: featureScore(p)!, cells: CLIENT_FEATURES.map(({ key }) => cell(p, key)) }))
+  .sort((a, b) => b.s.yes - a.s.yes || b.s.partial - a.s.partial || a.p.name.localeCompare(b.p.name));
+const withData = rows.filter((r) => r.cells.some((c) => c.state !== 'not-found'));
+const empty = rows.filter((r) => !r.cells.some((c) => c.state !== 'not-found'));
+
+const cols = CLIENT_FEATURES.map(({ key, mscs }, i) => {
+  const states = rows.map((r) => r.cells[i].state);
+  const n = (s: FeatureState) => states.filter((x) => x === s).length;
+  return { key, label: featureLabel(key), mscs: mscs.map((m) => ({ msc: m, info: mscBy.get(m) })), yes: n('yes'), partial: n('partial'), no: n('no'), unknown: n('not-found') + n('planned') };
+});
+const S: Record<string, { s: string; icon: string }> = {
+  yes: { s: 'stable', icon: 'check' }, partial: { s: 'partial', icon: 'partial' }, planned: { s: 'experimental', icon: 'clock' }, no: { s: 'removed', icon: 'cross' },
+};
+---
+<Base title="Clients × features" wide>
+  <header class="page-head">
+    <p class="eyebrow">Spec support</p>
+    <h1>Clients × features</h1>
+    <p class="lede">Which client supports which feature, and the Matrix Spec Changes each feature rests on. Every cell was checked by hand and links to its source where there is one.</p>
+    <nav class="subnav" aria-label="Spec support views">
+      <a href={href('mscs/')}>Servers × MSCs</a>
+      <a href={href('mscs/clients/')} aria-current="page">Clients × features</a>
+    </nav>
+  </header>
+
+  <section aria-labelledby="key-h">
+    <h2 id="key-h">The features and their MSCs</h2>
+    <p class="muted small">Clients don't list the MSCs they implement the way servers advertise them, so this page uses the features we checked for each client. Features with no MSC are older core spec or purely client-side.</p>
+    <div class="table-wrap">
+      <table class="data">
+        <thead><tr><th scope="col">Feature</th><th scope="col">MSCs</th><th scope="col" class="num">Found</th><th scope="col" class="num">Partly</th><th scope="col" class="num">No</th><th scope="col" class="num">Not found</th><th scope="col" style="width:22%">Of {clients.length} clients</th></tr></thead>
+        <tbody>
+          {cols.map((c) => (
+            <tr>
+              <th scope="row" style="font-weight:550">{c.label}</th>
+              <td class="small">
+                {c.mscs.length === 0 ? <span class="muted">none</span> : c.mscs.map((m, i) => (
+                  <>{i > 0 && <br />}<a href={m.info?.url ?? `https://github.com/matrix-org/matrix-spec-proposals/pull/${m.msc}`}>MSC{m.msc}</a> <span class="muted">{m.info ? `${m.info.status}${m.info.spec_version ? `, ${m.info.spec_version}` : ''}` : ''}</span></>
+                ))}
+              </td>
+              <td class="num">{c.yes}</td><td class="num">{c.partial}</td><td class="num">{c.no}</td><td class="num muted">{c.unknown}</td>
+              <td>
+                <span class="share" aria-hidden="true">
+                  <i class="sh-y" style={`flex:${c.yes}`} /><i class="sh-p" style={`flex:${c.partial}`} /><i class="sh-n" style={`flex:${c.no}`} /><i class="sh-u" style={`flex:${c.unknown}`} />
+                </span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <h2>Feature support by client</h2>
+  <p class="muted small">
+    Clients are sorted by how many of the {CLIENT_FEATURES.length} features were found. {withData.length} clients have at least one answer;
+    {empty.length} more, with nothing found yet, are folded below. A low count usually means the client is small or its docs don't say, not that the features are missing.
+  </p>
+  <ul class="legend small" aria-label="Legend">
+    <li><span class="mcell" data-s="stable"><Icon name="check" size={12} /></span> yes</li>
+    <li><span class="mcell" data-s="partial"><Icon name="partial" size={12} /></span> partly</li>
+    <li><span class="mcell" data-s="experimental"><Icon name="clock" size={12} /></span> planned</li>
+    <li><span class="mcell" data-s="removed"><Icon name="cross" size={12} /></span> no</li>
+    <li><span class="mcell" data-s="none">·</span> not found</li>
+  </ul>
+  {[{ list: withData, label: null }, { list: empty, label: `${empty.length} clients with nothing found yet` }].filter((g) => g.list.length).map((g) => {
+    const table = (
+      <div class="table-wrap matrix-wrap">
+        <table class="data matrix fmatrix">
+          <caption class="sr-only">Feature support by client</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="mcol">Client</th>
+              <th scope="col" class="num">Found</th>
+              {cols.map((c) => <th scope="col" class="vert" title={c.mscs.length ? c.mscs.map((m) => `MSC${m.msc}`).join(', ') : 'no single MSC'}><span>{c.label}</span></th>)}
+            </tr>
+          </thead>
+          <tbody>
+            {g.list.map((r) => (
+              <tr>
+                <th scope="row" class="mcol"><a href={href(`p/${r.p.slug}/`)}>{r.p.name}</a> <StatusBadge status={statusOf(r.p)} /></th>
+                <td class="num">{r.s.yes}{r.s.partial > 0 && <span class="muted small"> +{r.s.partial}</span>}</td>
+                {r.cells.map((f, i) => {
+                  const m = S[f.state];
+                  const title = `${cols[i].label}: ${STATE_TEXT[f.state] || f.value}${f.note ? ` (${f.note})` : ''}`;
+                  const src = firstSource(f.source);
+                  return (
+                    <td class="cell">
+                      {m ? (src ? <a class="mcell" data-s={m.s} href={src} title={title}><Icon name={m.icon} size={12} /><span class="sr-only">{title}</span></a>
+                                : <span class="mcell" data-s={m.s} title={title}><Icon name={m.icon} size={12} /><span class="sr-only">{title}</span></span>)
+                         : <span class="mcell" data-s="none" title={title}><span aria-hidden="true">·</span><span class="sr-only">{title}</span></span>}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+    return g.label ? <details class="panel" style="margin-top:1rem"><summary>{g.label}</summary>{table}</details> : table;
+  })}
+  <p class="muted small" style="margin-top:1rem">“Not found” means nobody found it in that client's docs, code or release notes, not that it is missing. MSC status and spec version come from <a href={href('methodology/')}>the MSC catalogue</a>.</p>
+</Base>
