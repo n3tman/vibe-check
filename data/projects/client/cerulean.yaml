@@ -1,0 +1,87 @@
+slug: cerulean
+name: Cerulean
+category: client
+kind: web (microblogging)
+homepage: https://matrix.org/blog/2020/12/18/introducing-cerulean
+summary: An experimental matrix.org web client demonstrating Twitter-style public threaded conversations
+  (MSC2836).
+repos:
+- url: https://github.com/matrix-org/cerulean
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - 'sources/community-space.tsv: room "Cerulean (OLD)" (Not-chat Clients)'
+maturity: unmaintained
+platforms:
+- web
+apps:
+- os: web
+  tech: other
+  status: discontinued
+  source: https://github.com/matrix-org/cerulean/blob/6c9d7814f63bdc5bf62a5e68dc9fbbdf118cc338/README.md
+  min_os: null
+  stores: []
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own (direct Client-Server API calls, no SDK dependency)
+    how: code
+    source: https://github.com/matrix-org/cerulean/blob/6c9d7814f63bdc5bf62a5e68dc9fbbdf118cc338/package.json
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/cerulean/blob/6c9d7814f63bdc5bf62a5e68dc9fbbdf118cc338/README.md
+    note: README describes public rooms only; no crypto dependency in package.json.
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads:
+    value: partial
+    how: claimed
+    source: https://github.com/matrix-org/cerulean/blob/6c9d7814f63bdc5bf62a5e68dc9fbbdf118cc338/README.md
+    note: Threads via MSC2836 (not m.thread).
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls: not-found
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji: not-found
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No commits in the last 365 days, so no attributed commits; no agent files in the tree.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Last commit 2023-04-03. A not-chat client (social/microblogging demo).
+checked: '2026-11-05'
