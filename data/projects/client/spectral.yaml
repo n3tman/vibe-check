@@ -1,0 +1,157 @@
+slug: spectral
+name: Spectral
+category: client
+kind: desktop
+homepage: null
+summary: Qt/QML desktop client built on libQuotient; development stopped in early 2021, and NeoChat
+  started as a fork of it.
+repos:
+- url: https://gitlab.com/spectral-im/spectral
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - LinuxLinks, "Best Free and Open Source Matrix Clients" (published 2026-08-10),
+    https://www.linuxlinks.com/best-free-open-source-matrix-clients/
+maturity: unmaintained
+platforms:
+- linux
+- windows
+- macos
+apps:
+- os: linux
+  tech: qt
+  min_os: null
+  status: discontinued
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/details/org.eu.encom.spectral
+  source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/README.md
+- os: windows
+  tech: qt
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/.appveyor.yml
+- os: macos
+  tech: qt
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/.gitlab-ci.yml#L48
+licence: GPL-3.0-or-later
+fork_of: null
+distribution:
+- flathub
+- fedora
+funding: []
+features:
+  sdk:
+    value: libQuotient
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/.gitmodules
+    note: libQuotient as a git submodule; README also credits C++ models taken from Quaternion.
+  e2ee:
+    value: 'no'
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/src/spectralroom.cpp#L374
+    note: Only shows the "activated End-to-End Encryption" state event; no handling of encrypted
+      messages found in the client code.
+  cross_signing: {value: not-found}
+  key_backup: {value: not-found}
+  sliding_sync: {value: 'no', note: Last commit 2021-01-13, before sliding sync existed in any form.}
+  oidc_auth: {value: 'no', note: Last commit 2021-01-13, before MSC3861.}
+  multi_account:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/src/controller.cpp#L84
+    note: The controller keeps a list of connections, with an account switcher in the UI.
+  threads: {value: not-found}
+  spaces: {value: not-found}
+  voip_1to1: {value: not-found}
+  group_calls: {value: not-found}
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/src/spectralroom.cpp#L571
+  edits:
+    value: partial
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/src/messageeventmodel.cpp#L133
+    note: Shows replaced (edited) messages; sending edits not found.
+  replies:
+    value: 'yes'
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/src/spectralroom.cpp#L498
+  polls: {value: not-found}
+  custom_emoji: {value: not-found}
+  stickers: {value: not-found}
+  location:
+    value: partial
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/src/spectralroom.cpp#L473
+    note: Recognises the m.location message type; sending a location not found.
+  voice_messages: {value: not-found}
+  rich_text_editor: {value: not-found}
+  url_previews: {value: not-found}
+  push_notifications:
+    value: partial
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/src/notifications/managerlinux.cpp#L12
+    note: Desktop notifications (D-Bus on Linux, WinToast on Windows); no push gateway (it is a
+      desktop client).
+  private_read_receipts: {value: not-found}
+  presence: {value: not-found}
+  room_upgrades: {value: not-found}
+  moderation_tools:
+    value: partial
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/imports/Spectral/Dialog/UserDetailDialog.qml#L218
+    note: Kick a user and redact messages; no ban button found in the UI.
+  accessibility: {value: not-found}
+  translations: {value: not-found, note: No translation files in the repo.}
+  telemetry:
+    value: none-found
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/tree/30028a278860af270949f55bdf931455082ea449
+    note: No analytics or crash-report SDK found in the source or CMake files.
+  default_homeserver:
+    value: matrix.org
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/imports/Spectral/Dialog/LoginHomeserverDialog.qml#L40
+    note: The login dialog's homeserver field is pre-filled with https://matrix.org.
+  fork_friendliness:
+    value: partial
+    how: code
+    source: https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/CMakeLists.txt#L45
+    note: About 17k lines (C++ and QML), CMake, Qt 5.12 and a libQuotient submodule pinned to a
+      2020-era commit; GPL-3.0. NeoChat is the maintained fork.
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No agent files at 30028a27; last commit 2021-01-13, so no commits in the last 365 days.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  Not on the matrix.org clients list; found through the LinuxLinks roundup, which still lists it.
+  The default branch's last commit is 2021-01-13 and the GitLab project's last activity
+  2022-08-28 (API, checked 2026-11-05); the forge does not mark it archived. Flathub marks
+  org.eu.encom.spectral end-of-life ("This application is no longer maintained.",
+  https://flathub.org/api/v2/eol/message) and lists org.vranki.spectral as its rebase target
+  (https://flathub.org/api/v2/eol/rebase); the last Flathub release is 648 (2019-05-22).
+  The former homepage spectral.im, linked from the GitLab description and the README's docs links,
+  now serves an unrelated site, so homepage is null. NeoChat's README says "NeoChat is a fork of
+  Spectral" (https://invent.kde.org/network/neochat/-/blob/2bcdbc0f7ba8eb25ba4a21c06f2a4da7d498533b/README.md).
+  Licence: LICENSE is GPL-3.0 and the one source header present says "version 3 of the License, or
+  (at your option) any later version"; the AppStream file says GPL-3.0. Fedora packaging per
+  the README; not re-checked. Searched GitLab issues for AI, LLM, ChatGPT, Copilot, "generated":
+  nothing about AI.
+checked: 2026-11-05
