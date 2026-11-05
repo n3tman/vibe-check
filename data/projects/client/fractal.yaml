@@ -29,7 +29,8 @@ licence: GPL-3.0-or-later
 fork_of: null
 distribution:
 - flathub
-funding: []
+funding:
+- https://nlnet.nl/project/Fractal/
 features:
   sdk:
     value: matrix-rust-sdk (git rev 2d6248ed, with matrix-sdk-ui)
@@ -170,5 +171,19 @@ ai:
     value: none-found
     note: null
     source: null
+  funder_policy:
+  - funder: NLnet Foundation (NGI0 PET fund)
+    grant: https://nlnet.nl/project/Fractal/
+    grant_start: 2020-10
+    grant_end: 2022-09
+    grant_source: https://nlnet.nl/project/Fractal/
+    policy: https://nlnet.nl/foundation/policies/generativeAI/archive/
+    policy_version: none; NLnet's first GenAI policy (1.0) came into force on 2025-12-08
+    value: none-found
+    quote: null
+    scope: work delivered within the grant (end-to-end encryption through matrix-rust-sdk)
+    transition: The grant ended (2022-09) before NLnet had a GenAI policy, so no version binds it.
+    transparency: not applicable
+    checked: 2026-11-05
 notes: 'matrix.org maturity: Beta. Fractal began as a fork of Fest.'
 checked: '2026-11-05'

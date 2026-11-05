@@ -130,10 +130,12 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
         {funderPolicies.map((f) => (
           <div style="margin-top:.6rem">
             <AiMark axis="policy" value={f.value} showAxis={false} />
-            <p class="small" style="margin:.4rem 0 0"><a href={f.grant}>{f.funder}</a>{f.grant_start && `, grant from ${f.grant_start}`}. Policy <a href={f.policy}>{f.policy_version}</a>.</p>
+            <p class="small" style="margin:.4rem 0 0"><a href={f.grant}>{f.funder}</a>{f.grant_start && (f.grant_end ? `, grant ${f.grant_start} to ${f.grant_end}` : `, grant from ${f.grant_start}`)}. Policy <a href={f.policy}>{f.policy_version}</a>.</p>
             {f.quote && <blockquote>“{f.quote}”</blockquote>}
             {f.scope && <p class="small" style="margin:.4rem 0 0">Applies to: {f.scope}.</p>}
             {f.transition && <p class="small" style="margin:.4rem 0 0">{f.transition}</p>}
+            {f.transparency && <p class="small" style="margin:.4rem 0 0">Stance asked for by the funder: {f.transparency}</p>}
+            {f.checked && <p class="small muted" style="margin:.4rem 0 0">Checked {String(f.checked)}.</p>}
           </div>
         ))}
       </div>
