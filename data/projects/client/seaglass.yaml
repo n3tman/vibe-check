@@ -1,0 +1,117 @@
+slug: seaglass
+name: Seaglass
+category: client
+kind: desktop
+homepage: null
+summary: Native macOS Matrix client (Cocoa, MatrixSDK); its own room calls it "truly dead".
+repos:
+- url: https://github.com/neilalexander/seaglass
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: unmaintained
+platforms:
+- macos
+apps:
+- os: macos
+  tech: native
+  min_os: '10.13'
+  status: discontinued
+  stores: []
+  source: https://github.com/neilalexander/seaglass/blob/dc9789334340753c64131f9dace677be6d16bc49/README.md
+licence: GPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-ios-sdk
+    how: claimed
+    note: MatrixSDK
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/neilalexander/seaglass/blob/dc9789334340753c64131f9dace677be6d16bc49/Seaglass/Controller/Main%20View/MainViewEncryptionController.swift#L78
+    note: pattern match [m.megolm]
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: 'yes'
+    how: code
+    source: https://github.com/neilalexander/seaglass/blob/dc9789334340753c64131f9dace677be6d16bc49/Seaglass/Controller/Main%20View/MainViewRoomController.swift#L280
+    note: pattern match [m.sticker]
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/neilalexander/seaglass/blob/dc9789334340753c64131f9dace677be6d16bc49/Seaglass/Model/MatrixServices.swift#L175
+    note: pattern match [setPresence]
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2019-06-02, so no commits in the last 365 days (HEAD dc97893343)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

@@ -1,0 +1,114 @@
+slug: weechat-matrix
+name: weechat-matrix
+category: client
+kind: terminal (WeeChat plugin)
+homepage: null
+summary: Python Matrix plugin for the WeeChat IRC client, on matrix-nio.
+repos:
+- url: https://github.com/poljar/weechat-matrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: unmaintained
+platforms:
+- terminal
+apps:
+- os: terminal
+  tech: tui
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://github.com/poljar/weechat-matrix/blob/feae9fda26ea9de98da9cd6733980a203115537e/README.md
+licence: ISC
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-nio
+    how: code
+    source: https://github.com/poljar/weechat-matrix/blob/feae9fda26ea9de98da9cd6733980a203115537e/requirements.txt
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/poljar/weechat-matrix/blob/feae9fda26ea9de98da9cd6733980a203115537e/main.py#L74
+    note: pattern match [olm_]
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/poljar/weechat-matrix/blob/feae9fda26ea9de98da9cd6733980a203115537e/matrix/commands.py#L1394
+    note: pattern match [in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2023-07-23, so no commits in the last 365 days (HEAD feae9fda26)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: The maintainer moved on to matrix-rust-sdk; a Rust rewrite (weechat-matrix-rs) exists.
+checked: '2026-11-05'

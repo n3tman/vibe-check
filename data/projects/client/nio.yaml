@@ -1,0 +1,125 @@
+slug: nio
+name: Nio
+category: client
+kind: mobile
+homepage: https://nio.chat
+summary: SwiftUI Matrix client for iOS and macOS; the community room says it is not actively maintained.
+repos:
+- url: https://github.com/niochat/nio
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+  - GitHub topic matrix-client
+maturity: unmaintained
+platforms:
+- ios
+- macos
+apps:
+- os: ios
+  tech: native
+  min_os: '13.4'
+  status: discontinued
+  stores: []
+  source: https://github.com/niochat/nio/blob/bccc7792f92a605009a3f6069e179300e5176c04/README.md
+- os: macos
+  tech: native
+  min_os: '11.0'
+  status: discontinued
+  stores: []
+  source: https://github.com/niochat/nio/blob/bccc7792f92a605009a3f6069e179300e5176c04/README.md
+licence: MPL-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-ios-sdk
+    how: claimed
+    note: MatrixSDK (iOS)
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/niochat/nio/blob/bccc7792f92a605009a3f6069e179300e5176c04/NioKit/Models/NIORoom.swift#L49
+    note: pattern match [m.new_content]
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/niochat/nio/blob/bccc7792f92a605009a3f6069e179300e5176c04/NioTests/TypedEventsTests.swift#L54
+    note: pattern match [presence]
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/niochat/nio/blob/bccc7792f92a605009a3f6069e179300e5176c04/Nio/Conversations/RoomListItemView.swift#L24
+    note: pattern match [accessibilityLabel]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files and no AI trailers; 1 commit in the last 365 days (HEAD bccc7792f9)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'One commit in the last 365 days (2026-02-16). Community room topic: "*Not actively maintained*".'
+checked: '2026-11-05'

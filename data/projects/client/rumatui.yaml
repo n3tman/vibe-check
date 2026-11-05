@@ -1,0 +1,123 @@
+slug: rumatui
+name: rumatui
+category: client
+kind: terminal
+homepage: null
+summary: Click-able command-line (TUI) Matrix client in Rust on early matrix-rust-sdk.
+repos:
+- url: https://github.com/DevinR528/rumatui
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: unmaintained
+platforms:
+- terminal
+apps:
+- os: terminal
+  tech: tui
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://github.com/DevinR528/rumatui/blob/2a379dc83301d4284f2b2dd74fa7afa2845e5cad/README.md
+licence: MIT OR Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk
+    how: code
+    source: https://github.com/DevinR528/rumatui/blob/2a379dc83301d4284f2b2dd74fa7afa2845e5cad/Cargo.toml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/DevinR528/rumatui/blob/2a379dc83301d4284f2b2dd74fa7afa2845e5cad/src/error.rs#L123
+    note: pattern match [Megolm]
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/DevinR528/rumatui/blob/2a379dc83301d4284f2b2dd74fa7afa2845e5cad/src/client/ruma_ext/mod.rs#L22
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/DevinR528/rumatui/blob/2a379dc83301d4284f2b2dd74fa7afa2845e5cad/src/client/event_stream.rs#L465
+    note: pattern match [m.replace]
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/DevinR528/rumatui/blob/2a379dc83301d4284f2b2dd74fa7afa2845e5cad/src/client/event_stream.rs#L8
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/DevinR528/rumatui/blob/2a379dc83301d4284f2b2dd74fa7afa2845e5cad/src/client/event_stream.rs#L23
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2021-08-19, so no commits in the last 365 days (HEAD 2a379dc833)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

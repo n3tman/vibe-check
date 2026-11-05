@@ -1,0 +1,179 @@
+slug: quadrix
+name: Quadrix
+category: client
+kind: web, desktop, mobile
+homepage: https://quadrix.chat
+summary: React Native / Electron Matrix client for all major platforms; matrix.org marks it obsolete.
+repos:
+- url: https://github.com/alariej/quadrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/quadrix/
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: unmaintained
+platforms:
+- web
+- windows
+- macos
+- linux
+- android
+- ios
+apps:
+- os: android
+  tech: react-native
+  min_os: '6.0'
+  status: discontinued
+  stores:
+  - name: google-play
+    url: https://play.google.com/store/apps/details?id=chat.quadrix.android
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/quadrix.md
+- os: ios
+  tech: react-native
+  min_os: '12.4'
+  status: discontinued
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/app/id1576110553
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/quadrix.md
+- os: windows
+  tech: electron
+  min_os: null
+  status: discontinued
+  stores:
+  - name: microsoft-store
+    url: https://apps.microsoft.com/store/detail/quadrixchat/9NPZ93X49V00
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/quadrix.md
+- os: macos
+  tech: electron
+  min_os: null
+  status: discontinued
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/us/app/quadrix-chat-desktop/id1577585119
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/quadrix.md
+- os: linux
+  tech: electron
+  min_os: null
+  status: discontinued
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/chat.quadrix.Quadrix
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/quadrix.md
+licence: GPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: not-found
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/src/models/MatrixApi.ts#L751
+    note: pattern match [CrossSigning]
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/src/modules/ElementCall/index.android.tsx#L21
+    note: pattern match [CallInvite]
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/widgets.json#L2
+    note: pattern match [elementcall]
+  reactions:
+    value: not-found
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/src/stores/DataStore.ts#L505
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/src/components/RoomChat.tsx#L625
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/src/components/TextMessage.tsx#L22
+    note: pattern match [LinkPreview]
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/package.json#L54
+    note: pattern match [firebase/messaging]
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/src/stores/DataStore.ts#L188
+    note: pattern match [setPresence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/src/models/MatrixApi.ts#L259
+    note: pattern match [m.room.tombstone]
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/src/matrix/RestClient.tsx#L374
+    note: pattern match [/report]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/ios/quadrixTests/quadrixTests.m#L58
+    note: pattern match [accessibilityLabel]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2023-11-10, so no commits in the last 365 days (HEAD 702cdd19d2)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: Licence from the matrix.org listing (no LICENSE file at the repo root). matrix.org lists E2EE as
+  unsupported.
+checked: '2026-11-05'

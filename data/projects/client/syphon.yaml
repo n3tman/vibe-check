@@ -1,0 +1,164 @@
+slug: syphon
+name: Syphon
+category: client
+kind: mobile
+homepage: https://syphon.org
+summary: Privacy-focused Flutter Matrix client for Android and iOS; the project says it is unmaintained.
+repos:
+- url: https://github.com/syphon-org/syphon
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/syphon/
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: unmaintained
+platforms:
+- android
+- ios
+- linux
+apps:
+- os: android
+  tech: flutter
+  min_os: '5.0'
+  status: discontinued
+  stores:
+  - name: google-play
+    url: https://play.google.com/store/apps/details?id=org.tether.tether
+  - name: f-droid
+    url: https://f-droid.org/packages/org.tether.tether
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/syphon.md
+- os: ios
+  tech: flutter
+  min_os: null
+  status: discontinued
+  stores:
+  - name: app-store
+    url: https://apps.apple.com/app/id1496285352
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/syphon.md
+- os: linux
+  tech: flutter
+  min_os: null
+  status: discontinued
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/org.syphon.Syphon
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/syphon.md
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own
+    how: code
+    note: own Dart implementation
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/.drone.yml#L19
+    note: pattern match [libolm]
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/lib/global/strings.dart#L66
+    note: pattern match [KeyBackup]
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/lib/global/strings.dart#L132
+    note: pattern match [CallInvite]
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/lib/global/libraries/matrix/events/requests.dart#L241
+    note: pattern match [m.reaction]
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/lib/global/libraries/matrix/events/types.dart#L22
+    note: pattern match [m.replace]
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/lib/domain/events/messages/actions.dart#L365
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/lib/global/libraries/matrix/events/types.dart#L32
+    note: pattern match [m.location]
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/pubspec.yaml#L61
+    note: pattern match [apns]
+  private_read_receipts:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/lib/global/libraries/matrix/index.dart#L56
+    note: pattern match [PrivateRead]
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/lib/global/libraries/matrix/user/types.dart#L6
+    note: pattern match [presence]
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/syphon-org/syphon/blob/05ef8d47da47d35b733470722aa06a2e85d24789/lib/views/home/HomeChatList.dart#L85
+    note: pattern match [semanticsLabel]
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2023-08-17, so no commits in the last 365 days (HEAD 05ef8d47da)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'Community room topic: "SYPHON IS UNMAINTAINED" with https://github.com/syphon-org/syphon/issues/794.
+  matrix.org: Obsolete.'
+checked: '2026-11-05'

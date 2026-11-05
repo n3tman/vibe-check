@@ -1,0 +1,127 @@
+slug: mirage
+name: Mirage
+category: client
+kind: desktop
+homepage: null
+summary: Customizable, keyboard-operable Qt/QML desktop client on matrix-nio; development stopped in 2021
+  (continued as the Moment fork).
+repos:
+- url: https://github.com/mirukana/mirage
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+  - GitHub topic matrix-client
+maturity: unmaintained
+platforms:
+- linux
+- windows
+- macos
+apps:
+- os: linux
+  tech: qt
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/README.md
+licence: GPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-nio
+    how: code
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/requirements.txt
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/backend/matrix_client.py#L1684
+    note: pattern match [Megolm]
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/backend/matrix_client.py#L153
+    note: pattern match [m.reaction]
+  edits:
+    value: not-found
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/backend/matrix_client.py#L670
+    note: pattern match [m.in_reply_to]
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: not-found
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/config/settings.py#L47
+    note: pattern match [presence]
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/src/gui/Utils.qml#L585
+    note: pattern match [tombstone]
+  moderation_tools:
+    value: not-found
+  accessibility:
+    value: not-found
+  translations:
+    value: not-found
+  telemetry:
+    value: none-found
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2021-07-26, so no commits in the last 365 days (HEAD 9a4ababd9a)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

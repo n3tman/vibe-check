@@ -1,0 +1,120 @@
+slug: small-talk
+name: SmallTalk
+category: client
+kind: mobile
+homepage: null
+summary: Tiny Android Matrix messenger with its own Kotlin Matrix implementation.
+repos:
+- url: https://github.com/ouchadam/small-talk
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (#community:matrix.org)
+maturity: unmaintained
+platforms:
+- android
+apps:
+- os: android
+  tech: native
+  min_os: null
+  status: discontinued
+  stores: []
+  source: https://github.com/ouchadam/small-talk/blob/5a391676d0d482596fe5d270798c2b361dba67e7/README.md
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: own
+    how: code
+    note: own Kotlin modules, with matrix-sdk-crypto-js for crypto
+  e2ee:
+    value: not-found
+  cross_signing:
+    value: not-found
+  key_backup:
+    value: not-found
+  sliding_sync:
+    value: not-found
+  oidc_auth:
+    value: not-found
+  multi_account:
+    value: not-found
+  threads:
+    value: not-found
+  spaces:
+    value: not-found
+  voip_1to1:
+    value: not-found
+  group_calls:
+    value: not-found
+  reactions:
+    value: not-found
+  edits:
+    value: not-found
+  replies:
+    value: not-found
+  polls:
+    value: not-found
+  custom_emoji:
+    value: not-found
+  stickers:
+    value: not-found
+  location:
+    value: not-found
+  voice_messages:
+    value: not-found
+  rich_text_editor:
+    value: not-found
+  url_previews:
+    value: not-found
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/ouchadam/small-talk/blob/5a391676d0d482596fe5d270798c2b361dba67e7/settings.gradle#L47
+    note: pattern match [firebase:messaging]
+  private_read_receipts:
+    value: not-found
+  presence:
+    value: not-found
+  room_upgrades:
+    value: not-found
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/ouchadam/small-talk/blob/5a391676d0d482596fe5d270798c2b361dba67e7/.github/workflows/test.yml#L34
+    note: pattern match [/report]
+  accessibility:
+    value: 'yes'
+    how: code
+    source: https://github.com/ouchadam/small-talk/blob/5a391676d0d482596fe5d270798c2b361dba67e7/design-library/src/main/kotlin/app/dapk/st/design/components/Icon.kt#L52
+    note: pattern match [contentDescription]
+  translations:
+    value: not-found
+  telemetry:
+    value: not-found
+    how: code
+    source: https://github.com/ouchadam/small-talk/blob/5a391676d0d482596fe5d270798c2b361dba67e7/domains/firebase/crashlytics/build.gradle
+    note: Firebase Crashlytics module in the build; opt-in or not was not checked
+  default_homeserver:
+    value: not-found
+  fork_friendliness:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files; last commit 2023-05-13, so no commits in the last 365 days (HEAD 5a391676d0)
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: null
+checked: '2026-11-05'

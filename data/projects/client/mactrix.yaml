@@ -58,7 +58,7 @@ features:
   threads:
     value: 'yes'
     how: code
-    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixIntegration/Extensions/MatrixRustSDK+Extensions.swift#L119
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixIntegration/Extensions/MatrixRustSDK%2BExtensions.swift#L119
     note: pattern match [threadRoot]
   spaces:
     value: 'yes'
@@ -107,7 +107,7 @@ features:
   room_upgrades:
     value: 'yes'
     how: code
-    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixIntegration/Extensions/MatrixRustSDK+Extensions.swift#L445
+    source: https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/Sources/MatrixIntegration/Extensions/MatrixRustSDK%2BExtensions.swift#L445
     note: pattern match [Tombstone]
   moderation_tools:
     value: not-found
