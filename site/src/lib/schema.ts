@@ -116,6 +116,18 @@ export const projectSchema = z
       })
       .passthrough(),
     notes: z.string().nullable().optional(),
+    // The project's own icon in site/public/icons/ (lane 10); data.ts checks the file exists.
+    icon: z
+      .object({
+        file: z.string().regex(/^[a-z0-9][a-z0-9-]*\.(svg|webp|png)$/, '<slug>.svg, .webp or .png'),
+        source: url,
+        licence: z.string().nullable().optional(),
+        note: z.string().nullable().optional(),
+        checked: date,
+      })
+      .passthrough()
+      .optional(),
+    notes: z.string().nullable().optional(),
     checked: date,
   })
   .passthrough();

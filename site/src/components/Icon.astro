@@ -43,6 +43,13 @@ const P: Record<string, string> = {
   compare: '<rect x="3.5" y="4" width="7" height="16" rx="1.5"/><rect x="13.5" y="4" width="7" height="16" rx="1.5"/>',
   book: '<path d="M4.5 4.5h6a2 2 0 0 1 2 2v13a1.5 1.5 0 0 0-1.5-1.5H4.5zM19.5 4.5h-5a2 2 0 0 0-2 2v13a1.5 1.5 0 0 1 1.5-1.5h5.5z"/>',
   matrix: '<path d="M5 3.5H3.5v17H5M19 3.5h1.5v17H19"/><path d="M8 15.5v-7M8 10.5c0-1.2.9-2 2-2s2 .8 2 2v5M12 10.5c0-1.2.9-2 2-2s2 .8 2 2v5"/>',
+  // Forge marks, keyed by repos[].forge: simple shapes drawn for this site, not the forges' own logos.
+  'forge-github': '<path d="M5 9.6 5.6 4l3.9 2.6h5L18.4 4l.6 5.6c1 1.1 1.5 2.5 1.5 3.9 0 4.2-3.8 6.5-8.5 6.5s-8.5-2.3-8.5-6.5c0-1.4.5-2.8 1.5-3.9z"/><path d="M9 13.2v.6M15 13.2v.6"/>',
+  'forge-gitlab': '<path d="M12 20.5 3.2 13.3 5.4 4l2.7 6.6h7.8L18.6 4l2.2 9.3z"/><path d="M8.1 10.6 12 20.5l3.9-9.9"/>',
+  'forge-forgejo': '<path d="M2.8 19.5 9.6 6.5l4.2 7.3 2.4-3.6 5 9.3z"/><path d="M9.6 6.5V3.5l3 1.2-3 1.2"/>',
+  'forge-gitea': '<path d="M4 8.5h11.5v4.3a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M15.5 9.8h1.8a2.2 2.2 0 0 1 0 4.4h-2"/><path d="M8 4.5c-.6.8.6 1.4 0 2.2M11.5 4.5c-.6.8.6 1.4 0 2.2"/>',
+  'forge-sourcehut': '<path d="M3.5 11.5 12 4.5l8.5 7"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/>',
+  'forge-other': '<circle cx="6.5" cy="5.5" r="2"/><circle cx="6.5" cy="18.5" r="2"/><circle cx="17.5" cy="7.5" r="2"/><path d="M6.5 7.5v9M17.5 9.5c0 4-5 3.5-9.5 7.5"/>',
 };
 const body = P[name] ?? P.dot;
 ---
