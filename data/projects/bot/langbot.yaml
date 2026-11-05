@@ -43,6 +43,10 @@ ai:
     - 'tools named in attributions: claude'
     - 'example: 0ef32210df56 (Co-authored-by: Claude)'
     - 'example: db17132728c0 (Co-authored-by: Claude)'
+    - '39 merged pull request(s) since 2025-11-05 whose description explicitly discloses AI help (squash
+      merges can drop this from git history): https://github.com/langbot-app/LangBot/pull/2862 (Generated
+      with [Claude); https://github.com/langbot-app/LangBot/pull/2859 (Generated with [Claude); https://github.com/langbot-app/LangBot/pull/2858
+      (Generated with [Claude); https://github.com/langbot-app/LangBot/pull/2740 (Generated with [Claude)'
     - 'README: AGENTS.md is symlinked to CLAUDE.md and the project calls itself "agent-friendly by design"'
   in_product: {value: core, note: The product connects LLMs and agent runners to chat platforms., source: 'https://github.com/langbot-app/LangBot/blob/33e482a35744aeafc345241e03a0c1825180824b/README.md'}
 notes: 18,730 stars; mostly Chinese-language community. Matrix is one of many platform adapters. Found
