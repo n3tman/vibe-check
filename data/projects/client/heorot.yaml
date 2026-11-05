@@ -1,0 +1,95 @@
+slug: heorot
+name: Heorot
+category: client
+kind: web, desktop
+homepage: https://github.com/Vitosicz/Heorot
+summary: A Discord-style self-hosted Matrix client (spaces as servers, rooms as channels, voice channels);
+  continued as Jorvik.
+repos:
+- url: https://github.com/Vitosicz/Heorot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub repository search "matrix client" (pushed since 2025-11), 2026-11-05
+maturity: alpha
+platforms:
+- web
+- windows
+- macos
+- linux
+apps:
+- os: web
+  tech: other
+  status: alpha
+  source: https://github.com/Vitosicz/Heorot/blob/65b3fe2cc09b95e10bc3b1e6adb11ee0a8cfdfaf/README.md
+  min_os: null
+  stores: []
+- os: windows
+  tech: electron
+  status: alpha
+  source: https://github.com/Vitosicz/Heorot/blob/65b3fe2cc09b95e10bc3b1e6adb11ee0a8cfdfaf/README.md
+  min_os: null
+  stores: []
+licence: AGPL-3.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk: not-found
+  e2ee: not-found
+  cross_signing: not-found
+  key_backup: not-found
+  sliding_sync: not-found
+  oidc_auth: not-found
+  multi_account: not-found
+  threads: not-found
+  spaces: not-found
+  voip_1to1: not-found
+  group_calls:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Vitosicz/Heorot/blob/65b3fe2cc09b95e10bc3b1e6adb11ee0a8cfdfaf/README.md
+    note: Self-hosted voice channels.
+  reactions: not-found
+  edits: not-found
+  replies: not-found
+  polls: not-found
+  custom_emoji:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/Vitosicz/Heorot/blob/65b3fe2cc09b95e10bc3b1e6adb11ee0a8cfdfaf/README.md
+    note: Per-space and personal packs.
+  stickers: not-found
+  location: not-found
+  voice_messages: not-found
+  rich_text_editor: not-found
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades: not-found
+  moderation_tools: not-found
+  accessibility: not-found
+  translations: not-found
+  telemetry: not-found
+  default_homeserver: not-found
+  fork_friendliness: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - No attributed commits among 14 commits (2026-03-08 to 2026-03-24); no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: >-
+  README: "Personal open-source experiment — alpha stage"; parts derived from Element Web. Superseded
+  by Jorvik ("a rebrand and continuation of Heorot").
+checked: '2026-11-05'
