@@ -1,0 +1,175 @@
+slug: fractal
+name: Fractal
+category: client
+kind: desktop
+homepage: https://gitlab.gnome.org/World/fractal
+summary: A GTK 4 / libadwaita Matrix client for GNOME, written in Rust on the matrix-rust-sdk.
+repos:
+- url: https://gitlab.gnome.org/World/fractal
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/fractal/
+  other:
+  - 'sources/community-space.tsv: room "Fractal"'
+  - https://github.com/jryans/awesome-matrix (Clients)
+maturity: beta
+platforms:
+- linux
+apps:
+- os: linux
+  tech: gtk
+  status: stable
+  stores:
+  - name: flathub
+    url: https://flathub.org/apps/org.gnome.Fractal
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fractal.md
+  min_os: null
+licence: GPL-3.0-or-later
+fork_of: null
+distribution:
+- flathub
+funding: []
+features:
+  sdk:
+    value: matrix-rust-sdk (git rev 2d6248ed, with matrix-sdk-ui)
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/Cargo.toml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/Cargo.toml
+    note: matrix-sdk feature e2e-encryption.
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/session/security.rs
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/components/crypto/recovery_setup_view.blp
+    note: Recovery setup; key import/export.
+  sliding_sync:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fractal.md
+    note: 'matrix.org: unsupported.'
+  oidc_auth:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/components/dialogs/auth/mod.rs
+    note: 'OAuth 2.0 (MSC3861 family); matrix.org: supported.'
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fractal.md
+  threads:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fractal.md
+  spaces:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fractal.md
+    note: 'matrix.org: unsupported.'
+  voip_1to1:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fractal.md
+  group_calls:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fractal.md
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/session/room/timeline/event/mod.rs
+  edits:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/session/room/timeline/event/mod.rs
+  replies:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/session/room/timeline/event/mod.rs
+  polls: not-found
+  custom_emoji:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fractal.md
+    note: 'matrix.org: image_packs unsupported.'
+  stickers:
+    value: partial
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/session/room/timeline/event/mod.rs
+    note: Displays stickers.
+  location:
+    value: partial
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/session_view/room_history/message_row/location.rs
+    note: Displays location messages.
+  voice_messages: not-found
+  rich_text_editor:
+    value: partial
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/session_view/room_history/message_toolbar/composer_parser.rs
+    note: Markdown composer with mention pills.
+  url_previews: not-found
+  push_notifications: not-found
+  private_read_receipts: not-found
+  presence: not-found
+  room_upgrades:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/session/room/mod.rs
+    note: Follows tombstones.
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/src/session_view/room_details/permissions/permissions_subpage.rs
+  accessibility:
+    value: not-found
+    how: null
+    source: null
+    note: GTK accessibility; no project-specific statement found.
+  translations:
+    value: 'yes'
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/po
+    note: GNOME translation platform (Damned Lies); about 50 po files.
+  telemetry:
+    value: none-found
+    how: code
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/Cargo.toml
+  default_homeserver:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/fractal.md
+    note: The user enters a homeserver; no default found in code.
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/CONTRIBUTING.md
+    note: Rust + GTK 4 + Meson/Flatpak build; GPL-3.0-or-later.
+ai:
+  policy:
+    value: banned
+    quote: >-
+      Contributions must not include content generated by large language models or other probabilistic
+      tools like ChatGPT, Claude, and Copilot. [...] This ban of LLM-generated content applies to
+      all parts of the projects, including, but not limited to, code, documentation, issues, and
+      artworks.
+    source: https://gitlab.gnome.org/World/fractal/-/blob/9fbc72834ad43746028008ea33878ea9fd2a82d6/CONTRIBUTING.md
+  dev_usage:
+    value: none-found
+    evidence:
+    - No attributed commits among 224 non-bot commits in the last 365 days.
+    - >-
+      An AGENTS.md exists, but it is a deterrent (it tells agents to make no changes), not a sign
+      of AI use; the scanner's config-only rule should not apply.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'matrix.org maturity: Beta. Fractal began as a fork of Fest.'
+checked: '2026-11-05'

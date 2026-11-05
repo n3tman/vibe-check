@@ -1,0 +1,203 @@
+slug: commet
+name: Commet
+category: client
+kind: desktop, mobile, web
+homepage: https://commet.chat
+summary: A Flutter Matrix client for Windows, Linux, Android and web, focused on features with a
+  simple interface.
+repos:
+- url: https://github.com/commetchat/commet
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/clients/commet/
+  other:
+  - PLAN.md extra sources (https://commet.chat)
+maturity: beta
+platforms:
+- windows
+- linux
+- android
+- web
+apps:
+- os: windows
+  tech: flutter
+  status: beta
+  stores:
+  - name: installer
+    url: https://commet.chat/install/windows
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/commet.md
+  min_os: null
+- os: linux
+  tech: flutter
+  status: beta
+  stores:
+  - name: linux packages
+    url: https://commet.chat/install/linux
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/commet.md
+  min_os: null
+- os: android
+  tech: flutter
+  status: beta
+  source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/README.md
+  min_os: null
+  stores: []
+- os: web
+  tech: flutter
+  status: beta
+  stores:
+  - name: web
+    url: https://app.commet.chat/
+  source: https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/clients/commet.md
+  min_os: null
+- os: ios
+  tech: flutter
+  status: alpha
+  source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/README.md
+  note: 'README: "MacOS and iOS planned in future".'
+  min_os: null
+  stores: []
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  sdk:
+    value: matrix-dart-sdk with vodozemac; some Rust via flutter_rust_bridge
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/pubspec.yaml
+  e2ee:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/matrix_client.dart
+  cross_signing:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/ui/pages/settings/categories/account/security/matrix/cross_signing/cross_signing_view.dart
+  key_backup:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/ui/pages/settings/categories/account/security/matrix/cross_signing/cross_signing_page.dart
+  sliding_sync:
+    value: 'no'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/pubspec.yaml
+    note: No sliding sync code found.
+  oidc_auth:
+    value: not-found
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/components/widgets/capabilities/mx_capability_oidc.dart
+    note: 'Only a widget OIDC capability found; matrix.org: oauth unknown, sso supported.'
+  multi_account:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/README.md
+  threads:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/components/threads/matrix_threads_component.dart
+  spaces:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/README.md
+  voip_1to1:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/components/voip/matrix_voip_component.dart
+  group_calls:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/pubspec.yaml
+    note: MatrixRTC with livekit_client, screen share annotations.
+  reactions:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/matrix_room.dart
+  edits:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/matrix_room.dart
+  replies:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/timeline_events/matrix_timeline_event_mixin_related.dart
+  polls:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/components/polls/matrix_poll_component.dart
+  custom_emoji:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/components/emoticon/matrix_emoticon_component.dart
+    note: 'Image packs, import of packs; matrix.org: partial.'
+  stickers:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/README.md
+    note: Plus GIF search.
+  location:
+    value: not-found
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/matrix_room.dart
+  voice_messages:
+    value: not-found
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/matrix_room.dart
+  rich_text_editor: not-found
+  url_previews:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/components/url_preview/matrix_url_preview_component.dart
+  push_notifications:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/ui/pages/setup/menus/unified_push_setup.dart
+    note: UnifiedPush; a Firebase notifier also exists (commented out in pubspec.yaml).
+  private_read_receipts: not-found
+  presence:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/components/user_presence/matrix_user_presence.dart
+  room_upgrades: not-found
+  moderation_tools:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/client/matrix/timeline_events/matrix_timeline_event_redaction.dart
+  accessibility: not-found
+  translations:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/README.md
+    note: Weblate; 28 .arb files.
+  telemetry:
+    value: none-found
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/pubspec.yaml
+  default_homeserver:
+    value: 'yes'
+    how: code
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/commet/lib/config/global_config.dart
+    note: matrix.org unless configured.
+  fork_friendliness:
+    value: partial
+    how: claimed
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/README.md
+    note: Flutter plus a Rust part (flutter_rust_bridge) and code generation before building; AGPL-3.0-only.
+ai:
+  policy:
+    value: banned
+    quote: >-
+      We expect and appreciate authentic engagement in our community, as such usage of generative
+      AI tools is prohibited. [...] Usage of AI / LLMs to generate code or documentation is strictly
+      prohibited.
+    source: https://github.com/commetchat/commet/blob/4f2bb0860c90667d123fc219422e089310aa863a/CONTRIBUTING.md
+  dev_usage:
+    value: none-found
+    evidence:
+    - No attributed commits among 346 non-bot commits in the last 365 days; no agent files.
+  in_product:
+    value: none-found
+    note: null
+    source: null
+notes: 'matrix.org maturity: Beta.'
+checked: '2026-11-05'
