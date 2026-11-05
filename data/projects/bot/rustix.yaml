@@ -1,0 +1,42 @@
+slug: rustix
+name: rustix
+category: bot
+kind: framework
+homepage: https://gitlab.com/jpypi/rustix
+summary: A Rust bot whose commands, filters and services are wired as a configurable processing graph;
+  quotes, factoids, search and an optional OpenAI chat command.
+repos:
+- url: https://gitlab.com/jpypi/rustix
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: beta
+platforms: [server]
+licence: MIT
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: 'general-purpose (quotes, factoids, web search, karma, optional LLM chat)', how: claimed,
+    source: 'https://gitlab.com/jpypi/rustix/-/blob/453a9ca5352fbcb09ec1b82811188b0ac96208ca/README.md'}
+  framework: {value: own, how: code, source: 'https://gitlab.com/jpypi/rustix/-/blob/453a9ca5352fbcb09ec1b82811188b0ac96208ca/Cargo.toml',
+    note: talks to the client-server API itself over reqwest; no Matrix SDK crate}
+  e2ee: {value: not-found, how: claimed, source: 'https://gitlab.com/jpypi/rustix/-/blob/453a9ca5352fbcb09ec1b82811188b0ac96208ca/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://gitlab.com/jpypi/rustix/-/blob/453a9ca5352fbcb09ec1b82811188b0ac96208ca/README.md',
+    note: Docker recommended}
+  config: {value: config.toml and admin commands (node config), how: claimed, source: 'https://gitlab.com/jpypi/rustix/-/blob/453a9ca5352fbcb09ec1b82811188b0ac96208ca/README.md'}
+  ai_backend: {value: OpenAI, how: claimed, source: 'https://gitlab.com/jpypi/rustix/-/blob/453a9ca5352fbcb09ec1b82811188b0ac96208ca/README.md',
+    note: services.openai enables a chat command backed by OpenAI's GPT models; disabled in the default
+      config}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 1 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 453a9ca5352f
+  in_product: {value: optional, note: An optional chat command sends recent channel history to OpenAI's
+      GPT models; off unless an API key is configured., source: 'https://gitlab.com/jpypi/rustix/-/blob/453a9ca5352fbcb09ec1b82811188b0ac96208ca/README.md'}
+notes: Maturity is our reading (one commit in the last 365 days, 2026-01-25).
+checked: 2026-11-05

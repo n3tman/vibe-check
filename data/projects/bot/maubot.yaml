@@ -1,0 +1,40 @@
+slug: maubot
+name: maubot
+category: bot
+kind: framework
+homepage: https://mau.bot
+summary: A plugin-based bot system in Python; one maubot instance runs many bots and plugins, managed
+  from a web UI.
+repos:
+- url: https://github.com/maubot/maubot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: [pypi, docker]
+funding: []
+features:
+  purpose: {value: bot framework and plugin host, how: claimed, source: 'https://github.com/maubot/maubot/blob/f20825b5e3031a89eb5b2edea7f6f7726ada9a10/README.md'}
+  framework: {value: mautrix-python, how: code, source: 'https://github.com/maubot/maubot/blob/f20825b5e3031a89eb5b2edea7f6f7726ada9a10/requirements.txt'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://docs.mau.fi/maubot/usage/encryption.html'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/maubot/maubot/blob/f20825b5e3031a89eb5b2edea7f6f7726ada9a10/README.md',
+    note: Python or Docker}
+  config: {value: 'web management UI, CLI (mbc) and config file', how: claimed, source: 'https://docs.mau.fi/maubot/'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/maubot/maubot/blob/f20825b5e3031a89eb5b2edea7f6f7726ada9a10/requirements.txt',
+    note: none in maubot itself; third-party plugins can call LLM APIs}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 15 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at f20825b5e303
+  in_product: {value: none-found, note: No LLM feature in maubot itself; LLM chat plugins exist as separate
+      third-party projects., source: 'https://github.com/maubot/maubot/blob/f20825b5e3031a89eb5b2edea7f6f7726ada9a10/requirements.txt'}
+notes: 'Plugins are separate repos (for example maubot/github, maubot/gitlab, which have their own files
+  here). Plugin list: https://plugins.mau.bot'
+checked: 2026-11-05

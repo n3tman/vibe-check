@@ -1,0 +1,37 @@
+slug: matrix-alertmanager
+name: matrix-alertmanager
+category: bot
+kind: notifications
+homepage: https://github.com/jaywink/matrix-alertmanager
+summary: A service that receives Prometheus Alertmanager webhooks and posts the alerts to chosen rooms.
+repos:
+- url: https://github.com/jaywink/matrix-alertmanager
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: stable
+platforms: [server]
+licence: MIT
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: notifications (Prometheus Alertmanager), how: claimed, source: 'https://github.com/jaywink/matrix-alertmanager/blob/666bd936b8e2c13e076254cef4c784e2d4392a67/README.md'}
+  framework: {value: matrix-js-sdk, how: code, source: 'https://github.com/jaywink/matrix-alertmanager/blob/666bd936b8e2c13e076254cef4c784e2d4392a67/package.json'}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/jaywink/matrix-alertmanager/blob/666bd936b8e2c13e076254cef4c784e2d4392a67/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/jaywink/matrix-alertmanager/blob/666bd936b8e2c13e076254cef4c784e2d4392a67/README.md',
+    note: Docker}
+  config: {value: environment variables, how: claimed, source: 'https://github.com/jaywink/matrix-alertmanager/blob/666bd936b8e2c13e076254cef4c784e2d4392a67/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/jaywink/matrix-alertmanager/blob/666bd936b8e2c13e076254cef4c784e2d4392a67/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 21 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 666bd936b8e2
+  in_product: {value: none-found, note: null, source: null}
+notes: null
+checked: 2026-11-05

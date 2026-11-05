@@ -1,0 +1,39 @@
+slug: matrix-rss-bridge
+name: matrix-rss-bridge
+category: bot
+kind: rss
+homepage: https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge
+summary: Despite the name a bot rather than an appservice bridge; it posts new RSS feed items into Matrix
+  rooms.
+repos:
+- url: https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: beta
+platforms: [server]
+licence: GPL-3.0-only
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: RSS, how: claimed, source: 'https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge/-/blob/1d039fcad25908ccade3a494717a3163740a02d8/README.md'}
+  framework: {value: simplematrixbotlib, how: code, source: 'https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge/-/blob/1d039fcad25908ccade3a494717a3163740a02d8/pyproject.toml'}
+  e2ee: {value: partial, how: claimed, source: 'https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge/-/blob/1d039fcad25908ccade3a494717a3163740a02d8/README.md',
+    note: the setup guide has the bot invited to an end-to-end encrypted room; no further statement}
+  hosting: {value: self-host, how: claimed, source: 'https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge/-/blob/1d039fcad25908ccade3a494717a3163740a02d8/README.md',
+    note: Docker}
+  config: {value: config file (config.toml), how: claimed, source: 'https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge/-/blob/1d039fcad25908ccade3a494717a3163740a02d8/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge/-/blob/1d039fcad25908ccade3a494717a3163740a02d8/pyproject.toml'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2025-10-21), counted at 1d039fcad259
+  in_product: {value: none-found, note: null, source: null}
+notes: Listed under integrations on matrix.org, not under bridges, so it is filed here as a bot. Last
+  commit 2025-10-21; maturity is our reading.
+checked: 2026-11-05

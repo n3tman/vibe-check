@@ -1,0 +1,40 @@
+slug: middleman
+name: Middleman
+category: bot
+kind: helpdesk
+homepage: https://github.com/elokapina/middleman
+summary: A bot that relays messages between rooms and a management room, so a team can answer users through
+  one account.
+repos:
+- url: https://github.com/elokapina/middleman
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: unmaintained
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: helpdesk / message relay, how: claimed, source: 'https://github.com/elokapina/middleman/blob/0848def2a487d07cec5732d0b2a78a828e78c3e7/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/elokapina/middleman/blob/0848def2a487d07cec5732d0b2a78a828e78c3e7/requirements.txt',
+    note: 'matrix-nio[e2e]'}
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/elokapina/middleman/blob/0848def2a487d07cec5732d0b2a78a828e78c3e7/requirements.txt',
+    note: 'matrix-nio[e2e] and python-olm'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/elokapina/middleman/blob/0848def2a487d07cec5732d0b2a78a828e78c3e7/README.md',
+    note: Docker}
+  config: {value: config.yaml and !reply / !message commands, how: claimed, source: 'https://github.com/elokapina/middleman/blob/0848def2a487d07cec5732d0b2a78a828e78c3e7/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/elokapina/middleman/blob/0848def2a487d07cec5732d0b2a78a828e78c3e7/requirements.txt'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2024-08-11), counted at 0848def2a487
+  in_product: {value: none-found, note: null, source: null}
+notes: Last commit 2024-08-11, not archived; maturity is our reading.
+checked: 2026-11-05
