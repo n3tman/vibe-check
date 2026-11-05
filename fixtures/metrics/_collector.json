@@ -1,6 +1,6 @@
 {
  "collector_version": "1",
- "run_at": "2026-11-05T04:06:48+00:00",
+ "run_at": "2026-11-05T04:19:14+00:00",
  "bot_names": [
   "dependabot",
   "renovate",
@@ -56,7 +56,7 @@
    "https://github.com/element-hq/element-x-ios: HTTPError: HTTP Error 403: Forbidden",
    "https://github.com/element-hq/element-desktop: HTTPError: HTTP Error 403: Forbidden"
   ],
-  "seconds": 60,
+  "seconds": 20,
   "http_calls": 24,
   "project_errors": []
  }

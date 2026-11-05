@@ -9,7 +9,7 @@ import LangBar from '../../components/LangBar.astro';
 import Platforms from '../../components/Platforms.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { dataset, type Entry } from '../../lib/data.ts';
-import { AXES, CATEGORY_LABEL, OS_LABEL, ago, features, fmtDate, fmtNum, host, href, osList, pct, statusOf, type Axis } from '../../lib/view.ts';
+import { AXES, CATEGORY_LABEL, STATE_TEXT, ago, features, fmtDate, fmtNum, host, href, osList, pct, statusOf, type Axis } from '../../lib/view.ts';
 
 export function getStaticPaths() {
   return dataset().projects.map((p) => ({ params: { slug: p.slug }, props: { p } }));
@@ -94,6 +94,9 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
           {axisSource[ax].source && <p class="small" style="margin:.4rem 0 0"><a href={axisSource[ax].source!}>Source: {host(axisSource[ax].source)}</a></p>}
           {ax === 'dev_usage' && (
             <>
+              {c?.ai?.suggested_dev_usage && c.ai.suggested_dev_usage !== p.ai.dev_usage.value && (
+                <p class="small" style="margin:.6rem 0 0"><strong>The collector's evidence suggests “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”</strong>; the hand-checked value above has not been reconciled with it yet.</p>
+              )}
               {c?.ai && (
                 <p class="small" style="margin:.6rem 0 0">
                   Collector: {c.ai.attributed_commits_365d} of {fmtNum(c.ai.commits_365d)} commits in the last year credit an AI tool ({pct(c.ai.share_365d)}){Object.keys(c.ai.tools ?? {}).length ? `: ${Object.entries(c.ai.tools).map(([k, v]) => `${k} ${v}`).join(', ')}` : ''}.
@@ -103,7 +106,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
               {(handEvidence.length > 0 || agentFiles.length > 0 || aiWorkflows.length > 0 || aiExamples.length > 0 || aiBots.length > 0) && (
                 <ul class="evidence">
                   {handEvidence.map((e) => <li>{typeof e === 'string' ? (e.startsWith('http') ? <a href={e}>{host(e)}</a> : e) : <>{e.note ?? e.kind ?? ''} {e.url && <a href={e.url}>{host(e.url)}</a>}</>}</li>)}
-                  {agentFiles.map((f) => <li><Icon name="book" size={12} /> <a href={f.url}><code>{f.path}</code></a> <span class="muted">({f.kind})</span></li>)}
+                  {agentFiles.map((f) => <li><Icon name="book" size={12} /> <a href={f.url}><code>{f.path}</code></a> <span class="muted">({f.kind}{okRepos.length > 1 ? `, ${f.repo.split('/').pop()}` : ''})</span></li>)}
                   {aiWorkflows.map((w: any) => <li><Icon name="branch" size={12} /> <a href={w.url}><code>{w.path}</code></a> <span class="muted">{w.matches.join(', ')}</span></li>)}
                   {aiBots.map((b: any) => <li><Icon name="users" size={12} /> {b.name}: {b.commits_365d} commits</li>)}
                   {aiExamples.slice(0, 5).map((e: any) => <li><Icon name="dot" size={12} /> <a href={e.url}><code>{e.sha.slice(0, 9)}</code></a> {e.date} <span class="muted">{e.tools.join(', ')}</span></li>)}
@@ -125,7 +128,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
           <Bars data={weekData} caption="Commits per week, last 52 weeks" every={8} />
           <Bars data={quarters} caption="Authors per quarter" every={4} />
         </div>
-        {c.languages && <div><h3 style="margin-bottom:.5rem">Languages</h3><LangBar languages={c.languages} source={okRepos.find((r) => r.role === 'main' || true)?.languages_source} /></div>}
+        {c.languages && <div><h3 style="margin-bottom:.5rem">Languages</h3><LangBar languages={c.languages} source={(okRepos.find((r) => r.role === 'main') ?? okRepos[0])?.languages_source} /></div>}
       </div>
     </section>
   )}
@@ -162,7 +165,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
             {feats.map((f) => (
               <tr>
                 <td>{f.label}</td>
-                <td><FeatureChip f={{ ...f, label: f.state === 'text' ? '' : ({ yes: 'Yes', partial: 'Partial', no: 'No', planned: 'Planned', 'not-found': 'Not found', text: '' } as any)[f.state] }} />{f.note && <div class="note">{f.note}</div>}</td>
+                <td>{f.state === 'text' ? <span>{f.value}</span> : <FeatureChip f={{ ...f, label: STATE_TEXT[f.state] }} />}{f.note && <div class="note">{f.note}</div>}</td>
                 <td>{f.how ? <span class="how">{f.how}</span> : <span class="muted">—</span>}</td>
                 <td>{linkText(f.source).length ? linkText(f.source).map((s, i) => <>{i > 0 && ' · '}<a href={s}>{host(s).slice(0, 48)}</a></>) : <span class="muted">—</span>}</td>
               </tr>
