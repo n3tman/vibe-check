@@ -1,0 +1,25 @@
+---
+// A plain vertical bar chart with a caption; values are listed for screen readers.
+interface Props { data: { label: string; value: number }[]; caption: string; height?: number; unit?: string; every?: number }
+const { data, caption, height = 120, unit = '', every = 1 } = Astro.props;
+const max = Math.max(1, ...data.map((d) => d.value));
+const n = data.length;
+const W = 640, top = 14, bottom = 20, H = height;
+const bw = W / Math.max(1, n);
+const gap = Math.min(4, bw * 0.25);
+const peakIdx = data.findIndex((d) => d.value === max);
+---
+<figure class="chart bars">
+  <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" class="bars-svg" role="img" aria-label={`${caption}. Peak ${max}${unit}.`}>
+    <line x1="0" x2={W} y1={H - bottom + 0.5} y2={H - bottom + 0.5} class="baseline" />
+    {data.map((d, i) => {
+      const h = (d.value / max) * (H - top - bottom);
+      return <rect x={i * bw + gap / 2} y={H - bottom - h} width={Math.max(1, bw - gap)} height={h} rx={Math.min(2, (bw - gap) / 3)} class="bar"><title>{`${d.label}: ${d.value}${unit}`}</title></rect>;
+    })}
+  </svg>
+  <div class="bars-labels" aria-hidden="true">
+    {data.map((d, i) => <span style={`left:${((i + 0.5) / n) * 100}%`} class:list={{ hide: i % every !== 0 && i !== n - 1 }}>{d.label}</span>)}
+  </div>
+  <figcaption>{caption}{peakIdx >= 0 && max > 0 ? <span class="muted"> · peak {max}{unit} ({data[peakIdx].label})</span> : null}</figcaption>
+  <table class="sr-only"><caption>{caption}</caption><tbody>{data.map((d) => <tr><th scope="row">{d.label}</th><td>{d.value}</td></tr>)}</tbody></table>
+</figure>

@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+import { STATE_TEXT, type FeatureView } from '../lib/view.ts';
+interface Props { f: FeatureView; withValue?: boolean }
+const { f } = Astro.props;
+const icon = { yes: 'check', partial: 'partial', no: 'cross', planned: 'clock', 'not-found': 'question', text: 'dot' }[f.state];
+const valueText = f.state === 'text' ? f.value : STATE_TEXT[f.state];
+---
+<span class="fchip" data-state={f.state} title={`${f.label}: ${valueText}${f.note ? ` (${f.note})` : ''}`}>
+  <Icon name={icon} size={13} /><span class="fchip-label">{f.label}</span>{f.state === 'text' ? <span class="fchip-val">{f.value}</span> : <span class="sr-only">: {valueText}</span>}
+</span>

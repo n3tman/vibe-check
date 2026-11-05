@@ -1,0 +1,38 @@
+---
+import AiMarks from './AiMarks.astro';
+import FeatureChip from './FeatureChip.astro';
+import Icon from './Icon.astro';
+import Platforms from './Platforms.astro';
+import Sparkline from './Sparkline.astro';
+import StatusBadge from './StatusBadge.astro';
+import type { Entry } from '../lib/data.ts';
+import { CATEGORY_LABEL, HEADLINE, feature, fmtDate, fmtNum, href, osList, statusOf, summary } from '../lib/view.ts';
+interface Props { p: Entry; showCategory?: boolean }
+const { p, showCategory = false } = Astro.props;
+const s = summary(p);
+const c = p.metrics?.combined;
+const head = HEADLINE[p.category].map((k) => feature(k, (p.features as any)?.[k]));
+---
+<article class="card" data-slug={p.slug}>
+  <header class="card-head">
+    <h3 class="card-title"><a href={href(`p/${p.slug}/`)}>{p.name}</a></h3>
+    <StatusBadge status={statusOf(p)} />
+  </header>
+  <p class="card-kind muted">{showCategory ? `${CATEGORY_LABEL[p.category].one} · ` : ''}{p.kind}{p.fork_of ? ` · fork of ${p.fork_of}` : ''}</p>
+  {p.summary && <p class="card-summary">{p.summary}</p>}
+  <Platforms os={osList(p)} />
+  <dl class="card-meta">
+    <div><dt>Licence</dt><dd>{s.licence ?? '—'}</dd></div>
+    <div><dt>Language</dt><dd>{s.language ?? '—'}</dd></div>
+    <div><dt><Icon name="users" size={12} /> Authors 90d</dt><dd>{fmtNum(s.authors90)}</dd></div>
+    <div><dt><Icon name="tag" size={12} /> Last release</dt><dd title={s.lastTag ?? undefined}>{s.lastTagDate ? fmtDate(s.lastTagDate) : '—'}</dd></div>
+  </dl>
+  {p.repos.length > 0 && (
+    <div class="card-spark">
+      <Sparkline weeks={c?.weekly_commits} width={260} height={30} />
+      <span class="muted small">{c ? `${fmtNum(c.commits_365d)} commits in a year` : 'not measured yet'}</span>
+    </div>
+  )}
+  <AiMarks p={p} compact />
+  <ul class="fchips" aria-label="Headline features">{head.map((f) => <li><FeatureChip f={f} /></li>)}</ul>
+</article>
