@@ -1,0 +1,42 @@
+slug: matrix-chatgpt-bot
+name: matrix-chatgpt-bot
+category: bot
+kind: ai-assistant
+homepage: https://github.com/matrixgpt/matrix-chatgpt-bot
+summary: A bot that relays room messages to OpenAI's ChatGPT API and posts the replies; unmaintained,
+  pointing users to baibot.
+repos:
+- url: https://github.com/matrixgpt/matrix-chatgpt-bot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, repositories sorted by stars, 2026-11-05
+maturity: archived
+platforms: [server]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: AI assistant (ChatGPT front-end), how: claimed, source: 'https://github.com/matrixgpt/matrix-chatgpt-bot/blob/f2a7d6a3e158cb6040320840771fbeb4f4393db3/README.md'}
+  framework: {value: matrix-bot-sdk, how: code, source: 'https://github.com/matrixgpt/matrix-chatgpt-bot/blob/f2a7d6a3e158cb6040320840771fbeb4f4393db3/package.json'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/matrixgpt/matrix-chatgpt-bot/blob/f2a7d6a3e158cb6040320840771fbeb4f4393db3/README.md',
+    note: '"Supports encryption"; can be switched off with MATRIX_ENCRYPTION=false'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/matrixgpt/matrix-chatgpt-bot/blob/f2a7d6a3e158cb6040320840771fbeb4f4393db3/README.md',
+    note: Docker recommended}
+  config: {value: .env file, how: claimed, source: 'https://github.com/matrixgpt/matrix-chatgpt-bot/blob/f2a7d6a3e158cb6040320840771fbeb4f4393db3/README.md'}
+  ai_backend: {value: 'OpenAI (ChatGPT API, through node-chatgpt-api; base URL can be changed)', how: claimed,
+    source: 'https://github.com/matrixgpt/matrix-chatgpt-bot/blob/f2a7d6a3e158cb6040320840771fbeb4f4393db3/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2024-09-16), counted at f2a7d6a3e158
+  in_product: {value: core, note: The product is a ChatGPT front-end., source: 'https://github.com/matrixgpt/matrix-chatgpt-bot/blob/f2a7d6a3e158cb6040320840771fbeb4f4393db3/README.md'}
+notes: 'README: "Note: This is unmaintained. You should use Baibot instead of this project." Archived
+  on GitHub; last commit 2024-09-16. Licence from the LICENSE file (AGPL 3.0); check the -only / -or-later
+  choice in package.json before reuse.'
+checked: 2026-11-05

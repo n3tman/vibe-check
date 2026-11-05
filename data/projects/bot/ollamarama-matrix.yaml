@@ -1,0 +1,47 @@
+slug: ollamarama-matrix
+name: ollamarama-matrix
+category: bot
+kind: ai-assistant
+homepage: https://github.com/h1ddenpr0cess20/ollamarama-matrix
+summary: An Ollama-powered chat bot with switchable personalities, tool calling and MCP support, aimed
+  at locally run models.
+repos:
+- url: https://github.com/h1ddenpr0cess20/ollamarama-matrix
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, topic matrix-bot, 2026-11-05
+maturity: archived
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [pypi, docker]
+funding: []
+features:
+  purpose: {value: 'AI assistant (role-play personas, tool calling, MCP)', how: claimed, source: 'https://github.com/h1ddenpr0cess20/ollamarama-matrix/blob/23310be63227810d3dd9a4e4c7112996e24f1c75/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/h1ddenpr0cess20/ollamarama-matrix/blob/23310be63227810d3dd9a4e4c7112996e24f1c75/pyproject.toml',
+    note: 'matrix-nio[e2e]'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/h1ddenpr0cess20/ollamarama-matrix/blob/23310be63227810d3dd9a4e4c7112996e24f1c75/README.md',
+    note: '"Works in encrypted Matrix rooms using matrix-nio[e2e]"'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/h1ddenpr0cess20/ollamarama-matrix/blob/23310be63227810d3dd9a4e4c7112996e24f1c75/README.md',
+    note: 'pip or Docker, next to an Ollama server'}
+  config: {value: config.json and chat commands, how: claimed, source: 'https://github.com/h1ddenpr0cess20/ollamarama-matrix/blob/23310be63227810d3dd9a4e4c7112996e24f1c75/README.md'}
+  ai_backend: {value: Ollama (local or remote Ollama chat API), how: claimed, source: 'https://github.com/h1ddenpr0cess20/ollamarama-matrix/blob/23310be63227810d3dd9a4e4c7112996e24f1c75/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: regular
+    evidence:
+    - 29 of 62 non-bot commits in the last 365 days carry an AI attribution (46.8%), counted at 23310be63227
+    - 'tools named in attributions: claude'
+    - 'example: 173aab1426d1 (Co-Authored-By: Claude)'
+    - 'example: bd5920f2a7b6 (Co-Authored-By: Claude)'
+    - one attributed commit is authored by an account named Claude; the others are Co-Authored-By Claude
+      trailers
+  in_product: {value: core, note: The product is a chat front-end for models served by Ollama., source: 'https://github.com/h1ddenpr0cess20/ollamarama-matrix/blob/23310be63227810d3dd9a4e4c7112996e24f1c75/README.md'}
+notes: Archived on GitHub (search API, 2026-11-05) after a last commit on 2026-09-19; the README does
+  not name a successor. The same author has IRC and CLI variants and agent-smithers. CONTRIBUTING.md has
+  no statement on AI-made contributions.
+checked: 2026-11-05

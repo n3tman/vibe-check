@@ -1,0 +1,40 @@
+slug: maubot-gitlab
+name: maubot GitLab plugin
+category: bot
+kind: integration
+homepage: https://github.com/maubot/gitlab
+summary: A maubot plugin that acts as a GitLab client (issues, merge requests) and posts GitLab webhook
+  events to rooms.
+repos:
+- url: https://github.com/maubot/gitlab
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, topic matrix-bot, 2026-11-05
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: integration (GitLab), how: claimed, source: 'https://github.com/maubot/gitlab/blob/adc6e065c57b8c223ff0dc30f277deff98752224/README.md'}
+  framework: {value: maubot, how: claimed, source: 'https://github.com/maubot/gitlab/blob/adc6e065c57b8c223ff0dc30f277deff98752224/README.md'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://docs.mau.fi/maubot/usage/encryption.html', note: inherited
+      from the maubot instance it runs in}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/maubot/gitlab/blob/adc6e065c57b8c223ff0dc30f277deff98752224/README.md',
+    note: inside a maubot instance}
+  config: {value: maubot web UI and !gitlab commands, how: claimed, source: 'https://github.com/maubot/gitlab/blob/adc6e065c57b8c223ff0dc30f277deff98752224/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/maubot/gitlab/blob/adc6e065c57b8c223ff0dc30f277deff98752224/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2025-10-13), counted at adc6e065c57b
+  in_product: {value: none-found, note: null, source: null}
+notes: Last commit 2025-10-13. The LICENSE file is the GNU AGPL v3; the -or-later choice follows maubot's
+  own and was not checked in the source headers.
+checked: 2026-11-05
