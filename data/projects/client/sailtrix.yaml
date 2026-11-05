@@ -13,8 +13,7 @@ sources:
   other:
   - sources/community-space.tsv (#community:matrix.org)
 maturity: beta
-platforms:
-- other
+platforms: []
 apps:
 - os: sailfish
   tech: qt
