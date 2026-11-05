@@ -7,6 +7,7 @@ import Heatmap from '../../components/Heatmap.astro';
 import Icon from '../../components/Icon.astro';
 import LangBar from '../../components/LangBar.astro';
 import Platforms from '../../components/Platforms.astro';
+import ProjectIcon from '../../components/ProjectIcon.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { dataset, type Entry } from '../../lib/data.ts';
 import { AXES, CATEGORY_LABEL, STATE_TEXT, ago, features, fmtDate, fmtNum, host, href, osList, pct, statusOf, type Axis } from '../../lib/view.ts';
@@ -51,6 +52,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
   <header class="page-head proj-head">
     <nav class="crumbs" aria-label="Breadcrumb"><a href={href(`${p.category}/`)}>{CATEGORY_LABEL[p.category].many}</a> › {p.name}</nav>
     <div class="proj-title">
+      <ProjectIcon slug={p.slug} name={p.name} size={48} />
       <h1>{p.name}</h1>
       <StatusBadge status={statusOf(p)} />
       {p.maturity && <span class="badge" style="color:var(--muted)">{p.maturity}</span>}
