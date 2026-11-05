@@ -5,8 +5,9 @@ development activity, and how each project treats AI.
 
 Site: https://n3tman.github.io/vibe-check/
 
-- Data: `data/projects/` (hand-checked, with sources), `data/metrics/` (generated weekly from
-  the repositories), `data/mscs.yaml`.
+- Data: `data/projects/` (researched and written by an AI agent, each claim with its source;
+  not checked by a person), `data/metrics/` (generated weekly from the repositories),
+  `data/mscs.yaml`.
 - How the data is gathered and what the marks mean: the site's methodology page, and
   `CLAUDE.md`.
 - Corrections are welcome as issues; please link the source.

@@ -8,6 +8,9 @@ prompt from `prompts/`.
 
 ## Ground rules
 - **Everything here is public.** Write neutrally and factually; no opinions about people.
+- **Say who did the work.** All research and data here come from AI agents (Claude in Claude
+  Code). Never write that something was checked, verified, reviewed or tested "by hand" or by a
+  person: no person has checked individual claims. Say "the agent read …" or name the source.
 - **Every claim has evidence**: a URL (a file at a commit, an issue, a docs page, a release
   note) and the date it was checked. "Not found" is a valid answer and is never the same as
   "no": the site shows it as "not found".
@@ -34,7 +37,8 @@ prompt from `prompts/`.
 
 ## Data layout
 - `data/projects/<category>/<slug>.yaml`: one file per project, written by the research lanes
-  (hand-checked facts, features, AI policy). Schema: `docs/schema.md`. Categories: `client`, `server`, `bot`, `bridge`, and `sdk` / `tool` if
+  (facts, features, AI policy, each with its source; researched by AI agents, not checked by a
+  person). Schema: `docs/schema.md`. Categories: `client`, `server`, `bot`, `bridge`, and `sdk` / `tool` if
   time allows.
 - `data/mscs.yaml`: the MSC catalogue (number, title, spec status, spec version it landed in),
   written by the servers lane.

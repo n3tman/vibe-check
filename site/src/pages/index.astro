@@ -83,6 +83,6 @@ const lastChecked = checkedDates[checkedDates.length - 1];
   {d.projects.length === 0 && <p class="empty">No projects yet: the research lanes are still writing <code>data/projects/</code>.</p>}
 
   <p class="muted small" style="margin-top:2rem">
-    {measured.length} of {d.projects.length} projects measured{d.collector?.run_at ? ` (collector run ${fmtDate(d.collector.run_at)})` : ''}{lastChecked ? (fmtDate(firstChecked) === fmtDate(lastChecked) ? `; hand checks on ${fmtDate(lastChecked)}` : `; hand checks up to ${fmtDate(lastChecked)}`) : ''}.
+    {measured.length} of {d.projects.length} projects measured{d.collector?.run_at ? ` (collector run ${fmtDate(d.collector.run_at)})` : ''}{lastChecked ? (fmtDate(firstChecked) === fmtDate(lastChecked) ? `; researched by an AI agent on ${fmtDate(lastChecked)}` : `; researched by an AI agent up to ${fmtDate(lastChecked)}`) : ''}.
   </p>
 </Base>

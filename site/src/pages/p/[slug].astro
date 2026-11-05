@@ -154,7 +154,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
               {c?.ai?.suggested_dev_usage && c.ai.suggested_dev_usage !== p.ai.dev_usage.value && (
                 override
                   ? <p class="small" style="margin:.6rem 0 0">The collector's evidence alone would suggest “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”; the value above was kept after checking: {override}</p>
-                  : <p class="small" style="margin:.6rem 0 0"><strong>The collector's evidence suggests “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”</strong>; the hand-checked value above has not been reconciled with it yet.</p>
+                  : <p class="small" style="margin:.6rem 0 0"><strong>The collector's evidence suggests “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”</strong>; the value above, from the project's file, has not been reconciled with it yet.</p>
               )}
               {collectorLine && <p class="small" style="margin:.6rem 0 0">{collectorLine}</p>}
               {(handEvidence.length > 0 || agentFiles.length > 0 || aiWorkflows.length > 0 || aiExamples.length > 0 || aiBots.length > 0) && (
@@ -319,6 +319,6 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
   {p.notes && (<section aria-labelledby="notes-h"><h2 id="notes-h">Notes</h2><p class="prose">{p.notes}</p></section>)}
 
   <p class="muted small" style="margin-top:2rem">
-    Checked by hand on {fmtDate(p.checked)}{m ? `; metrics collected on ${fmtDate(m.fetched_at)}` : ''}. Source file: <a href={`https://github.com/n3tman/vibe-check/blob/main/${p.file}`}><code>{p.file}</code></a>. Spotted a mistake? <a href="https://github.com/n3tman/vibe-check/issues">Open an issue</a> with a link.
+    Researched by an AI agent (Claude) on {fmtDate(p.checked)}, not checked by a person{m ? `; metrics collected on ${fmtDate(m.fetched_at)}` : ''}. Source file: <a href={`https://github.com/n3tman/vibe-check/blob/main/${p.file}`}><code>{p.file}</code></a>. Spotted a mistake? <a href="https://github.com/n3tman/vibe-check/issues">Open an issue</a> with a link.
   </p>
 </Base>

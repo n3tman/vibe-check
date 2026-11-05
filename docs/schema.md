@@ -138,7 +138,7 @@ paths, attributed commits and their share, bot authors, AI workflows), `telemetr
   puts it on a tile of the opposite tone where it would vanish).
   An icon file without this key also fails validation. No key: the site draws a monogram.
 - `ai.dev_usage.note`: free text shown under the mark. `ai.dev_usage.checked_at`: the commit read.
-- `ai.dev_usage.collector_override`: one sentence saying why the hand value differs from the
+- `ai.dev_usage.collector_override`: one sentence saying why the file's value differs from the
   collector's `suggested_dev_usage` (a refusal-only `AGENTS.md`, history rewritten to strip
   trailers, …). The project page shows it instead of "not reconciled yet".
 - `ai.funder_policy`: a list, one entry per funder with an AI policy for the work it pays for:
