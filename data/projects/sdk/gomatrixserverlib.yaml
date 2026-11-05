@@ -1,0 +1,35 @@
+slug: gomatrixserverlib
+name: gomatrixserverlib
+category: sdk
+kind: Go
+homepage: https://github.com/matrix-org/gomatrixserverlib
+summary: Go library for Matrix federation (server keys, event auth, room versions), used by Dendrite and MRS.
+repos:
+- {url: 'https://github.com/matrix-org/gomatrixserverlib', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [go-module]
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: server, how: claimed, source: 'https://github.com/matrix-org/gomatrixserverlib'}
+  used_by: [mrs]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 4 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 4fe595dc7f58']
+  in_product: {value: none-found, note: 'A library; its code was not read for AI features (inactive or small library),
+      and its matrix.org description mentions none.', source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-07-16, 4 non-bot
+  commits in the last year and 0 authors in the last 90 days by our count at 4fe595dc7f58 (the collector recounts).
+checked: 2026-11-05

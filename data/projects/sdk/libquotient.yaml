@@ -1,0 +1,41 @@
+slug: libquotient
+name: libQuotient
+category: sdk
+kind: C++ (Qt)
+homepage: https://quotient-im.github.io/libQuotient/
+summary: A Qt 6 library for cross-platform Matrix clients, used by NeoChat, Quaternion and Spectral.
+repos:
+- {url: 'https://github.com/quotient-im/libQuotient', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: ['matrix.org community space, SDKs section (sources/community-space.tsv)']
+maturity: beta
+platforms: [windows, macos, linux, android]
+licence: LGPL-2.1-only
+fork_of: null
+distribution: [flathub, aur]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/quotient-im/libQuotient/blob/d8150bd555554ff87fe15111bbd0ea0172ee3de4/Quotient/crypto-sdk/Cargo.toml#L18',
+    note: a Rust crypto-sdk module on matrix-sdk-crypto 0.16 (vodozemac); libolm still referenced in connection.cpp
+      and CI}
+  crypto: matrix-sdk-crypto (vodozemac)
+  sliding_sync: {value: not-found, how: code, note: no MSC4186 or MSC3575 code}
+  oidc_auth: {value: not-found, how: code, note: no MSC2965 / auth_metadata code}
+  threads: {value: partial, how: code, source: 'https://github.com/quotient-im/libQuotient/blob/d8150bd555554ff87fe15111bbd0ea0172ee3de4/Quotient/events/eventrelation.h#L28',
+    note: m.thread relation type; no thread timeline found}
+  spaces: {value: partial, how: code, source: 'https://github.com/quotient-im/libQuotient/blob/d8150bd555554ff87fe15111bbd0ea0172ee3de4/Quotient/csapi/space_hierarchy.h',
+    note: generated hierarchy API only}
+  purpose: {value: 'client, bot', how: claimed, source: 'https://quotient-im.github.io/libQuotient/'}
+  used_by: [neochat, quaternion, spectral, umatriks]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 121 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at d8150bd55555']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-09-08, 121
+  non-bot commits in the last year and 3 authors in the last 90 days by our count at d8150bd55555 (the collector
+  recounts).
+checked: 2026-11-05

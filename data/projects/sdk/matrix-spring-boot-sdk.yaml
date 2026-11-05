@@ -1,0 +1,37 @@
+slug: matrix-spring-boot-sdk
+name: matrix-spring-boot-sdk
+category: sdk
+kind: Kotlin
+homepage: https://github.com/benkuly/matrix-spring-boot-sdk
+summary: Spring Boot starters for Matrix clients, bots and appservices on Trixnity.
+repos:
+- {url: 'https://github.com/benkuly/matrix-spring-boot-sdk', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: [Lane 6 notes (matrix-sms-bridge)]
+maturity: unmaintained
+platforms: [server]
+licence: AGPL-3.0
+fork_of: null
+distribution: [maven]
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  appservice: {value: 'yes', how: claimed, source: 'https://github.com/benkuly/matrix-spring-boot-sdk/blob/167f047ea0c446d3f823dac55363d4b1941b8868/README.md',
+    note: matrix-spring-boot-rest-appservice}
+  purpose: {value: 'bot, bridge', how: claimed, source: 'https://github.com/benkuly/matrix-spring-boot-sdk'}
+  used_by: [matrix-sms-bridge]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 0 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at 167f047ea0c4']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2021-05-24, 0 non-bot
+  commits in the last year and 0 authors in the last 90 days by our count at 167f047ea0c4 (the collector recounts).
+checked: 2026-11-05

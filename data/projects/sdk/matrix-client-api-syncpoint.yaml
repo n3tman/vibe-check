@@ -1,0 +1,38 @@
+slug: matrix-client-api-syncpoint
+name: Matrix Client API (ODIN)
+category: sdk
+kind: JavaScript
+homepage: https://github.com/syncpoint/matrix-client-api
+summary: A focused Matrix client library written for the ODIN command-and-control application.
+repos:
+- {url: 'https://github.com/syncpoint/matrix-client-api', forge: github, role: main}
+sources:
+  matrix_org_listing: null
+  other: ['https://github.com/jryans/awesome-matrix']
+maturity: beta
+platforms: []
+licence: MIT
+fork_of: null
+distribution: [npm]
+funding: []
+features:
+  e2ee: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  sliding_sync: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  oidc_auth: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  threads: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  spaces: {value: not-found, note: 'not checked: inactive or small library, only the activity was read'}
+  purpose: {value: client, how: claimed, source: 'https://github.com/syncpoint/matrix-client-api'}
+  used_by: []
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: occasional
+    evidence: ['3 of 118 non-bot commits in the last 365 days carry an AI attribution (2.5 %), counted at 3dcc6027cb5d',
+      'https://github.com/syncpoint/matrix-client-api/commit/3add6fe9a1 (claude)', 'https://github.com/syncpoint/matrix-client-api/commit/b9ad29742d
+        (claude)', 'https://github.com/syncpoint/matrix-client-api/commit/47218d2d8c (claude)']
+  in_product: {value: none-found, note: 'A library; its code was not read for AI features (inactive or small library),
+      and its matrix.org description mentions none.', source: null}
+notes: Not on the matrix.org SDK list; maturity is our reading of the repo. Last non-bot commit 2026-05-21, 118
+  non-bot commits in the last year and 0 authors in the last 90 days by our count at 3dcc6027cb5d (the collector
+  recounts).
+checked: 2026-11-05

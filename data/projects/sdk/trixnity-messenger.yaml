@@ -1,0 +1,40 @@
+slug: trixnity-messenger
+name: Trixnity Messenger
+category: sdk
+kind: Kotlin
+homepage: https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger
+summary: A headless, UI-agnostic messenger SDK on top of Trixnity (view models for room lists, timelines, settings),
+  the base of Tammy and Tacit.
+repos:
+- {url: 'https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger', forge: gitlab, role: main}
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/sdks/
+  other: ['matrix.org community space, SDKs section (sources/community-space.tsv)', 'Lane 3 notes (Tammy, Tacit)']
+maturity: beta
+platforms: [android, ios, web, windows, macos, linux]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: [maven]
+funding: []
+features:
+  e2ee: {value: 'yes', how: code, source: 'https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f1a46bb0e09435bea5992bba8569ff49594e8977/trixnity-messenger/src/commonMain/kotlin/de/connect2x/trixnity/messenger/CreateCryptoDriverModule.kt',
+    note: through Trixnity (vodozemac crypto driver)}
+  crypto: vodozemac (via Trixnity)
+  sliding_sync: {value: not-found, how: code, note: none in Trixnity either}
+  oidc_auth: {value: 'yes', how: code, source: 'https://gitlab.com/connect2x/trixnity-messenger/trixnity-messenger/-/blob/f1a46bb0e09435bea5992bba8569ff49594e8977/trixnity-messenger-compose-app/src/webMain/kotlin/de/connect2x/trixnity/messenger/compose/app/main.kt',
+    note: OAuth2 login from Trixnity}
+  threads: {value: not-found, how: code, note: no thread view model found}
+  spaces: {value: not-found, how: code, note: no space view model found}
+  purpose: {value: client, how: claimed, source: 'https://github.com/matrix-org/matrix.org/blob/041599b0dc5a34f904704a42522e090273278bde/content/ecosystem/sdks/sdks.toml'}
+  used_by: [tacit, tammy]
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence: ['0 of 2014 non-bot commits in the last 365 days carry an AI attribution (0.0 %), counted at f1a46bb0e094']
+  in_product: {value: none-found, note: 'A library: no LLM or generative AI feature found in its code or docs.',
+    source: null}
+notes: 'matrix.org lists it as "Trixnity Messenger" (Beta, Kotlin, maintainer: connect2x GmbH). Last non-bot commit
+  2026-11-04, 2014 non-bot commits in the last year and 19 authors in the last 90 days by our count at f1a46bb0e094
+  (the collector recounts).'
+checked: 2026-11-05
