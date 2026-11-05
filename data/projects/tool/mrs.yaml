@@ -1,0 +1,40 @@
+slug: mrs
+name: Matrix Rooms Search (MRS)
+category: tool
+kind: directory
+homepage: https://matrixrooms.info
+summary: A standalone search engine and room directory server for public Matrix rooms, usable over HTTP
+  and natively over the federation directory API.
+repos:
+- url: https://github.com/etkecc/mrs
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: public room search and directory server, how: claimed, source: 'https://github.com/etkecc/mrs/blob/7a599187ecd9194797aff12ecfb4dcc45c0afa5f/README.md'}
+  framework: {value: gomatrixserverlib, how: code, source: 'https://github.com/etkecc/mrs/blob/7a599187ecd9194797aff12ecfb4dcc45c0afa5f/go.mod',
+    note: speaks the federation API itself}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/etkecc/mrs/blob/7a599187ecd9194797aff12ecfb4dcc45c0afa5f/README.md',
+    note: 'not applicable: indexes public room metadata only'}
+  hosting: {value: both, how: claimed, source: 'https://github.com/etkecc/mrs/blob/7a599187ecd9194797aff12ecfb4dcc45c0afa5f/README.md',
+    note: 'self-host, or the public demo instance matrixrooms.info'}
+  config: {value: config file (config.yml), how: code, source: 'https://github.com/etkecc/mrs/blob/7a599187ecd9194797aff12ecfb4dcc45c0afa5f/config.yml.sample'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/etkecc/mrs/blob/7a599187ecd9194797aff12ecfb4dcc45c0afa5f/go.mod'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 71 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 7a599187ecd9
+  in_product: {value: none-found, note: null, source: null}
+notes: README states opt-out / deindexing and MSC1929 support. matrix.org lists the licence as AGPL-3.0-only;
+  the README's SPDX header says AGPL-3.0-or-later, used here. Agent files only under vendor/.
+checked: 2026-11-05

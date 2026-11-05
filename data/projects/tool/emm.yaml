@@ -1,0 +1,37 @@
+slug: emm
+name: emm (Export Matrix Messages)
+category: tool
+kind: cli
+homepage: https://github.com/etkecc/emm
+summary: A CLI that joins a room and exports its last N messages to files through a template, for example
+  to publish a room as blog posts.
+repos:
+- url: https://github.com/etkecc/emm
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: export room messages to files (templated), how: claimed, source: 'https://github.com/etkecc/emm/blob/07292aeb540f1b1389a01f8ae96dd95c69a40635/README.md'}
+  framework: {value: mautrix-go, how: code, source: 'https://github.com/etkecc/emm/blob/07292aeb540f1b1389a01f8ae96dd95c69a40635/go.mod'}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/etkecc/emm/blob/07292aeb540f1b1389a01f8ae96dd95c69a40635/README.md'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/etkecc/emm/blob/07292aeb540f1b1389a01f8ae96dd95c69a40635/README.md',
+    note: CLI run locally or from cron}
+  config: {value: command-line flags, how: claimed, source: 'https://github.com/etkecc/emm/blob/07292aeb540f1b1389a01f8ae96dd95c69a40635/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/etkecc/emm/blob/07292aeb540f1b1389a01f8ae96dd95c69a40635/go.mod'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 8 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 07292aeb540f
+  in_product: {value: none-found, note: null, source: null}
+notes: Maintained by etke.cc; its own news page is generated with it. Agent files only under vendor/.
+checked: 2026-11-05

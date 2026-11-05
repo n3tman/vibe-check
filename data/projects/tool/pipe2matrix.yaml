@@ -1,0 +1,37 @@
+slug: pipe2matrix
+name: pipe2matrix
+category: tool
+kind: cli
+homepage: https://gitlab.com/anton.molyboha/pipe2matrix
+summary: A netcat-like tool that connects a program's standard input and output to a Matrix room.
+repos:
+- url: https://gitlab.com/anton.molyboha/pipe2matrix
+  forge: gitlab
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: unmaintained
+platforms: [server]
+licence: GPL-3.0-only
+fork_of: null
+distribution: [pypi]
+funding: []
+features:
+  purpose: {value: pipe a program's stdin/stdout into a room, how: claimed, source: 'https://gitlab.com/anton.molyboha/pipe2matrix/-/blob/80fa6d9a6ee04119dd4163f047876fbbfd809a4f/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://gitlab.com/anton.molyboha/pipe2matrix/-/blob/80fa6d9a6ee04119dd4163f047876fbbfd809a4f/pyproject.toml'}
+  e2ee: {value: 'no', how: claimed, source: 'https://gitlab.com/anton.molyboha/pipe2matrix/-/blob/80fa6d9a6ee04119dd4163f047876fbbfd809a4f/README.md',
+    note: '"End-to-end encryption is currently unsupported."'}
+  hosting: {value: self-host, how: claimed, source: 'https://gitlab.com/anton.molyboha/pipe2matrix/-/blob/80fa6d9a6ee04119dd4163f047876fbbfd809a4f/README.md',
+    note: CLI}
+  config: {value: command-line arguments, how: claimed, source: 'https://gitlab.com/anton.molyboha/pipe2matrix/-/blob/80fa6d9a6ee04119dd4163f047876fbbfd809a4f/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://gitlab.com/anton.molyboha/pipe2matrix/-/blob/80fa6d9a6ee04119dd4163f047876fbbfd809a4f/pyproject.toml'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2024-03-17), counted at 80fa6d9a6ee0
+  in_product: {value: none-found, note: null, source: null}
+notes: Last commit 2024-03-17; maturity is our reading. Whether it is on PyPI was not checked.
+checked: 2026-11-05
