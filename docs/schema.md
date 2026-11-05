@@ -124,6 +124,11 @@ paths, attributed commits and their share, bot authors, AI workflows), `telemetr
 - `repos[].first_parent: true`: the collector follows only the branch's own line
   (`git log --first-parent`), for forks that merge upstream, so upstream's commits are not
   credited to the fork (SchildiChat, Sable v1, Rooster, Vommet).
+- `icon` (optional, lane 10): the project's own logo, served from `site/public/icons/`.
+  `file` (`<slug>.svg`, `.webp` or `.png`; must exist, the validator fails otherwise), `source`
+  (the file at a commit, or the page it came from), `licence` (the repo's licence or what the
+  brand guidelines say, else null), `note` (e.g. a fork that ships upstream's logo), `checked`.
+  An icon file without this key also fails validation. No key: the site draws a monogram.
 - `ai.dev_usage.note`: free text shown under the mark. `ai.dev_usage.checked_at`: the commit read.
 - `ai.dev_usage.collector_override`: one sentence saying why the hand value differs from the
   collector's `suggested_dev_usage` (a refusal-only `AGENTS.md`, history rewritten to strip

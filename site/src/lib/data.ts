@@ -65,6 +65,9 @@ export function loadDataset(): Dataset {
     }
   }
 
+  // Icons live with the site, not with the data, so fixtures share the same folder.
+  const iconDir = path.join(root, 'site', 'public', 'icons');
+  const iconFiles = fs.existsSync(iconDir) ? fs.readdirSync(iconDir).filter((x) => /\.(svg|webp|png)$/.test(x)) : [];
   const projects: Entry[] = [];
   const seen = new Map<string, string>();
   for (const f of walk(path.join(dir, 'projects'), '.yaml')) {
@@ -86,6 +89,12 @@ export function loadDataset(): Dataset {
     if (path.basename(f, '.yaml') !== p.slug) errors.push(`${rel(f)}: slug "${p.slug}" does not match the file name`);
     if (seen.has(p.slug)) errors.push(`${rel(f)}: slug "${p.slug}" already used by ${seen.get(p.slug)}`);
     seen.set(p.slug, rel(f));
+    const icon = (p as { icon?: { file: string } }).icon;
+    if (icon) {
+      if (path.basename(icon.file).replace(/\.[a-z]+$/, '') !== p.slug) errors.push(`${rel(f)}: icon.file "${icon.file}" should be named after the slug`);
+      if (!fs.existsSync(path.join(iconDir, icon.file))) errors.push(`${rel(f)}: icon.file "${icon.file}" is missing from ${rel(iconDir)}/`);
+    }
+    if (!icon && iconFiles.some((x) => x.replace(/\.[a-z]+$/, '') === p.slug)) errors.push(`${rel(f)}: ${rel(iconDir)}/ has an icon for "${p.slug}" but the file has no icon key (source and licence)`);
     projects.push({ ...p, file: rel(f), metrics: metrics.get(p.slug) ?? null });
   }
 
