@@ -100,3 +100,9 @@ notes: >-
   PRs 2839 and 2841), self-hosted Vazirmatn font, a single-field homeserver picker and an authNotice
   explaining Matrix. Other features follow Cinny (see the cinny file).
 checked: '2026-11-05'
+icon:
+  file: cinny-ir.svg
+  source: "https://github.com/erfnzdeh/app.cinny.ir/blob/427d57e2d0d8288255ae33abe2e7b6a1a5a162ef/public/res/svg/cinny.svg"
+  licence: "AGPL-3.0-only"
+  note: "ships Cinny's logo (a fork of Cinny)"
+  checked: 2026-11-05

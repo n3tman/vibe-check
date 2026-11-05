@@ -42,3 +42,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: thurim.webp
+  source: "https://github.com/serra-allgood/thurim/blob/95e80ff829451278bbbb55a2253fcd1bb120e8f4/thurim-logo.png"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

@@ -247,3 +247,9 @@ notes: >-
   reject LLM code reviews. dev_usage is set to occasional on attributed commits although the share
   is under 1 %.
 checked: '2026-11-05'
+icon:
+  file: fluffychat.webp
+  source: "https://github.com/krille-chan/fluffychat/blob/3881abc8eb4ed0ceebdae468e7d74bba2091fffc/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png"
+  licence: "AGPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

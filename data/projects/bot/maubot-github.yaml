@@ -38,3 +38,9 @@ ai:
   in_product: {value: none-found, note: null, source: null}
 notes: The LICENSE file is the GNU AGPL v3; the -or-later choice follows maubot's own.
 checked: 2026-11-05
+icon:
+  file: maubot-github.webp
+  source: "https://avatars.githubusercontent.com/u/40141856?v=4&s=256"
+  licence: null
+  note: "maubot's logo (the maubot organisation's avatar on GitHub); this is a maubot plugin"
+  checked: 2026-11-05

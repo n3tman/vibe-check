@@ -126,3 +126,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: matrix-commander.svg
+  source: "https://github.com/8go/matrix-commander/blob/d4c733cb2ab35a3d65919b5e9ddfd08af4b80442/logos/matrix-commander-logo.svg"
+  licence: "GPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

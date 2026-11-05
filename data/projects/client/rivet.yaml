@@ -127,3 +127,10 @@ ai:
     source: null
 notes: Platforms besides Linux not stated. Last commit 2026-03-18.
 checked: '2026-11-05'
+icon:
+  file: rivet.svg
+  source: "https://github.com/Mjoyufull/Rivet/blob/fccc61b47153f7d58e9e07114473af7f46eeb736/assets/brand/icon.svg"
+  licence: "AGPL-3.0-only"
+  note: null
+  backing: dark
+  checked: 2026-11-05

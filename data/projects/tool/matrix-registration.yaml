@@ -58,3 +58,9 @@ ai:
 notes: Added in the integration pass. Registration tokens are now in the spec (MSC3231, v1.2) and in Synapse,
   which covers most of this tool's use.
 checked: '2026-11-05'
+icon:
+  file: matrix-registration.webp
+  source: "https://github.com/zeratax/matrix-registration/blob/db7aab3dbfb5dbc3254b918a88d0e38c10582d46/matrix_registration/static/images/icon.png"
+  licence: "MIT"
+  note: null
+  checked: 2026-11-05

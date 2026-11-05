@@ -220,3 +220,9 @@ notes: Third-party requests (GIF search, sticker import) go through the project'
   The README says Commet's contribution policy prohibits LLM-written code, so nothing from the fork is
   submitted upstream.
 checked: '2026-11-05'
+icon:
+  file: vommet.svg
+  source: "https://vommet.app/assets/vommet.svg"
+  licence: null
+  note: "from the project site, vommet.app"
+  checked: 2026-11-05

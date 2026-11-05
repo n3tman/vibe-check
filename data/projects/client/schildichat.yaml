@@ -139,3 +139,9 @@ notes: matrix.org lists it as "Obsolete" and points to the SchildiChat org rathe
   Repos added in the integration pass (both answer git ls-remote on 2026-11-05) so the collector can measure
   them; the desktop repo merges upstream Element, so its commit counts include upstream work.
 checked: '2026-11-05'
+icon:
+  file: schildichat.webp
+  source: "https://github.com/SchildiChat/schildichat-android/blob/49a64165852756bd62a49003a7a42092d2e96364/fastlane/metadata/android/en-US/images/icon.png"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

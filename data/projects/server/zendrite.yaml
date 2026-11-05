@@ -219,3 +219,10 @@ ai:
 notes: matrix.org lists the licence as AGPL-3.0-or-later; the repo keeps Dendrite's LICENSE-COMMERCIAL
   file.
 checked: '2026-11-05'
+icon:
+  file: zendrite.svg
+  source: "https://codefloe.com/pat-s/zendrite/src/commit/c68f55c60d89a91b4532e6b7a2da9d8edbba8174/website/public/logo-light.svg"
+  licence: "AGPL-3.0-or-later OR LicenseRef-Element-Commercial"
+  note: null
+  backing: light
+  checked: 2026-11-05

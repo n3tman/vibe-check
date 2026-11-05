@@ -89,3 +89,9 @@ ai:
 notes: Rewritten on bridgev2 (CHANGELOG.md). One of two WhatsApp bridges with a recent commit here; beenim-labs/whatsapp-bridge-nim
   is a Nim port of it (not covered).
 checked: 2026-11-05
+icon:
+  file: mautrix-whatsapp.webp
+  source: "https://avatars.githubusercontent.com/u/88519669?v=4&s=256"
+  licence: null
+  note: "the mautrix bridges' shared logo: the mautrix organisation's avatar on GitHub (the repo itself ships only the bridged network's logo, or none)"
+  checked: 2026-11-05

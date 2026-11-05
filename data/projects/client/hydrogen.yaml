@@ -104,3 +104,9 @@ notes: >-
   2026-11-02) covers element-hq repositories, including this one. The repo was relicensed on 2025-01-17
   (LICENSE-AGPL-3.0 and LICENSE-COMMERCIAL); matrix.org still lists Apache-2.0, the earlier licence.
 checked: '2026-11-05'
+icon:
+  file: hydrogen.webp
+  source: "https://hydrogen.element.io/assets/icon-maskable.965d12c4.png"
+  licence: null
+  note: null
+  checked: 2026-11-05

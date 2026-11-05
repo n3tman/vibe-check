@@ -153,3 +153,9 @@ notes: 'Licence, features and distribution corrected in the integration pass fro
   last commit. Releases: AppImage and a .flatpak bundle on GitHub (not on Flathub), AUR matrix-mirage,
   nixpkgs mirage-im; docs/INSTALL.md says releases are Linux only.'
 checked: '2026-11-05'
+icon:
+  file: mirage.webp
+  source: "https://github.com/mirukana/mirage/blob/9a4ababd9aa59bd78ad239422918c2c4eaaf6b7d/packaging/mirage.png"
+  licence: "LGPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

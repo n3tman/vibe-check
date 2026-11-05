@@ -75,3 +75,9 @@ ai:
     source: null
 notes: Archived on GitHub (last commit 2024-03-02); matrix.org labels it Obsolete. Use mautrix-meta.
 checked: 2026-11-05
+icon:
+  file: mautrix-facebook.webp
+  source: "https://avatars.githubusercontent.com/u/88519669?v=4&s=256"
+  licence: null
+  note: "the mautrix bridges' shared logo: the mautrix organisation's avatar on GitHub (the repo itself ships only the bridged network's logo, or none)"
+  checked: 2026-11-05

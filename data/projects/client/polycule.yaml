@@ -166,3 +166,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: polycule.webp
+  source: "https://gitlab.com/polycule_client/polycule/-/blob/4b294296e4d62215f52da8831a3402f51fb1b9a7/fastlane/metadata/android/en-US/images/icon.png"
+  licence: "EUPL-1.2"
+  note: null
+  checked: 2026-11-05

@@ -177,3 +177,9 @@ ai:
 notes: Licence from the matrix.org listing (no LICENSE file at the repo root). matrix.org lists E2EE as
   unsupported.
 checked: '2026-11-05'
+icon:
+  file: quadrix.webp
+  source: "https://github.com/alariej/quadrix/blob/702cdd19d22744f676d8c02e020897d47ff957c3/ios/quadrix/Images.xcassets/AppIcon.appiconset/icon-1024.png"
+  licence: "GPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

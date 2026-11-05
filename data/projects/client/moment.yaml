@@ -157,3 +157,9 @@ notes: Fork of Mirage (README; Mirage's HEAD 9a4ababd is an ancestor of main). A
   and features corrected in the integration pass from lane 9's reading at 2667256d. Last tag v0.7.6 (2025-03-06).
   Releases are Linux only (docs/INSTALL.md).
 checked: '2026-11-05'
+icon:
+  file: moment.webp
+  source: "https://gitlab.com/mx-moment/moment/-/blob/2667256dbbc940154e9cb3e95b8db5e0b3206393/packaging/moment.png"
+  licence: "LGPL-3.0-or-later"
+  note: "ships Mirage's logo (Moment is a fork of Mirage)"
+  checked: 2026-11-05

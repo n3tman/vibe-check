@@ -195,3 +195,9 @@ ai:
 notes: 'CONTRIBUTING also says: "Do not post output from Large Language Models or similar generative AI
   as comments on GitHub". The repo name is roosterchat; the product name is Rooster.'
 checked: '2026-11-05'
+icon:
+  file: roosterchat.webp
+  source: "https://github.com/PondLabs/roosterchat/blob/b815d6a60f96d56dc1c9a246efbc57d0f41474ee/fastlane/metadata/android/zh-CN/images/icon.jpg"
+  licence: "AGPL-3.0-only"
+  note: "ships Commet's logo (a fork of Commet)"
+  checked: 2026-11-05

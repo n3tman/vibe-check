@@ -91,3 +91,9 @@ ai:
 notes: >-
   Last commit 2021-08-25. Store links are from the README and were not re-checked; they may be gone.
 checked: '2026-11-05'
+icon:
+  file: ditto.webp
+  source: "https://gitlab.com/ditto-chat/ditto/-/blob/39b67697cab948c223a0ff06b0d6ab4154f33431/ios/ditto/Images.xcassets/AppIcon.appiconset/app-icon-1024.png"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

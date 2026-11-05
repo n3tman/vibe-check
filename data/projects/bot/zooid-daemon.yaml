@@ -64,3 +64,9 @@ ai:
 notes: The daemon behind the Zooid client (client file zooid); added in the integration pass from lane
   3's notes.
 checked: '2026-11-05'
+icon:
+  file: zooid-daemon.svg
+  source: "https://zooid.dev/favicon.svg"
+  licence: null
+  note: null
+  checked: 2026-11-05

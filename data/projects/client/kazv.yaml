@@ -114,3 +114,9 @@ ai:
 notes: 'matrix.org maturity: Beta. The contributing guide is at https://kazv.chat/en/contributing/ (not
   checked for an AI policy).'
 checked: '2026-11-05'
+icon:
+  file: kazv.webp
+  source: "https://r.lily-is.land/the-kazv-project/kazv/src/commit/2f1ad32c77463562868ad2806928b9c2a16094f1/icons/kazv.ico"
+  licence: "AGPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

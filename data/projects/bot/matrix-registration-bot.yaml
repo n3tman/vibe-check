@@ -37,3 +37,9 @@ ai:
   in_product: {value: none-found, note: null, source: null}
 notes: Last commit 2023-12-18, not archived; maturity is our reading.
 checked: 2026-11-05
+icon:
+  file: matrix-registration-bot.webp
+  source: "https://github.com/moan0s/matrix-registration-bot/blob/600ef746b129adfaf7a2f1a21cdb81732cfc222c/logo.png"
+  licence: "AGPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

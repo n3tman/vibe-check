@@ -1,20 +1,24 @@
 ---
 // A project's icon from site/public/icons/<slug>.{svg,png,webp}, else a monogram on a colour
-// derived from the slug (stable across builds, readable in both themes).
+// derived from the slug (stable across builds, readable in both themes). A logo that is dark or
+// light on a transparent background says so in its project file (`icon.backing`), and gets a
+// rounded backing of the opposite tone in the theme where it would vanish.
 import fs from 'node:fs';
 import path from 'node:path';
 import { href } from '../lib/view.ts';
+import { dataset } from '../lib/data.ts';
 interface Props { slug: string; name: string; size?: number }
 const { slug, name, size = 32 } = Astro.props;
 const dir = path.resolve(process.cwd(), 'public/icons');
 const file = ['svg', 'webp', 'png'].map((e) => `${slug}.${e}`).find((f) => fs.existsSync(path.join(dir, f)));
+const backing = file ? ((dataset().projects.find((p) => p.slug === slug) as { icon?: { backing?: string } } | undefined)?.icon?.backing ?? null) : null;
 let h = 0;
 for (const ch of slug) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
 const hue = h % 360;
 const letters = (name.replace(/\([^)]*\)/g, ' ').replace(/[^\p{L}\p{N} ]/gu, ' ').trim().split(/\s+/).map((w) => w[0]).join('').slice(0, 2) || slug.slice(0, 2)).toUpperCase();
 ---
 {file ? (
-  <img class="picon" src={href(`icons/${file}`)} alt="" width={size} height={size} loading="lazy" decoding="async" />
+  <img class={`picon${backing === 'light' || backing === 'dark' ? ` picon-on-${backing}` : ''}`} src={href(`icons/${file}`)} alt="" width={size} height={size} loading="lazy" decoding="async" />
 ) : (
   <span class="picon picon-mono" aria-hidden="true" style={`--h:${hue};width:${size}px;height:${size}px;font-size:${Math.round(size * 0.4)}px`}>{letters}</span>
 )}

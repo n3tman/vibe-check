@@ -156,3 +156,9 @@ ai:
     source: null
 notes: GitHub and GitLab repos are mirrors; the Forgejo instance is the main repo.
 checked: '2026-11-05'
+icon:
+  file: continuwuity.svg
+  source: "https://forgejo.ellis.link/continuwuation/continuwuity/src/commit/db86d42801695fe822f2ab25dbab420394849065/docs/public/assets/logo.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

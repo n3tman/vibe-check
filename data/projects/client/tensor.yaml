@@ -107,3 +107,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: tensor.webp
+  source: "https://github.com/davidar/tensor/blob/f3f3056d770d7fb4a21c610cee7936ee900569f5/client/logo.png"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

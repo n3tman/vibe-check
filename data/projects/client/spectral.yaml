@@ -155,3 +155,9 @@ notes: >-
   the README; not re-checked. Searched GitLab issues for AI, LLM, ChatGPT, Copilot, "generated":
   nothing about AI.
 checked: 2026-11-05
+icon:
+  file: spectral.webp
+  source: "https://gitlab.com/spectral-im/spectral/-/blob/30028a278860af270949f55bdf931455082ea449/assets/img/icon.png"
+  licence: "GPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

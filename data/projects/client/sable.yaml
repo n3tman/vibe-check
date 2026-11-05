@@ -236,3 +236,9 @@ notes: 'Sable Legacy (v1) PR template asked for an AI disclosure (none / partial
   features, cosmetics, a Tauri/Electron desktop app; v2 replaces the matrix-js-sdk core with a Rust one.
   Metrics: count the v2 repo; v1 history includes all of Cinny.'
 checked: '2026-11-05'
+icon:
+  file: sable.webp
+  source: "https://git.sable.moe/SableClient/Sable-next/src/commit/f96e9748cf007070e2f1ce4152817a35741c07a2/fastlane/metadata/android/en-US/images/icon.png"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

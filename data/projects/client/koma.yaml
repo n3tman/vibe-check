@@ -74,3 +74,9 @@ ai:
     source: null
 notes: 'Old matrix.org maturity: Alpha. Last commit 2020-08-18.'
 checked: '2026-11-05'
+icon:
+  file: koma.webp
+  source: "https://github.com/koma-im/koma/blob/25a5487c693f88606374b12d09215bca87c76189/src/main/resources/icon/koma.png"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

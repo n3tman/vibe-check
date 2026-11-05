@@ -69,3 +69,9 @@ ai:
 notes: Added in the integration pass from lane 2's notes; only the README was read. "Sailfish OS 5 still
   ships Qt 5.6" (README) is why it links the Rust core.
 checked: '2026-11-05'
+icon:
+  file: xmatic.svg
+  source: "https://github.com/JimKnopfIoT/harbour-xmatic/blob/82f529c36fbdd4d3783dfbf02a033a01de140da9/icons/xmatic-logo.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

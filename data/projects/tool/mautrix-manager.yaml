@@ -63,3 +63,9 @@ ai:
 notes: Supports only bridgev2 bridges (README). Licence file is GNU AGPL v3 without an -only/-or-later
   marker. Maturity is our reading.
 checked: '2026-11-05'
+icon:
+  file: mautrix-manager.webp
+  source: "https://github.com/mautrix/manager/blob/b7fee671ad52218e3dd1bfd25555a6b6f19ed651/icon.png"
+  licence: "AGPL-3.0"
+  note: null
+  checked: 2026-11-05

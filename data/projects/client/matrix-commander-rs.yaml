@@ -119,3 +119,10 @@ ai:
     source: null
 notes: 'README "News": a new maintainer joined in June 2026.'
 checked: '2026-11-05'
+icon:
+  file: matrix-commander-rs.svg
+  source: "https://github.com/8go/matrix-commander-rs/blob/9f3a44cdcf36664b206936de28d2e598af1f7c13/logos/matrix-commander-rs.svg"
+  licence: "GPL-3.0-or-later"
+  note: null
+  backing: light
+  checked: 2026-11-05

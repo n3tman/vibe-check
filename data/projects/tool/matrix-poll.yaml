@@ -36,3 +36,9 @@ ai:
   in_product: {value: none-found, note: null, source: null}
 notes: null
 checked: 2026-11-05
+icon:
+  file: matrix-poll.svg
+  source: "https://github.com/nordeck/matrix-poll/blob/306be66eb081afaf49303b99e9768e8e915646ca/public/logo.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

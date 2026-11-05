@@ -87,3 +87,9 @@ notes: >-
   Our reading: dormant (last client commit 2023-07-14). A not-chat client; the appservice half could
   interest lane 5.
 checked: '2026-11-05'
+icon:
+  file: cactus-comments.webp
+  source: "https://cactus.chat/apple-touch-icon.png"
+  licence: null
+  note: null
+  checked: 2026-11-05

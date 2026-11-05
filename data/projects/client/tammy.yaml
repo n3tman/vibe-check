@@ -269,3 +269,9 @@ notes: 'Client logic lives in trixnity-messenger (https://gitlab.com/connect2x/t
   at its main branch (2269b0bae4) 633 non-bot commits in the last 365 days, 13 authors in 90 days, no
   agent files, no AI-attributed commits, no AI policy text.'
 checked: '2026-11-05'
+icon:
+  file: tammy.webp
+  source: "https://gitlab.com/connect2x/tammy/-/blob/cd71d8e4ad6078890bda2544d98a0dadbc086287/fastlane/metadata/android/de-DE/images/icon.png"
+  licence: "AGPL-3.0-only"
+  note: null
+  checked: 2026-11-05

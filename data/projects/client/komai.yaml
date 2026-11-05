@@ -195,3 +195,9 @@ notes: >-
   matrix.org maturity: Beta. PLAN.md lists Komai among bots and tools (lane 5); it is a chat client,
   so lane 2 writes it. Lane 5 should not add a second komai file.
 checked: '2026-11-05'
+icon:
+  file: komai.webp
+  source: "https://github.com/etkecc/komai/blob/5de517eb7cdfca10704dec1d1faa6945917eebf2/resources/komai.svg"
+  licence: "GPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

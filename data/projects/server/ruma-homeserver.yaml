@@ -42,3 +42,9 @@ ai:
     source: null
 notes: The default branch holds only a README.
 checked: '2026-11-05'
+icon:
+  file: ruma-homeserver.webp
+  source: "https://avatars.githubusercontent.com/u/16043271?v=4&s=256"
+  licence: null
+  note: "the Ruma project's logo (the ruma organisation's avatar on GitHub)"
+  checked: 2026-11-05

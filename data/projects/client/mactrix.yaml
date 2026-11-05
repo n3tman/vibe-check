@@ -143,3 +143,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: mactrix.webp
+  source: "https://github.com/viktorstrate/mactrix/blob/2c6d195c4ef73c4ad616835b7068b8ffe7ef5356/docs/mactrix-icon.webp"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

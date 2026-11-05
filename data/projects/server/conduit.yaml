@@ -68,3 +68,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: conduit.svg
+  source: "https://conduit.rs/conduit.svg"
+  licence: null
+  note: null
+  checked: 2026-11-05

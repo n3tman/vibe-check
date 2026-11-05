@@ -238,3 +238,9 @@ notes: 'PLAN.md says matrix.crafty.moe "uses AI". Found: the AI use is in develo
   statement about AI was found in the README. The hosted page is the app itself (a single-page app) with
   no text to read without JavaScript.'
 checked: '2026-11-05'
+icon:
+  file: zam.webp
+  source: "https://github.com/az4521/Zam/blob/de78428a43512b7b58e26dfccf12f6eb24947d6c/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+  licence: "GPL-3.0-only"
+  note: null
+  checked: 2026-11-05

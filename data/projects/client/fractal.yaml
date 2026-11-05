@@ -187,3 +187,9 @@ ai:
     checked: 2026-11-05
 notes: 'matrix.org maturity: Beta. Fractal began as a fork of Fest.'
 checked: '2026-11-05'
+icon:
+  file: fractal.webp
+  source: "https://gitlab.gnome.org/uploads/-/system/project/avatar/147/fractal-avatar.png?v=1793694055"
+  licence: null
+  note: "the repository's avatar on gitlab.gnome.org"
+  checked: 2026-11-05

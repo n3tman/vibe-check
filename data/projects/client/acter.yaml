@@ -113,3 +113,9 @@ notes: >-
   Licence: Acter Public Source License 1.0, based on BSL 1.1, with AGPL-3.0 as the change licence.
   Our reading: dormant since 2025-10.
 checked: '2026-11-05'
+icon:
+  file: acter.webp
+  source: "https://github.com/acterglobal/a3/blob/bea92dddfe8ffab0b70581a0fbe4750bb491549e/app/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png"
+  licence: "LicenseRef-Acter-Public-Source-License-1.0"
+  note: null
+  checked: 2026-11-05

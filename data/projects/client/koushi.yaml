@@ -115,3 +115,10 @@ ai:
     source: https://github.com/shinaoka/koushi-matrix/blob/a653d79a85bbd7e84f0d6e943d6f93f0078324bc/docs/help/ai-assistants.md
 notes: 'README tagline: "A desktop Matrix client for many languages, and for your AI assistant."'
 checked: '2026-11-05'
+icon:
+  file: koushi.svg
+  source: "https://github.com/shinaoka/koushi-matrix/blob/32daf539a679521e847d8127570ee29ffba296f6/apps/desktop/src/assets/koushi-logo.svg"
+  licence: "Apache-2.0 OR MIT"
+  note: null
+  backing: light
+  checked: 2026-11-05
