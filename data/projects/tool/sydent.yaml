@@ -18,7 +18,7 @@ sources:
   - matrix.org community space (#community:matrix.org), sources/community-space.tsv
 maturity: stable
 platforms: [server]
-licence: AGPL-3.0-only
+licence: AGPL-3.0-only OR LicenseRef-Element-Commercial
 fork_of: null
 distribution: [docker, pypi]
 funding: []
@@ -32,7 +32,14 @@ features:
   config: {value: config file and environment variables, how: claimed, source: 'https://github.com/element-hq/sydent/blob/a4d741165ee25fc129e9c478e23c4d3b38678c1f/README.rst'}
   ai_backend: {value: none-found, how: claimed, source: 'https://github.com/element-hq/sydent/blob/a4d741165ee25fc129e9c478e23c4d3b38678c1f/README.rst'}
 ai:
-  policy: {value: none-found, quote: null, source: null}
+  policy:
+    value: restricted
+    quote: AI-assisted contributions are accepted; unreviewed AI output is not. [...] If your PR was made
+      with the help of AI, you must convey that this is the case using the PR template.
+    source: https://github.com/element-hq/element-meta/blob/ea731f1fc96190b2214538c76d95ee34e00400cd/CONTRIBUTING.md#L26
+    note: Element-wide policy in element-meta CONTRIBUTING.md (added 2026-11-02), which says it applies
+      to all element-hq repositories; the repo's own CONTRIBUTING does not link it yet. Commit messages
+      may be AI-drafted if reviewed; reviews may use AI tools, but only a human approves or closes a PR.
   dev_usage:
     value: none-found
     evidence:
