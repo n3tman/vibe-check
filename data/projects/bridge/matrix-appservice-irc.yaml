@@ -1,0 +1,86 @@
+slug: matrix-appservice-irc
+name: matrix-appservice-irc
+category: bridge
+kind: puppeting bridge
+homepage: https://matrix-org.github.io/matrix-appservice-irc/
+summary: 'The Matrix.org Foundation''s IRC bridge: dynamically bridges IRC channels and users to Matrix
+  rooms and ghost users.'
+repos:
+- url: https://github.com/matrix-org/matrix-appservice-irc
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/irc/
+  other:
+  - sources/community-space.tsv (IRC Matrix Bridge)
+maturity: stable
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution:
+- docker
+- npm
+funding: []
+features:
+  network: IRC
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/matrix-org/matrix-appservice-irc/blob/d3edeaa8306d33a213ba5307719a9a07e8788c9b/package.json
+    note: matrix-appservice-bridge (Node.js/TypeScript)
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix-appservice-irc/blob/d3edeaa8306d33a213ba5307719a9a07e8788c9b/docs/usage.md
+    note: IRC users appear as Matrix ghosts and Matrix users get IRC clients (multi-puppet)
+  e2ee:
+    value: 'no'
+    how: claimed
+    source: https://github.com/matrix-org/matrix-appservice-irc/blob/d3edeaa8306d33a213ba5307719a9a07e8788c9b/docs/usage.md#L104-L107
+    note: '"the bridge cannot work in an E2EE room. The bridge will leave any room that has encryption
+      enabled"'
+  backfill:
+    value: not-found
+  media:
+    value: partial
+    how: claimed
+    source: https://github.com/matrix-org/matrix-appservice-irc/blob/d3edeaa8306d33a213ba5307719a9a07e8788c9b/docs/usage.md#L72
+    note: files sent to IRC as links
+  reactions_edits:
+    value: partial
+    how: claimed
+    source: https://github.com/matrix-org/matrix-appservice-irc/blob/d3edeaa8306d33a213ba5307719a9a07e8788c9b/docs/usage.md#L88-L102
+    note: edits sent with a fallback star; reactions not sent
+  group_chats:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix-appservice-irc/blob/d3edeaa8306d33a213ba5307719a9a07e8788c9b/README.md
+    note: channels
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/matrix-org/matrix-appservice-irc/blob/d3edeaa8306d33a213ba5307719a9a07e8788c9b/docs/usage.md
+    note: IRC nick; NickServ/SASL password stored encrypted by the bridge
+  network_tos_risk:
+    value: not-found
+    note: IRC networks set their own bridge rules; Libera.Chat's matrix.org bridge was disabled in 2023
+      (matrix.org blog)
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: https://github.com/matrix-org/matrix-appservice-bridge/blob/develop/CONTRIBUTING.md
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD d3edeaa8306d; no AI-attributed commits among 1 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: One non-bot commit in the last 365 days (the 4.0.1 release, 2026-10-26). Shares the matrix.org
+  bridges' contributing guide in matrix-appservice-bridge, which has no AI section. Ran the matrix.org-hosted
+  bridges to OFTC and others; the Libera.Chat bridge was disabled in 2023.
+checked: 2026-11-05

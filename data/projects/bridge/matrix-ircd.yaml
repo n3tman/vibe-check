@@ -1,0 +1,60 @@
+slug: matrix-ircd
+name: matrix-ircd
+category: bridge
+kind: IRC server front-end
+homepage: null
+summary: Archived Rust IRC daemon that let IRC clients connect to Matrix.
+repos:
+- url: https://github.com/matrix-org/matrix-ircd
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - sources/community-space.tsv (Matrix IRCd (ARCHIVED))
+maturity: archived
+platforms:
+- server
+licence: Apache-2.0
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: IRC (client side)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/matrix-org/matrix-ircd/blob/40e9ea190140367b64febb666a0abde1212bd505/Cargo.toml
+    note: own (Rust)
+  puppeting:
+    value: not-found
+  e2ee:
+    value: not-found
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 40e9ea190140; no AI-attributed commits among 0 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Archived on GitHub, last commit 2023-07-19; community space room marked ARCHIVED.
+checked: 2026-11-05

@@ -1,0 +1,73 @@
+slug: beeper-chatgpt-dots
+name: ChatGPT Dots
+category: bridge
+kind: AI chat bridge
+homepage: null
+summary: Experimental bridgev2 bridge connecting a user's ChatGPT Dot (an OpenAI assistant) to Beeper
+  and Matrix.
+repos:
+- url: https://github.com/beeper/chatgpt-dots
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search org:beeper
+maturity: alpha
+platforms:
+- server
+licence: AGPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: ChatGPT Dots (OpenAI)
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/chatgpt-dots/blob/c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: not-found
+  e2ee:
+    value: not-found
+  backfill:
+    value: 'no'
+    how: claimed
+    source: https://github.com/beeper/chatgpt-dots/blob/c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3/README.md
+    note: no pre-link history
+  media:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/beeper/chatgpt-dots/blob/c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3/README.md
+  reactions_edits:
+    value: partial
+    how: claimed
+    source: https://github.com/beeper/chatgpt-dots/blob/c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3/README.md
+    note: reactions
+  group_chats:
+    value: 'no'
+    how: claimed
+    source: https://github.com/beeper/chatgpt-dots/blob/c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3/README.md
+  login_methods:
+    value: not-found
+  network_tos_risk:
+    value: not-found
+    note: 'README: unofficial, unaffiliated with OpenAI, uses an undocumented protocol'
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 4 of 39 non-bot commits in the last 365 days (10.3 %) carry an AI co-author trailer or 'Generated
+      with' line, e.g. https://github.com/beeper/chatgpt-dots/commit/265398af80d5f75c6ee0d9ff835fcffcd8afabc0,
+      https://github.com/beeper/chatgpt-dots/commit/ff12c9acb70507175a8fa2b6bb65b91c3d9bbfba
+  in_product:
+    value: core
+    note: the bridged network is an AI assistant (ChatGPT Dot)
+    source: https://github.com/beeper/chatgpt-dots/blob/c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3/README.md
+notes: Found with GitHub search org:beeper.
+checked: 2026-11-05

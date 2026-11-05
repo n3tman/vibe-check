@@ -1,0 +1,72 @@
+slug: matridge
+name: matridge
+category: bridge
+kind: XMPP gateway
+homepage: https://slidge.im/docs/matridge/main/
+summary: Puppeting gateway that lets XMPP users chat with Matrix users from an XMPP client, built on slidge
+  and matrix-nio.
+repos:
+- url: https://codeberg.org/slidge/matridge
+  forge: forgejo
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - https://slidge.im
+maturity: beta
+platforms:
+- server
+licence: AGPL-3.0
+fork_of: null
+distribution:
+- docker
+- pypi
+funding: []
+features:
+  network: XMPP (bridges Matrix into XMPP)
+  framework:
+    value: 'yes'
+    how: claimed
+    source: https://codeberg.org/slidge/matridge/src/commit/1d76d7279a6ffca573ce0b45aee5f2d2f61cba3c/README.md
+    note: slidge (XMPP gateway library) + matrix-nio
+  puppeting:
+    value: 'yes'
+    how: claimed
+    source: https://codeberg.org/slidge/matridge/src/commit/1d76d7279a6ffca573ce0b45aee5f2d2f61cba3c/README.md
+    note: 'puppeteering gateway: the XMPP user logs in to their own Matrix account'
+  e2ee:
+    value: not-found
+    note: check the features page linked from the README
+  backfill:
+    value: not-found
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://codeberg.org/slidge/matridge/src/commit/1d76d7279a6ffca573ce0b45aee5f2d2f61cba3c/README.md
+    note: Matrix account credentials given to the gateway
+  network_tos_risk:
+    value: 'no'
+    note: Matrix-side client, no third-party ToS
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: none-found
+    evidence:
+    - no agent files at HEAD 1d76d7279a6f; no AI-attributed commits among 142 non-bot commits in the last
+      365 days
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: 'Bridge seen from the XMPP side (the slidge family). Not on matrix.org; added because the lane
+  prompt names Slidge. Other XMPP bridges: matrix-bifrost, Parsee.'
+checked: 2026-11-05

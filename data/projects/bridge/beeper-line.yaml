@@ -1,0 +1,74 @@
+slug: beeper-line
+name: beeper-line
+category: bridge
+kind: puppeting bridge
+homepage: null
+summary: Puppeting bridge between Matrix and LINE on mautrix-go bridgev2, presenting itself as the LINE
+  Chrome extension.
+repos:
+- url: https://github.com/beeper/line
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/bridges/line/
+  other: []
+maturity: stable
+platforms:
+- server
+licence: MIT
+fork_of: null
+distribution: []
+funding: []
+features:
+  network: LINE
+  framework:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/line/blob/a9cefaf244d17f7bb6fb9685cdfd3ccf993c3293/go.mod
+    note: mautrix-go bridgev2
+  puppeting:
+    value: not-found
+  e2ee:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/beeper/line/blob/a9cefaf244d17f7bb6fb9685cdfd3ccf993c3293/README.md
+    note: LINE Letter Sealing (E2EE) decryption on the LINE side
+  backfill:
+    value: 'yes'
+    how: code
+    source: https://github.com/beeper/line/blob/a9cefaf244d17f7bb6fb9685cdfd3ccf993c3293/pkg/connector/sync.go
+  media:
+    value: not-found
+  reactions_edits:
+    value: not-found
+  group_chats:
+    value: not-found
+  login_methods:
+    value: 'yes'
+    how: claimed
+    source: https://github.com/beeper/line/blob/a9cefaf244d17f7bb6fb9685cdfd3ccf993c3293/README.md
+    note: LINE account, as a Chrome Extension session (one at a time)
+  network_tos_risk:
+    value: not-found
+    note: README warns the bridge's session invalidates the official Chrome extension session and vice
+      versa
+ai:
+  policy:
+    value: none-found
+    quote: null
+    source: null
+  dev_usage:
+    value: regular
+    evidence:
+    - 'agent files at HEAD: https://github.com/beeper/line/blob/a9cefaf244d17f7bb6fb9685cdfd3ccf993c3293/.claude/commands,
+      https://github.com/beeper/line/blob/a9cefaf244d17f7bb6fb9685cdfd3ccf993c3293/AGENTS.md, https://github.com/beeper/line/blob/a9cefaf244d17f7bb6fb9685cdfd3ccf993c3293/CLAUDE.md'
+    - 41 of 397 non-bot commits in the last 365 days (10.3 %) carry an AI co-author trailer or 'Generated
+      with' line, e.g. https://github.com/beeper/line/commit/41482abe509cf78294a6e902713d19aecc9318b0,
+      https://github.com/beeper/line/commit/b81acddcd0c4cf6b6dd3ccfb0b883d7d346aaebd
+  in_product:
+    value: none-found
+    note: no generative-AI features found in the README or dependency manifests
+    source: null
+notes: Based on mautrix-twilio (README). matrix.org lists maintainers beeper and highesttt. The older
+  matrix-puppeteer-line (miscworks) is unreachable.
+checked: 2026-11-05
