@@ -1,0 +1,39 @@
+slug: gatho-bot
+name: Gatho Matrix Bot
+category: bot
+kind: events
+homepage: https://gatho.party
+summary: A bot that syncs RSVP reactions and announcements between Matrix rooms and the Gatho event-hosting
+  site.
+repos:
+- url: https://github.com/gatho-party/gatho-matrix-bot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: unmaintained
+platforms: [server]
+licence: GPL-3.0-only
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: events (RSVP sync with gatho.party), how: claimed, source: 'https://github.com/gatho-party/gatho-matrix-bot/blob/29046c00fb881d74237b51d09542ce7b90841c1a/README.md'}
+  framework: {value: matrix-bot-sdk, how: code, source: 'https://github.com/gatho-party/gatho-matrix-bot/blob/29046c00fb881d74237b51d09542ce7b90841c1a/package.json'}
+  e2ee: {value: not-found, how: claimed, source: 'https://github.com/gatho-party/gatho-matrix-bot/blob/29046c00fb881d74237b51d09542ce7b90841c1a/README.md'}
+  hosting: {value: hosted, how: claimed, source: 'https://github.com/gatho-party/gatho-matrix-bot/blob/29046c00fb881d74237b51d09542ce7b90841c1a/README.md',
+    note: runs with the hosted gatho.party service}
+  config: {value: not-found, how: claimed, source: 'https://github.com/gatho-party/gatho-matrix-bot/blob/29046c00fb881d74237b51d09542ce7b90841c1a/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/gatho-party/gatho-matrix-bot/blob/29046c00fb881d74237b51d09542ce7b90841c1a/package.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2022-05-07), counted at 29046c00fb88
+  in_product: {value: none-found, note: null, source: null}
+notes: Last commit 2022-05-07. The community-space room points to the gatho-party organisation; the website
+  repo (gatho-party/gatho-website) is separate and not covered.
+checked: 2026-11-05

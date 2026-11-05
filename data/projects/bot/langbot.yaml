@@ -1,0 +1,50 @@
+slug: langbot
+name: LangBot
+category: bot
+kind: ai-assistant
+homepage: https://langbot.app
+summary: A multi-platform platform for LLM chat bots and agents (QQ, WeChat, Telegram, Discord, Matrix
+  and more), managed from a web dashboard.
+repos:
+- url: https://github.com/langbot-app/LangBot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - GitHub search, repositories sorted by stars, 2026-11-05
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker, pypi, helm]
+funding: []
+features:
+  purpose: {value: AI assistant / agent platform (multi-network; Matrix is one adapter), how: claimed,
+    source: 'https://github.com/langbot-app/LangBot/blob/33e482a35744aeafc345241e03a0c1825180824b/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/langbot-app/LangBot/blob/33e482a35744aeafc345241e03a0c1825180824b/src/langbot/pkg/platform/sources/matrix.py'}
+  e2ee: {value: not-found, how: code, source: 'https://github.com/langbot-app/LangBot/blob/33e482a35744aeafc345241e03a0c1825180824b/src/langbot/pkg/platform/sources/matrix.py',
+    note: no encryption handling found in the Matrix adapter}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/langbot-app/LangBot/blob/33e482a35744aeafc345241e03a0c1825180824b/README.md',
+    note: 'Docker Compose, manual, Kubernetes'}
+  config: {value: 'web dashboard, HTTP API, MCP endpoint and CLI (lbctl)', how: claimed, source: 'https://github.com/langbot-app/LangBot/blob/33e482a35744aeafc345241e03a0c1825180824b/README.md'}
+  ai_backend: {value: 'OpenAI, Anthropic, DeepSeek, Google Gemini, xAI, Moonshot, Zhipu AI, Ollama, LM
+      Studio, Dify and others', how: claimed, source: 'https://github.com/langbot-app/LangBot/blob/33e482a35744aeafc345241e03a0c1825180824b/README.md'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: regular
+    evidence:
+    - 'agent file: AGENTS.md'
+    - 'agent file: CLAUDE.md'
+    - 'agent file: skills/AGENTS.md'
+    - 'bot author copilot-swe-agent[bot]: 8 commits in the last 365 days'
+    - 152 of 2108 non-bot commits in the last 365 days carry an AI attribution (7.2%), counted at 33e482a35744
+    - 'tools named in attributions: claude'
+    - 'example: 0ef32210df56 (Co-authored-by: Claude)'
+    - 'example: db17132728c0 (Co-authored-by: Claude)'
+    - 'README: AGENTS.md is symlinked to CLAUDE.md and the project calls itself "agent-friendly by design"'
+  in_product: {value: core, note: The product connects LLMs and agent runners to chat platforms., source: 'https://github.com/langbot-app/LangBot/blob/33e482a35744aeafc345241e03a0c1825180824b/README.md'}
+notes: 18,730 stars; mostly Chinese-language community. Matrix is one of many platform adapters. Found
+  by GitHub search; not on matrix.org's list.
+checked: 2026-11-05
