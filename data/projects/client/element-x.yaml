@@ -187,10 +187,10 @@ ai:
   policy:
     value: restricted
     quote: >-
-      We are also fine with AI led contributions within reasonable bounds. You are completely responsible
-      for the quality of the PR [...] Please write the description yourself, we don't have the bandwidth
-      to read LLM essays.
-    source: https://github.com/element-hq/element-x-android/blob/c34418f0f72410a4ba7d2abd22d71708156e21ce/CONTRIBUTING.md
+      Contributions are judged on their content, not on how they were produced. AI-assisted contributions
+      are accepted; unreviewed AI output is not. [...] If your PR was made with the help of AI, you
+      must convey that this is the case using the PR template.
+    source: https://github.com/element-hq/element-meta/blob/ea731f1fc96190b2214538c76d95ee34e00400cd/CONTRIBUTING.md
   dev_usage:
     value: regular
     evidence:
@@ -207,6 +207,9 @@ ai:
     note: null
     source: null
 notes: >-
-  matrix.org maturity: Stable. Android FOSS builds need Android 7.0 (API 24), enterprise builds API
-  33.
+  matrix.org maturity: Stable. Element's organisation-wide AI policy (element-meta CONTRIBUTING.md,
+  merged 2026-11-02 in https://github.com/element-hq/element-meta/pull/3393) applies to all element-hq
+  repositories and to matrix-org repositories where Element is the core contributor. Both repos'
+  CONTRIBUTING.md also say "We are also fine with AI led contributions within reasonable bounds".
+  Android FOSS builds need Android 7.0 (API 24), enterprise builds API 33.
 checked: '2026-11-05'
