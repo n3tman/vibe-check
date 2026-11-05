@@ -29,8 +29,8 @@ Also from https://www.linuxlinks.com/best-free-open-source-matrix-clients/ (chec
 the matrix.org list on 2026-11-05): in your range it lists Mages ("Matrix"), Mirage, Moment,
 NeoChat, nheko, Quadrix, Quaternion, Sable, SchildiChat, Spectral, Syphon and Tammy. Make sure
 each has a file. Three are not on the matrix.org list, so cover them on purpose:
-- Moment: https://gitlab.com/mx-moment/moment. LinuxLinks and the community space suggest it is a fork of Mirage: check that, then: set
-  set `fork_of: mirage` and note what it adds.
+- Moment: https://gitlab.com/mx-moment/moment. Said to be a fork of Mirage: check that in
+  the repo, then set `fork_of: mirage` and note what it adds.
 - Mirage: https://github.com/mirukana/mirage. Likely dormant or abandoned; the collector
   decides, but still fill the file.
 - Spectral: https://gitlab.com/spectral-im/spectral (homepage https://spectral.im; last
