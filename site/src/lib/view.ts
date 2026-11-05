@@ -189,6 +189,26 @@ export function ago(iso: string | null | undefined, now: Date): string {
   if (days < 730) return `${Math.round(days / 30.4)} months ago`;
   return `${Math.round(days / 365)} years ago`;
 }
+/** A date as a stat value: recent dates read as "12 days ago", older ones as the month ("Aug 2025"). */
+export function dateStat(iso: string | null | undefined, now: Date): { big: string; small: string } | null {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (Number.isNaN(+d)) return null;
+  const days = Math.floor((+now - +d) / 86400000);
+  const rel = ago(iso, now);
+  if (days < 60) return { big: rel, small: fmtDate(iso) };
+  const day = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+  return { big: d.toLocaleDateString('en-GB', { month: 'short', year: 'numeric', timeZone: 'UTC' }), small: `${rel} · ${day}` };
+}
+/** Split a release tag into the version people read and the package or branch prefix:
+ *  "@scope/pkg@2.1.0" → 2.1.0 + @scope/pkg, "release/26.10.8" → 26.10.8 + release. */
+export function splitTag(tag: string): { version: string; prefix: string | null } {
+  const npm = /^(@?[^@]+)@([^@/]+)$/.exec(tag);
+  if (npm) return { version: npm[2], prefix: npm[1] };
+  const i = tag.lastIndexOf('/');
+  if (i > 0 && i < tag.length - 1) return { version: tag.slice(i + 1), prefix: tag.slice(0, i) };
+  return { version: tag, prefix: null };
+}
 export const pct = (x?: number | null, digits = 1) => (x === null || x === undefined ? '—' : `${(x * 100).toFixed(digits)} %`);
 
 export function host(u?: string | null): string {

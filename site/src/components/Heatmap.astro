@@ -1,5 +1,7 @@
 ---
 // Commits per day over the last year, one column per week (Monday on top), built at build time.
+// The SVG scales to the panel's width; a small script (heatmap.ts) adds the hover and keyboard
+// tooltip. Without JS each cell still has its date and count as an accessible name.
 interface Props { daily: Record<string, number> | null | undefined; end: string }
 const { daily = {}, end } = Astro.props;
 const DAY = 86400000;
@@ -15,9 +17,9 @@ const nonzero = cells.map((c) => c.n).filter((n) => n > 0).sort((a, b) => a - b)
 const q = (f: number) => nonzero[Math.min(nonzero.length - 1, Math.floor(f * nonzero.length))] ?? 1;
 const t1 = q(0.25), t2 = q(0.5), t3 = q(0.8);
 const level = (n: number) => (n === 0 ? 0 : n <= t1 ? 1 : n <= t2 ? 2 : n <= t3 ? 3 : 4);
-const S = 11, G = 2, L = 26, T = 16;
+const S = 11, G = 2.5, L = 24, T = 15;
 const cols = Math.max(...cells.map((c) => c.x)) + 1;
-const W = L + cols * (S + G), H = T + 7 * (S + G);
+const W = L + cols * (S + G) - G, H = T + 7 * (S + G) - G;
 const months: { x: number; label: string }[] = [];
 let lastM = -1;
 for (const c of cells) {
@@ -26,19 +28,31 @@ for (const c of cells) {
 }
 const total = nonzero.reduce((a, b) => a + b, 0);
 const activeDays = nonzero.length;
+const label = (c: { d: string; n: number }) =>
+  `${c.n} commit${c.n === 1 ? '' : 's'} on ${new Date(c.d + 'T00:00:00Z').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' })}`;
+const lastIdx = cells.length - 1;
 ---
-<figure class="chart heatmap">
-  <div class="scroll-x">
-    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Commits per day over the last year: ${total} commits on ${activeDays} days`}>
-      {months.filter((m, i) => i > 0 || m.x < cols - 2).map((m) => <text x={L + m.x * (S + G)} y={10} class="axis">{m.label}</text>)}
-      {['Mon', 'Wed', 'Fri'].map((d, i) => <text x={0} y={T + (i * 2) * (S + G) + 9} class="axis">{d}</text>)}
-      {cells.map((c) => (
-        <rect x={L + c.x * (S + G)} y={T + c.y * (S + G)} width={S} height={S} rx="2" class={`hm hm${level(c.n)}`}><title>{`${c.d}: ${c.n} commit${c.n === 1 ? '' : 's'}`}</title></rect>
+<figure class="chart heatmap" data-heatmap>
+  <div class="scroll-x heatmap-scroll">
+    <svg viewBox={`0 0 ${W} ${H}`} role="group" aria-label={`Commits per day over the last year: ${total} commits on ${activeDays} days. Use the arrow keys to move between days.`}>
+      {months.filter((m, i) => m.x < cols - 2 && !(months[i + 1] && months[i + 1].x - m.x < 3)).map((m) => <text x={L + m.x * (S + G)} y={9} class="axis">{m.label}</text>)}
+      {['Mon', 'Wed', 'Fri'].map((d, i) => <text x={0} y={T + (i * 2) * (S + G) + 8.5} class="axis">{d}</text>)}
+      {cells.map((c, i) => (
+        <rect
+          x={L + c.x * (S + G)} y={T + c.y * (S + G)} width={S} height={S} rx="2"
+          class:list={['hm', `hm${level(c.n)}`, { today: i === lastIdx }]}
+          role="img" aria-label={label(c)} data-tip={label(c)} tabindex={i === lastIdx ? 0 : -1}
+        />
       ))}
     </svg>
   </div>
+  <div class="hm-tip" aria-hidden="true" hidden></div>
   <figcaption>
-    <span>{total} commits on {activeDays} days in the last year</span>
+    <span>{total} commits on {activeDays} days in the last year · outlined: the day of the last collection</span>
     <span class="hm-legend" aria-hidden="true">less {[0, 1, 2, 3, 4].map((l) => <i class={`hm${l}`} />)} more</span>
   </figcaption>
 </figure>
+<script>
+  import { initHeatmaps } from '../lib/heatmap.ts';
+  initHeatmaps();
+</script>
