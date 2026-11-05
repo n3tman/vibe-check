@@ -325,3 +325,9 @@ blockquote { margin: 0.6rem 0; padding: 0.35rem 0 0.35rem 0.85rem; border-left: 
 details > summary { cursor: pointer; font-weight: 600; }
 .legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; list-style: none; padding: 0; margin: 0.6rem 0 0.9rem; color: var(--muted); }
 .legend li { display: inline-flex; align-items: center; gap: 0.35rem; }
+/* Project icons */
+.picon { flex: none; border-radius: 22%; object-fit: contain; background: var(--surface-2); }
+.picon-mono { display: inline-grid; place-items: center; font-weight: 700; letter-spacing: -0.02em; color: hsl(var(--h) 45% 28%); background: hsl(var(--h) 60% 88%); }
+:root[data-theme='dark'] .picon-mono { color: hsl(var(--h) 60% 85%); background: hsl(var(--h) 30% 24%); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .picon-mono { color: hsl(var(--h) 60% 85%); background: hsl(var(--h) 30% 24%); } }
+.card-title { display: flex; align-items: center; gap: 0.55rem; }

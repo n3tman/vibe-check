@@ -3,6 +3,7 @@ import AiMarks from './AiMarks.astro';
 import FeatureChip from './FeatureChip.astro';
 import Icon from './Icon.astro';
 import Platforms from './Platforms.astro';
+import ProjectIcon from './ProjectIcon.astro';
 import Sparkline from './Sparkline.astro';
 import StatusBadge from './StatusBadge.astro';
 import type { Entry } from '../lib/data.ts';
@@ -15,7 +16,7 @@ const head = HEADLINE[p.category].map((k) => feature(k, (p.features as any)?.[k]
 ---
 <article class="card" data-slug={p.slug}>
   <header class="card-head">
-    <h3 class="card-title"><a href={href(`p/${p.slug}/`)}>{p.name}</a></h3>
+    <h3 class="card-title"><ProjectIcon slug={p.slug} name={p.name} size={28} /><a href={href(`p/${p.slug}/`)}>{p.name}</a></h3>
     <StatusBadge status={statusOf(p)} />
   </header>
   <p class="card-kind muted">{showCategory ? `${CATEGORY_LABEL[p.category].one} · ` : ''}{p.kind}{p.fork_of ? ` · fork of ${p.fork_of}` : ''}</p>

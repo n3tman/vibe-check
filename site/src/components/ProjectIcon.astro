@@ -1,0 +1,20 @@
+---
+// A project's icon from site/public/icons/<slug>.{svg,png,webp}, else a monogram on a colour
+// derived from the slug (stable across builds, readable in both themes).
+import fs from 'node:fs';
+import path from 'node:path';
+import { href } from '../lib/view.ts';
+interface Props { slug: string; name: string; size?: number }
+const { slug, name, size = 32 } = Astro.props;
+const dir = path.resolve(process.cwd(), 'public/icons');
+const file = ['svg', 'webp', 'png'].map((e) => `${slug}.${e}`).find((f) => fs.existsSync(path.join(dir, f)));
+let h = 0;
+for (const ch of slug) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+const hue = h % 360;
+const letters = (name.replace(/\([^)]*\)/g, ' ').replace(/[^\p{L}\p{N} ]/gu, ' ').trim().split(/\s+/).map((w) => w[0]).join('').slice(0, 2) || slug.slice(0, 2)).toUpperCase();
+---
+{file ? (
+  <img class="picon" src={href(`icons/${file}`)} alt="" width={size} height={size} loading="lazy" decoding="async" />
+) : (
+  <span class="picon picon-mono" aria-hidden="true" style={`--h:${hue};width:${size}px;height:${size}px;font-size:${Math.round(size * 0.4)}px`}>{letters}</span>
+)}
