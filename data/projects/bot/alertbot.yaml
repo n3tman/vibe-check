@@ -1,0 +1,38 @@
+slug: alertbot
+name: Alertbot
+category: bot
+kind: notifications
+homepage: https://github.com/moan0s/alertbot
+summary: A maubot plugin that turns Grafana or Alertmanager webhooks into room messages.
+repos:
+- url: https://github.com/moan0s/alertbot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: []
+funding: []
+features:
+  purpose: {value: 'notifications (Grafana, Alertmanager)', how: claimed, source: 'https://github.com/moan0s/alertbot/blob/8f94dc08afd7ca263a1896626347e8986f94c6b7/README.md'}
+  framework: {value: maubot, how: code, source: 'https://github.com/moan0s/alertbot/blob/8f94dc08afd7ca263a1896626347e8986f94c6b7/maubot.yaml'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/moan0s/alertbot/blob/8f94dc08afd7ca263a1896626347e8986f94c6b7/README.md',
+    note: the setup has it invited to an encrypted room; encryption comes from maubot}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/moan0s/alertbot/blob/8f94dc08afd7ca263a1896626347e8986f94c6b7/README.md',
+    note: a maubot instance}
+  config: {value: maubot web UI and !url / !roomid commands, how: claimed, source: 'https://github.com/moan0s/alertbot/blob/8f94dc08afd7ca263a1896626347e8986f94c6b7/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/moan0s/alertbot/blob/8f94dc08afd7ca263a1896626347e8986f94c6b7/requirements.txt'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 3 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 8f94dc08afd7
+  in_product: {value: none-found, note: null, source: null}
+notes: LICENSE.txt and maubot.yaml state AGPL-3.0-or-later. Maturity is our reading.
+checked: 2026-11-05

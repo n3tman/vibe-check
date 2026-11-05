@@ -1,0 +1,41 @@
+slug: hemppa
+name: Hemppa
+category: bot
+kind: framework
+homepage: https://github.com/vranki/hemppa
+summary: A modular Python bot for Matrix where each feature (calendars, aviation weather, feeds, aliases,
+  …) is a module enabled by chat commands.
+repos:
+- url: https://github.com/vranki/hemppa
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: unmaintained
+platforms: [server]
+licence: GPL-3.0-only
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: 'general-purpose modular bot (calendars, METAR/TAF, feeds, URL titles, aliases, …)',
+    how: claimed, source: 'https://github.com/vranki/hemppa/blob/9729194bb237a965cb55d4802ca4e6f5dad9a86b/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/vranki/hemppa/blob/9729194bb237a965cb55d4802ca4e6f5dad9a86b/Pipfile'}
+  e2ee: {value: 'no', how: claimed, source: 'https://github.com/vranki/hemppa/blob/9729194bb237a965cb55d4802ca4e6f5dad9a86b/README.md',
+    note: '"End-to-end encryption is currently not supported by bot"'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/vranki/hemppa/blob/9729194bb237a965cb55d4802ca4e6f5dad9a86b/README.md',
+    note: Python or Docker}
+  config: {value: 'chat commands (!bot, !help, per-module commands), settings export/import as JSON',
+    how: claimed, source: 'https://github.com/vranki/hemppa/blob/9729194bb237a965cb55d4802ca4e6f5dad9a86b/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/vranki/hemppa/blob/9729194bb237a965cb55d4802ca4e6f5dad9a86b/Pipfile'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2025-04-03), counted at 9729194bb237
+  in_product: {value: none-found, note: null, source: null}
+notes: 'Maturity is our reading: the default branch''s last commit is 2025-04-03, none in the last 365
+  days; the repo is not archived.'
+checked: 2026-11-05

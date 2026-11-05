@@ -1,0 +1,40 @@
+slug: go-neb
+name: Go-NEB
+category: bot
+kind: integration
+homepage: https://github.com/matrix-org/go-neb
+summary: Matrix.org's former extensible Go bot (GitHub, JIRA, RSS, Giphy, …) that powered Element's old
+  integrations; discontinued in favour of matrix-hookshot.
+repos:
+- url: https://github.com/matrix-org/go-neb
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: archived
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: 'integrations (GitHub, JIRA, RSS, image search, …)', how: claimed, source: 'https://github.com/matrix-org/go-neb/blob/3ba3d4600f42d913824ae36cf98d113d6a0d1099/README.md'}
+  framework: {value: mautrix-go, how: code, source: 'https://github.com/matrix-org/go-neb/blob/3ba3d4600f42d913824ae36cf98d113d6a0d1099/go.mod',
+    note: mautrix-go 0.9 with libolm}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/matrix-org/go-neb/blob/3ba3d4600f42d913824ae36cf98d113d6a0d1099/README.md',
+    note: depends on libolm for end-to-end encryption}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/matrix-org/go-neb/blob/3ba3d4600f42d913824ae36cf98d113d6a0d1099/README.md'}
+  config: {value: config file or HTTP API, how: claimed, source: 'https://github.com/matrix-org/go-neb/blob/3ba3d4600f42d913824ae36cf98d113d6a0d1099/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/matrix-org/go-neb/blob/3ba3d4600f42d913824ae36cf98d113d6a0d1099/go.mod'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2023-06-28), counted at 3ba3d4600f42
+  in_product: {value: none-found, note: null, source: null}
+notes: 'README: "Go-NEB has been discontinued and won''t recieve any updates or support." Archived on
+  GitHub; last commit 2023-06-28.'
+checked: 2026-11-05

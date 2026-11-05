@@ -1,0 +1,47 @@
+slug: baibot
+name: baibot
+category: bot
+kind: ai-assistant
+homepage: https://github.com/etkecc/baibot
+summary: A Matrix bot that exposes LLM text generation, speech-to-text, text-to-speech and image generation
+  from several providers in chat.
+repos:
+- url: https://github.com/etkecc/baibot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: [docker, ansible-playbook]
+funding: []
+features:
+  purpose: {value: 'AI assistant (text generation, speech-to-text, text-to-speech, image generation and
+      editing)', how: claimed, source: 'https://github.com/etkecc/baibot/blob/3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02/README.md'}
+  framework: {value: matrix-rust-sdk, how: code, source: 'https://github.com/etkecc/baibot/blob/3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02/Cargo.toml',
+    note: 'matrix-sdk 0.19, through etke.cc''s mxlink helper'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/etkecc/baibot/blob/3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02/README.md',
+    note: 'encrypted rooms, and encrypted Account-Data-stored configuration'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/etkecc/baibot/blob/3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02/docs/installation.md',
+    note: container image or own binary; a matrix-docker-ansible-deploy role exists}
+  config: {value: config file and chat commands, how: claimed, source: 'https://github.com/etkecc/baibot/blob/3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02/docs/configuration/README.md'}
+  ai_backend: {value: 'Anthropic, Groq, LocalAI, Mistral, Ollama, OpenAI, OpenAI-compatible endpoints,
+      OpenRouter, Together AI, Venice', how: code, source: 'https://github.com/etkecc/baibot/blob/3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02/docs/providers.md',
+    note: sample configs in docs/sample-provider-configs/; async-openai crate in Cargo.toml}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: regular
+    evidence:
+    - 77 of 156 non-bot commits in the last 365 days carry an AI attribution (49.4%), counted at 3cb5a46fdc3d
+    - 'tools named in attributions: claude'
+    - 'example: ad09fc6bb9fa (Co-Authored-By: Claude)'
+    - 'example: 57fed281ba6c (Co-Authored-By: Claude)'
+  in_product: {value: core, note: 'The product is an LLM front-end: chat, voice transcription, speech
+      synthesis and image generation through the configured providers.', source: 'https://github.com/etkecc/baibot/blob/3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02/README.md'}
+notes: Maintained by etke.cc. The AI-attributed commits are Co-Authored-By Claude trailers. No contribution
+  policy on AI found (no CONTRIBUTING file). Maturity is our reading.
+checked: 2026-11-05

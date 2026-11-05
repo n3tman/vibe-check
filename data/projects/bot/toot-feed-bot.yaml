@@ -1,0 +1,39 @@
+slug: toot-feed-bot
+name: TootFeedBot
+category: bot
+kind: notifications
+homepage: https://codeberg.org/urmaul/toot-feed-bot
+summary: A bot that forwards the toots of a Mastodon or Pleroma home feed to a Matrix room.
+repos:
+- url: https://codeberg.org/urmaul/toot-feed-bot
+  forge: forgejo
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: beta
+platforms: [server]
+licence: MIT
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: notifications (Fediverse feed to room), how: claimed, source: 'https://codeberg.org/urmaul/toot-feed-bot/src/commit/bb450efd595e0ecacbb318e644f86e8aaf71f2eb/README.md'}
+  framework: {value: matrix-bot-sdk, how: code, source: 'https://codeberg.org/urmaul/toot-feed-bot/src/commit/bb450efd595e0ecacbb318e644f86e8aaf71f2eb/deno.json',
+    note: 'with matrix-sdk-crypto-nodejs, run on Deno'}
+  e2ee: {value: partial, how: code, source: 'https://codeberg.org/urmaul/toot-feed-bot/src/commit/bb450efd595e0ecacbb318e644f86e8aaf71f2eb/deno.json',
+    note: pulls matrix-sdk-crypto-nodejs; the README states no room encryption support either way. Stored
+      values are encrypted at rest.}
+  hosting: {value: self-host, how: claimed, source: 'https://codeberg.org/urmaul/toot-feed-bot/src/commit/bb450efd595e0ecacbb318e644f86e8aaf71f2eb/README.md',
+    note: Docker}
+  config: {value: 'environment variables and chat commands (!reg, !auth, !ignore, …)', how: claimed, source: 'https://codeberg.org/urmaul/toot-feed-bot/src/commit/bb450efd595e0ecacbb318e644f86e8aaf71f2eb/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://codeberg.org/urmaul/toot-feed-bot/src/commit/bb450efd595e0ecacbb318e644f86e8aaf71f2eb/deno.json'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 7 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at bb450efd595e
+  in_product: {value: none-found, note: null, source: null}
+notes: Maturity is our reading.
+checked: 2026-11-05

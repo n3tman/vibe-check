@@ -1,0 +1,38 @@
+slug: honoroit
+name: Honoroit
+category: bot
+kind: helpdesk
+homepage: https://github.com/etkecc/honoroit
+summary: A helpdesk bot that turns each user's direct conversation with it into a thread in an operators'
+  room.
+repos:
+- url: https://github.com/etkecc/honoroit
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: AGPL-3.0-only
+fork_of: null
+distribution: [docker, ansible-playbook]
+funding: []
+features:
+  purpose: {value: helpdesk, how: claimed, source: 'https://github.com/etkecc/honoroit/blob/7b0bf404e438ff7f87a346265796e35ac341f24a/README.md'}
+  framework: {value: mautrix-go, how: code, source: 'https://github.com/etkecc/honoroit/blob/7b0bf404e438ff7f87a346265796e35ac341f24a/go.mod'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/etkecc/honoroit/blob/7b0bf404e438ff7f87a346265796e35ac341f24a/README.md',
+    note: End-to-End encryption listed in features; built with the goolm tag}
+  hosting: {value: both, how: claimed, source: 'https://github.com/etkecc/honoroit/blob/7b0bf404e438ff7f87a346265796e35ac341f24a/README.md',
+    note: 'self-host (Docker, matrix-docker-ansible-deploy) or a hosted version from etke.cc'}
+  config: {value: environment variables and !ho commands in threads, how: claimed, source: 'https://github.com/etkecc/honoroit/blob/7b0bf404e438ff7f87a346265796e35ac341f24a/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/etkecc/honoroit/blob/7b0bf404e438ff7f87a346265796e35ac341f24a/go.mod'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 14 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 7b0bf404e438
+  in_product: {value: none-found, note: null, source: null}
+notes: Agent files found only under vendor/ (third-party Go modules), not counted.
+checked: 2026-11-05

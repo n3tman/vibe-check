@@ -1,0 +1,40 @@
+slug: matrix-reminder-bot
+name: matrix-reminder-bot
+category: bot
+kind: reminders
+homepage: https://github.com/anoadragon453/matrix-reminder-bot
+summary: A bot for one-off, recurring and cron-style reminders and alarms, working in encrypted rooms.
+repos:
+- url: https://github.com/anoadragon453/matrix-reminder-bot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [pypi, docker, ansible-playbook]
+funding: []
+features:
+  purpose: {value: reminders, how: claimed, source: 'https://github.com/anoadragon453/matrix-reminder-bot/blob/dd51db6359ecc6c0aa80c70ed19d2ed773c92cc1/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/anoadragon453/matrix-reminder-bot/blob/dd51db6359ecc6c0aa80c70ed19d2ed773c92cc1/setup.py',
+    note: 'matrix-nio[e2e]'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/anoadragon453/matrix-reminder-bot/blob/dd51db6359ecc6c0aa80c70ed19d2ed773c92cc1/README.md',
+    note: '"Supports end-to-end encrypted rooms"'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/anoadragon453/matrix-reminder-bot/blob/dd51db6359ecc6c0aa80c70ed19d2ed773c92cc1/README.md',
+    note: Docker recommended; matrix-docker-ansible-deploy role}
+  config: {value: 'config.yaml and chat commands (!remindme, !remindroom, !listreminders, …)', how: claimed,
+    source: 'https://github.com/anoadragon453/matrix-reminder-bot/blob/dd51db6359ecc6c0aa80c70ed19d2ed773c92cc1/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/anoadragon453/matrix-reminder-bot/blob/dd51db6359ecc6c0aa80c70ed19d2ed773c92cc1/setup.py'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 4 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at dd51db6359ec
+  in_product: {value: none-found, note: null, source: null}
+notes: CONTRIBUTING.md has no statement on AI.
+checked: 2026-11-05

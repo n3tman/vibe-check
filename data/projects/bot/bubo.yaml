@@ -1,0 +1,40 @@
+slug: bubo
+name: Bubo
+category: bot
+kind: community-management
+homepage: https://github.com/elokapina/bubo
+summary: A community-management bot that creates and maintains rooms and spaces, power levels, aliases
+  and room upgrades, with optional Keycloak user management.
+repos:
+- url: https://github.com/elokapina/bubo
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: null
+  other:
+  - matrix.org community space (#community:matrix.org), sources/community-space.tsv
+maturity: beta
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [docker]
+funding: []
+features:
+  purpose: {value: 'community management (rooms, spaces, power levels, users)', how: claimed, source: 'https://github.com/elokapina/bubo/blob/d62675eb9d3f60e4f068e627e793f9e29a99cbf0/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/elokapina/bubo/blob/d62675eb9d3f60e4f068e627e793f9e29a99cbf0/requirements.txt',
+    note: 'matrix-nio[e2e]'}
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/elokapina/bubo/blob/d62675eb9d3f60e4f068e627e793f9e29a99cbf0/requirements.txt',
+    note: 'matrix-nio[e2e] and python-olm; the README has it keep rooms marked encrypted encrypted'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/elokapina/bubo/blob/d62675eb9d3f60e4f068e627e793f9e29a99cbf0/README.md',
+    note: Docker}
+  config: {value: config.yaml and !bubo commands, how: claimed, source: 'https://github.com/elokapina/bubo/blob/d62675eb9d3f60e4f068e627e793f9e29a99cbf0/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/elokapina/bubo/blob/d62675eb9d3f60e4f068e627e793f9e29a99cbf0/requirements.txt'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2025-09-14), counted at d62675eb9d3f
+  in_product: {value: none-found, note: null, source: null}
+notes: Last commit 2025-09-14; maturity is our reading. The README states the licence as "Apache2".
+checked: 2026-11-05

@@ -1,0 +1,43 @@
+slug: opsdroid
+name: opsdroid
+category: bot
+kind: framework
+homepage: https://opsdroid.dev
+summary: A Python chat-ops bot framework with connectors for many chat networks, Matrix among them, and
+  pluggable skills.
+repos:
+- url: https://github.com/opsdroid/opsdroid
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: stable
+platforms: [server]
+licence: Apache-2.0
+fork_of: null
+distribution: [pypi, docker]
+funding: ['https://opencollective.com/opsdroid']
+features:
+  purpose: {value: chat-ops bot framework (multi-network; Matrix is one connector), how: claimed, source: 'https://github.com/opsdroid/opsdroid/blob/4f1ef7c45a2ed26a95fb88b8fdb7e4deb33bde4a/README.md'}
+  framework: {value: matrix-nio, how: code, source: 'https://github.com/opsdroid/opsdroid/blob/4f1ef7c45a2ed26a95fb88b8fdb7e4deb33bde4a/setup.cfg',
+    note: 'matrix-nio[e2e] and python-olm as an optional extra'}
+  e2ee: {value: 'yes', how: code, source: 'https://github.com/opsdroid/opsdroid/blob/4f1ef7c45a2ed26a95fb88b8fdb7e4deb33bde4a/setup.cfg',
+    note: 'the Matrix connector installs matrix-nio[e2e] and python-olm (connector_matrix_e2e extra)'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/opsdroid/opsdroid/blob/4f1ef7c45a2ed26a95fb88b8fdb7e4deb33bde4a/README.md',
+    note: pip or Docker}
+  config: {value: configuration.yaml with skills and connectors, how: claimed, source: 'https://docs.opsdroid.dev/'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/opsdroid/opsdroid/blob/4f1ef7c45a2ed26a95fb88b8fdb7e4deb33bde4a/setup.cfg',
+    note: 'NLU matchers for Dialogflow, LUIS, Rasa NLU, Watson, wit.ai and SAP CAI (intent parsing, not
+      generative models)'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - 0 of 1 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at 4f1ef7c45a2e
+  in_product: {value: none-found, note: 'No generative-AI feature found; the framework can route messages
+      through hosted NLU intent parsers (Dialogflow, LUIS, Watson, wit.ai) or Rasa.', source: 'https://github.com/opsdroid/opsdroid/blob/4f1ef7c45a2ed26a95fb88b8fdb7e4deb33bde4a/opsdroid/parsers/__init__.py'}
+notes: One non-bot commit in the last 365 days (last 2025-11-24); not archived. matrix.org lists it as
+  "a connector for opsdroid", i.e. its Matrix connector.
+checked: 2026-11-05

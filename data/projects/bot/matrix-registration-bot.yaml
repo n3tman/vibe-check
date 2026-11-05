@@ -1,0 +1,39 @@
+slug: matrix-registration-bot
+name: Matrix Registration Bot
+category: bot
+kind: admin
+homepage: https://github.com/moan0s/matrix-registration-bot
+summary: A bot that creates, lists and revokes Synapse registration tokens from chat, for invitation-based
+  servers.
+repos:
+- url: https://github.com/moan0s/matrix-registration-bot
+  forge: github
+  role: main
+sources:
+  matrix_org_listing: https://matrix.org/ecosystem/integrations/
+  other: []
+maturity: unmaintained
+platforms: [server]
+licence: AGPL-3.0-or-later
+fork_of: null
+distribution: [pypi, docker, ansible-playbook]
+funding: []
+features:
+  purpose: {value: server admin (registration tokens), how: claimed, source: 'https://github.com/moan0s/matrix-registration-bot/blob/600ef746b129adfaf7a2f1a21cdb81732cfc222c/README.md'}
+  framework: {value: simplematrixbotlib, how: code, source: 'https://github.com/moan0s/matrix-registration-bot/blob/600ef746b129adfaf7a2f1a21cdb81732cfc222c/pyproject.toml',
+    note: 'on matrix-nio[e2e]'}
+  e2ee: {value: 'yes', how: claimed, source: 'https://github.com/moan0s/matrix-registration-bot/blob/600ef746b129adfaf7a2f1a21cdb81732cfc222c/README.md',
+    note: '"From version 1.2.0 the bot supports E2E encryption"'}
+  hosting: {value: self-host, how: claimed, source: 'https://github.com/moan0s/matrix-registration-bot/blob/600ef746b129adfaf7a2f1a21cdb81732cfc222c/README.md',
+    note: 'pip, systemd, docker-compose or matrix-docker-ansible-deploy'}
+  config: {value: config file and chat commands, how: claimed, source: 'https://github.com/moan0s/matrix-registration-bot/blob/600ef746b129adfaf7a2f1a21cdb81732cfc222c/README.md'}
+  ai_backend: {value: none-found, how: code, source: 'https://github.com/moan0s/matrix-registration-bot/blob/600ef746b129adfaf7a2f1a21cdb81732cfc222c/pyproject.toml'}
+ai:
+  policy: {value: none-found, quote: null, source: null}
+  dev_usage:
+    value: none-found
+    evidence:
+    - no non-bot commits in the last 365 days (last commit 2023-12-18), counted at 600ef746b129
+  in_product: {value: none-found, note: null, source: null}
+notes: Last commit 2023-12-18, not archived; maturity is our reading.
+checked: 2026-11-05
