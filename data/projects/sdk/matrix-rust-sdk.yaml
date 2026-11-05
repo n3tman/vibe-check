@@ -55,3 +55,9 @@ notes: 'matrix.org lists it as "matrix-rust-sdk" (Stable, Rust, maintainer: Elem
   The Matrix.org Foundation). Last non-bot commit 2026-10-26, 2822 non-bot commits in the last year and 55 authors
   in the last 90 days by our count at b59505e2f598 (the collector recounts).'
 checked: 2026-11-05
+icon:
+  file: matrix-rust-sdk.svg
+  source: "https://github.com/matrix-org/matrix-rust-sdk/blob/b59505e2f5980ced579dd6d4d272583a34cca76e/contrib/logo.svg"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

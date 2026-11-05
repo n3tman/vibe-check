@@ -41,3 +41,9 @@ notes: 'matrix.org lists it as "Trixnity" (Stable, Kotlin, maintainer: connect2x
   636 non-bot commits in the last year and 12 authors in the last 90 days by our count at 2269b0bae464 (the collector
   recounts).'
 checked: 2026-11-05
+icon:
+  file: trixnity.webp
+  source: "https://gitlab.com/connect2x/trixnity/trixnity/-/blob/2269b0bae464a9be387bf19770d470051923d352/website/static/img/logo.png"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

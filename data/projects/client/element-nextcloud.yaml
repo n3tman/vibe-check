@@ -81,3 +81,10 @@ notes: >-
   A packaging of Element Web, not a fork with its own features; it follows Element Web releases ("Update
   Element Web to v1.12.33", 2026-11-01). Features: see element-web. Not affiliated with Element.
 checked: '2026-11-05'
+icon:
+  file: element-nextcloud.svg
+  source: "https://github.com/gary-kim/riotchat/blob/5f11e302878bc00eb8fe857b9c520115544669a2/img/app-dark.svg"
+  licence: "AGPL-3.0-or-later"
+  note: "the app's own Nextcloud app icon (dark variant of img/app.svg, named in appinfo/info.xml)"
+  backing: light
+  checked: 2026-11-05

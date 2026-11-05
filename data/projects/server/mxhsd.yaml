@@ -35,3 +35,9 @@ ai:
     source: null
 notes: matrix.org labels it "Obsolete". Last push 2018-10-19 (GitHub API); not cloned or MSC-scanned.
 checked: '2026-11-05'
+icon:
+  file: mxhsd.webp
+  source: "https://github.com/kamax-matrix/mxhsd/blob/710692052f2e349a1ab415246dc5bf04bb46af98/media/mx-hs-icon.png"
+  licence: "AGPL-3.0-or-later"
+  note: null
+  checked: 2026-11-05

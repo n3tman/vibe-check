@@ -44,3 +44,9 @@ notes: 'matrix.org lists it as "Ruma" (Stable, Rust, maintainer: Ruma team). Las
   non-bot commits in the last year and 17 authors in the last 90 days by our count at 67ed21477e29 (the collector
   recounts).'
 checked: 2026-11-05
+icon:
+  file: ruma.webp
+  source: "https://avatars.githubusercontent.com/u/16043271?v=4&s=256"
+  licence: null
+  note: "the Ruma organisation's avatar on GitHub"
+  checked: 2026-11-05

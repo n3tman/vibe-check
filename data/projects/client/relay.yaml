@@ -169,3 +169,9 @@ ai:
     source: null
 notes: null
 checked: '2026-11-05'
+icon:
+  file: relay.webp
+  source: "https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/docs/logo-256@2x.png"
+  licence: "Apache-2.0"
+  note: null
+  checked: 2026-11-05

@@ -34,3 +34,9 @@ notes: 'matrix.org lists it as "Matrix Nim SDK" (Obsolete, Nim, maintainer: dylh
   0 non-bot commits in the last year and 0 authors in the last 90 days by our count at 3061909368d0 (the collector
   recounts).'
 checked: 2026-11-05
+icon:
+  file: matrix-nim-sdk.webp
+  source: "https://github.com/dylhack/matrix-nim-sdk/blob/3061909368d00ea05f0eaeedd08e7ea6de16e5ed/assets/logo.jpg"
+  licence: "GPL-3.0"
+  note: null
+  checked: 2026-11-05

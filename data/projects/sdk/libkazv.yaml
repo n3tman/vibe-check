@@ -38,3 +38,9 @@ notes: 'matrix.org lists it as "libkazv" (Beta, C++, maintainer: The Kazv Projec
   37 non-bot commits in the last year and 1 authors in the last 90 days by our count at 4d1c8b10a7fd (the collector
   recounts).'
 checked: 2026-11-05
+icon:
+  file: libkazv.webp
+  source: "https://r.lily-is.land/the-kazv-project/kazv/src/commit/2f1ad32c77463562868ad2806928b9c2a16094f1/icons/kazv.ico"
+  licence: "AGPL-3.0-or-later"
+  note: "the kazv project's logo, from the kazv client's repository (libkazv is its library)"
+  checked: 2026-11-05

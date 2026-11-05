@@ -36,3 +36,9 @@ ai:
   in_product: {value: none-found, note: null, source: null}
 notes: LICENSE.txt and maubot.yaml state AGPL-3.0-or-later. Maturity is our reading.
 checked: 2026-11-05
+icon:
+  file: alertbot.webp
+  source: "https://github.com/moan0s/alertbot/blob/8f94dc08afd7ca263a1896626347e8986f94c6b7/assets/alert.png"
+  licence: "AGPL-3.0-or-later"
+  note: "the bot's picture from the repo's assets folder"
+  checked: 2026-11-05
