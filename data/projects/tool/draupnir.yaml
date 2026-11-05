@@ -17,7 +17,7 @@ platforms: [server]
 licence: AFL-3.0
 fork_of: mjolnir
 distribution: [docker]
-funding: ['https://opencollective.com/draupnir']
+funding: ['https://opencollective.com/draupnir', 'https://nlnet.nl/project/Draupnir/']
 features:
   purpose: {value: 'moderation (policy lists, bans, protections)', how: claimed, source: 'https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/README.md'}
   framework: {value: matrix-bot-sdk and matrix-protection-suite, how: code, source: 'https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/apps/draupnir/package.json',
@@ -36,8 +36,30 @@ ai:
     evidence:
     - 0 of 74 non-bot commits in the last 365 days carry an AI attribution (0.0%), counted at d57af49a6a97
   in_product: {value: none-found, note: null, source: null}
+  funder_policy:
+  - funder: NLnet Foundation (NGI Zero Core fund)
+    grant: https://nlnet.nl/project/Draupnir/
+    grant_start: 2024-04
+    grant_source: https://github.com/the-draupnir-project/Draupnir/blob/d57af49a6a971f1d112106cfe1d5be5cd3aa1c76/README.md
+    policy: https://nlnet.nl/foundation/policies/generativeAI/2.0/
+    policy_version: 2.0, in force since 2026-10-20 (1.0 2025-12-08, 1.1 2026-01-26)
+    value: banned
+    quote: It is not allowed to use generative AI for producing artefacts of any kind, including code,
+      design, and documentation. It is allowed to employ GenAI in a read-only manner … Even if you use
+      GenAI in a read-only manner, you should always be transparent about it.
+    scope: work delivered within the NLnet-funded grant, not the project as a whole or outside contributors
+    transition: 'NLnet FAQ: exceptions exist "for projects within NGI Zero programmes, because these were
+      already in flight during the publication of the version 2.0"; the named transitional funds are NGI
+      Zero Commons Fund, NGI Taler and Fediversity, which may keep following v1.1. Which version binds
+      this NGI Zero Core grant is not stated on the pages checked. https://nlnet.nl/foundation/policies/generativeAI/faq/'
+    transparency: The policy asks grantees to summarise their stance on GenAI in the README and website;
+      no such statement found in the README at the checked commit.
+    checked: 2026-11-05
 notes: 'Licence: the code is AFL-3.0 per matrix.org, with other files under the licences in LICENSES/
   (REUSE layout; the README is CC-BY-SA-4.0). Policy on AI: an open issue by the lead maintainer (https://github.com/the-draupnir-project/Draupnir/issues/990,
   "Formalise LLM Policy: Liberation for Synthetics", 2025-10-29) discusses LLMs, but no contribution rule
-  had been adopted in CONTRIBUTING.md at the checked commit, so the policy reads none-found.'
+  had been adopted in CONTRIBUTING.md at the checked commit, so the policy reads none-found. Funding:
+  NLnet NGI Zero Core grant (from 2024-04) per the README and https://nlnet.nl/project/Draupnir/; NLnet''s
+  own GenAI policy for funded work is recorded under ai.funder_policy, separately from the project''s
+  own policy. No AI-attributed commits were found in the last 365 days.'
 checked: 2026-11-05

@@ -40,6 +40,9 @@ ai:
     - 'tools named in attributions: claude'
     - 'example: ad09fc6bb9fa (Co-Authored-By: Claude)'
     - 'example: 57fed281ba6c (Co-Authored-By: Claude)'
+    - '1 merged pull request(s) since 2025-11-05 whose description explicitly discloses AI help (squash
+      merges can drop this from git history): https://github.com/etkecc/baibot/pull/150 (Generated with
+      [Claude)'
   in_product: {value: core, note: 'The product is an LLM front-end: chat, voice transcription, speech
       synthesis and image generation through the configured providers.', source: 'https://github.com/etkecc/baibot/blob/3cb5a46fdc3d78e8d9b5dcf989f35e5d4b9e8a02/README.md'}
 notes: Maintained by etke.cc. The AI-attributed commits are Co-Authored-By Claude trailers. No contribution

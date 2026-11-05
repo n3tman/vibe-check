@@ -37,8 +37,16 @@ ai:
     - 1 of 337 non-bot commits in the last 365 days carry an AI attribution (0.3%), counted at 7d6b0786e1bc
     - 'tools named in attributions: claude'
     - 'example: 2c367f323496 (Co-Authored-By: Claude)'
-    - below the 1 % threshold for occasional; set to occasional because attributed commits exist (lane
-      7 may revise)
+    - '2 merged pull request(s) since 2025-11-05 whose description explicitly discloses AI help (squash
+      merges can drop this from git history): https://github.com/etkecc/ketesa/pull/1380 (Written with
+      the help of Claude); https://github.com/etkecc/ketesa/pull/1109 (Generated with [Claude)'
+    - below the 1 % threshold for occasional; set to occasional because AI-attributed commits or AI-disclosing
+      pull requests exist (lane 7 may revise)
+    - 'git history alone undercounts: two merged external PRs disclose Claude in their descriptions (#1109
+      "Generated with Claude Code", #1380 "Written with the help of Claude") but were squash-merged without
+      trailers; AGENTS.md (agent instructions) added by the lead maintainer on 2026-10-24. The lead maintainer''s
+      own commits (282 of 337 non-bot commits) carry no AI attribution, so their use, if any, is not visible;
+      attribution is a lower bound'
   in_product: {value: none-found, note: null, source: null}
 notes: '"the evolution of Synapse Admin" (matrix.org listing); it began as a fork of Awesome-Technologies/synapse-admin.
   AGENTS.md was added on 2026-10-24. CONTRIBUTING has no statement on AI-made contributions.'
