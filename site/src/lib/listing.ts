@@ -2,7 +2,9 @@
 // without this script; it only hides and reorders what the server rendered.
 type Item = {
   slug: string; name: string; kind: string; status: string; os: string[]; mobile: boolean; stars: number | null;
-  authors90: number | null; commits365: number | null; lastCommit: string | null; policy: string; dev: string; product: string;
+  authors90: number | null; commits365: number | null; lastCommit: string | null;
+  commits90: number | null; commitsAll: number | null; authors365: number | null; authorsAll: number | null; tags365: number | null;
+  firstCommit: string | null; mscs: number | null; busFactor: number | null; loc: number | null; policy: string; dev: string; product: string;
 };
 const STATUS_RANK = ['active', 'small-team', 'slowing', 'dormant', 'abandoned', 'archived', 'no-repo', 'unknown'];
 const DESKTOP = ['windows', 'macos', 'linux'];
@@ -40,6 +42,15 @@ export function initListing() {
       case 'activity': return -(it.commits365 ?? -1);
       case 'authors': return -(it.authors90 ?? -1);
       case 'stars': return -(it.stars ?? -1);
+      case 'commits90': return -(it.commits90 ?? -1);
+      case 'commitsAll': return -(it.commitsAll ?? -1);
+      case 'authors365': return -(it.authors365 ?? -1);
+      case 'authorsAll': return -(it.authorsAll ?? -1);
+      case 'releases': return -(it.tags365 ?? -1);
+      case 'bus': return -(it.busFactor ?? -1);
+      case 'loc': return -(it.loc ?? -1);
+      case 'mscs': return -(it.mscs ?? -1);
+      case 'oldest': return it.firstCommit ? Date.parse(it.firstCommit) : Number.MAX_SAFE_INTEGER;
       case 'recent': return -(it.lastCommit ? Date.parse(it.lastCommit) : 0);
       case 'status': return STATUS_RANK.indexOf(it.status);
       default: return it.name.toLowerCase();
