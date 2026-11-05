@@ -3,8 +3,8 @@ name: Lightning
 category: client
 kind: desktop
 homepage: https://www.lightning-matrix.org
-summary: A native Qt 6/QML desktop Matrix client on the official Rust matrix-sdk, with local search
-  of encrypted rooms and MatrixRTC group calls.
+summary: A native Qt 6/QML desktop Matrix client on the official Rust matrix-sdk, with local search of
+  encrypted rooms and MatrixRTC group calls.
 repos:
 - url: https://github.com/Mizerd/lightning
   forge: github
@@ -149,8 +149,8 @@ features:
     value: partial
     how: claimed
     source: https://github.com/Mizerd/lightning/blob/41fecea7b2212ebaa934ce4a46929d6d10881aaf/CONTRIBUTING.md
-    note: Qt 6 + C++20 + Rust with CMake and Nix; GPL-3.0-or-later. Development happens on a private
-      GitLab that force-pushes to the GitHub mirror.
+    note: Qt 6 + C++20 + Rust with CMake and Nix; GPL-3.0-or-later. Development happens on a private GitLab
+      that force-pushes to the GitHub mirror.
 ai:
   policy:
     value: none-found
@@ -159,21 +159,18 @@ ai:
   dev_usage:
     value: regular
     evidence:
-    - >-
-      CLAUDE.md: "the authoritative operating guide for Claude Code, Codex, and other coding agents
-      working in this repository"; CONTRIBUTING.md points contributors to it.
-    - >-
-      CLAUDE.md records a 2026-08-11 history rewrite "stripping AI co-author/session trailers so
-      the GitHub mirror credits only him", so attributed commits cannot be counted (0 of about 2,730
-      in the last 365 days after the rewrite).
-    - >-
-      Earlier .claude/agents/*.md role definitions and an AGENTS.md were removed on 2026-08-17 (per
-      CLAUDE.md).
+    - 'CLAUDE.md: "the authoritative operating guide for Claude Code, Codex, and other coding agents working
+      in this repository"; CONTRIBUTING.md points contributors to it.'
+    - CLAUDE.md records a 2026-08-11 history rewrite "stripping AI co-author/session trailers so the GitHub
+      mirror credits only him", so attributed commits cannot be counted (0 of about 2,730 in the last
+      365 days after the rewrite).
+    - Earlier .claude/agents/*.md role definitions and an AGENTS.md were removed on 2026-08-17 (per CLAUDE.md).
+    collector_override: the project rewrote its history on 2026-08-11 to strip AI co-author trailers (stated
+      in its CLAUDE.md), so the commit count reads zero; CLAUDE.md is the working guide for coding agents.
   in_product:
     value: none-found
     note: null
     source: null
-notes: >-
-  matrix.org maturity: Beta. dev_usage is set to regular from the project's own CLAUDE.md, not from
-  trailer counts, which were removed from history.
+notes: 'matrix.org maturity: Beta. dev_usage is set to regular from the project''s own CLAUDE.md, not
+  from trailer counts, which were removed from history.'
 checked: '2026-11-05'

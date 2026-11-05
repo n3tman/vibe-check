@@ -60,6 +60,16 @@ def ensure_scc(bin_dir: Path) -> Path | None:
     return target
 
 
+# scc "languages" that are prose, data or packaging rather than code; left out of lines of code
+# and of the language shares, as forges' language bars leave them out.
+NON_CODE = {
+    "License", "Markdown", "Plain Text", "ReStructuredText", "AsciiDoc", "Org", "TeX", "Gemini",
+    "JSON", "JSONL", "YAML", "TOML", "XML", "CSV", "TSV", "INI", "Properties File", "SVG", "Gettext",
+    "XML Schema", "Docker ignore", "gitignore", "gitattributes", "Patch", "Autoconf",
+    "Freemarker Template", "Mustache", "Handlebars",
+}
+
+
 def count(url: str, scc: Path, tmp_root: Path) -> tuple[dict[str, int] | None, dict[str, int] | None]:
     """(code lines by language, bytes by language) for the default branch's tip."""
     tmp_root.mkdir(parents=True, exist_ok=True)
@@ -75,7 +85,8 @@ def count(url: str, scc: Path, tmp_root: Path) -> tuple[dict[str, int] | None, d
         if r.returncode != 0:
             return None, None
         data = json.loads(r.stdout or b"[]")
-    lines = {d["Name"]: int(d["Code"]) for d in data if d.get("Code")}
-    sizes = {d["Name"]: int(d["Bytes"]) for d in data if d.get("Bytes")}
+    code = [d for d in data if d.get("Name") not in NON_CODE] or data  # a repo of only YAML stays YAML
+    lines = {d["Name"]: int(d["Code"]) for d in code if d.get("Code")}
+    sizes = {d["Name"]: int(d["Bytes"]) for d in code if d.get("Bytes")}
     lines = dict(sorted(lines.items(), key=lambda kv: -kv[1]))
     return lines, sizes

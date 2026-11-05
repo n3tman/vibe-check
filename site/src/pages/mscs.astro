@@ -9,19 +9,26 @@ const servers = d.projects.filter((p) => p.category === 'server');
 const byServer = new Map(servers.map((s) => [s.slug, new Map((((s.features as any)?.msc ?? []) as any[]).map((x) => [x.msc, x]))]));
 const known = new Set(d.mscs.map((m) => m.msc));
 const extra = [...new Set(servers.flatMap((s) => [...byServer.get(s.slug)!.keys()]))].filter((n) => !known.has(n)).sort((a, b) => a - b);
-// What users notice first (lane 4's order), then the rest by number.
-const KEY = [4186, 3575, 3861, 4191, 4108, 3916, 4143, 4195, 4140, 3440, 3771, 3773, 4306, 4284, 2545, 1767, 3814, 4133, 4222, 4380, 4155, 4323, 2666, 1772];
-const keyRank = new Map(KEY.map((n, i) => [n, i]));
-const rows = [...d.mscs.map((m) => ({ msc: m.msc, title: m.title, status: m.status, spec: m.spec_version, url: m.url })), ...extra.map((n) => ({ msc: n, title: null, status: null, spec: null, url: null }))]
-  .sort((a, b) => (keyRank.get(a.msc) ?? 1e6) - (keyRank.get(b.msc) ?? 1e6) || a.msc - b.msc);
-const nKey = rows.filter((r) => keyRank.has(r.msc)).length;
+// Sort by how widely each MSC is implemented, and servers by how many MSCs they implement, so the
+// dense part of the matrix comes first. MSCs with fewer than MIN_SERVERS implementations fold away.
+const MIN_SERVERS = 4;
+const KEY = new Set([4186, 3861, 3916, 4143, 4140, 3440, 4284, 2545, 4108, 4191]);
+const supported = (x: any) => x && x.state !== 'removed';
+const support = (n: number) => servers.filter((s) => supported(byServer.get(s.slug)!.get(n))).length;
+const allRows = [...d.mscs.map((m) => ({ msc: m.msc, title: m.title, status: m.status, spec: m.spec_version, url: m.url })), ...extra.map((n) => ({ msc: n, title: null, status: null, spec: null, url: null }))]
+  .map((r) => ({ ...r, n: support(r.msc), key: KEY.has(r.msc) }))
+  .filter((r) => r.n > 0 || r.key)
+  .sort((a, b) => b.n - a.n || a.msc - b.msc);
+const rows = allRows.filter((r) => r.n >= MIN_SERVERS || r.key);
+const tail = allRows.filter((r) => !(r.n >= MIN_SERVERS || r.key));
+const unimplemented = d.mscs.length - allRows.filter((r) => known.has(r.msc)).length;
 // Spec versions each server advertises in /_matrix/client/versions.
 const verKey = (v: string) => { const m = /^v(\d+)\.(\d+)/.exec(v); return m ? +m[1] * 1000 + +m[2] : /^r0/.test(v) ? 0 : -1; };
 const specRows = servers
   .map((s) => { const sv = (s.features as any)?.spec_versions; const vs: string[] = (sv?.versions ?? []).filter((v: unknown) => typeof v === 'string'); return { s, vs: [...vs].sort((a, b) => verKey(a) - verKey(b)), src: sv?.source ?? null }; })
   .filter((r) => r.vs.length > 0)
   .sort((a, b) => verKey(b.vs[b.vs.length - 1]) - verKey(a.vs[a.vs.length - 1]) || a.s.name.localeCompare(b.s.name));
-const cols = servers.filter((s) => byServer.get(s.slug)!.size > 0);
+const cols = servers.filter((s) => byServer.get(s.slug)!.size > 0).sort((a, b) => byServer.get(b.slug)!.size - byServer.get(a.slug)!.size || a.name.localeCompare(b.name));
 const ICON: Record<string, string> = { stable: 'check', unstable: 'partial', experimental: 'clock', partial: 'partial', removed: 'cross' };
 ---
 <Base title="Servers × MSCs" wide>
@@ -52,36 +59,53 @@ const ICON: Record<string, string> = { stable: 'check', unstable: 'partial', exp
     </section>
   )}
   <h2>MSC support</h2>
-  <p class="muted small">The first {nKey} rows are the proposals users notice most (sliding sync, next-gen auth, authenticated media, MatrixRTC, threads, policy servers, custom emoji, …); the rest follow by number.</p>
+  <p class="muted small">
+    Rows are sorted by how many servers implement the MSC, columns by how many MSCs each server implements. The {rows.length} rows shown are implemented by {MIN_SERVERS} or more servers,
+    plus a few that matter to users (★: sliding sync, next-gen auth, authenticated media, MatrixRTC, threads, policy servers, custom emoji). {tail.length} more, each found in one or two servers, are folded below;
+    {unimplemented} catalogued MSCs were found in no server's code.
+  </p>
+  <ul class="legend small" aria-label="Legend">
+    <li><span class="mcell" data-s="stable"><Icon name="check" size={12} /></span> stable or always on</li>
+    <li><span class="mcell" data-s="unstable"><Icon name="partial" size={12} /></span> unstable prefix, on by default, or partial</li>
+    <li><span class="mcell" data-s="experimental"><Icon name="clock" size={12} /></span> behind a flag</li>
+    <li><span class="mcell" data-s="removed"><Icon name="cross" size={12} /></span> removed</li>
+    <li><span class="mcell" data-s="none">·</span> not found in the code</li>
+  </ul>
   {rows.length === 0 || cols.length === 0 ? (
     <p class="empty">No MSC data yet: the servers lane writes <code>data/mscs.yaml</code> and the server files.</p>
   ) : (
-    <div class="table-wrap">
-      <table class="data matrix">
-        <caption class="sr-only">MSC support by server</caption>
-        <thead>
-          <tr><th scope="col">MSC</th><th scope="col">Spec status</th>{cols.map((s) => <th scope="col" class="rot"><a href={href(`p/${s.slug}/`)}>{s.name}</a></th>)}</tr>
-        </thead>
-        <tbody>
-          {rows.map((r) => (
-            <tr>
-              <th scope="row" style="font-weight:500;min-width:14rem"><a href={r.url ?? `https://github.com/matrix-org/matrix-spec-proposals/pull/${r.msc}`}>MSC{r.msc}</a>{r.title && <span class="muted"> {r.title}</span>}</th>
-              <td>{r.status ? `${r.status}${r.spec ? `, ${r.spec}` : ''}` : <span class="muted">not catalogued</span>}</td>
-              {cols.map((s) => {
-                const x = byServer.get(s.slug)!.get(r.msc);
-                return (
-                  <td class="cell">
-                    {x ? (x.source ? <a class="mcell" data-s={x.state} href={x.source} title={x.flag ? `flag: ${x.flag}` : undefined}><Icon name={ICON[x.state] ?? 'dot'} size={12} />{x.state}</a>
-                         : <span class="mcell" data-s={x.state}><Icon name={ICON[x.state] ?? 'dot'} size={12} />{x.state}</span>)
-                       : <span class="mcell" data-s="none"><Icon name="question" size={12} />not found</span>}
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+    [{ list: rows, label: null }, { list: tail, label: `${tail.length} MSCs found in one or two servers` }].filter((g) => g.list.length).map((g) => {
+      const table = (
+        <div class="table-wrap matrix-wrap">
+          <table class="data matrix">
+            <caption class="sr-only">MSC support by server</caption>
+            <thead>
+              <tr><th scope="col" class="mcol">MSC</th><th scope="col">Spec</th><th scope="col">Servers</th>{cols.map((s) => <th scope="col"><a href={href(`p/${s.slug}/`)}>{s.name}</a></th>)}</tr>
+            </thead>
+            <tbody>
+              {g.list.map((r) => (
+                <tr>
+                  <th scope="row" class="mcol"><a href={r.url ?? `https://github.com/matrix-org/matrix-spec-proposals/pull/${r.msc}`}>{r.key && <span title="matters to users">★ </span>}MSC{r.msc}</a>{r.title && <span class="muted"> {r.title}</span>}</th>
+                  <td class="small" style="white-space:nowrap">{r.status ? `${r.status}${r.spec ? `, ${r.spec}` : ''}` : <span class="muted">not catalogued</span>}</td>
+                  <td class="small" style="text-align:center">{r.n}</td>
+                  {cols.map((s) => {
+                    const x = byServer.get(s.slug)!.get(r.msc);
+                    return (
+                      <td class="cell">
+                        {x ? (x.source ? <a class="mcell" data-s={x.state} href={x.source} title={x.flag ? `${x.state}, flag: ${x.flag}` : x.state}><Icon name={ICON[x.state] ?? 'dot'} size={12} /><span class="mlabel">{x.state}</span></a>
+                             : <span class="mcell" data-s={x.state} title={x.state}><Icon name={ICON[x.state] ?? 'dot'} size={12} /><span class="mlabel">{x.state}</span></span>)
+                           : <span class="mcell" data-s="none" title="not found"><span aria-hidden="true">·</span><span class="sr-only">not found</span></span>}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+      return g.label ? <details class="panel" style="margin-top:1rem"><summary>{g.label}</summary>{table}</details> : table;
+    })
   )}
   <p class="muted small" style="margin-top:1rem">“Not found” means nobody found it in that server's code or docs, not that it is missing.</p>
 </Base>

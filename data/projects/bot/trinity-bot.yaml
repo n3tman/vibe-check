@@ -14,24 +14,47 @@ sources:
   other:
   - GitHub search, repositories sorted by stars, 2026-11-05
 maturity: beta
-platforms: [server]
+platforms:
+- server
 licence: LGPL-2.1-only
 fork_of: null
-distribution: [docker]
+distribution:
+- docker
 funding: []
 features:
-  purpose: {value: bot framework with WebAssembly modules, how: claimed, source: 'https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/README.md'}
-  framework: {value: matrix-rust-sdk, how: code, source: 'https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/Cargo.toml',
-    note: matrix-sdk 0.19}
-  e2ee: {value: not-found, how: claimed, source: 'https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/README.md',
-    note: built on matrix-rust-sdk; the README says nothing about encrypted rooms}
-  hosting: {value: self-host, how: claimed, source: 'https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/README.md',
-    note: binary or Docker image}
-  config: {value: config file and per-room module commands, how: claimed, source: 'https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/README.md'}
-  ai_backend: {value: OpenAI, how: code, source: 'https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/modules/openai/src/lib.rs',
-    note: the openai module calls api.openai.com/v1/completions with text-davinci-003}
+  purpose:
+    value: bot framework with WebAssembly modules
+    how: claimed
+    source: https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/README.md
+  framework:
+    value: matrix-rust-sdk
+    how: code
+    source: https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/Cargo.toml
+    note: matrix-sdk 0.19
+  e2ee:
+    value: not-found
+    how: claimed
+    source: https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/README.md
+    note: built on matrix-rust-sdk; the README says nothing about encrypted rooms
+  hosting:
+    value: self-host
+    how: claimed
+    source: https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/README.md
+    note: binary or Docker image
+  config:
+    value: config file and per-room module commands
+    how: claimed
+    source: https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/README.md
+  ai_backend:
+    value: OpenAI
+    how: code
+    source: https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/modules/openai/src/lib.rs
+    note: the openai module calls api.openai.com/v1/completions with text-davinci-003
 ai:
-  policy: {value: none-found, quote: null, source: null}
+  policy:
+    value: none-found
+    quote: null
+    source: null
   dev_usage:
     value: occasional
     evidence:
@@ -42,8 +65,12 @@ ai:
       LLMs")'
     - the one attributed commit (60198e0b2dc4) says the redb migration tool "has been generated with LLMs",
       reviewed by the author
-  in_product: {value: optional, note: An optional openai module answers prompts through OpenAI's completions
-      API., source: 'https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/modules/openai/src/lib.rs'}
+    collector_override: the attributed commit says the code "has been generated with LLMs" in prose, which
+      the collector's pattern does not match; the merged pull request discloses the same.
+  in_product:
+    value: optional
+    note: An optional openai module answers prompts through OpenAI's completions API.
+    source: https://github.com/bnjbvr/trinity/blob/c7b373b8eea11442938b15ce64413d3bfb956b83/modules/openai/src/lib.rs
 notes: Slug trinity-bot to avoid a clash with any client of that name. Check the LGPL variant (-only vs
   -or-later) in the source headers before reuse.
 checked: 2026-11-05

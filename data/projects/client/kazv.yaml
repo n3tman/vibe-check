@@ -101,14 +101,16 @@ ai:
     quote: null
     source: null
   dev_usage:
-    value: none-found
+    value: occasional
     evidence:
-    - No attributed commits among 61 non-bot commits in the last 365 days; no agent files.
+    - https://r.lily-is.land/the-kazv-project/kazv/commit/6232d174ed332b85004d457d7bf8115861bf0dd5
+    - 'Integration pass: 1 of 61 non-bot commits in the last 365 days (2026-09-02) says "The code of this
+      diff was generated using OpenCode with the MiMo V2.5 Free model … I reviewed it myself." The contributing
+      page (https://kazv.chat/en/contributing/, read 2026-11-05) has no statement on AI.'
   in_product:
     value: none-found
     note: null
     source: null
-notes: >-
-  matrix.org maturity: Beta. The contributing guide is at https://kazv.chat/en/contributing/ (not
-  checked for an AI policy).
+notes: 'matrix.org maturity: Beta. The contributing guide is at https://kazv.chat/en/contributing/ (not
+  checked for an AI policy).'
 checked: '2026-11-05'
