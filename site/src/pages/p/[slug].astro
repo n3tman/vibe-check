@@ -10,7 +10,7 @@ import Platforms from '../../components/Platforms.astro';
 import ProjectIcon from '../../components/ProjectIcon.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { dataset, type Entry } from '../../lib/data.ts';
-import { AXES, CATEGORY_LABEL, STATE_TEXT, ago, features, fmtDate, fmtNum, host, href, osList, pct, statusOf, type Axis } from '../../lib/view.ts';
+import { AXES, CATEGORY_LABEL, STATE_TEXT, dateStat, features, fmtDate, fmtNum, host, href, osList, pct, splitTag, statusOf, type Axis } from '../../lib/view.ts';
 
 export function getStaticPaths() {
   return dataset().projects.map((p) => ({ params: { slug: p.slug }, props: { p } }));
@@ -48,6 +48,33 @@ const override = (p.ai.dev_usage as any).collector_override as string | undefine
 const sec = c?.security_policy as string | null | undefined;
 const ciRepos = okRepos.filter((r) => r.ci?.length);
 const linkText = (s: unknown) => (Array.isArray(s) ? s : s ? [s] : []) as string[];
+const collectorLine = c?.ai
+  ? `Collector: ${c.ai.attributed_commits_365d} of ${fmtNum(c.ai.commits_365d)} commits in the last year credit an AI tool (${pct(c.ai.share_365d)})${Object.keys(c.ai.tools ?? {}).length ? `: ${Object.entries(c.ai.tools).map(([k, v]) => `${k} ${v}`).join(', ')}` : ''}. ${c.ai.agent_files} agent file${c.ai.agent_files === 1 ? '' : 's'}, ${c.ai.workflows} AI workflow${c.ai.workflows === 1 ? '' : 's'}. A lower bound: most AI use leaves no trace.`
+  : null;
+const collectorDisagrees = !!(c?.ai?.suggested_dev_usage && c.ai.suggested_dev_usage !== p.ai.dev_usage.value);
+// When every axis is "none found" and there is no quote or evidence to show, one line says it
+// instead of three near-empty panels.
+const aiNothing = (Object.keys(AXES) as Axis[]).every((ax) => (p.ai as any)[ax].value === 'none-found')
+  && !(p.ai.policy as any).quote && !(p.ai.in_product as any).quote && !collectorDisagrees
+  && !agentFiles.length && !aiWorkflows.length && !aiExamples.length && !aiBots.length;
+const aiNotes = (Object.keys(AXES) as Axis[]).map((ax) => ({ ax, note: (p.ai as any)[ax].note as string | null | undefined, source: (p.ai as any)[ax].source as string | null | undefined })).filter((x) => x.note || x.source);
+type Stat = { label: string; icon?: string; value: string; sub: string; nil?: boolean; tag?: { version: string; prefix: string | null } };
+const lastCommit = dateStat(c?.last_commit, fetched);
+const stats: Stat[] = !c ? [] : [
+  lastCommit ? { label: 'Last commit', value: lastCommit.big, sub: lastCommit.small } : { label: 'Last commit', value: '—', sub: 'none found', nil: true },
+  { label: 'Commits, last year', value: fmtNum(c.commits_365d), sub: `${fmtNum(c.commits_90d)} in 90 days` },
+  { label: 'Authors, 90 days', icon: 'users', value: fmtNum(c.authors_90d), sub: `${fmtNum(c.authors_365d)} in a year, ${fmtNum(c.authors_all)} ever` },
+  c.bus_factor_365d != null
+    ? { label: 'Bus factor', value: String(c.bus_factor_365d), sub: "authors making half of last year's commits" }
+    : { label: 'Bus factor', value: '—', sub: 'no commits in the last year', nil: true },
+  c.last_tag
+    ? { label: 'Last release', icon: 'tag', value: c.last_tag, tag: splitTag(c.last_tag), sub: `${fmtDate(c.last_tag_date)} · ${c.tags_365d} tag${c.tags_365d === 1 ? '' : 's'} in a year` }
+    : { label: 'Last release', icon: 'tag', value: '—', sub: 'no tags', nil: true },
+  // The forge APIs used today don't report these; the tiles appear once they do.
+  ...(c.stars != null ? [{ label: 'Stars', icon: 'star', value: fmtNum(c.stars), sub: c.forks != null ? `${fmtNum(c.forks)} forks` : '' }] : []),
+  ...(c.open_issues != null || c.open_prs != null ? [{ label: 'Open issues / PRs', value: `${fmtNum(c.open_issues)} / ${fmtNum(c.open_prs)}`, sub: c.issue_first_response_median_days != null ? `median first response ${c.issue_first_response_median_days} days` : 'first response: not measured' }] : []),
+  { label: 'Lines of code', icon: 'code', value: fmtNum(c.loc_total), sub: c.main_language ?? '' },
+];
 const axisSource: Record<Axis, { quote?: string | null; source?: string | null; note?: string | null }> = {
   policy: p.ai.policy as any,
   dev_usage: { note: (p.ai.dev_usage as any).note ?? null },
@@ -75,15 +102,18 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
   </header>
 
   {c ? (
-    <dl class="stats">
-      <div class="stat"><dt>Last commit</dt><dd>{ago(c.last_commit, fetched)}<small>{fmtDate(c.last_commit)}</small></dd></div>
-      <div class="stat"><dt>Commits, last year</dt><dd>{fmtNum(c.commits_365d)}<small>{fmtNum(c.commits_90d)} in 90 days</small></dd></div>
-      <div class="stat"><dt><Icon name="users" size={12} />Authors, 90 days</dt><dd>{fmtNum(c.authors_90d)}<small>{fmtNum(c.authors_365d)} in a year, {fmtNum(c.authors_all)} ever</small></dd></div>
-      <div class="stat"><dt>Bus factor</dt><dd>{c.bus_factor_365d ?? '—'}<small>authors making half of last year's commits</small></dd></div>
-      <div class="stat"><dt><Icon name="tag" size={12} />Last release</dt><dd>{c.last_tag ?? '—'}<small>{c.last_tag_date ? `${fmtDate(c.last_tag_date)} · ${c.tags_365d} tags in a year` : 'no tags'}</small></dd></div>
-      <div class="stat"><dt><Icon name="star" size={12} />Stars</dt><dd>{fmtNum(c.stars)}<small>{c.forks != null ? `${fmtNum(c.forks)} forks` : 'forge did not say'}</small></dd></div>
-      <div class="stat"><dt>Open issues / PRs</dt><dd>{fmtNum(c.open_issues)} / {fmtNum(c.open_prs)}<small>{c.issue_first_response_median_days != null ? `median first response ${c.issue_first_response_median_days} days` : 'first response: not measured'}</small></dd></div>
-      <div class="stat"><dt><Icon name="code" size={12} />Lines of code</dt><dd>{fmtNum(c.loc_total)}<small>{c.main_language ?? ''}</small></dd></div>
+    <dl class="stats" style={`--cols:${stats.length <= 6 ? stats.length : Math.ceil(stats.length / 2)};--cols-md:${stats.length % 3 === 0 ? 3 : 2}`}>
+      {stats.map((t) => (
+        <div class:list={['stat', { nil: t.nil }]}>
+          <dt>{t.icon && <Icon name={t.icon} size={12} />}{t.label}</dt>
+          <dd>
+            {t.tag ? (
+              <><span class:list={['tagv', { long: t.tag.version.length > 12 }]} title={c!.last_tag ?? undefined}>{t.tag.version}</span>{t.tag.prefix && <span class="tagp" title={t.tag.prefix}>{t.tag.prefix}</span>}</>
+            ) : t.value}
+            <small>{t.sub}</small>
+          </dd>
+        </div>
+      ))}
     </dl>
   ) : p.repos.length === 0 ? (
     <p class="callout">No public source repository is listed, so there are no activity metrics. Features and AI policy below are from the project's own pages.</p>
@@ -93,7 +123,24 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
 
   <section aria-labelledby="ai-h">
     <h2 id="ai-h"><Icon name="sparkle" size={20} /> AI</h2>
-    <div class="ai-axes">
+    {aiNothing ? (
+      <div class="panel ai-none">
+        <div class="ai-none-head">
+          <p><strong>Nothing found on any of the three axes.</strong> <a href={href('methodology/#ai-axes')}>What we look for</a></p>
+          <span class="aimarks" role="group" aria-label="AI marks">
+            {(Object.keys(AXES) as Axis[]).map((ax) => <AiMark axis={ax} value="none-found" />)}
+          </span>
+        </div>
+        {(aiNotes.length > 0 || handEvidence.length > 0 || collectorLine) && (
+          <ul class="ai-none-notes small">
+            {aiNotes.map((x) => <li><span class="muted">{AXES[x.ax].label}:</span> {x.note}{x.source && <> <a href={x.source}>source: {host(x.source)}</a></>}</li>)}
+            {handEvidence.map((e) => <li><span class="muted">{AXES.dev_usage.label}:</span> {typeof e === 'string' ? (e.startsWith('http') ? <a href={e}>{host(e)}</a> : e) : <>{e.note ?? e.kind ?? ''} {e.url && <a href={e.url}>{host(e.url)}</a>}</>}</li>)}
+            {collectorLine && <li>{collectorLine}</li>}
+          </ul>
+        )}
+      </div>
+    ) : (
+    <div class="ai-axes ai-axes-top">
       {(Object.keys(AXES) as Axis[]).map((ax) => (
         <div class="panel ai-axis">
           <h3>{AXES[ax].label}</h3>
@@ -109,12 +156,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
                   ? <p class="small" style="margin:.6rem 0 0">The collector's evidence alone would suggest “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”; the value above was kept after checking: {override}</p>
                   : <p class="small" style="margin:.6rem 0 0"><strong>The collector's evidence suggests “{(AXES.dev_usage.values as any)[c.ai.suggested_dev_usage]?.text}”</strong>; the hand-checked value above has not been reconciled with it yet.</p>
               )}
-              {c?.ai && (
-                <p class="small" style="margin:.6rem 0 0">
-                  Collector: {c.ai.attributed_commits_365d} of {fmtNum(c.ai.commits_365d)} commits in the last year credit an AI tool ({pct(c.ai.share_365d)}){Object.keys(c.ai.tools ?? {}).length ? `: ${Object.entries(c.ai.tools).map(([k, v]) => `${k} ${v}`).join(', ')}` : ''}.
-                  {c.ai.agent_files} agent file{c.ai.agent_files === 1 ? '' : 's'}, {c.ai.workflows} AI workflow{c.ai.workflows === 1 ? '' : 's'}. A lower bound: most AI use leaves no trace.
-                </p>
-              )}
+              {collectorLine && <p class="small" style="margin:.6rem 0 0">{collectorLine}</p>}
               {(handEvidence.length > 0 || agentFiles.length > 0 || aiWorkflows.length > 0 || aiExamples.length > 0 || aiBots.length > 0) && (
                 <ul class="evidence">
                   {handEvidence.map((e) => <li>{typeof e === 'string' ? (e.startsWith('http') ? <a href={e}>{host(e)}</a> : e) : <>{e.note ?? e.kind ?? ''} {e.url && <a href={e.url}>{host(e.url)}</a>}</>}</li>)}
@@ -129,6 +171,7 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
         </div>
       ))}
     </div>
+    )}
     {funderPolicies.length > 0 && (
       <div class="panel ai-axis" style="margin-top:1rem">
         <h3>Funder's AI policy</h3>
@@ -151,12 +194,21 @@ const axisSource: Record<Axis, { quote?: string | null; source?: string | null; 
   {c && (
     <section aria-labelledby="act-h">
       <h2 id="act-h">Activity</h2>
-      <div class="panel" style="display:grid;gap:1.4rem">
-        <Heatmap daily={c.daily_commits} end={m!.fetched_at} />
-        <div class="grid-2">
-          <Bars data={weekData} caption="Commits per week, last 52 weeks" every={8} />
-          <Bars data={quarters} caption="Authors per quarter" every={4} />
-        </div>
+      <div class="panel activity">
+        {c.commits_365d > 0 ? (
+          <>
+            <Heatmap daily={c.daily_commits} end={m!.fetched_at} />
+            <div class="grid-2">
+              <Bars data={weekData} caption="Commits per week, last 52 weeks" every={8} />
+              <Bars data={quarters} caption="Authors per quarter" every={4} />
+            </div>
+          </>
+        ) : (
+          <>
+            <p class="quiet-note">No commits in the last 365 days{c.last_commit ? `; the last one was on ${fmtDate(c.last_commit)}` : ''}. Bots are not counted.</p>
+            {quarters.some((q) => q.value > 0) && <Bars data={quarters} caption="Authors per quarter" every={4} />}
+          </>
+        )}
         {c.languages && <div><h3 style="margin-bottom:.5rem">Languages</h3><LangBar languages={c.languages} source={(okRepos.find((r) => r.role === 'main') ?? okRepos[0])?.languages_source} /></div>}
       </div>
     </section>

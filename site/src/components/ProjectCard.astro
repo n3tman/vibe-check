@@ -13,6 +13,10 @@ const { p, showCategory = false } = Astro.props;
 const s = summary(p);
 const c = p.metrics?.combined;
 const head = HEADLINE[p.category].map((k) => feature(k, (p.features as any)?.[k]));
+// Found features get a chip each; the ones not found fold into a single chip.
+const found = head.filter((f) => f.state !== 'not-found');
+const missing = head.filter((f) => f.state === 'not-found');
+const flat = !!c && !c.commits_365d;
 ---
 <article class="card" data-slug={p.slug}>
   <header class="card-head">
@@ -29,11 +33,24 @@ const head = HEADLINE[p.category].map((k) => feature(k, (p.features as any)?.[k]
     <div><dt><Icon name="tag" size={12} /> Last release</dt><dd title={s.lastTag ?? undefined}>{s.lastTagDate ? fmtDate(s.lastTagDate) : '—'}</dd></div>
   </dl>
   {p.repos.length > 0 && (
-    <div class="card-spark">
-      <Sparkline weeks={c?.weekly_commits} width={260} height={30} />
-      <span class="muted small">{c ? `${fmtNum(c.commits_365d)} commits in a year` : 'not measured yet'}</span>
-    </div>
+    flat ? (
+      <p class="card-flat">No commits in the last year{c?.last_commit ? `, last on ${fmtDate(c.last_commit)}` : ''}</p>
+    ) : (
+      <div class="card-spark">
+        <Sparkline weeks={c?.weekly_commits} width={260} height={30} />
+        <span class="muted small">{c ? `${fmtNum(c.commits_365d)} commits in a year` : 'not measured yet'}</span>
+      </div>
+    )
   )}
+  <div class="card-foot">
   <AiMarks p={p} compact />
-  <ul class="fchips" aria-label="Headline features">{head.map((f) => <li><FeatureChip f={f} /></li>)}</ul>
+  <ul class="fchips" aria-label="Headline features">
+    {found.map((f) => <li><FeatureChip f={f} /></li>)}
+    {missing.length > 0 && (
+      <li><span class="fchip fchip-more" data-state="not-found" title={`Not found: ${missing.map((f) => f.label).join(', ')}`}>
+        <Icon name="question" size={13} />{found.length ? `${missing.length} more not found` : `${missing.length} features not found`}<span class="sr-only">: {missing.map((f) => f.label).join(', ')}</span>
+      </span></li>
+    )}
+  </ul>
+  </div>
 </article>

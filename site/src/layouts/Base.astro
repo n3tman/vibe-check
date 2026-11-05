@@ -44,7 +44,13 @@ const fullTitle = title === 'Vibe check' ? 'Vibe check: the Matrix ecosystem at 
     <a class="skip" href="#main">Skip to content</a>
     <header class="site-head">
       <div class="wrap head-row">
-        <a class="logo" href={href()} aria-label="Vibe check, home"><Icon name="matrix" size={22} /><span>Vibe check</span></a>
+        <a class="logo" href={href()} aria-label="Vibe check, home">
+          <svg class="logo-mark" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path class="logo-br" d="M5.5 3.5H3.5v17h2M18.5 3.5h2v17h-2" />
+            <path class="logo-ck" d="m7.8 12.4 2.9 2.9 5.5-6.4" />
+          </svg>
+          <span>Vibe check</span>
+        </a>
         <nav class="site-nav" aria-label="Main">
           <ul>{nav.map((n) => <li><a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a></li>)}</ul>
         </nav>
