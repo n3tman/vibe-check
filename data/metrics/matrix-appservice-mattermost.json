@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 1,
@@ -41,14 +41,13 @@
   "commits_all": 172,
   "daily_commits": {},
   "first_commit": "2020-08-03T13:25:14+00:00",
-  "forks": null,
+  "forks": 3,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0048,
-   "JavaScript": 0.0046,
-   "SQL": 0.3873,
-   "Shell": 0.0011,
-   "TypeScript": 0.6016
+   "Dockerfile": 0.0085,
+   "JavaScript": 0.0075,
+   "Shell": 0.0018,
+   "TypeScript": 0.9814
   },
   "last_commit": "2022-01-15T03:54:01+00:00",
   "last_tag": "v0.1.2",
@@ -65,11 +64,14 @@
   },
   "loc_total": 7025,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 34,
+  "open_prs": 19,
+  "repos_counted": [
+   "https://github.com/dalcde/matrix-appservice-mattermost"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 34,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
@@ -128,7 +130,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -142,8 +144,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 1,
@@ -181,25 +183,23 @@
    "first_commit": "2020-08-03T13:25:14+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 3,
    "head_sha": "c131df3ea090b602fcee8c62296ba5f011fa61ed",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0048,
-    "JavaScript": 0.0046,
-    "SQL": 0.3873,
-    "Shell": 0.0011,
-    "TypeScript": 0.6016
+    "Dockerfile": 0.0085,
+    "JavaScript": 0.0075,
+    "Shell": 0.0018,
+    "TypeScript": 0.9814
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2022-01-15T03:54:01+00:00",
    "last_tag": "v0.1.2",
    "last_tag_date": "2020-08-25T16:46:42+08:00",
    "licence_detected": "MIT",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "AWK": 4,
     "Dockerfile": 34,
@@ -209,13 +209,13 @@
     "TypeScript": 4226
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 34,
+   "open_prs": 19,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 34,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

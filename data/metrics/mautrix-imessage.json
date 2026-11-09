@@ -38,19 +38,18 @@
   "commits_30d": 0,
   "commits_365d": 1,
   "commits_90d": 0,
-  "commits_all": 754,
+  "commits_all": 753,
   "daily_commits": {
    "2026-05-14": 1
   },
   "first_commit": "2021-01-27T13:09:36+00:00",
-  "forks": null,
+  "forks": 52,
   "issue_first_response_median_days": null,
   "languages": {
-   "C Header": 0.0021,
-   "Go": 0.9652,
-   "Objective C": 0.0164,
-   "SQL": 0.013,
-   "Shell": 0.0032
+   "C": 0.0051,
+   "Go": 0.9636,
+   "Objective-C": 0.0278,
+   "Shell": 0.0035
   },
   "last_commit": "2026-05-14T10:56:37+00:00",
   "last_tag": null,
@@ -66,16 +65,18 @@
   },
   "loc_total": 12974,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 41,
+  "open_prs": 12,
+  "repos_counted": [
+   "https://github.com/mautrix/imessage"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 460,
   "status": "slowing",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
   "weekly_commits": [
-   0,
    0,
    0,
    0,
@@ -126,10 +127,11 @@
    0,
    0,
    0,
+   0,
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -143,8 +145,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 19,
@@ -174,36 +176,34 @@
    "commits_30d": 0,
    "commits_365d": 1,
    "commits_90d": 0,
-   "commits_all": 754,
+   "commits_all": 753,
    "daily_commits": {
     "2026-05-14": 1
    },
    "default_branch": "master",
-   "description": null,
+   "description": "A Matrix-iMessage puppeting bridge",
    "error": null,
    "files": 109,
    "first_commit": "2021-01-27T13:09:36+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 52,
    "head_sha": "300ba6d0e5566d1f841d42ee1555779a9b6fa4be",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 4,
    "languages": {
-    "C Header": 0.0021,
-    "Go": 0.9652,
-    "Objective C": 0.0164,
-    "SQL": 0.013,
-    "Shell": 0.0032
+    "C": 0.0051,
+    "Go": 0.9636,
+    "Objective-C": 0.0278,
+    "Shell": 0.0035
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-05-14T10:56:37+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "C Header": 27,
     "Go": 12523,
@@ -212,12 +212,12 @@
     "Shell": 42
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 41,
+   "open_prs": 12,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 460,
    "status": "slowing",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -254,8 +254,8 @@
     0,
     0,
     0,
-    0,
     1,
+    0,
     0,
     0,
     0,

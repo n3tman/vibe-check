@@ -41,11 +41,11 @@
   "commits_all": 149,
   "daily_commits": {},
   "first_commit": "2017-09-29T19:59:01+00:00",
-  "forks": null,
+  "forks": 33,
   "issue_first_response_median_days": null,
   "languages": {
-   "HTML": 0.1259,
-   "Python": 0.8741
+   "HTML": 0.1068,
+   "Python": 0.8932
   },
   "last_commit": "2025-10-13T13:37:18+00:00",
   "last_tag": "v0.2.1",
@@ -58,10 +58,13 @@
   },
   "loc_total": 1907,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 17,
+  "open_prs": 9,
+  "repos_counted": [
+   "https://github.com/maubot/gitlab"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 100,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -121,7 +124,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -135,8 +138,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 11,
@@ -168,39 +171,38 @@
    "commits_all": 149,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "A GitLab client and webhook receiver for maubot.",
    "error": null,
    "files": 38,
    "first_commit": "2017-09-29T19:59:01+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 33,
    "head_sha": "adc6e065c57b8c223ff0dc30f277deff98752224",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "HTML": 0.1259,
-    "Python": 0.8741
+    "HTML": 0.1068,
+    "Python": 0.8932
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-10-13T13:37:18+00:00",
    "last_tag": "v0.2.1",
    "last_tag_date": "2022-03-28T17:37:59+03:00",
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "HTML": 240,
     "Python": 1667
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 17,
+   "open_prs": 9,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 100,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

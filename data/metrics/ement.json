@@ -38,18 +38,18 @@
   "commits_30d": 0,
   "commits_365d": 6,
   "commits_90d": 0,
-  "commits_all": 1258,
+  "commits_all": 1256,
   "daily_commits": {
    "2025-11-16": 4,
    "2025-11-18": 2
   },
   "first_commit": "2020-11-26T21:46:21+00:00",
-  "forks": null,
+  "forks": 53,
   "issue_first_response_median_days": null,
   "languages": {
-   "Emacs Lisp": 0.8933,
-   "Makefile": 0.0029,
-   "Shell": 0.1037
+   "Emacs Lisp": 0.9364,
+   "Makefile": 0.0021,
+   "Shell": 0.0616
   },
   "last_commit": "2025-11-18T01:17:48+00:00",
   "last_tag": "v0.17",
@@ -63,17 +63,20 @@
   },
   "loc_total": 9864,
   "main_language": "Emacs Lisp",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 90,
+  "open_prs": 35,
+  "repos_counted": [
+   "https://github.com/alphapapa/ement.el"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 611,
   "status": "dormant",
   "tags_365d": 1,
   "telemetry_sdks": [],
   "tests_present": true,
   "weekly_commits": [
-   0,
-   6,
+   4,
+   2,
    0,
    0,
    0,
@@ -126,7 +129,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -140,8 +143,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 16,
@@ -170,47 +173,46 @@
    "commits_30d": 0,
    "commits_365d": 6,
    "commits_90d": 0,
-   "commits_all": 1258,
+   "commits_all": 1256,
    "daily_commits": {
     "2025-11-16": 4,
     "2025-11-18": 2
    },
    "default_branch": "master",
-   "description": null,
+   "description": "A Matrix client for GNU Emacs",
    "error": null,
    "files": 38,
    "first_commit": "2020-11-26T21:46:21+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 53,
    "head_sha": "790aee7d8fdd658bd1740b5e59a5e64c3842014b",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Emacs Lisp": 0.8933,
-    "Makefile": 0.0029,
-    "Shell": 0.1037
+    "Emacs Lisp": 0.9364,
+    "Makefile": 0.0021,
+    "Shell": 0.0616
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-11-18T01:17:48+00:00",
    "last_tag": "v0.17",
    "last_tag_date": "2025-11-16T06:59:28-06:00",
    "licence_detected": "GPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Emacs Lisp": 8812,
     "Makefile": 29,
     "Shell": 1023
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 90,
+   "open_prs": 35,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 611,
    "status": "dormant",
    "tags_365d": 1,
    "telemetry_scan": {
@@ -221,8 +223,8 @@
    "tests_present": true,
    "url": "https://github.com/alphapapa/ement.el",
    "weekly_commits": [
-    0,
-    6,
+    4,
+    2,
     0,
     0,
     0,

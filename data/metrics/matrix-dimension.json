@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 26,
@@ -41,14 +41,14 @@
   "commits_all": 600,
   "daily_commits": {},
   "first_commit": "2017-05-25T21:41:56+00:00",
-  "forks": null,
+  "forks": 107,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0012,
-   "HTML": 0.1153,
-   "JavaScript": 0.0043,
-   "Sass": 0.0622,
-   "TypeScript": 0.8158
+   "Dockerfile": 0.0015,
+   "HTML": 0.1322,
+   "JavaScript": 0.0034,
+   "SCSS": 0.0339,
+   "TypeScript": 0.8286
   },
   "last_commit": "2023-08-10T16:05:58+00:00",
   "last_tag": null,
@@ -66,11 +66,14 @@
   },
   "loc_total": 22732,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 155,
+  "open_prs": 21,
+  "repos_counted": [
+   "https://github.com/turt2live/matrix-dimension"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 433,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": false,
@@ -129,7 +132,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -143,8 +146,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 26,
@@ -176,31 +179,30 @@
    "commits_all": 600,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "An open source integration manager for matrix clients, like Element.",
    "error": null,
    "files": 610,
    "first_commit": "2017-05-25T21:41:56+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 107,
    "head_sha": "2f9f848fb082af2eb717c7efe52807d99acbd51a",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0012,
-    "HTML": 0.1153,
-    "JavaScript": 0.0043,
-    "Sass": 0.0622,
-    "TypeScript": 0.8158
+    "Dockerfile": 0.0015,
+    "HTML": 0.1322,
+    "JavaScript": 0.0034,
+    "SCSS": 0.0339,
+    "TypeScript": 0.8286
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2023-08-10T16:05:58+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "GPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 28,
     "HTML": 2622,
@@ -211,13 +213,13 @@
     "TypeScript": 18545
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 155,
+   "open_prs": 21,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 433,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

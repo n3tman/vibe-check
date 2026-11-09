@@ -41,7 +41,7 @@
   "commits_all": 5,
   "daily_commits": {},
   "first_commit": "2021-12-04T19:40:56+00:00",
-  "forks": null,
+  "forks": 4,
   "issue_first_response_median_days": null,
   "languages": {
    "Java": 1.0
@@ -56,10 +56,13 @@
   },
   "loc_total": 507,
   "main_language": "Java",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 6,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/lautriva/matrix-spigot-bridge"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 20,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -119,7 +122,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -133,8 +136,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 4,
@@ -164,37 +167,36 @@
    "commits_all": 5,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Link a Minecraft server chat with a Matrix.org room",
    "error": null,
    "files": 12,
    "first_commit": "2021-12-04T19:40:56+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 4,
    "head_sha": "89b8c353710445f1321f43aff6fd777fd2da7295",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
     "Java": 1.0
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-11-04T07:28:33+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "MIT",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Java": 507
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 6,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 20,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

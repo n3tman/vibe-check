@@ -37,7 +37,7 @@
   "ci": false,
   "commits_30d": 0,
   "commits_365d": 22,
-  "commits_90d": 8,
+  "commits_90d": 5,
   "commits_all": 22,
   "daily_commits": {
    "2026-07-25": 1,
@@ -53,11 +53,12 @@
    "2026-08-13": 3
   },
   "first_commit": "2026-07-25T17:14:23+00:00",
-  "forks": null,
+  "forks": 2,
   "issue_first_response_median_days": null,
   "languages": {
-   "Emacs Lisp": 0.7336,
-   "Rust": 0.2664
+   "Emacs Lisp": 0.7864,
+   "Just": 0.0025,
+   "Rust": 0.2111
   },
   "last_commit": "2026-08-13T06:24:21+00:00",
   "last_tag": null,
@@ -70,10 +71,13 @@
   },
   "loc_total": 7600,
   "main_language": "Emacs Lisp",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/ianthetechie/fermium"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 4,
   "status": "slowing",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -115,11 +119,11 @@
    0,
    0,
    0,
-   0,
-   3,
-   10,
-   8,
    1,
+   8,
+   7,
+   6,
+   0,
    0,
    0,
    0,
@@ -133,7 +137,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -158,8 +162,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 1,
    "authors_all": 1,
@@ -185,7 +189,7 @@
    "ci": [],
    "commits_30d": 0,
    "commits_365d": 22,
-   "commits_90d": 8,
+   "commits_90d": 5,
    "commits_all": 22,
    "daily_commits": {
     "2026-07-25": 1,
@@ -201,39 +205,39 @@
     "2026-08-13": 3
    },
    "default_branch": "main",
-   "description": null,
+   "description": "A Matrix client for Emacs",
    "error": null,
    "files": 16,
    "first_commit": "2026-07-25T17:14:23+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 2,
    "head_sha": "5437cadf358e6f7aedd6ff9918cabc78713d0b49",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Emacs Lisp": 0.7336,
-    "Rust": 0.2664
+    "Emacs Lisp": 0.7864,
+    "Just": 0.0025,
+    "Rust": 0.2111
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-08-13T06:24:21+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "BSD-3-Clause",
    "licence_file": "LICENSE.txt",
-   "licence_source": "file",
    "loc": {
     "Emacs Lisp": 5575,
     "Rust": 2025
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 4,
    "status": "slowing",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -280,11 +284,11 @@
     0,
     0,
     0,
-    0,
-    3,
-    10,
-    8,
     1,
+    8,
+    7,
+    6,
+    0,
     0,
     0,
     0,

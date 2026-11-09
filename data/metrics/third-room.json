@@ -41,16 +41,14 @@
   "commits_all": 2150,
   "daily_commits": {},
   "first_commit": "2021-09-21T07:47:49+00:00",
-  "forks": null,
+  "forks": 70,
   "issue_first_response_median_days": null,
   "languages": {
-   "C": 0.497,
-   "C Header": 0.067,
-   "CSS": 0.0238,
-   "HTML": 0.0014,
-   "JavaScript": 0.0313,
-   "TypeScript": 0.3573,
-   "TypeScript Typings": 0.0215
+   "C": 0.5726,
+   "CSS": 0.0136,
+   "HTML": 0.0013,
+   "JavaScript": 0.0211,
+   "TypeScript": 0.3911
   },
   "last_commit": "2023-07-10T18:47:25+00:00",
   "last_tag": null,
@@ -69,10 +67,13 @@
   },
   "loc_total": 147832,
   "main_language": "C",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 80,
+  "open_prs": 11,
+  "repos_counted": [
+   "https://github.com/thirdroom/thirdroom"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 656,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [
@@ -134,7 +135,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -148,8 +149,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 8,
@@ -183,33 +184,30 @@
    "commits_all": 2150,
    "daily_commits": {},
    "default_branch": "main",
-   "description": null,
+   "description": "Open, decentralised, immersive worlds built on Matrix",
    "error": null,
    "files": 1119,
    "first_commit": "2021-09-21T07:47:49+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 70,
    "head_sha": "01bc731b057bd2a0e01d2152ad4828c05f1f6302",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "C": 0.497,
-    "C Header": 0.067,
-    "CSS": 0.0238,
-    "HTML": 0.0014,
-    "JavaScript": 0.0313,
-    "TypeScript": 0.3573,
-    "TypeScript Typings": 0.0215
+    "C": 0.5726,
+    "CSS": 0.0136,
+    "HTML": 0.0013,
+    "JavaScript": 0.0211,
+    "TypeScript": 0.3911
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2023-07-10T18:47:25+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "C": 73467,
     "C Header": 9909,
@@ -221,12 +219,12 @@
     "TypeScript Typings": 3173
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 80,
+   "open_prs": 11,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 656,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

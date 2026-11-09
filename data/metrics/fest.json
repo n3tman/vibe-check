@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 8,
@@ -41,11 +41,11 @@
   "commits_all": 131,
   "daily_commits": {},
   "first_commit": "2016-12-29T16:22:33+00:00",
-  "forks": null,
+  "forks": 5,
   "issue_first_response_median_days": null,
   "languages": {
-   "Python": 0.0776,
-   "Rust": 0.9224
+   "Python": 0.0632,
+   "Rust": 0.9368
   },
   "last_commit": "2020-04-01T14:06:50+00:00",
   "last_tag": null,
@@ -58,11 +58,14 @@
   },
   "loc_total": 799,
   "main_language": "Rust",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 3,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/fest-im/fest"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 65,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": false,
@@ -121,7 +124,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -135,8 +138,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 8,
@@ -166,40 +169,39 @@
    "commits_all": 131,
    "daily_commits": {},
    "default_branch": "main",
-   "description": null,
+   "description": "A GTK+ 3 Matrix client written in Rust [work in progress]",
    "error": null,
    "files": 39,
    "first_commit": "2016-12-29T16:22:33+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 5,
    "head_sha": "4d6efd9e3a89d71502d112acc28362de691499fe",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Python": 0.0776,
-    "Rust": 0.9224
+    "Python": 0.0632,
+    "Rust": 0.9368
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2020-04-01T14:06:50+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "GPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Python": 62,
     "Rust": 737
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 3,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 65,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

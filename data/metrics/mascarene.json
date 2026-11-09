@@ -41,21 +41,20 @@
   "commits_all": 591,
   "daily_commits": {},
   "first_commit": "2018-05-10T15:35:47+00:00",
-  "forks": null,
+  "forks": 5,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.004,
-   "Perl": 0.0044,
-   "Python": 0.0164,
-   "SQL": 0.0152,
-   "Scala": 0.9583,
-   "Shell": 0.0017
+   "Dockerfile": 0.0032,
+   "Perl": 0.0065,
+   "Python": 0.0162,
+   "Scala": 0.9723,
+   "Shell": 0.0018
   },
   "last_commit": "2021-02-28T12:40:19+00:00",
   "last_tag": "v0.2.0",
   "last_tag_date": "2020-06-21T19:46:23+04:00",
   "last_tag_repo": "https://gitlab.com/mascarene/mascarene",
-  "licence_detected": "GPL-3.0",
+  "licence_detected": "AGPL-3.0",
   "loc": {
    "Dockerfile": 45,
    "Perl": 49,
@@ -66,10 +65,13 @@
   },
   "loc_total": 11227,
   "main_language": "Scala",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 21,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://gitlab.com/mascarene/mascarene"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 9,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -129,7 +131,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -143,7 +145,7 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
+   "api_error": null,
    "archived": null,
    "authors_365d": 0,
    "authors_90d": 0,
@@ -176,32 +178,30 @@
    "commits_all": 591,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Discuss at [#mascarene:beerfactory.org](https://matrix.to/#/#mascarene:beerfactory.org)",
    "error": null,
    "files": 239,
    "first_commit": "2018-05-10T15:35:47+00:00",
    "first_parent": false,
    "forge": "gitlab",
-   "forks": null,
+   "forks": 5,
    "head_sha": "ddf4e66ebad0a18d564d92d17cc9de3d7d31e241",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.004,
-    "Perl": 0.0044,
-    "Python": 0.0164,
-    "SQL": 0.0152,
-    "Scala": 0.9583,
-    "Shell": 0.0017
+    "Dockerfile": 0.0032,
+    "Perl": 0.0065,
+    "Python": 0.0162,
+    "Scala": 0.9723,
+    "Shell": 0.0018
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2021-02-28T12:40:19+00:00",
    "last_tag": "v0.2.0",
    "last_tag_date": "2020-06-21T19:46:23+04:00",
-   "licence_detected": "GPL-3.0",
+   "licence_detected": "AGPL-3.0",
    "licence_file": "COPYING",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 45,
     "Perl": 49,
@@ -211,12 +211,12 @@
     "Shell": 19
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 21,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 9,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

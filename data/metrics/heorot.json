@@ -47,12 +47,12 @@
    "2026-03-24": 6
   },
   "first_commit": "2026-03-08T14:14:27+00:00",
-  "forks": null,
+  "forks": 2,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.1682,
-   "JavaScript": 0.0169,
-   "TypeScript": 0.8133
+   "CSS": 0.0975,
+   "JavaScript": 0.0182,
+   "TypeScript": 0.8837
   },
   "last_commit": "2026-03-24T18:44:15+00:00",
   "last_tag": null,
@@ -68,10 +68,13 @@
   },
   "loc_total": 37026,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/Vitosicz/Heorot"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 32,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -93,9 +96,9 @@
    0,
    0,
    0,
-   0,
    5,
-   3,
+   1,
+   2,
    6,
    0,
    0,
@@ -131,7 +134,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -145,8 +148,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 1,
@@ -182,29 +185,28 @@
     "2026-03-24": 6
    },
    "default_branch": "main",
-   "description": null,
+   "description": "A self-hosted Discord-style Matrix client with voice channels.",
    "error": null,
    "files": 197,
    "first_commit": "2026-03-08T14:14:27+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 2,
    "head_sha": "65b3fe2cc09b95e10bc3b1e6adb11ee0a8cfdfaf",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "CSS": 0.1682,
-    "JavaScript": 0.0169,
-    "TypeScript": 0.8133
+    "CSS": 0.0975,
+    "JavaScript": 0.0182,
+    "TypeScript": 0.8837
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-03-24T18:44:15+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "CSS": 6229,
     "HTML": 30,
@@ -213,12 +215,12 @@
     "TypeScript Typings": 29
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 32,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -245,9 +247,9 @@
     0,
     0,
     0,
-    0,
     5,
-    3,
+    1,
+    2,
     6,
     0,
     0,

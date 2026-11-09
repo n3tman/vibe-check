@@ -41,11 +41,12 @@
   "commits_all": 1687,
   "daily_commits": {},
   "first_commit": "2015-10-23T15:07:05+00:00",
-  "forks": null,
+  "forks": 741,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.004,
-   "Go": 0.9953
+   "Dockerfile": 0.0046,
+   "Go": 0.9942,
+   "Shell": 0.0012
   },
   "last_commit": "2024-08-27T17:04:05+00:00",
   "last_tag": "v1.26.0",
@@ -59,10 +60,13 @@
   },
   "loc_total": 13289,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 296,
+  "open_prs": 45,
+  "repos_counted": [
+   "https://github.com/42wim/matterbridge"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 7615,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -122,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -136,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 138,
@@ -171,40 +175,40 @@
    "commits_all": 1687,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "bridge between mattermost, IRC, gitter, xmpp, slack, discord, telegram, rocketchat, twitch, ssh-chat, zulip, whatsapp, keybase, matrix, microsoft teams, nextcloud, mumble, vk and more with REST API (mattermost not required!)",
    "error": null,
    "files": 6598,
    "first_commit": "2015-10-23T15:07:05+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 741,
    "head_sha": "c4157a4d5b49fce79c80a30730dc7c404bacd663",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 2,
    "languages": {
-    "Dockerfile": 0.004,
-    "Go": 0.9953
+    "Dockerfile": 0.0046,
+    "Go": 0.9942,
+    "Shell": 0.0012
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2024-08-27T17:04:05+00:00",
    "last_tag": "v1.26.0",
    "last_tag_date": "2023-01-29T18:26:52+01:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 53,
     "Go": 13227,
     "Systemd": 9
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 296,
+   "open_prs": 45,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 7615,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

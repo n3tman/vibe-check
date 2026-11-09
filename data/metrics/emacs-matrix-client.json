@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 8,
@@ -38,14 +38,14 @@
   "commits_30d": 0,
   "commits_365d": 0,
   "commits_90d": 0,
-  "commits_all": 682,
+  "commits_all": 680,
   "daily_commits": {},
   "first_commit": "2015-10-03T06:31:14+00:00",
-  "forks": null,
+  "forks": 19,
   "issue_first_response_median_days": null,
   "languages": {
-   "Emacs Lisp": 0.9692,
-   "Shell": 0.0301
+   "Emacs Lisp": 0.9835,
+   "Shell": 0.0163
   },
   "last_commit": "2021-09-16T00:24:36+00:00",
   "last_tag": null,
@@ -59,11 +59,14 @@
   },
   "loc_total": 4285,
   "main_language": "Emacs Lisp",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/alphapapa/matrix-client.el"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 240,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
@@ -122,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -136,8 +139,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 8,
@@ -166,44 +169,43 @@
    "commits_30d": 0,
    "commits_365d": 0,
    "commits_90d": 0,
-   "commits_all": 682,
+   "commits_all": 680,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "A Matrix client for Emacs! (deprecated in favor of Ement.el)",
    "error": null,
    "files": 38,
    "first_commit": "2015-10-03T06:31:14+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 19,
    "head_sha": "5302530c4685729fbeb5759f5d3703db603a322c",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Emacs Lisp": 0.9692,
-    "Shell": 0.0301
+    "Emacs Lisp": 0.9835,
+    "Shell": 0.0163
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2021-09-16T00:24:36+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "GPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Emacs Lisp": 4153,
     "Makefile": 3,
     "Shell": 129
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 240,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

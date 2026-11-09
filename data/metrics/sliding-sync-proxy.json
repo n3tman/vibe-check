@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 1,
   "authors_90d": 0,
   "authors_all": 25,
@@ -38,18 +38,18 @@
   "commits_30d": 0,
   "commits_365d": 1,
   "commits_90d": 0,
-  "commits_all": 1603,
+  "commits_all": 1602,
   "daily_commits": {
    "2025-11-17": 1
   },
   "first_commit": "2021-05-13T15:25:42+00:00",
-  "forks": null,
+  "forks": 40,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0029,
-   "Go": 0.968,
-   "HTML": 0.0014,
-   "JavaScript": 0.0261
+   "CSS": 0.0013,
+   "Go": 0.9624,
+   "HTML": 0.0017,
+   "JavaScript": 0.0334
   },
   "last_commit": "2025-11-17T12:14:51+00:00",
   "last_tag": "v0.99.19",
@@ -67,11 +67,14 @@
   },
   "loc_total": 43907,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 66,
+  "open_prs": 4,
+  "repos_counted": [
+   "https://github.com/matrix-org/sliding-sync"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "dormant",
+  "stars": 280,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [
    "Sentry"
@@ -132,7 +135,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -146,8 +149,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 25,
@@ -178,35 +181,34 @@
    "commits_30d": 0,
    "commits_365d": 1,
    "commits_90d": 0,
-   "commits_all": 1603,
+   "commits_all": 1602,
    "daily_commits": {
     "2025-11-17": 1
    },
    "default_branch": "main",
-   "description": null,
+   "description": "Proxy implementation of MSC3575's sync protocol.",
    "error": null,
    "files": 216,
    "first_commit": "2021-05-13T15:25:42+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 40,
    "head_sha": "c376f7f1dd13f14b97584ac456c8c33011a0145c",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "CSS": 0.0029,
-    "Go": 0.968,
-    "HTML": 0.0014,
-    "JavaScript": 0.0261
+    "CSS": 0.0013,
+    "Go": 0.9624,
+    "HTML": 0.0017,
+    "JavaScript": 0.0334
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-11-17T12:14:51+00:00",
    "last_tag": "v0.99.19",
    "last_tag_date": "2024-06-28T16:20:42+01:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "CSS": 128,
     "Dockerfile": 16,
@@ -217,13 +219,13 @@
     "Shell": 33
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 66,
+   "open_prs": 4,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "dormant",
+   "stars": 280,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [

@@ -41,12 +41,11 @@
   "commits_all": 420,
   "daily_commits": {},
   "first_commit": "2019-05-09T18:14:49+00:00",
-  "forks": null,
-  "issue_first_response_median_days": null,
+  "forks": 37,
+  "issue_first_response_median_days": 3.03,
   "languages": {
-   "Dockerfile": 0.0021,
-   "Protocol Buffers": 0.128,
-   "Python": 0.8682,
+   "Dockerfile": 0.0019,
+   "Python": 0.9965,
    "Shell": 0.0017
   },
   "last_commit": "2025-07-16T10:44:56+00:00",
@@ -62,10 +61,13 @@
   },
   "loc_total": 16520,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 28,
+  "open_prs": 3,
+  "repos_counted": [
+   "https://github.com/mautrix/googlechat"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 127,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -125,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -139,8 +141,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 13,
@@ -173,30 +175,28 @@
    "commits_all": 420,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "A Matrix-Google Chat puppeting bridge",
    "error": null,
    "files": 71,
    "first_commit": "2019-05-09T18:14:49+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 37,
    "head_sha": "a835bccd269eace6c28196a3f869eb1fb3c8acf7",
-   "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issue_first_response_median_days": 3.03,
+   "issues_responded": 1,
+   "issues_sampled": 1,
    "languages": {
-    "Dockerfile": 0.0021,
-    "Protocol Buffers": 0.128,
-    "Python": 0.8682,
+    "Dockerfile": 0.0019,
+    "Python": 0.9965,
     "Shell": 0.0017
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-07-16T10:44:56+00:00",
    "last_tag": "v0.5.2",
    "last_tag_date": "2024-07-16T11:54:51+03:00",
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 34,
     "Protocol Buffers": 2115,
@@ -204,12 +204,12 @@
     "Shell": 28
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 28,
+   "open_prs": 3,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 127,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

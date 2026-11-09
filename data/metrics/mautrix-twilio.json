@@ -43,11 +43,11 @@
    "2025-11-16": 1
   },
   "first_commit": "2024-07-06T13:20:12+00:00",
-  "forks": null,
+  "forks": 1,
   "issue_first_response_median_days": null,
   "languages": {
-   "Go": 0.9446,
-   "Shell": 0.0554
+   "Go": 0.9371,
+   "Shell": 0.0629
   },
   "last_commit": "2025-11-16T13:15:40+00:00",
   "last_tag": null,
@@ -60,17 +60,20 @@
   },
   "loc_total": 523,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/mautrix/twilio"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 16,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": false,
   "weekly_commits": [
-   0,
    1,
+   0,
    0,
    0,
    0,
@@ -123,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 1,
@@ -173,39 +176,38 @@
     "2025-11-16": 1
    },
    "default_branch": "main",
-   "description": null,
+   "description": "A bridgev2 demo project for bridging Matrix and Twilio",
    "error": null,
    "files": 15,
    "first_commit": "2024-07-06T13:20:12+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 1,
    "head_sha": "18579cdd5867f6b15323d4a39ffbe571d7701915",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Go": 0.9446,
-    "Shell": 0.0554
+    "Go": 0.9371,
+    "Shell": 0.0629
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-11-16T13:15:40+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "MIT",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Go": 494,
     "Shell": 29
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 16,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -216,8 +218,8 @@
    "tests_present": false,
    "url": "https://github.com/mautrix/twilio",
    "weekly_commits": [
-    0,
     1,
+    0,
     0,
     0,
     0,

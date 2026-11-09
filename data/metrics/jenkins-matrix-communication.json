@@ -41,13 +41,11 @@
   "commits_all": 18,
   "daily_commits": {},
   "first_commit": "2023-06-30T16:26:13+00:00",
-  "forks": null,
+  "forks": 1,
   "issue_first_response_median_days": null,
   "languages": {
-   "Batch": 0.1979,
-   "HTML": 0.0352,
-   "Java": 0.4831,
-   "Shell": 0.2839
+   "HTML": 0.0903,
+   "Java": 0.9097
   },
   "last_commit": "2025-08-18T17:27:21+00:00",
   "last_tag": "13.vdcfb_b_44ce852",
@@ -62,10 +60,13 @@
   },
   "loc_total": 768,
   "main_language": "Java",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 4,
+  "repos_counted": [
+   "https://github.com/jenkinsci/matrix-communication-plugin"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 14,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -125,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -139,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 2,
@@ -174,30 +175,27 @@
    "commits_all": 18,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Plugin allowing Jenkins to communicate with a matrix.org server",
    "error": null,
    "files": 30,
    "first_commit": "2023-06-30T16:26:13+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 1,
    "head_sha": "93a66bff812841bcae471d4377beeb582c9c6b21",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Batch": 0.1979,
-    "HTML": 0.0352,
-    "Java": 0.4831,
-    "Shell": 0.2839
+    "HTML": 0.0903,
+    "Java": 0.9097
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-08-18T17:27:21+00:00",
    "last_tag": "13.vdcfb_b_44ce852",
    "last_tag_date": "2023-07-07T11:58:28+02:00",
    "licence_detected": "MIT",
    "licence_file": "LICENSE.md",
-   "licence_source": "file",
    "loc": {
     "Batch": 152,
     "HTML": 27,
@@ -205,12 +203,12 @@
     "Shell": 218
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 4,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 14,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

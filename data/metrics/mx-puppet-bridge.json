@@ -38,14 +38,16 @@
   "commits_30d": 0,
   "commits_365d": 0,
   "commits_90d": 0,
-  "commits_all": 438,
+  "commits_all": 437,
   "daily_commits": {},
   "first_commit": "2019-06-16T12:06:29+00:00",
-  "forks": null,
+  "forks": 1,
   "issue_first_response_median_days": null,
   "languages": {
-   "Makefile": 0.0031,
-   "TypeScript": 0.9955
+   "JavaScript": 0.0013,
+   "Makefile": 0.0038,
+   "Shell": 0.002,
+   "TypeScript": 0.9929
   },
   "last_commit": "2022-05-21T14:07:21+00:00",
   "last_tag": "v0.1.8",
@@ -60,10 +62,13 @@
   },
   "loc_total": 18167,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 5,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://gitlab.com/mx-puppet/mx-puppet-bridge"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 3,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -123,7 +128,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,7 +142,7 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
+   "api_error": null,
    "archived": null,
    "authors_365d": 0,
    "authors_90d": 0,
@@ -168,31 +173,32 @@
    "commits_30d": 0,
    "commits_365d": 0,
    "commits_90d": 0,
-   "commits_all": 438,
+   "commits_all": 437,
    "daily_commits": {},
    "default_branch": "main",
-   "description": null,
+   "description": "",
    "error": null,
    "files": 840,
    "first_commit": "2019-06-16T12:06:29+00:00",
    "first_parent": false,
    "forge": "gitlab",
-   "forks": null,
+   "forks": 1,
    "head_sha": "f536fad8067b096720b9e5d19751000f3527306e",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Makefile": 0.0031,
-    "TypeScript": 0.9955
+    "JavaScript": 0.0013,
+    "Makefile": 0.0038,
+    "Shell": 0.002,
+    "TypeScript": 0.9929
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2022-05-21T14:07:21+00:00",
    "last_tag": "v0.1.8",
    "last_tag_date": "2022-05-01T22:48:30+02:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "JavaScript": 14,
     "Makefile": 57,
@@ -200,12 +206,12 @@
     "TypeScript": 18086
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 5,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 3,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

@@ -5,8 +5,8 @@
    "agent_files": 0,
    "ai_bot_commits_365d": 0,
    "attributed_commits_365d": 4,
-   "commits_365d": 37,
-   "share_365d": 0.1081,
+   "commits_365d": 39,
+   "share_365d": 0.1026,
    "suggested_dev_usage": "regular",
    "tools": {
     "claude": 4
@@ -37,10 +37,10 @@
   },
   "bus_factor_365d": 1,
   "ci": true,
-  "commits_30d": 35,
-  "commits_365d": 37,
-  "commits_90d": 37,
-  "commits_all": 37,
+  "commits_30d": 31,
+  "commits_365d": 39,
+  "commits_90d": 39,
+  "commits_all": 39,
   "daily_commits": {
    "2026-10-02": 2,
    "2026-10-06": 1,
@@ -58,34 +58,38 @@
    "2026-10-26": 4,
    "2026-10-29": 6,
    "2026-11-03": 1,
-   "2026-11-04": 1
+   "2026-11-04": 1,
+   "2026-11-07": 2
   },
   "first_commit": "2026-10-02T13:28:42+00:00",
-  "forks": null,
+  "forks": 0,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0039,
-   "Go": 0.9845,
-   "Powershell": 0.0038,
-   "Shell": 0.0079
+   "Dockerfile": 0.0041,
+   "Go": 0.9819,
+   "PowerShell": 0.0043,
+   "Shell": 0.0097
   },
-  "last_commit": "2026-11-04T12:24:21+00:00",
+  "last_commit": "2026-11-07T13:46:06+00:00",
   "last_tag": null,
   "last_tag_date": null,
   "last_tag_repo": null,
   "licence_detected": "AGPL-3.0",
   "loc": {
    "Dockerfile": 24,
-   "Go": 6019,
+   "Go": 6055,
    "Powershell": 23,
    "Shell": 48
   },
-  "loc_total": 6114,
+  "loc_total": 6150,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
-  "security_policy": "https://github.com/beeper/chatgpt-dots/blob/c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3/SECURITY.md",
-  "stars": null,
+  "open_issues": 1,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/beeper/chatgpt-dots"
+  ],
+  "security_policy": "https://github.com/beeper/chatgpt-dots/blob/9a9ce3a657f2b35f31a158e9d430a663d45a5e2d/SECURITY.md",
+  "stars": 5,
   "status": "active",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -137,22 +141,22 @@
    0,
    0,
    0,
-   0,
-   7,
-   5,
+   2,
+   6,
    7,
    10,
-   8
+   10,
+   4
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
     "agent_files": [],
     "ai_bot_authors": [],
     "attributed_commits_365d": 4,
-    "commits_365d": 37,
+    "commits_365d": 39,
     "examples": [
      {
       "date": "2026-10-29",
@@ -187,15 +191,15 @@
       "url": "https://github.com/beeper/chatgpt-dots/commit/3b7fd5b64621bf0ca9c7524d716d9aa3d351bbe2"
      }
     ],
-    "share_365d": 0.1081,
+    "share_365d": 0.1026,
     "suggested_dev_usage": "regular",
     "tools": {
      "claude": 4
     },
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 3,
    "authors_90d": 3,
    "authors_all": 3,
@@ -222,10 +226,10 @@
     ".github/workflows/bridgelint.yml",
     ".github/workflows/build.yml"
    ],
-   "commits_30d": 35,
-   "commits_365d": 37,
-   "commits_90d": 37,
-   "commits_all": 37,
+   "commits_30d": 31,
+   "commits_365d": 39,
+   "commits_90d": 39,
+   "commits_all": 39,
    "daily_commits": {
     "2026-10-02": 2,
     "2026-10-06": 1,
@@ -243,47 +247,47 @@
     "2026-10-26": 4,
     "2026-10-29": 6,
     "2026-11-03": 1,
-    "2026-11-04": 1
+    "2026-11-04": 1,
+    "2026-11-07": 2
    },
    "default_branch": "main",
-   "description": null,
+   "description": "Native ChatGPT Dots messaging bridge for Beeper",
    "error": null,
    "files": 54,
    "first_commit": "2026-10-02T13:28:42+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
-   "head_sha": "c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3",
+   "forks": 0,
+   "head_sha": "9a9ce3a657f2b35f31a158e9d430a663d45a5e2d",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 1,
    "languages": {
-    "Dockerfile": 0.0039,
-    "Go": 0.9845,
-    "Powershell": 0.0038,
-    "Shell": 0.0079
+    "Dockerfile": 0.0041,
+    "Go": 0.9819,
+    "PowerShell": 0.0043,
+    "Shell": 0.0097
    },
-   "languages_source": "scc",
-   "last_commit": "2026-11-04T12:24:21+00:00",
+   "languages_source": "forge",
+   "last_commit": "2026-11-07T13:46:06+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 24,
-    "Go": 6019,
+    "Go": 6055,
     "Powershell": 23,
     "Shell": 48
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 1,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": "SECURITY.md",
-   "security_policy_url": "https://github.com/beeper/chatgpt-dots/blob/c07a8a090e6c7e1d2cf146f6c7209f9570dd54c3/SECURITY.md",
-   "stars": null,
+   "security_policy_url": "https://github.com/beeper/chatgpt-dots/blob/9a9ce3a657f2b35f31a158e9d430a663d45a5e2d/SECURITY.md",
+   "stars": 5,
    "status": "active",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -340,12 +344,12 @@
     0,
     0,
     0,
-    0,
-    7,
-    5,
+    2,
+    6,
     7,
     10,
-    8
+    10,
+    4
    ]
   }
  ],

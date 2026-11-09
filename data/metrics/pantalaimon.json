@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 27,
@@ -41,13 +41,12 @@
   "commits_all": 496,
   "daily_commits": {},
   "first_commit": "2019-03-21T10:05:12+00:00",
-  "forks": null,
+  "forks": 51,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0032,
-   "Makefile": 0.0025,
-   "Python": 0.9933,
-   "Systemd": 0.0011
+   "Dockerfile": 0.0034,
+   "Makefile": 0.0017,
+   "Python": 0.9949
   },
   "last_commit": "2025-06-04T01:01:37+00:00",
   "last_tag": "0.10.6",
@@ -62,11 +61,14 @@
   },
   "loc_total": 5659,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 50,
+  "open_prs": 6,
+  "repos_counted": [
+   "https://github.com/matrix-org/pantalaimon"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "dormant",
+  "stars": 325,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
@@ -125,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -139,8 +141,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 27,
@@ -174,30 +176,28 @@
    "commits_all": 496,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "E2EE aware proxy daemon for matrix clients.",
    "error": null,
    "files": 40,
    "first_commit": "2019-03-21T10:05:12+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 51,
    "head_sha": "e4a14b0a9b876abb1913b953457de15a9fc06d32",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0032,
-    "Makefile": 0.0025,
-    "Python": 0.9933,
-    "Systemd": 0.0011
+    "Dockerfile": 0.0034,
+    "Makefile": 0.0017,
+    "Python": 0.9949
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-06-04T01:01:37+00:00",
    "last_tag": "0.10.6",
    "last_tag_date": "2025-04-07T13:50:52-07:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 18,
     "Makefile": 14,
@@ -205,13 +205,13 @@
     "Systemd": 6
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 50,
+   "open_prs": 6,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "dormant",
+   "stars": 325,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

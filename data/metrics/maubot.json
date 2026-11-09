@@ -51,16 +51,17 @@
    "2026-10-24": 2
   },
   "first_commit": "2018-06-13T22:41:05+00:00",
-  "forks": null,
-  "issue_first_response_median_days": null,
+  "forks": 109,
+  "issue_first_response_median_days": 0.18,
   "languages": {
-   "Dockerfile": 0.0082,
-   "HTML": 0.0021,
-   "JavaScript": 0.1939,
-   "Jinja": 0.0061,
-   "Python": 0.6888,
-   "Sass": 0.0971,
-   "Shell": 0.0038
+   "Dockerfile": 0.006,
+   "HTML": 0.0032,
+   "JavaScript": 0.1885,
+   "Jinja": 0.0046,
+   "Python": 0.7013,
+   "SCSS": 0.0053,
+   "Sass": 0.0877,
+   "Shell": 0.0033
   },
   "last_commit": "2026-10-24T16:29:54+00:00",
   "last_tag": "v0.6.0",
@@ -78,18 +79,20 @@
   },
   "loc_total": 9705,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 69,
+  "open_prs": 17,
+  "repos_counted": [
+   "https://github.com/maubot/maubot"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 901,
   "status": "small-team",
   "tags_365d": 1,
   "telemetry_sdks": [],
   "tests_present": true,
   "weekly_commits": [
-   0,
-   4,
-   0,
+   3,
+   1,
    0,
    0,
    0,
@@ -138,10 +141,11 @@
    0,
    0,
    2,
+   0,
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -155,8 +159,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 4,
    "authors_90d": 1,
    "authors_all": 37,
@@ -199,33 +203,33 @@
     "2026-10-24": 2
    },
    "default_branch": "master",
-   "description": null,
+   "description": "A plugin-based Matrix bot system.",
    "error": null,
    "files": 173,
    "first_commit": "2018-06-13T22:41:05+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 109,
    "head_sha": "f20825b5e3031a89eb5b2edea7f6f7726ada9a10",
-   "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issue_first_response_median_days": 0.18,
+   "issues_responded": 2,
+   "issues_sampled": 3,
    "languages": {
-    "Dockerfile": 0.0082,
-    "HTML": 0.0021,
-    "JavaScript": 0.1939,
-    "Jinja": 0.0061,
-    "Python": 0.6888,
-    "Sass": 0.0971,
-    "Shell": 0.0038
+    "Dockerfile": 0.006,
+    "HTML": 0.0032,
+    "JavaScript": 0.1885,
+    "Jinja": 0.0046,
+    "Python": 0.7013,
+    "SCSS": 0.0053,
+    "Sass": 0.0877,
+    "Shell": 0.0033
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-10-24T16:29:54+00:00",
    "last_tag": "v0.6.0",
    "last_tag_date": "2025-11-17T15:53:42+02:00",
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 80,
     "HTML": 20,
@@ -236,12 +240,12 @@
     "Shell": 37
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 69,
+   "open_prs": 17,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 901,
    "status": "small-team",
    "tags_365d": 1,
    "telemetry_scan": {
@@ -252,9 +256,8 @@
    "tests_present": true,
    "url": "https://github.com/maubot/maubot",
    "weekly_commits": [
-    0,
-    4,
-    0,
+    3,
+    1,
     0,
     0,
     0,
@@ -303,6 +306,7 @@
     0,
     0,
     2,
+    0,
     0
    ]
   }

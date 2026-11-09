@@ -46,7 +46,7 @@
    "2026-07-22": 1
   },
   "first_commit": "2019-04-18T14:30:57+00:00",
-  "forks": null,
+  "forks": 10,
   "issue_first_response_median_days": null,
   "languages": {
    "Python": 1.0
@@ -61,10 +61,13 @@
   },
   "loc_total": 2625,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 12,
+  "open_prs": 2,
+  "repos_counted": [
+   "https://github.com/maubot/github"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 56,
   "status": "slowing",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -74,7 +77,6 @@
    0,
    0,
    1,
-   0,
    0,
    0,
    0,
@@ -106,6 +108,7 @@
    0,
    0,
    0,
+   0,
    1,
    0,
    0,
@@ -124,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -138,8 +141,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 2,
    "authors_90d": 0,
    "authors_all": 4,
@@ -177,37 +180,36 @@
     "2026-07-22": 1
    },
    "default_branch": "master",
-   "description": null,
+   "description": "A GitHub client and webhook receiver for maubot",
    "error": null,
    "files": 32,
    "first_commit": "2019-04-18T14:30:57+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 10,
    "head_sha": "64c5d4197e6b3659afcb8e484fc6a7e66fd22ca1",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
     "Python": 1.0
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-07-22T20:31:39+00:00",
    "last_tag": "v0.2.0",
    "last_tag_date": "2025-01-28T17:40:38+02:00",
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Python": 2625
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 12,
+   "open_prs": 2,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 56,
    "status": "slowing",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -238,7 +240,6 @@
     0,
     0,
     0,
-    0,
     2,
     0,
     0,
@@ -248,6 +249,7 @@
     0,
     0,
     1,
+    0,
     0,
     0,
     0,

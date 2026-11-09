@@ -41,10 +41,11 @@
   "commits_all": 25,
   "daily_commits": {},
   "first_commit": "2022-03-03T18:41:48+00:00",
-  "forks": null,
+  "forks": 1,
   "issue_first_response_median_days": null,
   "languages": {
-   "Rust": 1.0
+   "Dockerfile": 0.0478,
+   "Rust": 0.9522
   },
   "last_commit": "2023-06-23T15:40:58+00:00",
   "last_tag": "v0.3.0",
@@ -56,10 +57,13 @@
   },
   "loc_total": 269,
   "main_language": "Rust",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/DanNixon/matrix-mqtt-bridge"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 6,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -119,7 +123,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -133,8 +137,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 1,
@@ -166,37 +170,37 @@
    "commits_all": 25,
    "daily_commits": {},
    "default_branch": "main",
-   "description": null,
+   "description": "Bridge between MQTT and Matrix.",
    "error": null,
    "files": 10,
    "first_commit": "2022-03-03T18:41:48+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 1,
    "head_sha": "f862eb6f49949fef43d10efe996bd349536e4803",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Rust": 1.0
+    "Dockerfile": 0.0478,
+    "Rust": 0.9522
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2023-06-23T15:40:58+00:00",
    "last_tag": "v0.3.0",
    "last_tag_date": "2022-06-17T12:26:49+01:00",
    "licence_detected": "MIT",
    "licence_file": "LICENSE.txt",
-   "licence_source": "file",
    "loc": {
     "Rust": 269
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 6,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

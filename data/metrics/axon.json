@@ -4,12 +4,12 @@
   "ai": {
    "agent_files": 5,
    "ai_bot_commits_365d": 0,
-   "attributed_commits_365d": 160,
-   "commits_365d": 441,
-   "share_365d": 0.3628,
+   "attributed_commits_365d": 178,
+   "commits_365d": 479,
+   "share_365d": 0.3716,
    "suggested_dev_usage": "regular",
    "tools": {
-    "claude": 160
+    "claude": 178
    },
    "workflows": 0
   },
@@ -37,10 +37,10 @@
   },
   "bus_factor_365d": 1,
   "ci": true,
-  "commits_30d": 165,
-  "commits_365d": 441,
-  "commits_90d": 396,
-  "commits_all": 441,
+  "commits_30d": 191,
+  "commits_365d": 479,
+  "commits_90d": 433,
+  "commits_all": 479,
   "daily_commits": {
    "2026-07-28": 3,
    "2026-07-29": 8,
@@ -112,59 +112,65 @@
    "2026-10-31": 6,
    "2026-11-01": 9,
    "2026-11-02": 6,
-   "2026-11-03": 5
+   "2026-11-03": 6,
+   "2026-11-05": 13,
+   "2026-11-06": 9,
+   "2026-11-07": 3,
+   "2026-11-08": 12
   },
   "first_commit": "2026-07-28T21:20:31+00:00",
-  "forks": null,
+  "forks": 0,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.0164,
+   "CSS": 0.0107,
    "Go Template": 0.0012,
-   "JavaScript": 0.0045,
-   "Kotlin": 0.0012,
-   "Powershell": 0.0015,
-   "Python": 0.007,
-   "Rust": 0.5386,
-   "SQL": 0.0024,
-   "Shell": 0.0212,
-   "Swift": 0.0086,
-   "TypeScript": 0.3694,
-   "TypeScript Typings": 0.0268
+   "JavaScript": 0.0073,
+   "Kotlin": 0.0014,
+   "PLpgSQL": 0.0023,
+   "PowerShell": 0.002,
+   "Python": 0.0106,
+   "Rust": 0.5412,
+   "Shell": 0.0284,
+   "Swift": 0.035,
+   "TypeScript": 0.3579
   },
-  "last_commit": "2026-11-03T01:18:41+00:00",
-  "last_tag": "v0.1.22",
-  "last_tag_date": "2026-11-02T20:22:27-05:00",
+  "last_commit": "2026-11-08T23:40:27+00:00",
+  "last_tag": "v0.1.26",
+  "last_tag_date": "2026-11-08T18:59:30-05:00",
   "last_tag_repo": "https://github.com/matrix-axon/matrix-axon",
-  "licence_detected": "Apache-2.0",
+  "licence_detected": "NOASSERTION",
   "loc": {
    "C Header": 4,
-   "CSS": 5497,
+   "CSS": 5523,
    "Dockerfile": 51,
    "Go Template": 403,
-   "HTML": 253,
-   "JavaScript": 1499,
-   "Kotlin": 397,
+   "HTML": 289,
+   "JavaScript": 1959,
+   "Kotlin": 421,
    "Objective C": 52,
    "Powershell": 517,
    "Prolog": 1,
-   "Python": 2329,
-   "Rust": 180466,
-   "SQL": 796,
-   "Shell": 7106,
-   "Swift": 2876,
+   "Python": 2912,
+   "Rust": 196077,
+   "SQL": 1030,
+   "Shell": 7148,
+   "Swift": 11135,
    "Systemd": 41,
-   "TypeScript": 123755,
-   "TypeScript Typings": 8978,
+   "TypeScript": 126375,
+   "TypeScript Typings": 9207,
    "jq": 17
   },
-  "loc_total": 335038,
+  "loc_total": 363162,
   "main_language": "Rust",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 381,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/matrix-axon/matrix-axon"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 1,
   "status": "small-team",
-  "tags_365d": 40,
+  "tags_365d": 44,
   "telemetry_sdks": [],
   "tests_present": true,
   "weekly_commits": [
@@ -205,24 +211,24 @@
    0,
    0,
    0,
-   14,
-   29,
-   5,
-   24,
-   30,
-   19,
-   23,
-   11,
-   34,
    31,
-   62,
+   15,
+   19,
+   22,
    29,
-   54,
-   42,
-   34
+   15,
+   17,
+   32,
+   24,
+   63,
+   28,
+   37,
+   53,
+   50,
+   44
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -230,107 +236,107 @@
      {
       "kind": "agents.md",
       "path": "AGENTS.md",
-      "url": "https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/AGENTS.md"
+      "url": "https://github.com/matrix-axon/matrix-axon/blob/1af8118e90ee4accec436ed178b2b4f7169d5063/AGENTS.md"
      },
      {
       "kind": "claude",
       "path": "CLAUDE.md",
-      "url": "https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/CLAUDE.md"
+      "url": "https://github.com/matrix-axon/matrix-axon/blob/1af8118e90ee4accec436ed178b2b4f7169d5063/CLAUDE.md"
      },
      {
       "kind": "agents.md",
       "path": "clients/tui/AGENTS.md",
-      "url": "https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/clients/tui/AGENTS.md"
+      "url": "https://github.com/matrix-axon/matrix-axon/blob/1af8118e90ee4accec436ed178b2b4f7169d5063/clients/tui/AGENTS.md"
      },
      {
       "kind": "agents.md",
       "path": "clients/web/AGENTS.md",
-      "url": "https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/clients/web/AGENTS.md"
+      "url": "https://github.com/matrix-axon/matrix-axon/blob/1af8118e90ee4accec436ed178b2b4f7169d5063/clients/web/AGENTS.md"
      },
      {
       "kind": "agents.md",
       "path": "smoke/tui/AGENTS.md",
-      "url": "https://github.com/matrix-axon/matrix-axon/blob/d8c85a344a178710d31278704282b49dd3194255/smoke/tui/AGENTS.md"
+      "url": "https://github.com/matrix-axon/matrix-axon/blob/1af8118e90ee4accec436ed178b2b4f7169d5063/smoke/tui/AGENTS.md"
      }
     ],
     "ai_bot_authors": [],
-    "attributed_commits_365d": 160,
-    "commits_365d": 441,
+    "attributed_commits_365d": 178,
+    "commits_365d": 479,
     "examples": [
      {
-      "date": "2026-11-02",
-      "sha": "c161e4e7c6190b3473b715a05a6a330cba4f55c2",
+      "date": "2026-11-08",
+      "sha": "5d887a187c91fa0d26ee445880f2dd8a94b1bafc",
       "tools": [
        "claude"
       ],
-      "url": "https://github.com/matrix-axon/matrix-axon/commit/c161e4e7c6190b3473b715a05a6a330cba4f55c2"
+      "url": "https://github.com/matrix-axon/matrix-axon/commit/5d887a187c91fa0d26ee445880f2dd8a94b1bafc"
      },
      {
-      "date": "2026-11-01",
-      "sha": "3bcb31e279f545226f0e51dc15d64ac835e153b9",
+      "date": "2026-11-08",
+      "sha": "7b2a2559c8fa43b98c73625ad538737dc40bf2b9",
       "tools": [
        "claude"
       ],
-      "url": "https://github.com/matrix-axon/matrix-axon/commit/3bcb31e279f545226f0e51dc15d64ac835e153b9"
+      "url": "https://github.com/matrix-axon/matrix-axon/commit/7b2a2559c8fa43b98c73625ad538737dc40bf2b9"
      },
      {
-      "date": "2026-10-31",
-      "sha": "8311fc189d5d70b91b3efaaaa26b587a972c8f1e",
+      "date": "2026-11-08",
+      "sha": "a913c18c81811de4c11ff4f0db785e96789fa496",
       "tools": [
        "claude"
       ],
-      "url": "https://github.com/matrix-axon/matrix-axon/commit/8311fc189d5d70b91b3efaaaa26b587a972c8f1e"
+      "url": "https://github.com/matrix-axon/matrix-axon/commit/a913c18c81811de4c11ff4f0db785e96789fa496"
      },
      {
-      "date": "2026-10-31",
-      "sha": "00d4496eb54d26d1ce35c858a9f53351f41a8e1b",
+      "date": "2026-11-08",
+      "sha": "810765130ba19fafd8be8579ed28acedae1c0cac",
       "tools": [
        "claude"
       ],
-      "url": "https://github.com/matrix-axon/matrix-axon/commit/00d4496eb54d26d1ce35c858a9f53351f41a8e1b"
+      "url": "https://github.com/matrix-axon/matrix-axon/commit/810765130ba19fafd8be8579ed28acedae1c0cac"
      },
      {
-      "date": "2026-10-29",
-      "sha": "028d12c83e672683c9d2a37fd94ebfa51f87511a",
+      "date": "2026-11-07",
+      "sha": "f200319a3c55fb047a13c8f6dfb4034d871bf93f",
       "tools": [
        "claude"
       ],
-      "url": "https://github.com/matrix-axon/matrix-axon/commit/028d12c83e672683c9d2a37fd94ebfa51f87511a"
+      "url": "https://github.com/matrix-axon/matrix-axon/commit/f200319a3c55fb047a13c8f6dfb4034d871bf93f"
      },
      {
-      "date": "2026-10-29",
-      "sha": "1193a6934e06875e45ad92f4b3f2e5402caa3d57",
+      "date": "2026-11-07",
+      "sha": "b46933f142d7a8075edb64d9e66aaf1f2da57e00",
       "tools": [
        "claude"
       ],
-      "url": "https://github.com/matrix-axon/matrix-axon/commit/1193a6934e06875e45ad92f4b3f2e5402caa3d57"
+      "url": "https://github.com/matrix-axon/matrix-axon/commit/b46933f142d7a8075edb64d9e66aaf1f2da57e00"
      },
      {
-      "date": "2026-10-26",
-      "sha": "c350dba0be17a772f122aa2672f087ebb2d8d6f0",
+      "date": "2026-11-06",
+      "sha": "4f6f5843e0f20b960af5c55b7f4d6aa327a9590a",
       "tools": [
        "claude"
       ],
-      "url": "https://github.com/matrix-axon/matrix-axon/commit/c350dba0be17a772f122aa2672f087ebb2d8d6f0"
+      "url": "https://github.com/matrix-axon/matrix-axon/commit/4f6f5843e0f20b960af5c55b7f4d6aa327a9590a"
      },
      {
-      "date": "2026-10-26",
-      "sha": "62bf03a8efcaa147bb020aa10c1f35d9d65981d2",
+      "date": "2026-11-06",
+      "sha": "d5812eeca7a8fa3a06a92b93f195aa7f7874c058",
       "tools": [
        "claude"
       ],
-      "url": "https://github.com/matrix-axon/matrix-axon/commit/62bf03a8efcaa147bb020aa10c1f35d9d65981d2"
+      "url": "https://github.com/matrix-axon/matrix-axon/commit/d5812eeca7a8fa3a06a92b93f195aa7f7874c058"
      }
     ],
-    "share_365d": 0.3628,
+    "share_365d": 0.3716,
     "suggested_dev_usage": "regular",
     "tools": {
-     "claude": 160
+     "claude": 178
     },
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 2,
    "authors_90d": 2,
    "authors_all": 2,
@@ -375,10 +381,10 @@
     ".github/workflows/release-notes.yml",
     ".github/workflows/release-plz.yml"
    ],
-   "commits_30d": 165,
-   "commits_365d": 441,
-   "commits_90d": 396,
-   "commits_all": 441,
+   "commits_30d": 191,
+   "commits_365d": 479,
+   "commits_90d": 433,
+   "commits_all": 479,
    "daily_commits": {
     "2026-07-28": 3,
     "2026-07-29": 8,
@@ -450,71 +456,73 @@
     "2026-10-31": 6,
     "2026-11-01": 9,
     "2026-11-02": 6,
-    "2026-11-03": 5
+    "2026-11-03": 6,
+    "2026-11-05": 13,
+    "2026-11-06": 9,
+    "2026-11-07": 3,
+    "2026-11-08": 12
    },
    "default_branch": "main",
-   "description": null,
+   "description": "Self-hosted personal agent for Matrix open messaging protocol",
    "error": null,
-   "files": 1448,
+   "files": 1513,
    "first_commit": "2026-07-28T21:20:31+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
-   "head_sha": "d8c85a344a178710d31278704282b49dd3194255",
+   "forks": 0,
+   "head_sha": "1af8118e90ee4accec436ed178b2b4f7169d5063",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 237,
    "languages": {
-    "CSS": 0.0164,
+    "CSS": 0.0107,
     "Go Template": 0.0012,
-    "JavaScript": 0.0045,
-    "Kotlin": 0.0012,
-    "Powershell": 0.0015,
-    "Python": 0.007,
-    "Rust": 0.5386,
-    "SQL": 0.0024,
-    "Shell": 0.0212,
-    "Swift": 0.0086,
-    "TypeScript": 0.3694,
-    "TypeScript Typings": 0.0268
+    "JavaScript": 0.0073,
+    "Kotlin": 0.0014,
+    "PLpgSQL": 0.0023,
+    "PowerShell": 0.002,
+    "Python": 0.0106,
+    "Rust": 0.5412,
+    "Shell": 0.0284,
+    "Swift": 0.035,
+    "TypeScript": 0.3579
    },
-   "languages_source": "scc",
-   "last_commit": "2026-11-03T01:18:41+00:00",
-   "last_tag": "v0.1.22",
-   "last_tag_date": "2026-11-02T20:22:27-05:00",
-   "licence_detected": "Apache-2.0",
+   "languages_source": "forge",
+   "last_commit": "2026-11-08T23:40:27+00:00",
+   "last_tag": "v0.1.26",
+   "last_tag_date": "2026-11-08T18:59:30-05:00",
+   "licence_detected": "NOASSERTION",
    "licence_file": "LICENSE.md",
-   "licence_source": "file",
    "loc": {
     "C Header": 4,
-    "CSS": 5497,
+    "CSS": 5523,
     "Dockerfile": 51,
     "Go Template": 403,
-    "HTML": 253,
-    "JavaScript": 1499,
-    "Kotlin": 397,
+    "HTML": 289,
+    "JavaScript": 1959,
+    "Kotlin": 421,
     "Objective C": 52,
     "Powershell": 517,
     "Prolog": 1,
-    "Python": 2329,
-    "Rust": 180466,
-    "SQL": 796,
-    "Shell": 7106,
-    "Swift": 2876,
+    "Python": 2912,
+    "Rust": 196077,
+    "SQL": 1030,
+    "Shell": 7148,
+    "Swift": 11135,
     "Systemd": 41,
-    "TypeScript": 123755,
-    "TypeScript Typings": 8978,
+    "TypeScript": 126375,
+    "TypeScript Typings": 9207,
     "jq": 17
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 381,
+   "open_prs": 1,
    "prerelease_tags_365d": 4,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 1,
    "status": "small-team",
-   "tags_365d": 40,
+   "tags_365d": 44,
    "telemetry_scan": {
     "found": [],
     "manifests_scanned": 26,
@@ -560,21 +568,21 @@
     0,
     0,
     0,
-    14,
-    29,
-    5,
-    24,
-    30,
-    19,
-    23,
-    11,
-    34,
     31,
-    62,
+    15,
+    19,
+    22,
     29,
-    54,
-    42,
-    34
+    15,
+    17,
+    32,
+    24,
+    63,
+    28,
+    37,
+    53,
+    50,
+    44
    ]
   }
  ],

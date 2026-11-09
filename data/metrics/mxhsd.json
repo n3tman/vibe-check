@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 1,
@@ -41,13 +41,10 @@
   "commits_all": 117,
   "daily_commits": {},
   "first_commit": "2017-08-13T14:01:06+00:00",
-  "forks": null,
+  "forks": 3,
   "issue_first_response_median_days": null,
   "languages": {
-   "Batch": 0.0072,
-   "Gradle": 0.0108,
-   "Java": 0.9664,
-   "Shell": 0.0156
+   "Java": 1.0
   },
   "last_commit": "2018-10-19T21:44:02+00:00",
   "last_tag": null,
@@ -62,11 +59,14 @@
   },
   "loc_total": 8501,
   "main_language": "Java",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/kamax-matrix/mxhsd"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 29,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
@@ -125,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -139,8 +139,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 1,
@@ -172,30 +172,26 @@
    "commits_all": 117,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Corporate Matrix Homeserver",
    "error": null,
    "files": 239,
    "first_commit": "2017-08-13T14:01:06+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 3,
    "head_sha": "710692052f2e349a1ab415246dc5bf04bb46af98",
    "issue_first_response_median_days": null,
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Batch": 0.0072,
-    "Gradle": 0.0108,
-    "Java": 0.9664,
-    "Shell": 0.0156
+    "Java": 1.0
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2018-10-19T21:44:02+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Batch": 61,
     "Gradle": 92,
@@ -203,13 +199,13 @@
     "Shell": 133
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 29,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

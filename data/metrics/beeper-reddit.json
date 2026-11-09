@@ -37,7 +37,7 @@
   },
   "bus_factor_365d": 1,
   "ci": true,
-  "commits_30d": 29,
+  "commits_30d": 20,
   "commits_365d": 38,
   "commits_90d": 29,
   "commits_all": 38,
@@ -54,11 +54,11 @@
    "2026-11-04": 3
   },
   "first_commit": "2026-06-10T11:16:42+00:00",
-  "forks": null,
+  "forks": 0,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.003,
-   "Go": 0.9912,
+   "Dockerfile": 0.0029,
+   "Go": 0.9913,
    "Shell": 0.0058
   },
   "last_commit": "2026-11-04T23:56:47+00:00",
@@ -68,15 +68,18 @@
   "licence_detected": null,
   "loc": {
    "Dockerfile": 19,
-   "Go": 6309,
+   "Go": 6314,
    "Shell": 37
   },
-  "loc_total": 6365,
+  "loc_total": 6370,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 4,
+  "repos_counted": [
+   "https://github.com/beeper/reddit"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 3,
   "status": "small-team",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -114,7 +117,6 @@
    0,
    6,
    0,
-   0,
    3,
    0,
    0,
@@ -130,13 +132,14 @@
    0,
    0,
    0,
-   10,
+   9,
    1,
-   2,
-   16
+   1,
+   11,
+   7
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -217,8 +220,8 @@
     },
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 2,
    "authors_90d": 2,
    "authors_all": 2,
@@ -244,7 +247,7 @@
    "ci": [
     ".github/workflows/deploy.yml"
    ],
-   "commits_30d": 29,
+   "commits_30d": 20,
    "commits_365d": 38,
    "commits_90d": 29,
    "commits_all": 38,
@@ -267,17 +270,17 @@
    "first_commit": "2026-06-10T11:16:42+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
-   "head_sha": "9d7560faeee642603b315518c24718feb10e1ba5",
+   "forks": 0,
+   "head_sha": "b7ae0e477c832c8d272a941693d0fb0a19ffbebc",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.003,
-    "Go": 0.9912,
+    "Dockerfile": 0.0029,
+    "Go": 0.9913,
     "Shell": 0.0058
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-11-04T23:56:47+00:00",
    "last_tag": null,
    "last_tag_date": null,
@@ -285,16 +288,16 @@
    "licence_file": null,
    "loc": {
     "Dockerfile": 19,
-    "Go": 6309,
+    "Go": 6314,
     "Shell": 37
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 4,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 3,
    "status": "small-team",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -337,7 +340,6 @@
     0,
     6,
     0,
-    0,
     3,
     0,
     0,
@@ -353,10 +355,11 @@
     0,
     0,
     0,
-    10,
+    9,
     1,
-    2,
-    16
+    1,
+    11,
+    7
    ]
   }
  ],

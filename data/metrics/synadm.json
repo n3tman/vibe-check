@@ -43,13 +43,12 @@
    "2026-07-04": 7
   },
   "first_commit": "2020-10-22T07:03:02+00:00",
-  "forks": null,
-  "issue_first_response_median_days": null,
+  "forks": 30,
+  "issue_first_response_median_days": 0.02,
   "languages": {
-   "CSS": 0.0022,
-   "Makefile": 0.0022,
-   "Python": 0.9837,
-   "Shell": 0.0119
+   "Makefile": 0.0033,
+   "Python": 0.9878,
+   "Shell": 0.009
   },
   "last_commit": "2026-07-04T16:23:33+00:00",
   "last_tag": "v0.49.2",
@@ -57,23 +56,26 @@
   "last_tag_repo": "https://codeberg.org/synadm/synadm",
   "licence_detected": "GPL-3.0",
   "loc": {
-   "CSS": 18,
-   "Makefile": 18,
-   "Python": 7903,
-   "Shell": 98
+   "CSS": 9,
+   "Makefile": 9,
+   "Python": 4042,
+   "Shell": 49
   },
-  "loc_total": 8037,
+  "loc_total": 4109,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 26,
+  "open_prs": 5,
+  "repos_counted": [
+   "https://codeberg.org/synadm/synadm",
+   "https://github.com/JOJ0/synadm"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 209,
   "status": "slowing",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": false,
   "weekly_commits": [
-   0,
    0,
    0,
    0,
@@ -124,10 +126,11 @@
    0,
    0,
    0,
+   0,
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -141,8 +144,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 23,
@@ -177,24 +180,23 @@
     "2026-07-04": 7
    },
    "default_branch": "master",
-   "description": null,
+   "description": "Command line admin tool for Synapse (the Matrix reference homeserver)",
    "error": null,
    "files": 71,
    "first_commit": "2020-10-22T07:03:02+00:00",
    "first_parent": false,
    "forge": "forgejo",
-   "forks": null,
+   "forks": 3,
    "head_sha": "fd8dae877a63e538e9175b938c29a9c4bb69e642",
-   "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issue_first_response_median_days": 0.02,
+   "issues_responded": 2,
+   "issues_sampled": 2,
    "languages": {
-    "CSS": 0.0022,
-    "Makefile": 0.0022,
-    "Python": 0.9837,
-    "Shell": 0.0119
+    "Makefile": 0.0033,
+    "Python": 0.9878,
+    "Shell": 0.009
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-07-04T16:23:33+00:00",
    "last_tag": "v0.49.2",
    "last_tag_date": "2025-10-15T21:03:23+02:00",
@@ -208,12 +210,12 @@
     "Shell": 49
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 13,
+   "open_prs": 3,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 25,
    "status": "slowing",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -224,7 +226,6 @@
    "tests_present": false,
    "url": "https://codeberg.org/synadm/synadm",
    "weekly_commits": [
-    0,
     0,
     0,
     0,
@@ -275,6 +276,7 @@
     0,
     0,
     0,
+    0,
     0
    ]
   },
@@ -290,8 +292,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 23,
@@ -324,30 +326,29 @@
    "commits_all": 796,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Command line admin tool for Synapse (the Matrix reference homeserver)",
+   "duplicate_of": "https://codeberg.org/synadm/synadm",
    "error": null,
    "files": 70,
    "first_commit": "2020-10-22T07:03:02+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 27,
    "head_sha": "7b5f2146e24663f78a060bd376cb1455210dab1d",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "CSS": 0.0023,
-    "Makefile": 0.0023,
-    "Python": 0.9829,
-    "Shell": 0.0125
+    "Makefile": 0.0035,
+    "Python": 0.9868,
+    "Shell": 0.0097
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-04-04T07:06:56+00:00",
    "last_tag": "migrated-to-codeberg-note",
    "last_tag_date": "2025-04-04T09:06:56+02:00",
    "licence_detected": "GPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "CSS": 9,
     "Makefile": 9,
@@ -355,13 +356,13 @@
     "Shell": 49
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 13,
+   "open_prs": 2,
    "prerelease_tags_365d": 0,
    "role": "other",
    "security_policy": null,
-   "stars": null,
-   "status": "dormant",
+   "stars": 184,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

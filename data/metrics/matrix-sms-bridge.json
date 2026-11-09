@@ -41,13 +41,11 @@
   "commits_all": 174,
   "daily_commits": {},
   "first_commit": "2020-05-12T07:46:29+00:00",
-  "forks": null,
-  "issue_first_response_median_days": null,
+  "forks": 8,
+  "issue_first_response_median_days": 0.01,
   "languages": {
-   "Batch": 0.0157,
-   "Dockerfile": 0.004,
-   "Kotlin": 0.9545,
-   "Shell": 0.0258
+   "Dockerfile": 0.0033,
+   "Kotlin": 0.9967
   },
   "last_commit": "2025-10-20T18:30:24+00:00",
   "last_tag": "v0.5.13",
@@ -62,10 +60,13 @@
   },
   "loc_total": 4970,
   "main_language": "Kotlin",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 7,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/benkuly/matrix-sms-bridge"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 96,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -125,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -139,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 2,
@@ -173,30 +174,27 @@
    "commits_all": 174,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Matrix bridge, that allows you to bridge matrix rooms to SMS with one telephone number only.",
    "error": null,
    "files": 107,
    "first_commit": "2020-05-12T07:46:29+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 8,
    "head_sha": "03d522da3044bf51996abf3dcbe980aadec02087",
-   "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issue_first_response_median_days": 0.01,
+   "issues_responded": 2,
+   "issues_sampled": 2,
    "languages": {
-    "Batch": 0.0157,
-    "Dockerfile": 0.004,
-    "Kotlin": 0.9545,
-    "Shell": 0.0258
+    "Dockerfile": 0.0033,
+    "Kotlin": 0.9967
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-10-20T18:30:24+00:00",
    "last_tag": "v0.5.13",
    "last_tag_date": "2025-10-20T20:30:24+02:00",
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Batch": 78,
     "Dockerfile": 20,
@@ -204,12 +202,12 @@
     "Shell": 128
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 7,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 96,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

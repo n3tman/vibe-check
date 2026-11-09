@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 8,
@@ -41,18 +41,18 @@
   "commits_all": 485,
   "daily_commits": {},
   "first_commit": "2018-06-05T09:09:41+00:00",
-  "forks": null,
+  "forks": 33,
   "issue_first_response_median_days": null,
   "languages": {
-   "Ruby": 0.0224,
-   "Shell": 0.0074,
-   "Swift": 0.9698
+   "Ruby": 0.0317,
+   "Shell": 0.0061,
+   "Swift": 0.9622
   },
   "last_commit": "2019-06-02T16:50:42+00:00",
   "last_tag": "0.0.525-f5a1376",
   "last_tag_date": "2019-05-28T22:35:56+01:00",
   "last_tag_repo": "https://github.com/neilalexander/seaglass",
-  "licence_detected": "GPL-3.0",
+  "licence_detected": "NOASSERTION",
   "loc": {
    "Gemfile": 2,
    "Ruby": 106,
@@ -61,11 +61,14 @@
   },
   "loc_total": 4742,
   "main_language": "Swift",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 43,
+  "open_prs": 5,
+  "repos_counted": [
+   "https://github.com/neilalexander/seaglass"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 524,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
@@ -124,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -138,8 +141,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 8,
@@ -172,29 +175,28 @@
    "commits_all": 485,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "A truly native Matrix client for macOS - written in Swift/Cocoa, with E2E encryption support",
    "error": null,
    "files": 119,
    "first_commit": "2018-06-05T09:09:41+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 33,
    "head_sha": "dc9789334340753c64131f9dace677be6d16bc49",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Ruby": 0.0224,
-    "Shell": 0.0074,
-    "Swift": 0.9698
+    "Ruby": 0.0317,
+    "Shell": 0.0061,
+    "Swift": 0.9622
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2019-06-02T16:50:42+00:00",
    "last_tag": "0.0.525-f5a1376",
    "last_tag_date": "2019-05-28T22:35:56+01:00",
-   "licence_detected": "GPL-3.0",
+   "licence_detected": "NOASSERTION",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Gemfile": 2,
     "Ruby": 106,
@@ -202,13 +204,13 @@
     "Swift": 4599
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 43,
+   "open_prs": 5,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 524,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

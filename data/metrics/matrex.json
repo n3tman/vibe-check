@@ -41,7 +41,7 @@
   "commits_all": 32,
   "daily_commits": {},
   "first_commit": "2016-11-12T16:45:39+00:00",
-  "forks": null,
+  "forks": 7,
   "issue_first_response_median_days": null,
   "languages": {
    "Elixir": 1.0
@@ -56,10 +56,13 @@
   },
   "loc_total": 2219,
   "main_language": "Elixir",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/bismark/matrex"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 38,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -119,7 +122,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -133,8 +136,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 1,
@@ -164,37 +167,36 @@
    "commits_all": 32,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "A WIP toy Matrix server implementation in Elixir",
    "error": null,
    "files": 54,
    "first_commit": "2016-11-12T16:45:39+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 7,
    "head_sha": "a92249733c2224507d9117b4b50bdc23fa8712b6",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
     "Elixir": 1.0
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2018-02-22T16:59:42+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "MIT",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Elixir": 2219
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 38,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

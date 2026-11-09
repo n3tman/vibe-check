@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 4,
@@ -41,13 +41,13 @@
   "commits_all": 53,
   "daily_commits": {},
   "first_commit": "2020-05-05T16:40:44+00:00",
-  "forks": null,
+  "forks": 10,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.008,
-   "Nix": 0.0092,
-   "Shell": 0.0057,
-   "TypeScript": 0.9771
+   "Dockerfile": 0.01,
+   "Nix": 0.0068,
+   "Shell": 0.0063,
+   "TypeScript": 0.977
   },
   "last_commit": "2025-06-03T13:07:28+00:00",
   "last_tag": null,
@@ -62,11 +62,14 @@
   },
   "loc_total": 4358,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 17,
+  "open_prs": 2,
+  "repos_counted": [
+   "https://github.com/icewind1991/mx-puppet-steam"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "dormant",
+  "stars": 46,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": false,
@@ -125,7 +128,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -139,8 +142,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 4,
@@ -172,30 +175,29 @@
    "commits_all": 53,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Matrix <-> Steam puppeting bridge based on mx-puppet-bridge",
    "error": null,
    "files": 22,
    "first_commit": "2020-05-05T16:40:44+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 10,
    "head_sha": "101ca17fb9a645377d3482e94c2c25d8182db1e8",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.008,
-    "Nix": 0.0092,
-    "Shell": 0.0057,
-    "TypeScript": 0.9771
+    "Dockerfile": 0.01,
+    "Nix": 0.0068,
+    "Shell": 0.0063,
+    "TypeScript": 0.977
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-06-03T13:07:28+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 35,
     "Nix": 40,
@@ -203,13 +205,13 @@
     "TypeScript": 4258
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 17,
+   "open_prs": 2,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "dormant",
+   "stars": 46,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

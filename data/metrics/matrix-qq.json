@@ -41,12 +41,12 @@
   "commits_all": 48,
   "daily_commits": {},
   "first_commit": "2022-09-07T12:20:56+00:00",
-  "forks": null,
+  "forks": 11,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0062,
-   "Go": 0.9768,
-   "Shell": 0.0171
+   "Dockerfile": 0.0063,
+   "Go": 0.9698,
+   "Shell": 0.0238
   },
   "last_commit": "2025-01-27T11:37:53+00:00",
   "last_tag": "0.2.1",
@@ -60,10 +60,13 @@
   },
   "loc_total": 2109,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 12,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/duo/matrix-qq"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 171,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -123,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 4,
@@ -170,41 +173,40 @@
    "commits_all": 48,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "A Matrix-QQ puppeting bridge",
    "error": null,
    "files": 30,
    "first_commit": "2022-09-07T12:20:56+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 11,
    "head_sha": "69ec39e42a76406e105efad1d48fb21a09b2661c",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0062,
-    "Go": 0.9768,
-    "Shell": 0.0171
+    "Dockerfile": 0.0063,
+    "Go": 0.9698,
+    "Shell": 0.0238
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-01-27T11:37:53+00:00",
    "last_tag": "0.2.1",
    "last_tag_date": "2025-01-22T20:43:03+08:00",
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 13,
     "Go": 2060,
     "Shell": 36
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 12,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 171,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

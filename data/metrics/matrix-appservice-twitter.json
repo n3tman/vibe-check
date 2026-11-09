@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 1,
@@ -38,10 +38,10 @@
   "commits_30d": 0,
   "commits_365d": 0,
   "commits_90d": 0,
-  "commits_all": 74,
+  "commits_all": 72,
   "daily_commits": {},
   "first_commit": "2016-05-23T15:34:37+00:00",
-  "forks": null,
+  "forks": 8,
   "issue_first_response_median_days": null,
   "languages": {
    "JavaScript": 1.0
@@ -56,11 +56,14 @@
   },
   "loc_total": 1875,
   "main_language": "JavaScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 27,
+  "open_prs": 2,
+  "repos_counted": [
+   "https://github.com/Half-Shot/matrix-appservice-twitter"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 32,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": false,
@@ -119,7 +122,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -133,8 +136,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 1,
@@ -161,41 +164,40 @@
    "commits_30d": 0,
    "commits_365d": 0,
    "commits_90d": 0,
-   "commits_all": 74,
+   "commits_all": 72,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Twitter AS bridge for Matrix",
    "error": null,
    "files": 16,
    "first_commit": "2016-05-23T15:34:37+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 8,
    "head_sha": "312c2228f1f6b94e29da53c41ea070a0b6849ce9",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
     "JavaScript": 1.0
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2016-11-01T19:28:12+00:00",
    "last_tag": "v0.1.0-rc2",
    "last_tag_date": "2017-01-23T15:28:14+00:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "JavaScript": 1875
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 27,
+   "open_prs": 2,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 32,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

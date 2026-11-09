@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 2,
   "authors_90d": 0,
   "authors_all": 38,
@@ -38,20 +38,21 @@
   "commits_30d": 0,
   "commits_365d": 3,
   "commits_90d": 0,
-  "commits_all": 1824,
+  "commits_all": 1785,
   "daily_commits": {
    "2026-01-21": 3
   },
   "first_commit": "2015-09-17T15:48:43+00:00",
-  "forks": null,
+  "forks": 75,
   "issue_first_response_median_days": null,
   "languages": {
-   "BASH": 0.0022,
-   "CSS": 0.0085,
-   "Dockerfile": 0.0017,
-   "HTML": 0.0019,
-   "JavaScript": 0.0218,
-   "TypeScript": 0.9638
+   "CSS": 0.0065,
+   "Dockerfile": 0.0015,
+   "HTML": 0.0016,
+   "JavaScript": 0.0147,
+   "Nunjucks": 0.0155,
+   "Shell": 0.0032,
+   "TypeScript": 0.957
   },
   "last_commit": "2026-01-21T13:29:18+00:00",
   "last_tag": "2.1.2",
@@ -69,11 +70,14 @@
   },
   "loc_total": 12028,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 183,
+  "open_prs": 24,
+  "repos_counted": [
+   "https://github.com/matrix-org/matrix-appservice-slack"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "dormant",
+  "stars": 282,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
@@ -132,7 +136,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -146,8 +150,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 2,
    "authors_90d": 0,
    "authors_all": 38,
@@ -182,37 +186,37 @@
    "commits_30d": 0,
    "commits_365d": 3,
    "commits_90d": 0,
-   "commits_all": 1824,
+   "commits_all": 1785,
    "daily_commits": {
     "2026-01-21": 3
    },
    "default_branch": "develop",
-   "description": null,
+   "description": "A Matrix <--> Slack bridge",
    "error": null,
    "files": 179,
    "first_commit": "2015-09-17T15:48:43+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 75,
    "head_sha": "1da3c1418c6c556ff53fe93343fcabfdca64dfcc",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "BASH": 0.0022,
-    "CSS": 0.0085,
-    "Dockerfile": 0.0017,
-    "HTML": 0.0019,
-    "JavaScript": 0.0218,
-    "TypeScript": 0.9638
+    "CSS": 0.0065,
+    "Dockerfile": 0.0015,
+    "HTML": 0.0016,
+    "JavaScript": 0.0147,
+    "Nunjucks": 0.0155,
+    "Shell": 0.0032,
+    "TypeScript": 0.957
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-01-21T13:29:18+00:00",
    "last_tag": "2.1.2",
    "last_tag_date": "2023-07-31T10:02:00+01:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "BASH": 26,
     "CSS": 102,
@@ -223,13 +227,13 @@
     "TypeScript": 11592
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 183,
+   "open_prs": 24,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "dormant",
+   "stars": 282,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

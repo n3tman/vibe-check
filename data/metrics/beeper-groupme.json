@@ -5,8 +5,8 @@
    "agent_files": 0,
    "ai_bot_commits_365d": 0,
    "attributed_commits_365d": 52,
-   "commits_365d": 105,
-   "share_365d": 0.4952,
+   "commits_365d": 106,
+   "share_365d": 0.4906,
    "suggested_dev_usage": "regular",
    "tools": {
     "claude": 52
@@ -37,10 +37,10 @@
   },
   "bus_factor_365d": 2,
   "ci": true,
-  "commits_30d": 50,
-  "commits_365d": 105,
-  "commits_90d": 105,
-  "commits_all": 653,
+  "commits_30d": 43,
+  "commits_365d": 106,
+  "commits_90d": 106,
+  "commits_all": 654,
   "daily_commits": {
    "2026-09-18": 17,
    "2026-09-19": 9,
@@ -59,32 +59,36 @@
    "2026-10-28": 5,
    "2026-11-02": 4,
    "2026-11-03": 3,
-   "2026-11-04": 1
+   "2026-11-04": 1,
+   "2026-11-05": 1
   },
   "first_commit": "2018-08-12T19:26:05+00:00",
-  "forks": null,
+  "forks": 9,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.002,
-   "Go": 0.9948,
-   "Shell": 0.0032
+   "Dockerfile": 0.0016,
+   "Go": 0.9932,
+   "Shell": 0.0052
   },
-  "last_commit": "2026-11-04T13:13:19+00:00",
+  "last_commit": "2026-11-05T13:52:04+00:00",
   "last_tag": null,
   "last_tag_date": null,
   "last_tag_repo": null,
   "licence_detected": "AGPL-3.0",
   "loc": {
    "Dockerfile": 16,
-   "Go": 8085,
+   "Go": 8174,
    "Shell": 26
   },
-  "loc_total": 8127,
+  "loc_total": 8216,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/beeper/groupme"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 23,
   "status": "active",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -134,24 +138,24 @@
    0,
    0,
    0,
-   0,
    44,
    4,
    7,
-   17,
+   8,
+   9,
    6,
    19,
-   8
+   9
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
     "agent_files": [],
     "ai_bot_authors": [],
     "attributed_commits_365d": 52,
-    "commits_365d": 105,
+    "commits_365d": 106,
     "examples": [
      {
       "date": "2026-11-02",
@@ -218,15 +222,15 @@
       "url": "https://github.com/beeper/groupme/commit/227aabc2c93ad64c23a4b831eb46300a38ad1f28"
      }
     ],
-    "share_365d": 0.4952,
+    "share_365d": 0.4906,
     "suggested_dev_usage": "regular",
     "tools": {
      "claude": 52
     },
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 3,
    "authors_90d": 3,
    "authors_all": 29,
@@ -252,10 +256,10 @@
    "ci": [
     ".github/workflows/deploy.yml"
    ],
-   "commits_30d": 50,
-   "commits_365d": 105,
-   "commits_90d": 105,
-   "commits_all": 653,
+   "commits_30d": 43,
+   "commits_365d": 106,
+   "commits_90d": 106,
+   "commits_all": 654,
    "daily_commits": {
     "2026-09-18": 17,
     "2026-09-19": 9,
@@ -274,44 +278,44 @@
     "2026-10-28": 5,
     "2026-11-02": 4,
     "2026-11-03": 3,
-    "2026-11-04": 1
+    "2026-11-04": 1,
+    "2026-11-05": 1
    },
    "default_branch": "main",
-   "description": null,
+   "description": "A Matrix-GroupMe puppeting bridge",
    "error": null,
    "files": 72,
    "first_commit": "2018-08-12T19:26:05+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
-   "head_sha": "6d88dd2d97547e1172a8d27a26f6e191863d29cb",
+   "forks": 9,
+   "head_sha": "d7bb3cd4ced7a488f00fd8926676c94a6e6032c2",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 1,
    "languages": {
-    "Dockerfile": 0.002,
-    "Go": 0.9948,
-    "Shell": 0.0032
+    "Dockerfile": 0.0016,
+    "Go": 0.9932,
+    "Shell": 0.0052
    },
-   "languages_source": "scc",
-   "last_commit": "2026-11-04T13:13:19+00:00",
+   "languages_source": "forge",
+   "last_commit": "2026-11-05T13:52:04+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 16,
-    "Go": 8085,
+    "Go": 8174,
     "Shell": 26
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 23,
    "status": "active",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -366,14 +370,14 @@
     0,
     0,
     0,
-    0,
     44,
     4,
     7,
-    17,
+    8,
+    9,
     6,
     19,
-    8
+    9
    ]
   }
  ],

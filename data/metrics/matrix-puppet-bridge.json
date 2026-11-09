@@ -38,10 +38,10 @@
   "commits_30d": 0,
   "commits_365d": 0,
   "commits_90d": 0,
-  "commits_all": 194,
+  "commits_all": 193,
   "daily_commits": {},
   "first_commit": "2017-01-01T23:38:36+00:00",
-  "forks": null,
+  "forks": 27,
   "issue_first_response_median_days": null,
   "languages": {
    "JavaScript": 1.0
@@ -56,10 +56,13 @@
   },
   "loc_total": 1167,
   "main_language": "JavaScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 16,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/matrix-hacks/matrix-puppet-bridge"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 84,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -119,7 +122,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -133,8 +136,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 16,
@@ -161,24 +164,24 @@
    "commits_30d": 0,
    "commits_365d": 0,
    "commits_90d": 0,
-   "commits_all": 194,
+   "commits_all": 193,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Facilitates implementation of double puppeted Matrix bridges",
    "error": null,
    "files": 10,
    "first_commit": "2017-01-01T23:38:36+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 27,
    "head_sha": "7c2ed78e430b81a536ae4a1dc0b57f707ca6a3f0",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
     "JavaScript": 1.0
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2021-02-11T21:13:42+00:00",
    "last_tag": "v1.17.0",
    "last_tag_date": "2019-02-23T15:37:31+00:00",
@@ -188,12 +191,12 @@
     "JavaScript": 1167
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 16,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 84,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

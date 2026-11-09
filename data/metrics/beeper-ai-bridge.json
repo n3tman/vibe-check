@@ -76,6 +76,9 @@
   "main_language": "Go",
   "open_issues": null,
   "open_prs": null,
+  "repos_counted": [
+   "https://github.com/beeper/ai-bridge"
+  ],
   "security_policy": null,
   "stars": null,
   "status": "small-team",
@@ -110,10 +113,10 @@
    0,
    0,
    0,
+   13,
+   18,
+   12,
    0,
-   21,
-   21,
-   1,
    0,
    0,
    0,
@@ -137,7 +140,7 @@
    1
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -151,7 +154,7 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
+   "api_error": "HTTPError: HTTP Error 404: Not Found",
    "archived": null,
    "authors_365d": 2,
    "authors_90d": 1,
@@ -269,10 +272,10 @@
     0,
     0,
     0,
+    13,
+    18,
+    12,
     0,
-    21,
-    21,
-    1,
     0,
     0,
     0,

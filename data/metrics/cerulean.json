@@ -41,14 +41,14 @@
   "commits_all": 125,
   "daily_commits": {},
   "first_commit": "2020-10-05T01:16:36+00:00",
-  "forks": null,
+  "forks": 12,
   "issue_first_response_median_days": null,
   "languages": {
-   "CSS": 0.1743,
-   "Dockerfile": 0.0037,
-   "HTML": 0.0045,
-   "JavaScript": 0.8016,
-   "Smarty Template": 0.0151
+   "CSS": 0.0955,
+   "Dockerfile": 0.0032,
+   "HTML": 0.0124,
+   "JavaScript": 0.8751,
+   "Smarty": 0.013
   },
   "last_commit": "2023-01-24T12:22:55+00:00",
   "last_tag": "helm-cerulean-0.1.0",
@@ -65,10 +65,13 @@
   },
   "loc_total": 3780,
   "main_language": "JavaScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 26,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/matrix-org/cerulean"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 102,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -128,7 +131,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -142,8 +145,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 5,
@@ -177,31 +180,30 @@
    "commits_all": 125,
    "daily_commits": {},
    "default_branch": "main",
-   "description": null,
+   "description": "An experimental Matrix client for playing with freestyle public threaded conversations",
    "error": null,
    "files": 64,
    "first_commit": "2020-10-05T01:16:36+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 12,
    "head_sha": "6c9d7814f63bdc5bf62a5e68dc9fbbdf118cc338",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 1,
    "languages": {
-    "CSS": 0.1743,
-    "Dockerfile": 0.0037,
-    "HTML": 0.0045,
-    "JavaScript": 0.8016,
-    "Smarty Template": 0.0151
+    "CSS": 0.0955,
+    "Dockerfile": 0.0032,
+    "HTML": 0.0124,
+    "JavaScript": 0.8751,
+    "Smarty": 0.013
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2023-01-24T12:22:55+00:00",
    "last_tag": "helm-cerulean-0.1.0",
    "last_tag_date": "2023-04-03T15:59:17-05:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "CSS": 659,
     "Dockerfile": 14,
@@ -211,12 +213,12 @@
     "Smarty Template": 57
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 26,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 102,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

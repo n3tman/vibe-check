@@ -41,12 +41,12 @@
   "commits_all": 172,
   "daily_commits": {},
   "first_commit": "2019-06-21T13:12:20+00:00",
-  "forks": null,
+  "forks": 4,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0399,
+   "Dockerfile": 0.04,
    "Shell": 0.0159,
-   "TypeScript": 0.9442
+   "TypeScript": 0.9441
   },
   "last_commit": "2022-05-13T17:36:01+00:00",
   "last_tag": "v0.1.2",
@@ -60,10 +60,13 @@
   },
   "loc_total": 1577,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 44,
+  "open_prs": 4,
+  "repos_counted": [
+   "https://gitlab.com/mx-puppet/slack/mx-puppet-slack"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 5,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -123,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,7 +140,7 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
+   "api_error": null,
    "archived": null,
    "authors_365d": 0,
    "authors_90d": 0,
@@ -168,41 +171,40 @@
    "commits_all": 172,
    "daily_commits": {},
    "default_branch": "main",
-   "description": null,
+   "description": "Slack puppeting bridge for matrix",
    "error": null,
    "files": 22,
    "first_commit": "2019-06-21T13:12:20+00:00",
    "first_parent": false,
    "forge": "gitlab",
-   "forks": null,
+   "forks": 4,
    "head_sha": "71b501797febf6b804faca1d9f827a045dce46f9",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0399,
+    "Dockerfile": 0.04,
     "Shell": 0.0159,
-    "TypeScript": 0.9442
+    "TypeScript": 0.9441
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2022-05-13T17:36:01+00:00",
    "last_tag": "v0.1.2",
    "last_tag_date": "2022-05-16T16:53:58+00:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 63,
     "Shell": 25,
     "TypeScript": 1489
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 44,
+   "open_prs": 4,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 5,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

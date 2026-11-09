@@ -43,13 +43,12 @@
    "2025-11-24": 1
   },
   "first_commit": "2016-07-23T20:18:57+00:00",
-  "forks": null,
+  "forks": 431,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.002,
-   "Jinja": 0.0032,
-   "Jupyter": 0.0017,
-   "Python": 0.9928
+   "Dockerfile": 0.0015,
+   "Jinja": 0.0019,
+   "Python": 0.9959
   },
   "last_commit": "2025-11-24T17:46:58+00:00",
   "last_tag": "v0.31.0",
@@ -65,10 +64,13 @@
   },
   "loc_total": 26981,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 101,
+  "open_prs": 10,
+  "repos_counted": [
+   "https://github.com/opsdroid/opsdroid"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 867,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -128,7 +130,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -142,8 +144,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 184,
@@ -182,30 +184,28 @@
     "2025-11-24": 1
    },
    "default_branch": "main",
-   "description": null,
+   "description": "🤖 An open source chat-ops bot framework",
    "error": null,
    "files": 397,
    "first_commit": "2016-07-23T20:18:57+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 431,
    "head_sha": "4f1ef7c45a2ed26a95fb88b8fdb7e4deb33bde4a",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 1,
    "languages": {
-    "Dockerfile": 0.002,
-    "Jinja": 0.0032,
-    "Jupyter": 0.0017,
-    "Python": 0.9928
+    "Dockerfile": 0.0015,
+    "Jinja": 0.0019,
+    "Python": 0.9959
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-11-24T17:46:58+00:00",
    "last_tag": "v0.31.0",
    "last_tag_date": "2025-04-30T17:39:26+01:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "CSS": 8,
     "Dockerfile": 55,
@@ -214,12 +214,12 @@
     "Python": 26788
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 101,
+   "open_prs": 10,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 867,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

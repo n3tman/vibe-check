@@ -4,13 +4,11 @@
   "ai": {
    "agent_files": 0,
    "ai_bot_commits_365d": 0,
-   "attributed_commits_365d": 1,
+   "attributed_commits_365d": 0,
    "commits_365d": 78,
-   "share_365d": 0.0128,
-   "suggested_dev_usage": "occasional",
-   "tools": {
-    "copilot": 1
-   },
+   "share_365d": 0.0,
+   "suggested_dev_usage": "none-found",
+   "tools": {},
    "workflows": 0
   },
   "archived": false,
@@ -53,15 +51,14 @@
    "2026-04-15": 1
   },
   "first_commit": "2018-11-22T08:04:17+00:00",
-  "forks": null,
+  "forks": 170,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0012,
-   "HTML": 0.011,
-   "JavaScript": 0.0567,
-   "Shell": 0.0035,
-   "TypeScript": 0.8912,
-   "TypeScript Typings": 0.0363
+   "Dockerfile": 0.0021,
+   "HTML": 0.0099,
+   "JavaScript": 0.0145,
+   "Shell": 0.0048,
+   "TypeScript": 0.9687
   },
   "last_commit": "2026-04-15T09:51:21+00:00",
   "last_tag": "0.11.4",
@@ -78,10 +75,13 @@
   },
   "loc_total": 10771,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 67,
+  "open_prs": 13,
+  "repos_counted": [
+   "https://github.com/Awesome-Technologies/synapse-admin"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 1205,
   "status": "dormant",
   "tags_365d": 3,
   "telemetry_sdks": [],
@@ -97,16 +97,16 @@
    0,
    0,
    0,
-   0,
    12,
    0,
    0,
    0,
    0,
-   5,
-   18,
+   0,
+   23,
    39,
    2,
+   0,
    0,
    0,
    1,
@@ -141,33 +141,22 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
     "agent_files": [],
     "ai_bot_authors": [],
-    "attributed_commits_365d": 1,
+    "attributed_commits_365d": 0,
     "commits_365d": 78,
-    "examples": [
-     {
-      "date": "2026-03-08",
-      "sha": "9bd1c5be3a8cc7e0bb945fd542d8b4af95bbe87c",
-      "tools": [
-       "copilot"
-      ],
-      "url": "https://github.com/Awesome-Technologies/synapse-admin/commit/9bd1c5be3a8cc7e0bb945fd542d8b4af95bbe87c"
-     }
-    ],
-    "share_365d": 0.0128,
-    "suggested_dev_usage": "occasional",
-    "tools": {
-     "copilot": 1
-    },
+    "examples": [],
+    "share_365d": 0.0,
+    "suggested_dev_usage": "none-found",
+    "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 5,
    "authors_90d": 0,
    "authors_all": 32,
@@ -213,32 +202,30 @@
     "2026-04-15": 1
    },
    "default_branch": "master",
-   "description": null,
+   "description": "Admin console for synapse Matrix homeserver",
    "error": null,
    "files": 114,
    "first_commit": "2018-11-22T08:04:17+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 170,
    "head_sha": "b3925704aeb85d29ea2db8e1975b407310dcae7a",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0012,
-    "HTML": 0.011,
-    "JavaScript": 0.0567,
-    "Shell": 0.0035,
-    "TypeScript": 0.8912,
-    "TypeScript Typings": 0.0363
+    "Dockerfile": 0.0021,
+    "HTML": 0.0099,
+    "JavaScript": 0.0145,
+    "Shell": 0.0048,
+    "TypeScript": 0.9687
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-04-15T09:51:21+00:00",
    "last_tag": "0.11.4",
    "last_tag_date": "2026-03-07T20:51:22+01:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 13,
     "HTML": 119,
@@ -248,12 +235,12 @@
     "TypeScript Typings": 391
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 67,
+   "open_prs": 13,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 1205,
    "status": "dormant",
    "tags_365d": 3,
    "telemetry_scan": {
@@ -274,16 +261,16 @@
     0,
     0,
     0,
-    0,
     12,
     0,
     0,
     0,
     0,
-    5,
-    18,
+    0,
+    23,
     39,
     2,
+    0,
     0,
     0,
     1,

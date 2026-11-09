@@ -38,7 +38,7 @@
   "commits_30d": 0,
   "commits_365d": 6,
   "commits_90d": 0,
-  "commits_all": 2775,
+  "commits_all": 2770,
   "daily_commits": {
    "2026-01-27": 1,
    "2026-03-05": 1,
@@ -46,20 +46,19 @@
    "2026-03-16": 2
   },
   "first_commit": "2019-03-22T03:28:14+00:00",
-  "forks": null,
+  "forks": 6,
   "issue_first_response_median_days": null,
   "languages": {
-   "C Header": 0.0086,
-   "C++": 0.0153,
-   "Prolog": 0.0039,
-   "Python": 0.351,
-   "QML": 0.6206
+   "C++": 0.0266,
+   "Python": 0.3558,
+   "QML": 0.6135,
+   "QMake": 0.0034
   },
   "last_commit": "2026-03-16T16:17:10+00:00",
   "last_tag": "v0.7.6",
   "last_tag_date": "2025-03-06T13:54:02+01:00",
   "last_tag_repo": "https://gitlab.com/mx-moment/moment",
-  "licence_detected": "GPL-3.0",
+  "licence_detected": "GNU General Public License v3.0 or later",
   "loc": {
    "C Header": 203,
    "C++": 360,
@@ -70,10 +69,13 @@
   },
   "loc_total": 23506,
   "main_language": "QML",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 113,
+  "open_prs": 2,
+  "repos_counted": [
+   "https://gitlab.com/mx-moment/moment"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 15,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -95,8 +97,8 @@
    0,
    0,
    0,
-   0,
    3,
+   0,
    2,
    0,
    0,
@@ -133,7 +135,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -147,7 +149,7 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
+   "api_error": null,
    "archived": null,
    "authors_365d": 1,
    "authors_90d": 0,
@@ -175,7 +177,7 @@
    "commits_30d": 0,
    "commits_365d": 6,
    "commits_90d": 0,
-   "commits_all": 2775,
+   "commits_all": 2770,
    "daily_commits": {
     "2026-01-27": 1,
     "2026-03-05": 1,
@@ -183,31 +185,30 @@
     "2026-03-16": 2
    },
    "default_branch": "main",
-   "description": null,
+   "description": "A Matrix client; forked from Mirage.\r\n\r\nnote: \"closed\" merge requests are actually merged. I often need to close leftover MRs because Gitlab didn't detect it was merged.",
    "error": null,
    "files": 481,
    "first_commit": "2019-03-22T03:28:14+00:00",
    "first_parent": false,
    "forge": "gitlab",
-   "forks": null,
+   "forks": 6,
    "head_sha": "2667256dbbc940154e9cb3e95b8db5e0b3206393",
    "issue_first_response_median_days": null,
+   "issue_response_error": "HTTPError: HTTP Error 429: Too Many Requests",
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "C Header": 0.0086,
-    "C++": 0.0153,
-    "Prolog": 0.0039,
-    "Python": 0.351,
-    "QML": 0.6206
+    "C++": 0.0266,
+    "Python": 0.3558,
+    "QML": 0.6135,
+    "QMake": 0.0034
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-03-16T16:17:10+00:00",
    "last_tag": "v0.7.6",
    "last_tag_date": "2025-03-06T13:54:02+01:00",
-   "licence_detected": "GPL-3.0",
-   "licence_file": "COPYING",
-   "licence_source": "file",
+   "licence_detected": "GNU General Public License v3.0 or later",
+   "licence_file": "COPYING.LESSER",
    "loc": {
     "C Header": 203,
     "C++": 360,
@@ -217,12 +218,12 @@
     "Shell": 14
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 113,
+   "open_prs": 2,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 15,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -249,8 +250,8 @@
     0,
     0,
     0,
-    0,
     3,
+    0,
     2,
     0,
     0,

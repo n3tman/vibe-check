@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 1,
   "authors_90d": 0,
   "authors_all": 2,
@@ -44,13 +44,13 @@
    "2026-03-03": 1
   },
   "first_commit": "2021-09-09T13:27:48+00:00",
-  "forks": null,
+  "forks": 7,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0055,
-   "Go": 0.9515,
-   "Makefile": 0.04,
-   "Shell": 0.003
+   "Dockerfile": 0.0087,
+   "Go": 0.9238,
+   "Makefile": 0.065,
+   "Shell": 0.0024
   },
   "last_commit": "2026-03-03T09:11:25+00:00",
   "last_tag": "v0.8.0",
@@ -65,19 +65,22 @@
   },
   "loc_total": 5606,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 25,
+  "open_prs": 6,
+  "repos_counted": [
+   "https://github.com/opdev/synapse-operator"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "dormant",
+  "stars": 31,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
   "weekly_commits": [
    0,
    0,
-   0,
    2,
+   0,
    0,
    0,
    0,
@@ -128,7 +131,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -142,8 +145,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 2,
@@ -187,24 +190,23 @@
    "first_commit": "2021-09-09T13:27:48+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 7,
    "head_sha": "03ae59ac10b5c98a99d5e914effa0d7162e4bae5",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0055,
-    "Go": 0.9515,
-    "Makefile": 0.04,
-    "Shell": 0.003
+    "Dockerfile": 0.0087,
+    "Go": 0.9238,
+    "Makefile": 0.065,
+    "Shell": 0.0024
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-03-03T09:11:25+00:00",
    "last_tag": "v0.8.0",
    "last_tag_date": "2025-08-15T12:47:01+02:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 31,
     "Go": 5334,
@@ -212,13 +214,13 @@
     "Shell": 17
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 25,
+   "open_prs": 6,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "dormant",
+   "stars": 31,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],
@@ -230,8 +232,8 @@
    "weekly_commits": [
     0,
     0,
-    0,
     2,
+    0,
     0,
     0,
     0,

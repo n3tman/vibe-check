@@ -4,20 +4,20 @@
   "ai": {
    "agent_files": 1,
    "ai_bot_commits_365d": 0,
-   "attributed_commits_365d": 333,
-   "commits_365d": 797,
-   "share_365d": 0.4178,
+   "attributed_commits_365d": 336,
+   "commits_365d": 807,
+   "share_365d": 0.4164,
    "suggested_dev_usage": "regular",
    "tools": {
-    "claude": 267,
+    "claude": 185,
     "codex": 1,
-    "opencode": 65
+    "opencode": 150
    },
    "workflows": 0
   },
   "archived": false,
   "authors_365d": 5,
-  "authors_90d": 4,
+  "authors_90d": 3,
   "authors_all": 5,
   "authors_by_quarter": {
    "2023-Q1": 0,
@@ -39,10 +39,10 @@
   },
   "bus_factor_365d": 1,
   "ci": true,
-  "commits_30d": 120,
-  "commits_365d": 797,
-  "commits_90d": 217,
-  "commits_all": 797,
+  "commits_30d": 119,
+  "commits_365d": 807,
+  "commits_90d": 222,
+  "commits_all": 807,
   "daily_commits": {
    "2026-03-13": 7,
    "2026-03-14": 4,
@@ -181,20 +181,23 @@
    "2026-10-31": 3,
    "2026-11-01": 2,
    "2026-11-02": 2,
-   "2026-11-03": 3
+   "2026-11-03": 3,
+   "2026-11-05": 4,
+   "2026-11-06": 4,
+   "2026-11-07": 2
   },
   "first_commit": "2026-03-13T03:38:51+00:00",
-  "forks": null,
-  "issue_first_response_median_days": null,
+  "forks": 9,
+  "issue_first_response_median_days": 0.99,
   "languages": {
-   "CSS": 0.0074,
-   "HTML": 0.0317,
-   "Shell": 0.0365,
-   "Swift": 0.9242
+   "CSS": 0.0029,
+   "HTML": 0.0333,
+   "Shell": 0.0472,
+   "Swift": 0.9164
   },
-  "last_commit": "2026-11-03T04:46:12+00:00",
-  "last_tag": "v0.6.12",
-  "last_tag_date": "2026-11-02T23:46:12-05:00",
+  "last_commit": "2026-11-07T03:06:10+00:00",
+  "last_tag": "v0.6.13",
+  "last_tag_date": "2026-11-06T14:08:59-05:00",
   "last_tag_repo": "https://github.com/subpop/Relay",
   "licence_detected": "Apache-2.0",
   "loc": {
@@ -202,16 +205,19 @@
    "HTML": 1260,
    "JavaScript": 10,
    "Shell": 1450,
-   "Swift": 36764
+   "Swift": 36885
   },
-  "loc_total": 39780,
+  "loc_total": 39901,
   "main_language": "Swift",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 41,
+  "open_prs": 2,
+  "repos_counted": [
+   "https://github.com/subpop/Relay"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 73,
   "status": "active",
-  "tags_365d": 38,
+  "tags_365d": 39,
   "telemetry_sdks": [],
   "tests_present": true,
   "weekly_commits": [
@@ -232,44 +238,44 @@
    0,
    0,
    0,
-   0,
-   38,
-   24,
-   48,
-   82,
-   51,
-   26,
-   47,
-   16,
-   9,
-   3,
-   46,
-   42,
-   43,
-   14,
-   34,
-   29,
-   0,
-   0,
-   23,
-   2,
-   0,
-   9,
-   11,
-   3,
-   5,
-   3,
-   3,
+   19,
+   41,
+   15,
+   87,
+   68,
+   31,
    18,
-   26,
-   22,
-   21,
+   48,
+   10,
+   7,
+   36,
+   33,
+   32,
+   34,
+   20,
+   53,
+   0,
+   0,
+   12,
    13,
-   66,
-   20
+   0,
+   3,
+   10,
+   8,
+   4,
+   3,
+   6,
+   0,
+   25,
+   36,
+   20,
+   11,
+   59,
+   32,
+   13
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -277,13 +283,61 @@
      {
       "kind": "agents.md",
       "path": "AGENTS.md",
-      "url": "https://github.com/subpop/Relay/blob/3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c/AGENTS.md"
+      "url": "https://github.com/subpop/Relay/blob/1ced948dccec2974124e45cf3002d3d97155cfc4/AGENTS.md"
      }
     ],
     "ai_bot_authors": [],
-    "attributed_commits_365d": 333,
-    "commits_365d": 797,
+    "attributed_commits_365d": 336,
+    "commits_365d": 807,
     "examples": [
+     {
+      "date": "2026-11-06",
+      "sha": "1ced948dccec2974124e45cf3002d3d97155cfc4",
+      "tools": [
+       "opencode"
+      ],
+      "url": "https://github.com/subpop/Relay/commit/1ced948dccec2974124e45cf3002d3d97155cfc4"
+     },
+     {
+      "date": "2026-11-05",
+      "sha": "3137475c449f7f196934664498dcbca0d988a837",
+      "tools": [
+       "opencode"
+      ],
+      "url": "https://github.com/subpop/Relay/commit/3137475c449f7f196934664498dcbca0d988a837"
+     },
+     {
+      "date": "2026-11-05",
+      "sha": "20b8be0899eccadd8295de05b3f78e32bc384473",
+      "tools": [
+       "opencode"
+      ],
+      "url": "https://github.com/subpop/Relay/commit/20b8be0899eccadd8295de05b3f78e32bc384473"
+     },
+     {
+      "date": "2026-11-05",
+      "sha": "39beff0043737184358f3944344d0c581c6dc817",
+      "tools": [
+       "opencode"
+      ],
+      "url": "https://github.com/subpop/Relay/commit/39beff0043737184358f3944344d0c581c6dc817"
+     },
+     {
+      "date": "2026-11-05",
+      "sha": "a0825bf34b96a777ffe4603efbfc0206e183c685",
+      "tools": [
+       "opencode"
+      ],
+      "url": "https://github.com/subpop/Relay/commit/a0825bf34b96a777ffe4603efbfc0206e183c685"
+     },
+     {
+      "date": "2026-11-05",
+      "sha": "4b2f798fe4ac87e298a2374372a56b9f566cd34d",
+      "tools": [
+       "opencode"
+      ],
+      "url": "https://github.com/subpop/Relay/commit/4b2f798fe4ac87e298a2374372a56b9f566cd34d"
+     },
      {
       "date": "2026-11-01",
       "sha": "11b2e8a451e04d2fd98be3169035d69f6e36f811",
@@ -299,69 +353,21 @@
        "claude"
       ],
       "url": "https://github.com/subpop/Relay/commit/a74225973b478522070d4eb91869957699f84c4d"
-     },
-     {
-      "date": "2026-11-01",
-      "sha": "ba356b9f4dce2d6e508a51e835dfdc08a69f145f",
-      "tools": [
-       "claude"
-      ],
-      "url": "https://github.com/subpop/Relay/commit/ba356b9f4dce2d6e508a51e835dfdc08a69f145f"
-     },
-     {
-      "date": "2026-10-30",
-      "sha": "51f411fe6a633fe6a37c23a2bb20f548d0584db2",
-      "tools": [
-       "claude"
-      ],
-      "url": "https://github.com/subpop/Relay/commit/51f411fe6a633fe6a37c23a2bb20f548d0584db2"
-     },
-     {
-      "date": "2026-10-30",
-      "sha": "852736d9a724137a40e00a5c105671787cf5ec86",
-      "tools": [
-       "claude"
-      ],
-      "url": "https://github.com/subpop/Relay/commit/852736d9a724137a40e00a5c105671787cf5ec86"
-     },
-     {
-      "date": "2026-10-30",
-      "sha": "75f4e5f7ffd69a43a7c373352fefaabb345cb6f5",
-      "tools": [
-       "claude"
-      ],
-      "url": "https://github.com/subpop/Relay/commit/75f4e5f7ffd69a43a7c373352fefaabb345cb6f5"
-     },
-     {
-      "date": "2026-10-30",
-      "sha": "bbc867323e392d8aaf4c8fca575b443a36cceba4",
-      "tools": [
-       "claude"
-      ],
-      "url": "https://github.com/subpop/Relay/commit/bbc867323e392d8aaf4c8fca575b443a36cceba4"
-     },
-     {
-      "date": "2026-10-30",
-      "sha": "15822ad6f95147936785262c1eb0255d82669900",
-      "tools": [
-       "opencode"
-      ],
-      "url": "https://github.com/subpop/Relay/commit/15822ad6f95147936785262c1eb0255d82669900"
      }
     ],
-    "share_365d": 0.4178,
+    "share_365d": 0.4164,
     "suggested_dev_usage": "regular",
     "tools": {
-     "claude": 267,
+     "claude": 185,
      "codex": 1,
-     "opencode": 65
+     "opencode": 150
     },
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 5,
-   "authors_90d": 4,
+   "authors_90d": 3,
    "authors_all": 5,
    "authors_by_quarter": {
     "2023-Q1": 0,
@@ -386,10 +392,10 @@
     ".github/workflows/ci.yml",
     ".github/workflows/pages.yaml"
    ],
-   "commits_30d": 120,
-   "commits_365d": 797,
-   "commits_90d": 217,
-   "commits_all": 797,
+   "commits_30d": 119,
+   "commits_365d": 807,
+   "commits_90d": 222,
+   "commits_all": 807,
    "daily_commits": {
     "2026-03-13": 7,
     "2026-03-14": 4,
@@ -528,49 +534,51 @@
     "2026-10-31": 3,
     "2026-11-01": 2,
     "2026-11-02": 2,
-    "2026-11-03": 3
+    "2026-11-03": 3,
+    "2026-11-05": 4,
+    "2026-11-06": 4,
+    "2026-11-07": 2
    },
    "default_branch": "main",
-   "description": null,
+   "description": "All the power of Matrix. None of the complexity.",
    "error": null,
    "files": 321,
    "first_commit": "2026-03-13T03:38:51+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
-   "head_sha": "3d3c2b022ffc3f3b8c5e2db8b3a18677e175268c",
-   "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "forks": 9,
+   "head_sha": "1ced948dccec2974124e45cf3002d3d97155cfc4",
+   "issue_first_response_median_days": 0.99,
+   "issues_responded": 49,
+   "issues_sampled": 197,
    "languages": {
-    "CSS": 0.0074,
-    "HTML": 0.0317,
-    "Shell": 0.0365,
-    "Swift": 0.9242
+    "CSS": 0.0029,
+    "HTML": 0.0333,
+    "Shell": 0.0472,
+    "Swift": 0.9164
    },
-   "languages_source": "scc",
-   "last_commit": "2026-11-03T04:46:12+00:00",
-   "last_tag": "v0.6.12",
-   "last_tag_date": "2026-11-02T23:46:12-05:00",
+   "languages_source": "forge",
+   "last_commit": "2026-11-07T03:06:10+00:00",
+   "last_tag": "v0.6.13",
+   "last_tag_date": "2026-11-06T14:08:59-05:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "CSS": 296,
     "HTML": 1260,
     "JavaScript": 10,
     "Shell": 1450,
-    "Swift": 36764
+    "Swift": 36885
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 41,
+   "open_prs": 2,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 73,
    "status": "active",
-   "tags_365d": 38,
+   "tags_365d": 39,
    "telemetry_scan": {
     "found": [],
     "manifests_scanned": 1,
@@ -596,41 +604,41 @@
     0,
     0,
     0,
-    0,
-    38,
-    24,
-    48,
-    82,
-    51,
-    26,
-    47,
-    16,
-    9,
-    3,
-    46,
-    42,
-    43,
-    14,
-    34,
-    29,
-    0,
-    0,
-    23,
-    2,
-    0,
-    9,
-    11,
-    3,
-    5,
-    3,
-    3,
+    19,
+    41,
+    15,
+    87,
+    68,
+    31,
     18,
-    26,
-    22,
-    21,
+    48,
+    10,
+    7,
+    36,
+    33,
+    32,
+    34,
+    20,
+    53,
+    0,
+    0,
+    12,
     13,
-    66,
-    20
+    0,
+    3,
+    10,
+    8,
+    4,
+    3,
+    6,
+    0,
+    25,
+    36,
+    20,
+    11,
+    59,
+    32,
+    13
    ]
   }
  ],

@@ -50,7 +50,7 @@
    "2026-07-03": 1
   },
   "first_commit": "2026-06-11T09:24:01+00:00",
-  "forks": null,
+  "forks": 3,
   "issue_first_response_median_days": null,
   "languages": {
    "Elixir": 1.0
@@ -65,16 +65,18 @@
   },
   "loc_total": 4872,
   "main_language": "Elixir",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/serra-allgood/thurim"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 33,
   "status": "slowing",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
   "weekly_commits": [
-   0,
    0,
    0,
    0,
@@ -125,10 +127,11 @@
    0,
    0,
    0,
+   0,
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -142,8 +145,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 1,
@@ -182,37 +185,36 @@
     "2026-07-03": 1
    },
    "default_branch": "main",
-   "description": null,
+   "description": "A Matrix homeserver implementation written in Elixir that has just begun",
    "error": null,
    "files": 196,
    "first_commit": "2026-06-11T09:24:01+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 3,
    "head_sha": "95e80ff829451278bbbb55a2253fcd1bb120e8f4",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
     "Elixir": 1.0
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-07-03T10:05:14+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Elixir": 4872
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 33,
    "status": "slowing",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -253,11 +255,11 @@
     0,
     0,
     0,
-    0,
     9,
     3,
     0,
     1,
+    0,
     0,
     0,
     0,

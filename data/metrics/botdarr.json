@@ -46,11 +46,11 @@
    "2026-08-17": 1
   },
   "first_commit": "2019-09-08T17:17:02+00:00",
-  "forks": null,
-  "issue_first_response_median_days": null,
+  "forks": 15,
+  "issue_first_response_median_days": 0.43,
   "languages": {
-   "Java": 0.9937,
-   "Shell": 0.0052
+   "Java": 0.9871,
+   "Shell": 0.0123
   },
   "last_commit": "2026-08-17T12:10:54+00:00",
   "last_tag": "5.6.23",
@@ -65,18 +65,21 @@
   },
   "loc_total": 10133,
   "main_language": "Java",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 12,
+  "open_prs": 4,
+  "repos_counted": [
+   "https://github.com/shayaantx/botdarr"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 207,
   "status": "slowing",
   "tags_365d": 7,
   "telemetry_sdks": [],
   "tests_present": true,
   "weekly_commits": [
    0,
-   0,
    5,
+   0,
    0,
    0,
    0,
@@ -128,7 +131,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -142,8 +145,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 1,
    "authors_all": 4,
@@ -182,28 +185,27 @@
     "2026-08-17": 1
    },
    "default_branch": "development",
-   "description": null,
+   "description": "Slack/Discord/Telegram/Matrix bot for accessing radarr, sonarr, and lidarr",
    "error": null,
    "files": 221,
    "first_commit": "2019-09-08T17:17:02+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 15,
    "head_sha": "107469c5c471dc72b8a0753585d581b00953c58a",
-   "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issue_first_response_median_days": 0.43,
+   "issues_responded": 2,
+   "issues_sampled": 2,
    "languages": {
-    "Java": 0.9937,
-    "Shell": 0.0052
+    "Java": 0.9871,
+    "Shell": 0.0123
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-08-17T12:10:54+00:00",
    "last_tag": "5.6.23",
    "last_tag_date": "2026-08-17T08:10:54-04:00",
    "licence_detected": "GPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 8,
     "Java": 10069,
@@ -211,12 +213,12 @@
     "Shell": 53
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 12,
+   "open_prs": 4,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 207,
    "status": "slowing",
    "tags_365d": 7,
    "telemetry_scan": {
@@ -228,8 +230,8 @@
    "url": "https://github.com/shayaantx/botdarr",
    "weekly_commits": [
     0,
-    0,
     5,
+    0,
     0,
     0,
     0,

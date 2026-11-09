@@ -60,26 +60,29 @@
    "2026-03-29": 2
   },
   "first_commit": "2026-02-24T12:02:28+00:00",
-  "forks": null,
+  "forks": 3,
   "issue_first_response_median_days": null,
   "languages": {
-   "Rust": 0.9995
+   "Rust": 0.9987
   },
   "last_commit": "2026-03-29T20:49:04+00:00",
   "last_tag": "v0.11.1",
   "last_tag_date": "2026-03-29T23:13:05+02:00",
   "last_tag_repo": "https://github.com/MaikBuse/gosuto",
-  "licence_detected": "Apache-2.0",
+  "licence_detected": "NOASSERTION",
   "loc": {
    "BASH": 12,
    "Rust": 23882
   },
   "loc_total": 23894,
   "main_language": "Rust",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 3,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/MaikBuse/gosuto"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 19,
   "status": "dormant",
   "tags_365d": 12,
   "telemetry_sdks": [],
@@ -100,12 +103,12 @@
    0,
    0,
    0,
-   7,
-   93,
-   90,
-   25,
+   75,
+   57,
+   83,
    0,
    2,
+   0,
    0,
    0,
    0,
@@ -139,7 +142,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -153,8 +156,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 0,
    "authors_all": 1,
@@ -208,38 +211,37 @@
     "2026-03-29": 2
    },
    "default_branch": "main",
-   "description": null,
+   "description": "A performant cyberpunk styled terminal Matrix client with Vim motions",
    "error": null,
    "files": 108,
    "first_commit": "2026-02-24T12:02:28+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 3,
    "head_sha": "c99d18301fa54878d06f2bf9d98fafeda2fc912c",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 4,
    "languages": {
-    "Rust": 0.9995
+    "Rust": 0.9987
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-03-29T20:49:04+00:00",
    "last_tag": "v0.11.1",
    "last_tag_date": "2026-03-29T23:13:05+02:00",
-   "licence_detected": "Apache-2.0",
+   "licence_detected": "NOASSERTION",
    "licence_file": "LICENSE.md",
-   "licence_source": "file",
    "loc": {
     "BASH": 12,
     "Rust": 23882
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 3,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 19,
    "status": "dormant",
    "tags_365d": 12,
    "telemetry_scan": {
@@ -265,12 +267,12 @@
     0,
     0,
     0,
-    7,
-    93,
-    90,
-    25,
+    75,
+    57,
+    83,
     0,
     2,
+    0,
     0,
     0,
     0,

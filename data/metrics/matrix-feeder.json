@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 2,
@@ -41,12 +41,12 @@
   "commits_all": 17,
   "daily_commits": {},
   "first_commit": "2020-10-14T15:28:42+00:00",
-  "forks": null,
+  "forks": 2,
   "issue_first_response_median_days": null,
   "languages": {
-   "BASH": 0.0303,
-   "Dockerfile": 0.0909,
-   "JavaScript": 0.8788
+   "Dockerfile": 0.0813,
+   "JavaScript": 0.7672,
+   "Shell": 0.1515
   },
   "last_commit": "2022-02-10T09:30:44+00:00",
   "last_tag": "v0.2.1",
@@ -60,11 +60,14 @@
   },
   "loc_total": 66,
   "main_language": "JavaScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/dragonchaser/matrix-feeder"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 27,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": false,
@@ -123,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 2,
@@ -168,42 +171,41 @@
    "commits_all": 17,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Matrix feeder is a matrix bot that monitors defined channels for images and posts them to another channel.",
    "error": null,
    "files": 11,
    "first_commit": "2020-10-14T15:28:42+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 2,
    "head_sha": "0b5b803aa1d6f8308b79868ecbfb4fbcc6692480",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "BASH": 0.0303,
-    "Dockerfile": 0.0909,
-    "JavaScript": 0.8788
+    "Dockerfile": 0.0813,
+    "JavaScript": 0.7672,
+    "Shell": 0.1515
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2022-02-10T09:30:44+00:00",
    "last_tag": "v0.2.1",
    "last_tag_date": "2020-10-20T19:10:23+02:00",
    "licence_detected": "MIT",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "BASH": 2,
     "Dockerfile": 6,
     "JavaScript": 58
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 27,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

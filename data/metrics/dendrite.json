@@ -45,13 +45,15 @@
    "2026-05-20": 2
   },
   "first_commit": "2017-01-20T18:25:51+00:00",
-  "forks": null,
-  "issue_first_response_median_days": null,
+  "forks": 103,
+  "issue_first_response_median_days": 17.35,
   "languages": {
-   "Go": 0.994,
-   "JavaScript": 0.0016,
-   "Python": 0.0017,
-   "Shell": 0.001
+   "Dockerfile": 0.0027,
+   "Go": 0.9831,
+   "Go Template": 0.0073,
+   "JavaScript": 0.002,
+   "Python": 0.0021,
+   "Shell": 0.0022
   },
   "last_commit": "2026-05-20T15:41:45+00:00",
   "last_tag": "v0.15.2",
@@ -72,10 +74,13 @@
   },
   "loc_total": 112823,
   "main_language": "Go",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 233,
+  "open_prs": 41,
+  "repos_counted": [
+   "https://github.com/element-hq/dendrite"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 992,
   "status": "slowing",
   "tags_365d": 0,
   "telemetry_sdks": [
@@ -84,8 +89,8 @@
   "tests_present": true,
   "weekly_commits": [
    0,
-   0,
    1,
+   0,
    0,
    2,
    0,
@@ -137,7 +142,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -151,8 +156,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 2,
    "authors_90d": 0,
    "authors_all": 197,
@@ -193,30 +198,31 @@
     "2026-05-20": 2
    },
    "default_branch": "main",
-   "description": null,
+   "description": "Dendrite is a second-generation Matrix homeserver written in Go! ",
    "error": null,
    "files": 852,
    "first_commit": "2017-01-20T18:25:51+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 103,
    "head_sha": "08cac1ccf0a45471132ad24a29e3ec15643675fa",
-   "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issue_first_response_median_days": 17.35,
+   "issues_responded": 1,
+   "issues_sampled": 3,
    "languages": {
-    "Go": 0.994,
-    "JavaScript": 0.0016,
-    "Python": 0.0017,
-    "Shell": 0.001
+    "Dockerfile": 0.0027,
+    "Go": 0.9831,
+    "Go Template": 0.0073,
+    "JavaScript": 0.002,
+    "Python": 0.0021,
+    "Shell": 0.0022
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-05-20T15:41:45+00:00",
    "last_tag": "v0.15.2",
    "last_tag_date": "2025-08-15T11:44:44+01:00",
    "licence_detected": "AGPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "CSS": 53,
     "Dockerfile": 30,
@@ -230,12 +236,12 @@
     "Smarty Template": 61
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 233,
+   "open_prs": 41,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 992,
    "status": "slowing",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -256,8 +262,8 @@
    "url": "https://github.com/element-hq/dendrite",
    "weekly_commits": [
     0,
-    0,
     1,
+    0,
     0,
     2,
     0,

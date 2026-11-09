@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 10,
@@ -41,13 +41,12 @@
   "commits_all": 93,
   "daily_commits": {},
   "first_commit": "2019-09-25T12:26:29+00:00",
-  "forks": null,
+  "forks": 27,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0394,
-   "Python": 0.8491,
-   "Shell": 0.0957,
-   "Systemd": 0.0158
+   "Dockerfile": 0.0629,
+   "Python": 0.8244,
+   "Shell": 0.1127
   },
   "last_commit": "2024-12-03T11:35:41+00:00",
   "last_tag": null,
@@ -62,11 +61,14 @@
   },
   "loc_total": 888,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 11,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/anoadragon453/nio-template"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "dormant",
+  "stars": 80,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
@@ -125,7 +127,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -139,8 +141,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 10,
@@ -173,30 +175,28 @@
    "commits_all": 93,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "A template for creating matrix bots in python with matrix-nio",
    "error": null,
    "files": 34,
    "first_commit": "2019-09-25T12:26:29+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 27,
    "head_sha": "98bd60aa6c1276bea36600a02714b7e6ed92d79f",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0394,
-    "Python": 0.8491,
-    "Shell": 0.0957,
-    "Systemd": 0.0158
+    "Dockerfile": 0.0629,
+    "Python": 0.8244,
+    "Shell": 0.1127
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2024-12-03T11:35:41+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 35,
     "Python": 754,
@@ -204,13 +204,13 @@
     "Systemd": 14
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 11,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "dormant",
+   "stars": 80,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

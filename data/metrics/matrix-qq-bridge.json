@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 1,
@@ -41,13 +41,11 @@
   "commits_all": 56,
   "daily_commits": {},
   "first_commit": "2022-04-30T02:11:00+00:00",
-  "forks": null,
+  "forks": 0,
   "issue_first_response_median_days": null,
   "languages": {
-   "Batch": 0.0238,
-   "Kotlin": 0.7581,
-   "Nix": 0.1838,
-   "Shell": 0.0343
+   "Kotlin": 0.8504,
+   "Nix": 0.1496
   },
   "last_commit": "2022-07-23T04:30:09+00:00",
   "last_tag": null,
@@ -62,11 +60,14 @@
   },
   "loc_total": 2856,
   "main_language": "Kotlin",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 0,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/chuangzhu/matrix-qq-bridge"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 9,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
@@ -125,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -139,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 1,
@@ -170,30 +171,27 @@
    "commits_all": 56,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "A Matrix-QQ puppeting bridge",
    "error": null,
    "files": 28,
    "first_commit": "2022-04-30T02:11:00+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 0,
    "head_sha": "e8f4f394cb15569a38783192fd2489c4c47ecedb",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Batch": 0.0238,
-    "Kotlin": 0.7581,
-    "Nix": 0.1838,
-    "Shell": 0.0343
+    "Kotlin": 0.8504,
+    "Nix": 0.1496
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2022-07-23T04:30:09+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "AGPL-3.0",
    "licence_file": "COPYING",
-   "licence_source": "file",
    "loc": {
     "Batch": 68,
     "Kotlin": 2165,
@@ -201,13 +199,13 @@
     "Shell": 98
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 0,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 9,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

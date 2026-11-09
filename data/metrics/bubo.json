@@ -41,12 +41,12 @@
   "commits_all": 223,
   "daily_commits": {},
   "first_commit": "2020-07-17T19:21:09+00:00",
-  "forks": null,
+  "forks": 4,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0088,
-   "Python": 0.9887,
-   "Shell": 0.0025
+   "Dockerfile": 0.0139,
+   "Python": 0.9814,
+   "Shell": 0.0047
   },
   "last_commit": "2025-09-14T01:31:33+00:00",
   "last_tag": "v0.3.0",
@@ -60,10 +60,13 @@
   },
   "loc_total": 3175,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 5,
+  "open_prs": 8,
+  "repos_counted": [
+   "https://github.com/elokapina/bubo"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 24,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -123,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 3,
@@ -168,41 +171,40 @@
    "commits_all": 223,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Matrix bot to help with community management",
    "error": null,
    "files": 40,
    "first_commit": "2020-07-17T19:21:09+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 4,
    "head_sha": "d62675eb9d3f60e4f068e627e793f9e29a99cbf0",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0088,
-    "Python": 0.9887,
-    "Shell": 0.0025
+    "Dockerfile": 0.0139,
+    "Python": 0.9814,
+    "Shell": 0.0047
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-09-14T01:31:33+00:00",
    "last_tag": "v0.3.0",
    "last_tag_date": "2022-01-23T00:23:32+02:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 28,
     "Python": 3139,
     "Shell": 8
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 5,
+   "open_prs": 8,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 24,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

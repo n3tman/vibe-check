@@ -35,10 +35,10 @@
   },
   "bus_factor_365d": 1,
   "ci": true,
-  "commits_30d": 8,
+  "commits_30d": 7,
   "commits_365d": 22,
   "commits_90d": 17,
-  "commits_all": 125,
+  "commits_all": 124,
   "daily_commits": {
    "2026-07-18": 5,
    "2026-08-22": 7,
@@ -49,15 +49,14 @@
    "2026-10-22": 2
   },
   "first_commit": "2022-10-02T14:45:00+00:00",
-  "forks": null,
+  "forks": 8,
   "issue_first_response_median_days": null,
   "languages": {
-   "C": 0.0389,
-   "C Header": 0.0115,
-   "Dockerfile": 0.0076,
-   "Java": 0.0473,
-   "Makefile": 0.0057,
-   "Rust": 0.8883
+   "C": 0.044,
+   "Dockerfile": 0.0068,
+   "Java": 0.0535,
+   "Makefile": 0.0081,
+   "Rust": 0.887
   },
   "last_commit": "2026-10-22T12:40:38+00:00",
   "last_tag": null,
@@ -75,16 +74,18 @@
   },
   "loc_total": 4886,
   "main_language": "Rust",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 13,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/bnjbvr/trinity"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 92,
   "status": "small-team",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": false,
   "weekly_commits": [
-   0,
    0,
    0,
    0,
@@ -133,12 +134,13 @@
    0,
    0,
    1,
-   5,
-   2,
+   0,
+   7,
+   0,
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -152,8 +154,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 1,
    "authors_90d": 1,
    "authors_all": 3,
@@ -180,10 +182,10 @@
     ".github/workflows/main.yml",
     ".github/workflows/push-docker.yml"
    ],
-   "commits_30d": 8,
+   "commits_30d": 7,
    "commits_365d": 22,
    "commits_90d": 17,
-   "commits_all": 125,
+   "commits_all": 124,
    "daily_commits": {
     "2026-07-18": 5,
     "2026-08-22": 7,
@@ -194,32 +196,30 @@
     "2026-10-22": 2
    },
    "default_branch": "main",
-   "description": null,
+   "description": "Matrix bots in Rust and WebAssembly",
    "error": null,
    "files": 86,
    "first_commit": "2022-10-02T14:45:00+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 8,
    "head_sha": "c7b373b8eea11442938b15ce64413d3bfb956b83",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 3,
    "languages": {
-    "C": 0.0389,
-    "C Header": 0.0115,
-    "Dockerfile": 0.0076,
-    "Java": 0.0473,
-    "Makefile": 0.0057,
-    "Rust": 0.8883
+    "C": 0.044,
+    "Dockerfile": 0.0068,
+    "Java": 0.0535,
+    "Makefile": 0.0081,
+    "Rust": 0.887
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-10-22T12:40:38+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "LGPL-2.1",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "C": 190,
     "C Header": 56,
@@ -230,12 +230,12 @@
     "Shell": 4
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 13,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 92,
    "status": "small-team",
    "tags_365d": 0,
    "telemetry_scan": {
@@ -246,7 +246,6 @@
    "tests_present": false,
    "url": "https://github.com/bnjbvr/trinity",
    "weekly_commits": [
-    0,
     0,
     0,
     0,
@@ -295,8 +294,9 @@
     0,
     0,
     1,
-    5,
-    2,
+    0,
+    7,
+    0,
     0
    ]
   }

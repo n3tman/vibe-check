@@ -41,18 +41,15 @@
   "commits_all": 1460,
   "daily_commits": {},
   "first_commit": "2021-07-02T07:14:07+00:00",
-  "forks": null,
+  "forks": 5,
   "issue_first_response_median_days": null,
   "languages": {
-   "Batch": 0.0026,
-   "Gradle": 0.0044,
-   "HTML": 0.0011,
-   "Java": 0.0129,
-   "JavaScript": 0.0129,
-   "Objective C": 0.0046,
-   "Shell": 0.0037,
-   "Swift": 0.0055,
-   "TypeScript": 0.9506
+   "Java": 0.0181,
+   "JavaScript": 0.0127,
+   "Objective-C": 0.0062,
+   "Ruby": 0.0019,
+   "Swift": 0.0076,
+   "TypeScript": 0.9519
   },
   "last_commit": "2023-11-10T14:29:59+00:00",
   "last_tag": null,
@@ -76,10 +73,13 @@
   },
   "loc_total": 26593,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 18,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/alariej/quadrix"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 105,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -139,7 +139,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -153,8 +153,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 2,
@@ -192,23 +192,20 @@
    "first_commit": "2021-07-02T07:14:07+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 5,
    "head_sha": "702cdd19d22744f676d8c02e020897d47ff957c3",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Batch": 0.0026,
-    "Gradle": 0.0044,
-    "HTML": 0.0011,
-    "Java": 0.0129,
-    "JavaScript": 0.0129,
-    "Objective C": 0.0046,
-    "Shell": 0.0037,
-    "Swift": 0.0055,
-    "TypeScript": 0.9506
+    "Java": 0.0181,
+    "JavaScript": 0.0127,
+    "Objective-C": 0.0062,
+    "Ruby": 0.0019,
+    "Swift": 0.0076,
+    "TypeScript": 0.9519
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2023-11-10T14:29:59+00:00",
    "last_tag": null,
    "last_tag_date": null,
@@ -230,12 +227,12 @@
     "TypeScript Typings": 2
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 18,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 105,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

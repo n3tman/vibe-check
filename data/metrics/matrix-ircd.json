@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 12,
@@ -41,12 +41,12 @@
   "commits_all": 97,
   "daily_commits": {},
   "first_commit": "2016-10-04T15:07:36+00:00",
-  "forks": null,
+  "forks": 39,
   "issue_first_response_median_days": null,
   "languages": {
-   "BASH": 0.0059,
    "Dockerfile": 0.0026,
-   "Rust": 0.9914
+   "Rust": 0.9923,
+   "Shell": 0.0051
   },
   "last_commit": "2023-07-19T09:39:20+00:00",
   "last_tag": null,
@@ -60,11 +60,14 @@
   },
   "loc_total": 3036,
   "main_language": "Rust",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 44,
+  "open_prs": 3,
+  "repos_counted": [
+   "https://github.com/matrix-org/matrix-ircd"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "abandoned",
+  "stars": 223,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": false,
@@ -123,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 12,
@@ -170,42 +173,41 @@
    "commits_all": 97,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "An IRCd implementation backed by Matrix.",
    "error": null,
    "files": 26,
    "first_commit": "2016-10-04T15:07:36+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 39,
    "head_sha": "40e9ea190140367b64febb666a0abde1212bd505",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "BASH": 0.0059,
     "Dockerfile": 0.0026,
-    "Rust": 0.9914
+    "Rust": 0.9923,
+    "Shell": 0.0051
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2023-07-19T09:39:20+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "BASH": 18,
     "Dockerfile": 8,
     "Rust": 3010
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 44,
+   "open_prs": 3,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "abandoned",
+   "stars": 223,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

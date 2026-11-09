@@ -11,7 +11,7 @@
    "tools": {},
    "workflows": 0
   },
-  "archived": false,
+  "archived": true,
   "authors_365d": 0,
   "authors_90d": 0,
   "authors_all": 7,
@@ -41,12 +41,12 @@
   "commits_all": 352,
   "daily_commits": {},
   "first_commit": "2021-05-31T23:13:15+00:00",
-  "forks": null,
+  "forks": 24,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0065,
-   "Python": 0.9888,
-   "Shell": 0.0047
+   "Dockerfile": 0.0056,
+   "Python": 0.9907,
+   "Shell": 0.0037
   },
   "last_commit": "2025-03-17T16:41:41+00:00",
   "last_tag": "v0.5.4",
@@ -60,11 +60,14 @@
   },
   "loc_total": 5367,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 14,
+  "open_prs": 9,
+  "repos_counted": [
+   "https://github.com/beeper/linkedin"
+  ],
   "security_policy": null,
-  "stars": null,
-  "status": "dormant",
+  "stars": 99,
+  "status": "archived",
   "tags_365d": 0,
   "telemetry_sdks": [],
   "tests_present": true,
@@ -123,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": true,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 7,
@@ -170,42 +173,41 @@
    "commits_all": 352,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "LinkedIn Messaging <-> Matrix Bridge",
    "error": null,
    "files": 64,
    "first_commit": "2021-05-31T23:13:15+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 24,
    "head_sha": "cb3783855b79af7ec0df14af0c7e8dce18faff93",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0065,
-    "Python": 0.9888,
-    "Shell": 0.0047
+    "Dockerfile": 0.0056,
+    "Python": 0.9907,
+    "Shell": 0.0037
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-03-17T16:41:41+00:00",
    "last_tag": "v0.5.4",
    "last_tag_date": "2022-12-23T01:52:55-07:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 35,
     "Python": 5307,
     "Shell": 25
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 14,
+   "open_prs": 9,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
-   "status": "dormant",
+   "stars": 99,
+   "status": "archived",
    "tags_365d": 0,
    "telemetry_scan": {
     "found": [],

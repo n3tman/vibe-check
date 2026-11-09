@@ -4,13 +4,11 @@
   "ai": {
    "agent_files": 0,
    "ai_bot_commits_365d": 0,
-   "attributed_commits_365d": 1,
+   "attributed_commits_365d": 0,
    "commits_365d": 24,
-   "share_365d": 0.0417,
-   "suggested_dev_usage": "occasional",
-   "tools": {
-    "copilot": 1
-   },
+   "share_365d": 0.0,
+   "suggested_dev_usage": "none-found",
+   "tools": {},
    "workflows": 0
   },
   "archived": false,
@@ -40,7 +38,7 @@
   "commits_30d": 2,
   "commits_365d": 24,
   "commits_90d": 5,
-  "commits_all": 893,
+  "commits_all": 892,
   "daily_commits": {
    "2026-03-25": 5,
    "2026-03-30": 1,
@@ -53,14 +51,13 @@
    "2026-10-26": 2
   },
   "first_commit": "2018-10-17T23:25:38+00:00",
-  "forks": null,
+  "forks": 37,
   "issue_first_response_median_days": null,
   "languages": {
-   "BASH": 0.0019,
-   "Dockerfile": 0.0039,
-   "JavaScript": 0.0012,
-   "Lua": 0.0145,
-   "TypeScript": 0.9781
+   "Dockerfile": 0.0059,
+   "Lua": 0.0179,
+   "Shell": 0.004,
+   "TypeScript": 0.9715
   },
   "last_commit": "2026-10-26T14:32:32+00:00",
   "last_tag": "3.0.0",
@@ -77,10 +74,13 @@
   },
   "loc_total": 13684,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 145,
+  "open_prs": 29,
+  "repos_counted": [
+   "https://github.com/matrix-org/matrix-bifrost"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 188,
   "status": "small-team",
   "tags_365d": 2,
   "telemetry_sdks": [],
@@ -123,8 +123,7 @@
    0,
    0,
    0,
-   10,
-   1,
+   11,
    0,
    0,
    0,
@@ -136,37 +135,27 @@
    3,
    0,
    0,
+   0,
    2,
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
     "agent_files": [],
     "ai_bot_authors": [],
-    "attributed_commits_365d": 1,
+    "attributed_commits_365d": 0,
     "commits_365d": 24,
-    "examples": [
-     {
-      "date": "2026-07-27",
-      "sha": "e14804ffe9855285dc7a196afe1ff5e18b9db6e0",
-      "tools": [
-       "copilot"
-      ],
-      "url": "https://github.com/matrix-org/matrix-bifrost/commit/e14804ffe9855285dc7a196afe1ff5e18b9db6e0"
-     }
-    ],
-    "share_365d": 0.0417,
-    "suggested_dev_usage": "occasional",
-    "tools": {
-     "copilot": 1
-    },
+    "examples": [],
+    "share_365d": 0.0,
+    "suggested_dev_usage": "none-found",
+    "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 4,
    "authors_90d": 2,
    "authors_all": 12,
@@ -200,7 +189,7 @@
    "commits_30d": 2,
    "commits_365d": 24,
    "commits_90d": 5,
-   "commits_all": 893,
+   "commits_all": 892,
    "daily_commits": {
     "2026-03-25": 5,
     "2026-03-30": 1,
@@ -213,31 +202,29 @@
     "2026-10-26": 2
    },
    "default_branch": "develop",
-   "description": null,
+   "description": "General purpose bridging with a variety of backends including libpurple and xmpp.js",
    "error": null,
    "files": 118,
    "first_commit": "2018-10-17T23:25:38+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 37,
    "head_sha": "75ed0cc3ba6901ab6c3dc29bac2ede2e4ad26577",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 1,
    "languages": {
-    "BASH": 0.0019,
-    "Dockerfile": 0.0039,
-    "JavaScript": 0.0012,
-    "Lua": 0.0145,
-    "TypeScript": 0.9781
+    "Dockerfile": 0.0059,
+    "Lua": 0.0179,
+    "Shell": 0.004,
+    "TypeScript": 0.9715
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2026-10-26T14:32:32+00:00",
    "last_tag": "3.0.0",
    "last_tag_date": "2026-10-26T16:32:32+02:00",
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "BASH": 26,
     "Dockerfile": 53,
@@ -247,12 +234,12 @@
     "TypeScript": 13384
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 145,
+   "open_prs": 29,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 188,
    "status": "small-team",
    "tags_365d": 2,
    "telemetry_scan": {
@@ -300,8 +287,7 @@
     0,
     0,
     0,
-    10,
-    1,
+    11,
     0,
     0,
     0,
@@ -311,6 +297,7 @@
     0,
     0,
     3,
+    0,
     0,
     0,
     2,

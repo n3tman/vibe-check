@@ -41,11 +41,11 @@
   "commits_all": 137,
   "daily_commits": {},
   "first_commit": "2017-01-06T19:57:58+00:00",
-  "forks": null,
+  "forks": 17,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0056,
-   "JavaScript": 0.9944
+   "Dockerfile": 0.0026,
+   "JavaScript": 0.9974
   },
   "last_commit": "2020-03-30T19:16:52+00:00",
   "last_tag": "1.12.0",
@@ -58,10 +58,13 @@
   },
   "loc_total": 1248,
   "main_language": "JavaScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 36,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/matrix-hacks/matrix-puppet-slack"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 48,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -121,7 +124,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -135,8 +138,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 12,
@@ -166,22 +169,22 @@
    "commits_all": 137,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "puppet style slack bridge for matrix",
    "error": null,
    "files": 14,
    "first_commit": "2017-01-06T19:57:58+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 17,
    "head_sha": "3630f19e593219ecf8da440b72a4b44b7481f1bc",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0056,
-    "JavaScript": 0.9944
+    "Dockerfile": 0.0026,
+    "JavaScript": 0.9974
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2020-03-30T19:16:52+00:00",
    "last_tag": "1.12.0",
    "last_tag_date": "2019-03-06T20:33:13-06:00",
@@ -192,12 +195,12 @@
     "JavaScript": 1241
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 36,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 48,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

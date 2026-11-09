@@ -41,11 +41,10 @@
   "commits_all": 14,
   "daily_commits": {},
   "first_commit": "2021-04-16T14:58:00+00:00",
-  "forks": null,
+  "forks": 4,
   "issue_first_response_median_days": null,
   "languages": {
-   "Sass": 0.0028,
-   "TypeScript": 0.9953
+   "TypeScript": 1.0
   },
   "last_commit": "2021-07-02T16:33:27+00:00",
   "last_tag": "v0.1.0A",
@@ -60,10 +59,13 @@
   },
   "loc_total": 2126,
   "main_language": "TypeScript",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 12,
+  "open_prs": 0,
+  "repos_counted": [
+   "https://github.com/KB1RD/matrix-pstn-bridge"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 36,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -123,7 +125,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,8 +139,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 1,
@@ -170,28 +172,26 @@
    "commits_all": 14,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "☎️ A Matrix Puppet bridge for the public telephone network that supports a number of VoIP providers (Twillo, Vonage, etc.). Sends and receives voice and SMS.",
    "error": null,
    "files": 34,
    "first_commit": "2021-04-16T14:58:00+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 4,
    "head_sha": "51556f5faa8ddbc8450b194d77931e61a123c3e3",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Sass": 0.0028,
-    "TypeScript": 0.9953
+    "TypeScript": 1.0
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2021-07-02T16:33:27+00:00",
    "last_tag": "v0.1.0A",
    "last_tag_date": "2021-05-06T21:29:30-04:00",
    "licence_detected": "GPL-3.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Gemfile": 2,
     "Sass": 6,
@@ -199,12 +199,12 @@
     "TypeScript": 2116
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 12,
+   "open_prs": 0,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 36,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

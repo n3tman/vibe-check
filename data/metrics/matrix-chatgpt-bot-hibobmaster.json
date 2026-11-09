@@ -41,11 +41,11 @@
   "commits_all": 125,
   "daily_commits": {},
   "first_commit": "2023-03-05T14:24:15+00:00",
-  "forks": null,
+  "forks": 21,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0045,
-   "Python": 0.9955
+   "Dockerfile": 0.0043,
+   "Python": 0.9957
   },
   "last_commit": "2025-05-20T09:40:33+00:00",
   "last_tag": "v1.9.1",
@@ -58,10 +58,13 @@
   },
   "loc_total": 2661,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 8,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/hibobmaster/matrix_chatgpt_bot"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 88,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -121,7 +124,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -135,8 +138,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 1,
@@ -169,39 +172,38 @@
    "commits_all": 125,
    "daily_commits": {},
    "default_branch": "main",
-   "description": null,
+   "description": "A simple matrix bot that supports image generation and chatting using ChatGPT",
    "error": null,
    "files": 27,
    "first_commit": "2023-03-05T14:24:15+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 21,
    "head_sha": "3b3a1a44c705f40f04f097af0264630428cd3b8e",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0045,
-    "Python": 0.9955
+    "Dockerfile": 0.0043,
+    "Python": 0.9957
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-05-20T09:40:33+00:00",
    "last_tag": "v1.9.1",
    "last_tag_date": "2025-05-20T17:40:33+08:00",
    "licence_detected": "MIT",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 12,
     "Python": 2649
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 8,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 88,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

@@ -41,12 +41,12 @@
   "commits_all": 84,
   "daily_commits": {},
   "first_commit": "2020-07-13T15:03:15+00:00",
-  "forks": null,
+  "forks": 17,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0055,
-   "Python": 0.5019,
-   "Shell": 0.4926
+   "Dockerfile": 0.0046,
+   "Python": 0.4835,
+   "Shell": 0.5118
   },
   "last_commit": "2024-09-03T14:57:51+00:00",
   "last_tag": null,
@@ -59,11 +59,14 @@
    "Shell": 1709
   },
   "loc_total": 3469,
-  "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "main_language": "Shell",
+  "open_issues": 14,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/8go/matrix-eno-bot"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 101,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -123,7 +126,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -137,8 +140,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 6,
@@ -168,41 +171,40 @@
    "commits_all": 84,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "An admin and personal assistence Matrix bot built on matrix-nio and nio-template",
    "error": null,
    "files": 61,
    "first_commit": "2020-07-13T15:03:15+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 17,
    "head_sha": "e18c5cc2bbced2229f661a3b9a8bc022e2a7d808",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0055,
-    "Python": 0.5019,
-    "Shell": 0.4926
+    "Dockerfile": 0.0046,
+    "Python": 0.4835,
+    "Shell": 0.5118
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2024-09-03T14:57:51+00:00",
    "last_tag": null,
    "last_tag_date": null,
    "licence_detected": "Apache-2.0",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 19,
     "Python": 1741,
     "Shell": 1709
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 14,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 101,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

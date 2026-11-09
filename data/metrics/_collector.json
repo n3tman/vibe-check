@@ -1,6 +1,6 @@
 {
  "collector_version": "1",
- "run_at": "2026-11-05T05:29:27+00:00",
+ "run_at": "2026-11-09T11:46:15+00:00",
  "bot_names": [
   "dependabot",
   "renovate",
@@ -46,18 +46,33 @@
  ],
  "weeks": 52,
  "summary": {
-  "projects": 270,
-  "written": 269,
+  "projects": 345,
+  "written": 344,
   "unchanged": 1,
-  "repos_ok": 288,
+  "repos_ok": 364,
   "repos_failed": [
    "https://git.flaxeneel2.net/streigen/echelon: git clone failed: fatal: unable to access 'https://git.flaxeneel2.net/streigen/echelon/': The requested URL returned error: 403",
    "https://source.extera.xyz/Extera/Extera: git clone failed: fatal: unable to access 'https://source.extera.xyz/Extera/Extera/': The requested URL returned error: 403",
-   "https://gitlab.computer.surgery/matrix/grapevine: git clone failed: fatal: unable to access 'https://gitlab.computer.surgery/matrix/grapevine/': Recv failure: Connection reset by peer"
+   "https://gitlab.computer.surgery/matrix/grapevine: git clone failed: fatal: unable to access 'https://gitlab.computer.surgery/matrix/grapevine/': Failed to connect to gitlab.computer.surgery port 443 after 133470 ms: Could not connect to server"
   ],
-  "api_errors": [],
-  "seconds": 421,
-  "http_calls": 0,
+  "api_errors": [
+   "https://github.com/beeper/ai-bridge: HTTPError: HTTP Error 404: Not Found",
+   "https://gitlab.com/HengYeDev/harbour-sailtrix: HTTPError: HTTP Error 429: Too Many Requests",
+   "https://gitlab.com/spectral-im/spectral: HTTPError: HTTP Error 429: Too Many Requests",
+   "https://github.com/thunderbird/thunderbird-desktop: HTTPError: HTTP Error 404: Not Found",
+   "https://gitlab.com/vurpo/godot-matrix: HTTPError: HTTP Error 429: Too Many Requests",
+   "https://cgit.rory.gay/matrix/LibMatrix: no API reader for forge 'other'",
+   "https://gitlab.com/dfuchss/tacit: HTTPError: HTTP Error 429: Too Many Requests",
+   "https://gitlab.com/trixnity/trixnity: HTTPError: HTTP Error 429: Too Many Requests",
+   "https://gitlab.com/trixnity/trixnity: HTTPError: HTTP Error 429: Too Many Requests",
+   "https://gitlab.com/Greenscreener/matrix-dotnet: HTTPError: HTTP Error 429: Too Many Requests",
+   "https://gitlab.com/polyjuice/polyjuice_client: HTTPError: HTTP Error 429: Too Many Requests",
+   "https://gitlab.com/matrix-mellifluousness/sdk: HTTPError: HTTP Error 429: Too Many Requests",
+   "https://github.com/continuwuity/continuwuity: HTTPError: HTTP Error 404: Not Found",
+   "https://gitlab.com/continuwuity/continuwuity: HTTPError: HTTP Error 403: Forbidden"
+  ],
+  "seconds": 4189,
+  "http_calls": 2229,
   "project_errors": []
  }
 }

@@ -67,6 +67,9 @@
   "main_language": "C++",
   "open_issues": null,
   "open_prs": null,
+  "repos_counted": [
+   "https://gitlab.com/spectral-im/spectral"
+  ],
   "security_policy": null,
   "stars": null,
   "status": "abandoned",
@@ -128,7 +131,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -142,7 +145,7 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
+   "api_error": "HTTPError: HTTP Error 429: Too Many Requests",
    "archived": null,
    "authors_365d": 0,
    "authors_90d": 0,

@@ -41,20 +41,19 @@
   "commits_all": 148,
   "daily_commits": {},
   "first_commit": "2022-07-20T23:24:17+00:00",
-  "forks": null,
+  "forks": 4,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0465,
-   "Makefile": 0.1802,
-   "Python": 0.6047,
-   "Shell": 0.1424,
-   "Snakemake": 0.0262
+   "Dockerfile": 0.0375,
+   "Makefile": 0.1734,
+   "Python": 0.6185,
+   "Shell": 0.1706
   },
   "last_commit": "2025-10-21T23:37:02+00:00",
   "last_tag": "0.0.1",
   "last_tag_date": "2024-07-28T20:19:04-06:00",
   "last_tag_repo": "https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge",
-  "licence_detected": "GPL-3.0",
+  "licence_detected": "GNU General Public License v3.0 or later",
   "loc": {
    "Dockerfile": 16,
    "Makefile": 62,
@@ -64,10 +63,13 @@
   },
   "loc_total": 344,
   "main_language": "Python",
-  "open_issues": null,
-  "open_prs": null,
+  "open_issues": 6,
+  "open_prs": 4,
+  "repos_counted": [
+   "https://gitlab.com/matrix-rss-bridge/matrix-rss-bridge"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 3,
   "status": "dormant",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -127,7 +129,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -141,7 +143,7 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
+   "api_error": null,
    "archived": null,
    "authors_365d": 0,
    "authors_90d": 0,
@@ -175,31 +177,30 @@
    "commits_all": 148,
    "daily_commits": {},
    "default_branch": "main",
-   "description": null,
+   "description": "A bridge for reading RSS feeds in Matrix rooms.",
    "error": null,
    "files": 30,
    "first_commit": "2022-07-20T23:24:17+00:00",
    "first_parent": false,
    "forge": "gitlab",
-   "forks": null,
+   "forks": 4,
    "head_sha": "1d039fcad25908ccade3a494717a3163740a02d8",
    "issue_first_response_median_days": null,
+   "issue_response_error": "HTTPError: HTTP Error 401: Unauthorized",
    "issues_responded": null,
    "issues_sampled": null,
    "languages": {
-    "Dockerfile": 0.0465,
-    "Makefile": 0.1802,
-    "Python": 0.6047,
-    "Shell": 0.1424,
-    "Snakemake": 0.0262
+    "Dockerfile": 0.0375,
+    "Makefile": 0.1734,
+    "Python": 0.6185,
+    "Shell": 0.1706
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2025-10-21T23:37:02+00:00",
    "last_tag": "0.0.1",
    "last_tag_date": "2024-07-28T20:19:04-06:00",
-   "licence_detected": "GPL-3.0",
+   "licence_detected": "GNU General Public License v3.0 or later",
    "licence_file": "LICENSE.md",
-   "licence_source": "file",
    "loc": {
     "Dockerfile": 16,
     "Makefile": 62,
@@ -208,12 +209,12 @@
     "Snakemake": 9
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 6,
+   "open_prs": 4,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 3,
    "status": "dormant",
    "tags_365d": 0,
    "telemetry_scan": {

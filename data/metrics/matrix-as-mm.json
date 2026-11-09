@@ -41,13 +41,14 @@
   "commits_all": 9,
   "daily_commits": {},
   "first_commit": "2023-04-24T21:14:54+00:00",
-  "forks": null,
+  "forks": 4,
   "issue_first_response_median_days": null,
   "languages": {
-   "Dockerfile": 0.0032,
-   "SQL": 0.8246,
-   "Shell": 0.0015,
-   "TypeScript": 0.1696
+   "Dockerfile": 0.0027,
+   "JavaScript": 0.0017,
+   "PLpgSQL": 0.9007,
+   "Shell": 0.0013,
+   "TypeScript": 0.0936
   },
   "last_commit": "2023-07-28T08:49:44+00:00",
   "last_tag": "TGZ",
@@ -64,11 +65,14 @@
    "TypeScript": 7720
   },
   "loc_total": 45520,
-  "main_language": "SQL",
-  "open_issues": null,
-  "open_prs": null,
+  "main_language": "PLpgSQL",
+  "open_issues": 7,
+  "open_prs": 1,
+  "repos_counted": [
+   "https://github.com/mattermost/matrix-as-mm"
+  ],
   "security_policy": null,
-  "stars": null,
+  "stars": 27,
   "status": "abandoned",
   "tags_365d": 0,
   "telemetry_sdks": [],
@@ -128,7 +132,7 @@
    0
   ]
  },
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
    "ai_scan": {
@@ -142,8 +146,8 @@
     "tools": {},
     "workflows": []
    },
-   "api_error": "skipped (--no-api)",
-   "archived": null,
+   "api_error": null,
+   "archived": false,
    "authors_365d": 0,
    "authors_90d": 0,
    "authors_all": 3,
@@ -175,30 +179,30 @@
    "commits_all": 9,
    "daily_commits": {},
    "default_branch": "master",
-   "description": null,
+   "description": "Matrix :left_right_arrow: Mattermost bridge",
    "error": null,
    "files": 144,
    "first_commit": "2023-04-24T21:14:54+00:00",
    "first_parent": false,
    "forge": "github",
-   "forks": null,
+   "forks": 4,
    "head_sha": "9f6d5a4d862d512eaaac54e421bed28da5598437",
    "issue_first_response_median_days": null,
-   "issues_responded": null,
-   "issues_sampled": null,
+   "issues_responded": 0,
+   "issues_sampled": 0,
    "languages": {
-    "Dockerfile": 0.0032,
-    "SQL": 0.8246,
-    "Shell": 0.0015,
-    "TypeScript": 0.1696
+    "Dockerfile": 0.0027,
+    "JavaScript": 0.0017,
+    "PLpgSQL": 0.9007,
+    "Shell": 0.0013,
+    "TypeScript": 0.0936
    },
-   "languages_source": "scc",
+   "languages_source": "forge",
    "last_commit": "2023-07-28T08:49:44+00:00",
    "last_tag": "TGZ",
    "last_tag_date": "2023-07-28T10:49:44+02:00",
    "licence_detected": "MIT",
    "licence_file": "LICENSE",
-   "licence_source": "file",
    "loc": {
     "AWK": 4,
     "Dockerfile": 146,
@@ -209,12 +213,12 @@
     "TypeScript": 7720
    },
    "ok": true,
-   "open_issues": null,
-   "open_prs": null,
+   "open_issues": 7,
+   "open_prs": 1,
    "prerelease_tags_365d": 0,
    "role": "main",
    "security_policy": null,
-   "stars": null,
+   "stars": 27,
    "status": "abandoned",
    "tags_365d": 0,
    "telemetry_scan": {

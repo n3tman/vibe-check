@@ -1,10 +1,10 @@
 {
  "collector_version": "1",
  "combined": null,
- "fetched_at": "2026-11-05T05:29:27+00:00",
+ "fetched_at": "2026-11-09T11:46:15+00:00",
  "repos": [
   {
-   "error": "git clone failed: fatal: unable to access 'https://gitlab.computer.surgery/matrix/grapevine/': Recv failure: Connection reset by peer",
+   "error": "git clone failed: fatal: unable to access 'https://gitlab.computer.surgery/matrix/grapevine/': Failed to connect to gitlab.computer.surgery port 443 after 133470 ms: Could not connect to server",
    "first_parent": false,
    "forge": "gitlab",
    "ok": false,
